@@ -1,28 +1,94 @@
-    <!-- banner area start -->
-    <div class="banner-area banner-area-1 bg-black bg-relative" >
-        <div class="banner-bg-img" style="background-image: url({{ asset('assets/img/banner/2.webp')}}); "></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-7 text-center text-lg-end order-lg-last" data-aos="fade-up">
-                    <div class="banner-mask-bg-wrap mb-5 mb-lg-0">
-                        <img class="shape-image" src="{{asset('assets/img/banner/6.webp')}}" alt="img">
-                        <div class="thumb">
-                            <img src="{{ asset(isset(page('home-banner')->images[0]->url) ? page('home-banner')->images[0]->url : asset('default.jpg')) }}" alt="img">
+    <!-- Blog Start -->
+    <div class="container-fluid p-5">
+        <div class="mb-5 text-center">
+            <h5 class="text-primary text-uppercase">Our Blog</h5>
+            <h1 class="display-3 text-uppercase mb-0">Latest Blog Post</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="position-relative overflow-hidden rounded-top">
+                        <img class="img-fluid" src="{{ asset('front/img/blog-1.jpg') }}" alt="">
+                    </div>
+                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
+                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
+                            <span>01</span>
+                            <h6 class="text-light text-uppercase mb-0">January</h6>
+                            <span>2045</span>
                         </div>
+                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-9 order-lg-first align-self-center" data-aos="fade-up">
-                    <div class="banner-inner style-white  text-center text-lg-start">
-                        <h4 class="sub-title">{{page('home-banner')->subtitle}}</h4>
-                        <h2 class="title fs-1">{{page('home-banner')->title}}</h2>
-                        <p class="content">{!! page('home-banner')->description !!}</p>
-                        <div class="btn-wrap">
-                            <a class="btn btn-base me-2" href="{{ request()->routeIs('front.home')?'#process':route('front.home').'#process'}}" >{{__('general.get_started')}}</a>
-                            <a class="btn btn-border-white" href="{{ route('front.message') }}">{{__('general.message')}}</a>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="position-relative overflow-hidden rounded-top">
+                        <img class="img-fluid" src="{{ asset('front/img/blog-2.jpg') }}" alt="">
+                    </div>
+                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
+                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
+                            <span>01</span>
+                            <h6 class="text-light text-uppercase mb-0">January</h6>
+                            <span>2045</span>
                         </div>
+                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="position-relative overflow-hidden rounded-top">
+                        <img class="img-fluid" src="{{ asset('front/img/blog-3.jpg') }}" alt="">
+                    </div>
+                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
+                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
+                            <span>01</span>
+                            <h6 class="text-light text-uppercase mb-0">January</h6>
+                            <span>2045</span>
+                        </div>
+                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- banner area end -->
+    <!-- Blog End -->
+    
+    <!-- about area start -->
+    {{-- <div class="about-area pd-top-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8">
+                    <div class="about-mask-bg-wrap about-mask-bg-wrap-1 mb-4 mb-lg-0"  data-aos="fade-right">
+                        <img class="shape-image-sm top_image_bounce" src="{{ asset('assets/img/about/1sm.webp') }}"
+                            alt="img">
+                        <img class="shape-image" src="{{ asset('assets/img/about/1s.webp') }}" alt="img">
+                        <div class="thumb">
+                            <img src="{{ asset(isset(page('about-us')->images[0]->url) ? page('about-us')->images[0]->url : asset('default.jpg')) }}"
+                                alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center" data-aos="fade-left">
+                    <div class="section-title px-lg-5 mb-0">
+                        <h5 class="sub-title right-line">{{ page('about-us')->title }}</h5>
+                        <h2 class="title">{{ page('about-us')->subtitle }}</h2>
+                        {!! page('about-us')->description !!}
+                        <div class="exp-wrap mt-3">
+                            <div class="row">
+                                @foreach ($counters as $counter)
+                                    <div class="col-sm-4">
+                                        <div class="single-exp-inner">
+                                            <h2><span class="counter">{{ $counter->count }}</span> <sub></sub></h2>
+                                            <h5>{{ $counter->title }}</h5>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <!-- about area end -->

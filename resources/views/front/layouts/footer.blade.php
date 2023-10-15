@@ -1,4 +1,95 @@
-<!-- footer area start -->
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-secondary px-5 mt-5">
+    <div class="row gx-5">
+        <div class="col-lg-8 col-md-6">
+            <div class="row gx-5">
+                <div class="col-lg-6 col-md-12 pt-5 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">{{ __('general.get_in_touch') }}</h4>
+                    <div class="d-flex mb-2">
+                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                        <p class="mb-0">{{ settings()->translate(app()->getLocale())->address }}</p>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <i class="bi bi-envelope-open text-primary me-2"></i>
+                        <p class="mb-0">{{ contacts('email')[0]->contact }}</p>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <i class="bi bi-telephone text-primary me-2 rotate"></i>
+                        <p class="mb-0 " >{{ contacts('phone')[0]->contact }}</p>
+                    </div>
+                    <div class="d-flex mt-4">
+                        @foreach (contacts('social') as $contact)
+
+                        <a href="{{ $contact->contact }}" class="btn btn-primary btn-square rounded-circle me-2"><i class="{{ $contact->icon }}"
+                            aria-hidden="true"></i></a>  
+                        
+                        @endforeach
+                        {{-- <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a> --}}
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">{{ __('general.quick_links') }}</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-secondary mb-2" href="{{ route('front.home') }}"><i class="bi bi-arrow-right text-primary me-2 "></i>{{ __('general.home') }}</a>
+                        <a class="text-secondary mb-2" href="{{ route('front.about') }}"><i class="bi bi-arrow-right text-primary me-2"></i>{{ __('general.about') }}</a>
+                        <a class="text-secondary mb-2" href="{{ route('front.process') }}"><i class="bi bi-arrow-right text-primary me-2"></i>{{ __('general.product') }}</a>
+                        {{-- <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a> --}}
+                        <a class="text-secondary" href="{{ route('front.message') }}"><i class="bi bi-arrow-right text-primary me-2"></i>{{ __('general.contact') }}</a>
+                    </div>
+                </div>
+                {{-- <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Class Schedule</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
+                <h4 class="text-uppercase text-white mb-4">{{ __('general.newsletters') }}</h4>
+                <h6 class="text-uppercase text-white">{{ __('general.subscribe_now') }}</h6>
+                {{-- <p class="text-light">Amet justo diam dolor rebum lorem sit stet sea justo kasd</p> --}}
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-white p-3" placeholder="{{ __('general.your_email') }}">
+                        <button class="btn btn-dark">{{ __('general.sign_up') }}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
+    <div class="row gx-5">
+        <div class="col-lg-12">
+            <div class="py-lg-4 text-center justify-content-center">
+                <p>{{ settings()->copyright }}</p>
+                {{-- <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Your Site Name</a>. All Rights Reserved.</p> --}}
+            </div>
+        </div>
+        <div class="col-lg-4">
+            {{-- <div class="py-lg-4 text-center credit">
+                <p class="text-light mb-0">{{ settings()->copyright }}</p>
+            </div> --}}
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+{{-- <!-- footer area start -->
 <footer class="footer-area bg-black bg-cover mt-5" style="background-image: url({{ asset('assets/img/bg/2.webp') }});">
     <div class="container">
         <div class="row">
@@ -69,7 +160,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 <!-- footer area end -->
 
 <!-- back to top area start -->
@@ -79,6 +170,17 @@
 <!-- back to top area end -->
 
 @include('front.components.whatsapp')
+
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="{{ asset('front/lib/easing/easing.min.js') }}"></script>
+ <script src="{{ asset('front/lib/waypoints/waypoints.min.js') }}"></script>
+ <script src="{{ asset('front/lib/counterup/counterup.min.js') }}"></script>
+ <script src="{{ asset('front/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+ <!-- Template Javascript -->
+ <script src="{{ asset('front/js/main.js') }}"></script>
 
 <!-- all plugins here -->
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>

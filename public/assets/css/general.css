@@ -2,6 +2,10 @@
     color: white;
 }
 
+:lang(ar).rotate{
+    transform: rotateY(180deg);
+
+}
 .whats {
 
     .img-team-container {

@@ -191,6 +191,12 @@ return [
     'credentials_error'=>'Theses credentials does not match',
     'dselectAll'=>'Deselect All',
     'selectAll'=>'Select All',
+    'join_us'=>'Join Us',
+    'get_in_touch'=>'Get In Touch',
+    'quick_links'=>'Quick Links',
+    'sign_up'=>'Sign Up',
+    
+    
 
 
 ];

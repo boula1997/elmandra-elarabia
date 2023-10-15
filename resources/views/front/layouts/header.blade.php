@@ -7,6 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ settings()->website_title }}</title>
+
+      <!-- Favicon -->
+      <link href="{{ asset('front/img/favicon.ico') }}" rel="icon">
+
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+  
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.xyz/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+      <link href="{{ asset('front/lib/flaticon/font/flaticon.css') }}" rel="stylesheet">
+  
+      <!-- Libraries Stylesheet -->
+      <link href="{{ asset('front/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     {{-- <link rel=icon href="assets/img/favicon.webp" sizes="20x20" type="image/png"> --}}
     <link rel="icon" type="image/x-icon" href="{{ settings()->tab }}">
     <!-- Stylesheet -->
@@ -29,126 +44,127 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
     @if (app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/style_ar.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css') }}">
+     <link  rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">    
+     <link rel="stylesheet" href="{{ asset('assets/css/style_ar.css') }}">
     @else
-        <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link  rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
+        <!-- Template Stylesheet -->
+        <link  rel="stylesheet" href="{{ asset('front/css/style.css') }}" >
     @endif
 </head>
 
-<body class='sc5'>
+<body class="'sc5'">
 
     <!-- preloader area start -->
-    <div class="preloader" id="preloader">
+    {{-- <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- preloader area end -->
 
     <!-- search popup start-->
-    <div class="td-search-popup" id="td-search-popup">
+    {{-- <div class="td-search-popup" id="td-search-popup">
         <form action="index.html" class="search-form">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search.....">
             </div>
             <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
         </form>
-    </div>
+    </div> --}}
     <!-- search popup end-->
-    <div class="body-overlay" id="body-overlay"></div>
+    {{-- <div class="body-overlay" id="body-overlay"></div> --}}
 
     <!-- navbar start -->
-    <div class="navbar-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <ul class="topbar-right text-md-start text-center">
-                        <li class="d-none d-none d-lg-inline-block">
-                            <p><i class="far fa-clock"></i>
-                                {{ __('general.opening_hour') }}{{ settings()->translate(app()->getLocale())->appointment1 }}
-                            </p>
-                        </li>
-                        <li>
-                            <p><i class="far fa-envelope"></i> {{ contacts('email')[0]->contact }}</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="topbar-right text-md-end text-center">
-                        <li class="d-none d-none d-lg-inline-block">
-                            <p>{{ __('general.hotline') }} <span>: {{ contacts('phone')[0]->contact }} </span></p>
-                        </li>
-                        <li class="social-area">
-                            <p class="d-inline-block">{{ __('general.follow_us_on') }}</p>
+      <!-- Header Start -->
+      <div class="container-fluid bg-dark px-0">
+        <div class="row gx-0">
+            <div class="col-lg-3 bg-dark d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Gamer</h1>
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row gx-0 bg-secondary d-none d-lg-flex">
+                    <div class="col-lg-7 px-5 text-start">
+                        <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <h6 class="mb-0">{{ contacts('email')[0]->contact }}</h6>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2">
+                            <i class="fa fa-phone-alt text-primary me-2"></i>
+                            <h6 class="mb-0">{{ contacts('phone')[0]->contact }} </h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 px-5 text-end">
+                        <div class="d-inline-flex align-items-center py-2">
                             @foreach (contacts('social') as $contact)
 
-                            <a href="{{ $contact->contact }}"><i class="{{ $contact->icon }}"
+                            <a href="{{ $contact->contact }}" class="btn btn-light btn-square rounded-circle me-2"><i class="{{ $contact->icon }}"
                                 aria-hidden="true"></i></a>  
                             
                             @endforeach
-                           
-                            {{-- <a href="{{ settings()->twitter }}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="{{ settings()->instgram }}"><i class="fab fa-instagram"
-                                    aria-hidden="true"></i></a>
-                            <a href="{{ settings()->youtube }}"><i class="fab fa-youtube" aria-hidden="true"></i></a> --}}
-                        </li>
-                    </ul>
+                            
+                            {{-- <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-light btn-square rounded-circle" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a> --}}
+                        </div>
+                    </div>
                 </div>
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 px-lg-5">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Gymster</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="{{ route('front.home') }}" class="nav-item nav-link {{ request()->routeIs('front.home') ? 'active' : '' }}">{{ __('general.home') }}</a>
+                            <a href="{{ route('front.about') }}" class="nav-item nav-link{{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
+                            <a href="{{ route('front.process') }}" class="nav-item nav-link {{ request()->routeIs('front.process') ? 'active' : '' }}">{{ __('general.product') }}</a>
+                            {{-- <a href="team.html" class="nav-item nav-link">Contact</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                    <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                </div>
+                            </div> --}}
+                            <a href="{{ route('front.message') }}" class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
+
+                            @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
+                                <a class="nav-item nav-link  rel="alternate" hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    <img src="{{ asset('flags/' . $localeCode . '.png') }}" class="flag"
+                                        alt="KSA Flag">
+                                </a>
+                            </li>
+                        @endforeach
+                        </div>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">{{ __('general.join_us') }}</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-area navbar-area-1 navbar-expand-lg">
-        <div class="container nav-container navbar-bg">
-            <div class="responsive-mobile-menu">
-                <button class="menu toggle-btn d-block d-lg-none" data-target="#Iitechie_main_menu"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-left"></span>
-                    <span class="icon-right"></span>
-                </button>
-            </div>
-            <div class="logo">
-                <a href="{{ route('front.home') }}"><img class="logo" src="{{ asset(settings()->logo) }}" alt="img"></a>
-            </div>
-            {{-- <div class="nav-right-part nav-right-part-mobile">
-                <a class="search-bar-btn" href="#">
-                    <i class="fa fa-search"></i>
-                </a>
-            </div> --}}
-            <div class="collapse navbar-collapse" id="Iitechie_main_menu">
-                <ul class="navbar-nav menu-open text-lg-end">
-                    <li><a class="{{ request()->routeIs('front.home') ? 'active' : '' }}"
-                            href="{{ route('front.home') }}">{{ __('general.home') }}</a></li>
-                    <li><a class="{{ request()->routeIs('front.service') ? 'active' : '' }}"
-                            href="{{ route('front.service') }}">{{ __('general.services') }}</a></li>
-                    <li><a class="{{ request()->routeIs('front.about') ? 'active' : '' }}"
-                            href="{{ route('front.about') }}">{{ __('general.about') }}</a></li>
-                    {{-- <li><a class="{{request()->routeIs('front.home')?'active':''}}" href="{{route('front.home')}}">Project</a></li> --}}
-                    <li><a class="{{ request()->routeIs('front.message') ? 'active' : '' }}"
-                            href="{{ route('front.message') }}">{{ __('general.contact_us') }}</a></li>
-                    @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                        <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
-                            <a rel="alternate" hreflang="{{ $localeCode }}"
-                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                <img src="{{ asset('flags/' . $localeCode . '.png') }}" class="flag"
-                                    alt="KSA Flag">
-                            </a>
-                        </li>
-                    @endforeach
-
-                </ul>
-
-            </div>
-            <div class="nav-right-part nav-right-part-desktop align-self-center">
-                {{-- <a class="search-bar-btn" href="#">
-                    <i class="fa fa-search"></i>
-                </a> --}}
-                <a class="btn btn-base" href="{{ request()->routeIs('front.home')?'#process':route('front.home').'#process'}}">{{ __('general.get_started') }}</a>
-            </div>
-        </div>
-    </nav>
-    <!-- navbar end -->
+    <!-- Header End -->
