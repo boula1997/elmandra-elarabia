@@ -1,94 +1,73 @@
-    <!-- Blog Start -->
-    <div class="container-fluid p-5">
-        <div class="mb-5 text-center">
-            <h5 class="text-primary text-uppercase">Our Blog</h5>
-            <h1 class="display-3 text-uppercase mb-0">Latest Blog Post</h1>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="blog-item">
-                    <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="{{ asset('front/img/blog-1.jpg') }}" alt="">
-                    </div>
-                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2045</span>
+     <!-- Carousel Start -->
+     <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+               
+                @foreach ($sliders as $slider)
+                <div class="carousel-item {{ $loop->iteration==1? 'active':'' }}">
+                    <img class="w-100" src="{{  $slider->image  }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ $slider->subtitle }}</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ $slider->title }}</h1>
+                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{ __('general.get_started') }}</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">{{ __('general.products') }}</a>
                         </div>
-                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog-item">
-                    <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="{{ asset('front/img/blog-2.jpg') }}" alt="">
-                    </div>
-                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2045</span>
+                @endforeach
+            
+                {{-- <div class="carousel-item">
+                    <img class="w-100" src="{{ asset('images/carousel-2.jpg') }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
+                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Get Started</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Products</a>
                         </div>
-                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
                     </div>
-                </div>
+                </div> --}}
             </div>
-            <div class="col-lg-4">
-                <div class="blog-item">
-                    <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="{{ asset('front/img/blog-3.jpg') }}" alt="">
-                    </div>
-                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2045</span>
-                        </div>
-                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
-    <!-- Blog End -->
-    
-    <!-- about area start -->
-    {{-- <div class="about-area pd-top-100">
+    <!-- Carousel End -->
+
+   <!-- banner area start -->
+    {{-- <div class="banner-area banner-area-1 bg-black bg-relative" >
+        <div class="banner-bg-img" style="background-image: url({{ asset('assets/img/banner/2.webp')}}); "></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8">
-                    <div class="about-mask-bg-wrap about-mask-bg-wrap-1 mb-4 mb-lg-0"  data-aos="fade-right">
-                        <img class="shape-image-sm top_image_bounce" src="{{ asset('assets/img/about/1sm.webp') }}"
-                            alt="img">
-                        <img class="shape-image" src="{{ asset('assets/img/about/1s.webp') }}" alt="img">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-7 text-center text-lg-end order-lg-last" data-aos="fade-up">
+                    <div class="banner-mask-bg-wrap mb-5 mb-lg-0">
+                        <img class="shape-image" src="{{asset('assets/img/banner/6.webp')}}" alt="img">
                         <div class="thumb">
-                            <img src="{{ asset(isset(page('about-us')->images[0]->url) ? page('about-us')->images[0]->url : asset('default.jpg')) }}"
-                                alt="img">
+                            <img src="{{ asset(isset(page('home-banner')->images[0]->url) ? page('home-banner')->images[0]->url : asset('default.jpg')) }}" alt="img">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-center" data-aos="fade-left">
-                    <div class="section-title px-lg-5 mb-0">
-                        <h5 class="sub-title right-line">{{ page('about-us')->title }}</h5>
-                        <h2 class="title">{{ page('about-us')->subtitle }}</h2>
-                        {!! page('about-us')->description !!}
-                        <div class="exp-wrap mt-3">
-                            <div class="row">
-                                @foreach ($counters as $counter)
-                                    <div class="col-sm-4">
-                                        <div class="single-exp-inner">
-                                            <h2><span class="counter">{{ $counter->count }}</span> <sub></sub></h2>
-                                            <h5>{{ $counter->title }}</h5>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
+                <div class="col-lg-6 col-md-9 order-lg-first align-self-center" data-aos="fade-up">
+                    <div class="banner-inner style-white  text-center text-lg-start">
+                        <h4 class="sub-title">{{page('home-banner')->subtitle}}</h4>
+                        <h2 class="title fs-1">{{page('home-banner')->title}}</h2>
+                        <p class="content">{!! page('home-banner')->description !!}</p>
+                        <div class="btn-wrap">
+                            <a class="btn btn-base me-2" href="{{ request()->routeIs('front.home')?'#process':route('front.home').'#process'}}" >{{__('general.get_started')}}</a>
+                            <a class="btn btn-border-white" href="{{ route('front.message') }}">{{__('general.message')}}</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div> --}}
-    <!-- about area end -->
+    <!-- banner area end -->
