@@ -378,6 +378,45 @@
                         </ul>
                     </li>
                 @endcan
+
+                @can('product-list')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class=" px-1 fab fa-productstack"></i>
+                            <p>
+                                @lang('general.products') <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('products') }}</span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('products.index') }}" class="nav-link">
+                                    <i class=" px-1 far fa-circle nav-icon"></i>
+                                    <p>@lang('general.show')</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
+                @can('slider-list')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class=" px-1 fab fa-sliderstack"></i>
+                            <p>
+                                @lang('general.sliders') <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('sliders') }}</span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('sliders.index') }}" class="nav-link">
+                                    <i class=" px-1 far fa-circle nav-icon"></i>
+                                    <p>@lang('general.show')</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
                 @can('testimonial-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -521,7 +560,7 @@
                 @can('video-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                          <i class=" px-1 fas fa-play-circle"></i>
+                            <i class=" px-1 fas fa-play-circle"></i>
                             <p>
                                 @lang('general.videos') <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('videos') }}</span>
@@ -597,7 +636,7 @@
                         <button class="btn text-secondary" type="submit">@lang('general.logout')</button>
 
                     </form>
-                </li>   
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -81,11 +81,13 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     
     Route::get('/portfolios', [PortfolioController::class, 'index']);
     Route::get('/portfolio/{id}', [PortfolioController::class, 'show']);
-
+    Route::get('/sliders', [SliderController::class, 'index']);
+    Route::get('/slider/{id}', [SliderController::class, 'show']);
+    
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::get('/product/{id}', [ProductController::class, 'show']);
 
 });
-
-
 
 Route::post('/newsletter', [NewsletterController::class, 'store']);
 Route::post('/message', [MessageController::class, 'store']);

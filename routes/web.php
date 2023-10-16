@@ -52,6 +52,7 @@ Route::group(
         Route::get('/single-portfolio/{id}', [ServiceController::class,'showportfolio'])->name('front.show.portfolio');
         // Route::post('/newsletter', 'App/Http/Controllers/NewsletterController@store')->name('front.newsletter.post');
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
+        Route::resource('products', ProductController::class);
         
         // Route::get('/reply', function () {
     
