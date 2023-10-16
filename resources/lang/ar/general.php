@@ -198,6 +198,9 @@ return [
     'quick_links'=>'روابط سريعة',
     'newsletters'  => 'النشرات الإخبارية',
     'sign_up'=>'اشترك',
+    'vision'=>'رؤيتنا',
+    'mission'=>'رسالتنا',
+    'become_a_member'=>'أصبح عضوا',
 
 
 ];

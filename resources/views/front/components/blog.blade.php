@@ -2,17 +2,20 @@
     <div class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+                {{-- @foreach ($sliders as $slider) --}}
+                {{-- <div class="carousel-item {{ $loop->iteration==1? 'active':'' }}"> --}}
                 <div class="carousel-item active">
                     <img class="w-100" src="{{ asset('front/img/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Best Gym Center</h5>
-                            <h1 class="display-2 text-white text-uppercase mb-md-4">Build Your Body Strong With Gymster</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Join Us</a>
-                            <a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</a>
+                            <h5 class="text-white text-uppercase"> {{ page('blog')->title }} </h5>
+                            <h1 class="display-2 text-white text-uppercase mb-md-4">{{ page('blog')->subtitle }}</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">{{ __('general.join_us') }}</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5">{{ __('general.contact') }}</a>
                         </div>
                     </div>
                 </div>
+                {{-- @endforeach --}}
                 <div class="carousel-item">
                     <img class="w-100" src="{{ asset('front/img/carousel-2.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">

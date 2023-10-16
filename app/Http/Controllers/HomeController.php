@@ -11,6 +11,7 @@ use App\Models\Counter;
 use App\Models\Faq;
 use App\Models\Setting;
 use App\Models\Partner;
+// use App\Models\Blog;
 use Exception;
 
 class HomeController extends Controller
@@ -30,6 +31,7 @@ class HomeController extends Controller
     // private $settings;
     private $teams;
     private $partners;
+    // private $blogs;
 
     public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners)
     {

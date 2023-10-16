@@ -33,12 +33,12 @@
                 <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5">
                     <h4 class="text-uppercase text-light mb-4">{{ __('general.quick_links') }}</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="{{ route('front.home') }}"><i class="bi bi-arrow-right text-primary me-2 "></i>{{ __('general.home') }}</a>
-                        <a class="text-secondary mb-2" href="{{ route('front.about') }}"><i class="bi bi-arrow-right text-primary me-2"></i>{{ __('general.about') }}</a>
-                        <a class="text-secondary mb-2" href="{{ route('front.process') }}"><i class="bi bi-arrow-right text-primary me-2"></i>{{ __('general.product') }}</a>
+                        <a class="text-secondary mb-2" href="{{ route('front.home') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }} text-primary me-2 "></i>{{ __('general.home') }}</a>
+                        <a class="text-secondary mb-2" href="{{ route('front.about') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.about') }}</a>
+                        <a class="text-secondary mb-2" href="{{ route('front.process') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.product') }}</a>
                         {{-- <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
                         <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a> --}}
-                        <a class="text-secondary" href="{{ route('front.message') }}"><i class="bi bi-arrow-right text-primary me-2"></i>{{ __('general.contact') }}</a>
+                        <a class="text-secondary" href="{{ route('front.message') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.contact') }}</a>
                     </div>
                 </div>
                 {{-- <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">

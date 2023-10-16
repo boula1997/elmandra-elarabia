@@ -195,6 +195,10 @@ return [
     'get_in_touch'=>'Get In Touch',
     'quick_links'=>'Quick Links',
     'sign_up'=>'Sign Up',
+    'vision'=>'Vision',
+    'mission'=>'Mission',
+    'become_a_member'=>' Become A Member',
+   
     
     
 

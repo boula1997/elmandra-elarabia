@@ -8,26 +8,26 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="mb-4">
-                        <h5 class="text-primary text-uppercase">About Us</h5>
-                        <h1 class="display-3 text-uppercase mb-0">Welcome to Gymster</h1>
+                        <h5 class="text-primary text-uppercase">{{ __('general.about') }}</h5>
+                        <h1 class="display-3 text-uppercase mb-0">{{ page('about')->title }}</h1>
                     </div>
-                    <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
-                    <p class="mb-4">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
+                    <h4 class="text-body mb-4">{{ page('blog')->subtitle }}</h4>
+                    <p class="mb-4">{!! page('about')->description !!}</p>
                     <div class="rounded bg-dark p-5">
                         <ul class="nav nav-pills justify-content-between mb-3">
                             <li class="nav-item w-50">
-                                <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">Vision</a>
+                                <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">{{ __('general.vision') }}</a>
                             </li>
                             <li class="nav-item w-50">
-                                    <a class="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">Mission</a>
+                                    <a class="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">{{ __('general.mission') }}</a>
                             </li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="pills-1">
-                                <p class="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                <p class="text-secondary mb-0"><p>{!! page('vision')->description !!}</p>
                             </div>
                             <div class="tab-pane fade" id="pills-2">
-                                <p class="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                <p class="text-secondary mb-0"><p>{!! page('mission')->description !!}</p>
                             </div>
                         </div>
                     </div>
