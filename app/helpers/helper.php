@@ -13,8 +13,10 @@ use App\Models\Team;
 use App\Models\Partner;
 use App\Models\Testimonial;
 use App\Models\Process;
+use App\Models\Product;
 use App\Models\Service;
 use App\Models\Setting;
+use App\Models\Slider;
 use App\Models\User;
 use App\Models\Video;
 use Illuminate\Support\Facades\File;
@@ -84,11 +86,12 @@ function itemsCount($model)
         "images" => count(Image::get()),
         "pages" => count(Page::get()),
         "teams" => count(Team::get()),
-        "partners" => count(Partner::get()),
+        "products" => count(Product::get()),
         "services" => count(Service::get()),
         "testimonials" => count(Testimonial::get()),
         "processes" => count(Process::get()),
         "partners" => count(Partner::get()),
+        "sliders" => count(Slider::get()),
         "services" => count(Service::get()),
         "users" => count(User::get()),
         "admins" => count(Admin::get()),

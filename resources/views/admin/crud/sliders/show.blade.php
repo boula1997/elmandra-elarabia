@@ -5,7 +5,7 @@
         <div class="container p-3">
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-header card-header-tabs-line">
-                    @include('admin.components.breadcrumb', ['module' => 'services', 'action' => 'show'])
+                    @include('admin.components.breadcrumb', ['module' => 'sliders', 'action' => 'show'])
                 </div>
                 <div class="card-toolbar px-3">
                     <ul class="nav nav-tabs nav-bold nav-tabs-line">
@@ -27,7 +27,7 @@
                                         <div class="mb-7 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $service->translate($locale)->title }}</p>
+                                                <p class="m-0">{{ $slider->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
                                         <div class="mb-7 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.subtitle'):</h5>
-                                                <p class="m-0">{{ $service->translate($locale)->subtitle }}</p>
+                                                <p class="m-0">{{ $slider->translate($locale)->subtitle }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                                         <div class="mb-7 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                                <p class="m-0">{!! $service->translate($locale)->description !!}</p>
+                                                <p class="m-0">{!! $slider->translate($locale)->description !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <img src="{{ $service->image }}" class="w-50">
+                                    <img src="{{ $slider->image }}" class="w-50">
                                 </div>
                             </div>
 
@@ -72,7 +72,7 @@
                                 <div class="mb-7 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.icon'):</h5>
-                                        <i class="{{ $service->icon }}"></i>
+                                        <i class="{{ $slider->icon }}"></i>
                                     </div>
                                 </div>
                             </div>

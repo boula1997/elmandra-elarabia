@@ -3,15 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\ServiceRequest;
+use App\Http\Requests\Dashboard\SliderRequest;
 use Illuminate\Support\Facades\File;
-use App\Models\Service;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
-use App\Models\Slider;
 use Exception;
 
-class ServiceController extends Controller
+class SliderController extends Controller
 {
     /**s
      * Display a listing of the resource.
@@ -56,7 +55,7 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ServiceRequest $request)
+    public function store(SliderRequest $request)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
@@ -73,10 +72,10 @@ class ServiceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Service  $slider
+     * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $slider)
+    public function show(Slider $slider)
     {
         return view('admin.crud.sliders.show', compact('slider'));
     }
@@ -84,10 +83,10 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Service  $slider
+     * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $slider)
+    public function edit(Slider $slider)
     {
         // dd($slider);
         return view('admin.crud.sliders.edit', compact('slider'));
@@ -99,7 +98,7 @@ class ServiceController extends Controller
      * @param  \App\Models\portfolio  $slider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $slider)
+    public function update(Request $request, Slider $slider)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
@@ -115,10 +114,10 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Service  $slider
+     * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $slider)
+    public function destroy(Slider $slider)
     {
         try {
             $slider->delete();
