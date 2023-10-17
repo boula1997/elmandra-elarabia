@@ -15,39 +15,45 @@ class TeamSeeder extends Seeder
     {
         $title_en = ["Boula Nessim",
                      "Ibrahim Samy",
-                     "Kyrillos Edward",
-                     "Tadrous Emil",
                      "Gerges Makram"];
+
         $subtitle_en = ["Software Engineer",
                         "Software Engineer",
-                        "Web Designer",
-                        "Web Developer",
                         "Manager"];
-        $description_en = [null,null,null,null,null];
+        $description_en = [null,null,null,];
       
         $title_ar = ["بولا نسيم",
                      "ابراهيم سامى",
-                     "كيرلس ادوارد",
-                     "تادرس اميل",
                      "جرجس مكرم"];
 
         $subtitle_ar =["مهندس برمجيات",
                        "مهندس برمجيات",
-                        "مصمم ويب ",
-                        "مطور ويب",
                         "مدير"];
-        $description_ar =  [null,null,null,null,null];
+        $description_ar =  [null,null,null];
 
-        $facebooks=["https://www.facebook.com","https://www.facebook.com","https://www.facebook.com","https://www.facebook.com","https://www.facebook.com"];
-        $twitters=["https://www.twitter.com","https://www.twitter.com","https://www.twitter.com","https://www.twitter.com","https://www.twitter.com"];
-        $instagrams=["https://www.instagram.com","https://www.instagram.com","https://www.instagram.com","https://www.instagram.com","https://www.instagram.com"];
-        $linkedins=["https://www.linkedin.com","https://www.linkedin.com","https://www.linkedin.com","https://www.linkedin.com","https://www.linkedin.com"];
+        $facebooks=["https://www.facebook.com",
+                    "https://www.facebook.com",
+                    "https://www.facebook.com"
+                    ];
+        $twitters=["https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com"
+                  ];
+        $instagrams=["https://www.instagram.com",
+                    "https://www.instagram.com",
+                    "https://www.instagram.com"
+                    ];
+
+        $linkedins=["https://www.linkedin.com",
+                    "https://www.linkedin.com",
+                    "https://www.linkedin.com"
+                    ];
 
         $image=["images/YE92B4LXiM6QhFcQbr5YKECGaMU5k8NokXve9o1m.jpg",
                 "images/YQXLPLiQgi8H1E9YE77J3lwUX0qSOYXkHMP192Nz.png",
-                "images/pekmLKsEWdfVwDSwbG0sSIZARXfO8GavZPaoOF1D.jpg",
-                "images/tAgfJG0vAJHhQsCii9FR441z6tGs9fyGKj92MUzy.jpg",
-                "images/zlqIgyZxaZJCmqfSvsxqkTIFsou1vItih8tUaqXi.jpg"];
+                // "images/pekmLKsEWdfVwDSwbG0sSIZARXfO8GavZPaoOF1D.jpg",
+                // "images/tAgfJG0vAJHhQsCii9FR441z6tGs9fyGKj92MUzy.jpg",
+                "images/pekmLKsEWdfVwDSwbG0sSIZARXfO8GavZPaoOF1D.jpg"];
        
        
 

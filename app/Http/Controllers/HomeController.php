@@ -11,7 +11,7 @@ use App\Models\Counter;
 use App\Models\Faq;
 use App\Models\Setting;
 use App\Models\Partner;
-// use App\Models\Blog;
+use App\Models\Slider;
 use Exception;
 
 class HomeController extends Controller
@@ -31,9 +31,9 @@ class HomeController extends Controller
     // private $settings;
     private $teams;
     private $partners;
-    // private $blogs;
+    private $slider;
 
-    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners)
+    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners,Slider $slider)
     {
         $this->service = $service;
         $this->testimonial = $testimonial;
@@ -45,6 +45,7 @@ class HomeController extends Controller
         $this->teams=$teams;
         // $this->settings=$settings;
         $this->partners=$partners;
+        $this->slider=$slider;
     }
 
     /**
@@ -65,8 +66,9 @@ class HomeController extends Controller
             // $settings=$this->settings->get();
             $teams=$this->teams->get();
             $partners=$this->partners->get();
+            $sliders=$this->slider->get();
 
-            return view('front.index', compact('testimonials', 'services', 'processes', 'portfolios', 'teams', 'counters','faqs','teams','partners'));
+            return view('front.index', compact('testimonials', 'services', 'processes', 'portfolios', 'teams', 'counters','faqs','teams','partners','sliders'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);

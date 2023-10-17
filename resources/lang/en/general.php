@@ -198,6 +198,7 @@ return [
     'vision'=>'Vision',
     'mission'=>'Mission',
     'become_a_member'=>' Become A Member',
+    'sliders'=>'Slider',
    
     
     

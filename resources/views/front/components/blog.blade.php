@@ -1,60 +1,48 @@
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+     <!-- Carousel Start -->
+     <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-                {{-- @foreach ($sliders as $slider) --}}
-                {{-- <div class="carousel-item {{ $loop->iteration==1? 'active':'' }}"> --}}
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('front/img/carousel-1.jpg') }}" alt="Image">
+               
+                @foreach ($sliders as $slider)
+                <div class="carousel-item {{ $loop->iteration==1? 'active':'' }}">
+                    <img class="w-100" src="{{  $slider->image  }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase"> {{ page('blog')->title }} </h5>
-                            <h1 class="display-2 text-white text-uppercase mb-md-4">{{ page('blog')->subtitle }}</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">{{ __('general.join_us') }}</a>
-                            <a href="" class="btn btn-light py-md-3 px-md-5">{{ __('general.contact') }}</a>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ $slider->subtitle }}</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ $slider->title }}</h1>
+                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{ __('general.get_started') }}</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">{{ __('general.products') }}</a>
                         </div>
                     </div>
                 </div>
-                {{-- @endforeach --}}
-                <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('front/img/carousel-2.jpg') }}" alt="Image">
+                @endforeach
+            
+                {{-- <div class="carousel-item">
+                    <img class="w-100" src="{{ asset('images/carousel-2.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Best Gym Center</h5>
-                            <h1 class="display-2 text-white text-uppercase mb-md-4">Grow Your Strength With Our Trainers</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Join Us</a>
-                            <a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</a>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
+                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Get Started</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Products</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
     <!-- Carousel End -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
    <!-- banner area start -->
     {{-- <div class="banner-area banner-area-1 bg-black bg-relative" >
         <div class="banner-bg-img" style="background-image: url({{ asset('assets/img/banner/2.webp')}}); "></div>

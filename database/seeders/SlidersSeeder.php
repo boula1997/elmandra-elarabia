@@ -13,26 +13,30 @@ class SlidersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["Take The Best Quality Dental Treatment",
-                     "Take The Best Treatment",
+        $title_en = ["BEST GAMING CENTER",
+                     "BEST GAMING SELLER",
                     //  "Proposal and Agreement",
                     //  "Executing and Delivering"
                     ];
-        $subtitle_en = ["KEEP YOUR LIFE HEALTHY","KEEP YOUR FAMILY HEALTHY",
+        $subtitle_en = ["BUILD YOUR PLAYING LIFE STRONG WITH OUR GAMERS",
+                        "GROW YOUR GAMING SKILLS WITH OUR CENTER",
                         // null,null
                     ];
         $description_en = [null,null,];
 
-        $title_ar = ["احصل على أفضل علاج للأسنان",
-                     "تناول أفضل علاج", 
+        $title_ar = [
+                        "أفضل مركز ألعاب",
+                        "أفضل بائع للألعاب",
                    ];
 
-        $subtitle_ar =["حافظ على حياتك صحية","حافظ على صحة عائلتك"];
+        $subtitle_ar =[ "قم ببناء حياتك اللعبية القوية مع لاعبينا",
+                        "قم بتنمية مهاراتك في اللعب مع مركزنا",
+                     ];
 
         $description_ar =  [null,null,];
       
-        $image=["images/uYZXT0Ymuoci6lfFwPgpNlSA1wai4x1jgNMhCKSh.jpg",
-                "images/jzyrEbCHwylCO73G6iByaUkx8AYFcExKN7ZSAnjy.jpg",
+        $image=["images/q0A3qkR6DDxUYOI3YupNE2I0zab1hYkrFNQvatIr.jpg",
+                "images/avz6Q5p1NPGQBBZGUSZJF5JqxIDC6DoYPWxQakiL.jpg",
               ];
        
 

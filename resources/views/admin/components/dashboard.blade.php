@@ -382,9 +382,10 @@
                 @can('product-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fab fa-productstack"></i>
+                            {{-- <i class=" px-1 fab fa-productstack"></i> --}}
+                            <i class="fab fa-product-hunt"></i>
                             <p>
-                                @lang('general.products') <i class=" px-1 fas fa-angle-left right"></i>
+                                @lang('general.product') <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('products') }}</span>
                             </p>
                         </a>
@@ -401,7 +402,8 @@
                 @can('slider-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fab fa-sliderstack"></i>
+                            {{-- <i class=" px-1 fab fa-sliderstack"></i> --}}
+                            <i class="fas fa-sliders-h"></i>
                             <p>
                                 @lang('general.sliders') <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('sliders') }}</span>

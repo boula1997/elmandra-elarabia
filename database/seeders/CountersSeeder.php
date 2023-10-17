@@ -13,9 +13,10 @@ class CountersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["مشاريع قيد التنفيذ","مشاريع تحت الانشاء"];
-        $title_en = ["build projects","new project"];
-        $count=['999','800'];
+        $title_ar = ["خبرتنا","مدربينا","مشروعاتنا","عملائنا"];
+        $title_en = ["EXPERIENCE","OUR TRAINERS","COMPLETE PROJECT","HAPPY CLIENTS"];
+        $count=['10','50',"150","1235"];
+        $icon=["fa fa-star","fa fa-users","fa fa-check","fa fa-mug-hot"];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -27,7 +28,8 @@ class CountersSeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-               'count'=>$count[$i]
+               'count'=>$count[$i],
+               'icon' => $icon[$i]
             ]);
         }
     }

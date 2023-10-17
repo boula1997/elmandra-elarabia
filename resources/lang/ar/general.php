@@ -201,6 +201,7 @@ return [
     'vision'=>'رؤيتنا',
     'mission'=>'رسالتنا',
     'become_a_member'=>'أصبح عضوا',
+    'sliders'=>'المحرك',
 
 
 ];

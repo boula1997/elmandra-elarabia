@@ -20,6 +20,8 @@ class PagesSeeder extends Seeder
                         null,
                         null,
                         null,
+                        "Team",
+                        "TESTIMONIAL",
 
                     ];
 
@@ -28,7 +30,9 @@ class PagesSeeder extends Seeder
                             "Unleashing the Power of Gaming",
                             null,
                             null,
-                            "30% DISCOUNT FOR THIS SUMMER"
+                            "30% DISCOUNT FOR THIS SUMMER",
+                            "EXPERT Team",
+                            "OUR CLIENT SAY"
                         
                         ];
 
@@ -41,6 +45,8 @@ class PagesSeeder extends Seeder
                             "<p>Our mission is to deliver exceptional gaming experiences through our website, catering to the diverse interests and preferences of gamers. We strive to Provide Engaging Content: We commit to delivering top-notch gaming content, including news, reviews, guides, tutorials, and features that inform, entertain, and educate our audience. We aim to be a reliable source of accurate and up-to-date information, ensuring that gamers can rely on us for their gaming needs.</p>",
                             
                             null,
+                            null,
+                            null,
                         ];
 
 
@@ -51,6 +57,8 @@ class PagesSeeder extends Seeder
                         null,
                         null,
                         null,
+                        "فريق العمل",
+                        "اراء عملائنا",
                     ];
     
             $subtitle_ar = [
@@ -60,7 +68,9 @@ class PagesSeeder extends Seeder
                                 null,
                                 "خصم 30% لهذا الصيف",
 
-                            
+                                "شركائنا فى النجاح",
+                                
+                                "بعض من اراء عملائنا",
                             ];
     
             $description_ar = [
@@ -71,10 +81,12 @@ class PagesSeeder extends Seeder
 
                                 "<p>رسالتنا هي تقديم تجارب ألعاب استثنائية من خلال موقعنا الإلكتروني، بما يلبي اهتمامات وتفضيلات اللاعبين المتنوعة. نحن نسعى جاهدين لتوفير محتوى جذاب: نحن ملتزمون بتقديم محتوى ألعاب من الدرجة الأولى، بما في ذلك الأخبار والمراجعات والأدلة والبرامج التعليمية والميزات التي تُعلم جمهورنا وتسليه وتثقيفه. نحن نهدف إلى أن نكون مصدرًا موثوقًا للمعلومات الدقيقة والحديثة، مما يضمن أن اللاعبين يمكنهم الاعتماد علينا لتلبية احتياجاتهم في الألعاب.</p>",
                                 null,
+                                null,
+                                null,
 
                             ];    
 
-            $identifiers=["blog","about","vision","mission","service",
+            $identifiers=["blog","about","vision","mission","service","team","testimonial"
                          ];  
 
              $images=[ 
@@ -83,7 +95,8 @@ class PagesSeeder extends Seeder
                          null,
                          null,
                          null,
-                        
+                         null,
+                         null,
                       ];
        
 
