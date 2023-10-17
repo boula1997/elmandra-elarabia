@@ -1,6 +1,6 @@
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="container-fluid p-0 mb-5" >
+        <div id="header-carousel" class="carousel slide"  data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($sliders as $slider)
                 {{-- <div class="carousel-item {{ $loop->iteration==1? 'active':'' }}"> --}}
