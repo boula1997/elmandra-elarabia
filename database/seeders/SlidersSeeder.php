@@ -35,8 +35,8 @@ class SlidersSeeder extends Seeder
 
         $description_ar =  [null,null,];
       
-        $image=["images/q0A3qkR6DDxUYOI3YupNE2I0zab1hYkrFNQvatIr.jpg",
-                "images/avz6Q5p1NPGQBBZGUSZJF5JqxIDC6DoYPWxQakiL.jpg",
+        $image=["images/FHCziEMVj7afQLZkRaz1gLPv5LOP2yig79P6Ulke.jpg",
+                "images/ZkZhIoYrKq9kYBuULHrKnejt3V4iUF2Z9Ifav17f.jpg",
               ];
        
 

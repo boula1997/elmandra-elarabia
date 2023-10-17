@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             GalleriesSeeder::class,
             PagesSeeder::class,
             SlidersSeeder::class,
-            ProductSeeder::class,
+            // ProductSeeder::class,
             PermissionTableSeeder::class,
             CreateAdminUserSeeder::class,
             ProcessesSeeder::class,

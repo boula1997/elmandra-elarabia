@@ -6,7 +6,7 @@
             <div class="bg-light rounded text-center p-5">
                 <i class="{{ $service->icon }} display-1 text-primary"></i>
                 <h3 class="text-uppercase my-4">{{ $service->title }}</h3>
-                <p>{!! $service->description !!}</p>
+                <p class="text-limit" style='--lines: 3;'>{!! $service->description !!}</p>
                 <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>

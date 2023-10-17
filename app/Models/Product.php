@@ -14,7 +14,7 @@ class Product extends Model implements TranslatableContract
 {
     use HasFactory, Translatable, MorphFile;
     protected $table = 'products';
-    public $translatedAttributes = ['title', 'subtitle', 'description'];
+    public $translatedAttributes = ['title', 'subtitle','category', 'description'];
     protected $guarded = [];
     public $timestamps = true;
 

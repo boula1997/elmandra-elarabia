@@ -3,7 +3,7 @@
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded" src="{{ asset(isset(page('about')->images[0]->url) ? page('about')->images[0]->url : asset('default.jpg')) }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -11,7 +11,7 @@
                         <h5 class="text-primary text-uppercase">{{ __('general.about') }}</h5>
                         <h1 class="display-3 text-uppercase mb-0">{{ page('about')->title }}</h1>
                     </div>
-                    <h4 class="text-body mb-4">{{ page('blog')->subtitle }}</h4>
+                    <h4 class="text-body mb-4">{{ page('about')->subtitle }}</h4>
                     <p class="mb-4">{!! page('about')->description !!}</p>
                     <div class="rounded bg-dark p-5">
                         <ul class="nav nav-pills justify-content-between mb-3">

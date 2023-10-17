@@ -22,6 +22,7 @@ class PagesSeeder extends Seeder
                         null,
                         "Team",
                         "TESTIMONIAL",
+                        "Products"
 
                     ];
 
@@ -32,7 +33,8 @@ class PagesSeeder extends Seeder
                             null,
                             "30% DISCOUNT FOR THIS SUMMER",
                             "EXPERT Team",
-                            "OUR CLIENT SAY"
+                            "OUR CLIENT SAY",
+                            "Our Products"
                         
                         ];
 
@@ -44,6 +46,7 @@ class PagesSeeder extends Seeder
 
                             "<p>Our mission is to deliver exceptional gaming experiences through our website, catering to the diverse interests and preferences of gamers. We strive to Provide Engaging Content: We commit to delivering top-notch gaming content, including news, reviews, guides, tutorials, and features that inform, entertain, and educate our audience. We aim to be a reliable source of accurate and up-to-date information, ensuring that gamers can rely on us for their gaming needs.</p>",
                             
+                            null,
                             null,
                             null,
                             null,
@@ -59,6 +62,7 @@ class PagesSeeder extends Seeder
                         null,
                         "فريق العمل",
                         "اراء عملائنا",
+                        "منتجات",
                     ];
     
             $subtitle_ar = [
@@ -71,6 +75,7 @@ class PagesSeeder extends Seeder
                                 "شركائنا فى النجاح",
                                 
                                 "بعض من اراء عملائنا",
+                                "احدث منتجاتنا",
                             ];
     
             $description_ar = [
@@ -83,21 +88,24 @@ class PagesSeeder extends Seeder
                                 null,
                                 null,
                                 null,
+                                null,
 
                             ];    
 
-            $identifiers=["blog","about","vision","mission","service","team","testimonial"
+            $identifiers=[ "blog","about","vision","mission",
+                           "service","team","testimonial","product"
                          ];  
 
              $images=[ 
-                         ["images/6Uc5BhjmQJtfneedg6lKQ4U0Mh4SHOs5OAd8StZd.webp"],
-                         null,
-                         null,
-                         null,
-                         null,
-                         null,
-                         null,
-                      ];
+                        ["images/6Uc5BhjmQJtfneedg6lKQ4U0Mh4SHOs5OAd8StZd.webp"],
+                        ["images/aYXssFYileyBQJwArUU3zA1gJHUhzocSQ3agfdoZ.jpg"],
+                            null,
+                            null,
+                            null,
+                            null,
+                            ["images/mHmk6YZAj2FqyQamlB6DRXHdkcLONAYNG68cjE13.jpg"],
+                            null,
+                    ];
        
 
         for ($i = 0; $i < count($title_ar); $i++) {

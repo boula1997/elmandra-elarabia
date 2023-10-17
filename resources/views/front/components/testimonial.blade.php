@@ -3,7 +3,7 @@
             <div class="row g-0">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="{{ asset(page('testimonial')->image) }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{ asset(isset(page('testimonial')->images[0]->url) ? page('testimonial')->images[0]->url : asset('default.jpg')) }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 bg-dark p-5">
