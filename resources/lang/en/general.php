@@ -199,9 +199,11 @@ return [
     'mission'=>'Mission',
     'become_a_member'=>' Become A Member',
     'sliders'=>'Slider',
-   
+    'visit_us'=>'Visit Us',
+    'call_us'=>'Call Us',
+    'your_name'=>'Your Name',
+    'send_message'=>'Send Message',
+    'read_more'=>'Read More',
     
-    
-
 
 ];

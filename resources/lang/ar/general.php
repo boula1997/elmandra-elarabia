@@ -179,7 +179,7 @@ return [
     'social'=>'وسائل التواصل الاجتماعي',
     'whatsapp'=>'واتساب',
     'icon'=>'أيقونة',
-    'subject'=>'موضوع',
+    'subject'=>'الموضوع',
     'reply'=>'رد',
     'visit_our_website'=>'قم بزيارة موقعنا',
     'subscribe_now'=>'اشترك فى قائمتنا البريدية',
@@ -202,6 +202,11 @@ return [
     'mission'=>'رسالتنا',
     'become_a_member'=>'أصبح عضوا',
     'sliders'=>'المحرك',
+    'visit_us'=>'زورنا عبر',
+    'call_us'=>'اتصل بنا على',
+    'your_name'=>'الأسم',
+    'send_message'=>'ارسل',
+    'read_more'=>'اقرأ أكثر',
 
 
 ];

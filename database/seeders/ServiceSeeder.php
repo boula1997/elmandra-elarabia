@@ -26,7 +26,7 @@ class ServiceSeeder extends Seeder
 
         $title_ar = [ "أخبار الألعاب والتحديثات",
                       "تقييمات وتوصيات اللعبة",
-                      "أدلة الألعاب والبرامج التعليمية",
+                      "أدلة الألعاب والبرامج",
                      ];  
 
         $subtitle_ar = [null,null,null,

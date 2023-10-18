@@ -85,8 +85,8 @@
       <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">Gamer</h1>
+                <a href="{{ route('front.home') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-6 text-primary text-uppercase"> {{ settings()->title }}</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -138,7 +138,8 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{ route('front.home') }}" class="nav-item nav-link {{ request()->routeIs('front.home') ? 'active' : '' }}">{{ __('general.home') }}</a>
-                            <a href="{{ route('front.about') }}" class="nav-item nav-link{{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
+                            <a href="{{ route('front.about') }}" class="nav-item nav-link {{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
+                       {{-- <a href="{{ route('front.about') }}" class="nav-item nav-link{{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a> --}}
                             <a href="{{ route('front.process') }}" class="nav-item nav-link {{ request()->routeIs('front.process') ? 'active' : '' }}">{{ __('general.product') }}</a>
                             {{-- <a href="team.html" class="nav-item nav-link">Contact</a>
                             <div class="nav-item dropdown">

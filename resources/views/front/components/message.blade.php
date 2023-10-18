@@ -1,4 +1,71 @@
-<div class="team-area info-box-two pd-top-115 pd-bottom-90">
+  <!-- Contact Start -->
+  <div class="container-fluid p-5">
+    <div class="mb-5 text-center">
+        <h5 class="text-primary text-uppercase">{{ __('general.contact_us') }}</h5>
+        <h1 class="display-3 text-uppercase mb-0">{{ __('general.get_in_touch') }}</h1>
+    </div>
+    <div class="row g-5 mb-5">
+        <div class="col-lg-4">
+            <div class="d-flex flex-column align-items-center bg-dark rounded text-center py-5 px-3">
+                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="fa fa-map-marker-alt fs-4 text-white"></i>
+                </div>
+                <h5 class="text-uppercase text-primary">{{ __('general.address') }}</h5>
+                <p class="text-secondary mb-0">{{ settings()->translate(app()->getLocale())->address }}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex flex-column align-items-center bg-dark rounded text-center py-5 px-3">
+                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="fa fa-envelope fs-4 text-white"></i>
+                </div>
+                <h5 class="text-uppercase text-primary">{{ __('general.email') }}</h5>
+                <p class="text-secondary mb-0">{{ contacts('email')[0]->contact }}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex flex-column align-items-center bg-dark rounded text-center py-5 px-3">
+                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="fa fa-phone fs-4 text-white"></i>
+                </div>
+                <h5 class="text-uppercase text-primary">{{ __('general.call_us') }}</h5>
+                <p class="text-secondary mb-0">{{ contacts('phone')[0]->contact }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0">
+        <div class="col-lg-6">
+            <div class="bg-dark p-5">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_name') }}" style="height: 55px;">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_email') }}" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.subject') }}" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="{{ __('general.message') }}"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">{{ __('general.send_message') }}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="g-map-inner">
+                {!! settings()->map !!}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+{{-- <div class="team-area info-box-two pd-top-115 pd-bottom-90">
     <div class="container">
         <div class="row justify-content-center" data-aos="fade-up">
             <div class="col-lg-6 col-md-9">
@@ -99,7 +166,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 {{-- @include('front.components.solution') --}}
 
