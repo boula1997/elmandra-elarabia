@@ -85,9 +85,12 @@
       <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-                <a href="{{ route('front.home') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                {{-- <a href="{{ route('front.home') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <h1 class="m-0 display-6 text-primary text-uppercase"> {{ settings()->title }}</h1>
-                </a>
+                </a> --}}
+                <div class="logo">
+                    <a href="{{ route('front.home') }}"><img class="logo" src="{{ asset(settings()->logo) }}" alt="img"></a>
+                </div>
             </div>
             <div class="col-lg-9">
                 <div class="row gx-0 bg-secondary d-none d-lg-flex">
@@ -152,6 +155,9 @@
                             </div> --}}
                             <a href="{{ route('front.message') }}" class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
+                            <a class="nav-item nav-link " href="{{ route('front.shopping') }}">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
                                 <a class="nav-item nav-link  rel="alternate" hreflang="{{ $localeCode }}"
@@ -161,6 +167,7 @@
                                 </a>
                             </li>
                         @endforeach
+                       
                         </div>
                         <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">{{ __('general.join_us') }}</a>
                     </div>

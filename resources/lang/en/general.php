@@ -204,6 +204,21 @@ return [
     'your_name'=>'Your Name',
     'send_message'=>'Send Message',
     'read_more'=>'Read More',
+    // -----------------
+    'continue_shopping'=>'Continue shopping',
+    'shopping_cart'=>'Shopping cart', 
+    'you_have'=>'You have',
+    'items_in_your_cart'=>'items in your cart',
+    'sort_by'=>'Sort by',
+    'card_details'=>'Card details',  
+    'card_type'=>'Card type',
+    'cardholder_name'=>"Cardholder's Name",
+    'card_number'=>'Card Number',
+    'expiration'=>'Expiration',
+    'cvv'=>'Cvv',
+    'subtotal'=>'Subtotal',
+    'shipping'=>'Shipping',
+    'total'=>'Total(Incl. taxes)',
+    'checkout'=>'Checkout',
     
-
 ];

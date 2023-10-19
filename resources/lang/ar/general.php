@@ -207,6 +207,22 @@ return [
     'your_name'=>'الأسم',
     'send_message'=>'ارسل',
     'read_more'=>'اقرأ أكثر',
+    'continue_shopping'=>'مواصلة التسوق',
+    'shopping_cart'=>'عربة التسوق', 
+    'you_have'=>'لديك',
+    'items_in_your_cart'=>'وحدات فى سلة التسوق الخاصة بك',
+    'sort_by'=>'مرتب حسب',
+    'card_details'=>'معلومات البطاقة',  
+    'card_type'=>'نوع البطاقة',
+    'cardholder_name'=>"اسم حامل البطاقة",
+    'card_number'=>'رقم البطاقة',
+    'expiration'=>'انتهاء الصلاحية',
+    'cvv'=>'رقم الكود',
+    'subtotal'=>'المجموع الفرعي',
+    'shipping'=>'شحن',
+    'total'=>'الإجمالي (شامل الضرائب)',
+    'checkout'=>'الدفع',
+    
 
 
 ];

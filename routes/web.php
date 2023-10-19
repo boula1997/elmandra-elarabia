@@ -53,10 +53,10 @@ Route::group(
         // Route::post('/newsletter', 'App/Http/Controllers/NewsletterController@store')->name('front.newsletter.post');
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
         
-        // Route::get('/reply', function () {
+        Route::get('/add_to_cart', function () {
     
-        //     return view("mail.replyemail");
-        // });
+            return view("front.shopping");
+        })->name('front.shopping');
 
     }
 );
