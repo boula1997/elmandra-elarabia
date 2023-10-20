@@ -40,10 +40,17 @@ class ProductSeeder extends Seeder
                         "Battlefield 2042",
                         "GRID Legends",
                         "Street Fighter 6",
-                        // pc games
+                        //  pc games
+                        "Heart Of The Elder Tree",
+                        "Golfie",
+                        "To Be or Not To Be",
+                        "Goblin Scourge!",
+                        "Super Bullet Break",
                     ];
 
         $subtitle_en = [
+                          // 
+                          null,null,null,null,null,
                           // 
                           null,null,null,null,null,
                           // 
@@ -56,6 +63,8 @@ class ProductSeeder extends Seeder
                        ];
 
         $description_en = [
+                              // 
+                              null,null,null,null,null,
                               // 
                               null,null,null,null,null,
                               // 
@@ -91,6 +100,12 @@ class ProductSeeder extends Seeder
                         "باتلفيلد 2042",
                         "GRID أساطير",
                         "ستريت فايتر 6",
+                        //  pc games
+                        "قلب الشجرة الكبيرة",
+                        "جولفى",
+                        "أكون أو لا أكون",
+                        "آفة عفريت!",
+                        "سوبر بوليت بريك",
 
                        
                     ];  
@@ -100,6 +115,8 @@ class ProductSeeder extends Seeder
                          null,null,null,null,null,
                          // 
                          null,null,null,null,null,
+                        // 
+                        null,null,null,null,null,
                         // 
                         null,null,null,null,null,
                         // 
@@ -115,6 +132,8 @@ class ProductSeeder extends Seeder
                             null,null,null,null,null,
                              // 
                              null,null,null,null,null,
+                             // 
+                            null,null,null,null,null,
                           ];
 
         $images = [
@@ -131,17 +150,24 @@ class ProductSeeder extends Seeder
                     "images/GjqjTWFa0jEL7bb9aGYQZrm2Mavt1x97BvPx3O2W.webp",
                     "images/N4HO5RF8YWJRhTMvzdG2Mdo7kqD9hHtvLMuBh2WY.webp",
                     //  Nintendo Switch
-                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                    "images/k4BX1gPviTfr4NVf5kP0mJEgd9OQ6FX94pzqHvBm.webp",
+                    "images/IeO0odnmlezdvshmgDwU6R2CA7uN9ckyYDoEza2J.webp",
+                    "images/2LB6URqlZfDx9vxSomXW6H6sc6P3bUJROERwCgC9.webp",
+                    "images/dpPuKRH2vl6Buk68cBRmVe8VxQJRXTPQKjKY4Zzl.webp",
+                    "images/CrZpIE7ru5yFcQTBJdNoDJVybBv9FMikPOZjudz0.webp",
                      //  XBOX Games
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
+                     "images/yE3frI4HWh3zg3FXwWqxMziYtIOhtfwTm2hq34QN.webp",
+                     "images/A0LGvNFJYCRijg1pNJ5mmXKsx9WEqgx03gmDrue9.webp",
+                     "images/nSrHaNaZaQeKzIkdIJJ1tAl1SND8PrJ9uTf1ZJTz.webp",
+                     "images/SJeFGOTaNOX99aKTyGLdpPtGr9AZa2dgMi3zWaAz.webp",
+                     "images/2HV8b69Pw3XWfYNT7U2FFfVKk2dYwoRCQ1I0lAZw.webp",
+                    //  pc games
+                    "images/et5YKIfNAERC49pjRKHHnHCS5RzqgbU2IWeCMTOP.webp",
+                    "images/ZycsyDTpjX4TeeCdgp39aZwmgYd6odWMtVieWuhr.webp",
+                    "images/2auN5zHOdYCL5crO4M8Ezcd80QeofUCkmFA60CIn.webp",
+                    "images/MLK4qmXGnMDqpV2TJZSSixY6xvShdOwE2BtUukGa.webp",
+                    "images/JrglxnhfyOip8tybvxJ63g1xxXuBjGJbAeuGpT5J.webp",
+
                   ];
 
         $icons= [ 
@@ -151,6 +177,8 @@ class ProductSeeder extends Seeder
                       null,null,null,null,null,
                       // 
                       null,null,null,null,null,
+                       // 
+                       null,null,null,null,null,
                        // 
                        null,null,null,null,null,
                 ];
