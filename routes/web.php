@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MessageController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,12 +40,12 @@ Route::group(
         Route::get('/single-service/{id}', [ServiceController::class,'show'])->name('front.show.service');
         Route::get('/testimonial', 'App/Http/Controllers/TestimonialController@index')->name('front.testimonial');
         Route::get('/single-testimonial', 'App/Http/Controllers/TestimonialController@show')->name('front.show.testimonial');
-        Route::get('/process', 'App/Http/Controllers/ProcessController@index')->name('front.process');
-        Route::get('/single-process', 'App/Http/Controllers/ProcessController@show')->name('front.show.process');
         Route::get('/single-faq', 'App/Http/Controllers/FaqController@show')->name('front.show.faq');
         Route::get('/portfolio', 'App/Http/Controllers/PortfolioController@index')->name('front.portfolio');
         Route::get('/video', 'App/Http/Controllers/VideoController@index')->name('front.video');
         // Route::get('/about', 'App/Http/Controllers/AboutController@index')->name('front.about');
+        Route::get('/product', [ProductController::class,'index'])->name('front.products');
+        Route::get('/product/{id}', [ProductController::class,'show'])->name('front.show.product');
         Route::get('/about', [AboutController::class,'index'])->name('front.about');
         // Route::post('/message', 'App/Http/Controllers/MessageController@store')->name('front.message.post');
         Route::post('/message', [MessageController::class,'store'])->name('front.message.post');

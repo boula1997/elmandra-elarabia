@@ -58,14 +58,14 @@
 <body class="'sc5'">
 
     <!-- preloader area start -->
-    {{-- <div class="preloader" id="preloader">
+    <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- preloader area end -->
 
     <!-- search popup start-->
@@ -143,7 +143,7 @@
                             <a href="{{ route('front.home') }}" class="nav-item nav-link {{ request()->routeIs('front.home') ? 'active' : '' }}">{{ __('general.home') }}</a>
                             <a href="{{ route('front.about') }}" class="nav-item nav-link {{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
                        {{-- <a href="{{ route('front.about') }}" class="nav-item nav-link{{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a> --}}
-                            <a href="{{ route('front.process') }}" class="nav-item nav-link {{ request()->routeIs('front.process') ? 'active' : '' }}">{{ __('general.product') }}</a>
+                            <a href="{{ route('front.products') }}" class="nav-item nav-link {{ request()->routeIs('front.products') ? 'active' : '' }}">{{ __('general.product') }}</a>
                             {{-- <a href="team.html" class="nav-item nav-link">Contact</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

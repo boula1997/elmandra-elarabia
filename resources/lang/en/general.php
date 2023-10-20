@@ -26,6 +26,7 @@ return [
     'subtitle'  => 'Subtitle',
     'identifier'  => 'Identifier',
     'edit'  => 'Edit',
+    'products'  => 'Products',
 
     'portfolios'  => 'Portfolios',
     'users'  => 'Users',

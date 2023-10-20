@@ -47,6 +47,7 @@ return [
     'create'  => 'اضافة',
     'edit'  => 'تعديل',
     'delete'  => 'مسح',
+    'products'  => 'المنتجات',
 
 
     "permission" => "الإذن",

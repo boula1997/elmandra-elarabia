@@ -13,49 +13,43 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        $category_en=[
-                        "Football"
-                     ];
-        
-        $category_ar=[
-                        "كرة قدم"
-                     ];
+
 
         $title_en = [
-                       [ "PES2017",
+                       "PES2017",
                         "PES2015",
-                        "PES2016",],
+                        "PES2016",
                     ];
         $subtitle_en = [
-                        ["kora1",
+                        "kora1",
                         "kora2",
-                        "kora3",],
+                        "kora3",
                         
                        ];
         $description_en = [
-                           ["subkora1",
+                           "subkora1",
                            "subkora2",
-                           "subkora3",],
+                           "subkora3",
                           ];
 
         $title_ar = [
-                       [ "بيس2017",
+                     "بيس2017",
                         "بيس2015",
-                        "بيس2016",],
+                        "بيس2016",
                        
                     ];  
 
         $subtitle_ar = [
 
-                       ["كوره1",
+                       "كوره1",
                         "كوره2",
-                        "كوره3",],
+                        "كوره3",
                        ];
 
         $description_ar = [
-                            ["الديسكريبشن 1",
+                        "الديسكريبشن 1",
                             "الديسكريبشن 2",
-                            "الديسكريبشن 3",],
+                            "الديسكريبشن 3",
                           ];
 
         $images = [
@@ -76,13 +70,11 @@ class ProductSeeder extends Seeder
                     'title' => $title_ar[$i],
                     'description' => $description_ar[$i],
                     'subtitle' => $subtitle_ar[$i],
-                    'category' => $category_ar[$i],
                 ],
                 'en' => [
                     'title' => $title_en[$i],
                     'description' => $description_en[$i],
                     'subtitle' => $subtitle_en[$i],
-                    'category' => $category_en[$i],
                 ],
                 'icon'=>$icons[$i],
             ]);

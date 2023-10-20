@@ -1,51 +1,45 @@
 
- <!-- Product Start -->
- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-5 mb-5">
-            <div class="row g-5 ">
-                @foreach ($products as $product)
-                    <div class="col-md-4 product-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="card-img-top p-1" src="{{$product->image }}" alt="">
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="row">
+            @foreach ($products as $product)
+                <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card">
+                        <div class="d-flex justify-content-between p-3">
+                            <p class="lead mb-0">Today's Combo Offer</p>
+                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                style="width: 35px; height: 35px;">
+                                <p class="text-white mb-0 small">x4</p>
+                            </div>
                         </div>
-                        <div class="position-relative bg-light rounded-bottom text-center p-4">
-                            <h3><a href="{{route('front.show.product',$product->id)}}" class="text-limit" style='--lines: 2;' title="{{$product->title}}">{{$product->title}}</a></h3>
-                            {{-- <h5 class="m-0">{{$product->title}}</h5> --}}
-                            <div class="text-limit description" style="--lines:3;">{!! $product->description !!}</div>
-                        </div>
-                    </div>
-                @endforeach
-               
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Product End -->
-<!-- product area start -->
-    {{-- <div class="product-area pd-top-120 pd-bottom-90">
-        <div class="container">
-            <div class="row">
-                @foreach ($products as $product)
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                            class="card-img-top" alt="Laptop" />
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                                <p class="small text-danger"><s>$1099</s></p>
+                            </div>
 
-                    <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                        <div class="boxShadow-contact">
-                            <div class="single-product-inner style-hover-base text-center">
-                                <div class="icon-box">
-                                    <i class="{{ $product->icon }} fs-1"></i>
-                                </div>
-                                <div class="details">
-                                    <a href="{{route('front.show.product',$product->id)}}" class="text-limit" style="--lines:1;"><h4>{{$product->title}}</h4></a>
-                                    <div class="description text-limit" style="--lines:6;"> {!! $product->description !!}</div>
-                                   
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">HP Notebook</h5>
+                                <h5 class="text-dark mb-0">$999</h5>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                                <div class="ms-auto text-warning">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                @endforeach
-            
-            </div>
+                </div>
+            @endforeach
+
         </div>
-    </div> --}}
-    <!-- product area end -->
+    </div>
+</section>
