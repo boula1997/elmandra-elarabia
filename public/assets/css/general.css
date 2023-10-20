@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 .text-white p {
     color: white;
 }
@@ -89,4 +93,12 @@
 .logo{
     width: 100px !important;
     height: 100px !important; 
+}
+
+.header-carousel{
+    height: 80vh !important;
+}
+
+.slider-image{
+    height: 80vh;;
 }
