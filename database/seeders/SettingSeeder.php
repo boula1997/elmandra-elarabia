@@ -31,9 +31,9 @@ class SettingSeeder extends Seeder
                 'description' => 'نحن شركة تطوير لمواقع الويب متخصصون في انشاء,صيانة وادارة مواقع الويب',
                 'meta_data' => 'شركة خدمات الالعاب',
             ],
-            'logo' => 'images/96jw8LX5Ppjf9cw2KTe0JA4kgAxP5ig6HJ5GSFZN.png',
-            'white_logo' => 'images/96jw8LX5Ppjf9cw2KTe0JA4kgAxP5ig6HJ5GSFZN.png',
-            'tab' => 'images/96jw8LX5Ppjf9cw2KTe0JA4kgAxP5ig6HJ5GSFZN.png',
+            'logo' => 'images/R0gL2w01vCeRsY1W11kzWgVi8QKTIoLAqZbtxNjv.png',
+            'white_logo' => 'images/R0gL2w01vCeRsY1W11kzWgVi8QKTIoLAqZbtxNjv.png',
+            'tab' => 'images/R0gL2w01vCeRsY1W11kzWgVi8QKTIoLAqZbtxNjv.png',
             'image' => 'image',
             'map' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55275.18948853619!2d31.18964315!3d30.016788299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458469235579697%3A0x4e91d61f9878fc52!2sGiza%2C%20El%20Omraniya%2C%20Giza%20Governorate!5e0!3m2!1sen!2seg!4v1695471231297!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
         ]);

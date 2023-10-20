@@ -27,13 +27,13 @@ class ProductSeeder extends Seeder
                         
                        ];
         $description_en = [
-                           "subkora1",
-                           "subkora2",
-                           "subkora3",
+                            null,
+                            null,
+                            null,
                           ];
 
         $title_ar = [
-                     "بيس2017",
+                        "بيس2017",
                         "بيس2015",
                         "بيس2016",
                        
@@ -47,9 +47,9 @@ class ProductSeeder extends Seeder
                        ];
 
         $description_ar = [
-                        "الديسكريبشن 1",
-                            "الديسكريبشن 2",
-                            "الديسكريبشن 3",
+                            null,
+                            null,
+                            null,
                           ];
 
         $images = [
