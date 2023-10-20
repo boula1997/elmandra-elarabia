@@ -1,4 +1,3 @@
-
 <section style="background-color: #eee;">
     <div class="container py-5">
         <div class="row">
@@ -13,22 +12,29 @@
                             </div>
 
                             <div class="d-flex justify-content-between mb-2">
-                                <h5 class="text-limit" style="--lines:1;" title="{{ $product->title }}">{{ $product->title }}</h5>  
+                                <h5 class="text-limit" style="--lines:1;" title="{{ $product->title }}">
+                                    {{ $product->title }}</h5>
                             </div>
                             <div class="d-flex justify-content-between">
 
-                                <p class="small text-danger"><s>$1099</s></p> <h5 class="text-dark mb-0">$999</h5>
+                                <p class="small text-danger"><s>$1099</s></p>
+                                <h5 class="text-dark mb-0">$999</h5>
                             </div>
 
                             <div class="">
-                                <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> {{ __('general.add_to_cart') }}</button>
-                                <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> {{ __('general.add_to_favourite') }}</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i>
+                                    {{ __('general.add_to_cart') }}</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i>
+                                    {{ __('general.add_to_favourite') }}</button>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
+            <div class="d-flex justify-content-center">
 
-        </div>  
+                {!! $products->links('front.components.paginate') !!}
+            </div>
+        </div>
     </div>
 </section>
