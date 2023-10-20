@@ -28,9 +28,17 @@ class ProductSeeder extends Seeder
                         "Marvel's Spider Man - English & Arabic - PS4",
                         "Fifa 23 - Arabic Edition - PS4",
                         "Minecraft: Starter Collection - PS4",
+                        //  Nintendo Switch
+                        "The Legend Of Zelda: Tears Of The Kingdom",
+                        "Mario Kart 8 Deluxe ",
+                        "Minecraft",
+                        "Luigi’s Mansion 3",
+                        "",
                     ];
 
         $subtitle_en = [
+                          // 
+                          null,null,null,null,null,
                           // 
                           null,null,null,null,null,
                           // 
@@ -39,6 +47,8 @@ class ProductSeeder extends Seeder
                        ];
 
         $description_en = [
+                              // 
+                              null,null,null,null,null,
                               // 
                               null,null,null,null,null,
                               // 
@@ -58,6 +68,12 @@ class ProductSeeder extends Seeder
                         "لعبة Marvel's Spider Man - الإنجليزية والعربية - PS4",
                         "فيفا 23 - النسخة العربية - بلاي ستيشن 4",
                         "لعبة ماينكرافت: مجموعة المبتدئين - بلاي ستيشن 4",
+                        //  Nintendo Switch
+                        "أسطورة زيلدا: دموع المملكة",
+                        "ماريو كارت 8 ديلوكس",
+                        "ماينكرافت",
+                        "قصر لويجي 3",
+                        "",
                        
                     ];  
 
@@ -66,9 +82,13 @@ class ProductSeeder extends Seeder
                          null,null,null,null,null,
                          // 
                          null,null,null,null,null,
+                        // 
+                        null,null,null,null,null,
                        ];
 
         $description_ar = [
+                            // 
+                            null,null,null,null,null,
                             // 
                             null,null,null,null,null,
                             // 
@@ -88,9 +108,17 @@ class ProductSeeder extends Seeder
                     "images/PgekJrispoAsM8IJLeU3sF8evbkU19Sl5rnvAMdI.webp",
                     "images/GjqjTWFa0jEL7bb9aGYQZrm2Mavt1x97BvPx3O2W.webp",
                     "images/N4HO5RF8YWJRhTMvzdG2Mdo7kqD9hHtvLMuBh2WY.webp",
+                    //  Nintendo Switch
+                    "images/HsWogOvEjxPtEStdNr913ols44RFifVERaoyxkwh.webp",
+                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                    "",
                   ];
 
         $icons= [ 
+                      // 
+                      null,null,null,null,null,
                       // 
                       null,null,null,null,null,
                       // 
