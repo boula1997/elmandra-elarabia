@@ -14,7 +14,7 @@
                         <div class="d-flex align-items-center justify-content-start">
                             <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->twitter}}"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->facebook}}"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->linkedin}}"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
