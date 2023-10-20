@@ -16,16 +16,18 @@ class ProductSeeder extends Seeder
 
 
         $title_en = [
-                       "PES2017",
+                       "FIFA 24",
                         "PES2015",
                         "PES2016",
                     ];
+
         $subtitle_en = [
-                        "kora1",
-                        "kora2",
-                        "kora3",
+                        null,
+                        null,
+                        null,
                         
                        ];
+                       
         $description_en = [
                             null,
                             null,
@@ -33,17 +35,16 @@ class ProductSeeder extends Seeder
                           ];
 
         $title_ar = [
-                        "بيس2017",
+                        "FIFA 24",
                         "بيس2015",
                         "بيس2016",
                        
                     ];  
 
         $subtitle_ar = [
-
-                       "كوره1",
-                        "كوره2",
-                        "كوره3",
+                        null,
+                        null,
+                        null,
                        ];
 
         $description_ar = [
@@ -53,8 +54,8 @@ class ProductSeeder extends Seeder
                           ];
 
         $images = [
-                    null,
-                    null,
+                    ["images/ht14HpBz9XFtSQzjwfGuouYlvbqRAzqZR0tDMVR5.jpg"],
+                    null, 
                     null,
                   ];
 
