@@ -1,8 +1,8 @@
    <!-- Team Start -->
    <div class="container-fluid p-5">
     <div class="mb-5 text-center">
-        <h5 class="text-primary text-uppercase">The Team</h5>
-        <h1 class="display-3 text-uppercase mb-0">Expert Trainers</h1>
+        <h5 class="text-primary text-uppercase">{{ page('team')->title }}</h5>
+        <h1 class="display-3 text-uppercase mb-0">{{ page('team')->subtitle }}s</h1>
     </div>
     <div class="row g-5">
         @foreach ($teams as $team)
