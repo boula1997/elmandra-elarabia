@@ -223,6 +223,8 @@ return [
     'shipping'=>'شحن',
     'total'=>'الإجمالي (شامل الضرائب)',
     'checkout'=>'الدفع',
+    'add_to_cart'=>'اضف الى السلة',
+    'add_to_favourite'=>'اضف الى المفضل',
     
 
 
