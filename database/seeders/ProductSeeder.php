@@ -17,31 +17,46 @@ class ProductSeeder extends Seeder
 
         $title_en = [
                        "FIFA 24",
-                        "PES2015",
-                        "PES2016",
+                        "PlayStation 2",
+                        "FIFA 23",
+                        "PlayStation 3",
+                        "Gift Card",
+                        "Nintendo Blue/Yellow",
                     ];
 
         $subtitle_en = [
                         null,
                         null,
                         null,
+                        null,
+                        null,
+                        null,
                         
                        ];
-                       
+
         $description_en = [
+                            null,
+                            null,
+                            null,
                             null,
                             null,
                             null,
                           ];
 
         $title_ar = [
-                        "FIFA 24",
-                        "بيس2015",
-                        "بيس2016",
+                        "فيفا 24",
+                        "جهاز بلايستيشن 2",
+                        "فيفا 23",
+                        "جهاز بلايستيشن 3",
+                        "بطاقة هدايا",
+                        "نينتندو أزرق/أصفر",
                        
                     ];  
 
         $subtitle_ar = [
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null,
@@ -51,15 +66,24 @@ class ProductSeeder extends Seeder
                             null,
                             null,
                             null,
+                            null,
+                            null,
+                            null,
                           ];
 
         $images = [
                     "images/ht14HpBz9XFtSQzjwfGuouYlvbqRAzqZR0tDMVR5.jpg",
-                    null, 
-                    null,
+                    "images/3Duu5ks4Vxez9Y3tMLnBZnAYiEt30jUYCRXagolY.jpg", 
+                    "images/SwdknVPVhea8hoOG1uRHeWoYsz1EwokGWWpp8owz.jpg",
+                    "images/1BytwxCRbXcr7j8gB48wakyDTOEQhSP0QdBjUsX5.jpg",
+                    "images/QepE6wr0oSqEYK5gPtgnptPYHINvxWI3HnHpas9t.jpg",
+                    "images/qXwWEpir5vw1zIzVeriqITkpDjc7cnjqccUhtcgh.jpg",
                   ];
 
         $icons= [ 
+                    null,
+                    null,
+                    null,
                     null,
                     null,
                     null,

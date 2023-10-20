@@ -221,5 +221,7 @@ return [
     'shipping'=>'Shipping',
     'total'=>'Total(Incl. taxes)',
     'checkout'=>'Checkout',
+    'add_to_cart'=>'Add to Cart',
+    'add_to_favourite'=>'Add to Favourite',
     
 ];
