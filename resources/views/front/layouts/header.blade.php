@@ -85,12 +85,9 @@
       <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-                {{-- <a href="{{ route('front.home') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-6 text-primary text-uppercase"> {{ settings()->title }}</h1>
-                </a> --}}
-                <div class="logo">
-                    <a href="{{ route('front.home') }}"><img class="logo" src="{{ asset(settings()->logo) }}" alt="img"></a>
-                </div>
+                <a href="{{ route('front.home') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="logo" src="{{ asset(settings()->logo) }}" alt="img">
+                </a>
             </div>
             <div class="col-lg-9">
                 <div class="row gx-0 bg-secondary d-none d-lg-flex">
