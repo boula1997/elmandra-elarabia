@@ -5,13 +5,6 @@
             @foreach ($products as $product)
                 <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
                     <div class="card">
-                        <div class="d-flex justify-content-between p-3">
-                            <p class="lead mb-0">Today's Combo Offer</p>
-                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
-                                style="width: 35px; height: 35px;">
-                                <p class="text-white mb-0 small">x4</p>
-                            </div>
-                        </div>
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
                             class="card-img-top" alt="Laptop" />
                         <div class="card-body">
