@@ -54,7 +54,7 @@ class ProductSeeder extends Seeder
                           ];
 
         $images = [
-                    ["images/ht14HpBz9XFtSQzjwfGuouYlvbqRAzqZR0tDMVR5.jpg"],
+                    "images/ht14HpBz9XFtSQzjwfGuouYlvbqRAzqZR0tDMVR5.jpg",
                     null, 
                     null,
                   ];
