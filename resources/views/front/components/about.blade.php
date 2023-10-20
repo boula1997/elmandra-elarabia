@@ -9,7 +9,8 @@
                 <div class="col-lg-7">
                     <div class="mb-4">
                         <h5 class="text-primary text-uppercase">{{ __('general.about') }}</h5>
-                        <h1 class="display-3 text-uppercase mb-0">{{ page('about')->title }}</h1>
+                        
+                        <h1 class="display-5 text-uppercase mb-0">{{ page('about')->title }}</h1>
                     </div>
                     <h4 class="text-body mb-4">{{ page('about')->subtitle }}</h4>
                     <div class="mb-4 description">{!! page('about')->description !!}</div>

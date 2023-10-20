@@ -9,7 +9,7 @@
                 <div class="col-lg-6 bg-dark p-5">
                     <div class="mb-5">
                         <h5 class="text-primary text-uppercase">{{ page('testimonial')->title }}</h5>
-                        <h1 class="display-3 text-uppercase text-light mb-0">{{ page('testimonial')->subtitle }}</h1>
+                        <h1 class="display-5 text-uppercase text-light mb-0">{{ page('testimonial')->subtitle }}</h1>
                     </div>
                     <div class="owl-carousel testimonial-carousel">
                         @foreach ($testimonials as $testimonial)

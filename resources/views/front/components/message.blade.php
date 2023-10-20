@@ -2,7 +2,7 @@
   <div class="container-fluid p-5">
     <div class="mb-5 text-center">
         <h5 class="text-primary text-uppercase">{{ __('general.contact_us') }}</h5>
-        <h1 class="display-3 text-uppercase mb-0">{{ __('general.get_in_touch') }}</h1>
+        <h1 class="display-5 text-uppercase mb-0">{{ __('general.get_in_touch') }}</h1>
     </div>
     <div class="row g-5 mb-5">
         <div class="col-lg-4">

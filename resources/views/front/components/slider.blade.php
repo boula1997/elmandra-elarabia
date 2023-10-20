@@ -1,5 +1,5 @@
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
+    <div class="container-fluid slider-section p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" dir="ltr">
                 @foreach ($sliders as $slider)
@@ -8,7 +8,7 @@
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 900px;">
                                 <h5 class="text-white text-uppercase"> {{ $slider->title }} </h5>
-                                <h1 class="display-2 text-white text-uppercase mb-md-4">{{ $slider->subtitle }}</h1>
+                                <h1 class="display-5 text-white text-uppercase mb-md-4">{{ $slider->subtitle }}</h1>
                                 <a href=""
                                     class="btn btn-primary py-md-3 px-md-5 me-3">{{ __('general.join_us') }}</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5">{{ __('general.contact') }}</a>

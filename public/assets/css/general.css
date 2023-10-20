@@ -95,13 +95,6 @@ html{
     height: 100px !important; 
 }
 
-.header-carousel{
-    height: 75vh !important;
-}
-
-.slider-image{
-    height: 75vh;;
-}
 
 .counter-icon {
     font-size: 2em !important;
@@ -140,4 +133,31 @@ html{
 .letter-hover:hover{
     letter-spacing: 1px;
 
+}
+
+.slider-section {
+    height: 75vh;
+}
+
+.slider-image{
+    height: 75vh;
+
+}
+
+.nav-section{
+    height: 25vh;
+}
+
+.img-product-container{
+    height: 200px;
+    overflow: hidden !important;
+    object-fit: cover;
+}
+
+.img-product{
+    transition: all .5s ease-in-out;
+}
+
+.img-product-container:hover .img-product{
+    transform: scale(1.1);
 }

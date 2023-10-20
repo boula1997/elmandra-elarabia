@@ -15,7 +15,7 @@
                 <div class="card h-100">
                     <h3 class="card-header">الاساسية</h3>
                     <div class="card-body">
-                        <div class="display-4">$19.99</div>
+                        <div class="display-5">$19.99</div>
                         <div class="font-italic">شهريا</div>
                     </div>
                     <ul class="list-group list-group-flush">
@@ -36,7 +36,7 @@
                         <span class="most_popular">الاكثر شيوعا</span>
                     </h3>
                     <div class="card-body">
-                        <div class="display-4">$39.99</div>
+                        <div class="display-5">$39.99</div>
                         <div class="font-italic">شهريا</div>
                     </div>
                     <ul class="list-group list-group-flush">
@@ -54,7 +54,7 @@
                 <div class="card h-100">
                     <h3 class="card-header">Ultra</h3>
                     <div class="card-body">
-                        <div class="display-4">$159.99</div>
+                        <div class="display-5">$159.99</div>
                         <div class="font-italic">شهريا</div>
                     </div>
                     <ul class="list-group list-group-flush">
