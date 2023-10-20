@@ -42,7 +42,7 @@ class ProductController extends Controller
     public function index()
     {
         try {
-            $products = $this->product->get();
+            $products = $this->product->paginate(8);
             return view('front.products.product', compact( 'products'));
         } catch (Exception $e) {
             dd($e->getMessage());
