@@ -31,62 +31,259 @@
         <div class="tab-content">
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-5">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">6.00am - 8.00am</h6>
-                            <h5 class="text-uppercase text-primary">Power Lifting</h5>
-                            <p class="text-uppercase text-secondary mb-0">John Deo</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">8.00am - 10.00am</h6>
-                            <h5 class="text-uppercase text-primary">Body Building</h5>
-                            <p class="text-uppercase text-secondary mb-0">James Taylor</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">10.00am - 12.00pm</h6>
-                            <h5 class="text-uppercase text-primary">Cardio Program</h5>
-                            <p class="text-uppercase text-secondary mb-0">Jack Sparrow</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">12.00pm - 2.00pm</h6>
-                            <h5 class="text-uppercase text-primary">Weight Loose</h5>
-                            <p class="text-uppercase text-secondary mb-0">Robert Smith</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">2.00pm - 4.00pm</h6>
-                            <h5 class="text-uppercase text-primary">Fitness Program</h5>
-                            <p class="text-uppercase text-secondary mb-0">Adam Phillips</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">4.00pm - 6.00pm</h6>
-                            <h5 class="text-uppercase text-primary">Crossfit Class</h5>
-                            <p class="text-uppercase text-secondary mb-0">James Alien</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">6.00pm - 8.00pm</h6>
-                            <h5 class="text-uppercase text-primary">Muscle Building</h5>
-                            <p class="text-uppercase text-secondary mb-0">Petter John</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="bg-dark rounded text-center py-5 px-3">
-                            <h6 class="text-uppercase text-light mb-3">8.00pm - 10.00pm</h6>
-                            <h5 class="text-uppercase text-primary">Yoga Class</h5>
-                            <p class="text-uppercase text-secondary mb-0">Jessy Reo</p>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-0">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                class="card-img-top" alt="Laptop" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
+    
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">HP Notebook</h5>
+                                    <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                    
+                                </div>
+    
+                                <div class="">
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i> Add to Favourite</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div id="tab-2" class="tab-pane fade p-0">

@@ -229,26 +229,8 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="d-flex justify-content-center">
-            <img class="logo-side pt-3" style="height: 100px" src="{{ settings()->white_logo }}" alt="">
+            <img class="logo-side pt-3"  src="{{ settings()->white_logo }}" alt="">
         </div>
-        {{-- <div class="">
-            <!-- Sidebar user panel (optional) -->
-            <a href="{{ route('edit.profile') }}">
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="{{ auth('admin')->user()->file ? auth('admin')->user()->image : '' }}"
-                            class="img-circle elevation-2" alt="Edit Your Profile">
-                    </div>
-                    <div class="info">
-                        <a href="{{ route('edit.profile') }}" class="d-block">{{ auth('admin')->user()->name }}</a>
-                    </div>
-                </div>
-            </a>
-        </div> --}}
-
-
-
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -257,7 +239,7 @@
              with font-awesome or any other icon font library -->
 
                 @can('admin-list')
-                    <li class="nav-item">
+                    <li class="nav-item">   
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-users-cog"></i>
                             <p>

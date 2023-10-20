@@ -24,10 +24,10 @@
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="pills-1">
-                                <p class="text-secondary mb-0"><p>{!! page('vision')->description !!}</p>
+                                <div class="text-white description mb-0">{!! page('vision')->description !!}</div>
                             </div>
                             <div class="tab-pane fade" id="pills-2">
-                                <p class="text-secondary mb-0"><p>{!! page('mission')->description !!}</p>
+                                <div class="text-white description  mb-0">{!! page('mission')->description !!}</div>
                             </div>
                         </div>
                     </div>
