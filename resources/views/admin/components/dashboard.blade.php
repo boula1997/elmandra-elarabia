@@ -229,7 +229,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="d-flex justify-content-center">
-            <img class="logo-side pt-3"  src="{{ settings()->white_logo }}" alt="">
+            <img class="logo-side"  src="{{ settings()->white_logo }}" alt="">
         </div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">

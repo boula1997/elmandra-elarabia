@@ -332,7 +332,7 @@ ul.social li{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td class="logo" style="text-align: center;">
-                        <a href="{{route('front.home')}}"> <img src="{{ asset(settings()->logo) }}" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;" alt="img"></a>
+                        <a href="{{route('front.home')}}"> <img src="{{ assetsettings()->logo) }}" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;" alt="img"></a>
 			          </td>
           		</tr>
           	</table>
