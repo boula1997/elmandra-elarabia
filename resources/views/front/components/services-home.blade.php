@@ -6,35 +6,18 @@
                         <div class="bg-light rounded text-center p-5">
                             <i class="{{ $service->icon }} display-1 text-primary"></i>
                             <h3 class="text-uppercase my-4">{{ $service->title }}</h3>
-                            <div class="text-limit" style='--lines: 3;'>{!! $service->description !!}</div>
-                            <a class="text-uppercase" href="{{ route('front.show.service',$service->id) }}">{{ __('general.read_more') }} <i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}"></i></a>
+                            <div class="text-limit description mb-2" style='--lines: 3;'>{!! $service->description !!}</div>
+                            <a class="text-uppercase mt-5" href="{{ route('front.show.service',$service->id) }}">{{ __('general.read_more') }} <i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}"></i></a>
                         </div>
                 </div>  
            @endforeach
-            {{-- <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-barbell display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Weight Lefting</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-bodybuilding display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Muscle Building</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div> --}}
+
             <div class="col-lg-12 col-md-6 text-center">
                 <h1 class="text-uppercase text-light mb-4">{{ page('service')->subtitle }}</h1>
                 <a href="" class="btn btn-primary py-3 px-5">{{ __('general.become_a_member') }}</a>
             </div>
         </div>
     </div>
-    <!-- Programe Start -->
-   <!-- service area start -->
     {{-- <div class="service-area bg-overlay pd-top-120 pd-bottom-90"
         style="background-image: url({{ asset('images/3.jpg') }});">
         <div class="container">
