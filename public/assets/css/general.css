@@ -151,7 +151,6 @@ html{
 .img-product-container{
     height: 200px;
     overflow: hidden !important;
-    object-fit: cover;
 }
 
 .img-product{
