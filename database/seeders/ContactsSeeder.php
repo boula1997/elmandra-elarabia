@@ -15,7 +15,7 @@ class ContactsSeeder extends Seeder
     {
        
         $icon=[ "fab fa-facebook-f",
-                "fab fa-linkedin-in",
+                "fab fa-linkedin",
                 "fab fa-instagram",
                 "fas fa-mail-bulk",
                 "fas fa-phone",
