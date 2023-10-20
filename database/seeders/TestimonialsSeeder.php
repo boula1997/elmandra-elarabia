@@ -16,31 +16,41 @@ class TestimonialsSeeder extends Seeder
       
         $title_en = [
                      "Omar Mohamed",
-                     "Dalia Samir"
+                     "Dalia Samir",
+                     "Emily",
                     ];
 
         $subtitle_en = [
                         "Customer,USA",
-                        "Customer,USA"];
+                        "Customer,USA",
+                        "Customer,USA",];
 
-        $description_en = ["<p>I had the pleasure of working with the team at Yousab Tech company for my website project, and I couldn't be happier with the results. From start to finish, they demonstrated a high level of professionalism, expertise, and dedication</p>",
+        $description_en = ["<p>I can't say enough about the incredible selection and service at EL Alamia. They have everything a passionate gamer like me could ever want. I've been a loyal customer for years, and they never disappoint!</p>",
 
-                           "<p>I highly recommend Yousab Tech company to anyone in need of professional web development services. They are a talented and reliable team that delivers outstanding results. Working with them has been a pleasure, and I look forward to collaborating with them again in the future</p>"
+                           "<p>I was blown away by the knowledgeable and friendly staff at EL Alamia. They helped me find the perfect game for my son's birthday, and their recommendations were spot on. Thank you for making the shopping experience so enjoyable!</p>",
+
+                           "<p>As an avid gamer, I've visited many gaming stores, but EL Alamia stands out from the rest. Their attention to detail, competitive prices, and the overall atmosphere make it a haven for gamers. I highly recommend it to anyone in search of their next gaming adventure</p>",
                          ];
 
         
         $title_ar = ["عمر محمد",
-                     " داليا سمير"];
+                     " داليا سمير",
+                    "ايميلى",
+                ];
 
         $subtitle_ar =[ "العميل، الولايات المتحدة الأمريكية",
+                        "العميل، الولايات المتحدة الأمريكية",
                         "العميل، الولايات المتحدة الأمريكية",];
 
-        $description_ar =["<p> لقد كان من دواعي سروري العمل مع فريق شركة يوساب تك في مشروع موقع الويب الخاص بي، ولم أستطع أن أكون أكثر سعادة بالنتائج. لقد أظهروا، منذ البداية وحتى النهاية، مستوىً عالٍ من الاحترافية والخبرة والتفاني </p>",
+        $description_ar =["<p>لا أستطيع أن أقول ما يكفي عن الاختيار والخدمة المذهلة في العالمية. لديهم كل ما يمكن أن يرغب فيه لاعب متحمس مثلي. لقد كنت عميلاً مخلصًا لسنوات، ولم يخيب ظني أبدًا!</p>",
 
-                            "<p>أوصي بشدة بشركة يوساب تك لأي شخص يحتاج إلى خدمات تطوير الويب الاحترافية. إنهم فريق موهوب وموثوق يحقق نتائج رائعة. لقد كان العمل معهم ممتعًا، وأتطلع إلى التعاون معهم مرة أخرى في المستقبل</p>"];
+                         "<p>لقد أذهلني فريق العمل الودود وذو الخبرة في العالمية. لقد ساعدوني في العثور على اللعبة المثالية لعيد ميلاد ابني، وكانت توصياتهم في محلها. شكرًا لك على جعل تجربة التسوق ممتعة للغاية!</p>",
+                         
+                         "<p>لقد اكتشفت مؤخرًا العالمية، وأصبح المكان الذي أقصده لكل ما يتعلق بالألعاب. المتجر منظم جيدًا، والموظفون متعاونون بشكل لا يصدق. إنهم يبذلون قصارى جهدهم لضمان العثور على الألعاب التي أبحث عنها أبحث عنه. إنها حقًا جنة اللاعب!</p>"];
  
         $image=["images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp"];
+                "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",];
        
 
         for ($i = 0; $i < count($title_ar); $i++) {
