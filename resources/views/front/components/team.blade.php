@@ -9,7 +9,7 @@
         <div class="col-lg-4 col-md-6">
             <div class="team-item position-relative">
                 <div class="position-relative overflow-hidden rounded">
-                    <img class="img-fluid w-100" src="{{ asset( $team->image )}}" alt="">
+                    <img class="img-fluid team-image" src="{{ asset( $team->image )}}" alt="">
                     <div class="team-overlay">
                         <div class="d-flex align-items-center justify-content-start">
                             <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->twitter}}"><i class="fab fa-twitter"></i></a>
