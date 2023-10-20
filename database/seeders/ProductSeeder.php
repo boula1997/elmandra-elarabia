@@ -16,77 +16,85 @@ class ProductSeeder extends Seeder
 
 
         $title_en = [
-                       "FIFA 24",
-                        "PlayStation 2",
-                        "FIFA 23",
-                        "PlayStation 3",
-                        "Gift Card",
-                        "Nintendo Blue/Yellow",
+                        // video games
+                       "EA SPORTS FC 24 - PS5",
+                        "EA SPORTS FC 24 - Arabic and English - PS5",
+                        "GTA 5: Grand Theft Auto V - PS5",
+                        "Marvel’s Spider Man: Miles Morales - PS5",
+                        "Hogwarts Legacy - Arabic Edition - PS5",
+                        // ps4 games
+                        "Red Dead Redemption II (RDR2) - PS4",
+                        "GTA 5 : Grand Theft Auto V Premium Edition - PS4",
+                        "Marvel's Spider Man - English & Arabic - PS4",
+                        "Fifa 23 - Arabic Edition - PS4",
+                        "Minecraft: Starter Collection - PS4",
                     ];
 
         $subtitle_en = [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
+                          // 
+                          null,null,null,null,null,
+                          // 
+                          null,null,null,null,null,
                         
                        ];
 
         $description_en = [
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
+                              // 
+                              null,null,null,null,null,
+                              // 
+                              null,null,null,null,null,
                           ];
 
-        $title_ar = [
-                        "فيفا 24",
-                        "جهاز بلايستيشن 2",
-                        "فيفا 23",
-                        "جهاز بلايستيشن 3",
-                        "بطاقة هدايا",
-                        "نينتندو أزرق/أصفر",
+        $title_ar = [ 
+                        // video games
+                        "EA SPORTS FC 24 - PS5",
+                        "EA SPORTS FC 24 - Arabic and English - PS5",
+                        "جي تي ايه 5: جراند ثيفت أوتو V - بلاي ستيشن 5",
+                        "مارفل سبايدر مان: مايلز موراليس - PS5",
+                        "هوجورتس ليجاسي - النسخة العربية - PS5",
+                          // ps4 games
+                        "لعبة ريد ديد ريدمبشن II (RDR2) - بلاي ستيشن 4",
+                        "لعبة جي تي ايه 5: جراند ثيفت أوتو V الإصدار المميز - بلاي ستيشن 4",
+                        "لعبة Marvel's Spider Man - الإنجليزية والعربية - PS4",
+                        "فيفا 23 - النسخة العربية - بلاي ستيشن 4",
+                        "لعبة ماينكرافت: مجموعة المبتدئين - بلاي ستيشن 4",
                        
                     ];  
 
         $subtitle_ar = [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
+                         // 
+                         null,null,null,null,null,
+                         // 
+                         null,null,null,null,null,
                        ];
 
         $description_ar = [
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
+                            // 
+                            null,null,null,null,null,
+                            // 
+                            null,null,null,null,null,
                           ];
 
         $images = [
-                    "images/ht14HpBz9XFtSQzjwfGuouYlvbqRAzqZR0tDMVR5.jpg",
-                    "images/3Duu5ks4Vxez9Y3tMLnBZnAYiEt30jUYCRXagolY.jpg", 
-                    "images/SwdknVPVhea8hoOG1uRHeWoYsz1EwokGWWpp8owz.jpg",
-                    "images/1BytwxCRbXcr7j8gB48wakyDTOEQhSP0QdBjUsX5.jpg",
-                    "images/QepE6wr0oSqEYK5gPtgnptPYHINvxWI3HnHpas9t.jpg",
-                    "images/qXwWEpir5vw1zIzVeriqITkpDjc7cnjqccUhtcgh.jpg",
+                     // video games
+                    "images/vzrjmBcs7nimr2pddHvVEPyJOkEgArO8OK89I3wG.webp",
+                    "images/Vg6nCOARUk7wzGeUMfJXSPtjHFGiXQjlQuW3drtW.webp", 
+                    "images/zbGHONWmG1S4GqCmhf3smQebv2GYFqEmJDJQHaYo.webp",
+                    "images/GjqjTWFa0jEL7bb9aGYQZrm2Mavt1x97BvPx3O2W.webp",
+                    "images/IpgSDM2sm46kQwPhbZrM3jn2fPIQBAT9liYlWmJH.webp",
+                     // ps4 games
+                    "images/OhGKhTQahok2kRIkjJusNKoTeWnU9WjwPPAOJzQy.webp",
+                    "images/X8OgznIr5VQDAnxzvofdeLuTb74RZa9iH30e83XV.webp", 
+                    "images/PgekJrispoAsM8IJLeU3sF8evbkU19Sl5rnvAMdI.webp",
+                    "images/GjqjTWFa0jEL7bb9aGYQZrm2Mavt1x97BvPx3O2W.webp",
+                    "images/N4HO5RF8YWJRhTMvzdG2Mdo7kqD9hHtvLMuBh2WY.webp",
                   ];
 
         $icons= [ 
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
+                      // 
+                      null,null,null,null,null,
+                      // 
+                      null,null,null,null,null,
                 ];
 
         for ($i = 0; $i < count($title_ar); $i++) {
