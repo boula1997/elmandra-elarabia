@@ -12,7 +12,7 @@
                         <h1 class="display-3 text-uppercase mb-0">{{ page('about')->title }}</h1>
                     </div>
                     <h4 class="text-body mb-4">{{ page('about')->subtitle }}</h4>
-                    <p class="mb-4">{!! page('about')->description !!}</p>
+                    <div class="mb-4 description">{!! page('about')->description !!}</div>
                     <div class="rounded bg-dark p-5">
                         <ul class="nav nav-pills justify-content-between mb-3">
                             <li class="nav-item w-50">
