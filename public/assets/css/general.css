@@ -114,6 +114,30 @@ html{
 }
 
 .team-image{
-    height:300px !important;
+    height:450px !important;
     width: 100%;
+}
+
+.contact-icon {
+    font-size: 2em !important;
+    margin-top: 10%;
+    color: white;
+}
+
+.contact-h2 {
+    color: white;
+}
+
+.g-map-inner{
+   
+}
+
+
+
+.letter-hover{
+    transition: all .4s ease;
+}
+.letter-hover:hover{
+    letter-spacing: 1px;
+
 }

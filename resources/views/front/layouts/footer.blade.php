@@ -7,15 +7,15 @@
                     <h4 class="text-uppercase text-light mb-4">{{ __('general.get_in_touch') }}</h4>
                     <div class="d-flex mb-2">
                         <i class="bi bi-geo-alt text-primary me-2"></i>
-                        <p class="mb-0">{{ settings()->translate(app()->getLocale())->address }}</p>
+                        <p class="mb-0 letter-hover"><a class="text-secondary" href="#">{{ settings()->translate(app()->getLocale())->address }}</a></p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-envelope-open text-primary me-2"></i>
-                        <p class="mb-0">{{ contacts('email')[0]->contact }}</p>
+                        <p class="mb-0 letter-hover"><a class="text-secondary" href="#">{{ contacts('email')[0]->contact }}</a></p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-telephone text-primary me-2 rotate"></i>
-                        <p class="mb-0 " >{{ contacts('phone')[0]->contact }}</p>
+                        <p class="mb-0 letter-hover"><a class="text-secondary" href="#">{{ contacts('phone')[0]->contact }}</a></p>
                     </div>
                     <div class="d-flex mt-4">
                         @foreach (contacts('social') as $contact)
@@ -24,34 +24,20 @@
                             aria-hidden="true"></i></a>  
                         
                         @endforeach
-                        {{-- <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5">
                     <h4 class="text-uppercase text-light mb-4">{{ __('general.quick_links') }}</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="{{ route('front.home') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }} text-primary me-2 "></i>{{ __('general.home') }}</a>
-                        <a class="text-secondary mb-2" href="{{ route('front.about') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.about') }}</a>
-                        <a class="text-secondary mb-2" href="{{ route('front.products') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.products') }}</a>
-                        {{-- <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a> --}}
-                        <a class="text-secondary" href="{{ route('front.message') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.contact') }}</a>
+                        <a class="text-secondary mb-2 letter-hover" href="{{ route('front.home') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }} text-primary me-2 "></i>{{ __('general.home') }}</a>
+                        <a class="text-secondary mb-2 letter-hover" href="{{ route('front.about') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.about') }}</a>
+                        <a class="text-secondary mb-2 letter-hover" href="{{ route('front.products') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2"></i>{{ __('general.products') }}</a>
+                        {{-- <a class="text-secondary mb-2 letter-hover" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
+                        <a class="text-secondary mb-2 letter-hover" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a> --}}
+                        <a class="text-secondary mb-2 letter-hover" href="{{ route('front.message') }}"><i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}  text-primary me-2 "></i>{{ __('general.contact') }}</a>
                     </div>
                 </div>
-                {{-- <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Class Schedule</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                    </div>
-                </div> --}}
+
             </div>
         </div>
         <div class="col-lg-4 col-md-6">
@@ -61,7 +47,7 @@
                 {{-- <p class="text-light">Amet justo diam dolor rebum lorem sit stet sea justo kasd</p> --}}
                 <form action="">
                     <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="{{ __('general.your_email') }}">
+                        <input type="text input-sm" class="form-control border-white p-3" placeholder="{{ __('general.your_email') }}">
                         <button class="btn btn-dark">{{ __('general.sign_up') }}</button>
                     </div>
                 </form>
@@ -77,97 +63,12 @@
                 {{-- <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Your Site Name</a>. All Rights Reserved.</p> --}}
             </div>
         </div>
-        <div class="col-lg-4">
-            {{-- <div class="py-lg-4 text-center credit">
-                <p class="text-light mb-0">{{ settings()->copyright }}</p>
-            </div> --}}
-        </div>
     </div>
 </div>
 <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-{{-- <!-- footer area start -->
-<footer class="footer-area bg-black bg-cover mt-5" style="background-image: url({{ asset('assets/img/bg/2.webp') }});">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="widget widget_about d-flex justify-content-start align-items-center flex-column">
-                    <a href="{{ route('front.home') }}"> <img class="footer-image" src="{{ settings()->white_logo }}" alt=""></a>
-                    <div class="description text-limit tetx-white" style="--lines:4;">{!! page('about-us')->description !!}</div>
-                    <ul class="social-media mt-3">
-                        @foreach (contacts('social') as $contact)
-                            <li>
-                                <a class="facebook" href="{{ $contact->contact }}">
-                                    <i class="{{ $contact->icon }}"></i>
-                                </a>
-                            </li>
-                        @endforeach
-
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="widget widget_nav_menu">
-                    <h4 class="widget-title">{{ __('general.services') }}</h4>
-                    <ul>
-                        @foreach (services() as $service)
-                            <li><a href="{{ route('front.show.service', $service->id) }}">{{ $service->title }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="widget widget_nav_menu">
-                    <h4 class="widget-title">{{ __('general.useful_link') }}</h4>
-                    <ul>
-                        <li><a href="{{ route('front.home') }}">{{ __('general.home') }}</a></li>
-                        <li><a href="{{ route('front.about') }}">{{ __('general.about') }}</a></li>
-                        <li><a href="{{ route('front.service') }}">{{ __('general.services') }}</a></li>
-                        <li><a href="{{ route('front.message') }}">{{ __('general.contact_us') }}</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="alert alert-success d-none">
-                    <p style="text-align: start"></p>
-                </div>
-                <div class="widget widget_subscribe d-block">
-                    <h4 class="widget-title">{{ __('general.subscribe_now') }} </h4>
-                    <div class="single-input-inner style-border style-bg-none">
-                        <form action="{{ route('front.newsletter.post') }}" id="newsletter-form">
-                            <input type="text" name="newsletterEmail" placeholder="{{ __('general.your_email') }}">
-                            <div id="newsletterEmail" class="err"></div>
-                            <button type="submit" id="btn-newsletter">
-                                <i
-                                class="fa fa-spinner fa-spin d-none" id="spinner-newsletter"></i> <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 align-self-center">
-                    <p>{{ settings()->copyright }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer> --}}
-<!-- footer area end -->
-
-<!-- back to top area start -->
-<div class="back-to-top">
-    <span class="back-top"><i class="fa fa-angle-up"></i></span>
-</div>
-<!-- back to top area end -->
+    <a href="#" class="btn btn-primary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 @include('front.components.whatsapp')
 
