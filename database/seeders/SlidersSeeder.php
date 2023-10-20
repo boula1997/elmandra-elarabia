@@ -13,24 +13,24 @@ class SlidersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["BEST GAMING CENTER",
-                     "BEST GAMING SELLER",
+        $title_en = ["Level Up Your Gaming Experience!",
+                     "Level Up Your Gaming Experience!",
                     //  "Proposal and Agreement",
                     //  "Executing and Delivering"
                     ];
-        $subtitle_en = ["BUILD YOUR PLAYING LIFE STRONG WITH OUR GAMERS",
-                        "GROW YOUR GAMING SKILLS WITH OUR CENTER",
+        $subtitle_en = ["BUILD YOUR PLAYING LIFE STRONG WITH OUR Gamers",
+                        "GROW YOUR GAMING SKILLS WITH OUR Gamers",
                         // null,null
                     ];
         $description_en = [null,null,];
 
         $title_ar = [
-                        "أفضل مركز ألعاب",
-                        "أفضل بائع للألعاب",
+                        "ارفع مستوى تجربة الألعاب الخاصة بك!",
+                        "ارفع مستوى تجربة الألعاب الخاصة بك!",
                    ];
 
         $subtitle_ar =[ "قم ببناء حياتك اللعبية القوية مع لاعبينا",
-                        "قم بتنمية مهاراتك في اللعب مع مركزنا",
+                        "قم بتنمية مهاراتك في اللعب مع لاعبينا",
                      ];
 
         $description_ar =  [null,null,];

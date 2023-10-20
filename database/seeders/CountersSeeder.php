@@ -13,8 +13,8 @@ class CountersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["خبرتنا","مدربينا","مشروعاتنا","عملائنا"];
-        $title_en = ["EXPERIENCE","OUR TRAINERS","COMPLETE PROJECT","HAPPY CLIENTS"];
+        $title_ar = ["خبرتنا","لاعبينا","ألعابنا","عملائنا"];
+        $title_en = ["EXPERIENCE","OUR Gamers","Our Games","HAPPY CLIENTS"];
         $count=['10','50',"150","1235"];
         $icon=["fa fa-star","fa fa-users","fa fa-check","fa fa-mug-hot"];
       

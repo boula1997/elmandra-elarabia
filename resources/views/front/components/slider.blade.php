@@ -11,7 +11,7 @@
                                 <h1 class="display-5 text-white text-uppercase mb-md-4">{{ $slider->subtitle }}</h1>
                                 <a href=""
                                     class="btn btn-primary py-md-3 px-md-5 me-3">{{ __('general.join_us') }}</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5">{{ __('general.contact') }}</a>
+                                <a href="{{ route('front.message') }}" class="btn btn-light py-md-3 px-md-5">{{ __('general.contact') }}</a>
                             </div>
                         </div>
                     </div>
