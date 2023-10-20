@@ -5,8 +5,8 @@
                 <div class="col-lg-4 col-md-6">
                         <div class="bg-light rounded text-center p-5">
                             <i class="{{ $service->icon }} display-1 text-primary"></i>
-                            <h3 class="text-uppercase my-4">{{ $service->title }}</h3>
-                            <div class="text-limit description mb-2" style='--lines: 3;'>{!! $service->description !!}</div>
+                            <h3 class="text-uppercase my-4 text-limit fs-5" style="--lines:2;">{{ $service->title }}</h3>
+                            <div class="text-limit mb-2" style='--lines: 3;'>{!! $service->description !!}</div>
                             <a class="text-uppercase mt-5" href="{{ route('front.show.service',$service->id) }}">{{ __('general.read_more') }} <i class="bi bi-arrow-{{ app()->getLocale()=='ar'?'left':'right' }}"></i></a>
                         </div>
                 </div>  

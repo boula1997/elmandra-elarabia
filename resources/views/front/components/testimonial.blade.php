@@ -14,7 +14,7 @@
                     <div class="owl-carousel testimonial-carousel">
                         @foreach ($testimonials as $testimonial)
                         <div class="testimonial-item">
-                            <p class="fs-4 fw-normal text-light mb-4"><i class="fa fa-quote-left text-primary me-3"></i>{!! $testimonial->description !!}</p>
+                            <div class="fs-4 fw-normal text-light mb-4 text-secondary description"><i class="fa fa-quote-left text-primary me-3"></i>{!! $testimonial->description !!}</div>
                             <div class="d-flex align-items-center">
                                 <img class="img-fluid rounded-circle" src="{{ asset($testimonial->image) }}" alt="">
                                 <div class="ps-4">

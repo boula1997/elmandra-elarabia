@@ -1,7 +1,7 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" dir="ltr">
                 @foreach ($sliders as $slider)
                     <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
                         <img class="w-100 slider-image" src="{{ asset($slider->image) }}" alt="Image">
@@ -19,11 +19,11 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">{{ __('words.previous') }}</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">{{ __('words.next') }}</span>
             </button>
         </div>
     </div>
