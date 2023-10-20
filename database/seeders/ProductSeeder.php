@@ -33,10 +33,19 @@ class ProductSeeder extends Seeder
                         "Mario Kart 8 Deluxe ",
                         "Minecraft",
                         "Luigi’s Mansion 3",
-                        "",
+                        "Sonic Frontiers",
+                        //  XBOX Games
+                        "Road Rage",
+                        "Immortals Fenyx Rising",
+                        "Battlefield 2042",
+                        "GRID Legends",
+                        "Street Fighter 6",
+                        // pc games
                     ];
 
         $subtitle_en = [
+                          // 
+                          null,null,null,null,null,
                           // 
                           null,null,null,null,null,
                           // 
@@ -47,6 +56,8 @@ class ProductSeeder extends Seeder
                        ];
 
         $description_en = [
+                              // 
+                              null,null,null,null,null,
                               // 
                               null,null,null,null,null,
                               // 
@@ -73,7 +84,14 @@ class ProductSeeder extends Seeder
                         "ماريو كارت 8 ديلوكس",
                         "ماينكرافت",
                         "قصر لويجي 3",
-                        "",
+                        "سونيك فرونتيرز",
+                        //  XBOX Games
+                        "غضب الطريق",
+                        "لعبة الخالدون فينيكس رايزينج",
+                        "باتلفيلد 2042",
+                        "GRID أساطير",
+                        "ستريت فايتر 6",
+
                        
                     ];  
 
@@ -82,6 +100,8 @@ class ProductSeeder extends Seeder
                          null,null,null,null,null,
                          // 
                          null,null,null,null,null,
+                        // 
+                        null,null,null,null,null,
                         // 
                         null,null,null,null,null,
                        ];
@@ -93,6 +113,8 @@ class ProductSeeder extends Seeder
                             null,null,null,null,null,
                             // 
                             null,null,null,null,null,
+                             // 
+                             null,null,null,null,null,
                           ];
 
         $images = [
@@ -109,11 +131,17 @@ class ProductSeeder extends Seeder
                     "images/GjqjTWFa0jEL7bb9aGYQZrm2Mavt1x97BvPx3O2W.webp",
                     "images/N4HO5RF8YWJRhTMvzdG2Mdo7kqD9hHtvLMuBh2WY.webp",
                     //  Nintendo Switch
-                    "images/HsWogOvEjxPtEStdNr913ols44RFifVERaoyxkwh.webp",
                     "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
                     "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
                     "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                    "",
+                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                    "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
+                     //  XBOX Games
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
                   ];
 
         $icons= [ 
@@ -123,6 +151,8 @@ class ProductSeeder extends Seeder
                       null,null,null,null,null,
                       // 
                       null,null,null,null,null,
+                       // 
+                       null,null,null,null,null,
                 ];
 
         for ($i = 0; $i < count($title_ar); $i++) {
