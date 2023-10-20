@@ -16,24 +16,23 @@
                             class="card-img-top" alt="Laptop" />
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
-                                <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                <p class="small text-danger"><s>$1099</s></p>
                             </div>
 
                             <div class="d-flex justify-content-between mb-3">
                                 <h5 class="mb-0">HP Notebook</h5>
-                                <h5 class="text-dark mb-0">$999</h5>
+                                <div class="small text-danger"><h5 class="text-dark mb-0">$999</h5><s>$1099</s></div>
+                                
                             </div>
 
                             <div class="d-flex justify-content-between mb-2">
                                 <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
-                                <div class="ms-auto text-warning">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="btn btn-primary"><i class="fa fa-star"></i> Add to Favourite</button>
                             </div>
                         </div>
                     </div>
