@@ -14,12 +14,21 @@ class Product extends Model implements TranslatableContract
 {
     use HasFactory, Translatable, MorphFile;
     protected $table = 'products';
-    public $translatedAttributes = ['title', 'subtitle','category', 'description'];
+    public $translatedAttributes = ['title', 'subtitle', 'description'];
     protected $guarded = [];
     public $timestamps = true;
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
 
     public function getImageAttribute(){
         return  $this->file? asset($this->file->url): asset('default.jpg');
    }
+
+
     
 }
+

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\ProductRequest;
+use App\Models\Category;
 use Illuminate\Support\Facades\File;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -18,13 +19,15 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Responses
      */
     private $product;
-    function __construct(Product $product)
+    private $category;
+    function __construct(Product $product,Category $category)
     {
         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index', 'show']]);
         $this->middleware('permission:product-create', ['only' => ['create', 'store']]);
         $this->middleware('permission:product-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
         $this->product = $product;
+        $this->category = $category;
     }
 
     public function index()
@@ -46,7 +49,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.products.create');
+        $categories=$this->category->latest()->get();
+        return view('admin.crud.products.create',compact('categories'));
     }
 
     /**
@@ -88,8 +92,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        // dd($product);
-        return view('admin.crud.products.edit', compact('product'));
+        $categories=$this->category->latest()->get();
+        return view('admin.crud.products.edit', compact('product','categories'));
     }
     /**
      * Update the specified resource in storage.

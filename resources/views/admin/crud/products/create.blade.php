@@ -3,7 +3,7 @@
 @section('form_type', 'POST')
 @section('fields_content')
     <div class="content-wrapper">
-                <div class="container p-3">
+        <div class="container p-3">
             @include('admin.components.alert-error')
             <div class="card card-custom mb-2">
                 <div class="card-header card-header-tabs-line">
@@ -66,6 +66,16 @@
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.categories') }}</label>
+                                <select class="form-select form-select-lg" name="category_id" id="category">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             @include('admin.components.image', [
                                 'label' => __('general.image'),

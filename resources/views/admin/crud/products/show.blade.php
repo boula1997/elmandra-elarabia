@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+div@extends('admin.layouts.master')
 
 @section('content')
     <div class="content-wrapper">
@@ -64,8 +64,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <img src="{{ $product->image }}" class="w-50">
+                                    <p class="m-0">{{ $product->category->translate($locale)->title }}</p>
                                 </div>
+                            </div>
+                                <div class="form-group">
+                                    <img src="{{ $product->image }}" class="w-50">
+                                </div> 
                             </div>
 
                             <div class="col-md-6">

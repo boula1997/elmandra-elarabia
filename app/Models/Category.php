@@ -21,5 +21,9 @@ class Category extends Model implements TranslatableContract
     public function getImageAttribute(){
         return  $this->file? asset($this->file->url): asset('default.jpg');
    }
+
+   public function products(){
+    return $this->hasMany(Product::class);
+   }
     
 }

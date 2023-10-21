@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             GalleriesSeeder::class,
             PagesSeeder::class,
             SlidersSeeder::class,
+            CategorySeeder::class,
             ProductSeeder::class,
             PermissionTableSeeder::class,
             CreateAdminUserSeeder::class,
@@ -40,7 +41,6 @@ class DatabaseSeeder extends Seeder
             TestimonialsSeeder::class,
             UsersSeeder::class,
             VideosSeeder::class,
-            CategorySeeder::class,
         ]);
         
     }
