@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
             TestimonialsSeeder::class,
             UsersSeeder::class,
             VideosSeeder::class,
+            CategorySeeder::class,
           
 
         ]);

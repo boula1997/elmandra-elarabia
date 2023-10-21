@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -77,6 +78,7 @@ Route::group(
             Route::resource('faqs', FaqController::class);
             // Route::resource('message',MessageController::class);
             Route::resource('services', ServiceController::class);
+            Route::resource('categories', CategoryController::class);
             Route::resource('sliders', SliderController::class);
             // Route::resource('newsletter',NewsletterController::class);
             Route::resource('testimonials', TestimonialController::class);
