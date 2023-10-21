@@ -385,9 +385,10 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             {{-- <i class=" px-1 fab fa-categoriestack"></i> --}}
-                            <i class="fab fa-category-hunt"></i>
+                            <i class="fab fa-buromobelexperte"></i>
+                            {{-- <i class="fab fa-category-hunt"></i> --}}
                             <p>
-                                @lang('general.category') <i class=" px-1 fas fa-angle-left right"></i>
+                                @lang('general.categories') <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('categories') }}</span>
                             </p>
                         </a>

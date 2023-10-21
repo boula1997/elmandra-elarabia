@@ -223,5 +223,7 @@ return [
     'checkout'=>'Checkout',
     'add_to_cart'=>'Add to Cart',
     'add_to_favourite'=>'Add to Favourite',
+    'categories'=>'Categories',
+    
     
 ];
