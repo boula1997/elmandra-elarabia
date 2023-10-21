@@ -7,7 +7,7 @@ use App\Models\Testimonial;
 use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
-use App\Models\Counter;
+use App\Models\Category;
 use Exception;
 
 class ProductController extends Controller
@@ -21,16 +21,16 @@ class ProductController extends Controller
     private $testimonial;
     private $team;
     private $process;
-    private $counter;
+    private $category;
     private $portfolio;
 
-    public function __construct(Product $product, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio)
+    public function __construct(Product $product, Testimonial $testimonial, Team $team, Process $process, category $category, Gallery $portfolio)
     {
         $this->product = $product;
         $this->testimonial = $testimonial;
         $this->team = $team;
         $this->process = $process;
-        $this->counter = $counter;
+        $this->category = $category;
         $this->portfolio = $portfolio;
     }
 
