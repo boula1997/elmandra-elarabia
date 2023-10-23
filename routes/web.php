@@ -59,6 +59,16 @@ Route::group(
             return view("front.shopping");
         })->name('front.shopping');
 
+        Route::get('/user-registration', function () {
+    
+            return view("front.login_registration.registration");
+        })->name('user-registration');
+
+        Route::get('/user-login', function () {
+    
+            return view("front.login_registration.login");
+        })->name('user-login');
+
     }
 );
 

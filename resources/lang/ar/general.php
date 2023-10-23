@@ -226,7 +226,11 @@ return [
     'add_to_cart'=>'اضف الى السلة',
     'add_to_favourite'=>'اضف الى المفضل',
     'categories'=>'الفئات',
-    
-
-
+    'sign_up_now'=>'اشترك معنا الان',
+    'first_name'=>'الاسم الاول',
+    'last_name'=>'الاسم الاخير',
+    'subscribe_to_our_newsletter'=>'  اشترك في نشرتنا الإخبارية',
+    'or_sign_up_with'=>' قم بالتسجيل من خلال',
+    'forget_password'=>'نسيت كلمة السر',
+    'or_login_up_with'=>'تسجيل الدخول عبر',
 ];

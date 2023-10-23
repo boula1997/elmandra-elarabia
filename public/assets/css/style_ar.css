@@ -13,6 +13,12 @@
   font-size: inherit;
   margin-right: 0;
 }
+.registration-padding{
+  padding: 6.5rem !important;
+}
+.registration-imageback{
+  height: 100% !important;
+}
 .single-imag{
   width:100%;
   height:100%;

@@ -224,6 +224,15 @@ return [
     'add_to_cart'=>'Add to Cart',
     'add_to_favourite'=>'Add to Favourite',
     'categories'=>'Categories',
+    'sign_up_now'=>'Sign up now',
+    'first_name'=>'First name',
+    'last_name'=>'Last name',
+    'subscribe_to_our_newsletter'=>'Subscribe to our newsletter',
+    'or_sign_up_with'=>'or sign up with',
+    'forget_password'=>'Forget Password',
+    'or_login_up_with'=>'or login up with',
+    
+    
     
     
 ];
