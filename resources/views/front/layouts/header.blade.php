@@ -166,8 +166,8 @@
                         @endforeach
                        
                         </div>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">{{ __('general.join_us') }}</a>
-                    </div>
+                             <a href="{{ route('user-registration') }}" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">{{ __('general.join_us') }}</a>
+                        </div>
                 </nav>
             </div>
         </div>

@@ -14,10 +14,16 @@
     margin-left: 0;
 }
 .registration-padding{
-    padding: 6.5rem !important;
+    padding: 6rem !important;
+}
+.login-padding{
+    padding: 6rem !important;
 }
 .registration-imageback{
     height: 100% !important;
+}
+.login-imageback{
+    height: 690px !important;
 }
 .single-imag{
     width:100%;

@@ -232,5 +232,8 @@ return [
     'subscribe_to_our_newsletter'=>'  اشترك في نشرتنا الإخبارية',
     'or_sign_up_with'=>' قم بالتسجيل من خلال',
     'forget_password'=>'نسيت كلمة السر',
-    'or_login_up_with'=>'تسجيل الدخول عبر',
+    'or_login_in_with'=>'تسجيل الدخول عبر',
+    'already_have_account!'=>'لديك حساب بالفعل!',
+    'i_dont_have_account'=>' ليس لدي حساب!',
+   
 ];

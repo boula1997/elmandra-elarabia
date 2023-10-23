@@ -230,7 +230,11 @@ return [
     'subscribe_to_our_newsletter'=>'Subscribe to our newsletter',
     'or_sign_up_with'=>'or sign up with',
     'forget_password'=>'Forget Password',
-    'or_login_up_with'=>'or login up with',
+    'or_login_in_with'=>'or login in with',
+    'already_have_account!'=>'Already have account!',
+    'i_dont_have_account'=>"I don't have an account!",
+    
+   
     
     
     

@@ -63,6 +63,11 @@
                 <a href="{{ route('user-login') }}" class="form-check-label">{{ __('general.forget_password') }}</a>
               </div>
 
+              <div class="form-check d-flex justify-content-center mb-4">
+                <a href="{{ route('user-registration') }}" class="form-check-label">{{ __('general.i_dont_have_account') }}</a>
+              </div>
+
+
               <!-- Submit button -->
 
               <div class="col-md-12 mb-4 d-flex justify-content-center">
@@ -76,7 +81,7 @@
 
               <!-- Register buttons -->
               <div class="text-center">
-                <p>{{ __('general.or_sign_up_with') }}</p>
+                <p>{{ __('general.or_login_in_with') }}</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-facebook-f"></i>
                 </button>
@@ -99,7 +104,7 @@
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="{{ asset('images/back1.jpg') }}" class="w-100 registration-imageback rounded-4 shadow-4"
+        <img src="{{ asset('images/back1.jpg') }}" class="w-100 login-imageback rounded-4 shadow-4"
           alt="img" />
       </div>
     </div>

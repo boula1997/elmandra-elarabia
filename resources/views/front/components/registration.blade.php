@@ -61,6 +61,10 @@
                  {{__('general.subscribe_to_our_newsletter')}}
                 </label>
               </div>
+              
+              <div class="form-check d-flex justify-content-center mb-4">
+                <a href="{{ route('user-login') }}" class="form-check-label">{{ __('general.already_have_account!') }}</a>
+              </div>
 
               <!-- Submit button -->
 
