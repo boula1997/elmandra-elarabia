@@ -89,6 +89,36 @@
                         </div>
 
                         <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.price_bd') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="price_bd"
+                                        placeholder="@lang('general.price_bd')"
+                                        class="form-control  pl-1 min-h-40px @error('price_bd') is-invalid @enderror"
+                                        value="{{old('price_bd',$product->price_bd)}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.stock') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="stock"
+                                        placeholder="@lang('general.stock')"
+                                        class="form-control  pl-1 min-h-40px @error('stock') is-invalid @enderror"
+                                        value="{{old('stock',$product->stock)}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">{{ __('general.categories') }}</label>
                                 <select class="form-select form-select-lg" name="category_id" id="category">

@@ -14,10 +14,13 @@
                             <div class="d-flex justify-content-between mb-2">
                                 <h5 class="text-limit" style="--lines:1;" title="{{ $product->title }}">
                                     {{ $product->title }}</h5>
-                            </div>
+                                </div>
+                                {{-- <div>
+                                    <h5 class="text-dark mb-0">{{ __('general.stock') }} {{$product->stock}}</h5>
+                                </div> --}}
                             <div class="d-flex justify-content-between">
 
-                                <p class="small text-danger"><s>{{$product->price}} $</s></p>
+                                <p class="small text-danger"><s>{{$product->price_bd}} $</s></p>
                                 <h5 class="text-dark mb-0">{{$product->price}} $</h5>
                             </div>
 

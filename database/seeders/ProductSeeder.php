@@ -184,6 +184,8 @@ class ProductSeeder extends Seeder
                 ];
 
                 $prices=[100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,];
+                $prices_bd=[150,250,350,750,550,150,250,350,750,550,150,250,350,750,550,150,250,350,750,550,150,250,350,750,550,];
+                $stock=[100,30,70,40,80,100,30,70,40,80,100,30,70,40,80,100,30,70,40,80,100,30,70,40,80,];
 
         for ($i = 0; $i < count($title_ar); $i++) {
             $product = Product::create([
@@ -200,6 +202,8 @@ class ProductSeeder extends Seeder
                 'icon'=>$icons[$i],
                 'category_id'=>\random_int(1,5),
                 'price'=>$prices[$i],
+                'price_bd'=>$prices_bd[$i],
+                'stock'=>$stock[$i],
 
             ]);
 
