@@ -35,7 +35,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-5 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $setting->translate($locale)->title) }}">
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[address]' }}"
                                             placeholder="@lang('general.address')"
-                                            class="form-control  pl-5 min-h-40px @error($locale . '.address') is-invalid @enderror"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
                                             value="{{ old($locale . '.address', $setting->translate($locale)->address) }}">
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[appointment1]' }}"
                                             placeholder="@lang('general.appointment1')"
-                                            class="form-control  pl-5 min-h-40px @error($locale . '.appointment1') is-invalid @enderror"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.appointment1') is-invalid @enderror"
                                             value="{{ old($locale . '.appointment1', $setting->translate($locale)->appointment1) }}">
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[copyright]' }}"
                                             placeholder="@lang('general.copyright')"
-                                            class="form-control  pl-5 min-h-40px @error($locale . '.copyright') is-invalid @enderror"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.copyright') is-invalid @enderror"
                                             value="{{ old($locale . '.copyright', $setting->translate($locale)->copyright) }}">
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[meta_data]' }}"
                                             placeholder="@lang('general.meta_data')"
-                                            class="form-control  pl-5 min-h-40px @error($locale . '.meta_data') is-invalid @enderror"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.meta_data') is-invalid @enderror"
                                             value="{{ old($locale . '.meta_data', $setting->translate($locale)->meta_data) }}">
                                     </div>
                                 </div>

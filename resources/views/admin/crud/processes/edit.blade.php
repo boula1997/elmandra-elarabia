@@ -32,7 +32,7 @@
                                         <span class="input-group-text"><i class="flaticon-edit"></i></span>
                                     </div>
                                     <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
-                                        class="form-control  pl-5 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                        class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                         value="{{ old($locale . '.title', $process->translate($locale)->title) }}">
                                 </div>
                             </div>
@@ -44,7 +44,7 @@
                                     </div>
                                     <input type="text" name="{{ $locale . '[subtitle]' }}"
                                         placeholder="@lang('general.subtitle')"
-                                        class="form-control  pl-5 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                        class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
                                         value="{{ old($locale . '.subtitle', $process->translate($locale)->subtitle) }}">
                                 </div>
                             </div>

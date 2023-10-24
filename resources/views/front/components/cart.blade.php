@@ -16,7 +16,8 @@
                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                     <div>
                                         <p class="mb-1">{{ __('general.shopping_cart') }}</p>
-                                        <p class="mb-0">{{ __('general.you_have') }} <span class="cart-count">{{ count(cart()->getItems()) }}</span>
+                                        <p class="mb-0">{{ __('general.you_have') }} <span
+                                                class="cart-count">{{ count(cart()->getItems()) }}</span>
                                             {{ __('general.items_in_your_cart') }}</p>
                                     </div>
                                     {{-- <div>
@@ -48,7 +49,8 @@
                                                     <div style="width: 80px;">
                                                         <h5 class="mb-0">$900</h5>
                                                     </div>
-                                                    <button class="removeCart btn btn-transparent"  hash="{{ $item->getHash() }}">
+                                                    <button class="removeCart btn btn-transparent"
+                                                        hash="{{ $item->getHash() }}">
                                                         <i class="fas fa-trash-alt tetx-danger"></i>
                                                     </button>
                                                 </div>
@@ -68,128 +70,117 @@
                                         </div>
 
 
-{{-- 
-                                        <p class="small mb-2">{{ __('general.card_type') }}</p>
-                                        <a href="#!" type="submit" class="text-white"><i
-                                                class="fab fa-cc-mastercard fa-2x me-2"></i></a>
-                                        <a href="#!" type="submit" class="text-white"><i
-                                                class="fab fa-cc-visa fa-2x me-2"></i></a> --}}
-                                        {{-- <a href="#!" type="submit" class="text-white"><i
-                          class="fab fa-cc-amex fa-2x me-2"></i></a> --}}
-                      {{-- <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a> --}}
-  
-                      <form class="mt-4">
-                        
-                        <div class="row mb-4">
-                          <div class="col-md-12">
-                            <div class="form-outline form-white">
-                              <label class="form-label" for="name">{{ __('general.name') }}</label>
-                              <input type="text" id="name" class="form-control form-control-lg"
-                                placeholder="{{ __('general.name') }}"  id="name" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mb-4">
-                          <div class="col-md-12">
-                            <label class="form-label" for="email">{{ __('general.email') }}</label>
-                            <div class="form-outline form-white">
-                              <input type="text" id="email" class="form-control form-control-lg"
-                                placeholder="{{ __('general.email') }}" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mb-4">
-                          <div class="col-md-12">
-                            <div class="form-outline form-white">
-                              <label class="form-label" for="phone">{{ __('general.phone') }}</label>
-                              <input type="text" id="phone" class="form-control form-control-lg"
-                                placeholder="{{ __('general.phone') }}"  id="phone" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mb-4">
-                          <div class="col-md-12">
-                            <label class="form-label" for="address">{{ __('general.address') }}</label>
-                            <div class="form-outline form-white">
-                              <input type="text" id="address" class="form-control form-control-lg"
-                                placeholder="{{ __('general.address') }}" />
-                            </div>
-                          </div>
-                        </div>
+                                        <form class="mt-4">
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-outline form-white">
+                                                        <label class="form-label"
+                                                            for="name">{{ __('general.name') }}</label>
+                                                        <input type="text" id="name"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.name') }}" id="name" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="form-label"
+                                                        for="email">{{ __('general.email') }}</label>
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" id="email"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.email') }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-outline form-white">
+                                                        <label class="form-label"
+                                                            for="phone">{{ __('general.phone') }}</label>
+                                                        <input type="text" id="phone"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.phone') }}" id="phone" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="form-label"
+                                                        for="address">{{ __('general.address') }}</label>
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" id="address"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.address') }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
-  
-                      </form>
-  
-                      <hr class="my-4">
-  
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">{{ __('general.subtotal') }}</p>
-                        <p class="mb-2">$4798.00</p>
-                      </div>
-  
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">{{ __('general.shipping') }}</p>
-                        <p class="mb-2">$20.00</p>
-                      </div>
-  
-                      <div class="d-flex justify-content-between mb-4">
-                        <p class="mb-2"> {{ __('general.total') }} </p>
-                        <p class="mb-2">$4818.00</p>
-                      </div>
-                      
-                      <div class="col-12 d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary">
-                            <div class="d-flex justify-content-between">
-                            <span>$4818.00</span>
-                            &nbsp;&nbsp;
-                            <span>{{ __('general.checkout') }} <i class="fas fa-long-arrow-alt-{{ app()->getLocale()=='ar'?'left':'right' }} ms-2"></i></span>
+
+                                        </form>
+
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-2">{{ __('general.subtotal') }}</p>
+                                            <p class="mb-2">$4798.00</p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-2">{{ __('general.shipping') }}</p>
+                                            <p class="mb-2">$20.00</p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <p class="mb-2"> {{ __('general.total') }} </p>
+                                            <p class="mb-2">$4818.00</p>
+                                        </div>
+
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <button type="button" class="btn btn-secondary">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>$4818.00</span>
+                                                    &nbsp;&nbsp;
+                                                    <span>{{ __('general.checkout') }} <i
+                                                            class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                        </button>
+
+                        </div>
+
                     </div>
-                    </div>
-                  </div>
-  
                 </div>
-  
+
+                <div class="card">
+                  <div class="card-header">
+                      <h5>{{ __('general.cart') }}</h5>
+                  </div>
+                  <div class="card-body cart">
+                      <div class="col-sm-12 empty-cart-cls text-center">
+                          <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%"
+                              class="img-fluid mb-4 mr-3">
+                          <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
+                          <h4>{{ __('general.add_something_to_make') }} </h4>
+                          <a href="{{ route('front.products') }}" class="btn btn-primary cart-btn-transform m-3"
+                              data-abc="true">{{ __('general.continue_shopping') }}</a>
+
+
+                      </div>
+                  </div>
               </div>
-  
             </div>
-          </div>
         </div>
-      </div>
     </div>
 </div>
 
-<section>
-  <div class="container-fluid  mt-100">
-    <div class="row">
-    
-     <div class="col-md-12">
-     
-         <div class="card">
-       <div class="card-header">
-       <h5>{{ __('general.cart') }}</h5>
-       </div>
-       <div class="card-body cart">
-           <div class="col-sm-12 empty-cart-cls text-center">
-             <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%" class="img-fluid mb-4 mr-3">
-             <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
-             <h4>{{ __('general.add_something_to_make') }}  </h4>
-             <a href="{{ route('front.products') }}" class="btn btn-primary cart-btn-transform m-3" data-abc="true">{{ __('general.continue_shopping') }}</a>
-             
-           
-           </div>
-       </div>
-   </div>
-       
-     
-     </div>
-    
-    </div>
-   
-   </div>
-</section>
+
 
 
 @push('js')
