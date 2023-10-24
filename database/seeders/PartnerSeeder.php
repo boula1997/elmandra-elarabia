@@ -13,20 +13,11 @@ class PartnerSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["SEO Mind",
-        "Boosterio",
-        "Atomic SEO",
-        "Green Host"];
+        $title_en = [null];
       
-        $title_ar = ["SEO Mind",
-                    "Boosterio",
-                    "Atomic SEO",
-                    "Green Host"];
+        $title_ar = [null];
 
-        $image=["images/tykEYLJg6IvrEdpzYcHTmLm5WWErcSklnEZcOjcI.webp",
-                "images/HsWogOvEjxPtEStdNr913ols44RFifVERaoyxkwh.webp",
-                "images/PF6upRmlXRiiLF1JVifLw2q43EI50i0dnTGHP6xu.webp",
-                "images/TpVI2ZX1wEb42aAx56kLkGIpwGHyW1sPLeBgF5e8.webp"];
+        $image=[null];
        
        
 

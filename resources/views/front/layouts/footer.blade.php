@@ -11,16 +11,16 @@
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-envelope-open text-primary me-2"></i>
-                        <p class="mb-0 letter-hover"><a class="text-secondary" href="#">{{ contacts('email')[0]->contact }}</a></p>
+                        <p class="mb-0 letter-hover"><a class="text-secondary" href="mailto:{{contacts('email')[0]->contact }}">{{ contacts('email')[0]->contact }}</a></p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-telephone text-primary me-2 rotate"></i>
-                        <p class="mb-0 letter-hover"><a class="text-secondary" href="#">{{ contacts('phone')[0]->contact }}</a></p>
+                        <p class="mb-0 letter-hover"><a class="text-secondary"  href="tel:{{contacts('phone')[0]->contact }}">{{ contacts('phone')[0]->contact }}</a></p>
                     </div>
                     <div class="d-flex mt-4">
                         @foreach (contacts('social') as $contact)
 
-                        <a href="{{ $contact->contact }}" class="btn btn-primary btn-square rounded-circle me-2"><i class="{{ $contact->icon }}"
+                        <a href="{{ $contact->contact }}" target="__blank" class="btn btn-primary btn-square rounded-circle me-2"><i class="{{ $contact->icon }}"
                             aria-hidden="true"></i></a>  
                         
                         @endforeach

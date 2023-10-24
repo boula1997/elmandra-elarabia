@@ -2,7 +2,7 @@
    <div class="container-fluid p-5">
     <div class="mb-5 text-center">
         <h5 class="text-primary text-uppercase">{{ page('team')->title }}</h5>
-        <h1 class="display-5 text-uppercase mb-0">{{ page('team')->subtitle }}s</h1>
+        <h1 class="display-5 text-uppercase mb-0">{{ page('team')->subtitle }}</h1>
     </div>
     <div class="row g-5">
         @foreach ($teams as $team)
@@ -12,9 +12,9 @@
                     <img class="img-fluid team-image" src="{{ asset( $team->image )}}" alt="">
                     <div class="team-overlay">
                         <div class="d-flex align-items-center justify-content-start">
-                            <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->twitter}}"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->facebook}}"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-light btn-square rounded-circle mx-1" href="{{$team->linkedin}}"><i class="fab fa-linkedin"></i></a>
+                            <a class="btn btn-light btn-square rounded-circle mx-1" target="__blank" href="{{$team->twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-square rounded-circle mx-1" target="__blank" href="{{$team->facebook}}"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-square rounded-circle mx-1" target="__blank" href="{{$team->linkedin}}"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>

@@ -17,18 +17,18 @@ class TeamSeeder extends Seeder
                      "Ibrahim Samy",
                      "Gerges Makram"];
 
-        $subtitle_en = ["Software Engineer",
-                        "Software Engineer",
-                        "Manager"];
+        $subtitle_en = ["Gammer",
+                        "Gammer",
+                        "Gammer"];
         $description_en = [null,null,null,];
       
         $title_ar = ["بولا نسيم",
                      "ابراهيم سامى",
                      "جرجس مكرم"];
 
-        $subtitle_ar =["مهندس برمجيات",
-                       "مهندس برمجيات",
-                        "مدير"];
+        $subtitle_ar =["لاعب",
+                       "لاعب",
+                       "لاعب"];
         $description_ar =  [null,null,null];
 
         $facebooks=["https://www.facebook.com",
@@ -51,8 +51,6 @@ class TeamSeeder extends Seeder
 
         $image=["images/YE92B4LXiM6QhFcQbr5YKECGaMU5k8NokXve9o1m.jpg",
                 "images/YQXLPLiQgi8H1E9YE77J3lwUX0qSOYXkHMP192Nz.png",
-                // "images/pekmLKsEWdfVwDSwbG0sSIZARXfO8GavZPaoOF1D.jpg",
-                // "images/tAgfJG0vAJHhQsCii9FR441z6tGs9fyGKj92MUzy.jpg",
                 "images/pekmLKsEWdfVwDSwbG0sSIZARXfO8GavZPaoOF1D.jpg"];
        
        

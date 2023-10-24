@@ -13,33 +13,14 @@ class ProcessesSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["Define Your Goals and Requirements",
-                     "Initial Consultation",
-                     "Proposal and Agreement",
-                     "Executing and Delivering"];
-        $subtitle_en = [null,null,null,null];
-        $description_en = [ "<p>Clearly identify your goals and objectives for the website.</p>",
+        $title_en = [null];
+        $subtitle_en = [null];
+        $description_en = [null];
 
-                            "<p>Connect with us to have a full illustration to discuss your project goals </p>",
+        $title_ar = [null];
+        $subtitle_ar =[null];
 
-                            "<p>we will provide you with a proposal that outlines the project scope, timeline, and cost.</p>",
-
-                            "<p>reviewing the website and deliver it to client once he is satisfied with the output. </p>"];
-
-        $title_ar = ["حدد أهدافك ومتطلباتك:",
-                     "المشاورات الأولية", 
-                     "الاقتراح والاتفاق",
-                     "تنفيذ وتسليم الموقع"];
-        $subtitle_ar =[null,null,null,null];
-
-        $description_ar =  [ 
-                            "<p>حدد بوضوح أهدافك وغاياتك للموقع.</p>",
-
-                            "<p>تواصل معنا للحصول على رسم توضيحي كامل لمناقشة أهداف مشروعك </p>",
-
-                            "<p>سنزودك بمقترح يوضح نطاق المشروع والجدول الزمني والتكلفة.</p>",
-
-                            "<p>مراجعة الموقع وتسليمه للعميل بمجرد رضاه عن المخرجات.</p>"];
+        $description_ar =  [null];
       
         $image=[];
        
