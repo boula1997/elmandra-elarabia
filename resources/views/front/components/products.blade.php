@@ -59,6 +59,8 @@
                 type: 'get',
                 url: url,
                 success: (response) => {
+                    $(this).removeClass('disabled');
+
                     console.log(response);
                     $('.cart-count').text(response.count);
                     $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass(
@@ -94,7 +96,6 @@
 
         $('.removeCart').on('click', function(e) {
             $(this).addClass('disabled');
-
             e.preventDefault();
             var hash = $(this).attr('hash');
             let url = "{{ route('removeFrom.cart', ':hash') }}";
@@ -103,6 +104,7 @@
                 type: 'get',
                 url: url,
                 success: (response) => {
+                    $(this).removeClass('disabled');
                     $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
                         'btn btn-primary').attr('hash', '');
                     $('.cart-count').text(response.count);

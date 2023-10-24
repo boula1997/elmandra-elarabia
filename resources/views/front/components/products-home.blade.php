@@ -77,6 +77,7 @@ a  <!-- Class Timetable Start -->
                 type: 'get',
                 url: url,
                 success: (response) => {
+                    $(this).removeClass('disabled');
                     console.log(response);
                     $('.cart-count').text(response.count);
                     $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass(
@@ -120,6 +121,7 @@ a  <!-- Class Timetable Start -->
                 type: 'get',
                 url: url,
                 success: (response) => {
+                    $(this).removeClass('disabled');
                     $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
                         'btn btn-primary').attr('hash', '');
                     $('.cart-count').text(response.count);
