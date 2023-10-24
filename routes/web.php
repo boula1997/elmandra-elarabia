@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\NewsletterController;
@@ -55,9 +56,10 @@ Route::group(
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
         
         Route::get('/add_to_cart', function () {
-    
+            
             return view("front.shopping");
         })->name('front.shopping');
+        Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
 
         Route::get('/user-registration', function () {
     

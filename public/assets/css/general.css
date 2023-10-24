@@ -166,3 +166,9 @@ body{
 .img-product-container:hover .img-product{
     transform: scale(1.1);
 }
+
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 125vh !important;
+    }
+    }

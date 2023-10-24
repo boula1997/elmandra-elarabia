@@ -43,8 +43,8 @@ a  <!-- Class Timetable Start -->
                                     <div class="">
                                         <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i>
                                             {{ __('general.add_to_cart') }}</button>
-                                        <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i>
-                                            {{ __('general.add_to_favourite') }}</button>
+                                        {{-- <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i>
+                                            {{ __('general.add_to_favourite') }}</button> --}}
                                     </div>
                                 </div>
                             </div>

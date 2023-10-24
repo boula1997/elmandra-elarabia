@@ -109,22 +109,7 @@
                                 aria-hidden="true"></i></a>  
                             
                             @endforeach
-                            
-                            {{-- <a class="btn btn-light btn-square rounded-circle me-2" href="">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="btn btn-light btn-square rounded-circle" href="">
-                                <i class="fab fa-youtube"></i>
-                            </a> --}}
+                        
                         </div>
                     </div>
                 </div>
@@ -139,20 +124,11 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{ route('front.home') }}" class="nav-item nav-link {{ request()->routeIs('front.home') ? 'active' : '' }}">{{ __('general.home') }}</a>
                             <a href="{{ route('front.about') }}" class="nav-item nav-link {{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
-                       {{-- <a href="{{ route('front.about') }}" class="nav-item nav-link{{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a> --}}
                             <a href="{{ route('front.products') }}" class="nav-item nav-link {{ request()->routeIs('front.products') ? 'active' : '' }}">{{ __('general.product') }}</a>
-                            {{-- <a href="team.html" class="nav-item nav-link">Contact</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                    <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                </div>
-                            </div> --}}
                             <a href="{{ route('front.message') }}" class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
-                            <a class="nav-item nav-link " href="{{ route('front.shopping') }}">
+                            <a class="nav-item nav-link d-flex flex-column" href="{{ route('front.shopping') }}">
+                                <span class="bg-danger">{{ count(cart()->getItems()) }}</span>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
