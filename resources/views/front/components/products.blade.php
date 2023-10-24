@@ -49,6 +49,8 @@
 @push('js')
     <script>
         $('.addCart').on('click', function(e) {
+            $(this).addClass('disabled');
+
             e.preventDefault();
             var product_id = $(this).attr('product_id');
             let url = "{{ route('addTo.cart', ':id') }}";
@@ -91,6 +93,8 @@
         });
 
         $('.removeCart').on('click', function(e) {
+            $(this).addClass('disabled');
+
             e.preventDefault();
             var hash = $(this).attr('hash');
             let url = "{{ route('removeFrom.cart', ':hash') }}";

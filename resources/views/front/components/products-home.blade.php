@@ -68,6 +68,7 @@ a  <!-- Class Timetable Start -->
   @push('js')
     <script>
         $('.addCart').on('click', function(e) {
+            $(this).addClass('disabled');
             e.preventDefault();
             var product_id = $(this).attr('product_id');
             let url = "{{ route('addTo.cart', ':id') }}";
@@ -110,6 +111,7 @@ a  <!-- Class Timetable Start -->
         });
 
         $('.removeCart').on('click', function(e) {
+            $(this).addClass('disabled');
             e.preventDefault();
             var hash = $(this).attr('hash');
             let url = "{{ route('removeFrom.cart', ':hash') }}";
@@ -134,7 +136,7 @@ a  <!-- Class Timetable Start -->
                         "timeOut": "5000",
                         "extendedTimeOut": "1000",
                         "showEasing": "swing",
-                        "hideEasing": "linear",
+                        "hideEasing": " linear",
                         "showMethod": "fadeIn",
                         "hideMethod": "fadeOut"
                     };
