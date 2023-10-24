@@ -143,6 +143,8 @@
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
                           class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
                       </div>
+
+
   
                       <p class="small mb-2">{{ __('general.card_type') }}</p>
                       <a href="#!" type="submit" class="text-white"><i
@@ -154,31 +156,68 @@
                       <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
   
                       <form class="mt-4">
+                        
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <div class="form-outline form-white">
+                              <label class="form-label" for="name">{{ __('general.name') }}</label>
+                              <input type="text" id="name" class="form-control form-control-lg"
+                                placeholder="{{ __('general.name') }}"  id="name" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <label class="form-label" for="email">{{ __('general.email') }}</label>
+                            <div class="form-outline form-white">
+                              <input type="text" id="email" class="form-control form-control-lg"
+                                placeholder="{{ __('general.email') }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <div class="form-outline form-white">
+                              <label class="form-label" for="phone">{{ __('general.phone') }}</label>
+                              <input type="text" id="phone" class="form-control form-control-lg"
+                                placeholder="{{ __('general.phone') }}"  id="phone" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <label class="form-label" for="address">{{ __('general.address') }}</label>
+                            <div class="form-outline form-white">
+                              <input type="text" id="address" class="form-control form-control-lg"
+                                placeholder="{{ __('general.address') }}" />
+                            </div>
+                          </div>
+                        </div>
                         <div class="form-outline form-white mb-4">
+                          <label class="form-label" for="typeName">{{ __('general.cardholder_name') }}</label>
                           <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
                             placeholder="{{ __('general.cardholder_name') }}" />
-                          <label class="form-label" for="typeName">{{ __('general.cardholder_name') }}</label>
                         </div>
   
                         <div class="form-outline form-white mb-4">
+                          <label class="form-label" for="typeText">{{ __('general.card_number') }}</label>
                           <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
                             placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                          <label class="form-label" for="typeText">{{ __('general.card_number') }}</label>
                         </div>
   
                         <div class="row mb-4">
                           <div class="col-md-6">
                             <div class="form-outline form-white">
+                              <label class="form-label" for="typeExp">{{ __('general.expiration') }}</label>
                               <input type="text" id="typeExp" class="form-control form-control-lg"
                                 placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
-                              <label class="form-label" for="typeExp">{{ __('general.expiration') }}</label>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-outline form-white">
+                              <label class="form-label" for="typeText">{{ __('general.cvv') }}</label>
                               <input type="password" id="typeText" class="form-control form-control-lg"
                                 placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                              <label class="form-label" for="typeText">{{ __('general.cvv') }}</label>
                             </div>
                           </div>
                         </div>
