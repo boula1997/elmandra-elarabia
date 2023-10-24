@@ -8,7 +8,7 @@
                         <div class="row">
 
                             <div class="col-lg-7">
-                                <h5 class="mb-3"><a href="{{ route('front.home') }}" class="text-body"><i
+                                <h5 class="mb-3"><a href="{{ route('front.products') }}" class="text-body"><i
                                             class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
                                 </h5>
                                 <hr>
@@ -67,6 +67,8 @@
                                                 class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
                                         </div>
 
+
+
                                         <p class="small mb-2">{{ __('general.card_type') }}</p>
                                         <a href="#!" type="submit" class="text-white"><i
                                                 class="fab fa-cc-mastercard fa-2x me-2"></i></a>
@@ -74,89 +76,88 @@
                                                 class="fab fa-cc-visa fa-2x me-2"></i></a>
                                         {{-- <a href="#!" type="submit" class="text-white"><i
                           class="fab fa-cc-amex fa-2x me-2"></i></a> --}}
-                                        <a href="#!" type="submit" class="text-white"><i
-                                                class="fab fa-cc-paypal fa-2x"></i></a>
-
-                                        <form class="mt-4">
-                                            <div class="form-outline form-white mb-4">
-                                                <input type="text" id="typeName"
-                                                    class="form-control form-control-lg" siez="17"
-                                                    placeholder="{{ __('general.cardholder_name') }}" />
-                                                <label class="form-label"
-                                                    for="typeName">{{ __('general.cardholder_name') }}</label>
-                                            </div>
-
-                                            <div class="form-outline form-white mb-4">
-                                                <input type="text" id="typeText"
-                                                    class="form-control form-control-lg" siez="17"
-                                                    placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                                                <label class="form-label"
-                                                    for="typeText">{{ __('general.card_number') }}</label>
-                                            </div>
-
-                                            <div class="row mb-4">
-                                                <div class="col-md-6">
-                                                    <div class="form-outline form-white">
-                                                        <input type="text" id="typeExp"
-                                                            class="form-control form-control-lg" placeholder="MM/YYYY"
-                                                            size="7" id="exp" minlength="7"
-                                                            maxlength="7" />
-                                                        <label class="form-label"
-                                                            for="typeExp">{{ __('general.expiration') }}</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-outline form-white">
-                                                        <input type="password" id="typeText"
-                                                            class="form-control form-control-lg"
-                                                            placeholder="&#9679;&#9679;&#9679;" size="1"
-                                                            minlength="3" maxlength="3" />
-                                                        <label class="form-label"
-                                                            for="typeText">{{ __('general.cvv') }}</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </form>
-
-                                        <hr class="my-4">
-
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">{{ __('general.subtotal') }}</p>
-                                            <p class="mb-2">{{ cart()->getTotal() }}</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">{{ __('general.shipping') }}</p>
-                                            <p class="mb-2">dd()</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between mb-4">
-                                            <p class="mb-2"> {{ __('general.total') }} </p>
-                                            <p class="mb-2">$4818.00</p>
-                                        </div>
-
-                                        <div class="col-12 d-flex justify-content-center">
-                                            <button type="button" class="btn btn-secondary">
-                                                <div class="d-flex justify-content-between">
-                                                    <span>$4818.00</span>
-                                                    &nbsp;&nbsp;
-                                                    <span>{{ __('general.checkout') }} <i
-                                                            class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
+                      <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
+  
+                      <form class="mt-4">
+                        
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <div class="form-outline form-white">
+                              <label class="form-label" for="name">{{ __('general.name') }}</label>
+                              <input type="text" id="name" class="form-control form-control-lg"
+                                placeholder="{{ __('general.name') }}"  id="name" />
                             </div>
-
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <label class="form-label" for="email">{{ __('general.email') }}</label>
+                            <div class="form-outline form-white">
+                              <input type="text" id="email" class="form-control form-control-lg"
+                                placeholder="{{ __('general.email') }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <div class="form-outline form-white">
+                              <label class="form-label" for="phone">{{ __('general.phone') }}</label>
+                              <input type="text" id="phone" class="form-control form-control-lg"
+                                placeholder="{{ __('general.phone') }}"  id="phone" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-md-12">
+                            <label class="form-label" for="address">{{ __('general.address') }}</label>
+                            <div class="form-outline form-white">
+                              <input type="text" id="address" class="form-control form-control-lg"
+                                placeholder="{{ __('general.address') }}" />
+                            </div>
+                          </div>
                         </div>
 
+
+  
+                      </form>
+  
+                      <hr class="my-4">
+  
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-2">{{ __('general.subtotal') }}</p>
+                        <p class="mb-2">$4798.00</p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-2">{{ __('general.shipping') }}</p>
+                        <p class="mb-2">$20.00</p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-4">
+                        <p class="mb-2"> {{ __('general.total') }} </p>
+                        <p class="mb-2">$4818.00</p>
+                      </div>
+                      
+                      <div class="col-12 d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary">
+                            <div class="d-flex justify-content-between">
+                            <span>$4818.00</span>
+                            &nbsp;&nbsp;
+                            <span>{{ __('general.checkout') }} <i class="fas fa-long-arrow-alt-{{ app()->getLocale()=='ar'?'left':'right' }} ms-2"></i></span>
+                            </div>
+                        </button>
                     </div>
+                    </div>
+                  </div>
+  
                 </div>
+  
+              </div>
+  
             </div>
+          </div>
         </div>
+      </div>
     </div>
 </div>
 
