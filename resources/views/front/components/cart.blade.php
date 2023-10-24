@@ -121,74 +121,68 @@
                                                 </div>
 
 
-  
-                      </form>
-  
-                      <hr class="my-4">
-  
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">{{ __('general.subtotal') }}</p>
-                        <p class="mb-2">$4798.00</p>
-                      </div>
-  
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">{{ __('general.shipping') }}</p>
-                        <p class="mb-2">$20.00</p>
-                      </div>
-  
-                      <div class="d-flex justify-content-between mb-4">
-                        <p class="mb-2"> {{ __('general.total') }} </p>
-                        <p class="mb-2">$4818.00</p>
-                      </div>
-                      
-                      <div class="col-12 d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary">
-                            <div class="d-flex justify-content-between">
-                            <span>$4818.00</span>
-                            &nbsp;&nbsp;
-                            <span>{{ __('general.checkout') }} <i class="fas fa-long-arrow-alt-{{ app()->getLocale()=='ar'?'left':'right' }} ms-2"></i></span>
-                            </div>
-                        </button>
-                    </div>
-                    </div>
-                  </div>
-  
-                </div>
-  
-              </div>
-  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
 
-<section>
-  <div class="container-fluid  mt-100">
-    <div class="row">
-    
-     <div class="col-md-12">
-     
-         <div class="card">
-       <div class="card-header">
-       <h5>{{ __('general.cart') }}</h5>
-       </div>
-       <div class="card-body cart">
-           <div class="col-sm-12 empty-cart-cls text-center">
-             <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%" class="img-fluid mb-4 mr-3">
-             <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
-             <h4>{{ __('general.add_something_to_make') }}  </h4>
-             <a href="{{ route('front.products') }}" class="btn btn-primary cart-btn-transform m-3" data-abc="true">{{ __('general.continue_shopping') }}</a>
-             
+                                            </form>
+
+                                            <hr class="my-4">
+
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-2">{{ __('general.subtotal') }}</p>
+                                                <p class="mb-2">$4798.00</p>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-2">{{ __('general.shipping') }}</p>
+                                                <p class="mb-2">$20.00</p>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <p class="mb-2"> {{ __('general.total') }} </p>
+                                                <p class="mb-2">$4818.00</p>
+                                            </div>
+
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <button type="button" class="btn btn-secondary">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span>$4818.00</span>
+                                                        &nbsp;&nbsp;
+                                                        <span>{{ __('general.checkout') }} <i
+                                                                class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
            
-           </div>
-       </div>
-   </div>
-       
-     
-     </div>
-    
+                    <div class="card empty {{ count(cart()->getItems())==0?'':'d-none' }}">
+                        <div class="card-header">
+                            <h5>{{ __('general.cart') }}</h5>
+                        </div>
+                        <div class="card-body cart">
+                            <div class="col-sm-12 empty-cart-cls text-center">
+                                <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%"
+                                    class="img-fluid mb-4 mr-3">
+                                <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
+                                <h4>{{ __('general.add_something_to_make') }} </h4>
+                                <a href="{{ route('front.products') }}"
+                                    class="btn btn-primary cart-btn-transform m-3"
+                                    data-abc="true">{{ __('general.continue_shopping') }}</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+             
+
+            </div>
+        </div>
     </div>
 </div>
 
