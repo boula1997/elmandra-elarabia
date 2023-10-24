@@ -30,7 +30,7 @@
                                     <label for="exampleInputEmail1">{{ __('general.order') }}</label>
                                     <div class="mb-3">
                                         <label for="" class="form-label"></label>
-                                        <textarea class="form-control" name="order" id="exampleInputName" rows="3" placeholder="@lang('general.order')"></textarea>
+                                        <textarea class="form-control" name="message" id="exampleInputName" rows="3" placeholder="@lang('general.reply')"></textarea>
                                     </div>
 
                                 </div>

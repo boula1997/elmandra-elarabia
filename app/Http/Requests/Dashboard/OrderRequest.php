@@ -23,7 +23,7 @@ class OrderRequest extends FormRequest
     {
         $rules = [
             'subject' =>  'string|required',
-            'order' =>  'string|required',
+            'address' =>  'string|required',
         ];
         return  $rules;
     }

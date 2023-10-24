@@ -36,8 +36,8 @@
                             <div class="col-md-12">
                                 <div class="mb-7 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
-                                        <h5 class="font-weight-bolder text-dark">@lang('general.order'):</h5>
-                                        <p class="m-0">{{ $order->order }}</p>
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.address'):</h5>
+                                        <p class="m-0">{{ $order->address }}</p>
                                     </div>
                                 </div>
                             </div>

@@ -29,6 +29,7 @@
                                                 <th>#</th>
                                                 <th>@lang('general.name')</th>
                                                 <th>@lang('general.email')</th>
+                                                <th>@lang('general.address')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -38,6 +39,7 @@
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $order->name }}</td>
                                                     <td>{{ $order->email }}</td>
+                                                    <td>{{ $order->address }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'orders',
