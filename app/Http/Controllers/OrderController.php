@@ -1,0 +1,69 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\OrderRequest;
+use App\Mail\OrderMail;
+use App\Mail\OrderUserMail;
+use App\Models\Order;
+use App\Models\Service;
+use App\Models\Testimonial;
+use App\Models\Process;
+use App\Models\Gallery;
+use App\Models\Team;
+use App\Models\Counter;
+use Exception;
+use Illuminate\Contracts\Mail\Mailer;
+use Illuminate\Support\Facades\Mail;
+
+class OrderController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+
+    private $order;
+
+
+    public function __construct(order $order)
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        try {
+            return view('front.order');
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            return redirect()->back()->with(['error' => __('general.something_wrong')]);
+        }
+    }
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(OrderRequest $request)
+    {
+        try {
+            $data = $request->all();
+            $order = $this->order->create($data);
+            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
+            return response()->json(['success' => trans('general.sent_successfully')]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => __($e->getMessage())]);
+        }
+    }
+}

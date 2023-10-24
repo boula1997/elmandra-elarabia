@@ -36,28 +36,22 @@
     <div class="row g-2">
         <div class="col-lg-6">
             <div class="bg-dark p-5">
-                <form id="message-form" method="POST">
-                    @csrf
+                <form>
                     <div class="row g-3">
                         <div class="col-6">
-                            <input type="text" name="name" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_name') }}" style="height: 55px;">
-                            <div id="name" class="err"></div>
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_name') }}" style="height: 55px;">
                         </div>
                         <div class="col-6">
-                            <input type="text" name="email" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_email') }}" style="height: 55px;">
-                            <div id="email" class="err"></div>
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_email') }}" style="height: 55px;">
                         </div>
                         <div class="col-12">
-                            <input type="text" name="phone" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.subject') }}" style="height: 55px;">
-                            <div id="phone" class="err"></div>
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.subject') }}" style="height: 55px;">
                         </div>
                         <div class="col-12">
-                            <textarea name="message" class="form-control bg-light border-0 px-4 py-3" id="message" rows="4" placeholder="{{ __('general.message') }}"></textarea>
-                            <div id="message_err" class="err"></div>
+                            <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="{{ __('general.order') }}"></textarea>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3 btn-contact" type="submit"><i
-                                class="fa fa-spinner fa-spin d-none " id="spinner-contact"></i> {{ __('general.send_message') }}</button>
+                            <button class="btn btn-primary w-100 py-3" type="submit">{{ __('general.send_order') }}</button>
                         </div>
                     </div>
                 </form>
@@ -75,7 +69,7 @@
 
 @push('js')
     <script>
-        $('#message-form').submit(function(e) {
+        $('#order-form').submit(function(e) {
             e.preventDefault();
             let formData = new FormData(this);
             $(".err").empty();
@@ -84,36 +78,15 @@
             $('#spinner-contact').removeClass('d-none');
             $.ajax({
                 type: 'POST',
-                url: "{{ route('front.message.post') }}",
+                url: "{{ route('front.order.post') }}",
                 data: {
                     "_token": "{{ csrf_token() }}",
                     'name': $("input[name=name]").val(),
                     'email': $("input[name=email]").val(),
                     'phone': $("input[name=phone]").val(),
-                    'message': $("#message").val(),
+                    'order': $("#order").val(),
                 },
                 success: (response) => {
-
-                    toastr.options = {
-                        "closeButton": true,
-                        "debug": false,
-                        "newestOnTop": false,
-                        "progressBar": true,
-                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                        "preventDuplicates": false,
-                        "onclick": null,
-                        "showDuration": "300",
-                        "hideDuration": "1000",
-                        "timeOut": "5000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
-                    };
-
-                    toastr.success(response.success);
-
                     this.reset();
                     $('#spinner-contact').addClass('d-none');
                     $('#btn-contact').removeAttr('disabled').removeClass(
@@ -145,9 +118,9 @@
                         );
                     }
 
-                    if (response.responseJSON.errors.message) {
-                        $("#message_err").append(
-                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.message}</div>`
+                    if (response.responseJSON.errors.order) {
+                        $("#order_err").append(
+                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.order}</div>`
                         );
                     }
 
