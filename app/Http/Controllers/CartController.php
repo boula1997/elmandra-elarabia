@@ -39,41 +39,44 @@ class CartController extends Controller
     {
         try {
             $product = $this->product->findorfail($id);
-            $this->cart->addItem(['model' => $product, 'price' => $product->price]);
-            return redirect()->back();
+
+            $item=$this->cart->addItem(['model' => $product,'id'=>$id,'title' => $product->title]);
+            return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems()),'hash'=>$item->getHash()]);
+            
         } catch (Exception $e) {
-            return redirect()->back()->with(['error' => __(dd($e->getMessage()))]);
+            dd($e->getMessage());
+            return response()->json(['error' => __($e->getMessage())]);
         }
     }
-
+    
     public function addToFavourite($id)
     {
         try {
             $product = $this->product->findorfail($id);
             $this->favourite->addItem(['model' => $product, 'price' => $product->price]);
-            return redirect()->back();
+            return response()->json(['success' => trans('general.sent_successfully')]);
         } catch (Exception $e) {
-            return redirect()->back()->with(['error' => __(dd($e->getMessage()))]);
+            return response()->json(['error' => __($e->getMessage())]);
         }
     }
-
+    
     public function removeItemCart($hash)
     {
         try {
             $this->cart->removeItem($hash);
-            return redirect()->back();
+            return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems())]);
         } catch (Exception $e) {
-            return redirect()->back()->with(['error' => __(dd($e->getMessage()))]);
+            return response()->json(['error' => __($e->getMessage())]);
         }
     }
-
+    
     public function removeItemFavourite($hash)
     {
         try {
             $this->favourite->removeItem($hash);
-            return redirect()->back();
+            return response()->json(['success' => trans('general.sent_successfully')]);
         } catch (Exception $e) {
-            return redirect()->back()->with(['error' => __(dd($e->getMessage()))]);
+            return response()->json(['error' => __($e->getMessage())]);
         }
     }
 

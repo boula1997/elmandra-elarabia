@@ -54,6 +54,8 @@ Route::group(
         Route::get('/single-portfolio/{id}', [ServiceController::class,'showportfolio'])->name('front.show.portfolio');
         // Route::post('/newsletter', 'App/Http/Controllers/NewsletterController@store')->name('front.newsletter.post');
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
+        Route::get('/addToCart/{id}', [CartController::class,'addToCart'])->name('addTo.cart');
+        Route::get('/removeFromCart/{hash}', [CartController::class,'removeItemCart'])->name('removeFrom.cart');
         
         Route::get('/add_to_cart', function () {
             

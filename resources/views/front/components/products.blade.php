@@ -21,12 +21,17 @@
                                 <h5 class="text-dark mb-0">$999</h5>
                             </div>
 
-                            <div class="">
-                                <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fas fa-shopping-cart"></i>
-                                    {{ __('general.add_to_cart') }}</button>
+                            <button class="btn btn-primary btn-sm w-100 mt-1 addCart"
+                                product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
+                                {{ __('general.add_to_cart') }}</button>
 
-                                {{-- <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i>
+                            <button class="btn btn-primary btn-sm w-100 mt-1 removeCart d-none" hash=""><i
+                                    class="fas fa-trash"></i>
+                                {{ __('general.removeFromCart') }}</button>
+
+                            {{-- <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i>
                                     {{ __('general.add_to_favourite') }}</button> --}}
+                            <div class="">
                             </div>
                         </div>
                     </div>
@@ -39,3 +44,48 @@
         </div>
     </div>
 </section>
+
+@push('js')
+    <script>
+        $('.addCart').on('click', function(e) {
+            e.preventDefault();
+            var product_id = $(this).attr('product_id');
+            let url = "{{ route('addTo.cart', ':id') }}";
+            url = url.replace(':id', product_id);
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: (response) => {
+                    console.log(response);
+                    $('#cart-count').text(response.count);
+                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass('btn btn-danger').attr('hash',response.hash);
+                },
+                error: function(response) {
+                    alert(response.error);
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
+            });
+        });
+
+        $('.removeCart').on('click', function(e) {
+            e.preventDefault();
+            var hash = $(this).attr('hash');
+            let url = "{{ route('removeFrom.cart', ':hash') }}";
+            url = url.replace(':hash', hash);
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: (response) => {
+                    $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass('btn btn-primary').attr('hash','');
+                    $('#cart-count').text(response.count);
+                },
+                error: function(response) {
+                    alert(response.error);
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
+            });
+        });
+    </script>
+@endpush
