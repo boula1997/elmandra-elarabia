@@ -183,6 +183,8 @@ class ProductSeeder extends Seeder
                        null,null,null,null,null,
                 ];
 
+                $prices=[100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,];
+
         for ($i = 0; $i < count($title_ar); $i++) {
             $product = Product::create([
                 'ar' => [
@@ -197,6 +199,7 @@ class ProductSeeder extends Seeder
                 ],
                 'icon'=>$icons[$i],
                 'category_id'=>\random_int(1,5),
+                'price'=>$prices[$i],
 
             ]);
 

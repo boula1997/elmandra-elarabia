@@ -74,6 +74,21 @@
                     <div class="row">
 
                         <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.price') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="price"
+                                        placeholder="@lang('general.price')"
+                                        class="form-control  pl-1 min-h-40px @error('price') is-invalid @enderror"
+                                        value="{{old('price',$product->price)}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">{{ __('general.categories') }}</label>
                                 <select class="form-select form-select-lg" name="category_id" id="category">

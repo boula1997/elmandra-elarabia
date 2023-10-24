@@ -67,6 +67,11 @@ div@extends('admin.layouts.master')
                                     <p class="m-0">{{ $product->category->translate($locale)->title }}</p>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <p class="m-0">{{ $product->price }}</p>
+                                        
+                                </div> 
+                            </div>
                                 <div class="form-group">
                                     <img src="{{ $product->image }}" class="w-50">
                                 </div> 
