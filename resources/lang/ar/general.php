@@ -242,5 +242,6 @@ return [
     'removed_successfully'=>'تمت الإزالة بنجاح',
     'search'=>'البحث',
     'user'=>'المستخدم',
+    'remove_from_cart'=>'ازالة من السلة',
    
 ];
