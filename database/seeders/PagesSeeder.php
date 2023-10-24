@@ -32,7 +32,7 @@ class PagesSeeder extends Seeder
                             null,
                             null,
                             "30% DISCOUNT FOR THIS SUMMER",
-                            "EXPERT Team",
+                            "Talent Team",
                             "OUR CLIENT SAY",
                             "Our Products"
                         
@@ -60,7 +60,7 @@ class PagesSeeder extends Seeder
                         null,
                         null,
                         null,
-                        "فريق العمل",
+                        "لاعبينا",
                         "اراء عملائنا",
                         "منتجات",
                     ];
@@ -72,7 +72,7 @@ class PagesSeeder extends Seeder
                                 null,
                                 "خصم 30% لهذا الصيف",
 
-                                "شركائنا فى النجاح",
+                                "لاعبينا الموهوبيين",
                                 
                                 "بعض من اراء عملائنا",
                                 "احدث منتجاتنا",

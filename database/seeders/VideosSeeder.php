@@ -15,9 +15,9 @@ class VideosSeeder extends Seeder
     {
 
 
-        $title_ar = ["رفع المواقع","انشاء المواقع"];
-        $title_en = ["Upload websites","Create websites"];
-        $youtube_link = ["www.youtube.com","www.google.com"];
+        $title_ar = [null];
+        $title_en = [null];
+        $youtube_link = [null];
     
       
 

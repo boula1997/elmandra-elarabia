@@ -21,12 +21,13 @@ class ContactsSeeder extends Seeder
                 "fas fa-phone",
                 "fab fa-whatsapp"];
 
-        $contacts=["https://www.facebook.com/YousabTech?mibextid=ZbWKwL",
-                   "www.linkedin.com/in/yousab-tech-3707b428b",
-                   "https://www.instagram.com",
-                   "yousabtech@gmail.com",
-                   "01126785910",
-                   "01208050298"];
+        $contacts=["https://www.facebook.com/profile.php?id=61551949000995&mibextid=ZbWKwL",
+                   "https://www.linkedin.com",
+                   "https://instagram.com/el_alamia_games?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr",
+                   "alalamia@gmail.com",
+                   "01020202019",
+                   "01208050298"
+                    ];
 
         $type=['social','social','social','email','phone','whatsapp'];
       

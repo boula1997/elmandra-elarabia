@@ -101,18 +101,18 @@
                     <div class="col-lg-7 px-5 text-start">
                         <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                             <i class="fa fa-envelope text-primary me-2"></i>
-                            <h6 class="mb-0">{{ contacts('email')[0]->contact }}</h6>
+                            <a class="mb-0" href="mailto:{{contacts('email')[0]->contact }}">{{contacts('email')[0]->contact }} </a>
                         </div>
                         <div class="h-100 d-inline-flex align-items-center py-2">
                             <i class="fa fa-phone-alt text-primary me-2"></i>
-                            <h6 class="mb-0">{{ contacts('phone')[0]->contact }} </h6>
+                            <a class="mb-0"  href="tel:{{contacts('phone')[0]->contact }}">{{ contacts('phone')[0]->contact }} </a>
                         </div>
                     </div>
                     <div class="col-lg-5 px-5 text-end">
                         <div class="d-inline-flex align-items-center py-2">
                             @foreach (contacts('social') as $contact)
                                 <a href="{{ $contact->contact }}"
-                                    class="btn btn-light btn-square rounded-circle me-2"><i
+                                    target="__blank" class="btn btn-primary btn-square rounded-circle me-2"> <i
                                         class="{{ $contact->icon }}" aria-hidden="true"></i></a>
                             @endforeach
 
@@ -134,7 +134,7 @@
                             <a href="{{ route('front.about') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
                             <a href="{{ route('front.products') }}"
-                                class="nav-item nav-link {{ request()->routeIs('front.products') ? 'active' : '' }}">{{ __('general.product') }}</a>
+                                class="nav-item nav-link {{ request()->routeIs('front.products') ? 'active' : '' }}">{{ __('general.products') }}</a>
                             <a href="{{ route('front.message') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
