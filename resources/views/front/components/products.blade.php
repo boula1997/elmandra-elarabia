@@ -29,7 +29,7 @@
                             <button
                                 class="btn  btn-sm w-100 mt-1 removeCart {{ isInCart($product->id) ? 'btn-danger' : 'd-none' }}"
                                 hash="{{ getHash($product->id) }}"><i class="fas fa-trash"></i>
-                                {{ __('general.removeFromCart') }}</button>
+                                {{ __('general.remove_from_cart') }}</button>
 
                         </div>
                     </div>

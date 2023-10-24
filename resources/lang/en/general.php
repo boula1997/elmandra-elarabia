@@ -240,6 +240,7 @@ return [
     'removed_successfully'=>'Removed Successfully',
     'search'=>'Search',
     'user'=>'User',
+    'remove_from_cart'=>'Remove From Cart',
     
     
     
