@@ -24,7 +24,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <strong>@lang('general.name'):</strong>
-                                        {!! Form::text('name', null, ['placeholder' => 'Name', 'class' => 'form-control']) !!}
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                            </div>
+                                              {!! Form::text('name', null, ['placeholder' => 'Name', 'class' => 'form-control']) !!}
+                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">

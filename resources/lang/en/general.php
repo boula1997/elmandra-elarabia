@@ -239,6 +239,8 @@ return [
     'added_successfully'=>'Added Successfully',
     'removed_successfully'=>'Removed Successfully',
     'search'=>'Search',
+    'user'=>'User',
+    
     
     
     

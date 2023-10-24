@@ -16,8 +16,13 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.subject') }}</label>
-                                    <input type="text" name="subject" value="{{ old('subject') }}" class="form-control"
-                                        id="exampleInputName" placeholder="@lang('general.subject')">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                            </div>
+                                            <input type="text" name="subject" value="{{ old('subject') }}" class="form-control"
+                                               id="exampleInputName" placeholder="@lang('general.subject')">
+                                        </div>
                                 </div>
                             </div>
 
