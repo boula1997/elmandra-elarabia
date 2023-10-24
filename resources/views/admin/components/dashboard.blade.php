@@ -126,60 +126,6 @@
                 <i class=" px-1 far fa-comments"></i>
                 <span class="badge badge-danger navbar-badge">{{ itemsCount('messages') }}</span>
             </a>
-            {{-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
-                    <!-- Newsletter Start -->
-                    <div class="media">
-                        <img src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="User Avatar"
-                            class="img-size-50 mr-3 img-circle">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Brad Diesel
-                                <span class="float-right text-sm text-danger"><i class=" px-1 fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">Call me whenever you can...</p>
-                            <p class="text-sm text-muted"><i class=" px-1 far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Newsletter End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Newsletter Start -->
-                    <div class="media">
-                        <img src="{{ asset('dist/img/user8-128x128.jpg') }}" alt="User Avatar"
-                            class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                John Pierce
-                                <span class="float-right text-sm text-muted"><i class=" px-1 fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">I got your newsletter bro</p>
-                            <p class="text-sm text-muted"><i class=" px-1 far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Newsletter End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Newsletter Start -->
-                    <div class="media">
-                        <img src="{{ asset('dist/img/user3-128x128.jpg') }}" alt="User Avatar"
-                            class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Nora Silvester
-                                <span class="float-right text-sm text-warning"><i class=" px-1 fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">The subject goes here</p>
-                            <p class="text-sm text-muted"><i class=" px-1 far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Newsletter End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Newsletters</a>
-            </div> --}}
         </li>
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
@@ -594,6 +540,25 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="{{ route('messages.index') }}" class="nav-link">
+                                    <i class=" px-1 far fa-circle nav-icon"></i>
+                                    <p>@lang('general.show')</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
+                @can('order-list')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class=" px-1 fas fa-envelope-open-text"></i>
+                            <p>
+                                @lang('general.orders') <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('orders') }}</span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('orders.index') }}" class="nav-link">
                                     <i class=" px-1 far fa-circle nav-icon"></i>
                                     <p>@lang('general.show')</p>
                                 </a>
