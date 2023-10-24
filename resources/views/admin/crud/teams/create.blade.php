@@ -32,7 +32,7 @@
                                     <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
                                             class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
@@ -43,7 +43,7 @@
                                     <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[subtitle]' }}"
                                             placeholder="@lang('general.subtitle')"
@@ -75,7 +75,7 @@
                                 </span></label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="facebook" placeholder="@lang('general.facebook')"
                                     class="form-control  pl-1 min-h-40px @error('facebook') is-invalid @enderror"
@@ -87,7 +87,7 @@
                                 </span></label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="twitter" placeholder="@lang('general.twitter')"
                                     class="form-control  pl-1 min-h-40px @error('twitter') is-invalid @enderror"
@@ -99,7 +99,7 @@
                                 </span></label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="instagram" placeholder="@lang('general.instagram')"
                                     class="form-control  pl-1 min-h-40px @error('instagram') is-invalid @enderror"
@@ -111,7 +111,7 @@
                                 </span></label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="linkedin" placeholder="@lang('general.linkedin')"
                                     class="form-control  pl-1 min-h-40px @error('linkedin') is-invalid @enderror"

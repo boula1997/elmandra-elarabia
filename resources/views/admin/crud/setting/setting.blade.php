@@ -31,7 +31,7 @@
                                     <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
@@ -43,7 +43,7 @@
                                     <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[address]' }}"
                                             placeholder="@lang('general.address')"
@@ -56,7 +56,7 @@
                                         </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[appointment1]' }}"
                                             placeholder="@lang('general.appointment1')"
@@ -69,7 +69,7 @@
                                         </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[copyright]' }}"
                                             placeholder="@lang('general.copyright')"
@@ -82,7 +82,7 @@
                                         </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[meta_data]' }}"
                                             placeholder="@lang('general.meta_data')"
