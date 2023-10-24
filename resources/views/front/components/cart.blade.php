@@ -48,7 +48,7 @@
                                                         <h5 class="fw-normal mb-0">2</h5>
                                                     </div>
                                                     <div style="width: 80px;">
-                                                        <h5 class="mb-0">$900</h5>
+                                                        <h5 class="mb-0">{{ cartItem($item->getId())->price }} $</h5>
                                                     </div>
                                                     <button class="removeCart btn btn-transparent"
                                                         hash="{{ $item->getHash() }}">
@@ -127,24 +127,24 @@
 
                                             <div class="d-flex justify-content-between">
                                                 <p class="mb-2">{{ __('general.subtotal') }}</p>
-                                                <p class="mb-2">$4798.00</p>
+                                                <p class="mb-2 cart-total">{{cart()->getTotal()}} $</p> 
                                             </div>
 
                                             <div class="d-flex justify-content-between">
                                                 <p class="mb-2">{{ __('general.shipping') }}</p>
-                                                <p class="mb-2">$20.00</p>
+                                                <p class="mb-2 cart-total">{{cart()->getTotal()}} $</p> 
                                             </div>
 
                                             <div class="d-flex justify-content-between mb-4">
                                                 <p class="mb-2"> {{ __('general.total') }} </p>
-                                                <p class="mb-2">$4818.00</p>
+                                                <p class="mb-2 cart-total">{{cart()->getTotal()}} $</p> 
                                             </div>
 
                                             <div class="col-12 d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-secondary  btn-order">
                                                     <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
                                                     <div class="d-flex justify-content-between">
-                                                        <span>$4818.00</span>
+                                                        <p class="cart-total">{{cart()->getTotal()}} $</p> 
                                                         &nbsp;&nbsp;
                                                         <span>{{ __('general.checkout') }} <i
                                                                 class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
@@ -211,6 +211,7 @@
                     }
                     $(this).parents().eq(3).remove();
                     $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,

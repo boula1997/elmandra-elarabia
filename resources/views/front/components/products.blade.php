@@ -17,8 +17,8 @@
                             </div>
                             <div class="d-flex justify-content-between">
 
-                                <p class="small text-danger"><s>$1099</s></p>
-                                <h5 class="text-dark mb-0">$999</h5>
+                                <p class="small text-danger"><s>{{$product->price}} $</s></p>
+                                <h5 class="text-dark mb-0">{{$product->price}} $</h5>
                             </div>
 
                             <button

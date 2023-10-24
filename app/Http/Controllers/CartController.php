@@ -40,7 +40,7 @@ class CartController extends Controller
         try {
             $product = $this->product->findorfail($id);
 
-            $item=$this->cart->addItem(['model' => $product,'id'=>$id,'title' => $product->title]);
+            $item=$this->cart->addItem(['model' => $product,'id'=>$id,'title' => $product->title,'price' => $product->price]);
             return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems()),'hash'=>$item->getHash()]);
             
         } catch (Exception $e) {
@@ -64,7 +64,7 @@ class CartController extends Controller
     {
         try {
             $this->cart->removeItem($hash);
-            return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems())]);
+            return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems()),'total'=>cart()->getTotal()]);
         } catch (Exception $e) {
             return response()->json(['error' => __($e->getMessage())]);
         }
