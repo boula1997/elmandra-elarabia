@@ -158,3 +158,12 @@ if (!function_exists('getHash()')) {
         return $item->getHash();
     }
 }
+if (!function_exists('cartItem()')) {
+
+    function cartItem($id)
+    {
+       return Product::findorfail($id);
+    }
+}
+
+
