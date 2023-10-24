@@ -10,7 +10,7 @@
                         <p class="mb-0 letter-hover"><a class="text-secondary" href="#">{{ settings()->translate(app()->getLocale())->address }}</a></p>
                     </div>
                     <div class="d-flex mb-2">
-                        <i class="bi bi-envelope-open text-primary me-2"></i>
+                        <i class="bi bi-envelope-open text-primary me-2 rotate"></i>
                         <p class="mb-0 letter-hover"><a class="text-secondary" href="mailto:{{contacts('email')[0]->contact }}">{{ contacts('email')[0]->contact }}</a></p>
                     </div>
                     <div class="d-flex mb-2">
