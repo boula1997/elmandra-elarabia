@@ -162,7 +162,7 @@
 </div>
 
 <section>
-  <div class="container-fluid  mt-100">
+  <div class="container  mt-100">
     <div class="row">
     
      <div class="col-md-12">
