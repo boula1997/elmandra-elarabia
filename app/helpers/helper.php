@@ -9,6 +9,7 @@ use App\Models\Newsletter;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Image;
+use App\Models\Order;
 use App\Models\Page;
 use App\Models\Team;
 use App\Models\Partner;
@@ -99,6 +100,7 @@ function itemsCount($model)
         "admins" => count(Admin::get()),
         "videos" => count(Video::get()),
         "roles" => count(Role::get()),
+        "orders" => count(Order::get()),
     ];
 
 

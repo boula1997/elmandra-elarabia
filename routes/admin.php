@@ -25,6 +25,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\OrderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -74,20 +75,16 @@ Route::group(
             })->name('dashboard');
         
             Route::resource('roles', RoleController::class);
-            // Route::resource('home',HomeController::class);
             Route::resource('faqs', FaqController::class);
-            // Route::resource('message',MessageController::class);
             Route::resource('services', ServiceController::class);
             Route::resource('categories', CategoryController::class);
             Route::resource('sliders', SliderController::class);
-            // Route::resource('newsletter',NewsletterController::class);
             Route::resource('testimonials', TestimonialController::class);
             Route::resource('processes', ProcessController::class);
             Route::resource('partners', PartnerController::class);
             Route::resource('teams', TeamController::class);
             Route::resource('pages', PageController::class);
             Route::resource('partners', PartnerController::class);
-            // Route::resource('about',AboutController::class);
             Route::resource('portfolios', PortfolioController::class);
             Route::resource('counters', CounterController::class);
             Route::resource('contacts', ContactController::class);
@@ -99,9 +96,12 @@ Route::group(
             Route::resource('admins', AdminController::class);
             Route::resource('products', ProductController::class);
             Route::resource('messages', MessageController::class);
+            Route::resource('orders', OrderController::class);
         
             Route::get('/reply-message/{id}', [App\Http\Controllers\Admin\MessageController::class, 'reply'])->name('messages.reply');
+            Route::get('/reply-order/{id}', [App\Http\Controllers\Admin\OrderController::class, 'reply'])->name('order.reply');
             Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\MessageController::class, 'emailReply'])->name('messages.emailReply');
+            Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\OrderController::class, 'emailReply'])->name('orders.emailReply');
         
             Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
             Route::resource('newsletters', NewsletterController::class);
