@@ -238,5 +238,8 @@ return [
     'cart'=>'عربة التسوق',
     'your_cart_is_empty'=>'عربة التسوق فارغة!',
     'add_something_to_make'=>'أضف شيئا يجعلني سعيدا',
+    'added_successfully'=>'اضيف بنجاح',
+    'removed_successfully'=>'تمت الإزالة بنجاح',
+    'search'=>'البحث',
    
 ];

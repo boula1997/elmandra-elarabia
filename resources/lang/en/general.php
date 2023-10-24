@@ -235,7 +235,12 @@ return [
     'i_dont_have_account'=>"I don't have an account!",
     'cart'=>'Cart',
     'your_cart_is_empty'=>'Your Cart is Empty!',
-    'add_something_to_make'=>' Add something to make me happy',
+    'add_something_to_make'=>'Add something to make me happy',
+    'added_successfully'=>'Added Successfully',
+    'removed_successfully'=>'Removed Successfully',
+    'search'=>'Search',
+    
+    
     
     
     
