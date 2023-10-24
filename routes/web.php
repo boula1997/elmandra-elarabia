@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;

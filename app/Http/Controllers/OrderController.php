@@ -60,8 +60,9 @@ class OrderController extends Controller
         try {
             $data = $request->all();
             $order = $this->order->create($data);
+            cart()->destroy();
             Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
-            return response()->json(['success' => trans('general.sent_successfully')]);
+            return response()->json(['success' => __('general.sent_successfully')]);
         } catch (\Exception $e) {
             return response()->json(['error' => __($e->getMessage())]);
         }

@@ -2,127 +2,126 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
-              
-                    <div class="card full {{ count(cart()->getItems())>0?'':'d-none' }}">
-                        <div class="card-body p-4">
 
-                            <div class="row">
+                <div class="card full {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
+                    <div class="card-body p-4">
 
-                                <div class="col-lg-7">
-                                    <h5 class="mb-3"><a href="{{ route('front.products') }}" class="text-body"><i
-                                                class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
-                                    </h5>
-                                    <hr>
+                        <div class="row">
 
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                        <div>
-                                            <p class="mb-1">{{ __('general.shopping_cart') }}</p>
-                                            <p class="mb-0">{{ __('general.you_have') }} <span
-                                                    class="cart-count">{{ count(cart()->getItems()) }}</span>
-                                                {{ __('general.items_in_your_cart') }}</p>
-                                        </div>
-                                        {{-- <div>
+                            <div class="col-lg-7">
+                                <h5 class="mb-3"><a href="{{ route('front.products') }}" class="text-body"><i
+                                            class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
+                                </h5>
+                                <hr>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <p class="mb-1">{{ __('general.shopping_cart') }}</p>
+                                        <p class="mb-0">{{ __('general.you_have') }} <span
+                                                class="cart-count">{{ count(cart()->getItems()) }}</span>
+                                            {{ __('general.items_in_your_cart') }}</p>
+                                    </div>
+                                    {{-- <div>
                                       <p class="mb-0"><span class="text-muted">{{ __('general.sort_by') }}:</span>
                                           <a href="#!" class="text-body">price <i
                                                   class="fas fa-angle-down mt-1"></i></a>
                                       </p>
                                   </div> --}}
-                                    </div>
-                                    @foreach (cart()->getItems() as $item)
-                                        <div class="card mb-3">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="d-flex flex-row align-items-center">
-                                                        <div>
-                                                            <img src="{{ cartItem($item->getId())->image }}"
-                                                                class="img-fluid rounded-3" alt="Shopping item"
-                                                                style="width: 65px;">
-                                                        </div>
-                                                        <div class="ms-3">
-                                                            <h5>{{ cartItem($item->getId())->title }}</h5>
-                                                            {{-- <p class="small mb-0">256GB, Navy Blue</p> --}}
-                                                        </div>
+                                </div>
+                                @foreach (cart()->getItems() as $item)
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div>
+                                                        <img src="{{ cartItem($item->getId())->image }}"
+                                                            class="img-fluid rounded-3" alt="Shopping item"
+                                                            style="width: 65px;">
                                                     </div>
-                                                    <div class="d-flex flex-row align-items-center">
-                                                        <div style="width: 50px;">
-                                                            <h5 class="fw-normal mb-0">2</h5>
-                                                        </div>
-                                                        <div style="width: 80px;">
-                                                            <h5 class="mb-0">$900</h5>
-                                                        </div>
-                                                        <button class="removeCart btn btn-transparent"
-                                                            hash="{{ $item->getHash() }}">
-                                                            <i class="fas fa-trash-alt tetx-danger"></i>
-                                                        </button>
+                                                    <div class="ms-3">
+                                                        <h5>{{ cartItem($item->getId())->title }}</h5>
+                                                        {{-- <p class="small mb-0">256GB, Navy Blue</p> --}}
                                                     </div>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div style="width: 50px;">
+                                                        <h5 class="fw-normal mb-0">2</h5>
+                                                    </div>
+                                                    <div style="width: 80px;">
+                                                        <h5 class="mb-0">$900</h5>
+                                                    </div>
+                                                    <button class="removeCart btn btn-transparent"
+                                                        hash="{{ $item->getHash() }}">
+                                                        <i class="fas fa-trash-alt tetx-danger"></i>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-                                    @endforeach
-                                </div>
-                                <div class="col-lg-5">
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="col-lg-5">
 
-                                    <div class="card bg-primary text-white rounded-3">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                                <h5 class="mb-0 text-white">{{ __('general.card_details') }}</h5>
-                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                                                    class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
+                                <div class="card bg-primary text-white rounded-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <h5 class="mb-0 text-white">{{ __('general.card_details') }}</h5>
+                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                                                class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
+                                        </div>
+
+
+                                        <form id="order-form" method="POST" class="mt-4">
+                                            @csrf
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-outline form-white">
+                                                        <label class="form-label"
+                                                            for="name">{{ __('general.name') }}</label>
+                                                        <input type="text" name="name"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.name') }}" />
+                                                        <div id="name" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="form-label"
+                                                        for="email">{{ __('general.email') }}</label>
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" name="email"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.email') }}" />
+                                                        <div id="email" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-outline form-white">
+                                                        <label class="form-label"
+                                                            for="phone">{{ __('general.phone') }}</label>
+                                                        <input type="text" name="phone"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.phone') }}" />
+                                                        <div id="phone" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="form-label"
+                                                        for="address">{{ __('general.address') }}</label>
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" name="address"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.address') }}" />
+                                                        <div id="address" class="err"></div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-
-                                            <form class="mt-4">
-
-                                                <div class="row mb-4">
-                                                    <div class="col-md-12">
-                                                        <div class="form-outline form-white">
-                                                            <label class="form-label"
-                                                                for="name">{{ __('general.name') }}</label>
-                                                            <input type="text" id="name"
-                                                                class="form-control form-control-lg"
-                                                                placeholder="{{ __('general.name') }}"
-                                                                id="name" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-4">
-                                                    <div class="col-md-12">
-                                                        <label class="form-label"
-                                                            for="email">{{ __('general.email') }}</label>
-                                                        <div class="form-outline form-white">
-                                                            <input type="text" id="email"
-                                                                class="form-control form-control-lg"
-                                                                placeholder="{{ __('general.email') }}" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-4">
-                                                    <div class="col-md-12">
-                                                        <div class="form-outline form-white">
-                                                            <label class="form-label"
-                                                                for="phone">{{ __('general.phone') }}</label>
-                                                            <input type="text" id="phone"
-                                                                class="form-control form-control-lg"
-                                                                placeholder="{{ __('general.phone') }}"
-                                                                id="phone" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-4">
-                                                    <div class="col-md-12">
-                                                        <label class="form-label"
-                                                            for="address">{{ __('general.address') }}</label>
-                                                        <div class="form-outline form-white">
-                                                            <input type="text" id="address"
-                                                                class="form-control form-control-lg"
-                                                                placeholder="{{ __('general.address') }}" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                            </form>
 
                                             <hr class="my-4">
 
@@ -142,7 +141,8 @@
                                             </div>
 
                                             <div class="col-12 d-flex justify-content-center">
-                                                <button type="button" class="btn btn-secondary">
+                                                <button type="submit" class="btn btn-secondary  btn-order">
+                                                    <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
                                                     <div class="d-flex justify-content-between">
                                                         <span>$4818.00</span>
                                                         &nbsp;&nbsp;
@@ -151,35 +151,37 @@
                                                     </div>
                                                 </button>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </form>
 
+
+                                    </div>
                                 </div>
 
                             </div>
 
                         </div>
+
                     </div>
-           
-                    <div class="card empty {{ count(cart()->getItems())==0?'':'d-none' }}">
-                        <div class="card-header">
-                            <h5>{{ __('general.cart') }}</h5>
-                        </div>
-                        <div class="card-body cart">
-                            <div class="col-sm-12 empty-cart-cls text-center">
-                                <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%"
-                                    class="img-fluid mb-4 mr-3">
-                                <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
-                                <h4>{{ __('general.add_something_to_make') }} </h4>
-                                <a href="{{ route('front.products') }}"
-                                    class="btn btn-primary cart-btn-transform m-3"
-                                    data-abc="true">{{ __('general.continue_shopping') }}</a>
+                </div>
+
+                <div class="card empty {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}">
+                    <div class="card-header">
+                        <h5>{{ __('general.cart') }}</h5>
+                    </div>
+                    <div class="card-body cart">
+                        <div class="col-sm-12 empty-cart-cls text-center">
+                            <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%"
+                                class="img-fluid mb-4 mr-3">
+                            <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
+                            <h4>{{ __('general.add_something_to_make') }} </h4>
+                            <a href="{{ route('front.products') }}" class="btn btn-primary cart-btn-transform m-3"
+                                data-abc="true">{{ __('general.continue_shopping') }}</a>
 
 
-                            </div>
                         </div>
                     </div>
-             
+                </div>
+
 
             </div>
         </div>
@@ -233,6 +235,89 @@
                     alert(response.error);
                     $(".err").addClass("d-block");
                     $(".err").removeClass("d-none");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $('#order-form').submit(function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+            $(".err").empty();
+            $(".err").addClass("d-none");
+            $('#btn-order').attr('disabled', 'disabled').addClass('bg-secondary');
+            $('#spinner-order').removeClass('d-none');
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('front.order.post') }}",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'name': $("input[name=name]").val(),
+                    'email': $("input[name=email]").val(),
+                    'phone': $("input[name=phone]").val(),
+                    'address': $("input[name=address]").val(),
+                },
+                success: (response) => {
+                    $('.full').addClass('d-none');
+                    $('.empty').removeClass('d-none');
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+                    console.log(response);
+                    toastr.success(response.success);
+
+                    this.reset();
+                    $('#spinner-order').addClass('d-none');
+                    $('#btn-order').removeAttr('disabled').removeClass(
+                        'bg-secondary');
+                    $('.alert-success').removeClass('d-none').text(response.success);
+                    setTimeout(() => {
+                        $('.alert-success').addClass('d-none').text(response.success);
+                    }, 5000);
+                },
+                error: function(response) {
+                    $('#spinner-order').addClass('d-none');
+                    $('#btn-order').removeAttr('disabled').removeClass('bg-secondary');
+
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                    if (response.responseJSON.errors.name) {
+                        $("#name").append(
+                            `<div class="alert alert-danger my-1"  style="text-align:initial !important">${response.responseJSON.errors.name}</div>`
+                        );
+                    }
+                    if (response.responseJSON.errors.email) {
+                        $("#email").append(
+                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.email}</div>`
+                        );
+                    }
+                    if (response.responseJSON.errors.phone) {
+                        $("#phone").append(
+                            `<div class="alert alert-danger my-1" style="text-align:initial !important">${response.responseJSON.errors.phone}</div>`
+                        );
+                    }
+
+                    if (response.responseJSON.errors.address) {
+                        $("#address").append(
+                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.message}</div>`
+                        );
+                    }
+
                 }
             });
         });
