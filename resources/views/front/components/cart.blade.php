@@ -8,7 +8,7 @@
               <div class="row">
   
                 <div class="col-lg-7">
-                  <h5 class="mb-3"><a href="{{ route('front.home') }}" class="text-body"><i
+                  <h5 class="mb-3"><a href="{{ route('front.products') }}" class="text-body"><i
                         class="fas fa-long-arrow-alt-{{ app()->getLocale()=='ar'?'right':'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a></h5>
                   <hr>
   
