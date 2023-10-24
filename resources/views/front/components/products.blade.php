@@ -21,18 +21,16 @@
                                 <h5 class="text-dark mb-0">$999</h5>
                             </div>
 
-                            <button class="btn btn-primary btn-sm w-100 mt-1 addCart"
+                            <button
+                                class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
                                 product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
                                 {{ __('general.add_to_cart') }}</button>
 
-                            <button class="btn btn-primary btn-sm w-100 mt-1 removeCart d-none" hash=""><i
-                                    class="fas fa-trash"></i>
+                            <button
+                                class="btn  btn-sm w-100 mt-1 removeCart {{ isInCart($product->id) ? 'btn-danger' : 'd-none' }}"
+                                hash="{{ getHash($product->id) }}"><i class="fas fa-trash"></i>
                                 {{ __('general.removeFromCart') }}</button>
 
-                            {{-- <button class="btn btn-primary btn-sm w-100 mt-1"><i class="fa fa-star"></i>
-                                    {{ __('general.add_to_favourite') }}</button> --}}
-                            <div class="">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,7 +56,28 @@
                 success: (response) => {
                     console.log(response);
                     $('#cart-count').text(response.count);
-                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass('btn btn-danger').attr('hash',response.hash);
+                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass(
+                        'btn btn-danger').attr('hash', response.hash);
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.added_successfully') }}");
+
                 },
                 error: function(response) {
                     alert(response.error);
@@ -77,8 +96,28 @@
                 type: 'get',
                 url: url,
                 success: (response) => {
-                    $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass('btn btn-primary').attr('hash','');
+                    $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
+                        'btn btn-primary').attr('hash', '');
                     $('#cart-count').text(response.count);
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.removed_successfully') }}");
                 },
                 error: function(response) {
                     alert(response.error);

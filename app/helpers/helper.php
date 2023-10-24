@@ -137,3 +137,24 @@ if (!function_exists('contacts')) {
         return isset($type) ?  Contact::where('type', $type)->get() : Contact::latest()->get();;
     }
 }
+
+if (!function_exists('isInCart()')) {
+
+    function isInCart($id)
+    {
+        foreach(cart()->getItems() as $item)
+        if($item->getId() == $id)
+        return true;
+
+        return false;
+    }
+}
+if (!function_exists('getHash()')) {
+
+    function getHash($id)
+    {
+        foreach(cart()->getItems() as $item)
+        if($item->getId() == $id)
+        return $item->getHash();
+    }
+}
