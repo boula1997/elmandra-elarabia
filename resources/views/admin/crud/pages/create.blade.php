@@ -72,8 +72,11 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.identifier') }}</label>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
                                     <input type="text" name="identifier" value="{{ old('identifier') }}"
-                                        class="form-control" id="exampleInputName" placeholder="@lang('general.identifier')">
+                                        class="form-control  pl-1 min-h-40px" id="exampleInputName" placeholder="@lang('general.identifier')">
                                 </div>
                             </div>
 
