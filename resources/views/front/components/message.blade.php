@@ -36,22 +36,28 @@
     <div class="row g-2">
         <div class="col-lg-6">
             <div class="bg-dark p-5">
-                <form>
+                <form id="message-form" method="POST">
+                    @csrf
                     <div class="row g-3">
                         <div class="col-6">
-                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_name') }}" style="height: 55px;">
+                            <input type="text" name="name" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_name') }}" style="height: 55px;">
+                            <div id="name" class="err"></div>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_email') }}" style="height: 55px;">
+                            <input type="text" name="email" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_email') }}" style="height: 55px;">
+                            <div id="email" class="err"></div>
                         </div>
                         <div class="col-12">
-                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.subject') }}" style="height: 55px;">
+                            <input type="text" name="phone" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.subject') }}" style="height: 55px;">
+                            <div id="phone" class="err"></div>
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="{{ __('general.message') }}"></textarea>
+                            <textarea name="message" class="form-control bg-light border-0 px-4 py-3" id="message" rows="4" placeholder="{{ __('general.message') }}"></textarea>
+                            <div id="message_err" class="err"></div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">{{ __('general.send_message') }}</button>
+                            <button class="btn btn-primary w-100 py-3 btn-contact" type="submit"><i
+                                class="fa fa-spinner fa-spin d-none " id="spinner-contact"></i> {{ __('general.send_message') }}</button>
                         </div>
                     </div>
                 </form>
@@ -87,6 +93,27 @@
                     'message': $("#message").val(),
                 },
                 success: (response) => {
+
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success(response.success);
+
                     this.reset();
                     $('#spinner-contact').addClass('d-none');
                     $('#btn-contact').removeAttr('disabled').removeClass(
