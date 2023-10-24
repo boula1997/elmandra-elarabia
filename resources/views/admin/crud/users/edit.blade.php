@@ -23,24 +23,45 @@
                             <div class="card-body mb-5">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">@lang('general.name')</label>
-                                    <input type="text" name="name" value="{{ old('name', $user->name) }}"
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="name" value="{{ old('name', $user->name) }}"
                                         class="form-control" id="exampleInputName" placeholder="@lang('general.name')">
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">@lang('general.email')</label>
-                                    <input type="email" name="email" value="{{ old('email', $user->email) }}"
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="email" name="email" value="{{ old('email', $user->email) }}"
                                         class="form-control" id="exampleInputEmail" placeholder="@lang('general.email')">
+                                    </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">@lang('general.password')</label>
-                                    <input type="password" name="password" value="" class="form-control"
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="password" name="password" value="" class="form-control"
                                         id="exampleInputPassword" placeholder="Enter @lang('general.password')">
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">@lang('general.confirm_password')</label>
-                                    <input type="password" name="confirm-password" value="{{ old('confirm-password') }}"
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                     <input type="password" name="confirm-password" value="{{ old('confirm-password') }}"
                                         class="form-control" id="exampleInputConfirmpassword"
                                         placeholder="Enter @lang('general.confirm_password')">
+                                    </div>
                                 </div>
 
 

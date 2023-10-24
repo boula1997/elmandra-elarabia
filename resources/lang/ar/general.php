@@ -241,5 +241,6 @@ return [
     'added_successfully'=>'اضيف بنجاح',
     'removed_successfully'=>'تمت الإزالة بنجاح',
     'search'=>'البحث',
+    'user'=>'المستخدم',
    
 ];

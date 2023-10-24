@@ -17,13 +17,18 @@
                                 <div class="form-group">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1">{{ __('general.type') }}</label>
-                                        <select class="form-select form-select-lg" name="type" id="">
-                                            <option value="" selected>{{ __('general.selectOne') }}</option>
-                                            <option value="social">{{ __('general.social') }}</option>
-                                            <option value="whatsapp">{{ __('general.whatsapp') }}</option>
-                                            <option value="phone">{{ __('general.phone') }}</option>
-                                            <option value="email">{{ __('general.email') }}</option>
-                                        </select>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                            </div>
+                                            <select class="form-select form-select-lg" name="type" id="">
+                                                <option value="" selected>{{ __('general.selectOne') }}</option>
+                                                <option value="social">{{ __('general.social') }}</option>
+                                                <option value="whatsapp">{{ __('general.whatsapp') }}</option>
+                                                <option value="phone">{{ __('general.phone') }}</option>
+                                                <option value="email">{{ __('general.email') }}</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -33,8 +38,13 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.contact') }}</label>
-                                    <input type="text" name="contact" value="{{ old('contact') }}" class="form-control"
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="contact" value="{{ old('contact') }}" class="form-control"
                                         id="exampleInputName" placeholder="@lang('general.contact')">
+                                    </div>
                                 </div>
                             </div>
 
