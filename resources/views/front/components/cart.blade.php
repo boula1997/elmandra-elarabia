@@ -16,7 +16,7 @@
                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                     <div>
                                         <p class="mb-1">{{ __('general.shopping_cart') }}</p>
-                                        <p class="mb-0">{{ __('general.you_have') }} <span id="cart-count2">{{ count(cart()->getItems()) }}</span>
+                                        <p class="mb-0">{{ __('general.you_have') }} <span class="cart-count">{{ count(cart()->getItems()) }}</span>
                                             {{ __('general.items_in_your_cart') }}</p>
                                     </div>
                                     {{-- <div>
@@ -174,7 +174,7 @@
                 url: url,
                 success: (response) => {
                     $(this).parents().eq(3).remove();
-                    $('#cart-count2').text(response.count);
+                    $('.cart-count').text(response.count);
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,

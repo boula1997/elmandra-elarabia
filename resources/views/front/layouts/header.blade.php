@@ -139,7 +139,7 @@
                                 class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
                             <a class="nav-item nav-link d-flex flex-column" href="{{ route('front.shopping') }}">
-                                <span class="bg-danger" id="cart-count">{{ count(cart()->getItems()) }}</span>
+                                <span class="bg-danger cart-count">{{ count(cart()->getItems()) }}</span>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)

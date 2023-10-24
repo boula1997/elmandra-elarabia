@@ -55,7 +55,7 @@
                 url: url,
                 success: (response) => {
                     console.log(response);
-                    $('#cart-count').text(response.count);
+                    $('.cart-count').text(response.count);
                     $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass(
                         'btn btn-danger').attr('hash', response.hash);
                     toastr.options = {
@@ -98,7 +98,7 @@
                 success: (response) => {
                     $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
                         'btn btn-primary').attr('hash', '');
-                    $('#cart-count').text(response.count);
+                    $('.cart-count').text(response.count);
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,
