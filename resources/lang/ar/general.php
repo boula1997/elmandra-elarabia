@@ -235,5 +235,8 @@ return [
     'or_login_in_with'=>'تسجيل الدخول عبر',
     'already_have_account!'=>'لديك حساب بالفعل!',
     'i_dont_have_account'=>' ليس لدي حساب!',
+    'cart'=>'عربة التسوق',
+    'your_cart_is_empty'=>'عربة التسوق فارغة!',
+    'add_something_to_make'=>'أضف شيئا يجعلني سعيدا',
    
 ];

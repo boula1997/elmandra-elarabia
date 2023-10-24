@@ -233,6 +233,12 @@ return [
     'or_login_in_with'=>'or login in with',
     'already_have_account!'=>'Already have account!',
     'i_dont_have_account'=>"I don't have an account!",
+    'cart'=>'Cart',
+    'your_cart_is_empty'=>'Your Cart is Empty!',
+    'add_something_to_make'=>' Add something to make me happy',
+    
+    
+    
     
    
     
