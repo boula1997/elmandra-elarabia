@@ -3,10 +3,10 @@
     <script type="text/javascript">
         (function () {
             var options = {
-                call: "01126785910", // Call phone number
-                whatsapp: "+201208050298", // WhatsApp number
+                call: "01020202019", // Call phone number
+                whatsapp: "+201001908052", // WhatsApp number
                 call_to_action: "{{__('general.contact_us')}}", // Call to action
-                button_color: "#0060FF", // Color of button
+                button_color: "#6f5190", // Color of button
                 position: "{{ app()->getLocale()=='ar'? 'right' : 'left' }}", // Position may be 'right' or 'left'
                 order: "call,whatsapp", // Order of buttons
             };
