@@ -1,6 +1,6 @@
     <!-- Carousel Start -->
     <div class="container-fluid slider-section p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="header-carousel" class="carousel slide d-flex justify-content-center align-items-center" data-bs-ride="carousel">
             <div class="carousel-inner" dir="ltr">
                 @foreach ($sliders as $slider)
                     <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">

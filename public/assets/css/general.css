@@ -96,8 +96,8 @@ body{
     
 }
 .logo{
-    width: 100px !important;
-    height: 100px !important; 
+    /* width: 100px !important; */
+    height: 70px !important; 
 }
 
 
@@ -140,18 +140,25 @@ body{
 
 }
 
-.slider-section {
-    height: 75vh;
-}
 
 .slider-image{
-    height: 75vh;
+    height: 100vh;
 
+}
+
+.collapse{
+    z-index: 90000;
 }
 
 .nav-section{
-    height: 25vh;
+    height: 70px;
 }
+
+.nav-height{
+    
+    height: 70px;
+}
+
 
 .img-product-container{
     height: 200px;
@@ -166,9 +173,3 @@ body{
 .img-product-container:hover .img-product{
     transform: scale(1.1);
 }
-
-@media (min-width: 1025px) {
-    .h-custom {
-    height: 125vh !important;
-    }
-    }

@@ -1,6 +1,6 @@
     <!-- navbar start -->
     <!-- Header Start -->
-    <div class="container-fluid nav-section bg-dark px-0">
+    <div class="container-fluid nav-section bg-dark px-0 fixed-top">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
                 <a href="{{ route('front.home') }}"
@@ -9,7 +9,7 @@
                 </a>
             </div>
             <div class="col-lg-9">
-                <div class="row gx-0 bg-secondary d-none d-lg-flex">
+                {{-- <div class="row gx-0 bg-secondary d-none d-lg-flex">
                     <div class="col-lg-7 px-5 text-start">
                         <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                             <i class="fa fa-envelope text-primary me-2 rotate"></i>
@@ -30,8 +30,8 @@
 
                         </div>
                     </div>
-                </div>
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 px-lg-5">
+                </div> --}}
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 nav-height">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
                         <img class="logo" src="{{ settings()->logo }}" alt="">
                     </a>
@@ -50,7 +50,7 @@
                             <a href="{{ route('front.message') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
-                            <a class="nav-item nav-link d-flex flex-column" href="{{ route('front.shopping') }}">
+                            <a class="nav-item nav-link" href="{{ route('front.shopping') }}">
                                 <span class="bg-danger cart-count">{{ count(cart()->getItems()) }}</span>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
