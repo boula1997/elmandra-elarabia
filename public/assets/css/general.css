@@ -179,3 +179,7 @@ body{
     background-color: #5b3286 !important;
     border-color: #4a3264 !important;
 }
+.nav-link:hover{
+    color: #ffffff !important;
+}
+
