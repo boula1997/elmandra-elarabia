@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div> --}}
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 nav-height">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 px-3">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
                         <img class="logo" src="{{ settings()->logo }}" alt="">
                     </a>
