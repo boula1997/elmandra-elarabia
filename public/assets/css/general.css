@@ -173,3 +173,9 @@ body{
 .img-product-container:hover .img-product{
     transform: scale(1.1);
 }
+
+.btn-primary:hover{
+    color: white !important;
+    background-color: #5b3286 !important;
+    border-color: #4a3264 !important;
+}
