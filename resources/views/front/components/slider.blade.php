@@ -63,8 +63,9 @@
           var swiper = new Swiper(".mySwiper", {
               slidesPerView: 1,
               spaceBetween: 30,
+              effect: "fade",
               autoplay: {
-                  delay: 2500,
+                  delay: 3500,
                   disableOnInteraction: false,
               },
               loop: true,
