@@ -158,42 +158,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"
     integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            // when window width is >= 640px
-            640: {
-                slidesPerView: 4,
-                spaceBetween: 40
-            }
-        }
-    });
-</script>
+
 
 <!-- aos -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
