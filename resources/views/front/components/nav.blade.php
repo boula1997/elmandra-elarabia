@@ -39,7 +39,7 @@
                         data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="collapse navbar-collapse justify-content-between">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{ route('front.home') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.home') ? 'active' : '' }}">{{ __('general.home') }}</a>

@@ -13,9 +13,9 @@
         /*-------------------------------------
             menu
         -------------------------------------*/
-        $('.navbar-area .menu').on('click', function() {
+        $('.navbar-toggler').on('click', function() {
             $(this).toggleClass('open');
-            $('.navbar-area .navbar-collapse').toggleClass('sopen');
+            $('.navbar-collapse').toggleClass('show');
         });
     
         // mobile menu
