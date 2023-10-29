@@ -27,6 +27,7 @@ class OrdersSeeder extends Seeder
                     'name' => $name[$i],
                     'email' => $email[$i],
                     'phone' => $Phone[$i],
+                    'total' => 1000,
                     'address'=>$address[$i],
                     
                 
