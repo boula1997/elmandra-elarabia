@@ -547,6 +547,7 @@
                         </ul>
                     </li>
                 @endcan
+                
                 @can('order-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
