@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             PagesSeeder::class,
             SlidersSeeder::class,
             CategorySeeder::class,
+            SubcategorySeeder::class,
             ProductSeeder::class,
             PermissionTableSeeder::class,
             CreateAdminUserSeeder::class,
