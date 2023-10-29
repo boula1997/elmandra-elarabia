@@ -2,13 +2,15 @@
     <!-- Header Start -->
     <div class="container-fluid nav-section bg-dark px-0 fixed-top">
         <div class="row gx-0">
-            <div class="col-lg-3 bg-dark d-none d-lg-block">
+            <div class="col-lg-12 bg-dark d-none d-lg-block">
                 <a href="{{ route('front.home') }}"
                     class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <img class="logo" src="{{ asset(settings()->logo) }}" alt="img">
                 </a>
             </div>
-            <div class="col-lg-9">
+        </div>
+        <div class="row gx-0">
+            <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 px-3">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
                         <img class="logo" src="{{ settings()->logo }}" alt="">
@@ -28,15 +30,18 @@
                             <a href="{{ route('front.message') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                    @foreach (categories() as $category)
-                                        <a class="dropdown-item" href="#">{{ $category->title }}</a>
-                                    @endforeach
-                                </div>
-                            </li>
+                            @foreach (categories() as $category)
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">{{ $category->title }}</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                        @foreach ($category->subcategories as $subcategory)
+                                            <a class="dropdown-item" href="#">{{ $category->title }}</a>
+                                        @endforeach
+                                    </div>
+                                </li>
+                            @endforeach
 
                             <a class="nav-item nav-link" href="{{ route('front.shopping') }}">
                                 <span class="bg-danger cart-count">{{ count(cart()->getItems()) }}</span>
