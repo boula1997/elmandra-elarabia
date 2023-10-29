@@ -43,7 +43,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
     @if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css') }}">
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
@@ -54,6 +53,8 @@
         <!-- Template Stylesheet -->
         <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
     @endif
+
+    <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
 
     {{-- toastr --}}
 

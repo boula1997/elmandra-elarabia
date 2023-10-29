@@ -1,50 +1,53 @@
-<section style="background-color: #eee;">
-    <div class="container py-5">
-        <div class="row">
-            @foreach ($products as $product)
-                <div class="col-md-12 col-lg-3 mb-3 mb-lg-3">
-                    <div class="card">
-                        <div class="img-product-container">
-                            <img src="{{ asset($product->image) }}" class="card-img-top img-product" alt="Laptop" />
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
+@if (count($products) > 0)
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+            <div class="row">
+                @foreach ($products as $product)
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-3">
+                        <div class="card">
+                            <div class="img-product-container">
+                                <img src="{{ asset($product->image) }}" class="card-img-top img-product" alt="Laptop" />
                             </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                </div>
 
-                            <div class="d-flex justify-content-between mb-2">
-                                <h5 class="text-limit" style="--lines:1;" title="{{ $product->title }}">
-                                    {{ $product->title }}</h5>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="text-limit" style="--lines:1;" title="{{ $product->title }}">
+                                        {{ $product->title }}</h5>
                                 </div>
                                 {{-- <div>
                                     <h5 class="text-dark mb-0">{{ __('general.stock') }} {{$product->stock}}</h5>
                                 </div> --}}
-                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between">
 
-                                <p class="small text-danger"><s>{{$product->price_bd}} $</s></p>
-                                <h5 class="text-dark mb-0">{{$product->price}} $</h5>
+                                    <p class="small text-danger"><s>{{ $product->price_bd }} $</s></p>
+                                    <h5 class="text-dark mb-0">{{ $product->price }} $</h5>
+                                </div>
+
+                                <button
+                                    class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
+                                    product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
+                                    {{ __('general.add_to_cart') }}</button>
+
+                                <button
+                                    class="btn  btn-sm w-100 mt-1 removeCart {{ isInCart($product->id) ? 'btn-danger' : 'd-none' }}"
+                                    hash="{{ getHash($product->id) }}"><i class="fas fa-trash"></i>
+                                    {{ __('general.remove_from_cart') }}</button>
+
                             </div>
-
-                            <button
-                                class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
-                                product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
-                                {{ __('general.add_to_cart') }}</button>
-
-                            <button
-                                class="btn  btn-sm w-100 mt-1 removeCart {{ isInCart($product->id) ? 'btn-danger' : 'd-none' }}"
-                                hash="{{ getHash($product->id) }}"><i class="fas fa-trash"></i>
-                                {{ __('general.remove_from_cart') }}</button>
-
                         </div>
                     </div>
-                </div>
-            @endforeach
-            <div class="d-flex justify-content-center">
+                @endforeach
+                <div class="d-flex justify-content-center">
 
-                {{-- {!! $products->links('front.components.paginate') !!} --}}
+                    {{-- {!! $products->links('front.components.paginate') !!} --}}
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+@endif
+
 
 @include('front.components.noproducts');
 

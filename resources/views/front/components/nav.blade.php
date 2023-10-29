@@ -34,9 +34,9 @@
                                         <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#" id="dropdownId"
                                             data-bs-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">{{ $category->title }}</a>
-                                        <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
+                                        <div class="dropdown-menu position-absolute text-center" aria-labelledby="dropdownId">
                                             @foreach ($category->subcategories as $subcategory)
-                                                <a class="dropdown-item" href="{{ route('front.products',$subcategory->id) }}">{{ $subcategory->title }}</a>
+                                                <a class="dropdown-item text-wrap" href="{{ route('front.products',$subcategory->id) }}"><span>{{ $subcategory->title }}</span></a>
                                             @endforeach
                                         </div>
                                     </li>
@@ -53,8 +53,8 @@
                                 @endforeach
     
                             </div>
-                            <a href="{{ route('user-registration') }}"
-                                class="btn btn-primary py-md-1 px-md-4 d-none d-lg-block join text-nowrap">{{ __('general.join_us') }}</a>
+                            {{-- <a href="{{ route('user-registration') }}"
+                                class="btn btn-primary py-md-1 px-md-4 d-none d-lg-block join text-nowrap">{{ __('general.join_us') }}</a> --}}
                         </div>
                     </nav>
                 </div>

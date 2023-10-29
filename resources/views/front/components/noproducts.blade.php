@@ -1,8 +1,5 @@
-<div class="card empty {{ count($products) == 0 ? '' : 'd-none' }}">
-    <div class="card-header">
-        {{-- <h5>{{ __('general.cart') }}</h5> --}}
-    </div>
-    <div class="card-body cart">
+<div class="container empty {{ count($products) == 0 ? '' : 'd-none' }}">
+    <div class="cart">
         <div class="col-sm-12 empty-cart-cls text-center">
             <img src="{{ asset('images/no-product-found.png') }}" width="40%" height="40%"
                 class="img-fluid mb-4 mr-3">

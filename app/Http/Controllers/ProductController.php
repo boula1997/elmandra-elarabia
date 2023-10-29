@@ -45,7 +45,7 @@ class ProductController extends Controller
         try {
             $subcategory=$this->subcategory->findorfail($id);
             $products = $subcategory->products;
-            return view('front.products.product', compact( 'products'));
+            return view('front.products.product', compact( 'products','subcategory'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
