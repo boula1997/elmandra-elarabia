@@ -8,7 +8,7 @@
                     <img class="logo" src="{{ asset(settings()->logo) }}" alt="img">
                 </a>
 
-                <a class="mx-5" href="{{ route('front.shopping') }}">
+                <a class="mx-5 d-none d-lg-block" href="{{ route('front.shopping') }}">
                     <span class="bg-danger cart-count ">{{ count(cart()->getItems()) }}</span>
                     <i class="fas fa-shopping-cart fa-lg"></i>
                 </a>
@@ -16,9 +16,13 @@
         </div>
         <div class="row gx-0">
             <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 px-3">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 px-3 d-flex">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
                         <img class="logo" src="{{ settings()->logo }}" alt="">
+                    </a>
+                    <a class="mx-5  d-lg-none" href="{{ route('front.shopping') }}">
+                        <span class="bg-danger cart-count ">{{ count(cart()->getItems()) }}</span>
+                        <i class="fas fa-shopping-cart fa-lg"></i>
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
