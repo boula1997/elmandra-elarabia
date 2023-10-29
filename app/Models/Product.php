@@ -18,9 +18,9 @@ class Product extends Model implements TranslatableContract
     protected $guarded = [];
     public $timestamps = true;
 
-    public function category()
+    public function subcategory()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(Subcategory::class, 'category_id');
     }
 
 

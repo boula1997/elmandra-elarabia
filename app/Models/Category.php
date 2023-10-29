@@ -22,8 +22,8 @@ class Category extends Model implements TranslatableContract
         return  $this->file? asset($this->file->url): asset('default.jpg');
    }
 
-   public function products(){
-    return $this->hasMany(Product::class);
+   public function subcategories(){
+    return $this->hasMany(Subcategory::class);
    }
     
 }

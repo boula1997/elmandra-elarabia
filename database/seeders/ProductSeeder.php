@@ -200,7 +200,7 @@ class ProductSeeder extends Seeder
                     'subtitle' => $subtitle_en[$i],
                 ],
                 'icon'=>$icons[$i],
-                'category_id'=>\random_int(1,5),
+                'subcategory_id'=>\random_int(1,5),
                 'price'=>$prices[$i],
                 'price_bd'=>$prices_bd[$i],
                 'stock'=>$stock[$i],
