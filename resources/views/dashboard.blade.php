@@ -74,6 +74,21 @@
                             <!-- small box -->
                             <div class="small-box bg-info">
                                 <div class="inner">
+                                    <h3>{{itemsCount('subcategories')}}</h3>
+
+                                    <p>@lang('general.subcategories')</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-bag"></i>
+                                </div>
+                                <a href="{{route('subcategories.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
+                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
                                     <h3>{{itemsCount('processes')}}</h3>
 
                                     <p>@lang('general.processes')</p>

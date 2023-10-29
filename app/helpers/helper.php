@@ -19,6 +19,7 @@ use App\Models\Product;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Slider;
+use App\Models\Subcategory;
 use App\Models\User;
 use App\Models\Video;
 use Illuminate\Support\Facades\File;
@@ -81,6 +82,7 @@ function itemsCount($model)
     $items = [
         "faqs" => count(Faq::get()),
         "categories" => count(Category::get()),
+        "subcategories" => count(Subcategory::get()),
         "messages" => count(Message::get()),
         "counters" => count(Counter::get()),
         "newsletters" => count(Newsletter::get()),

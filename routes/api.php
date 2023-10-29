@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\FaqController;
 use App\Http\Controllers\API\MessageController;
 use App\Http\Controllers\API\CounterController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\API\TestimonialController;
 use App\Http\Controllers\API\ProcessController;
 use App\Http\Controllers\API\SettingController;
 use App\Http\Controllers\API\PartnerController;
+use App\Http\Controllers\API\SubcategoryController;
 use App\Http\Controllers\API\TeamController;
 
 /*
@@ -86,6 +88,10 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/product/{id}', [ProductController::class, 'show']);
+    Route::get('/categories', [CategoryController::class, 'index']);
+    Route::get('/category/{id}', [CategoryController::class, 'show']);
+    Route::get('/subcategories', [SubcategoryController::class, 'index']);
+    Route::get('/subcategory/{id}', [SubcategoryController::class, 'show']);
 
 });
 
