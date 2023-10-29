@@ -241,6 +241,9 @@ return [
     'search'=>'Search',
     'user'=>'User',
     'remove_from_cart'=>'Remove From Cart',
+    'orders'=>'Orders',
+    'subcategories'=>'Sub Categories',
+    
     
     
     

@@ -32,7 +32,7 @@ return [
     'admins'  => 'المسؤولون',
     'pages'  => 'الصفحات',
     'services'  => 'الخدمات',
-    'testimonials'  => 'اراؤ العملاء',
+    'testimonials'  => 'اراء العملاء',
     'processes'  => 'الخطوات',
     'faqs'  => 'الاستفسارات',
     'counters'  => 'العدادات',
@@ -243,5 +243,7 @@ return [
     'search'=>'البحث',
     'user'=>'المستخدم',
     'remove_from_cart'=>'ازالة من السلة',
+    'orders'=>'الطلبات',
+    'subcategories'=>'الفئات الفرعية',
    
 ];
