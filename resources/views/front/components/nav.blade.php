@@ -2,10 +2,15 @@
     <!-- Header Start -->
     <div class="container-fluid nav-section bg-dark px-0 fixed-top">
         <div class="row gx-0">
-            <div class="col-lg-12 bg-dark d-none d-lg-block">
-                <a href="{{ route('front.home') }}"
-                    class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+            <div class="col-lg-12 bg-dark w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <a class="d-none d-lg-block" href="{{ route('front.home') }}"
+                    class="navbar-brand mx-5">
                     <img class="logo" src="{{ asset(settings()->logo) }}" alt="img">
+                </a>
+
+                <a class="mx-5" href="{{ route('front.shopping') }}">
+                    <span class="bg-danger cart-count ">{{ count(cart()->getItems()) }}</span>
+                    <i class="fas fa-shopping-cart fa-lg"></i>
                 </a>
             </div>
         </div>
@@ -42,11 +47,6 @@
                                     </div>
                                 </li>
                             @endforeach
-
-                            <a class="nav-item nav-link" href="{{ route('front.shopping') }}">
-                                <span class="bg-danger cart-count">{{ count(cart()->getItems()) }}</span>
-                                <i class="fas fa-shopping-cart"></i>
-                            </a>
 
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                 <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
