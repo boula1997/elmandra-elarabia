@@ -8,6 +8,7 @@ use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Category;
+use App\Models\Subcategory;
 use Exception;
 
 class ProductController extends Controller
@@ -21,16 +22,16 @@ class ProductController extends Controller
     private $testimonial;
     private $team;
     private $process;
-    private $category;
+    private $subcategory;
     private $portfolio;
 
-    public function __construct(Product $product, Testimonial $testimonial, Team $team, Process $process, category $category, Gallery $portfolio)
+    public function __construct(Product $product, Testimonial $testimonial, Team $team, Process $process, Subcategory $subcategory, Gallery $portfolio)
     {
         $this->product = $product;
         $this->testimonial = $testimonial;
         $this->team = $team;
         $this->process = $process;
-        $this->category = $category;
+        $this->subcategory = $subcategory;
         $this->portfolio = $portfolio;
     }
 
@@ -39,10 +40,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index($id)
     {
         try {
-            $products = $this->product->paginate(8);
+            $subcategory=$this->subcategory->findorfail($id);
+            $products = $subcategory->products;
             return view('front.products.product', compact( 'products'));
         } catch (Exception $e) {
             dd($e->getMessage());

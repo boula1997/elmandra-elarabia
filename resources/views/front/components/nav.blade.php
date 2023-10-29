@@ -34,8 +34,8 @@
                                 class="nav-item nav-link {{ request()->routeIs('front.home') ? 'active' : '' }}">{{ __('general.home') }}</a>
                             <a href="{{ route('front.about') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.about') ? 'active' : '' }}">{{ __('general.about') }}</a>
-                            <a href="{{ route('front.products') }}"
-                                class="nav-item nav-link {{ request()->routeIs('front.products') ? 'active' : '' }}">{{ __('general.products') }}</a>
+                            {{-- <a href="{{ route('front.products') }}"
+                                class="nav-item nav-link {{ request()->routeIs('front.products') ? 'active' : '' }}">{{ __('general.products') }}</a> --}}
                             <a href="{{ route('front.message') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
@@ -46,7 +46,7 @@
                                         aria-expanded="false">{{ $category->title }}</a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                                         @foreach ($category->subcategories as $subcategory)
-                                            <a class="dropdown-item" href="#">{{ $subcategory->title }}</a>
+                                            <a class="dropdown-item" href="{{ route('front.products',$subcategory->id) }}">{{ $subcategory->title }}</a>
                                         @endforeach
                                     </div>
                                 </li>
