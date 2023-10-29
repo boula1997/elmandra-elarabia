@@ -168,4 +168,12 @@ if (!function_exists('cartItem()')) {
     }
 }
 
+if (!function_exists('categories()')) {
+
+    function categories()
+    {
+       return Category::get();
+    }
+}
+
 

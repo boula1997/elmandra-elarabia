@@ -98,7 +98,10 @@
 <script src="{{ asset('assets/js/waypoint.js') }}"></script>
 <script src="{{ asset('assets/js/counterup.js') }}"></script>
 <script src="{{ asset('lightbox-dist/js/lightbox.min.js') }}"></script>
-    {{-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
+<script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.bundle.js') }}"></script>
+
+        {{-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
 {{-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>

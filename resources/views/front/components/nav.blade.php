@@ -9,28 +9,6 @@
                 </a>
             </div>
             <div class="col-lg-9">
-                {{-- <div class="row gx-0 bg-secondary d-none d-lg-flex">
-                    <div class="col-lg-7 px-5 text-start">
-                        <div class="h-100 d-inline-flex align-items-center py-2 me-4">
-                            <i class="fa fa-envelope text-primary me-2 rotate"></i>
-                            <a class="mb-0" href="mailto:{{contacts('email')[0]->contact }}">{{contacts('email')[0]->contact }} </a>
-                        </div>
-                        <div class="h-100 d-inline-flex align-items-center py-2">
-                            <i class="fa fa-phone-alt text-primary me-2 rotate"></i>
-                            <a class="mb-0"  href="tel:{{contacts('phone')[0]->contact }}">{{ contacts('phone')[0]->contact }} </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 px-5 text-end">
-                        <div class="d-inline-flex align-items-center py-2">
-                            @foreach (contacts('social') as $contact)
-                                <a href="{{ $contact->contact }}"
-                                    target="__blank" class="btn btn-primary btn-square rounded-circle me-2"> <i
-                                        class="{{ $contact->icon }}" aria-hidden="true"></i></a>
-                            @endforeach
-
-                        </div>
-                    </div>
-                </div> --}}
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 px-3">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
                         <img class="logo" src="{{ settings()->logo }}" alt="">
@@ -50,10 +28,21 @@
                             <a href="{{ route('front.message') }}"
                                 class="nav-item nav-link {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    @foreach (categories() as $category)
+                                        <a class="dropdown-item" href="#">{{ $category->title }}</a>
+                                    @endforeach
+                                </div>
+                            </li>
+
                             <a class="nav-item nav-link" href="{{ route('front.shopping') }}">
                                 <span class="bg-danger cart-count">{{ count(cart()->getItems()) }}</span>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
+
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                 <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
                                     <a class="nav-item nav-link  rel="alternate" hreflang="{{ $localeCode }}"
