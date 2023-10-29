@@ -58,6 +58,7 @@ class SubcategorySeeder extends Seeder
                     'subtitle' => $subtitle_en[$i],
                 ],
                 'icon'=>$icons[$i],
+                'category_id'=>\random_int(1,5),
             ]);
 
             $subcategory->file()->create(["url"=>$images[$i]]);
