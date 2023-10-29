@@ -248,7 +248,7 @@
                 @endcan
 
 
-                @can('partner-list')
+                {{-- @can('partner-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="far fa-handshake"></i>
@@ -266,7 +266,8 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
+
                 @can('team-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -287,7 +288,7 @@
                     </li>
                 @endcan
 
-                @can('service-list')
+                {{-- @can('service-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fab fa-servicestack"></i>
@@ -305,7 +306,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('product-list')
                     <li class="nav-item">
@@ -392,6 +393,7 @@
                         </ul>
                     </li>
                 @endcan
+
                 @can('testimonial-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -411,7 +413,8 @@
                         </ul>
                     </li>
                 @endcan
-                @can('process-list')
+
+                {{-- @can('process-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-microchip"></i>
@@ -429,9 +432,9 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
-                @can('portfolio-list')
+                {{-- @can('portfolio-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-portrait"></i>
@@ -450,7 +453,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('page-list')
                     <li class="nav-item">
@@ -473,7 +476,7 @@
                     </li>
                 @endcan
 
-                @can('faq-list')
+                {{-- @can('faq-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-tags"></i>
@@ -491,7 +494,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('counter-list')
                     <li class="nav-item">
@@ -512,6 +515,7 @@
                         </ul>
                     </li>
                 @endcan
+
                 @can('contact-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -532,7 +536,7 @@
                     </li>
                 @endcan
 
-                @can('orderproduct-list')
+                {{-- @can('orderproduct-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-play-circle"></i>
@@ -550,7 +554,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('message-list')
                     <li class="nav-item">
@@ -591,7 +595,8 @@
                         </ul>
                     </li>
                 @endcan
-                @can('newsletter-list')
+
+                {{-- @can('newsletter-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-envelope-open-text"></i>
@@ -609,7 +614,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('setting-list')
                     <li class="nav-item">
