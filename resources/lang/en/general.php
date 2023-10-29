@@ -243,6 +243,9 @@ return [
     'remove_from_cart'=>'Remove From Cart',
     'orders'=>'Orders',
     'subcategories'=>'Sub Categories',
+    'check_again_for'=>'Check Again For Any Updates',
+    
+
     
     
     

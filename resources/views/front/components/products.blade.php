@@ -46,6 +46,8 @@
     </div>
 </section>
 
+@include('front.components.noproducts');
+
 @push('js')
     <script>
         $('.addCart').on('click', function(e) {
