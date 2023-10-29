@@ -1,6 +1,5 @@
 <footer class="main-footer text-center fixed-bottom">
-    <strong>Copyright &copy; 2023 <a href="{{ route('home') }}">Yousab Tech</a>.</strong>
-    All rights reserved.
+    <strong><a href="{{ route('home') }}">{{ settings()->copyright }}</a></strong>
 </footer>
 
 <!-- Control Sidebar -->
