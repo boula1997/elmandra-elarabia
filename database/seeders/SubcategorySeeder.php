@@ -14,7 +14,7 @@ class SubcategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-                        // Video Games
+                        // Orderproduct Games
                         "PlayStation 5 Games",
                         "PlayStation 4 Games",
                         "Nintendo Games",
@@ -52,7 +52,7 @@ class SubcategorySeeder extends Seeder
                             ];
 
         $title_ar = [
-                        //Video Games 
+                        //Orderproduct Games 
                         "العاب بلايستيشن 5",
                         "العاب بلايستيشن 4",
                         "العاب نينتندو",
@@ -92,7 +92,7 @@ class SubcategorySeeder extends Seeder
                             ];
 
         $images = [
-                    // Video Games
+                    // Orderproduct Games
                     // "images/40cfbdV2muONc4yQnTOM2j6Vj1r93LaF8xtPwuiR.jpg",
                     // "images/UkcojejGC3wZ9X6u0RToqPwkTO1a0VwDRclwjeuS.webp",
                     // "images/QzuqSxOzNJ65ZLCHOS1tTnT0e8gRE4UKel3YWSJ9.webp",

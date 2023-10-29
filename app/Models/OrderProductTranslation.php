@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class VideoTranslation extends Model
+class OrderproductTranslation extends Model
 {
     use HasFactory;
     protected $guarded = [];

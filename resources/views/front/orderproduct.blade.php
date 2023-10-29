@@ -28,12 +28,12 @@
 
 <div class="container">
     <div class="row">
-        @foreach ($videos as $video)
-        {{-- {{dd($video->youtube_link)}} --}}
+        @foreach ($orderproducts as $orderproduct)
+        {{-- {{dd($orderproduct->youtube_link)}} --}}
         <div class="col-md-4 col-sm-12 mb-3" style="height: 400px">
             <div style="height: 100%" class="rounded-5 card mb-3" >
-                <iframe class="rounded-5" width="100%" height="100%" src="{{$video->youtube_link}}"
-                    title="YouTube video player" frameborder="0"
+                <iframe class="rounded-5" width="100%" height="100%" src="{{$orderproduct->youtube_link}}"
+                    title="YouTube orderproduct player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>

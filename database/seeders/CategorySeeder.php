@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-                        "Video Games",
+                        "Orderproduct Games",
                         // "PS4 Games",
                         // "Nintendo Switch",
                         // "XBOX Games",

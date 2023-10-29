@@ -1,13 +1,15 @@
 @extends('admin.components.form')
-@section('form_action', route('videos.store'))
+@section('form_action', route('orderproducts.update', $orderproduct->id))
 @section('form_type', 'POST')
 @section('fields_content')
-    <div class="content-wrapper p-5">
-        <div class="container">
+    <div class="content-wrapper">
+        @method('PUT')
+                <div class="container p-3">
+            @include('admin.components.alert-error')
             <div class="card card-custom mb-2">
-            <div class="card-header card-header-tabs-line">
-                @include('admin.components.breadcrumb', ['module' => 'videos', 'action' => 'create'])
-            </div>
+                <div class="card-header card-header-tabs-line">
+                    @include('admin.components.breadcrumb', ['module' => 'orderproducts', 'action' => 'edit'])
+                </div>
                 <div class="card-toolbar px-3">
                     <ul class="nav nav-tabs nav-bold nav-tabs-line">
                         @foreach (config('translatable.locales') as $key => $locale)
@@ -32,10 +34,9 @@
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
                                             class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
-                                            value="{{ old($locale . '.title') }}">
+                                            value="{{ old($locale . '.title', $orderproduct->translate($locale)->title) }}">
                                     </div>
                                 </div>
-
                             </div>
                         @endforeach
                     </div>
@@ -52,9 +53,9 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                         <input type="text" name="youtube_link" value="{{ old('youtube_link') }}"
-                                        class="form-control" id="exampleInputName"
-                                        placeholder="{{ __('general.youtube_link') }}">
+                                     <input type="text" name="youtube_link"
+                                        value="{{ old('youtube_link', $orderproduct->youtube_link) }}" class="form-control"
+                                        id="exampleInputName" placeholder="{{ __('general.youtube_link') }}">
                                     </div>
                                 </div>
                             </div>
@@ -62,14 +63,11 @@
                         </div>
 
                     </div>
+                    <br>
                 </div>
                 <div class="card-footer mb-5">
-                    <button type="submit"
-                        class="btn btn-outline-primary px-5
-                            ">@lang('general.save')</button>
-                    <a href="{{ route('videos.index') }}"
-                        class="btn btn-outline-danger px-5
-                            ">@lang('general.cancel')</a>
+                    <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
+                    <a href="{{ route('orderproducts.index') }}" class="btn btn-outline-danger font-weight-bold">@lang('general.cancel')</a>
                 </div>
             </div>
         </div>
@@ -81,6 +79,7 @@
         $(function() {
             // Summernote
             $('.summernote').summernote()
+
             // CodeMirror
             CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
                 mode: "htmlmixed",

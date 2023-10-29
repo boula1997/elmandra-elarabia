@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Http\Requests\Dashboard\VideoRequest;
+use App\Http\Requests\Dashboard\OrderproductRequest;
 use App\Models\Admin;
 use App\Models\Service;
 use App\Models\Setting;
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class,
             TestimonialsSeeder::class,
             UsersSeeder::class,
-            VideosSeeder::class,
+            OrderproductsSeeder::class,
         ]);
         
     }

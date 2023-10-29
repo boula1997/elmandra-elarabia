@@ -5,7 +5,7 @@
         <div class="container p-3">
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-header card-header-tabs-line">
-                    @include('admin.components.breadcrumb', ['module' => 'videos', 'action' => 'show'])
+                    @include('admin.components.breadcrumb', ['module' => 'orderproducts', 'action' => 'show'])
                 </div>
                 <div class="card-toolbar px-3">
                     <ul class="nav nav-tabs nav-bold nav-tabs-line">
@@ -27,7 +27,7 @@
                                         <div class="mb-7 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $video->translate($locale)->title }}</p>
+                                                <p class="m-0">{{ $orderproduct->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
                                     <div class="form-group">
                                         <label class="col-form-label d-block">@lang('general.youtube_link')</label>
                                         <br>
-                                        <img src="{{ asset($video->youtube_link) }}" class="w-50">
+                                        <img src="{{ asset($orderproduct->youtube_link) }}" class="w-50">
                                     </div>
                                 </div>
                             </div>

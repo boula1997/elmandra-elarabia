@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Video;
+use App\Models\Orderproduct;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class VideosSeeder extends Seeder
+class OrderproductsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,7 +22,7 @@ class VideosSeeder extends Seeder
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
-            $Video = Video::create([
+            $Orderproduct = Orderproduct::create([
                 'ar' => [
                     'title' => $title_ar[$i],
                 ],

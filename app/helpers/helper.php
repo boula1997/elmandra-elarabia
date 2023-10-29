@@ -21,7 +21,7 @@ use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Subcategory;
 use App\Models\User;
-use App\Models\Video;
+use App\Models\Orderproduct;
 use Illuminate\Support\Facades\File;
 use Jackiedo\Cart\Facades\Cart;
 use Spatie\Permission\Models\Role;
@@ -100,7 +100,7 @@ function itemsCount($model)
         "services" => count(Service::get()),
         "users" => count(User::get()),
         "admins" => count(Admin::get()),
-        "videos" => count(Video::get()),
+        "orderproducts" => count(Orderproduct::get()),
         "roles" => count(Role::get()),
         "orders" => count(Order::get()),
     ];

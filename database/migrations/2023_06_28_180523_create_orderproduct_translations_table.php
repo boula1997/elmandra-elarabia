@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-class CreateVideoTranslationsTable extends Migration
+class CreateOrderproductTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,13 @@ class CreateVideoTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('video_translations', function (Blueprint $table) {
+        Schema::create('orderproduct_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->unsignedBigInteger('video_id');
+            $table->unsignedBigInteger('orderproduct_id');
             $table->string('locale')->index();
-            $table->unique(['video_id', 'locale']);
-            $table->foreign('video_id')->references('id')->on('videos')->onDelete('cascade');
+            $table->unique(['orderproduct_id', 'locale']);
+            $table->foreign('orderproduct_id')->references('id')->on('orderproducts')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateVideoTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('video_translations');
+        Schema::dropIfExists('orderproduct_translations');
     }
 }

@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
 
 
         $title_en = [
-                        // video games
+                        // orderproduct games
                        "EA SPORTS FC 24 - PS5",
                         "EA SPORTS FC 24 - Arabic and English - PS5",
                         "GTA 5: Grand Theft Auto V - PS5",
@@ -76,7 +76,7 @@ class ProductSeeder extends Seeder
                           ];
 
         $title_ar = [ 
-                        // video games
+                        // orderproduct games
                         "EA SPORTS FC 24 - PS5",
                         "EA SPORTS FC 24 - Arabic and English - PS5",
                         "جي تي ايه 5: جراند ثيفت أوتو V - بلاي ستيشن 5",
@@ -137,7 +137,7 @@ class ProductSeeder extends Seeder
                           ];
 
         $images = [
-                     // video games
+                     // orderproduct games
                     "images/vzrjmBcs7nimr2pddHvVEPyJOkEgArO8OK89I3wG.webp",
                     "images/Vg6nCOARUk7wzGeUMfJXSPtjHFGiXQjlQuW3drtW.webp", 
                     "images/zbGHONWmG1S4GqCmhf3smQebv2GYFqEmJDJQHaYo.webp",

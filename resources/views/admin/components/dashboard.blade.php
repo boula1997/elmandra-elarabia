@@ -532,18 +532,18 @@
                     </li>
                 @endcan
 
-                @can('video-list')
+                @can('orderproduct-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-play-circle"></i>
                             <p>
-                                @lang('general.videos') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('videos') }}</span>
+                                @lang('general.orderproducts') <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('orderproducts') }}</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('videos.index') }}" class="nav-link">
+                                <a href="{{ route('orderproducts.index') }}" class="nav-link">
                                     <i class=" px-1 far fa-circle nav-icon"></i>
                                     <p>@lang('general.show')</p>
                                 </a>

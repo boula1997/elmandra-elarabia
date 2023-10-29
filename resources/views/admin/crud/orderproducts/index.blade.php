@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <!-- Content Wrapper. Contains video content -->
+    <!-- Content Wrapper. Contains orderproduct content -->
     <div class="content-wrapper">
         <div class="container p-3">
             <!-- Main content -->
@@ -17,11 +17,11 @@
                                     <div class="row">
                                         <div class="col-md-6 d-flex d-flex justify-content-start">
                                             <h1 class="card-title fw-bold">
-                                                <th>@lang('general.videos')</th>
+                                                <th>@lang('general.orderproducts')</th>
                                             </h3>
                                         </div>
                                         <div class="col-md-6 d-flex d-flex justify-content-end">
-                                            <a href="{{ route('videos.create') }}">
+                                            <a href="{{ route('orderproducts.create') }}">
 
                                                 <button
                                                     class="btn btn-outline-primary px-5
@@ -44,16 +44,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($videos as $video)
+                                            @foreach ($orderproducts as $orderproduct)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $video->youtube_link }}</td>
-                                                    <td>{{ $video->title }}</td>
+                                                    <td>{{ $orderproduct->youtube_link }}</td>
+                                                    <td>{{ $orderproduct->title }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
-                                                            'route' => 'videos',
-                                                            'role' => 'video',
-                                                            'module' => $video,
+                                                            'route' => 'orderproducts',
+                                                            'role' => 'orderproduct',
+                                                            'module' => $orderproduct,
                                                         ])
                                                     </td>
                                                 </tr>

@@ -38,7 +38,7 @@ return [
     'faqs'  => 'Faqs',
     'counters'  => 'Counters',
     'contacts'  => 'Contacts',
-    'videos'  => 'Videos',
+    'orderproducts'  => 'Orderproducts',
     'partners'  => 'Partners',
 
     'teams'  => 'Teams',
@@ -58,7 +58,7 @@ return [
     "id" => "Id",
     "model" => "Model",
     "team" => "Team",
-    "video" => "Video",
+    "orderproduct" => "Orderproduct",
     "partner" => "Partner",
     "service" => "Service",
     "testimonial" => "Testimonial",
