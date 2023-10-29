@@ -42,7 +42,7 @@
                                         aria-expanded="false">{{ $category->title }}</a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                                         @foreach ($category->subcategories as $subcategory)
-                                            <a class="dropdown-item" href="#">{{ $category->title }}</a>
+                                            <a class="dropdown-item" href="#">{{ $subcategory->title }}</a>
                                         @endforeach
                                     </div>
                                 </li>
