@@ -121,6 +121,7 @@ class SubcategorySeeder extends Seeder
                     'description' => $description_en[$i],
                     'subtitle' => $subtitle_en[$i],
                 ],
+                'category_id'=>\random_int(1,5),
                 'icon'=>$icons[$i],
             ]);
 
