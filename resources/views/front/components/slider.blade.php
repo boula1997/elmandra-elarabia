@@ -1,4 +1,4 @@
-  <div class="swiper mySwiper">
+  <div class="swiper mySwiper" style="height: 90vh">
       <div class="swiper-wrapper">
           @foreach ($sliders as $slider)
               <div class="swiper-slide">

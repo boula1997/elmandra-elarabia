@@ -151,7 +151,8 @@ body{
 }
 
 .nav-section{
-    height: 70px;
+    /* height: 50px; */
+    z-index: 2000;
 }
 
 .nav-height{
@@ -182,4 +183,19 @@ body{
 .nav-link:hover{
     color: #ffffff !important;
 }
+
+.nav-link{
+    font-size: small !important;
+}
+.dropdown-item{
+    font-size: small !important;
+}
+.join{
+    font-size: small !important;
+}
+
+.nav-index{
+    z-index: 9000;
+}
+
 
