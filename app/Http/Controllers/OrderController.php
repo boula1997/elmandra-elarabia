@@ -12,6 +12,7 @@ use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Counter;
+use App\Models\Orderproduct;
 use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;
@@ -25,11 +26,13 @@ class OrderController extends Controller
      */
 
     private $order;
+    private $orderproduct;
 
 
-    public function __construct(order $order)
+    public function __construct(order $order, Orderproduct $orderproduct)
     {
         $this->order = $order;
+        $this->orderproduct = $orderproduct;
     }
 
     /**
@@ -60,6 +63,14 @@ class OrderController extends Controller
         try {
             $data = $request->all();
             $order = $this->order->create($data);
+            foreach(cart()->getItems() as $item){
+                $this->orderproduct->create([
+                    'order_id' => $order->id,
+                    'product_id' => $item->getId(),
+                    'count' => $item->get('quantity'),
+                    'total' => $item->get('quantity') * $item->getPrice(),
+                ]);
+            }
             cart()->destroy();
             Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
             return response()->json(['success' => __('general.sent_successfully')]);

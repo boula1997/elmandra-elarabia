@@ -38,8 +38,9 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>@lang('general.youtube_link')</th>
                                                 <th>@lang('general.title')</th>
+                                                <th>@lang('general.count')</th>
+                                                <th>@lang('general.total')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -47,8 +48,9 @@
                                             @foreach ($orderproducts as $orderproduct)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $orderproduct->youtube_link }}</td>
-                                                    <td>{{ $orderproduct->title }}</td>
+                                                    <td>{{ $orderproduct->product->title }}</td>
+                                                    <td>{{ $orderproduct->product->count }}</td>
+                                                    <td>{{ $orderproduct->product->total }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'orderproducts',

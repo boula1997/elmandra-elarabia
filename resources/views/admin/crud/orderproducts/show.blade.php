@@ -27,7 +27,7 @@
                                         <div class="mb-7 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $orderproduct->translate($locale)->title }}</p>
+                                                <p class="m-0">{{ $orderproduct->produtct->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -42,9 +42,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="col-form-label d-block">@lang('general.youtube_link')</label>
+                                        <label class="col-form-label d-block">@lang('general.count')</label>
                                         <br>
-                                        <img src="{{ asset($orderproduct->youtube_link) }}" class="w-50">
+                                        <p class="m-0">{{ $orderproduct->produtct->count }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label d-block">@lang('general.total')</label>
+                                        <br>
+                                        <p class="m-0">{{ $orderproduct->produtct->total }}</p>
                                     </div>
                                 </div>
                             </div>

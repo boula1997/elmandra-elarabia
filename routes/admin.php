@@ -101,7 +101,7 @@ Route::group(
             Route::resource('orders', OrderController::class);
         
             Route::get('/reply-message/{id}', [App\Http\Controllers\Admin\MessageController::class, 'reply'])->name('messages.reply');
-            Route::get('/reply-order/{id}', [App\Http\Controllers\Admin\OrderController::class, 'reply'])->name('order.reply');
+            Route::get('/reply-order/{id}', [App\Http\Controllers\Admin\OrderController::class, 'reply'])->name('orders.reply');
             Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\MessageController::class, 'emailReply'])->name('messages.emailReply');
             Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\OrderController::class, 'emailReply'])->name('orders.emailReply');
         

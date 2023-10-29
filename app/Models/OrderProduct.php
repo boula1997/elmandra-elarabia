@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
-use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-class Orderproduct extends Model implements TranslatableContract
+class Orderproduct extends Model
 {
-    use HasFactory, Translatable;
+    use HasFactory;
 
     protected $table = 'orderproducts';
     protected $guarded = [];
@@ -20,5 +18,11 @@ class Orderproduct extends Model implements TranslatableContract
     {
         return $this->morphOne(File::class, 'fileable');
     }
+
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id');
+    }
+
+
     
 }

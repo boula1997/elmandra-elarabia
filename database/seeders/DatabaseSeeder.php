@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class,
             TestimonialsSeeder::class,
             UsersSeeder::class,
-            OrderproductsSeeder::class,
+            // OrderproductsSeeder::class,
         ]);
         
     }

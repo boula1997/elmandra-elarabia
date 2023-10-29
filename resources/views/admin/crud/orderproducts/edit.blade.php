@@ -48,14 +48,30 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">{{ __('general.youtube_link') }}</label>
+                                    <label for="exampleInputEmail1">{{ __('general.count') }}</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                     <input type="text" name="youtube_link"
-                                        value="{{ old('youtube_link', $orderproduct->youtube_link) }}" class="form-control"
-                                        id="exampleInputName" placeholder="{{ __('general.youtube_link') }}">
+                                     <input type="text" name="count"
+                                        value="{{ old('count', $orderproduct->count) }}" class="form-control"
+                                        id="exampleInputName" placeholder="{{ __('general.count') }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">{{ __('general.total') }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                     <input type="text" name="total" disabled
+                                        value="{{ old('total', $orderproduct->total) }}" class="form-control"
+                                        id="exampleInputhName" placeholder="{{ __('general.total') }}">
                                     </div>
                                 </div>
                             </div>

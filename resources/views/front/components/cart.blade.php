@@ -9,7 +9,7 @@
                         <div class="row">
 
                             <div class="col-lg-7">
-                                <h5 class="mb-3"><a href="{{ route('front.products') }}" class="text-body"><i
+                                <h5 class="mb-3"><a href="{{ route('front.home') }}" class="text-body"><i
                                             class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
                                 </h5>
                                 <hr>
@@ -174,7 +174,7 @@
                                 class="img-fluid mb-4 mr-3">
                             <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
                             <h4>{{ __('general.add_something_to_make') }} </h4>
-                            <a href="{{ route('front.products') }}" class="btn btn-primary cart-btn-transform m-3"
+                            <a href="{{ route('front.home') }}" class="btn btn-primary cart-btn-transform m-3"
                                 data-abc="true">{{ __('general.continue_shopping') }}</a>
 
 
