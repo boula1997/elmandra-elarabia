@@ -285,7 +285,7 @@
                     toastr.success("{{ __('general.added_successfully') }}");
                 },
                 error: function(response) {
-                    alert(response.error);
+        
                     $(".err").addClass("d-block");
                     $(".err").removeClass("d-none");
                 }
