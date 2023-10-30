@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\SubcategoryRequest;
+use App\Models\Category;
 use Illuminate\Support\Facades\File;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
@@ -18,13 +19,15 @@ class SubcategoryController extends Controller
      * @return \Illuminate\Http\Responses
      */
     private $subcategory;
-    function __construct(Subcategory $subcategory)
+    private $category;
+    function __construct(Subcategory $subcategory,Category $category)
     {
         $this->middleware('permission:subcategory-list|subcategory-create|subcategory-edit|subcategory-delete', ['only' => ['index', 'show']]);
         $this->middleware('permission:subcategory-create', ['only' => ['create', 'store']]);
         $this->middleware('permission:subcategory-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:subcategory-delete', ['only' => ['destroy']]);
         $this->subcategory = $subcategory;
+        $this->category = $category;
     }
 
     public function index()
@@ -46,7 +49,8 @@ class SubcategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.subcategories.create');
+        $categories=$this->category->get();
+        return view('admin.crud.subcategories.create',compact('categories'));
     }
 
     /**
@@ -88,8 +92,8 @@ class SubcategoryController extends Controller
      */
     public function edit(Subcategory $subcategory)
     {
-        // dd($subcategory);
-        return view('admin.crud.subcategories.edit', compact('subcategory'));
+        $categories=$this->category->get();
+        return view('admin.crud.subcategories.edit', compact('subcategory','categories'));
     }
     /**
      * Update the specified resource in storage.
