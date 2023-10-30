@@ -52,7 +52,7 @@ class NewsletterController extends Controller
         try {
             $data = $request->all();
             $newsletter = $this->newsletter->create($data);
-            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new NewsletterMail($newsletter));
+            // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new NewsletterMail($newsletter));
             return response()->json(['success' => trans('general.sent_successfully')]);
         } catch (\Exception $e) {
             return response()->json(['error' => __($e->getMessage())]);

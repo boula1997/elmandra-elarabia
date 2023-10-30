@@ -85,7 +85,7 @@ class OrderController extends Controller
         try {
             $data = $request->all();
             $order=$this->order->find($id);
-            Mail::to($order->email)->send(new OrderAdminMail($data));
+            // Mail::to($order->email)->send(new OrderAdminMail($data));
             return redirect()->route('orders.index')
                 ->with('success', trans('general.replied_successfully'));
         } catch (\Exception $e) {
