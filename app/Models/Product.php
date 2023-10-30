@@ -22,7 +22,10 @@ class Product extends Model implements TranslatableContract
     {
         return $this->belongsTo(Subcategory::class, 'category_id');
     }
-
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 
     public function getImageAttribute(){
         return  $this->file? asset($this->file->url): asset('default.jpg');
