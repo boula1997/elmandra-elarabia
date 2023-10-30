@@ -9,3 +9,7 @@
 .logo-side{
     height: 100px;
 }
+
+.controlles:hover {
+    color: #6790e9 !important ;
+}
