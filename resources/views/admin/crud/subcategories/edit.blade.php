@@ -38,32 +38,7 @@
                                             value="{{ old($locale . '.title', $subcategory->translate($locale)->title) }}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle', $subcategory->translate($locale)->subtitle) }}">
-                                    </div>
-                                </div>
 
-
-
-                                <div class="col-form-group">
-                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
-                                    <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
-                                        name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $subcategory->translate($locale)->description) !!} 
-                                    </textarea>
-                                </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('subcategories.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -74,6 +49,17 @@
                     <div class="row">
 
                         <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.categories') }}</label>
+                                <select class="form-select form-select-lg" name="category_id" id="category">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             @include('admin.components.image', [
                                 'label' => __('general.image'),
                                 'value' => old('image', $subcategory->image),
@@ -81,15 +67,6 @@
                                 'id' => 'kt_image_3',
                                 'accept' => 'image/*',
                                 'required' => true,
-                            ])
-
-                        </div>
-
-                        <div class="col-md-6">
-                            @include('admin.components.icon', [
-                                'label' => 'icon',
-                                'required' => true,
-                                'value' => old('icon', $subcategory->icon),
                             ])
 
                         </div>

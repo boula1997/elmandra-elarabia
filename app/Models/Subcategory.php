@@ -14,7 +14,7 @@ class Subcategory extends Model implements TranslatableContract
 {
     use HasFactory, Translatable, MorphFile;
     protected $table = 'subcategories';
-    public $translatedAttributes = ['title', 'subtitle', 'description'];
+    public $translatedAttributes = ['title'];
     protected $guarded = [];
     public $timestamps = true;
 

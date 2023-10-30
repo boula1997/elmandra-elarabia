@@ -17,10 +17,7 @@ class SubcategoryResource extends JsonResource
         return [
             "id" => $this->id,
             "image" => $this->image,
-            "icon" => $this->icon,
             "title" => $this->title,
-            "subtitle" => $this->subtitle,
-            "description" => $this->description,
         ];
     }
 }

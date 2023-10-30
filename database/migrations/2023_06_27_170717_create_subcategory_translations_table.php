@@ -16,8 +16,6 @@ class CreateSubcategoryTranslationsTable extends Migration
         Schema::create('subcategory_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('subtitle')->nullable();
-            $table->text('description')->nullable();
             $table->unsignedBigInteger('subcategory_id');
             $table->string('locale')->index();
             $table->unique(['subcategory_id', 'locale']);
