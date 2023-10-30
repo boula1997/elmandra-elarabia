@@ -199,3 +199,8 @@ body{
 }
 
 
+.dropdown-menu{
+  left:unset !important;
+}
+
+
