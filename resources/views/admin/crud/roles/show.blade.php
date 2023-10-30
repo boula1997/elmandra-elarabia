@@ -17,23 +17,45 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <strong>Name:</strong>
+                                        <strong>{{ __('general.name') }}</strong>
                                         {{ $role->name }}
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                @foreach ($rolePermissions as $v)
+                                    
+                                    <div class="col-md-3">
+                                        <div
+                                            class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                            {{-- <input type="checkbox" name="permission[]"
+                                                value="{{ $value->id }}" class="custom-control-input"
+                                                id="customSwitch{{ $value->id }}"> --}}
+                                            <label class="" for="customSwitch">{{ $v->name }}</label>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                            {{-- <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <strong>Permissions:</strong>
+                                        <strong>{{ __('general.permissions') }}</strong>
                                         @if (!empty($rolePermissions))
                                             @foreach ($rolePermissions as $v)
                                                 <label class="label label-success">{{ $v->name }},</label>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <div class="col-md-3">
+                                                    <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                                        <input type="checkbox" name="permission[]"
+                                                            value="{{ $value->id }}" class="custom-control-input"
+                                                            id="customSwitch{{ $value->id }}">
+                                                        <label class="" for="customSwitch{{ $v->id }}">{{ $v->name }}</label>
+                                                    </div>
+                                                </div>
                                             @endforeach
                                         @endif
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

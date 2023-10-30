@@ -55,11 +55,11 @@
             </div>
         @endcan
 
-        @can($role . '-reply')
+        {{-- @can($role . '-reply')
             <a href="{{ route($route . '.reply', $module->id) }}" title="reply">
                 <i class="fas fa-reply text-secondary  fa-lg"></i>
             </a>
-        @endcan
+        @endcan --}}
 
 
     </form>
