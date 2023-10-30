@@ -85,14 +85,14 @@
 
                         </div>
 
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             @include('admin.components.icon', [
                                 'label' => 'icon',
                                 'required' => true,
                                 'value' => old('icon', $category->icon),
                             ])
 
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
