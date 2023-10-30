@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 
 class SubcategorySeeder extends Seeder
 {
-    /**
+    /**s
      * Run the database seeds.
      */
     public function run(): void
@@ -44,12 +44,8 @@ class SubcategorySeeder extends Seeder
                         // Offers
                         "PS4",
                     ];
-        $subtitle_en =   [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
-                            ,null,null,null,null,null,null,null,null
-                            ];
-        $description_en =[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
-                            ,null,null,null,null,null,null,null,null
-                            ];
+
+
 
         $title_ar = [
                         //Orderproduct Games 
@@ -83,13 +79,8 @@ class SubcategorySeeder extends Seeder
                         "بلاي ستيشن 4",
                     ];  
 
-        $subtitle_ar =    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
-                           ,null,null,null,null,null,null,null,null
-                            ];
 
-        $description_ar = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
-                            ,null,null,null,null,null,null,null,null
-                            ];
+
 
         $images = [
                     // Orderproduct Games
@@ -105,24 +96,16 @@ class SubcategorySeeder extends Seeder
                     null,null,null
                     ];
 
-        $icons=[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
-                ,null,null,null,null,null,null,null,null
-                ];
 
         for ($i = 0; $i < count($title_ar); $i++) {
             $subcategory = Subcategory::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => $description_ar[$i],
-                    'subtitle' => $subtitle_ar[$i],
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'description' => $description_en[$i],
-                    'subtitle' => $subtitle_en[$i],
                 ],
                 'category_id'=>\random_int(1,5),
-                'icon'=>$icons[$i],
             ]);
 
             $subcategory->file()->create(["url"=>$images[$i]]);

@@ -30,7 +30,7 @@
                                     class="nav-item nav-link text-nowrap {{ request()->routeIs('front.message') ? 'active' : '' }}">{{ __('general.contact') }}</a>
     
                                 @foreach (categories() as $category)
-                                    <li class="nav-item dropdown">
+                                    <li cla ss="nav-item dropdown">
                                         <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#" id="dropdownId"
                                             data-bs-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">{{ $category->title }}</a>

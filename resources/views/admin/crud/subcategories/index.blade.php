@@ -38,6 +38,7 @@
                                                 <th>#</th>
                                                 <th>@lang('general.image')</th>
                                                 <th>@lang('general.title')</th>
+                                                <th>@lang('general.category')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -48,6 +49,7 @@
                                                     <td><img width="100" height="100" src="{{ $subcategory->image }}"
                                                             alt="{{ $subcategory->title }}"></td>
                                                     <td>{{ $subcategory->title }}</td>
+                                                    <td>{{ $subcategory->category->title }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'subcategories',
