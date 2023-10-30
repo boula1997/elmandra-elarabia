@@ -200,7 +200,11 @@ body{
 
 
 .dropdown-menu{
+    text-align: center !important;
   left:unset !important;
+  right:unset !important;
+
 }
+
 
 
