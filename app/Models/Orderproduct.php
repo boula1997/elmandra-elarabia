@@ -13,6 +13,7 @@ class Orderproduct extends Model
     protected $guarded = [];
     public $translatedAttributes = ['title'];
     public $timestamps = true;
+   
 
     public function file(): MorphOne
     {
