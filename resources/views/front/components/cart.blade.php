@@ -313,7 +313,7 @@
                     'address': $("input[name=address]").val(),
                 },
                 success: (response) => {
-                    $('.cart-total').text(response.total);
+                    $('.cart-count').text(response.count);
                     $('.full').addClass('d-none');
                     $('.empty').removeClass('d-none');
                     toastr.options = {

@@ -74,7 +74,7 @@ class OrderController extends Controller
             }
             cart()->destroy();
             // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
-            return response()->json(['success' => __('general.sent_successfully'),'total'=>cart()->getTotal()]);
+            return response()->json(['success' => __('general.sent_successfully'),'count'=>count(cart()->getItems())]);
         } catch (\Exception $e) {
             return response()->json(['error' => __($e->getMessage())]);
         }
