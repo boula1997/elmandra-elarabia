@@ -49,7 +49,7 @@
                                                     <td><img width="100" height="100" src="{{ $product->image }}"
                                                             alt="{{ $product->title }}"></td>
                                                     <td>{{ $product->title }}</td>
-                                                    <td>{{ $product->category->title }}</td>
+                                                    <td>{{ $product->subcategory->title }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'products',

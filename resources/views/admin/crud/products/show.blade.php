@@ -64,7 +64,7 @@ div@extends('admin.layouts.master')
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <p class="m-0">{{ $product->category->translate($locale)->title }}</p>
+                                    <p class="m-0">{{ $product->subcategory->translate($locale)->title }}</p>
                                 </div>
                             </div>
                             <div class="form-group">
