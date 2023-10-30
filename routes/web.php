@@ -52,6 +52,7 @@ Route::group(
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
         Route::get('/addToCart/{id}', [CartController::class,'addToCart'])->name('addTo.cart');
         Route::get('/removeFromCart/{hash}', [CartController::class,'removeItemCart'])->name('removeFrom.cart');
+        Route::get('/updateItemCount/{hash}/{quantity}', [CartController::class,'updateItemCount'])->name('updateItem.count');
         
         Route::get('/add_to_cart', function () {
             

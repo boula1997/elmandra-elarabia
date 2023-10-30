@@ -45,10 +45,13 @@
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div style="width: 50px;">
-                                                        <h5 class="fw-normal mb-0">{{ $item->get('quantity') }}</h5>
+                                                        <input class="itemCount" type="number" min="1" style="width: 40px"
+                                                            class="w-25" name="itemCount"
+                                                            value="{{ $item->get('quantity') }}"
+                                                            hash="{{ $item->getHash() }}">
                                                     </div>
                                                     <div style="width: 80px;">
-                                                        <h5 class="mb-0">{{ cartItem($item->getId())->price }} $</h5>
+                                                        <h5 class="mb-0 itemTotalPrice">{{ $item->get('price')* $item->get('quantity') }} $</h5>
                                                     </div>
                                                     <button class="removeCart btn btn-transparent"
                                                         hash="{{ $item->getHash() }}">
@@ -127,24 +130,24 @@
 
                                             <div class="d-flex justify-content-between">
                                                 <p class="mb-2">{{ __('general.subtotal') }}</p>
-                                                <p class="mb-2 cart-total">{{cart()->getTotal()}} $</p> 
+                                                <p class="mb-2 cart-total">{{ cart()->getTotal() }} $</p>
                                             </div>
 
                                             <div class="d-flex justify-content-between">
                                                 <p class="mb-2">{{ __('general.shipping') }}</p>
-                                                <p class="mb-2 cart-total">{{cart()->getTotal()}} $</p> 
+                                                <p class="mb-2 cart-total">{{ cart()->getTotal() }} $</p>
                                             </div>
 
                                             <div class="d-flex justify-content-between mb-4">
                                                 <p class="mb-2"> {{ __('general.total') }} </p>
-                                                <p class="mb-2 cart-total">{{cart()->getTotal()}} $</p> 
+                                                <p class="mb-2 cart-total">{{ cart()->getTotal() }} $</p>
                                             </div>
 
                                             <div class="col-12 d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-secondary  btn-order">
                                                     <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
                                                     <div class="d-flex justify-content-between">
-                                                        <p class="cart-total">{{cart()->getTotal()}} $</p> 
+                                                        <p class="cart-total">{{ cart()->getTotal() }} $</p>
                                                         &nbsp;&nbsp;
                                                         <span>{{ __('general.checkout') }} <i
                                                                 class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
@@ -240,6 +243,56 @@
             });
         });
     </script>
+    {{-- Item Count --}}
+    <script>
+        $('.itemCount').on('input', function(e) {
+            e.preventDefault(); 
+            var hash = $(this).attr('hash');
+            var quantity = $(this).val();
+            let url = "{{ route('updateItem.count', [':hash',':quantity']) }}";
+            url = url.replace(':hash', hash);
+            url = url.replace(':quantity', quantity);
+            $.ajax({
+                type: 'get',
+                url: url,
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'quantity': $("input[name=quantity]").val(),
+                },
+                success: (response) => {
+                    $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
+                    $(this).parent().parent().find('.itemTotalPrice').text(response.price*response.quantity);
+                    // $('.itemTotalPrice').remove();
+                    toastr.options = {
+                        "closeButton": true,    
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.added_successfully') }}");
+                },
+                error: function(response) {
+                    alert(response.error);
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
+            });
+        });
+    </script>
+    {{-- Item Count --}}
 
     <script>
         $('#order-form').submit(function(e) {

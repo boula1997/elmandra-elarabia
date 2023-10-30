@@ -80,4 +80,21 @@ class CartController extends Controller
         }
     }
 
+
+    public function updateItemCount($hash, $quantity)
+    {
+        try {
+            $updatedItem = $this->cart->updateItem($hash, [
+                'quantity'      => $quantity,
+            ]);
+            return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems()),'price'=>$updatedItem->get('price'),'quantity'=>$updatedItem->get('quantity'),'total'=>cart()->getTotal()]);
+            
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            return response()->json(['error' => __($e->getMessage())]);
+        }
+    }
+
+
+
 }
