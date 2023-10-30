@@ -45,7 +45,7 @@
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div style="width: 50px;">
-                                                        <h5 class="fw-normal mb-0">2</h5>
+                                                        <h5 class="fw-normal mb-0">{{ $item->get('quantity') }}</h5>
                                                     </div>
                                                     <div style="width: 80px;">
                                                         <h5 class="mb-0">{{ cartItem($item->getId())->price }} $</h5>
