@@ -183,55 +183,6 @@
 <!-- main js  -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 @stack('js')
-
-<script>
-    $('#newsletter-form').on('click', function(e) {
-        e.preventDefault();
-        let formData = new FormData(this);
-        $(".err").empty();
-        $(".err").addClass("d-none");
-        $('#btn-newsletter').attr('disabled', 'disabled');
-        $('#spinner-newsletter').removeClass('d-none');
-
-        $.ajax({
-            type: 'POST',
-            url: "{{ route('front.newsletter.post') }}",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                'newsletterEmail': $("input[name=newsletterEmail]").val(),
-            },
-            success: (response) => {
-                $('#spinner-newsletter').addClass('d-none');
-                $('#btn-newsletter').removeAttr('disabled');
-                if (response) {
-                    this.reset();
-                    if (response.success) {
-                        $('.alert-success').removeClass('d-none').text(response.success);
-                        setTimeout(() => {
-                            $('.alert-success').addClass('d-none').text(response.success);
-                        }, 5000);
-                    } else
-                        $('.error').removeClass('d-none').text(response.error);
-                }
-            },
-            error: function(response) {
-                $('#spinner-newsletter').addClass('d-none');
-                $('#btn-newsletter').removeAttr('disabled');
-
-                $(".err").addClass("d-block");
-                $(".err").removeClass("d-none");
-                if (response.responseJSON.errors.newsletterEmail) {
-                    $("#newsletterEmail").append(
-                        `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.newsletterEmail}</div>`
-                    );
-                }
-            }
-        });
-    });
-</script>
-
-
-
 </body>
 
 </html>

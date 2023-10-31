@@ -32,7 +32,6 @@
                 'newsletterEmail': $("input[name=newsletterEmail]").val(),
             },
             success: (response) => {
-               alert(50);
                 toastr.options = {
                     "closeButton": true,
                     "debug": false,
@@ -52,8 +51,8 @@
                 };
 
                 toastr.success(response.success);
-
-                this.reset();
+                
+                // this.reset();
                 $('#spinner-newsletter').addClass('d-none');
                 $('#btn-newsletter').removeAttr('disabled').removeClass(
                     'bg-secondary');
