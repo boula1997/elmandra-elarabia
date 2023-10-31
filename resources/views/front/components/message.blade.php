@@ -11,7 +11,7 @@
                     <i class="fa fa-map-marker-alt fs-4 text-white"></i>
                 </div>
                 <h5 class="text-uppercase text-primary">{{ __('general.address') }}</h5>
-                <p class="text-secondary mb-0">{{ settings()->translate(app()->getLocale())->address }}</p>
+                <p class="text-secondary mb-0" style="font-size: smaller">{{ settings()->translate(app()->getLocale())->address }}</p>
             </div>
         </div>
         <div class="col-lg-4" data-aos="fade-up" data-aos-duration="3000">
