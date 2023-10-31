@@ -7,7 +7,7 @@
             <div class="row gx-0">
                 <div class="col-lg-8">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark  p-lg-0 px-lg-5 px-3 d-flex justify-content-between">
-                        <a href="index.html" class="navbar-brand d-block">
+                        <a href="{{ route('front.home') }}" class="navbar-brand d-block">
                             <img class="logo" src="{{ settings()->logo }}" alt="">
                         </a>
                         <a class="mx-5" href="{{ route('front.shopping') }}">
