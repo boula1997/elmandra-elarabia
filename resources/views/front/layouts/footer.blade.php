@@ -41,17 +41,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6">
-            <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
-                <h4 class="text-uppercase text-white mb-4">{{ __('general.newsletters') }}</h4>
-                <h6 class="text-uppercase text-white">{{ __('general.subscribe_now') }}</h6>
-                {{-- <p class="text-light">Amet justo diam dolor rebum lorem sit stet sea justo kasd</p> --}}
-                <form action="">
-                    <div class="input-group">
-                        <input type="text input-sm" class="form-control border-white p-3" placeholder="{{ __('general.your_email') }}">
-                        <button class="btn btn-dark">{{ __('general.sign_up') }}</button>
-                    </div>
-                </form>
-            </div>
+          @include('front.components.newsletter')
         </div>
     </div>
 </div>
@@ -239,6 +229,8 @@
         });
     });
 </script>
+
+
 
 </body>
 
