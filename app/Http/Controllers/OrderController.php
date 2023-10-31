@@ -62,7 +62,7 @@ class OrderController extends Controller
     {
         try {
             $data = $request->all();
-            $data['total']=cart()->getTotal();
+            $data['total']=cart()->getTotal()+50;
             $order = $this->order->create($data);
             foreach(cart()->getItems() as $item){
                 $this->orderproduct->create([
