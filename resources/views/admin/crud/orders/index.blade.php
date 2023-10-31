@@ -30,7 +30,7 @@
                                                 <th>@lang('general.name')</th>
                                                 <th>@lang('general.email')</th>
                                                 <th>@lang('general.address')</th>
-                                                <th>@lang('general.total')</th>
+                                                <th>@lang('general.total-delivery')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>

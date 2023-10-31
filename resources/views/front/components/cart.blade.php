@@ -140,8 +140,8 @@
                                             </div>
 
                                             <div class="d-flex justify-content-between">
-                                                <p class="mb-2">{{ __('general.shipping') }}</p>
-                                                <p class="mb-2 cart-total">50 $</p>
+                                                <p class="mb-2">{{ __('general.delivery') }}</p>
+                                                <p class="mb-2">50 $</p>
                                             </div>
 
 
@@ -149,7 +149,7 @@
                                                 <button type="submit" class="btn btn-secondary  btn-order">
                                                     <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
                                                     <div class="d-flex justify-content-between">
-                                                        <p class="cart-total">{{ cart()->getTotal()+50 }} $</p>
+                                                        <p class="cart-total-shipping">{{ cart()->getTotal()+50 }} $</p>
                                                         &nbsp;&nbsp;
                                                         <span>{{ __('general.checkout') }} <i
                                                                 class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
@@ -217,6 +217,7 @@
                     $(this).parents().eq(3).remove();
                     $('.cart-count').text(response.count);
                     $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total)+50);
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,
@@ -264,6 +265,7 @@
                 success: (response) => {
                     $('.cart-count').text(response.count);
                     $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total)+50);
                     $(this).parent().parent().find('.itemTotalPrice').text(response.price*response.quantity);
                     // $('.itemTotalPrice').remove();
                     toastr.options = {
