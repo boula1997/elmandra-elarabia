@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" style="background-image: url('{{ asset('images/background-image.png') }}');">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,11 +27,12 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">    
 </head>
 <body>
-    <div id="app" style="background-image: url('{{ asset('images/background-image.png') }}');">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Yousab Tech') }}
+                    <img class="logo" src="{{ settings()->logo }}" style="height: 50px !important; " alt="">
+
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

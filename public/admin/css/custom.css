@@ -13,3 +13,8 @@
 .controlles:hover {
     color: #6790e9 !important ;
 }
+
+.logo{
+    /* width: 100px !important; */
+    height: 70px !important; 
+}
