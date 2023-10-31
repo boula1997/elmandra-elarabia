@@ -52,7 +52,7 @@
 
                 toastr.success(response.success);
                 
-                // this.reset();
+                this.reset();
                 $('#spinner-newsletter').addClass('d-none');
                 $('#btn-newsletter').removeAttr('disabled').removeClass(
                     'bg-secondary');
@@ -62,7 +62,6 @@
                 }, 5000);
             },
             error: function(response) {
-                alert(response.success);
                 $('#spinner-newsletter').addClass('d-none');
                 $('#btn-newsletter').removeAttr('disabled').removeClass('bg-secondary');
 
@@ -70,7 +69,7 @@
                 $(".err").removeClass("d-none");
 
                 if (response.responseJSON.errors.newsletterEmail) {
-                    $("#email").append(
+                    $("#newsletterEmail").append(
                         `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.newsletterEmail}</div>`
                     );
                 }

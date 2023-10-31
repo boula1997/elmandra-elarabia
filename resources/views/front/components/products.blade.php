@@ -21,7 +21,7 @@
                                 </div> --}}
                                 <div class="d-flex justify-content-between">
 
-                                    <p class="small text-danger"><s>{{ $product->price_bd }} $</s></p>
+                                    <p class="small text-danger"><s>{{ $product->price_bd }}</s>{{ __('general.pound') }}</p>
                                     <h5 class="text-dark mb-0">{{ $product->price }} {{ __('general.pound') }}</h5>
                                 </div>
 

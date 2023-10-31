@@ -373,7 +373,7 @@
 
                     if (response.responseJSON.errors.address) {
                         $("#address").append(
-                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.message}</div>`
+                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.address}</div>`
                         );
                     }
 
