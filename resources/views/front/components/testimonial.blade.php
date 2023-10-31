@@ -14,27 +14,16 @@
                     <div class="owl-carousel testimonial-carousel">
                         @foreach ($testimonials as $testimonial)
                         <div class="testimonial-item">
-                            <div class="fs-4 fw-normal text-light mb-4 text-secondary description"><i class="fa fa-quote-left text-primary me-3"></i>{!! $testimonial->description !!}</div>
+                            <div class="fs-4 fw-normal text-light mb-4 text-secondary description" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}"><i class="fa fa-quote-left text-primary me-3"></i>{!! $testimonial->description !!}</div>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid rounded-circle" src="{{ asset($testimonial->image) }}" alt="">
+                                <img class="img-fluid rounded-circle" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}" src="{{ asset($testimonial->image) }}" alt="">
                                 <div class="ps-4">
-                                    <h5 class="text-uppercase text-light">{{ $testimonial->title }}</h5>
-                                    <span class="text-uppercase text-secondary">{{ $testimonial->subtitle }}</span>
+                                    <h5 class="text-uppercase text-light" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}">{{ $testimonial->title }}</h5>
+                                    <span class="text-uppercase text-secondary" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}">{{ $testimonial->subtitle }}</span>
                                 </div>
                             </div>
                         </div> 
                         @endforeach
-                       
-                        {{-- <div class="testimonial-item">
-                            <p class="fs-4 fw-normal text-light mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid rounded-circle" src="{{ asset('front/img/testimonial-2.jpg') }}" alt="">
-                                <div class="ps-4">
-                                    <h5 class="text-uppercase text-light">Client Name</h5>
-                                    <span class="text-uppercase text-secondary">Profession</span>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>
