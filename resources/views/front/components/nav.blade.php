@@ -11,7 +11,7 @@
                             <img class="logo" src="{{ settings()->logo }}" alt="">
                         </a>
                         <a class="mx-5" href="{{ route('front.shopping') }}">
-                            <span class="bg-danger cart-count ">{{ count(cart()->getItems()) }}</span>
+                            <span class="bg-danger cart-count px-1 ms-2 d-flex align-items-center justify-content-center text-white" style="border-radius: 50%; font-size:small;">{{ count(cart()->getItems()) }}</span>
                             <i class="fas fa-shopping-cart fa-lg"></i>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
