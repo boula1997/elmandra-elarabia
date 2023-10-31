@@ -249,19 +249,15 @@ return [
     'permissions'=>'Permissions:',
     'category'=>'Category',
     'order'=>'Order',
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-   
+    'replied_successfully'=>'Replied Successfully',
+    'delete_confirm '=>'Delete Confirm ',
+    'delete_message'=>'Delete Message',
+    'no_result'=>'No Result',
+    'price'=>'Price ',
+    'price_bd'=>'Price Before Discount',
+    'stock'=>'Stock',
+
     
     
     
