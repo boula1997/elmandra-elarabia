@@ -251,4 +251,12 @@ return [
     'permissions'=>'الأذونات:',
     'category'=>'المنتج',
     'order'=>'طلب',
+
+    'replied_successfully'=>'تم الرد بنجاح',
+    'delete_confirm '=>'تأكيد الحذف',
+    'delete_message'=>'حذف الرسالة',
+    'no_result'=>'لا توجد نتيجة',
+    'price'=>'السعر',
+    'price_bd'=>'السعر قبل الخصم',
+    'stock'=>'المخزون',
 ];
