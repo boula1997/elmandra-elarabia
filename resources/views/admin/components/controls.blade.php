@@ -4,14 +4,14 @@
         action="{{ route($route . '.destroy', $module->id) }}" method="post">
 
         @can($role . '-list')
-            <a href="{{ route($route . '.show', $module) }}" title="show">
-                <i class="fas fa-eye text-secondary fa-lg"></i>
+            <a  class="mx-3" href="{{ route($route . '.show', $module) }}" title="show">
+                <i class="fas fa-eye text-secondary fa-lg controlles"></i>
             </a>
         @endcan
 
         @can($role . '-edit')
             <a href="{{ route($route . '.edit', $module) }}" title="edit">
-                <i class="fas fa-edit  text-secondary  fa-lg"></i>
+                <i class="fas fa-edit  text-secondary fa-lg controlles"></i>
             </a>
         @endcan
 
@@ -19,11 +19,11 @@
            
             @csrf
             @method('delete')
-            <button type="button" class="btn btn-sm btn-clean btn-icon m-1" title="{{ __('general.delete') }}"
+            <button type="button" class="btn btn-sm btn-clean btn-icon m-1 " title="{{ __('general.delete') }}"
                 data-toggle="modal" data-target="#deleteModalSizeSm-{{ $module->id }}">
                 <span class="svg-icon svg-icon-md svg-icon-primary">
                     <!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
-                    <i class="fas fa-trash text-secondary  fa-lg"></i>
+                    <i class="fas fa-trash text-secondary  fa-lg controlles "></i>
                 </span>
             </button>
             <div class="modal fade" id="deleteModalSizeSm-{{ $module->id }}" tabindex="-1" role="dialog"
@@ -55,11 +55,11 @@
             </div>
         @endcan
 
-        @can($role . '-reply')
+        {{-- @can($role . '-reply')
             <a href="{{ route($route . '.reply', $module->id) }}" title="reply">
                 <i class="fas fa-reply text-secondary  fa-lg"></i>
             </a>
-        @endcan
+        @endcan --}}
 
 
     </form>
