@@ -367,7 +367,7 @@
                     }
                     if (response.responseJSON.errors.phone) {
                         $("#phone").append(
-                            `<div class="alert alert-danger my-1" style="text-align:initial !important">${response.responseJSON.errors.phone}</div>`
+                            `<div class="alert alert-danger my-1"   style="text-align:initial !important">${response.responseJSON.errors.phone}</div>`
                         );
                     }
 
