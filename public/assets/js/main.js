@@ -442,7 +442,7 @@
         ----------------------*/
         $(document).on('click', '.cancel-preloader a', function (e) {
             e.preventDefault();
-            $("#preloader").fadeOut(2000);
+            $("#preloader").fadeOut(1000);
         });
 
     });

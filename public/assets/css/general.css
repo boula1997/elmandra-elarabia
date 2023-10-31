@@ -1,11 +1,44 @@
-html{
+:root {
+    --main-color: #0060FF;
+    --main-color2: #EE0020;
+    --heading-color: #0060FF;
+    --paragraph-color: #616161;
+    --body-font: "Rubik", sans-serif;
+    --heading-font: "Rajdhani", sans-serif;
+    --body-font-size: 16px;
+    --line-height30: 1.7;
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     overflow-x: hidden;
-}
+    font-family: var(--body-font);
+    overflow-x: hidden;
 
-body{
-    
+  }
+  
+  
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    -moz-osx-font-smoothing: grayscale;
+    /* Firefox */
+    -webkit-font-smoothing: antialiased;
+    /* WebKit  */
+  }
+  
+  body {
+    margin: 0;
+    color: var(--paragraph-color);
     overflow-x: hidden;
-}
+    font-family: var(--body-font);
+    line-height: var(--line-height30);
+    font-size: var(--body-font-size);
+    background: #fff;
+    overflow-x: hidden;
+  }
 
 .text-white p {
     color: white;
@@ -202,9 +235,134 @@ body{
 .dropdown-menu{
     text-align: center !important;
   left:unset !important;
-  right:unset !important;
+  right:unset !important;}
 
-}
+
+/*-----------------------------------------
+    ## Preloader Css
+-------------------------------------------*/
+.pre-wrap {
+    position: fixed;
+    content: "";
+    -webkit-transform: translate(-100%, -240%);
+    transform: translate(-100%, -240%);
+    font-size: 62px;
+  }
+  
+  .preloader-inner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999999999;
+    background-color: #030724;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .preloader-inner .cancel-preloader {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+  
+  .preloader-inner .cancel-preloader a {
+    background-color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--main-color);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 30px;
+    display: block;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  
+  .preloader-inner .cancel-preloader a:hover {
+    background-color: var(--heading-color);
+    color: #fff;
+  }
+  
+  .spinner {
+    margin: 120px auto;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: sk-rotate 2s infinite linear;
+    animation: sk-rotate 2s infinite linear;
+  }
+  
+  .dot1,
+  .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+  
+  @-webkit-keyframes sk-rotate {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes sk-rotate {
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes sk-bounce {
+  
+    0%,
+    100% {
+      -webkit-transform: scale(0);
+    }
+  
+    50% {
+      -webkit-transform: scale(1);
+    }
+  }
+  
+  @keyframes sk-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+      -webkit-transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+    }
+  }
+
 
 
 

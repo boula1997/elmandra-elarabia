@@ -63,6 +63,7 @@
 </head>
 
 <body class="'sc5'">
+    
 
 @include('front.components.preloader')
 

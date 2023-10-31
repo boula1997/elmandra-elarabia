@@ -181,6 +181,7 @@
 </script>
 
 <!-- main js  -->
+<script src="{{ asset('assets/js/magnific.min.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 @stack('js')
 </body>
