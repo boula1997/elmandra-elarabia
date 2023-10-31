@@ -51,7 +51,7 @@
                                                             hash="{{ $item->getHash() }}">
                                                     </div>
                                                     <div style="width: 80px;">
-                                                        <h5 class="mb-0 itemTotalPrice">{{ $item->get('price')* $item->get('quantity') }} $</h5>
+                                                        <h5 class="mb-0"><span class="itemTotalPrice">{{ $item->get('price')* $item->get('quantity') }}</span> {{ __('general.pound') }}</h5>
                                                     </div>
                                                     <button class="removeCart btn btn-transparent"
                                                         hash="{{ $item->getHash() }}">
@@ -136,12 +136,12 @@
                                             
                                             <div class="d-flex justify-content-between mb-4">
                                                 <p class="mb-2"> {{ __('general.total') }} </p>
-                                                <p class="mb-2 cart-total">{{ cart()->getTotal() }} $</p>
+                                                <p class="mb-2"><span class="cart-total">{{ cart()->getTotal() }}</span> {{ __('general.pound') }}</p>
                                             </div>
 
                                             <div class="d-flex justify-content-between">
                                                 <p class="mb-2">{{ __('general.delivery') }}</p>
-                                                <p class="mb-2">50 $</p>
+                                                <p class="mb-2">50 {{ __('general.pound') }}</p>
                                             </div>
 
 
@@ -149,7 +149,7 @@
                                                 <button type="submit" class="btn btn-secondary  btn-order">
                                                     <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
                                                     <div class="d-flex justify-content-between">
-                                                        <p class="cart-total-shipping">{{ cart()->getTotal()+50 }} $</p>
+                                                        <p><span class="cart-total-shipping">{{ cart()->getTotal()+50 }}</span> {{ __('general.pound') }}</p>
                                                         &nbsp;&nbsp;
                                                         <span>{{ __('general.checkout') }} <i
                                                                 class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>

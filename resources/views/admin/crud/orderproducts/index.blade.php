@@ -50,7 +50,7 @@
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $orderproduct->product->title }}</td>
                                                     <td>{{ $orderproduct->product->count }}</td>
-                                                    <td>{{ $orderproduct->product->total }}</td>
+                                                    <td>{{ $orderproduct->product->total }} {{ __('general.pound') }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'orderproducts',

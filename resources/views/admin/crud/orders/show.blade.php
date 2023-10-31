@@ -45,7 +45,7 @@
                                 <div class="mb-7 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.total-delivery'):</h5>
-                                        <p class="m-0">{{ $order->total }}</p>
+                                        <p class="m-0">{{ $order->total }} {{ __('general.pound') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $orderproduct->product->title }}</td>
                                     <td>{{ $orderproduct->count }}</td>
-                                    <td>{{ $orderproduct->total }}</td>
+                                    <td>{{ $orderproduct->total }} {{ __('general.pound') }}</td>
                                     {{-- <td>
                                         @include('admin.components.controls', [
                                             'route' => 'orderproducts',

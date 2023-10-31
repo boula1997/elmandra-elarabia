@@ -221,6 +221,7 @@ return [
     'delivery'=>'Delivery',
     'total-delivery'=>'Total(Incl. delivery)',
     'total'=>'Total',
+    'pound'=>'L.E',
     'checkout'=>'Checkout',
     'add_to_cart'=>'Add to Cart',
     'add_to_favourite'=>'Add to Favourite',
