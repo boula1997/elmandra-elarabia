@@ -2,7 +2,7 @@
      <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;">
         <div class="row g-5 gb-5">
            @foreach ($services as $service)
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="3000">
                         <div class="bg-light rounded text-center p-5">
                             <i class="{{ $service->icon }} display-1 text-primary"></i>
                             <h3 class="text-uppercase my-4 text-limit fs-5" style="--lines:1;" title="{{ $service->title }}">{{ $service->title }}</h3>
@@ -12,7 +12,7 @@
                 </div>  
            @endforeach
 
-            <div class="col-lg-12 col-md-6 text-center">
+            <div class="col-lg-12 col-md-6 text-center" data-aos="fade-up"data-aos-duration="3000">
                 <h1 class="text-uppercase text-light mb-4">{{ page('service')->subtitle }}</h1>
                 <a href="{{ route('user-registration') }}" class="btn btn-primary py-3 px-5">{{ __('general.become_a_member') }}</a>
             </div>

@@ -249,5 +249,6 @@ return [
     'subcategories'=>'الفئات الفرعية',
     'check_again_for'=>'تحقق مرة أخرى من وجود أي تحديثات',
     'permissions'=>'الأذونات:',
-   
+    'category'=>'المنتج',
+    'order'=>'طلب',
 ];

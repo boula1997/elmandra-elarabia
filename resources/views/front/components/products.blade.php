@@ -3,7 +3,7 @@
         <div class="container py-5">
             <div class="row">
                 @foreach ($products as $product)
-                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-3">
+                    <div class="col-md-12 col-lg-3 mb-3 mb-lg-3" data-aos="fade-up" data-aos-duration="3000">
                         <div class="card">
                             <div class="img-product-container">
                                 <img src="{{ asset($product->image) }}" class="card-img-top img-product" alt="Laptop" />

@@ -1,4 +1,4 @@
-<div class="container empty {{ count($products) == 0 ? '' : 'd-none' }}">
+<div class="container empty {{ count($products) == 0 ? '' : 'd-none' }}" data-aos="zoom-in">
     <div class="cart">
         <div class="col-sm-12 empty-cart-cls text-center">
             <img src="{{ asset('images/no-product-found.png') }}" width="40%" height="40%"

@@ -8,7 +8,7 @@
 
                         <div class="row">
 
-                            <div class="col-lg-7">
+                            <div class="col-lg-7" data-aos="fade-right">
                                 <h5 class="mb-3"><a href="{{ route('front.home') }}" class="text-body"><i
                                             class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
                                 </h5>
@@ -63,7 +63,7 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="col-lg-5">
+                            <div class="col-lg-5" data-aos="fade-left">
 
                                 <div class="card bg-primary text-white rounded-3">
                                     <div class="card-body">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
 
-                <div class="card empty {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}">
+                <div class="card empty {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}"  data-aos="zoom-in-down">
                     <div class="card-header">
                         <h5>{{ __('general.cart') }}</h5>
                     </div>

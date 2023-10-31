@@ -2,7 +2,7 @@
    <div class="container-fluid bg-dark facts p-5 my-5">
        <div class="row gx-5 gy-4 py-5">
            @foreach ($counters as $counter)
-               <div class="col-lg-3 col-md-6">
+               <div class="col-lg-3 col-md-6" data-aos="flip-up">
                    <div class="d-flex">
                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
                            style="width: 60px; height: 60px;">

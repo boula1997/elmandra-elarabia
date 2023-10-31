@@ -1,11 +1,11 @@
   <!-- Contact Start -->
   <div class="container-fluid p-5">
-    <div class="mb-5 text-center">
+    <div class="mb-5 text-center" data-aos="zoom-in-up">
         <h5 class="text-primary text-uppercase">{{ __('general.contact_us') }}</h5>
         <h1 class="display-5 text-uppercase mb-0">{{ __('general.get_in_touch') }}</h1>
     </div>
     <div class="row g-5 mb-5">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-duration="3000">
             <div class="d-flex flex-column align-items-center bg-dark rounded text-center py-5 px-3">
                 <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                     <i class="fa fa-map-marker-alt fs-4 text-white"></i>
@@ -14,7 +14,7 @@
                 <p class="text-secondary mb-0">{{ settings()->translate(app()->getLocale())->address }}</p>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-duration="3000">
             <div class="d-flex flex-column align-items-center bg-dark rounded text-center py-5 px-3">
                 <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                     <i class="fa fa-envelope fs-4 text-white"></i>
@@ -23,7 +23,7 @@
                 <p class="text-secondary mb-0">{{ contacts('email')[0]->contact }}</p>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-duration="3000">
             <div class="d-flex flex-column align-items-center bg-dark rounded text-center py-5 px-3">
                 <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                     <i class="fa fa-phone fs-4 text-white"></i>
@@ -35,7 +35,7 @@
     </div>
     <div class="row g-2">
         <div class="col-lg-6">
-            <div class="bg-dark p-5">
+            <div class="bg-dark p-5" data-aos="fade-right">
                 <form id="message-form" method="POST">
                     @csrf
                     <div class="row g-3">
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="g-map-inner w-50 mx-2">
+            <div class="g-map-inner w-50 mx-2" data-aos="fade-left">
                 {!! settings()->map !!}
             </div>
         </div>

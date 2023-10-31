@@ -247,6 +247,8 @@ return [
     'subcategories'=>'Sub Categories',
     'check_again_for'=>'Check Again For Any Updates',
     'permissions'=>'Permissions:',
+    'category'=>'Category',
+    'order'=>'Order',
     
     
     
