@@ -1,12 +1,12 @@
         <!-- About Start -->
         <div class="container-fluid p-5">
             <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" data-aos="fade-right">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" data-aos="fade-{{ app()->getLocale()=='ar'?'left':'right'}}">
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100 rounded" src="{{ asset(isset(page('about')->images[0]->url) ? page('about')->images[0]->url : asset('default.jpg')) }}" style="object-fit: cover;">
                     </div>
                 </div>
-                <div class="col-lg-7"data-aos="fade-left">
+                <div class="col-lg-7"data-aos="fade-{{ app()->getLocale()=='ar'?'right':'left'}}">
                     <div class="mb-4" >
                         <h5 class="text-primary text-uppercase">{{ __('general.about') }}</h5>
                         
