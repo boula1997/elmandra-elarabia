@@ -1,12 +1,13 @@
 :root {
     --main-color: #0060FF;
     --main-color2: #EE0020;
-    --heading-color: #0060FF;
+    --heading-color: #151423;
     --paragraph-color: #616161;
     --body-font: "Rubik", sans-serif;
     --heading-font: "Rajdhani", sans-serif;
     --body-font-size: 16px;
     --line-height30: 1.7;
+    --primary: #6f5190 !important;
   }
   
   html {
@@ -363,6 +364,10 @@
     }
   }
 
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active:hover {
+  color: var(--primary) !important;
+}
 
 
 
