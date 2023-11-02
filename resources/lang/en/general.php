@@ -257,9 +257,52 @@ return [
     'price'=>'Price ',
     'price_bd'=>'Price Before Discount',
     'stock'=>'Stock',
+    // heading
+    'customize_settings'=>'Customize Settings',
+    'dark_mode'=>'Dark Mode',
+    'header_options'=>'Header Options',
+    'fixed'=>'Fixed',
+    'dropdown_legacy_offset'=>'Dropdown Legacy Offset',
+    'no_border'=>'No border',
+    'sidebar_options'=>'Sidebar Options',
+    'collapsed'=>'Collapsed',
+    'sidebar_mini'=>'Sidebar Mini',
+    'sidebar_mini_md'=>'Sidebar Mini MD',
+    'sidebar_mini_xs'=>'Sidebar Mini XS',
+    'nav_flat_style'=>'Nav Flat Style',
+    'nav_legacy_style'=>'Nav Legacy Style',
+    'nav_compact'=>'Nav Compact',
+    'nav_child_indent'=>'Nav Child Indent',
+    'nav_child_hide_on_collapse'=>'Nav Child Hide on Collapse',
+    'disable_hover/Focus_auto-Expand'=>'Disable Hover/Focus Auto-Expand',    
+    'footer_options'=>'Footer Options',
+    'small_text_options'=>'Small Text Options',    
+    'body'=>'Body',    
+    'navbar'=>'Navbar',    
+    'brand'=>'Brand', 
+    'sidebar_nav'=>'Sidebar Nav',    
+    'footer'=>'Footer',
+    'navbar_variants'=>'Navbar Variants',    
+    'accent_color_variants'=>'Accent Color Variants',    
+    'dark_sidebar_variants'=>'Dark Sidebar Variants',    
+    'light_sidebar_variants'=>'Light Sidebar Variants',    
+    'brand_logo_variants'=>'Brand Logo Variants',    
+    'none_selected'=>'None Selected',    
+    'notifications'=>'Notifications',
+    'new_messages '=>'New Messages',
+    'mins'=>'Mins',
+    'friend_requests'=>'Friend requests',   
+    'hours'=>'hours',   
+    'new_reports'=>'new reports',   
+    'days'=>'days',
+    'see_all_notifications'=>'See All Notifications',   
+    // end heading
 
     
+
+
+
     
-    
-    
+
+        
 ];

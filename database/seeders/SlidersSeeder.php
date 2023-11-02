@@ -18,19 +18,19 @@ class SlidersSeeder extends Seeder
                     //  "Proposal and Agreement",
                     //  "Executing and Delivering"
                     ];
-        $subtitle_en = ["BUILD YOUR PLAYING LIFE STRONG WITH OUR Gamers",
-                        "GROW YOUR GAMING SKILLS WITH OUR Gamers",
+        $subtitle_en = ["BUILD YOUR PLAYING LIFE WITH US",
+                        "GROW YOUR GAMING SKILLS WITH US",
                         // null,null
                     ];
         $description_en = [null,null,];
 
         $title_ar = [
-                        "ارفع مستوى تجربة الألعاب الخاصة بك!",
+                        "قم ببناء حياة اللعب الخاصة بك معنا",
                         "ارفع مستوى تجربة الألعاب الخاصة بك!",
                    ];
 
-        $subtitle_ar =[ "قم ببناء حياتك اللعبية القوية مع لاعبينا",
-                        "قم بتنمية مهاراتك في اللعب مع لاعبينا",
+        $subtitle_ar =[ "قم ببناء حياة اللعب الخاصة بك معنا",
+                        "قم بتنمية مهاراتك في اللعب معنا",
                      ];
 
         $description_ar =  [null,null,];
