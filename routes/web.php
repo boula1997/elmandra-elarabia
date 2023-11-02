@@ -41,8 +41,8 @@ Route::group(
         Route::get('/single-faq', 'App/Http/Controllers/FaqController@show')->name('front.show.faq');
         Route::get('/portfolio', 'App/Http/Controllers/PortfolioController@index')->name('front.portfolio');
         Route::get('/orderproduct', 'App/Http/Controllers/OrderproductController@index')->name('front.orderproduct');
-        Route::get('/products/{id}', [ProductController::class,'index'])->name('front.products');
-        Route::get('/product/{id}', [ProductController::class,'show'])->name('front.show.product');
+        Route::get('/product/{id}', [ProductController::class,'index'])->name('front.products');
+        Route::get('/product/{id}/show', [ProductController::class,'show'])->name('front.show.product');
         Route::get('/about', [AboutController::class,'index'])->name('front.about');
         Route::post('/message', [MessageController::class,'store'])->name('front.message.post');
         Route::post('/order', [OrderController::class,'store'])->name('front.order.post');
