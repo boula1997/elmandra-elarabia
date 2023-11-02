@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\ProductRequest;
 use App\Models\Category;
+use App\Models\Subcategory;
 use Illuminate\Support\Facades\File;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -49,6 +50,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+        dd('eee');
         $categories=$this->category->latest()->get();
         return view('admin.crud.products.create',compact('categories'));
     }
@@ -93,7 +95,8 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $categories=$this->category->latest()->get();
-        return view('admin.crud.products.edit', compact('product','categories'));
+        $subcategories=Subcategory::get();
+        return view('admin.crud.products.edit', compact('product','categories','subcategories'));
     }
     /**
      * Update the specified resource in storage.

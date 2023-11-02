@@ -41,8 +41,27 @@
                                         </div>
                                     </li>
                                 @endforeach
+
+                                <div>
+                                    <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#" id="dropdownId"
+                                    data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">{{ app()->getLocale()=='en'?'English':'العربية' }}</a>
+                                    <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
+                                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                            {{-- <a class="dropdown-item text-wrap" href="#"><span>{{ 'English' }}</span></a>
+                                            <a class="dropdown-item text-wrap" href="#"><span>{{ 'English' }}</span></a> --}}
+                                            <a class="dropdown-item text-wrap  rel="alternate" hreflang="{{ $localeCode }}"
+                                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            <span>{{ $localeCode=='en'?'English':'العربية' }}</span>
+                                        </a>
+                                        @endforeach
+                                        
+                                      
+                                    </a>
+                                    </div>
+                                    </div>
     
-                                @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                {{-- @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                     <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
                                         <a class="nav-item nav-link text-nowrap  rel="alternate" hreflang="{{ $localeCode }}"
                                             href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
@@ -50,7 +69,7 @@
                                                 alt="KSA Flag">
                                         </a>
                                     </li>
-                                @endforeach
+                                @endforeach --}}
     
                             </div>
                             {{-- <a href="{{ route('user-registration') }}"
