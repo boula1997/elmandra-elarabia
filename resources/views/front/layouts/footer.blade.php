@@ -72,7 +72,6 @@
  <script src="{{ asset('front/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
  <!-- Template Javascript -->
- <script src="{{ asset('front/js/main.js') }}"></script>
 
 <!-- all plugins here -->
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
@@ -182,7 +181,10 @@
 
 <!-- main js  -->
 <script src="{{ asset('assets/js/magnific.min.js') }}"></script>
+{{-- <script src="{{ asset('front/js/main.js') }}"></script> --}}
+
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.min.js.map') }}"></script>
 @stack('js')
 </body>
 
