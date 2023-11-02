@@ -134,24 +134,24 @@
                 <span class="badge badge-warning navbar-badge">15</span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                <span class="dropdown-item dropdown-header">15 {{ __('general.notifications') }}</span>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
-                    <i class=" px-1 fas fa-envelope mr-2"></i> 4 new messages
-                    <span class="float-right text-muted text-sm">3 mins</span>
+                    <i class=" px-1 fas fa-envelope mr-2"></i> 4 {{ __('general.new_messages ') }}
+                    <span class="float-right text-muted text-sm">3 {{ __('general.mins') }}</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
-                    <i class=" px-1 fas fa-users mr-2"></i> 8 friend requests
-                    <span class="float-right text-muted text-sm">12 hours</span>
+                    <i class=" px-1 fas fa-users mr-2"></i> 8 {{ __('general.friend_requests') }}
+                    <span class="float-right text-muted text-sm">12 {{ __('general.hours') }}</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
-                    <i class=" px-1 fas fa-file mr-2"></i> 3 new reports
-                    <span class="float-right text-muted text-sm">2 days</span>
+                    <i class=" px-1 fas fa-file mr-2"></i> 3 {{ __('general.new_reports') }}
+                    <span class="float-right text-muted text-sm">2 {{ __('general.days') }}</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                <a href="#" class="dropdown-item dropdown-footer">{{ __('general.see_all_notifications') }}</a>
             </div>
         </li>
         <li class="nav-item">
