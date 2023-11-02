@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-                        "Orderproduct Games",
+                        "Video Games",
                         // "PS4 Games",
                         // "Nintendo Switch",
                         // "XBOX Games",
@@ -31,17 +31,17 @@ class CategorySeeder extends Seeder
         $description_en = [ null,null,null,null,null,null,null];
 
         $title_ar = [
-                        "ألعاب الفيديو",
+                        "ألعاب",
                         // "العاب بلايستيشن 4",
                         // "نينتندو سويتش",
                         // "العاب اكس بوكس",
                         // "العاب كمبيوتير",
                         // new
-                        "وحدات التحكم والأجهزة",
-                        "مكملات",
-                        "مملوكة من قبل",
+                        "أجهزة الألعاب",
+                        "اكسسوارات",
+                        "مستعمل",
                         // "المنتجات الرقمية",
-                        "اخرى",
+                        "منتجات أخرى",
                         "العروض",
                     ];  
 
