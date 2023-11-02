@@ -62,7 +62,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
-<body class="'sc5'">
+<body class="sc5">
     
 
 @include('front.components.preloader')
