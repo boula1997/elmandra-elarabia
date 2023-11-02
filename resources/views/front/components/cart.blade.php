@@ -45,11 +45,11 @@
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div style="width: 50px;">
-                                                        <input class="itemCount" type="number" min="1" style="width: 40px"
+                                                        <input class="itemCount" type="number" min="1" max="{{ cartItem($item->getId())->stock }}" style="width: 40px"
                                                             class="w-25" name="itemCount"
                                                             value="{{ $item->get('quantity') }}"
                                                             hash="{{ $item->getHash() }}">
-                                                    </div>
+                                                </div>
                                                     <div style="width: 80px;">
                                                         <h5 class="mb-0"><span class="itemTotalPrice">{{ $item->get('price')* $item->get('quantity') }}</span> {{ __('general.pound') }}</h5>
                                                     </div>
