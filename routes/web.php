@@ -70,6 +70,12 @@ Route::group(
             return view("front.login_registration.login");
         })->name('user-login');
 
+        Route::get('/profile', function () {
+    
+            return view("front.profile");
+        })->name('profile');
+
+
     }
 );
 
