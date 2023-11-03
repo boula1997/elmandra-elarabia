@@ -33,8 +33,8 @@
             </div>
         </div>
     </div>
-    <div class="row g-2">
-        <div class="col-lg-6">
+    <div class="row gy-3">
+        <div class="col-lg-6 col-sm-12">
             <div class="bg-dark p-5" data-aos="fade-right">
                 <form id="message-form" method="POST">
                     @csrf
@@ -63,10 +63,8 @@
                 </form>
             </div>
         </div>
-        <div class="col-lg-12">
-            <div class="mx-2" data-aos="fade-left">
+        <div class="col-lg-6 col-sm-12"  data-aos="fade-left">
                 {!! settings()->map !!}
-            </div>
         </div>
     </div>
 </div>

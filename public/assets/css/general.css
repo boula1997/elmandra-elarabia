@@ -326,6 +326,10 @@
     -webkit-animation-delay: -1s;
     animation-delay: -1s;
   }
+
+iframe{
+  width: 100%;
+}
   
   @-webkit-keyframes sk-rotate {
     100% {
