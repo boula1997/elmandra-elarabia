@@ -50,6 +50,9 @@ return [
     'products'  => 'المنتجات',
     'bestsellerin'=>'الاكثر مبيعا في',
 
+    'profile'=>'الملف لشخصي',
+    'account'=>'حسابي',
+
 
 
     "permission" => "الإذن",

@@ -21,14 +21,24 @@
                                 </div> --}}
                                 <div class="d-flex justify-content-between">
 
-                                    <p class="small text-danger"><s>{{ $product->price_bd }}</s>{{ __('general.pound') }}</p>
+                                    <p class="small text-danger">
+                                        <s>{{ $product->price_bd }}</s>{{ __('general.pound') }}</p>
                                     <h5 class="text-dark mb-0">{{ $product->price }} {{ __('general.pound') }}</h5>
                                 </div>
 
-                                <button
-                                    class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
-                                    product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
-                                    {{ __('general.add_to_cart') }}</button>
+                                @if (auth('web')->user())
+                                    <button
+                                        class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
+                                        product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
+                                        {{ __('general.add_to_cart') }}</button>
+                                @else
+                                    <a href="{{ route('addTo.cart', $product->id) }}">
+                                        <button
+                                            class="btn  btn-sm w-100 mt-1  {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
+                                            product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
+                                            {{ __('general.add_to_cart') }}</button>
+                                    </a>
+                                @endif
 
                                 <button
                                     class="btn  btn-sm w-100 mt-1 removeCart {{ isInCart($product->id) ? 'btn-danger' : 'd-none' }}"
@@ -41,7 +51,7 @@
                 @endforeach
                 <div class="d-flex justify-content-center">
 
-                    {{-- {!! $products->links('front.components.paginate') !!} --}}
+                    {!! $products->links('front.components.paginate') !!}
                 </div>
             </div>
         </div>
