@@ -17,6 +17,7 @@ use App\Models\Product;
 use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;
+use Symfony\Component\Routing\Annotation\Route;
 
 class OrderController extends Controller
 {
@@ -84,4 +85,17 @@ class OrderController extends Controller
             return response()->json(['error' => __($e->getMessage())]);
         }
     }
+    public function showOrders(){
+
+        return view('front.order_index');
+    }
+
+    public function showOneOrder($id)
+    {
+        $order = Order::find($id);
+        // $orderproducts=Orderproduct::find($id)->all();
+        // dd($order);
+        return view('front.single_order',compact('order'));
+    }
 }
+

@@ -1,25 +1,28 @@
+
+
 <div class="h-100 h-custom" style="background-color: #eee;">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
-
-                <div class="card full {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
+                {{-- {{ count(auth()->user()->orders) > 0 ? '' : 'd-none' }} --}}
+                <div class="card full ">
                     <div class="card-body p-4">
 
                         <div class="row">
 
                             <div class="col-lg-7" data-aos="fade-right">
-                                <h5 class="mb-3"><a href="{{ route('front.home') }}" class="text-body"><i
-                                            class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
+                                <h5 class="mb-3"><a href="{{ route('show.orders') }}" class="text-body"><i
+                                            class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.show_orders') }}</a>
                                 </h5>
                                 <hr>
 
                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                     <div>
-                                        <p class="mb-1">{{ __('general.shopping_cart') }}</p>
+                                        {{-- <p class="mb-1">{{ __('general.shopping_cart') }}</p> --}}
                                         <p class="mb-0">{{ __('general.you_have') }} <span
-                                                class="cart-count">{{ count(cart()->getItems()) }}</span>
-                                            {{ __('general.items_in_your_cart') }}</p>
+                                           
+                                                class="cart-count">{{ count($order->orderproducts) }}</span>
+                                            {{ __('general.items') }}</p>
                                     </div>
                                     {{-- <div>
                                       <p class="mb-0"><span class="text-muted">{{ __('general.sort_by') }}:</span>
@@ -28,35 +31,34 @@
                                       </p>
                                   </div> --}}
                                 </div>
-                                @foreach (cart()->getItems() as $item)
+                                @foreach ($order->orderproducts as $item)
                                     <div class="card mb-3">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div>
-                                                        <img src="{{ cartItem($item->getId())->image }}"
+                                                        <img src="{{ $item->product->image }}"
                                                             class="img-fluid rounded-3" alt="Shopping item"
                                                             style="width: 65px;">
                                                     </div>
                                                     <div class="ms-3">
-                                                        <h5>{{ cartItem($item->getId())->title }}</h5>
+                                                        <h5>{{ $item->product->title }}</h5>
                                                         {{-- <p class="small mb-0">256GB, Navy Blue</p> --}}
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div style="width: 50px;">
-                                                        <input class="itemCount" type="number" min="1" max="{{ cartItem($item->getId())->stock }}" style="width: 40px"
+                                                        <label class="itemCount" type="number" min="1" max="{{ $item->product->stock }}" style="width: 40px"
                                                             class="w-25" name="itemCount"
-                                                            value="{{ $item->get('quantity') }}"
-                                                            hash="{{ $item->getHash() }}">
+                                                          value="{{  $item->product->count }}"  >{{  $item->total }} </label>
                                                 </div>
                                                     <div style="width: 80px;">
-                                                        <h5 class="mb-0"><span class="itemTotalPrice">{{ $item->get('price')* $item->get('quantity') }}</span> {{ __('general.pound') }}</h5>
+                                                        <h5 class="mb-0"><span class="itemTotalPrice">{{  $item->product->count }}</span> {{ __('general.pound') }}</h5>
                                                     </div>
-                                                    <button class="removeCart btn btn-transparent"
-                                                        hash="{{ $item->getHash() }}">
-                                                        <i class="fas fa-trash-alt tetx-danger"></i>
-                                                    </button>
+                                                    {{-- <button class="removeCart btn btn-transparent"
+                                                      > --}}
+                                                        {{-- <i class="fas fa-trash-alt tetx-danger"></i>
+                                                    </button> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -74,16 +76,16 @@
                                         </div>
 
 
-                                        <form id="order-form" method="POST" class="mt-4">
-                                            @csrf
+                                        {{-- <form id="order-form" method="POST" class="mt-4">
+                                            @csrf --}}
                                             <div class="row mb-4">
                                                 <div class="col-md-12">
                                                     <div class="form-outline form-white">
                                                         <label class="form-label"
                                                             for="name">{{ __('general.name') }}</label>
-                                                        <input type="text" name="name"
+                                                        <label type="text" name="name"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.name') }}" />
+                                                            placeholder="{{ __('general.name') }}" > {{ $order->name }} </label>
                                                         <div id="name" class="err"></div>
                                                     </div>
                                                 </div>
@@ -93,9 +95,9 @@
                                                     <label class="form-label"
                                                         for="email">{{ __('general.email') }}</label>
                                                     <div class="form-outline form-white">
-                                                        <input type="text" name="email"
+                                                        <label type="text" name="email"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.email') }}" />
+                                                            placeholder="{{ __('general.email') }}" >{{ $order->email }}</label>
                                                         <div id="email" class="err"></div>
                                                     </div>
                                                 </div>
@@ -105,9 +107,9 @@
                                                     <div class="form-outline form-white">
                                                         <label class="form-label"
                                                             for="phone">{{ __('general.phone') }}</label>
-                                                        <input type="text" name="phone"
+                                                        <label type="text" name="phone"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.phone') }}" />
+                                                            placeholder="{{ __('general.phone') }}" >{{ $order->phone }}</label>
                                                         <div id="phone" class="err"></div>
                                                     </div>
                                                 </div>
@@ -117,9 +119,9 @@
                                                     <label class="form-label"
                                                         for="address">{{ __('general.address') }}</label>
                                                     <div class="form-outline form-white">
-                                                        <input type="text" name="address"
+                                                        <label type="text" name="address"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.address') }}" />
+                                                            placeholder="{{ __('general.address') }}">{{ $order->address }}</label>
                                                         <div id="address" class="err"></div>
                                                     </div>
                                                 </div>
@@ -127,16 +129,16 @@
 
 
                                             <hr class="my-4">
-{{-- 
-                                            <div class="d-flex justify-content-between">
+
+                                            {{-- <div class="d-flex justify-content-between">
                                                 <p class="mb-2">{{ __('general.subtotal') }}</p>
-                                                <p class="mb-2 cart-total">{{ cart()->getTotal() }} $</p>
-                                            </div> --}}
+                                                <p class="mb-2 cart-total">{{  $order->total }} $</p> 
+                                            </div>   --}}
 
                                             
                                             <div class="d-flex justify-content-between mb-4">
                                                 <p class="mb-2"> {{ __('general.total') }} </p>
-                                                <p class="mb-2"><span class="cart-total">{{ cart()->getTotal() }}</span> {{ __('general.pound') }}</p>
+                                                <p class="mb-2"><span class="cart-total">{{  $order->total}}</span> {{ __('general.pound') }}</p>
                                             </div>
 
                                             <div class="d-flex justify-content-between">
@@ -145,7 +147,7 @@
                                             </div>
 
 
-                                            <div class="col-12 d-flex justify-content-center">
+                                            {{-- <div class="col-12 d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-secondary  btn-order">
                                                     <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
                                                     <div class="d-flex justify-content-between">
@@ -156,7 +158,7 @@
                                                     </div>
                                                 </button>
                                             </div>
-                                        </form>
+                                        </form> --}}
 
 
                                     </div>
@@ -169,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="card empty {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}"  data-aos="zoom-in-down">
+                {{-- <div class="card empty {{ count(auth()->user()->orders) == 0 ? '' : 'd-none' }}"  data-aos="zoom-in-down">
                     <div class="card-header">
                         <h5>{{ __('general.cart') }}</h5>
                     </div>
@@ -185,7 +187,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
             </div>

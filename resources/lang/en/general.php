@@ -303,7 +303,10 @@ return [
     // profile
     'profile'=>'Profile',
     'profile_settings'=>'Profile Settings',
-    'update_profile'=>'Update Profile',    
+    'update_profile'=>'Update Profile',
+
+    'items'=>'items',
+    'show_orders'=>'Show Orders',
 
         
 ];

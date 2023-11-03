@@ -309,4 +309,7 @@ return [
     'profile'=>'حسابك',
     'profile_settings'=>'إعدادات الحساب ',
     'update_profile'=>'حفظ', 
+    'items'=>'منتج',
+    'show_orders'=>'عرض الطلبات',
+   
 ];

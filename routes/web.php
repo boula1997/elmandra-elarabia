@@ -70,10 +70,12 @@ Route::group(
         Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
         Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
         Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
+        Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
+        Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
     });
 
-        Route::get('order-list',function(){
-            return view('front.order_list');
-        });
+        // Route::get('order-list',function(){
+        //     return view('front.order_list');
+        // });
     }
 );
