@@ -83,7 +83,7 @@
                                                             for="name">{{ __('general.name') }}</label>
                                                         <input type="text" name="name"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.name') }}" />
+                                                            placeholder="{{ __('general.name') }}" value="{{ old('name',auth('web')->user()->name) }}" />
                                                         <div id="name" class="err"></div>
                                                     </div>
                                                 </div>
@@ -95,7 +95,7 @@
                                                     <div class="form-outline form-white">
                                                         <input type="text" name="email"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.email') }}" />
+                                                            placeholder="{{ __('general.email') }}" value="{{ old('email',auth('web')->user()->email) }}"  />
                                                         <div id="email" class="err"></div>
                                                     </div>
                                                 </div>
@@ -107,7 +107,7 @@
                                                             for="phone">{{ __('general.phone') }}</label>
                                                         <input type="text" name="phone"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.phone') }}" />
+                                                            placeholder="{{ __('general.phone') }}" value="{{ old('phone',auth('web')->user()->phone) }}"  />
                                                         <div id="phone" class="err"></div>
                                                     </div>
                                                 </div>
@@ -119,7 +119,7 @@
                                                     <div class="form-outline form-white">
                                                         <input type="text" name="address"
                                                             class="form-control form-control-lg"
-                                                            placeholder="{{ __('general.address') }}" />
+                                                            placeholder="{{ __('general.address') }}" value="{{ old('address',auth('web')->user()->address) }}"  />
                                                         <div id="address" class="err"></div>
                                                     </div>
                                                 </div>

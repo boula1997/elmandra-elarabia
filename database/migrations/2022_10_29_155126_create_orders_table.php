@@ -20,7 +20,9 @@ class CreateOrdersTable extends Migration
             $table->string('phone')->nullable();
             $table->double('total')->nullable();
             $table->string('address')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
