@@ -306,7 +306,7 @@ return [
     'see_all_notifications'=>'اطلع على جميع الإشعارات', 
     // end heading 
     // profile
-    'profile'=>'حسابك',
+    'profile'=>'حسابي',
     'profile_settings'=>'إعدادات الحساب ',
     'update_profile'=>'حفظ', 
     'items'=>'منتج',

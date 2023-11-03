@@ -63,9 +63,9 @@
 </head>
 
 <body class="sc5">
-    
 
-@include('front.components.preloader')
+    @include('admin.components.success')
+    @include('admin.components.errors')
+    @include('front.components.preloader')
 
-@include('front.components.nav')
-
+    @include('front.components.nav')

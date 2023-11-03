@@ -78,7 +78,7 @@
                                 {{-- </div>
                  <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block"></a>
               </div> --}}
-                                <button type="submit" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">
+                                <button type="submit" class="btn btn-primary py-md-3 px-md-5  d-lg-block">
                                     {{ __('general.login') }}
                                 </button>
                             </div>
