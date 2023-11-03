@@ -10,7 +10,7 @@
                 <div class="container-fluid">
                     <div class="row d-flex justify-content-center align-items-center">
                         <!-- left column -->
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="card">
 
                                 <!-- /.card-header -->
