@@ -73,7 +73,7 @@
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-4">
                                             <h5 class="mb-0 text-white">{{ __('general.card_details') }}</h5>
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                                            <img src="{{auth('web')->user()->image}}"
                                                 class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
                                         </div>
 
