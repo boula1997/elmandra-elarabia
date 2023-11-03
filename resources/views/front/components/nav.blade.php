@@ -67,9 +67,44 @@
                                        @endforeach
 
 
-                                    </div>
-                             
+                                   </div>
+
                                </div>
+
+                               @if (!auth('web')->user())
+                               <div class="d-flex justify-content-center align-items-center">
+                                   <a href="{{ route('user.login-view') }}"
+                                       class="nav-link  btn btn-primary py-md-1 px-md-4 d-lg-block join text-nowrap">{{ __('general.login') }}</a>
+                               </div>
+                               @else
+                                   <div>
+                                       <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
+                                           id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">{{ __('general.account') }}</a>
+                                       <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
+
+                                           <a class="dropdown-item text-wrap text-center" rel="alternate"
+                                               hreflang="{{ $localeCode }}" href="{{ route('show_profile') }}">
+                                               <span class="text-center">{{ __('general.profile') }}</span>
+                                           </a>
+                                           <a class="dropdown-item text-wrap text-center" rel="alternate"
+                                               hreflang="{{ $localeCode }}" href="">
+                                               <span class="text-center">{{ __('general.orders') }}</span>
+                                           </a>
+
+                                           <form action="{{ route('logout') }}" method="POST">
+                                               @csrf
+                                               <button class="btn btn-transparent"
+                                                   type="submit">@lang('general.logout')</button>
+                                           </form>
+
+
+
+                                       </div>
+
+                                   </div>
+                               @endif
+
 
                                {{-- @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                     <li class="{{ app()->getLocale() == $localeCode ? 'd-none' : '' }}">
@@ -82,41 +117,6 @@
                                 @endforeach --}}
 
                            </div>
-                           @if (!auth('web')->user())
-                               <a href="{{ route('user.login-view') }}"
-                                   class="btn btn-primary py-md-1 px-md-4 d-none d-lg-block join text-nowrap">{{ __('general.login') }}</a>
-                           @else
-
-                               <div>
-                                <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
-                                    id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">{{__('general.account')}}</a>
-                                <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
-
-                                        <a class="dropdown-item text-wrap text-center" rel="alternate"
-                                            hreflang="{{ $localeCode }}"
-                                            href="{{ route('show_profile') }}">
-                                            <span
-                                                class="text-center">{{__('general.profile')}}</span>
-                                        </a>
-                                        <a class="dropdown-item text-wrap text-center" rel="alternate"
-                                            hreflang="{{ $localeCode }}"
-                                            href="">
-                                            <span
-                                                class="text-center">{{__('general.orders')}}</span>
-                                        </a>
-
-                                        <form action="{{ route('logout') }}" method="POST">
-                                            @csrf
-                                            <button class="btn btn-transparent" type="submit">@lang('general.logout')</button>
-                                        </form>
-                                
-
-
-                                 </div>
-                          
-                            </div>
-                           @endif
                        </div>
                    </nav>
                </div>
