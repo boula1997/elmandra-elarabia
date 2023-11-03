@@ -218,6 +218,7 @@ return [
     'expiration'=>'Expiration',
     'cvv'=>'Cvv',
     'subtotal'=>'Subtotal',
+    'bestsellerin'=>'Bestseller in',
     'delivery'=>'Delivery',
     'total-delivery'=>'Total(Incl. delivery)',
     'total'=>'Total',

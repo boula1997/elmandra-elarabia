@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\subCategory;
 use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\Process;
@@ -33,9 +33,9 @@ class HomeController extends Controller
     private $teams;
     private $partners;
     private $slider;
-    private $category;
+    private $subcategory;
 
-    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners,Slider $slider,Category $category)
+    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners,Slider $slider,subcategory $subcategory)
     {
         $this->service = $service;
         $this->testimonial = $testimonial;
@@ -48,7 +48,7 @@ class HomeController extends Controller
         // $this->settings=$settings;
         $this->partners=$partners;
         $this->slider=$slider;
-        $this->category=$category;
+        $this->subcategory=$subcategory;
     }
 
     /**
@@ -70,9 +70,9 @@ class HomeController extends Controller
             $teams=$this->teams->get();
             $partners=$this->partners->get();
             $sliders=$this->slider->get();
-            $categories=$this->category->get();
+            $subcategories=$this->subcategory->get();
 
-            return view('front.index', compact('testimonials', 'services', 'processes', 'portfolios', 'teams', 'counters','faqs','teams','partners','sliders','categories'));
+            return view('front.index', compact('testimonials', 'services', 'processes', 'portfolios', 'teams', 'counters','faqs','teams','partners','sliders','subcategories'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
