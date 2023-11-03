@@ -11,6 +11,7 @@ use App\Http\Controllers\MessageController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,15 +68,8 @@ Route::group(
             return view("front.shopping");
         })->name('front.shopping');
         Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
+        Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
     });
-
-
-      
-
-        Route::get('/profile', function () {
-    
-            return view("front.profile");
-        })->name('profile');
 
 
     }
