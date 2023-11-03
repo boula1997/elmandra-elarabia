@@ -64,6 +64,7 @@ class OrderController extends Controller
         try {
             $data = $request->all();
             $data['total']=cart()->getTotal()+50;
+            $data['user_id']=auth('web')->user()->id;
             $order = $this->order->create($data);
             foreach(cart()->getItems() as $item){
                 $orderproduct=$this->orderproduct->create([

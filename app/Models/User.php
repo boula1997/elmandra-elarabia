@@ -46,4 +46,7 @@ class User extends Authenticatable
     public function getImageAttribute(){
         return  $this->file?asset($this->file->url): asset('default.jpg');
    }
+    public function orders(){
+        return  $this->hasMany(Order::class);
+   }
 }
