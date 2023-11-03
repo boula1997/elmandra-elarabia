@@ -30,7 +30,7 @@
                                                 <tr class="p-0 m-0">
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $order->name }}</td>
-                                                    <td>{{ $order->total+50 }} {{ __('words.pound') }}</td>
+                                                    <td>{{ $order->total+50 }} {{ __('general.pound') }}</td>
                                                     <td><a  class="mx-3" href="{{ route('show.one.order',$order->id) }}" title="show">
                                                         <i class="fas fa-eye text-secondary fa-lg controlles"></i>
                                                     </a>
