@@ -71,8 +71,6 @@
  <script src="{{ asset('front/lib/counterup/counterup.min.js') }}"></script>
  <script src="{{ asset('front/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
- <!-- Template Javascript -->
-
 <!-- all plugins here -->
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
@@ -89,9 +87,32 @@
 <script src="{{ asset('lightbox-dist/js/lightbox.min.js') }}"></script>
 <script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.bundle.js') }}"></script>
+<!-- main js  -->
+<script src="{{ asset('assets/js/magnific.min.js') }}"></script>
+{{-- <script src="{{ asset('front/js/main.js') }}"></script> --}}
 
-        {{-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
-{{-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> --}}
+<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.min.js.map') }}"></script>
+<!-- Swiper JS - V10.2.0 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"
+    integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- aos -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('plugins/jszip/jszip.min.js') }}"></script>
+<script src="{{ asset('plugins/pdfmake/pdfmake.min.js') }}"></script>
+<script src="{{ asset('plugins/pdfmake/vfs_fonts.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('js/scripts.bundle.js') }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     function inVisible(element) {
@@ -146,14 +167,10 @@
     });
 
 </script>
-<!-- Swiper JS - V10.2.0 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"
-    integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<!-- aos -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
 <script>
     AOS.init({
         // Global settings:
@@ -179,12 +196,6 @@
     });
 </script>
 
-<!-- main js  -->
-<script src="{{ asset('assets/js/magnific.min.js') }}"></script>
-{{-- <script src="{{ asset('front/js/main.js') }}"></script> --}}
-
-<script src="{{ asset('assets/js/main.js') }}"></script>
-<script src="{{ asset('bootstrap-5.3.1-dist/js/bootstrap.min.js.map') }}"></script>
 @stack('js')
 </body>
 

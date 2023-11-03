@@ -1,30 +1,27 @@
 @extends('front.layouts.master')
 
 @section('content')
-@include('front.components.breadcrumb', ['name' => __('general.orders')])
+    @include('front.components.breadcrumb', ['name' => __('general.orders')])
     <!-- Content Wrapper. Contains order content -->
     <div class="content-wrapper">
         <div class="conainer p-5">
-
             <!-- Main content -->
-            <section class="content pt-2" >
+            <section class="content pt-2">
                 <div class="container-fluid">
                     <div class="row d-flex justify-content-center align-items-center">
                         <!-- left column -->
                         <div class="col-md-8">
                             <div class="card">
- 
+
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    
-                                    {{-- <table id="example1" class="table  table-hover">
+
+                                    <table id="example1" class="table  table-hover">
                                         <thead class="h-2">
                                             <tr class="p-0 m-0">
                                                 <th>#</th>
                                                 <th>@lang('general.name')</th>
-                                                <th>@lang('general.email')</th>
-                                                <th>@lang('general.address')</th>
-                                                <th>@lang('general.total-delivery')</th>
+                                                <th>@lang('general.total')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -33,8 +30,6 @@
                                                 <tr class="p-0 m-0">
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $order->name }}</td>
-                                                    <td>{{ $order->email }}</td>
-                                                    <td>{{ $order->address }}</td>
                                                     <td>{{ $order->total }}</td>
                                                     <td><a  class="mx-3" href="{{ route('show.one.order',$order->id) }}" title="show">
                                                         <i class="fas fa-eye text-secondary fa-lg controlles"></i>
@@ -51,18 +46,18 @@
                                             @endforeach
     
                                         </tbody>
-                                    </table> --}}
+                                    </table>
 
-                                    <table class="table table-hover">
+                                    {{-- <table id="example1" class="table table-hover table-responsive">
                                         <caption>@lang('general.orders')</caption>
                                         <thead>
-                                          <tr>
-                                            <th>#</th>
-                                            <th>@lang('general.name')</th>
-                                            <th>@lang('general.email')</th>
-                                            <th>@lang('general.total-delivery')</th>
-                                            <th>@lang('general.controls')</th>
-                                          </tr>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>@lang('general.name')</th>
+                                                <th>@lang('general.email')</th>
+                                                <th>@lang('general.total-delivery')</th>
+                                                <th>@lang('general.controls')</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             @foreach (auth()->user()->orders as $order)
@@ -71,9 +66,10 @@
                                                     <td>{{ $order->name }}</td>
                                                     <td>{{ $order->email }}</td>
                                                     <td>{{ $order->total }} {{ __('general.pound') }}</td>
-                                                    <td><a  class="mx-3" href="{{ route('show.one.order',$order->id) }}" title="show">
-                                                        <i class="fas fa-eye fa-lg controlles text-primary"></i>
-                                                    </a>
+                                                    <td><a class="mx-3" href="{{ route('show.one.order', $order->id) }}"
+                                                            title="show">
+                                                            <i class="fas fa-eye fa-lg controlles text-primary"></i>
+                                                        </a>
                                                     </td>
                                                     <td>
                                                         @include('admin.components.controls', [
@@ -85,14 +81,14 @@
                                                 </tr>
                                             @endforeach
                                         </tbody>
-                                      </table>
+                                    </table> --}}
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                     </div>
-    
+
                 </div><!-- /.container-fluid -->
             </section>
             <!-- /.content -->
@@ -102,7 +98,7 @@
 @endsection
 
 
-@push('scripts')
+@push('js')
     <script>
         $(function() {
             $("#example1").DataTable({
