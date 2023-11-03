@@ -95,7 +95,7 @@
 
                                         <a class="dropdown-item text-wrap text-center" rel="alternate"
                                             hreflang="{{ $localeCode }}"
-                                            href="">
+                                            href="{{ route('show_profile') }}">
                                             <span
                                                 class="text-center">{{__('general.profile')}}</span>
                                         </a>

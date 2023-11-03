@@ -68,9 +68,12 @@ Route::group(
             return view("front.shopping");
         })->name('front.shopping');
         Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
+        Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
         Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
     });
 
-
+        Route::get('order-list',function(){
+            return view('front.order_list');
+        });
     }
 );

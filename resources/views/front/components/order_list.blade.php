@@ -1,250 +1,384 @@
+<div class="h-100 h-custom" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
 
-    <style>
-        /* body {
-            min-height: 100vh;
-            background-size: cover;
-            font-family: 'Lato', sans-serif;
-            color: rgba(116, 116, 116, 0.667);
-            background: linear-gradient(140deg , #fff , 50% , #BA68C8);    
+                <div class="card full {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
+                    <div class="card-body p-4">
 
-        } */
-        /* .container-fluid {
-            margin-top: 200px ;
-        } */
+                        <div class="row">
 
-        p {
-            font-size: 18px;
-            margin-bottom: 7px;
+                            <div class="col-lg-7" data-aos="fade-right">
+                                <h5 class="mb-3"><a href="{{ route('front.home') }}" class="text-body"><i
+                                            class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }} me-2"></i>{{ __('general.continue_shopping') }}</a>
+                                </h5>
+                                <hr>
 
-        }
-
-        .small {
-            letter-spacing: 0.5px !important;
-        }
-
-        .card-1 {
-            box-shadow: 2px 2px 10px 0px rgb(55, 6, 70);
-        }
-
-        hr {
-            background-color: rgba(248, 248, 248, 0.667);
-        }
-
-
-        .bold {
-            font-weight: 500;
-        }
-
-        .change-color {
-            color: #6f5190  !important;
-        }
-
-        .card-2 {
-            box-shadow: 1px 1px 3px 0px rgb(112, 115, 139);
-
-        }
-
-        .fa-circle.active {
-            font-size: 8px;
-            color:#6f5190 ;
-        }
-
-        .fa-circle {
-            font-size: 8px;
-            color: #aaa;
-        }
-
-        .rounded {
-            border-radius: 2.25rem !important;
-        }
-
-
-        .progress-bar {
-            background-color:#6f5190  !important;
-        }
-
-
-        .progress {
-            height: 5px !important;
-            margin-bottom: 0;
-        }
-
-        .invoice {
-            position: relative;
-            top: -70px;
-        }
-
-        .Glasses {
-            position: relative;
-            top: -12px !important;
-        }
-
-        .card-footer {
-            background-color: #6f5190 ;
-            color: #fff;
-        }
-
-        h2 {
-            color: rgb(78, 0, 92);
-            letter-spacing: 2px !important;
-        }
-
-        .display-3 {
-            font-weight: 500 !important;
-        }
-
-        @media (max-width: 479px) {
-            .invoice {
-                position: relative;
-                top: 7px;
-            }
-
-            .border-line {
-                border-right: 0px solid rgb(226, 206, 226) !important;
-            }
-
-        }
-
-        @media (max-width: 700px) {
-
-            h2 {
-                color: rgb(78, 0, 92);
-                font-size: 17px;
-            }
-
-            .display-3 {
-                font-size: 28px;
-                font-weight: 500 !important;
-            }
-        }
-
-        .card-footer small {
-            letter-spacing: 7px !important;
-            font-size: 12px;
-        }
-
-        .border-line {
-            border-right: 1px solid rgb(226, 206, 226)
-        }
-    </style>
-<div class="container-fluid my-5  d-flex  justify-content-center">
-    <div class="card card-1" style="width: 80%">
-        <div class="card-header bg-white">
-            <div class="media flex-sm-row flex-column-reverse justify-content-between  ">
-                <div class="col my-auto"> <h4 class="mb-0">Thanks for your Order,<span class="change-color">Anjali</span> !</h4> </div>
-                <div class="col-auto text-center  my-auto pl-0 pt-sm-4"> <img class="img-fluid my-auto align-items-center mb-0 pt-3"  src=" {{ asset('images/orderlist.png') }}" width="115" height="115"> <p class="mb-4 pt-0 Glasses">Glasses For Everyone</p>  </div>
-            </div>
-        </div>
-        <div class="card-body">
-            <div class="row justify-content-between mb-3">
-                <div class="col-auto"> <h6 class="color-1 mb-0 change-color">Receipt</h6> </div>
-                <div class="col-auto  "> <small>Receipt Voucher : 1KAU9-84UIL</small> </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="card card-2">
-                        <div class="card-body">
-                            <div class="media">
-                                <div class="sq align-self-center "> <img class="img-fluid  my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="{{ asset('images/orderlist.png') }}" width="135" height="135" /> </div>
-                                <div class="media-body my-auto text-right">
-                                    <div class="row  my-auto flex-column flex-md-row">
-                                        <div class="col my-auto"> <h6 class="mb-0"> Jack Jacs</h6>  </div>
-                                        <div class="col-auto my-auto"> <small>Golden Rim </small></div>
-                                        <div class="col my-auto"> <small>Size : M</small></div>
-                                        <div class="col my-auto"> <small>Qty : 1</small></div>
-                                        <div class="col my-auto"><h6 class="mb-0">&#8377;3,600.00</h6>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <p class="mb-1">{{ __('general.shopping_cart') }}</p>
+                                        <p class="mb-0">{{ __('general.you_have') }} <span
+                                                class="cart-count">{{ count(cart()->getItems()) }}</span>
+                                            {{ __('general.items_in_your_cart') }}</p>
+                                    </div>
+                                    {{-- <div>
+                                      <p class="mb-0"><span class="text-muted">{{ __('general.sort_by') }}:</span>
+                                          <a href="#!" class="text-body">price <i
+                                                  class="fas fa-angle-down mt-1"></i></a>
+                                      </p>
+                                  </div> --}}
+                                </div>
+                                @foreach (cart()->getItems() as $item)
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div>
+                                                        <img src="{{ cartItem($item->getId())->image }}"
+                                                            class="img-fluid rounded-3" alt="Shopping item"
+                                                            style="width: 65px;">
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <h5>{{ cartItem($item->getId())->title }}</h5>
+                                                        {{-- <p class="small mb-0">256GB, Navy Blue</p> --}}
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div style="width: 50px;">
+                                                        <input class="itemCount" type="number" min="1" max="{{ cartItem($item->getId())->stock }}" style="width: 40px"
+                                                            class="w-25" name="itemCount"
+                                                            value="{{ $item->get('quantity') }}"
+                                                            hash="{{ $item->getHash() }}">
+                                                </div>
+                                                    <div style="width: 80px;">
+                                                        <h5 class="mb-0"><span class="itemTotalPrice">{{ $item->get('price')* $item->get('quantity') }}</span> {{ __('general.pound') }}</h5>
+                                                    </div>
+                                                    <button class="removeCart btn btn-transparent"
+                                                        hash="{{ $item->getHash() }}">
+                                                        <i class="fas fa-trash-alt tetx-danger"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
                             </div>
-                            <hr class="my-3 ">
-                            <div class="row">
-                                {{-- <i class="fas fa-sync-alt"></i> --}}
-                                <div class="col-md-3 mb-3"> <small> Track Order <span><i class=" ml-2 fa fa-refresh"  aria-hidden="true"></i></span></small> </div>
-                                <div class="col mt-auto">
-                                    <div class="progress my-auto"> <div class="progress-bar progress-bar  rounded" style="width: 62%" role="progressbar" aria-valuenow="25" aria-valuemin="0"  aria-valuemax="100"></div> </div>
-                                    <div class="media row justify-content-between ">
-                                        <div class="col-auto text-right"><span> <small  class="text-right mr-sm-2"></small> <i class="fa fa-circle active"></i> </span></div>
-                                        <div class="flex-col"> <span> <small class="text-right mr-sm-2">Out for delivary</small><i class="fa fa-circle active"></i></span></div>
-                                        <div class="col-auto flex-col-auto"><small  class="text-right mr-sm-2">Delivered</small><span> <i  class="fa fa-circle"></i></span></div>
+                            <div class="col-lg-5" data-aos="fade-left">
+
+                                <div class="card bg-primary text-white rounded-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <h5 class="mb-0 text-white">{{ __('general.card_details') }}</h5>
+                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                                                class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
+                                        </div>
+
+
+                                        <form id="order-form" method="POST" class="mt-4">
+                                            @csrf
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-outline form-white">
+                                                        <label class="form-label"
+                                                            for="name">{{ __('general.name') }}</label>
+                                                        <input type="text" name="name"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.name') }}" />
+                                                        <div id="name" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="form-label"
+                                                        for="email">{{ __('general.email') }}</label>
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" name="email"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.email') }}" />
+                                                        <div id="email" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-outline form-white">
+                                                        <label class="form-label"
+                                                            for="phone">{{ __('general.phone') }}</label>
+                                                        <input type="text" name="phone"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.phone') }}" />
+                                                        <div id="phone" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="form-label"
+                                                        for="address">{{ __('general.address') }}</label>
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" name="address"
+                                                            class="form-control form-control-lg"
+                                                            placeholder="{{ __('general.address') }}" />
+                                                        <div id="address" class="err"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <hr class="my-4">
+{{-- 
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-2">{{ __('general.subtotal') }}</p>
+                                                <p class="mb-2 cart-total">{{ cart()->getTotal() }} $</p>
+                                            </div> --}}
+
+                                            
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <p class="mb-2"> {{ __('general.total') }} </p>
+                                                <p class="mb-2"><span class="cart-total">{{ cart()->getTotal() }}</span> {{ __('general.pound') }}</p>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-2">{{ __('general.delivery') }}</p>
+                                                <p class="mb-2">50 {{ __('general.pound') }}</p>
+                                            </div>
+
+
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <button type="submit" class="btn btn-secondary  btn-order">
+                                                    <i class="fa fa-spinner fa-spin d-none " id="spinner-order"></i>
+                                                    <div class="d-flex justify-content-between">
+                                                        <p><span class="cart-total-shipping">{{ cart()->getTotal()+50 }}</span> {{ __('general.pound') }}</p>
+                                                        &nbsp;&nbsp;
+                                                        <span>{{ __('general.checkout') }} <i
+                                                                class="fas fa-long-arrow-alt-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} ms-2"></i></span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </form>
+
+
                                     </div>
                                 </div>
+
                             </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card empty {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}"  data-aos="zoom-in-down">
+                    <div class="card-header">
+                        <h5>{{ __('general.cart') }}</h5>
+                    </div>
+                    <div class="card-body cart">
+                        <div class="col-sm-12 empty-cart-cls text-center">
+                            <img src="{{ asset('images/empty-cart.svg') }}" width="30%" height="30%"
+                                class="img-fluid mb-4 mr-3">
+                            <h3><strong>{{ __('general.your_cart_is_empty') }}</strong></h3>
+                            <h4>{{ __('general.add_something_to_make') }} </h4>
+                            <a href="{{ route('front.home') }}" class="btn btn-primary cart-btn-transform m-3"
+                                data-abc="true">{{ __('general.continue_shopping') }}</a>
+
+
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <div class="card card-2">
-                        <div class="card-body">
-                            <div class="media">
-                                <div class="sq align-self-center "> <img class="img-fluid  my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="https://i.imgur.com/fUWWpRS.jpg" width="135" height="135" /> </div>
-                                <div class="media-body my-auto text-right">
-                                    <div class="row  my-auto flex-column flex-md-row">
-                                        <div class="col-auto my-auto "> <h6 class="mb-0"> Michel Mark</h6> </div>
-                                        <div class="col my-auto  "> <small>Black Rim </small></div>
-                                        <div class="col my-auto  "> <small>Size : L</small></div>
-                                        <div class="col my-auto  "> <small>Qty : 1</small></div>
-                                        <div class="col my-auto ">  <h6 class="mb-0">&#8377;1,235.00</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="my-3 ">
-                            <div class="row ">
-                                <div class="col-md-3 mb-3">  <small> Track Order <span><i class=" ml-2 fa fa-refresh" aria-hidden="true"></i></span></small> </div>
-                                <div class="col mt-auto">
-                                    <div class="progress"><div class="progress-bar progress-bar  rounded" style="width: 18%"  role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> </div>
-                                    <div class="media row justify-content-between ">
-                                        <div class="col-auto text-right"><span> <small  class="text-right mr-sm-2"></small> <i class="fa fa-circle active"></i> </span></div>
-                                        <div class="flex-col"> <span> <small class="text-right mr-sm-2">Out for delivary</small><i class="fa fa-circle"></i></span></div>
-                                        <div class="col-auto flex-col-auto"><smallclass="text-right mr-sm-2">Delivered</small><span> <i class="fa fa-circle"></i></span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <div class="row justify-content-between">
-                        <div class="col-auto"><p class="mb-1 text-dark"><b>Order Details</b></p></div>
-                        <div class="flex-sm-col text-right col"> <p class="mb-1"><b>Total</b></p> </div>
-                        <div class="flex-sm-col col-auto"> <p class="mb-1">&#8377;4,835</p> </div>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="flex-sm-col text-right col"><p class="mb-1"> <b>Discount</b></p> </div>
-                        <div class="flex-sm-col col-auto"><p class="mb-1">&#8377;150</p></div>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="flex-sm-col text-right col"><p class="mb-1"><b>GST 18%</b></p></div>
-                        <div class="flex-sm-col col-auto"><p class="mb-1">843</p></div>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="flex-sm-col text-right col"><p class="mb-1"><b>Delivery Charges</b></p></div>
-                        <div class="flex-sm-col col-auto"><p class="mb-1">Free</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row invoice ">
-                <div class="col"><p class="mb-1"> Invoice Number : 788152</p><p class="mb-1">Invoice Date : 22 Dec,2019</p><p class="mb-1">Recepits Voucher:18KU-62IIK</p></div>
-            </div>
-        </div>
-        <div class="card-footer">
-            <div class="jumbotron-fluid">
-                <div class="row justify-content-between ">
-                    <div class="col-sm-auto col-auto my-auto"><img class="img-fluid my-auto align-self-center " src="https://i.imgur.com/7q7gIzR.png" width="115" height="115"></div>
-                    <div class="col-auto my-auto "><h2 class="mb-0 font-weight-bold">TOTAL PAID</h2></div>
-                    <div class="col-auto my-auto ml-auto"><h1 class="display-3 ">&#8377; 5,528</h1></div>
-                </div>
-                <div class="row mb-3 mt-3 mt-md-0">
-                    <div class="col-auto border-line"> <small class="text-white">PAN:AA02hDW7E</small></div>
-                    <div class="col-auto border-line"> <small class="text-white">CIN:UMMC20PTC </small></div>
-                    <div class="col-auto "><small class="text-white">GSTN:268FD07EXX </small> </div>
-                </div>
+
+
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+@push('js')
+    <script>
+        $('.removeCart').on('click', function(e) {
+            e.preventDefault();
+            var hash = $(this).attr('hash');
+            let url = "{{ route('removeFrom.cart', ':hash') }}";
+            url = url.replace(':hash', hash);
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: (response) => {
+                    if (response.count > 0) {
+                        $('.full').removeClass('d-none');
+                        $('.empty').addClass('d-none');
+                    } else {
+                        $('.full').addClass('d-none');
+                        $('.empty').removeClass('d-none');
+                    }
+                    $(this).parents().eq(3).remove();
+                    $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total)+50);
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.removed_successfully') }}");
+                },
+                error: function(response) {
+                    alert(response.error);
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
+            });
+        });
+    </script>
+    {{-- Item Count --}}
+    <script>
+        $('.itemCount').on('input', function(e) {
+            e.preventDefault(); 
+            var hash = $(this).attr('hash');
+            var quantity = $(this).val();
+            let url = "{{ route('updateItem.count', [':hash',':quantity']) }}";
+            url = url.replace(':hash', hash);
+            url = url.replace(':quantity', quantity);
+            $.ajax({
+                type: 'get',
+                url: url,
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'quantity': $("input[name=quantity]").val(),
+                },
+                success: (response) => {
+                    $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total)+50);
+                    $(this).parent().parent().find('.itemTotalPrice').text(response.price*response.quantity);
+                    // $('.itemTotalPrice').remove();
+                    toastr.options = {
+                        "closeButton": true,    
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.added_successfully') }}");
+                },
+                error: function(response) {
+        
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
+            });
+        });
+    </script>
+    {{-- Item Count --}}
+
+    <script>
+        $('#order-form').submit(function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+            $(".err").empty();
+            $(".err").addClass("d-none");
+            $('#btn-order').attr('disabled', 'disabled').addClass('bg-secondary');
+            $('#spinner-order').removeClass('d-none');
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('front.order.post') }}",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'name': $("input[name=name]").val(),
+                    'email': $("input[name=email]").val(),
+                    'phone': $("input[name=phone]").val(),
+                    'address': $("input[name=address]").val(),
+                },
+                success: (response) => {
+                    $('.cart-count').text(response.count);
+                    $('.full').addClass('d-none');
+                    $('.empty').removeClass('d-none');
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+                    console.log(response);
+                    toastr.success(response.success);
+
+                    this.reset();
+                    $('#spinner-order').addClass('d-none');
+                    $('#btn-order').removeAttr('disabled').removeClass(
+                        'bg-secondary');
+                    $('.alert-success').removeClass('d-none').text(response.success);
+                    setTimeout(() => {
+                        $('.alert-success').addClass('d-none').text(response.success);
+                    }, 5000);
+                },
+                error: function(response) {
+                    $('#spinner-order').addClass('d-none');
+                    $('#btn-order').removeAttr('disabled').removeClass('bg-secondary');
+
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                    if (response.responseJSON.errors.name) {
+                        $("#name").append(
+                            `<div class="alert alert-danger my-1"  style="text-align:initial !important">${response.responseJSON.errors.name}</div>`
+                        );
+                    }
+                    if (response.responseJSON.errors.email) {
+                        $("#email").append(
+                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.email}</div>`
+                        );
+                    }
+                    if (response.responseJSON.errors.phone) {
+                        $("#phone").append(
+                            `<div class="alert alert-danger my-1"   style="text-align:initial !important">${response.responseJSON.errors.phone}</div>`
+                        );
+                    }
+
+                    if (response.responseJSON.errors.address) {
+                        $("#address").append(
+                            `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.address}</div>`
+                        );
+                    }
+
+                }
+            });
+        });
+    </script>
+@endpush
