@@ -404,17 +404,17 @@
             back-to-top
         -----------------------------------------*/
         var ScrollTop = $('.back-to-top');
-        if ($(window).scrollTop() > 1000) {
-            ScrollTop.fadeIn(1000);
+        if ($(window).scrollTop() > 500) {
+            ScrollTop.fadeIn(500);
         } else {
-            ScrollTop.fadeOut(1000);
+            ScrollTop.fadeOut(500);
         }
 
         /*---------------------------------------
             sticky-active
         -----------------------------------------*/
         var scroll = $(window).scrollTop();
-        if (scroll < 445) {
+        if (scroll < 340) {
             $(".navbar").removeClass("sticky-active");
         } else {
             $(".navbar").addClass("sticky-active");
