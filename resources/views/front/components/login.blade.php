@@ -40,7 +40,8 @@
                                 <input type="email" name="email" id="form3Example3"
                                     class="form-control @error('email') invalid @enderror" />
                                 @error('email')
-                                    {{ $message }}
+                                <span class="text-danger">{{ $message }}</span>
+
                                 @enderror
                             </div>
 
@@ -52,7 +53,7 @@
                                 <input type="password" name="password" id="form3Example4"
                                     class="form-control @error('password') invalid @enderror" />
                                 @error('password')
-                                    {{ $message }}
+                                    <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
