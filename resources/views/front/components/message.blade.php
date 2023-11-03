@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="col-lg-12">
-            <div class="g-map-inner mx-2" data-aos="fade-left">
+            <div class="mx-2" data-aos="fade-left">
                 {!! settings()->map !!}
             </div>
         </div>
