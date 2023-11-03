@@ -1,29 +1,23 @@
 @extends('front.layouts.master')
 
 @section('content')
+@include('front.components.breadcrumb', ['name' => __('general.orders')])
     <!-- Content Wrapper. Contains order content -->
     <div class="content-wrapper">
         <div class="conainer p-5">
 
             <!-- Main content -->
-            <section class="content pt-2">
+            <section class="content pt-2" >
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row d-flex justify-content-center align-items-center">
                         <!-- left column -->
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <div class="card">
-                                <div class="card-header">
-                                    <!-- general form elements -->
-                                    <div class="row">
-                                        <div class="col-md-6 d-flex d-flex justify-content-start">
-                                            <h1 class="card-title fw-bold">@lang('general.orders')</h3>
-                                        </div>
-                                    </div>
-                                </div>
+ 
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     
-                                    <table id="example1" class="table  table-hover">
+                                    {{-- <table id="example1" class="table  table-hover">
                                         <thead class="h-2">
                                             <tr class="p-0 m-0">
                                                 <th>#</th>
@@ -57,7 +51,41 @@
                                             @endforeach
     
                                         </tbody>
-                                    </table>
+                                    </table> --}}
+
+                                    <table class="table table-hover">
+                                        <caption>@lang('general.orders')</caption>
+                                        <thead>
+                                          <tr>
+                                            <th>#</th>
+                                            <th>@lang('general.name')</th>
+                                            <th>@lang('general.email')</th>
+                                            <th>@lang('general.total-delivery')</th>
+                                            <th>@lang('general.controls')</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (auth()->user()->orders as $order)
+                                                <tr class="p-0 m-0">
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td>{{ $order->name }}</td>
+                                                    <td>{{ $order->email }}</td>
+                                                    <td>{{ $order->total }} {{ __('general.pound') }}</td>
+                                                    <td><a  class="mx-3" href="{{ route('show.one.order',$order->id) }}" title="show">
+                                                        <i class="fas fa-eye fa-lg controlles text-primary"></i>
+                                                    </a>
+                                                    </td>
+                                                    <td>
+                                                        @include('admin.components.controls', [
+                                                            'route' => 'orders',
+                                                            'role' => 'order',
+                                                            'module' => $order,
+                                                        ])
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                      </table>
                                 </div>
                             </div>
     
