@@ -1,6 +1,6 @@
 <div class="container">
     @foreach ($subcategories as $subcategory)
-        @if (count($subcategory->products)> 0)
+        @if (count($subcategory->products) > 0)
             <div id="tab-{{ $loop->iteration }}"
                 class="tab-pane fade show p-0 {{ $loop->iteration == 1 ? 'active' : '' }}">
                 <div class="row g-5">
@@ -25,14 +25,25 @@
                                     </div> --}}
                                     <div class="d-flex justify-content-between">
 
-                                        <p class="small text-danger"><s>{{ $product->price_bd }} {{ __('general.pound') }}</s></p>
+                                        <p class="small text-danger"><s>{{ $product->price_bd }}
+                                                {{ __('general.pound') }}</s></p>
                                         <h5 class="text-dark mb-0">{{ $product->price }} {{ __('general.pound') }}</h5>
                                     </div>
 
-                                    <button
-                                        class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
-                                        product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
-                                        {{ __('general.add_to_cart') }}</button>
+                                    @if (auth('web')->user())
+                                        <button
+                                            class="btn  btn-sm w-100 mt-1 addCart {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
+                                            product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
+                                            {{ __('general.add_to_cart') }}</button>
+                                    @else
+                                        <a href="{{ route('addTo.cart',$product->id) }}">
+                                            <button
+                                                class="btn  btn-sm w-100 mt-1  {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
+                                                product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
+                                                {{ __('general.add_to_cart') }}</button>
+                                        </a>
+                                    @endif
+
 
                                     <button
                                         class="btn  btn-sm w-100 mt-1 removeCart {{ isInCart($product->id) ? 'btn-danger' : 'd-none' }}"
