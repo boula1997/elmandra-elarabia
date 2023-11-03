@@ -63,7 +63,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="g-map-inner w-50 mx-2" data-aos="fade-left">
                 {!! settings()->map !!}
             </div>
