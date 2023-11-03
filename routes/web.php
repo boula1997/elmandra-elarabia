@@ -68,5 +68,11 @@ Route::group(
 
       
 
+        Route::get('/profile', function () {
+    
+            return view("front.profile");
+        })->name('profile');
+
+
     }
 );
