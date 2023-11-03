@@ -29,6 +29,10 @@ Route::group(
     ],
     function () {
 
+        Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('user.register-view');
+        Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store'])->name('user.register'); 
+        Route::get('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'create'])->name('user.login-view');
+        Route::post('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store'])->name('user.login'); 
 
         Route::get('/', [HomeController::class, 'index'])->name('front.home');
         Route::get('/faq-page', 'App/Http/Controllers/FaqController@index')->name('front.faq');
@@ -60,15 +64,8 @@ Route::group(
         })->name('front.shopping');
         Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
 
-        Route::get('/user-registration', function () {
-    
-            return view("front.login_registration.registration");
-        })->name('user-registration');
 
-        Route::get('/user-login', function () {
-    
-            return view("front.login_registration.login");
-        })->name('user-login');
+      
 
         Route::get('/profile', function () {
     
@@ -79,6 +76,6 @@ Route::group(
     }
 );
 
- 
+
 
 

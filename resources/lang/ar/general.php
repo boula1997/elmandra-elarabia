@@ -48,6 +48,8 @@ return [
     'edit'  => 'تعديل',
     'delete'  => 'مسح',
     'products'  => 'المنتجات',
+    'bestsellerin'=>'الاكثر مبيعا في',
+
 
 
     "permission" => "الإذن",

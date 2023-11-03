@@ -17,7 +17,7 @@
                             <div class="fs-4 fw-normal text-light mb-4 text-secondary description" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}"><i class="fa fa-quote-left text-primary me-3"></i>{!! $testimonial->description !!}</div>
                             <div class="d-flex align-items-center">
                                 <img class="img-fluid rounded-circle" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}" src="{{ asset($testimonial->image) }}" alt="">
-                                <div class="ps-4">
+                         `       <div class="ps-4">
                                     <h5 class="text-uppercase text-light" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}">{{ $testimonial->title }}</h5>
                                     <span class="text-uppercase text-secondary" dir="{{ app()->getLocale()=='ar'?'rtl':'' }}">{{ $testimonial->subtitle }}</span>
                                 </div>

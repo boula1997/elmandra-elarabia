@@ -14,7 +14,7 @@
 
             <div class="col-lg-12 col-md-6 text-center" data-aos="fade-up"data-aos-duration="3000">
                 <h1 class="text-uppercase text-light mb-4">{{ page('service')->subtitle }}</h1>
-                <a href="{{ route('user-registration') }}" class="btn btn-primary py-3 px-5">{{ __('general.become_a_member') }}</a>
+                <a href="{{ route('user.register-view') }}" class="btn btn-primary py-3 px-5">{{ __('general.become_a_member') }}</a>
             </div>
         </div>
     </div>

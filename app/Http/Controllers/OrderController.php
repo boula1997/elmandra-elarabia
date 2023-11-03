@@ -13,6 +13,7 @@ use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Counter;
 use App\Models\Orderproduct;
+use App\Models\Product;
 use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;
@@ -29,7 +30,7 @@ class OrderController extends Controller
     private $orderproduct;
 
 
-    public function __construct(order $order, Orderproduct $orderproduct)
+    public function __construct(Order $order, Orderproduct $orderproduct)
     {
         $this->order = $order;
         $this->orderproduct = $orderproduct;
@@ -65,12 +66,15 @@ class OrderController extends Controller
             $data['total']=cart()->getTotal()+50;
             $order = $this->order->create($data);
             foreach(cart()->getItems() as $item){
-                $this->orderproduct->create([
+                $orderproduct=$this->orderproduct->create([
                     'order_id' => $order->id,
                     'product_id' => $item->getId(),
                     'count' => $item->get('quantity'),
                     'total' => $item->get('quantity') * $item->getPrice(),
                 ]);
+
+                $product=$orderproduct->product;
+                $product->update(['stock'=> $product->stock-$item->get('quantity')]);
             }
             cart()->destroy();
             // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
