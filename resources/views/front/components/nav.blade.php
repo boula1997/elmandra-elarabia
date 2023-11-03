@@ -84,11 +84,11 @@
                                        <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
 
                                            <a class="dropdown-item text-wrap text-center" rel="alternate"
-                                               hreflang="{{ $localeCode }}" href="{{ route('show_profile') }}">
+                                                href="{{ route('show_profile') }}">
                                                <span class="text-center">{{ __('general.profile') }}</span>
                                            </a>
                                            <a class="dropdown-item text-wrap text-center" rel="alternate"
-                                               hreflang="{{ $localeCode }}" href="">
+                                               href="{{ route('show.orders') }}">
                                                <span class="text-center">{{ __('general.orders') }}</span>
                                            </a>
 
