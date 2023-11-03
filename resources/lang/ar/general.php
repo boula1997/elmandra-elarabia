@@ -302,4 +302,8 @@ return [
     'days'=>'ايام',
     'see_all_notifications'=>'اطلع على جميع الإشعارات', 
     // end heading 
+    // profile
+    'profile'=>'حسابك',
+    'profile_settings'=>'إعدادات الحساب ',
+    'update_profile'=>'حفظ', 
 ];

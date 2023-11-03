@@ -35,7 +35,7 @@
                                     <div class="form-outline">
                                         <label
                                             class="form-label d-flex float-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} "
-                                            for="form3Example1">{{ __('general.first_name') }}</label>
+                                            for="form3Example1">{{ __('general.name') }}</label>
                                         <input type="text" name="name" id="form3Example1"
                                             class="form-control @error('name') invalid @enderror" />
                                         @error('name')
@@ -72,7 +72,7 @@
                             <div class="form-outline mb-4">
                                 <label
                                     class="form-label d-flex float-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }} "
-                                    for="form3Example4">{{ __('general.password_confirmation') }}</label>
+                                    for="form3Example4">{{ __('general.confirm_password') }}</label>
                                 <input type="password" name="password_confirmation" id="form3Example4"
                                     class="form-control @error('password_confirmation') invalid @enderror" />
                                 @error('password_confirmation')

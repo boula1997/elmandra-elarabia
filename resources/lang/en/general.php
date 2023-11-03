@@ -298,12 +298,10 @@ return [
     'days'=>'days',
     'see_all_notifications'=>'See All Notifications',   
     // end heading
-
-    
-
-
-
-    
+    // profile
+    'profile'=>'Profile',
+    'profile_settings'=>'Profile Settings',
+    'update_profile'=>'Update Profile',    
 
         
 ];
