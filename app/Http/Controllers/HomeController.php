@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\subcategory;
+use App\Models\Subcategory;
 use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\Process;
@@ -35,7 +35,7 @@ class HomeController extends Controller
     private $slider;
     private $subcategory;
 
-    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners,Slider $slider,subcategory $subcategory)
+    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory)
     {
         $this->service = $service;
         $this->testimonial = $testimonial;
