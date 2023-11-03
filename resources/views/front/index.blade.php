@@ -6,5 +6,5 @@
     @include('front.components.services-home') 
     @include('front.components.counter')
     @include('front.components.team')
-    @include('front.components.testimonial')
+    {{-- @include('front.components.testimonial') --}}
 @endsection

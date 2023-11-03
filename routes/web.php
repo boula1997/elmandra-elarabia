@@ -54,6 +54,7 @@ Route::group(
         Route::get('/single-portfolio/{id}', [ServiceController::class,'showportfolio'])->name('front.show.portfolio');
         // Route::post('/newsletter', 'App/Http/Controllers/NewsletterController@store')->name('front.newsletter.post');
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
+        Route::group(['middleware' => ['auth:web']], function () {
         Route::get('/addToCart/{id}', [CartController::class,'addToCart'])->name('addTo.cart');
         Route::get('/removeFromCart/{hash}', [CartController::class,'removeItemCart'])->name('removeFrom.cart');
         Route::get('/updateItemCount/{hash}/{quantity}', [CartController::class,'updateItemCount'])->name('updateItem.count');
@@ -62,14 +63,10 @@ Route::group(
             
             return view("front.shopping");
         })->name('front.shopping');
-        Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
+        Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');});
 
 
       
 
     }
 );
-
-
-
-

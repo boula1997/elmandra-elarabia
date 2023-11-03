@@ -52,29 +52,6 @@
                                    </li>
                                @endforeach
 
-                               @auth('web')
-                                   <li cla ss="nav-item dropdown">
-                                       <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
-                                           id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-                                           aria-expanded="false">{{ __('general.profile') }}</a>
-                                       <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
-                                          
-                                               <a class="dropdown-item text-wrap"
-                                                   href="{{ route('front.products', $subcategory->id) }}"><span>{{ __('profile') }}</span></a>
-
-                                                   <li class="dropdown-item">
-
-                                                    <form action="{{ route('logout') }}" method="POST">
-                                                        @csrf
-                                                        <i class=" px-1 nav-icon  fa fa-sign-out text-white" aria-hidden="true"></i>
-                                                        <button class="btn text-secondary" type="submit">@lang('general.logout')</button>
-                                                    </form>
-                                                </li>
-                                          
-                                       </div>
-                                   </li>
-                               @endauth
-
                                <div>
                                    <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
                                        id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -90,8 +67,8 @@
                                        @endforeach
 
 
-                                       </a>
-                                   </div>
+                                    </div>
+                             
                                </div>
 
                                {{-- @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -105,8 +82,41 @@
                                 @endforeach --}}
 
                            </div>
-                           {{-- <a href="{{ route('user.register-view') }}"
-                                class="btn btn-primary py-md-1 px-md-4 d-none d-lg-block join text-nowrap">{{ __('general.join_us') }}</a> --}}
+                           @if (!auth('web')->user())
+                               <a href="{{ route('user.login-view') }}"
+                                   class="btn btn-primary py-md-1 px-md-4 d-none d-lg-block join text-nowrap">{{ __('general.login') }}</a>
+                           @else
+
+                               <div>
+                                <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
+                                    id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">{{__('general.account')}}</a>
+                                <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
+
+                                        <a class="dropdown-item text-wrap text-center" rel="alternate"
+                                            hreflang="{{ $localeCode }}"
+                                            href="">
+                                            <span
+                                                class="text-center">{{__('general.profile')}}</span>
+                                        </a>
+                                        <a class="dropdown-item text-wrap text-center" rel="alternate"
+                                            hreflang="{{ $localeCode }}"
+                                            href="">
+                                            <span
+                                                class="text-center">{{__('general.orders')}}</span>
+                                        </a>
+
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button class="btn btn-transparent" type="submit">@lang('general.logout')</button>
+                                        </form>
+                                
+
+
+                                 </div>
+                          
+                            </div>
+                           @endif
                        </div>
                    </nav>
                </div>

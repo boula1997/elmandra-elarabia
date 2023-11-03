@@ -44,7 +44,7 @@ class ProductController extends Controller
     {
         try {
             $subcategory=$this->subcategory->findorfail($id);
-            $products = $subcategory->products;
+            $products = $subcategory->products()->paginate(8);
             return view('front.products.product', compact( 'products','subcategory'));
         } catch (Exception $e) {
             dd($e->getMessage());

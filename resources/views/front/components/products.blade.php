@@ -41,7 +41,7 @@
                 @endforeach
                 <div class="d-flex justify-content-center">
 
-                    {{-- {!! $products->links('front.components.paginate') !!} --}}
+                    {!! $products->links('front.components.paginate') !!}
                 </div>
             </div>
         </div>
