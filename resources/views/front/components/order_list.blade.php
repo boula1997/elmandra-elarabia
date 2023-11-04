@@ -140,7 +140,7 @@
                                             
                                             <div class="d-flex justify-content-between mb-4">
                                                 <p class="mb-2"> {{ __('general.total') }} </p>
-                                                <p class="mb-2"><span class="cart-total">{{  $order->total}}</span> {{ __('general.pound') }}</p>
+                                                <p class="mb-2"><span class="cart-total">{{  $order->total-50}}</span> {{ __('general.pound') }}</p>
                                             </div>
 
                                             <div class="d-flex justify-content-between">

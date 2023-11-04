@@ -50,9 +50,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        dd('eee');
+        // dd('eee');
         $categories=$this->category->latest()->get();
-        return view('admin.crud.products.create',compact('categories'));
+        $subcategories=Subcategory::all();
+        return view('admin.crud.products.create',compact('categories','subcategories'));
     }
 
     /**
