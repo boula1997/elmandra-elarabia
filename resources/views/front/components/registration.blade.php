@@ -106,7 +106,7 @@
                             </div>
 
                             <!-- Register buttons -->
-                            <div class="text-center">
+                            {{-- <div class="text-center">
                                 <p>{{ __('general.or_sign_up_with') }}</p>
                                 <button type="button" class="btn btn-link btn-floating mx-1">
                                     <i class="fab fa-facebook-f"></i>
@@ -123,7 +123,7 @@
                                 <button type="button" class="btn btn-link btn-floating mx-1">
                                     <i class="fab fa-github"></i>
                                 </button>
-                            </div>
+                            </div> --}}
                         </form>
                     </div>
                 </div>

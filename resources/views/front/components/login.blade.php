@@ -63,8 +63,8 @@
                                 {{-- <label class="form-check-label" for="form2Example33">
                   {{__('general.subscribe_to_our_newsletter')}}
                 </label> --}}
-                                <a href="{{ route('user.login') }}"
-                                    class="form-check-label">{{ __('general.forget_password') }}</a>
+                                {{-- <a href="{{ route('user.login') }}"
+                                    class="form-check-label">{{ __('general.forget_password') }}</a> --}}
                             </div>
 
                             <div class="form-check d-flex justify-content-center mb-4">
@@ -85,7 +85,7 @@
                             </div>
 
                             <!-- Register buttons -->
-                            <div class="text-center">
+                            {{-- <div class="text-center">
                                 <p>{{ __('general.or_login_in_with') }}</p>
                                 <button type="button" class="btn btn-link btn-floating mx-1">
                                     <i class="fab fa-facebook-f"></i>
@@ -102,7 +102,7 @@
                                 <button type="button" class="btn btn-link btn-floating mx-1">
                                     <i class="fab fa-github"></i>
                                 </button>
-                            </div>
+                            </div> --}}
                         </form>
                     </div>
                 </div>
