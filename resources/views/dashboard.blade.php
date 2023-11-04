@@ -85,22 +85,7 @@
                                         class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-secondary">
-                                <div class="inner">
-                                    <h3>{{itemsCount('processes')}}</h3>
 
-                                    <p>@lang('general.processes')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
-                                </div>
-                                <a href="{{route('processes.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
                             <!-- small box -->
                             <div class="col-lg-3 col-6">
                                 <div class="small-box bg-danger">
@@ -116,23 +101,7 @@
                                             class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                                 </div>
                             </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3>{{itemsCount('faqs')}}</h3>
 
-                                    <p>@lang('general.faqs')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-stats-bars"></i>
-                                </div>
-                                <a href="{{route('faqs.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
                         <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-warning">

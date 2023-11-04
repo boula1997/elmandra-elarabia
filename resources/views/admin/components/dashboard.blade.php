@@ -1,10 +1,10 @@
 <!-- Preloader -->
-{{-- <div class="preloader flex-column justify-content-center align-items-center">
+<div class="preloader flex-column justify-content-center align-items-center">
             <a href="{{ route('front.home') }}">
                 <img class="animation__shake" src="{{ asset('admin/img/logo.png') }}" alt="AdminLTELogo"
                     height="60" width="60">
             </a>
-        </div> --}}
+        </div>
 
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -58,68 +58,6 @@
             </li>
         @endforeach
 
-
-        <!-- Messages Dropdown Menu -->
-        {{-- <li class="nav-item dropdown"> --}}
-            {{-- <a class="nav-link" href="{{ route('messages.index') }}">
-                <i class=" px-1 far fa-comments"></i>
-                <span class="badge badge-danger navbar-badge">{{ itemsCount('messages') }}</span>
-            </a> --}}
-            {{-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="User Avatar"
-                            class="img-size-50 mr-3 img-circle">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Brad Diesel
-                                <span class="float-right text-sm text-danger"><i class=" px-1 fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">Call me whenever you can...</p>
-                            <p class="text-sm text-muted"><i class=" px-1 far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="{{ asset('dist/img/user8-128x128.jpg') }}" alt="User Avatar"
-                            class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                John Pierce
-                                <span class="float-right text-sm text-muted"><i class=" px-1 fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">I got your message bro</p>
-                            <p class="text-sm text-muted"><i class=" px-1 far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="{{ asset('dist/img/user3-128x128.jpg') }}" alt="User Avatar"
-                            class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Nora Silvester
-                                <span class="float-right text-sm text-warning"><i class=" px-1 fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">The subject goes here</p>
-                            <p class="text-sm text-muted"><i class=" px-1 far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-            </div> --}}
-        {{-- </li> --}}
         <!-- Newsletters Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" href="{{ route('messages.index') }}">
@@ -248,26 +186,6 @@
                 @endcan
 
 
-                {{-- @can('partner-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="far fa-handshake"></i>
-                            <p>
-                                @lang('general.partners') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('partners') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('partners.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
-
                 @can('team-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -288,30 +206,11 @@
                     </li>
                 @endcan
 
-                {{-- @can('service-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fab fa-servicestack"></i>
-                            <p>
-                                @lang('general.services') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('services') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('services.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
+
 
                 @can('product-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            {{-- <i class=" px-1 fab fa-productstack"></i> --}}
                             <i class="fab fa-product-hunt"></i>
                             <p>
                                 @lang('general.product') <i class=" px-1 fas fa-angle-left right"></i>
@@ -332,9 +231,7 @@
                 @can('category-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            {{-- <i class=" px-1 fab fa-categoriestack"></i> --}}
                             <i class="fab fa-buromobelexperte"></i>
-                            {{-- <i class="fab fa-category-hunt"></i> --}}
                             <p>
                                 @lang('general.categories') <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('categories') }}</span>
@@ -354,9 +251,7 @@
                 @can('subcategory-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            {{-- <i class=" px-1 fab fa-subcategoriestack"></i> --}}
                             <i class="fab fa-buromobelexperte"></i>
-                            {{-- <i class="fab fa-subcategory-hunt"></i> --}}
                             <p>
                                 @lang('general.subcategories') <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('subcategories') }}</span>
@@ -376,7 +271,6 @@
                 @can('slider-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            {{-- <i class=" px-1 fab fa-sliderstack"></i> --}}
                             <i class="fas fa-sliders-h"></i>
                             <p>
                                 @lang('general.sliders') <i class=" px-1 fas fa-angle-left right"></i>
@@ -414,46 +308,6 @@
                     </li>
                 @endcan
 
-                {{-- @can('process-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-microchip"></i>
-                            <p>
-                                @lang('general.processes') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('processes') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('processes.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
-
-                {{-- @can('portfolio-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-portrait"></i>
-                            <p>
-                                @lang('general.portfolios')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('Portfolios') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('portfolios.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
 
                 @can('page-list')
                     <li class="nav-item">
@@ -476,25 +330,6 @@
                     </li>
                 @endcan
 
-                {{-- @can('faq-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-tags"></i>
-                            <p>
-                                @lang('general.faqs') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('faqs') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('faqs.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
 
                 @can('counter-list')
                     <li class="nav-item">
@@ -555,25 +390,6 @@
                     </li>
                 @endcan
 
-                {{-- @can('orderproduct-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-play-circle"></i>
-                            <p>
-                                @lang('general.orderproducts') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('orderproducts') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('orderproducts.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
 
                 @can('message-list')
                     <li class="nav-item">
@@ -622,7 +438,6 @@
                             <i class="fas fa-cog"></i>
                             <p>
                                 @lang('general.settings')
-                                {{-- <span class="right badge badge-danger">@lang('general.new')</span> --}}
                             </p>
                         </a>
                     </li>
