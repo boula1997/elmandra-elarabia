@@ -27,8 +27,6 @@ class CategorySeeder extends Seeder
                         "Others",
                         "Offers",
                     ];
-        $subtitle_en =    [null,null,null,null,null,null,null];
-        $description_en = [ null,null,null,null,null,null,null];
 
         $title_ar = [
                         "ألعاب",
@@ -45,9 +43,7 @@ class CategorySeeder extends Seeder
                         "العروض",
                     ];  
 
-        $subtitle_ar =    [null,null,null,null,null,null,null];
 
-        $description_ar = [null,null,null,null,null,null,null];
 
         $images = [
                     "images/40cfbdV2muONc4yQnTOM2j6Vj1r93LaF8xtPwuiR.jpg",
@@ -64,21 +60,15 @@ class CategorySeeder extends Seeder
                     "images/8nljzVfkdhbm5xN5YtRgYtIUZ5hv8q9ZSy9XDc5P.webp",
                     ];
 
-        $icons=[null,null,null,null,null,null,null];
 
         for ($i = 0; $i < count($title_ar); $i++) {
             $category = Category::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => $description_ar[$i],
-                    'subtitle' => $subtitle_ar[$i],
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'description' => $description_en[$i],
-                    'subtitle' => $subtitle_en[$i],
                 ],
-                'icon'=>$icons[$i],
             ]);
 
             $category->file()->create(["url"=>$images[$i]]);

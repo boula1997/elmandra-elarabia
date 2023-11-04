@@ -24,14 +24,11 @@ class ServiceController extends Controller
     private $counter;
     private $portfolio;
 
-    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio)
+    public function __construct( Testimonial $testimonial, Team $team, Counter $counter)
     {
-        $this->service = $service;
         $this->testimonial = $testimonial;
         $this->team = $team;
-        $this->process = $process;
         $this->counter = $counter;
-        $this->portfolio = $portfolio;
     }
 
     /**

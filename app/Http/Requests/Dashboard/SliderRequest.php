@@ -29,7 +29,7 @@ class SliderRequest extends FormRequest
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
-            $rules += [$locale . '.description' => ['required']];
+            $rules += [$locale . '.description' => ['nullable']];
         }
         return  $rules;
     }

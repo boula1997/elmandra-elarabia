@@ -22,30 +22,20 @@ class HomeController extends Controller
      *
      * @return void
      */
-    private $service;
     private $testimonial;
     private $team;
-    private $process;
     private $counter;
-    private $portfolio;
-    private $faq;
-    // private $settings;
     private $teams;
     private $partners;
     private $slider;
     private $subcategory;
 
-    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio,Faq $faq,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory)
+    public function __construct( Testimonial $testimonial, Team $team, Counter $counter,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory)
     {
-        $this->service = $service;
         $this->testimonial = $testimonial;
         $this->team = $team;
-        $this->process = $process;
         $this->counter = $counter;
-        $this->portfolio = $portfolio;
-        $this->faq=$faq;
         $this->teams=$teams;
-        // $this->settings=$settings;
         $this->partners=$partners;
         $this->slider=$slider;
         $this->subcategory=$subcategory;
@@ -59,20 +49,15 @@ class HomeController extends Controller
     public function index()
     {
         try {
-            $services = $this->service->get();
             $testimonials = $this->testimonial->get();
-            $processes = $this->process->take(9)->latest()->get();
             $teams = $this->team->get();
             $counters = $this->counter->get();
-            $portfolios = $this->portfolio->get();
-            $faqs=$this->faq->get();
-            // $settings=$this->settings->get();
             $teams=$this->teams->get();
             $partners=$this->partners->get();
             $sliders=$this->slider->get();
             $subcategories=$this->subcategory->get();
 
-            return view('front.index', compact('testimonials', 'services', 'processes', 'portfolios', 'teams', 'counters','faqs','teams','partners','sliders','subcategories'));
+            return view('front.index', compact('testimonials', 'teams', 'counters','teams','partners','sliders','subcategories'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);

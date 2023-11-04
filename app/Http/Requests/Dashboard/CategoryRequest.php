@@ -22,14 +22,12 @@ class CategoryRequest extends FormRequest
         //  $this->merge(['user_id' => auth('api')->user()->id]);
 
 
-        $image = request()->isMethod('put') ? 'nullable' : 'required';
+        $image = request()->isMethod('put') ? 'nullable|image|max:1000' : 'required|image|max:1000';
         $rules = [
             'image' =>  $image ,
-            'icon' =>  'required' ,
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
-            $rules += [$locale . '.description' => ['required']];
         }
         return  $rules;
     }

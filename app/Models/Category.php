@@ -14,7 +14,7 @@ class Category extends Model implements TranslatableContract
 {
     use HasFactory, Translatable, MorphFile;
     protected $table = 'categories';
-    public $translatedAttributes = ['title', 'subtitle', 'description'];
+    public $translatedAttributes = ['title'];
     protected $guarded = [];
     public $timestamps = true;
 

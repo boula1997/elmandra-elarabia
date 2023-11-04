@@ -23,7 +23,7 @@ class OrderproductRequest extends FormRequest
 
 
         $rules = [
-            'youtube_link' =>  'required' ,
+          
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
