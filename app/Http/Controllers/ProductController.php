@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Testimonial;
-use App\Models\Gallery;
 use App\Models\Team;
-use App\Models\Category;
 use App\Models\Subcategory;
 use Exception;
 
@@ -24,13 +22,12 @@ class ProductController extends Controller
     private $subcategory;
     private $portfolio;
 
-    public function __construct(Product $product, Testimonial $testimonial, Team $team,  Subcategory $subcategory, Gallery $portfolio)
+    public function __construct(Product $product, Testimonial $testimonial, Team $team,  Subcategory $subcategory)
     {
         $this->product = $product;
         $this->testimonial = $testimonial;
         $this->team = $team;
         $this->subcategory = $subcategory;
-        $this->portfolio = $portfolio;
     }
 
     /**
