@@ -25,12 +25,11 @@ class ProductRequest extends FormRequest
         $image = request()->isMethod('put') ? 'nullable' : 'required';
         $rules = [
             'image' =>  $image ,
-            'icon' =>  'required' ,
-            'category_id' =>  'required' ,
+            'subcategory_id' =>  'required' ,
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
-            $rules += [$locale . '.description' => ['required']];
+            $rules += [$locale . '.description' => ['nullable']];
         }
         return  $rules;
     }
