@@ -33,17 +33,17 @@
             </div>
         </div>
     </div>
-    <div class="row g-2">
-        <div class="col-lg-6">
+    <div class="row gy-3">
+        <div class="col-lg-6 col-sm-12">
             <div class="bg-dark p-5" data-aos="fade-right">
                 <form id="message-form" method="POST">
                     @csrf
                     <div class="row g-3">
-                        <div class="col-6">
+                        <div class="col-md-6 col-sm-12">
                             <input type="text" name="name" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_name') }}" style="height: 55px;">
                             <div id="name" class="err"></div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6 col-sm-12">
                             <input type="text" name="email" class="form-control bg-light border-0 px-4" placeholder="{{ __('general.your_email') }}" style="height: 55px;">
                             <div id="email" class="err"></div>
                         </div>
@@ -63,10 +63,8 @@
                 </form>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="g-map-inner w-50 mx-2" data-aos="fade-left">
+        <div class="col-lg-6 col-sm-12"  data-aos="fade-left">
                 {!! settings()->map !!}
-            </div>
         </div>
     </div>
 </div>
