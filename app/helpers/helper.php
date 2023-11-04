@@ -16,7 +16,6 @@ use App\Models\Partner;
 use App\Models\Testimonial;
 use App\Models\Process;
 use App\Models\Product;
-use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Subcategory;
@@ -80,24 +79,18 @@ function failedResponse($data = [], $message = "error", $status = 400)
 function itemsCount($model)
 {
     $items = [
-        "faqs" => count(Faq::get()),
         "categories" => count(Category::get()),
         "subcategories" => count(Subcategory::get()),
         "messages" => count(Message::get()),
         "counters" => count(Counter::get()),
         "newsletters" => count(Newsletter::get()),
         "contacts" => count(Contact::get()),
-        "Portfolios" => count(Gallery::get()),
-        "images" => count(Image::get()),
         "pages" => count(Page::get()),
         "teams" => count(Team::get()),
         "products" => count(Product::get()),
-        "services" => count(Service::get()),
         "testimonials" => count(Testimonial::get()),
-        "processes" => count(Process::get()),
         "partners" => count(Partner::get()),
         "sliders" => count(Slider::get()),
-        "services" => count(Service::get()),
         "users" => count(User::get()),
         "admins" => count(Admin::get()),
         "orderproducts" => count(Orderproduct::get()),
@@ -109,12 +102,6 @@ function itemsCount($model)
     return $items[$model];
 }
 
-function services()
-{
-    $services = Service::latest()->take(6)->get();
-
-    return $services;
-}
 
 
 

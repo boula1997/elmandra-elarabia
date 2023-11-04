@@ -1,7 +1,7 @@
 <!-- Preloader -->
 <div class="preloader flex-column justify-content-center align-items-center">
             <a href="{{ route('front.home') }}">
-                <img class="animation__shake" src="{{ asset('admin/img/logo.png') }}" alt="AdminLTELogo"
+                <img class="animation__shake" width="300px" height="300px" src="{{ settings()->logo}}" alt="AdminLTELogo"
                     height="60" width="60">
             </a>
         </div>

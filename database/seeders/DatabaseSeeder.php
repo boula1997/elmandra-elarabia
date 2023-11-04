@@ -21,12 +21,10 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            FaqSeeder::class,
             MessagesSeeder::class,
             NewslettersSeeder::class,
             CountersSeeder::class,
             ContactsSeeder::class,
-            GalleriesSeeder::class,
             PagesSeeder::class,
             SlidersSeeder::class,
             CategorySeeder::class,
@@ -34,9 +32,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             PermissionTableSeeder::class,
             CreateAdminUserSeeder::class,
-            ProcessesSeeder::class,
             SettingSeeder::class,
-            ServiceSeeder::class,
             PartnerSeeder::class,
             TeamSeeder::class,
             TestimonialsSeeder::class,

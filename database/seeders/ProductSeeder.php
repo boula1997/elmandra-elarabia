@@ -48,19 +48,7 @@ class ProductSeeder extends Seeder
                         "Super Bullet Break",
                     ];
 
-        $subtitle_en = [
-                          // 
-                          null,null,null,null,null,
-                          // 
-                          null,null,null,null,null,
-                          // 
-                          null,null,null,null,null,
-                          // 
-                          null,null,null,null,null,
-                          // 
-                          null,null,null,null,null,
-                        
-                       ];
+
 
         $description_en = [
                               // 
@@ -110,18 +98,6 @@ class ProductSeeder extends Seeder
                        
                     ];  
 
-        $subtitle_ar = [
-                         // 
-                         null,null,null,null,null,
-                         // 
-                         null,null,null,null,null,
-                        // 
-                        null,null,null,null,null,
-                        // 
-                        null,null,null,null,null,
-                        // 
-                        null,null,null,null,null,
-                       ];
 
         $description_ar = [
                             // 
@@ -170,18 +146,6 @@ class ProductSeeder extends Seeder
 
                   ];
 
-        $icons= [ 
-                      // 
-                      null,null,null,null,null,
-                      // 
-                      null,null,null,null,null,
-                      // 
-                      null,null,null,null,null,
-                       // 
-                       null,null,null,null,null,
-                       // 
-                       null,null,null,null,null,
-                ];
 
                 $prices=[100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,100,200,300,700,500,];
                 $prices_bd=[150,250,350,750,550,150,250,350,750,550,150,250,350,750,550,150,250,350,750,550,150,250,350,750,550,];
@@ -192,14 +156,11 @@ class ProductSeeder extends Seeder
                 'ar' => [
                     'title' => $title_ar[$i],
                     'description' => $description_ar[$i],
-                    'subtitle' => $subtitle_ar[$i],
                 ],
                 'en' => [
                     'title' => $title_en[$i],
                     'description' => $description_en[$i],
-                    'subtitle' => $subtitle_en[$i],
                 ],
-                'icon'=>$icons[$i],
                 'subcategory_id'=>\random_int(1,7),
                 'price'=>$prices[$i],
                 'price_bd'=>$prices_bd[$i],
