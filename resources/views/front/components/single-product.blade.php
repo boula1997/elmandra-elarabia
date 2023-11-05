@@ -7,7 +7,7 @@
                         <h5 class="position-relative d-inline-block text-primary text-uppercase">{{ __('general.products') }}</h5>
                         <h1 class="display-5 mb-0">{{ $product->title }}</h1>
                     </div>
-                    <h4 class="text-body fst-italic mb-4">{{ $product->subtitle }}</h4>
+                    {{-- <h4 class="text-body fst-italic mb-4">{{ $product->subtitle }}</h4> --}}
                     <p class="mb-4">    {!! $product->description !!}</p>
                     {{-- <div class="row g-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">

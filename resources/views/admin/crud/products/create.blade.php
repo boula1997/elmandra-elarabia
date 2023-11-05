@@ -36,20 +36,6 @@
                                             value="{{ old($locale . '.title') }}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle') }}">
-                                    </div>
-                                </div>
-
-
 
                                 <div class="col-form-group">
                                     <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
