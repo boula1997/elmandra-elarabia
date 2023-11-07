@@ -85,14 +85,7 @@
 
                         </div>
 
-                        <div class="col-md-6">
-                            @include('admin.components.icon', [
-                                'label' => 'icon',
-                                'required' => true,
-                                'value' => old('icon', $slider->icon),
-                            ])
 
-                        </div>
 
                     </div>
                 </div>

@@ -17,7 +17,6 @@ class CategoryResource extends JsonResource
         return [
             "id" => $this->id,
             "image" => $this->image,
-            "icon" => $this->icon,
             "title" => $this->title,
             "description" => $this->description,
         ];
