@@ -29,7 +29,6 @@ class ProductRequest extends FormRequest
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
-            $rules += [$locale . '.description' => ['nullable']];
         }
         return  $rules;
     }

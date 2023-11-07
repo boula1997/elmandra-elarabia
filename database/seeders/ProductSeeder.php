@@ -50,19 +50,6 @@ class ProductSeeder extends Seeder
 
 
 
-        $description_en = [
-                              // 
-                              null,null,null,null,null,
-                              // 
-                              null,null,null,null,null,
-                              // 
-                              null,null,null,null,null,
-                              // 
-                              null,null,null,null,null,
-                              // 
-                              null,null,null,null,null,
-                          ];
-
         $title_ar = [ 
                         // Video games
                         "اي ايه سبورتس اف سي 24 - بلايستيشن 5",
@@ -99,18 +86,7 @@ class ProductSeeder extends Seeder
                     ];  
 
 
-        $description_ar = [
-                            // 
-                            null,null,null,null,null,
-                            // 
-                            null,null,null,null,null,
-                            // 
-                            null,null,null,null,null,
-                             // 
-                             null,null,null,null,null,
-                             // 
-                            null,null,null,null,null,
-                          ];
+
 
         $images = [
                      // orderproduct games
@@ -155,11 +131,9 @@ class ProductSeeder extends Seeder
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => $description_ar[$i],
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'description' => $description_en[$i],
                 ],
                 'subcategory_id'=>\random_int(1,7),
                 'price'=>$prices[$i],

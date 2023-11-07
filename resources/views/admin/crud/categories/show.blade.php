@@ -35,16 +35,6 @@
                                 </div>
                                 <br>
                                 <br>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
-                                            <div class="card-title fw-bold">
-                                                <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                                <p class="m-0">{!! $category->translate($locale)->description !!}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         @endforeach
                     </div>
