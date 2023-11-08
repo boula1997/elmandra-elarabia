@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="29jc-UBYKY132um7fY6PwBi4ykjXlzGhzrInZKJ3e5I" />
     <title>{{ settings()->website_title }}</title>
 
     <!-- Favicon -->
