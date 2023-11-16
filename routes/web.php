@@ -74,9 +74,22 @@ Route::group(
         Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
         Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
     });
+    Route::get('/team',function(){
+        return view('front.team');
+    })->name('front.team');
 
-        // Route::get('order-list',function(){
-        //     return view('front.order_list');
-        // });
+    Route::get('/testimonial',function(){
+        return view('front.testimonial');
+    })->name('front.testimonial');
+
+    
+    Route::get('/wishlist',function(){
+        return view('front.wishlist');
+    })->name('front.wishlist');
+
+    // Route::get('/cart-view',function(){
+    //     return view('front.cart');
+    // })->name('front.cart');
+
     }
 );

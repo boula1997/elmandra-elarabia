@@ -1,5 +1,267 @@
-        <!-- About Start -->
-        <div class="container-fluid p-5">
+           <!-- Fresh Vegetable Section Start -->
+    <section class="fresh-vegetable-section section-lg-space">
+        <div class="container-fluid-lg">
+            <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
+                <div class="col-xl-6 col-12">
+                    <div class="row g-sm-4 g-2">
+                        <div class="col-6">
+                            <div class="fresh-image-2">
+                                <div>
+                                    <img src="{{asset('template/assets/images/inner-page/about-us/1.jpg')}}"
+                                        class="bg-img blur-up lazyload" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="fresh-image">
+                                <div>
+                                    <img src="{{asset('template/assets/images/inner-page/about-us/2.jpg')}}"
+                                        class="bg-img blur-up lazyload" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-12">
+                    <div class="fresh-contain p-center-left">
+                        <div>
+                            <div class="review-title">
+                                <h4>About Us</h4>
+                                <h2>We make Organic Food In Market</h2>
+                            </div>
+
+                            <div class="delivery-list">
+                                <p class="text-content">Just a few seconds to measure your body temperature. Up to 5
+                                    users! The battery lasts up to 2 years. There are many variations of passages of
+                                    Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A
+                                    global brand that doesn't sleep, we are 24/7 and always bringing something new with
+                                    over 100 new products dropping on the monhtly, bringing you the latest looks for
+                                    less.</p>
+
+                                <ul class="delivery-box">
+                                    <li>
+                                        <div class="delivery-box">
+                                            <div class="delivery-icon">
+                                                <img src="{{asset('template/assets/svg/3/delivery.svg')}}" class="blur-up lazyload" alt="">
+                                            </div>
+
+                                            <div class="delivery-detail">
+                                                <h5 class="text">Free delivery for all orders</h5>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="delivery-box">
+                                            <div class="delivery-icon">
+                                                <img src="{{asset('template/assets/svg/3/leaf.svg')}}" class="blur-up lazyload" alt="">
+                                            </div>
+
+                                            <div class="delivery-detail">
+                                                <h5 class="text">Only fresh foods</h5>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="delivery-box">
+                                            <div class="delivery-icon">
+                                                <img src="{{asset('template/assets/svg/3/delivery.svg')}}" class="blur-up lazyload" alt="">
+                                            </div>
+
+                                            <div class="delivery-detail">
+                                                <h5 class="text">Free delivery for all orders</h5>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="delivery-box">
+                                            <div class="delivery-icon">
+                                                <img src="{{asset('template/assets/svg/3/leaf.svg')}}" class="blur-up lazyload" alt="">
+                                            </div>
+
+                                            <div class="delivery-detail">
+                                                <h5 class="text">Only fresh foods</h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fresh Vegetable Section End -->
+
+    <!-- Client Section Start -->
+    <section class="client-section section-lg-space">
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="about-us-title text-center">
+                        <h4>What We Do</h4>
+                        <h2 class="center">We are Trusted by Clients</h2>
+                    </div>
+
+                    <div class="slider-3_1 product-wrapper">
+                        <div>
+                            <div class="clint-contain">
+                                <div class="client-icon">
+                                    <img src="{{asset('template/assets/svg/3/work.svg')}}" class="blur-up lazyload" alt="">
+                                </div>
+                                <h2>10</h2>
+                                <h4>Business Years</h4>
+                                <p>A coffee shop is a small business that sells coffee, pastries, and other morning
+                                    goods. There are many different types of coffee shops around the world.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="clint-contain">
+                                <div class="client-icon">
+                                    <img src="{{asset('template/assets/svg/3/buy.svg')}}" class="blur-up lazyload" alt="">
+                                </div>
+                                <h2>80 K+</h2>
+                                <h4>Products Sales</h4>
+                                <p>Some coffee shops have a seating area, while some just have a spot to order and then
+                                    go somewhere else to sit down. The coffee shop that I am going to.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="clint-contain">
+                                <div class="client-icon">
+                                    <img src="{{asset('template/assets/svg/3/user.svg')}}" class="blur-up lazyload" alt="">
+                                </div>
+                                <h2>90%</h2>
+                                <h4>Happy Customers</h4>
+                                <p>My goal for this coffee shop is to be able to get a coffee and get on with my day.
+                                    It's a Thursday morning and I am rushing between meetings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client Section End -->
+
+ 
+
+
+
+    <!-- Blog Section Start -->
+    {{-- <section class="section-lg-space">
+        <div class="container-fluid-lg">
+            <div class="about-us-title text-center">
+                <h4 class="text-content">Our Blog</h4>
+                <h2 class="center">Our Latest Blog</h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider-5 ratio_87">
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <div class="blog-image">
+                                        <a href="blog-detail.html" class="rounded-3">
+                                            <img src="{{asset('template/assets/images/veg-2/blog/1.jpg')}}" class="bg-img blur-up lazyload"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail d-block">
+                                    <h6>Farmart</h6>
+                                    <h5>Fresh Meat Saugage</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <div class="blog-image">
+                                        <a href="blog-detail.html" class="rounded-3">
+                                            <img src="{{asset('template/assets/images/veg-2/blog/2.jpg')}}" class="bg-img blur-up lazyload"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail d-block">
+                                    <h6>Soda Brand</h6>
+                                    <h5>Soda 500ml - 20% OFF</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <div class="blog-image">
+                                        <a href="blog-detail.html" class="rounded-3">
+                                            <img src="{{asset('template/assets/images/veg-2/blog/3.jpg')}}" class="bg-img blur-up lazyload"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail d-block">
+                                    <h6>Beer Brand</h6>
+                                    <h5>Soda 500ml - 20% OFF</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <div class="blog-image">
+                                        <a href="blog-detail.html" class="rounded-3">
+                                            <img src="{{asset('template/assets/images/veg-2/blog/4.jpg')}}" class="bg-img blur-up lazyload"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail d-block">
+                                    <h6>Beer Brand</h6>
+                                    <h5>Fresh Beer -30% OFF</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-image">
+                                    <a href="blog-detail.html" class="rounded-3">
+                                        <img src="{{asset('template/assets/images/veg-2/blog/5.jpg')}}" class="bg-img blur-up lazyload"
+                                            alt="">
+                                    </a>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail d-block">
+                                    <h6>Milk Brand</h6>
+                                    <h5>Fresh Milk</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
+
+    <!-- Blog Section End -->
+       <!-- About Start -->
+        {{-- <div class="container-fluid p-5">
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" data-aos="fade-{{ app()->getLocale()=='ar'?'left':'right'}}">
                     <div class="position-relative h-100">
@@ -34,44 +296,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- About End -->
-    
-    <!-- about area start -->
-    {{-- <div class="about-area pd-top-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8">
-                    <div class="about-mask-bg-wrap about-mask-bg-wrap-1 mb-4 mb-lg-0"  data-aos="fade-right">
-                        <img class="shape-image-sm top_image_bounce" src="{{ asset('assets/img/about/1sm.webp') }}"
-                            alt="img">
-                        <img class="shape-image" src="{{ asset('assets/img/about/1s.webp') }}" alt="img">
-                        <div class="thumb">
-                            <img src="{{ asset(isset(page('about-us')->images[0]->url) ? page('about-us')->images[0]->url : asset('default.jpg')) }}"
-                                alt="img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 align-self-center" data-aos="fade-left">
-                    <div class="section-title px-lg-5 mb-0">
-                        <h5 class="sub-title right-line">{{ page('about-us')->title }}</h5>
-                        <h2 class="title">{{ page('about-us')->subtitle }}</h2>
-                        {!! page('about-us')->description !!}
-                        <div class="exp-wrap mt-3">
-                            <div class="row">
-                                @foreach ($counters as $counter)
-                                    <div class="col-sm-4">
-                                        <div class="single-exp-inner">
-                                            <h2><span class="counter">{{ $counter->count }}</span> <sub></sub></h2>
-                                            <h5>{{ $counter->title }}</h5>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- about area end -->
+
