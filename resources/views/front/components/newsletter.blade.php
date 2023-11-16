@@ -1,7 +1,35 @@
-<div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
+    <!-- Newsletter Section Start -->
+    <section class="newsletter-section section-b-space">
+        <div class="container-fluid-lg">
+            <div class="newsletter-box newsletter-box-2">
+                <div class="newsletter-contain py-5">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xxl-4 col-lg-5 col-md-7 col-sm-9 offset-xxl-2 offset-md-1">
+                                <div class="newsletter-detail">
+                                    <h2>Join our newsletter and get...</h2>
+                                    <h5>$20 discount for your first order</h5>
+                                    <div class="input-box">
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter Your Email">
+                                        <i class="fa-solid fa-envelope arrow"></i>
+                                        <button class="sub-btn btn">
+                                            <span class="d-sm-block d-none">Subscribe</span>
+                                            <i class="fa-solid fa-arrow-right icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Section End -->
+{{-- <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
     <h4 class="text-uppercase text-white mb-4">{{ __('general.newsletters') }}</h4>
     <h6 class="text-uppercase text-white">{{ __('general.subscribe_now') }}</h6>
-    {{-- <p class="text-light">Amet justo diam dolor rebum lorem sit stet sea justo kasd</p> --}}
     <form method="post" id="newsletter-form">
         <div class="input-group">
             <input type="text input-sm" name="newsletterEmail" class="form-control border-white p-3 w-25" placeholder="{{ __('general.your_email') }}">
@@ -12,7 +40,7 @@
             <div id="newsletterEmail" class="err"></div>
         </div>
     </form>
-</div>
+</div> --}}
 
 
 @push('js')

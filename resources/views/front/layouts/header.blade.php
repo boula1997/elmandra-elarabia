@@ -2,12 +2,15 @@
 <html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="29jc-UBYKY132um7fY6PwBi4ykjXlzGhzrInZKJ3e5I" />
+    <meta name="description" content="Fastkart">
+    <meta name="keywords" content="Fastkart">
+    <meta name="author" content="Fastkart">
+    <link rel="icon" href="{{ asset('template/assets/images/favicon/3.png') }}" type="image/x-icon">
     <title>{{ settings()->website_title }}</title>
+
 
     <!-- Favicon -->
     <link href="{{ asset('front/img/favicon.ico') }}" rel="icon">
@@ -48,6 +51,26 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+     <!-- bootstrap css -->
+     <link id="rtl-link" rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/vendors/bootstrap.css') }}">
+
+     <!-- wow css -->
+     <link rel="stylesheet" href="{{ asset('template/assets/css/animate.min.css') }}" />
+ 
+     <!-- font-awesome css -->
+     <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/vendors/font-awesome.css') }}">
+ 
+     <!-- feather icon css -->
+     <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/vendors/feather-icon.css') }}">
+ 
+     <!-- slick css -->
+     <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/vendors/slick/slick.css') }}">
+     <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/vendors/slick/slick-theme.css') }}">
+ 
+     <!-- Iconly css -->
+     <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/bulk-style.css') }}">
+ 
     @if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css') }}">
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
@@ -55,8 +78,10 @@
     @else
         <!-- Customized Bootstrap Stylesheet -->
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
+            <!-- Template css -->
+         <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/style.css') }}">
         <!-- Template Stylesheet -->
-        <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('front/css/style.css') }}"> --}}
     @endif
 
     <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">

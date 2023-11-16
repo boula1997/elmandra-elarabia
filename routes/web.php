@@ -34,6 +34,7 @@ Route::group(
         Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store'])->name('user.register'); 
         Route::get('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'create'])->name('user.login-view');
         Route::post('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store'])->name('user.login'); 
+        Route::get('/forget', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'forget'])->name('user.forget'); 
 
         Route::get('/', [HomeController::class, 'index'])->name('front.home');
         Route::get('/faq-page', 'App/Http/Controllers/FaqController@index')->name('front.faq');

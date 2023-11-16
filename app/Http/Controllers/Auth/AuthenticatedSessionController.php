@@ -36,6 +36,15 @@ class AuthenticatedSessionController extends Controller
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 
+    public function forget()
+    {
+        // $request->authenticate();
+
+        // $request->session()->regenerate();
+
+        return view('front.login_registration.forget');
+    }
+
     /**
      * Destroy an authenticated session.
      *

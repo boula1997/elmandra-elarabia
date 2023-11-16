@@ -1,73 +1,161 @@
-     <!-- Carousel Start -->
-     <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-               
-                @foreach ($sliders as $slider)
-                <div class="carousel-item {{ $loop->iteration==1? 'active':'' }}">
-                    <img class="w-100" src="{{  $slider->image  }}" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ $slider->subtitle }}</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ $slider->title }}</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{ __('general.get_started') }}</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">{{ __('general.products') }}</a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            
-                {{-- <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('images/carousel-2.jpg') }}" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Get Started</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Products</a>
-                        </div>
-                    </div>
-                </div> --}}
+      <!-- Blog Section Start -->
+      <section>
+        <div class="container-fluid-lg">
+            <div class="title">
+                <h2>Featured Blog</h2>
+                <span class="title-leaf">
+                    <svg class="icon-width">
+                        <use xlink:href="{{ asset('template/assets/svg/leaf.svg#leaf')}}"></use>
+                    </svg>
+                </span>
+                <p>A virtual assistant collects the products from your list</p>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- Carousel End -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider-5 ratio_87">
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <a href="blog-detail.html" class="blog-image">
+                                        <img src="{{ asset('template/assets/images/veg-2/blog/1.jpg')}}" class="bg-img blur-up lazyload"
+                                            alt="">
+                                    </a>
+                                </div>
 
-   <!-- banner area start -->
-    {{-- <div class="banner-area banner-area-1 bg-black bg-relative" >
-        <div class="banner-bg-img" style="background-image: url({{ asset('assets/img/banner/2.webp')}}); "></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-7 text-center text-lg-end order-lg-last" data-aos="fade-up">
-                    <div class="banner-mask-bg-wrap mb-5 mb-lg-0">
-                        <img class="shape-image" src="{{asset('assets/img/banner/6.webp')}}" alt="img">
-                        <div class="thumb">
-                            <img src="{{ asset(isset(page('home-banner')->images[0]->url) ? page('home-banner')->images[0]->url : asset('default.jpg')) }}" alt="img">
+                                <div class="blog-detail">
+                                    <h6>Farmart</h6>
+                                    <h5>Fresh Meat Saugage</h5>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-9 order-lg-first align-self-center" data-aos="fade-up">
-                    <div class="banner-inner style-white  text-center text-lg-start">
-                        <h4 class="sub-title">{{page('home-banner')->subtitle}}</h4>
-                        <h2 class="title fs-1">{{page('home-banner')->title}}</h2>
-                        <p class="content">{!! page('home-banner')->description !!}</p>
-                        <div class="btn-wrap">
-                            <a class="btn btn-base me-2" href="{{ request()->routeIs('front.home')?'#process':route('front.home').'#process'}}" >{{__('general.get_started')}}</a>
-                            <a class="btn btn-border-white" href="{{ route('front.message') }}">{{__('general.message')}}</a>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <a href="blog-detail.html" class="blog-image">
+                                        <img src="{{ asset('template/assets/images/veg-2/blog/2.jpg')}}" class="bg-img blur-up lazyload"
+                                            alt="">
+                                    </a>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail">
+                                    <h6>Soda Brand</h6>
+                                    <h5>Soda 500ml - 20% OFF</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <a href="blog-detail.html" class="blog-image">
+                                        <img src="{{ asset('template/assets/images/veg-2/blog/3.jpg')}}" class="bg-img blur-up lazyload"
+                                            alt="">
+                                    </a>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail">
+                                    <h6>Beer Brand</h6>
+                                    <h5>Soda 500ml - 20% OFF</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <a href="blog-detail.html" class="blog-image">
+                                        <img src="{{ asset('template/assets/images/veg-2/blog/4.jpg')}}" class="bg-img blur-up lazyload"
+                                            alt="">
+                                    </a>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail">
+                                    <h6>Beer Brand</h6>
+                                    <h5>Fresh Beer -30% OFF</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="blog-box">
+                                <div class="blog-box-image">
+                                    <a href="blog-detail.html" class="blog-image">
+                                        <img src="{{ asset('template/assets/images/veg-2/blog/5.jpg')}}" class="bg-img blur-up lazyload"
+                                            alt="">
+                                    </a>
+                                </div>
+
+                                <a href="blog-detail.html" class="blog-detail">
+                                    <h6>Milk Brand</h6>
+                                    <h5>Fresh Milk</h5>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> --}}
-    <!-- banner area end -->
+    </section>
+    <!-- Blog Section End -->
+  
+  {{-- <div class="swiper mySwiper" style="height: 90vh">
+      <div class="swiper-wrapper">
+          @foreach ($sliders as $slider)
+              <div class="swiper-slide">
+                  <img class="w-100 slider-image" src="{{ asset($slider->image) }}" alt="Image">
+                  <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                      <div class="p-3" style="max-width: 900px;">
+                          <h5 class="text-white text-uppercase"> {{ $slider->title }} </h5>
+                          <h1 class="display-5 text-white text-uppercase mb-md-4">{{ $slider->subtitle }}</h1>
+                          <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">{{ __('general.join_us') }}</a>
+                          <a href="{{ route('front.message') }}"
+                              class="btn btn-light py-md-3 px-md-5">{{ __('general.contact') }}</a>
+                      </div>
+                  </div>
+              </div>
+          @endforeach
+      </div>
+      <div class="swiper-pagination"></div>
+  </div> --}}
+
+
+  @push('js')
+      <script>
+          var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              effect: "fade",
+              autoplay: {
+                  delay: 3500,
+                  disableOnInteraction: false,
+              },
+              loop: true,
+              navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+              },
+              pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+              },
+              breakpoints: {
+                  // when window width is >= 320px
+                  320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                  },
+                  // when window width is >= 480px
+                  480: {
+                      slidesPerView: 1,
+                      spaceBetween: 30
+                  },
+                  // when window width is >= 640px
+                  640: {
+                      slidesPerView: 1,
+                      spaceBetween: 40
+                  }
+              }
+          });
+      </script>
+  @endpush

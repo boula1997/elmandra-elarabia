@@ -1,5 +1,101 @@
+    <!-- log in section start -->
+    <section class="log-in-section section-b-space">
+        <div class="container-fluid-lg w-100">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
+                    <div class="image-contain">
+                        <img src="{{ asset('template/assets/images/inner-page/sign-up.png')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
+                    <div class="log-in-box">
+                        <div class="log-in-title">
+                            <h3>Welcome To Fastkart</h3>
+                            <h4>Create New Account</h4>
+                        </div>
+
+                        <div class="input-box">
+                            <form class="row g-4">
+                                <div class="col-12">
+                                    <div class="form-floating theme-form-floating">
+                                        <input type="text" class="form-control" id="fullname" placeholder="Full Name">
+                                        <label for="fullname">Full Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating theme-form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating theme-form-floating">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Password">
+                                        <label for="password">Password</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="forgot-box">
+                                        <div class="form-check ps-0 m-0 remember-box">
+                                            <input class="checkbox_animated check-box" type="checkbox"
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">I agree with
+                                                <span>Terms</span> and <span>Privacy</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn-animation w-100" type="submit">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="other-log-in">
+                            <h6>or</h6>
+                        </div>
+
+                        <div class="log-in-button">
+                            <ul>
+                                <li>
+                                    <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                                        class="btn google-button w-100">
+                                        <img src="{{ asset('template/assets/images/inner-page/google.png')}}" class="blur-up lazyload"
+                                            alt="">
+                                        Sign up with Google
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" class="btn google-button w-100">
+                                        <img src="{{ asset('template/assets/images/inner-page/facebook.png')}}" class="blur-up lazyload"
+                                            alt=""> Sign up with Facebook
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="other-log-in">
+                            <h6></h6>
+                        </div>
+
+                        <div class="sign-up-box">
+                            <h4>Already have an account?</h4>
+                            <a href="login.html">Log In</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-7 col-xl-6 col-lg-6"></div>
+            </div>
+        </div>
+    </section>
+    <!-- log in section end -->
 <!-- Section: Design Block -->
-<section class="text-center text-lg-start">
+{{-- <section class="text-center text-lg-start">
     <style>
         :lang(en).cascading-right {
             margin-right: -30px;
@@ -82,13 +178,6 @@
                             </div>
 
                             <!-- Checkbox -->
-                            {{-- <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                <label class="form-check-label" for="form2Example33">
-                 {{__('general.subscribe_to_our_newsletter')}}
-                </label>
-              </div>
-               --}}
                             <div class="form-check d-flex justify-content-center mb-4">
                                 <a href="{{ route('user.login') }}"
                                     class="form-check-label">{{ __('general.already_have_account!') }}</a>
@@ -97,33 +186,11 @@
                             <!-- Submit button -->
 
                             <div class="col-md-12 mb-4 d-flex justify-content-center">
-                                {{-- </div>
-                 <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block"></a>
-              </div> --}}
+                               
                                 <button type="submit" class="btn btn-primary py-md-3 px-md-5 d-lg-block">
                                     {{ __('general.sign_up') }}
                                 </button>
                             </div>
-
-                            <!-- Register buttons -->
-                            {{-- <div class="text-center">
-                                <p>{{ __('general.or_sign_up_with') }}</p>
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-google"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-github"></i>
-                                </button>
-                            </div> --}}
                         </form>
                     </div>
                 </div>
@@ -136,5 +203,5 @@
         </div>
     </div>
     <!-- Jumbotron -->
-</section>
+</section> --}}
 <!-- Section: Design Block -->
