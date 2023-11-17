@@ -47,19 +47,32 @@
                             <div class="dropdown theme-form-select">
                                 <button class="btn dropdown-toggle" type="button" id="select-language"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ asset('template/assets/images/country/united-states.png')}}"
+                                    <img src="{{ asset('flags/' . app()->getLocale(). '.png') }}"
                                         class="img-fluid blur-up lazyload" alt="">
-                                    <span>English</span>
+                                    <span>{{ app()->getLocale() == 'en' ? 'English' : 'العربية' }}</span>
                                 </button>
+
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
+
+                                    @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                     <li>
+                                    <a class="dropdown-item" rel="alternate"
+                                        hreflang="{{ $localeCode }}"
+                                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        <img src="{{ asset('flags/' . $localeCode . '.png') }}"
+                                                class="img-fluid blur-up lazyload" alt="">
+                                        <span>{{ $localeCode == 'en' ? 'English' : 'العربية' }}</span>
+                                    </a>
+                                </li>
+                                @endforeach
+                                    {{-- <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="english">
                                             <img src="{{ asset('template/assets/images/country/united-kingdom.png')}}"
                                                 class="img-fluid blur-up lazyload" alt="">
                                             <span>English</span>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </li> --}}
+                                    {{-- <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="france">
                                             <img src="{{ asset('template/assets/images/country/germany.png')}}"
                                                 class="img-fluid blur-up lazyload" alt="">
@@ -72,11 +85,11 @@
                                                 class="img-fluid blur-up lazyload" alt="">
                                             <span>Turki</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </li>
-                        <li class="right-nav-list">
+                        {{-- <li class="right-nav-list">
                             <div class="dropdown theme-form-select">
                                 <button class="btn dropdown-toggle" type="button" id="select-dollar"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,7 +108,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -113,8 +126,8 @@
                                 <i class="fa-solid fa-bars"></i>
                             </span>
                         </button>
-                        <a href="index.html" class="web-logo nav-logo">
-                            <img src="{{ asset('template/assets/images/logo/1.png')}}" class="img-fluid blur-up lazyload" alt="">
+                        <a href="{{ route('front.home') }}" class="web-logo nav-logo">
+                            <img src="{{ settings()->logo }}" class="img-fluid blur-up lazyload logo" alt="">
                         </a>
 
                         <div class="middle-box">
@@ -124,14 +137,14 @@
                                     <span class="location-arrow">
                                         <i data-feather="map-pin"></i>
                                     </span>
-                                    <span class="locat-name">Your Location</span>
+                                    <span class="locat-name">{{ __('general.your_location') }}</span>
                                     <i class="fa-solid fa-angle-down"></i>
                                 </button>
                             </div>
 
                             <div class="search-box">
                                 <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="I'm searching for..."
+                                    <input type="search" class="form-control" placeholder="{{ __('general.iam_searching') }}"
                                         aria-label="Recipient's username" aria-describedby="button-addon2">
                                     <button class="btn" type="button" id="button-addon2">
                                         <i data-feather="search"></i>
@@ -257,15 +270,15 @@
                                         <ul class="user-box-name">
                                             <li class="product-box-contain">
                                                 <i></i>
-                                                <a href="{{ route('user.login') }}">Log In</a>
+                                                <a href="{{ route('user.login') }}">{{ __('general.login') }}</a>
                                             </li>
 
                                             <li class="product-box-contain">
-                                                <a href="{{ route('user.register') }}">Register</a>
+                                                <a href="{{ route('user.register') }}">{{ __('general.register') }}</a>
                                             </li>
 
                                             <li class="product-box-contain">
-                                                <a href="{{ route('user.forget') }}">Forgot Password</a>
+                                                <a href="{{ route('user.forget') }}">{{ __('general.forget') }}</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -285,9 +298,8 @@
                     <div class="header-nav-left">
                         <button class="dropdown-category">
                             <i data-feather="align-left"></i>
-                            <span>All Categories</span>
+                            <span>{{ __('general.categories') }}</span>
                         </button>
-
                         <div class="category-dropdown">
                             <div class="category-title">
                                 <h5>Categories</h5>
@@ -295,16 +307,102 @@
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
-
                             <ul class="category-list">
+
+                                @foreach (categories() as $category)
+
                                 <li class="onhover-category-list">
+                                    <a href="javascript:void(0)" class="category-name">
+                                        <img src="{{ asset($category->image )}}" alt="">
+                                        <h6>{{ $category->title }}</h6>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+
+                                    <div class="onhover-category-box">
+                                        
+                                            <div class="list-1">
+                                                <div class="category-title-box">
+                                                    <h5>{{ __('general.subcategories') }}</h5>
+                                                </div>
+                                                @foreach ($category->subcategories as $subcategory)
+                                                    <ul>
+                                                        <li>
+                                                            <a  href="{{ route('front.products', $subcategory->id) }}">{{ $subcategory->title }}</a>
+                                                        </li>
+                                                        {{-- <li>
+                                                            <a href="javascript:void(0)">Cucumber & Capsicum</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">Leafy Vegetables</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">Root Vegetables</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">Beans & Okra</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">Cabbage & Cauliflower</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">Gourd & Drumstick</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">Specialty</a>
+                                                        </li> --}}
+                                                    </ul>
+                                                @endforeach
+                                            </div>
+
+                                            {{-- <div class="list-2">
+                                                <div class="category-title-box">
+                                                    <h5>Fresh Fruit</h5>
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Banana & Papaya</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Kiwi, Citrus Fruit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Apples & Pomegranate</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Seasonal Fruits</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Mangoes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Fruit Baskets</a>
+                                                    </li>
+                                                </ul>
+                                            </div> --}}
+                                       
+                                    </div>
+                                </li>
+                                {{-- <li cla ss="nav-item dropdown">
+                                    <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
+                                        id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">{{ $category->title }}</a>
+                                    <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
+                                        @foreach ($category->subcategories as $subcategory)
+                                            <a class="dropdown-item text-wrap"
+                                                href="{{ route('front.products', $subcategory->id) }}"><span>{{ $subcategory->title }}</span></a>
+                                        @endforeach
+                                    </div>
+                                </li> --}}
+                            @endforeach
+                                {{-- <li class="onhover-category-list">
                                     <a href="javascript:void(0)" class="category-name">
                                         <img src="{{ asset('template/assets/svg/1/vegetable.svg')}}" alt="">
                                         <h6>Vegetables & Fruit</h6>
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
 
-                                    <div class="onhover-category-box">
+                                    <div>iv class="onhover-category-box">
+
                                         <div class="list-1">
                                             <div class="category-title-box">
                                                 <h5>Organic Vegetables</h5>
@@ -362,7 +460,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div
                                 </li>
 
                                 <li class="onhover-category-list">
@@ -683,7 +781,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -691,18 +789,18 @@
                     <div class="header-nav-middle">
                         <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
                             <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
-                                <div class="offcanvas-header navbar-shadow">
+                                {{-- <div class="offcanvas-header navbar-shadow">
                                     <h5>Menu</h5>
                                     <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
                                         aria-label="Close"></button>
-                                </div>
+                                </div> --}}
                                 <div class="offcanvas-body">
                                     <ul class="navbar-nav">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                data-bs-toggle="dropdown">Home</a>
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.home') ? 'active' : '' }}" href="{{ route('front.home') }}"
+                                                data-bs-toggle="dropdown">{{ __('general.home') }}</a>
 
-                                            <ul class="dropdown-menu">
+                                            {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="index.html">Kartshop</a>
                                                 </li>
@@ -730,14 +828,14 @@
                                                 <li>
                                                     <a class="dropdown-item" href="index-9.html">Fashion</a>
                                                 </li>
-                                            </ul>
+                                            </ul> --}}
                                         </li>
 
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                data-bs-toggle="dropdown">Shop</a>
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.about') ? 'active' : '' }}" href="{{ route('front.about') }}"
+                                                data-bs-toggle="dropdown">{{ __('general.about') }}</a>
 
-                                            <ul class="dropdown-menu">
+                                            {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="shop-category-slider.html">Shop
                                                         Category Slider</a>
@@ -764,14 +862,14 @@
                                                     <a class="dropdown-item" href="shop-top-filter.html">Shop Top
                                                         Filter</a>
                                                 </li>
-                                            </ul>
+                                            </ul> --}}
                                         </li>
 
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                data-bs-toggle="dropdown">Product</a>
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.product') ? 'active' : '' }}" href="{{ route('front.products',1) }}"
+                                                data-bs-toggle="dropdown">{{ __('general.products') }}</a>
 
-                                            <ul class="dropdown-menu">
+                                            {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="product-4-image.html">Product
                                                         4 Image</a>
@@ -807,10 +905,119 @@
                                                     <a href="product-sticky.html" class="dropdown-item">Product
                                                         Sticky</a>
                                                 </li>
-                                            </ul>
+                                            </ul> --}}
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
+                                                data-bs-toggle="dropdown">{{ __('general.contact') }}</a>
+
+                                            {{-- <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="product-4-image.html">Product
+                                                        4 Image</a>
+                                                </li>
+                                                <li class="sub-dropdown-hover">
+                                                    <a href="javascript:void(0)" class="dropdown-item">Product
+                                                        Thumbnail</a>
+                                                    <ul class="sub-menu">
+                                                        <li>
+                                                            <a href="product-left-thumbnail.html">Left Thumbnail</a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="product-right-thumbnail.html">Right
+                                                                Thumbnail</a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="product-bottom-thumbnail.html">Bottom
+                                                                Thumbnail</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="product-bundle.html" class="dropdown-item">Product
+                                                        Bundle</a>
+                                                </li>
+                                                <li>
+                                                    <a href="product-slider.html" class="dropdown-item">Product
+                                                        Slider</a>
+                                                </li>
+                                                <li>
+                                                    <a href="product-sticky.html" class="dropdown-item">Product
+                                                        Sticky</a>
+                                                </li>
+                                            </ul> --}}
                                         </li>
 
-                                        <li class="nav-item dropdown dropdown-mega">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.team') ? 'active' : '' }}" href="{{ route('front.team') }}"
+                                                data-bs-toggle="dropdown">{{ __('general.team') }}</a>
+
+                                            {{-- <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-category-slider.html">Shop
+                                                        Category Slider</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-category.html">Shop
+                                                        Category Sidebar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-banner.html">Shop Banner</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
+                                                        Sidebar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-list.html">Shop List</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-right-sidebar.html">Shop
+                                                        Right Sidebar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-top-filter.html">Shop Top
+                                                        Filter</a>
+                                                </li>
+                                            </ul> --}}
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.testimonial') ? 'active' : '' }}" href="{{ route('front.testimonial') }}"
+                                                data-bs-toggle="dropdown">{{ __('general.testimonials') }}</a>
+
+                                            {{-- <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-category-slider.html">Shop
+                                                        Category Slider</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-category.html">Shop
+                                                        Category Sidebar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-banner.html">Shop Banner</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
+                                                        Sidebar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-list.html">Shop List</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-right-sidebar.html">Shop
+                                                        Right Sidebar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="shop-top-filter.html">Shop Top
+                                                        Filter</a>
+                                                </li>
+                                            </ul> --}}
+                                        </li>
+
+                                        {{-- <li class="nav-item dropdown dropdown-mega">
                                             <a class="nav-link dropdown-toggle ps-xl-2 ps-0"
                                                 href="javascript:void(0)" data-bs-toggle="dropdown">Mega Menu</a>
 
@@ -1046,7 +1253,7 @@
                                                         2</a>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -1065,7 +1272,50 @@
     </div>
 </header>
 <!-- Header End -->
-   <!-- navbar start -->
+
+     <!-- mobile fix menu start -->
+     <div class="mobile-menu d-md-none d-block mobile-cart">
+        <ul>
+            <li class="active">
+                <a href="{{ route('front.home') }}">
+                    <i class="iconly-Home icli"></i>
+                    <span>{{ __('general.home') }}</span>
+                </a>
+            </li>
+
+            <li class="mobile-category">
+                <a href="#">
+                    <i class="iconly-Category icli js-link"></i>
+                    <span>{{ __('general.category') }}</span>
+                </a>
+            </li>
+
+            {{-- <li>
+                <a href="search.html" class="search-box">
+                    <i class="iconly-Search icli"></i>
+                    <span>{{ __('general.search') }}</span>
+                </a>
+            </li> --}}
+
+            <li>
+                <a href="{{ route('front.wishlist') }}" class="notifi-wishlist">
+                    <i class="iconly-Heart icli"></i>
+                    <span>{{ __('general.mywish') }}</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('front.shopping') }}">
+                    <i class="iconly-Bag-2 icli fly-cate"></i>
+                    <span>{{ __('general.cart') }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- mobile fix menu end -->
+
+
+     <!-- navbar start -->
    <!-- Header Start -->
    {{-- <div style="height: 10vh">
        <div class="container-fluid nav-section bg-dark px-0 position-fixed">
@@ -1173,46 +1423,6 @@
        </div>
    </div> --}}
    <!-- Header End -->
-     <!-- mobile fix menu start -->
-     <div class="mobile-menu d-md-none d-block mobile-cart">
-        <ul>
-            <li class="active">
-                <a href="index.html">
-                    <i class="iconly-Home icli"></i>
-                    <span>Home</span>
-                </a>
-            </li>
-
-            <li class="mobile-category">
-                <a href="javascript:void(0)">
-                    <i class="iconly-Category icli js-link"></i>
-                    <span>Category</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="search.html" class="search-box">
-                    <i class="iconly-Search icli"></i>
-                    <span>Search</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="wishlist.html" class="notifi-wishlist">
-                    <i class="iconly-Heart icli"></i>
-                    <span>My Wish</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="cart.html">
-                    <i class="iconly-Bag-2 icli fly-cate"></i>
-                    <span>Cart</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
 
 
    @push('js')

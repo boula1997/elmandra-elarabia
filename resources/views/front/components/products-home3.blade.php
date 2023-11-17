@@ -4,49 +4,51 @@
             <div class="row">
                 <div class="col-12">
                     <div class="slider-4-1 ratio_65 no-arrow product-wrapper">
-                        <div>
-                            <div class="product-slider wow fadeInUp">
-                                <a href="shop-left-sidebar.html" class="product-slider-image">
-                                    <img src="{{asset('template/assets/images/veg-2/pro/1.jpg')}}" class="w-100 blur-up lazyload rounded-3"
-                                        alt="">
-                                </a>
+                        @foreach ($products as $product)
+                            <div>
+                                <div class="product-slider wow fadeInUp">
+                                    <a href="shop-left-sidebar.html" class="product-slider-image">
+                                        <img src="{{asset($product->image)}}" class="w-100 blur-up lazyload rounded-3"
+                                            alt="">
+                                    </a>
 
-                                <div class="product-slider-detail">
-                                    <div>
-                                        <a href="shop-left-sidebar.html" class="d-block">
-                                            <h3 class="text-title">Hot Deals on New Items</h3>
-                                        </a>
-                                        <h5>Daily Essentials Eggs & Dairy</h5>
-                                        <div class="product-rating">
-                                            <ul class="rating">
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star"></i>
-                                                </li>
-                                            </ul>
-                                            <span>(34)</span>
+                                    <div class="product-slider-detail">
+                                        <div>
+                                            <a href="#" class="d-block">
+                                                <h3 class="text-title">{{ $product->title }}</h3>
+                                            </a>
+                                            <h5>{{ $product->subcategory->title }}</h5>
+                                            <div class="product-rating">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span>(34)</span>
+                                            </div>
+                                            <h6>By <span class="theme-color">{{ $product->subcategory->category->title }}</span></h6>
+                                            <button onclick="location.href = 'shop-left-sidebar.html';"
+                                                class="btn btn-animation product-button btn-sm">{{ __('general.shop_now') }}<i
+                                                    class="fa-solid fa-arrow-right icon"></i></button>
                                         </div>
-                                        <h6>By <span class="theme-color">Nestfood</span></h6>
-                                        <button onclick="location.href = 'shop-left-sidebar.html';"
-                                            class="btn btn-animation product-button btn-sm">Shop Now <i
-                                                class="fa-solid fa-arrow-right icon"></i></button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
 
-                        <div>
+                        {{-- <div>
                             <div class="product-slider wow fadeInUp" data-wow-delay="0.05s">
                                 <a href="shop-left-sidebar.html" class="product-slider-image">
                                     <img src="{{asset('template/assets/images/veg-2/pro/2.jpg')}}" class="w-100 blur-up lazyload rounded-3"
@@ -170,7 +172,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

@@ -4,12 +4,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="offer-box hover-effect">
-                    <img src="{{asset('template/assets/images/veg-2/banner/3.jpg')}}" class="bg-img blur-up lazyload" alt="">
+                    <img src="{{ asset(isset(page('counter')->images[0]->url) ? page('counter')->images[0]->url : asset('default.jpg')) }}" class="bg-img blur-up lazyload" alt="">
                     <div class="offer-contain p-4">
                         <div class="offer-detail">
-                            <h2 class="text-dark">Special Offers <span class="text-danger fw-bold">of the
-                                    week!</span></h2>
-                            <p class="text-content">Special offer on this discount, Hurry Up!</p>
+                            <h2 class="text-dark">{{ page('counter')->title }} <span class="text-danger fw-bold">{{ page('counter')->subtitle }}</span></h2>
+                            <p class="text-content">{!! page('counter')->description !!}</p>
                         </div>
                         <div class="offer-timing">
                             <div class="time" id="clockdiv-1" data-hours="1" data-minutes="2" data-seconds="3">

@@ -43,6 +43,8 @@ return [
     'messages'  => 'جهات الاتصال',
     'logout'  => 'تسجيل الخروج',
     'login'  => 'تسجيل الدخول',
+    'register'  => 'انشاء حساب',
+    'forget'  => 'نسيت كلمة السر',
     'show'  => 'عرض',
     'create'  => 'اضافة',
     'edit'  => 'تعديل',
@@ -156,7 +158,7 @@ return [
 
 
     'opening_hour' => 'توقيت العمل ',
-    'hotline' => 'اتصل بنا',
+    'hotline' => 'اتصل بنا 24/7:',
     'follow_us_on' => ' : تواصل معنا عبر',
     'home' => 'الرئيسية',
     'services' => 'خدماتنا',
@@ -232,7 +234,7 @@ return [
     'checkout'=>'الدفع',
     'add_to_cart'=>'اضف الى السلة',
     'add_to_favourite'=>'اضف الى المفضل',
-    'categories'=>'الفئات',
+    'categories'=>'جميع الفئات',
     'sign_up_now'=>'اشترك معنا الان',
     'first_name'=>'الاسم الاول',
     'last_name'=>'الاسم الاخير',
@@ -311,5 +313,26 @@ return [
     'update_profile'=>'حفظ', 
     'items'=>'منتج',
     'show_orders'=>'عرض الطلبات',
+    'your_location'=>'موقعك',
+    'iam_searching'=>'أنا أبحث عن..',
+    'mywish'=>'مفضلى',
+    'shop_now'=>'تسوق الان',
+    'browse_by_categories'=>'تصفح حسب الفئات',
+    'top_categories_of'=>'أهم الفئات في الأسبوع',
+    'use_code'=>'استخدم الكود :',
+    'help_center'=>'مركز المساعدة',
+    'download_app'=>'تحميل التطبيق :',
+    'stay_connected'=>'ابق على اتصال :',
+    'top_selling'=>'الأكثر مبيعا',
+    'top_rated'=>'أعلى التقييمات',
+    'recently_added'=>'أضيف مؤخرا',
+    'trending_products'=>'المنتجات الترند',
+    'subscribe'=>'اشترك',
+    'every_amazing'=>'كل المنتجات المذهلة',
+    'free_delivery'=>'توصيل مجاني للطلبات التي تزيد عن 50',
+    'daily_mega'=>'الخصومات الكبرى اليومية',
+    'best_price'=>'أفضل الأسعار في السوق',
+
+
    
 ];

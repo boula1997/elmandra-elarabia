@@ -15,38 +15,38 @@ class PagesSeeder extends Seeder
     {
         // English Data
         $title_en = [
-                        "Best Gaming center",
-                        "About Our Gaming Community",
+                        "STAY HOME & DELIVERED YOUR",
                         null,
-                        null,
-                        null,
-                        "Team",
+                        "Get $3 Cashback! Min Order of $30",
+                        "Home Products ",
+                        "Special Offers ",
+                        "Join our newsletter and get our news",
                         "TESTIMONIAL",
                         "Products"
 
                     ];
 
         $subtitle_en = [
-                            "GROW YOUR playing skills WITH OUR center",
-                            "Unleashing the Power of Gaming",
-                            null,
-                            null,
-                            "30% DISCOUNT FOR THIS SUMMER",
-                            "Talent Team",
+                            "DAILY NEEDS",
+                            "Real Refreshment",
+                            "GROCERY1920",
+                            "A virtual assistant collects the products from your list",
+                            "of the week!",
+                            "$20 discount for your first order",
                             "OUR CLIENT SAY",
                             "Our Products"
                         
                         ];
 
         $description_en = [
-                            null,
-                            "<p>Through our comprehensive platform, we provide the latest gaming news, in-depth reviews, expert guides, and captivating features that cater to your gaming interests. Whether you're a casual gamer, a competitive player, or simply someone who loves to immerse themselves in virtual worlds, we have something for you.</p>", 
+                            "<p>Many organizations have issued official statements encouraging people to reduce their intake of sugary drinks.</p>",
+                            "<p>Only this week, Don't miss..</p>", 
                         
-                            "<p>Our vision is to create a premier gaming website that serves as a hub for gamers worldwide. We aim to be a go-to destination for all gaming enthusiasts, providing them with a comprehensive platform that offers high-quality content, engaging experiences, and a vibrant community. Our vision is to inspire, entertain, and connect gamers of all ages and backgrounds, fostering a sense of belonging and excitement within the gaming community.</p>", 
+                            null, 
 
-                            "<p>Our mission is to deliver exceptional gaming experiences through our website, catering to the diverse interests and preferences of gamers. We strive to Provide Engaging Content: We commit to delivering top-notch gaming content, including news, reviews, guides, tutorials, and features that inform, entertain, and educate our audience. We aim to be a reliable source of accurate and up-to-date information, ensuring that gamers can rely on us for their gaming needs.</p>",
-                            
                             null,
+                            
+                            "Special offer on this discount, Hurry Up!",
                             null,
                             null,
                             null,
@@ -55,45 +55,44 @@ class PagesSeeder extends Seeder
 
         // Arabic Data
         $title_ar = [
-                        "أفضل مركز ألعاب",
-                        "حول مجتمع الألعاب لدينا",
+                        
+                        "ابق في المنزل & قم بتوصيل طلبك",
                         null,
-                        null,
-                        null,
-                        "لاعبينا",
+                        "احصل على 3 دولارات كاش باك! الحد الأدنى للطلب 30 دولارًا",
+                        "منتجات الرئيسية",
+                        "عروض خاصة",
+                        "انضم إلى نشرتنا الإخبارية واحصل على أخبارنا",
                         "اراء عملائنا",
                         "منتجات",
                     ];
     
             $subtitle_ar = [
-                                "قم بتنمية مهاراتك في اللعب مع مركزنا",
-                                "إطلاق العنان لقوة الألعاب",
-                                null,
-                                null,
-                                "خصم 30% لهذا الصيف",
+                                "الاحتياجات اليومية" ,
+                                "المرطبات الحقيقية",
+                                "GROCERY1920",
+                                "يقوم المساعد الافتراضي بجمع المنتجات من قائمتك",
+                                "لهذا الأسبوع!",
 
-                                "لاعبينا الموهوبيين",
+                                "خصم 20% لطلبك الأول",
                                 
                                 "بعض من اراء عملائنا",
                                 "احدث منتجاتنا",
                             ];
     
             $description_ar = [
+                                "<p>أصدرت العديد من المنظمات بيانات رسمية تشجع الناس على تقليل تناول المشروبات السكرية.</p>",
+                                "<p>هذا الاسبوع فقط لا يفوتك..</p>",
                                 null,
-                                "<p>من خلال منصتنا الشاملة، نقدم أحدث الألعاب، والمراجعات المتعمقة، وأدلة الخبراء، والميزات الجذابة التي تلبي اهتماماتك في الألعاب. سواء كنت لاعبًا عاديًا، أو لاعبًا تنافسيًا، أو ببساطة شخصًا يحب الانغماس في العوالم الافتراضية، فلدينا ما يناسبك.</p>",
-                                
-                                "<p>تتمثل رؤيتنا في إنشاء موقع ويب متميز للألعاب يكون بمثابة مركز للاعبين في جميع أنحاء العالم. نهدف إلى أن نكون وجهة مفضلة لجميع عشاق الألعاب، ونوفر لهم منصة شاملة تقدم محتوى عالي الجودة وتجارب جذابة ومجتمعًا نابضًا بالحياة. رؤيتنا هي إلهام وترفيه وربط اللاعبين من جميع الأعمار والخلفيات، وتعزيز الشعور بالانتماء والإثارة داخل مجتمع الألعاب.</p>",
-
-                                "<p>رسالتنا هي تقديم تجارب ألعاب استثنائية من خلال موقعنا الإلكتروني، بما يلبي اهتمامات وتفضيلات اللاعبين المتنوعة. نحن نسعى جاهدين لتوفير محتوى جذاب: نحن ملتزمون بتقديم محتوى ألعاب من الدرجة الأولى، بما في ذلك الأخبار والمراجعات والأدلة والبرامج التعليمية والميزات التي تُعلم جمهورنا وتسليه وتثقيفه. نحن نهدف إلى أن نكون مصدرًا موثوقًا للمعلومات الدقيقة والحديثة، مما يضمن أن اللاعبين يمكنهم الاعتماد علينا لتلبية احتياجاتهم في الألعاب.</p>",
                                 null,
+                                "عرض خاص على هذا الخصم، أسرع!",
                                 null,
                                 null,
                                 null,
 
                             ];    
 
-            $identifiers=[ "blog","about","vision","mission",
-                           "service","team","testimonial","product"
+            $identifiers=[ "slider","mini_slider","discount","product_home",
+                           "counter","newsletter","testimonial","product"
                          ];  
 
              $images=[ 

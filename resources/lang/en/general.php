@@ -52,6 +52,8 @@ return [
     'edit'  => 'Edit',
     'delete'  => 'Delete',
     'controls'  => 'Controls',
+    'register'  => 'Register',
+    'forget'  => 'Forgot Password',
 
     "permission" => "Permission",
     "setting" => "Setting",
@@ -149,7 +151,7 @@ return [
     "linkedin" => "LinkedIn",
 
     'opening_hour' => 'Opening Hour ',
-    'hotline' => 'Hot Line',
+    'hotline' => 'Hot Line 24/7:',
     'follow_us_on' => 'Follow Us On :',
     'home' => 'Home',
     'services' => 'Services',
@@ -228,7 +230,7 @@ return [
     'checkout'=>'Checkout',
     'add_to_cart'=>'Add to Cart',
     'add_to_favourite'=>'Add to Favourite',
-    'categories'=>'Categories',
+    'categories'=>'All Categories',
     'sign_up_now'=>'Sign up now',
     'first_name'=>'First name',
     'last_name'=>'Last name',
@@ -307,6 +309,32 @@ return [
 
     'items'=>'items',
     'show_orders'=>'Show Orders',
+    'your_location'=>'Your Location',
+    'iam_searching'=>"I'm searching for..",
+    'mywish'=>'My Wish',
+    'shop_now'=>'Shop Now',
+    'browse_by_categories'=>'Browse by Categories',
+    'top_categories_of'=>'Top Categories Of The Week', 
+    'use_code'=>'Use Code :',
+    'help_center'=>'Help Center',
+    'download_app'=>'Download App :',
+    'stay_connected'=>'Stay connected :',
+    'top_selling'=>'Top Selling',
+    'top_rated'=>'Top Rated',
+    'recently_added'=>'Recently Added',
+    'trending_products'=>'Trending Products',
+    'subscribe'=>'Subscribe',
+    'every_amazing'=>'Every Amazing Products',
+    'free_delivery'=>'Free Delivery For Order Over 50',
+    'daily_mega'=>'Daily Mega Discounts',
+    'best_price'=>'Best Price On The Market',
+    
+    
+   
+    
+    
+    
 
+    
         
 ];

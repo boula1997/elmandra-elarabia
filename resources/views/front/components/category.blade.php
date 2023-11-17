@@ -2,27 +2,29 @@
    <section>
     <div class="container-fluid-lg">
         <div class="title">
-            <h2>Browse by Categories</h2>
+            <h2>{{ __('general.browse_by_categories') }}</h2>
             <span class="title-leaf">
                 <svg class="icon-width">
-                    <use xlink:href="../assets/svg/leaf.svg#leaf"></use>
+                    <use xlink:href="{{ asset('template/assets/svg/leaf.svg#leaf') }}"></use>
                 </svg>
             </span>
-            <p>Top Categories Of The Week</p>
+            <p>{{ __('general.top_categories_of') }}</p>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="slider-9">
-                    <div>
-                        <a href="shop-left-sidebar.html" class="category-box wow fadeInUp">
-                            <div>
-                                <img src="{{ asset('template/assets/svg/1/vegetable.svg') }}" class="blur-up lazyload" alt="">
-                                <h5>Vegetables & Fruit</h5>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach (categories() as $category)
+                        <div>
+                            <a href="#" class="category-box wow fadeInUp">
+                                <div>
+                                    <img src="{{ asset($category->image )}}" class="blur-up lazyload" alt="">
+                                    <h5>{{ $category->title }}</h5>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
 
-                    <div>
+                    {{-- <div>
                         <a href="shop-left-sidebar.html" class="category-box wow fadeInUp" data-wow-delay="0.05s">
                             <div>
                                 <img src="{{ asset('template/assets/svg/1/cup.svg') }}" class="blur-up lazyload" alt="">
@@ -92,7 +94,7 @@
                                 <h5>Grocery & Staples</h5>
                             </div>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

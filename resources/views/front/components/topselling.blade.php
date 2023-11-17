@@ -7,44 +7,46 @@
                         <div class="col-12">
                             <div class="top-selling-box">
                                 <div class="top-selling-title">
-                                    <h3>Top Selling</h3>
+                                    <h3>{{ __('general.top_selling') }}</h3>
                                 </div>
 
-                                <div class="top-selling-contain wow fadeInUp">
-                                    <a href="product-left-thumbnail.html" class="top-selling-image">
-                                        <img src="{{asset('template/assets/images/veg-2/top-selling/1.jpg')}}"
-                                            class="img-fluid blur-up lazyload" alt="">
-                                    </a>
-
-                                    <div class="top-selling-detail">
-                                        <a href="product-left-thumbnail.html">
-                                            <h5>Tuffets Whole Wheat Bread</h5>
+                                @foreach ($products as $product)
+                                    <div class="top-selling-contain wow fadeInUp">
+                                        <a href="product-left-thumbnail.html" class="top-selling-image">
+                                            <img src="{{asset($product->image)}}"
+                                                class="img-fluid blur-up lazyload" alt="">
                                         </a>
-                                        <div class="product-rating">
-                                            <ul class="rating">
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star"></i>
-                                                </li>
-                                            </ul>
-                                            <span>(34)</span>
-                                        </div>
-                                        <h6>$ 10.00</h6>
-                                    </div>
-                                </div>
 
-                                <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
+                                        <div class="top-selling-detail">
+                                            <a href="product-left-thumbnail.html">
+                                                <h5>{{$product->title}}</h5>
+                                            </a>
+                                            <div class="product-rating">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span>(34)</span>
+                                            </div>
+                                            <h6> {{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                {{-- <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
                                     <a href="product-left-thumbnail.html" class="top-selling-image">
                                         <img src="{{asset('template/assets/images/veg-2/top-selling/2.jpg')}}"
                                             class="img-fluid blur-up lazyload" alt="">
@@ -144,7 +146,7 @@
                                         </div>
                                         <h6>$ 70.00</h6>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -155,44 +157,45 @@
                         <div class="col-12">
                             <div class="top-selling-box">
                                 <div class="top-selling-title">
-                                    <h3>Trending Products</h3>
+                                    <h3>{{ __('general.trending_products') }}</h3>
                                 </div>
-
-                                <div class="top-selling-contain wow fadeInUp">
-                                    <a href="product-left-thumbnail.html" class="top-selling-image">
-                                        <img src="{{asset('template/assets/images/veg-2/top-selling/5.jpg')}}"
-                                            class="img-fluid blur-up lazyload" alt="">
-                                    </a>
-
-                                    <div class="top-selling-detail">
-                                        <a href="product-left-thumbnail.html">
-                                            <h5>Good Life Refined Sunflower Oil</h5>
+                                @foreach ($products as $product)
+                                    <div class="top-selling-contain wow fadeInUp">
+                                        <a href="product-left-thumbnail.html" class="top-selling-image">
+                                            <img src="{{asset($product->image)}}"
+                                                class="img-fluid blur-up lazyload" alt="">
                                         </a>
-                                        <div class="product-rating">
-                                            <ul class="rating">
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star"></i>
-                                                </li>
-                                            </ul>
-                                            <span>(34)</span>
-                                        </div>
-                                        <h6>$ 10.00</h6>
-                                    </div>
-                                </div>
 
-                                <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
+                                        <div class="top-selling-detail">
+                                            <a href="product-left-thumbnail.html">
+                                                <h5>{{ $product->title }}</h5>
+                                            </a>
+                                            <div class="product-rating">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span>(34)</span>
+                                            </div>
+                                            <h6>{{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                {{-- <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
                                     <a href="product-left-thumbnail.html" class="top-selling-image">
                                         <img src="{{asset('template/assets/images/veg-2/top-selling/6.jpg')}}"
                                             class="img-fluid blur-up lazyload" alt="">
@@ -292,7 +295,7 @@
                                         </div>
                                         <h6>$ 10.00</h6>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -303,43 +306,44 @@
                         <div class="col-12">
                             <div class="top-selling-box">
                                 <div class="top-selling-title">
-                                    <h3>Recently added</h3>
+                                    <h3>{{ __('general.recently_added') }}</h3>
                                 </div>
-
-                                <div class="top-selling-contain wow fadeInUp">
-                                    <a href="product-left-thumbnail.html" class="top-selling-image">
-                                        <img src="{{asset('template/assets/images/veg-2/top-selling/9.jpg')}}"
-                                            class="img-fluid blur-up lazyload" alt="">
-                                    </a>
-
-                                    <div class="top-selling-detail">
-                                        <a href="product-left-thumbnail.html">
-                                            <h5>Tuffets Britannia Cheezza</h5>
+                                @foreach ($products as $product)
+                                    <div class="top-selling-contain wow fadeInUp">
+                                        <a href="product-left-thumbnail.html" class="top-selling-image">
+                                            <img src="{{asset($product->image)}}"
+                                                class="img-fluid blur-up lazyload" alt="">
                                         </a>
-                                        <div class="product-rating">
-                                            <ul class="rating">
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star"></i>
-                                                </li>
-                                            </ul>
-                                            <span>(34)</span>
-                                        </div>
-                                        <h6>$ 10.00</h6>
-                                    </div>
-                                </div>
 
+                                        <div class="top-selling-detail">
+                                            <a href="product-left-thumbnail.html">
+                                                <h5>{{ $product->title }}</h5>
+                                            </a>
+                                            <div class="product-rating">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span>(34)</span>
+                                            </div>
+                                            <h6>{{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                        </div>
+                                    </div>
+                                @endforeach
+{{-- 
                                 <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
                                     <a href="product-left-thumbnail.html" class="top-selling-image">
                                         <img src="{{asset('template/assets/images/veg-2/top-selling/10.jpg')}}"
@@ -440,7 +444,7 @@
                                         </div>
                                         <h6>$ 90.00</h6>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -451,44 +455,45 @@
                         <div class="col-12">
                             <div class="top-selling-box">
                                 <div class="top-selling-title">
-                                    <h3>Top Rated</h3>
+                                    <h3>{{ __('general.top_rated') }}</h3>
                                 </div>
-
-                                <div class="top-selling-contain wow fadeInUp">
-                                    <a href="product-left-thumbnail.html" class="top-selling-image">
-                                        <img src="{{asset('template/assets/images/veg-2/top-selling/13.jpg')}}"
-                                            class="img-fluid blur-up lazyload" alt="">
-                                    </a>
-
-                                    <div class="top-selling-detail">
-                                        <a href="product-left-thumbnail.html">
-                                            <h5>Good Life Walnut Kernels</h5>
+                                @foreach ($products as $product)
+                                    <div class="top-selling-contain wow fadeInUp">
+                                        <a href="product-left-thumbnail.html" class="top-selling-image">
+                                            <img src="{{asset($product->image)}}"
+                                                class="img-fluid blur-up lazyload" alt="">
                                         </a>
-                                        <div class="product-rating">
-                                            <ul class="rating">
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star" class="fill"></i>
-                                                </li>
-                                                <li>
-                                                    <i data-feather="star"></i>
-                                                </li>
-                                            </ul>
-                                            <span>(34)</span>
-                                        </div>
-                                        <h6>$ 10.00</h6>
-                                    </div>
-                                </div>
 
-                                <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
+                                        <div class="top-selling-detail">
+                                            <a href="product-left-thumbnail.html">
+                                                <h5>{{ $product->title }}</h5>
+                                            </a>
+                                            <div class="product-rating">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star" class="fill"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i data-feather="star"></i>
+                                                    </li>
+                                                </ul>
+                                                <span>(34)</span>
+                                            </div>
+                                            <h6>{{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                {{-- <div class="top-selling-contain wow fadeIn" data-wow-delay="0.05s">
                                     <a href="product-left-thumbnail.html" class="top-selling-image">
                                         <img src="{{asset('template/assets/images/veg-2/top-selling/14.jpg"')}}
                                             class="img-fluid blur-up lazyload" alt="">
@@ -588,7 +593,7 @@
                                         </div>
                                         <h6>$ 70.00</h6>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

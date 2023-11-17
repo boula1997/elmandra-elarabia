@@ -71,18 +71,18 @@
      <!-- Iconly css -->
      <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/bulk-style.css') }}">
  
-    @if (app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css') }}">
+    {{-- @if (app()->getLocale() == 'ar') --}}
+        {{-- <link rel="stylesheet" href="{{ asset('bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css') }}">
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/style_ar.css') }}">
-    @else
+        <link rel="stylesheet" href="{{ asset('assets/css/style_ar.css') }}"> --}}
+    {{-- @else --}}
         <!-- Customized Bootstrap Stylesheet -->
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
             <!-- Template css -->
          <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/style.css') }}">
         <!-- Template Stylesheet -->
         {{-- <link rel="stylesheet" href="{{ asset('front/css/style.css') }}"> --}}
-    @endif
+    {{-- @endif --}}
 
     <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
 

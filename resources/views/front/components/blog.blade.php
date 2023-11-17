@@ -2,34 +2,36 @@
       <section>
         <div class="container-fluid-lg">
             <div class="title">
-                <h2>Featured Blog</h2>
+                <h2>{{ page('product_home')->title }}</h2>
                 <span class="title-leaf">
                     <svg class="icon-width">
                         <use xlink:href="{{ asset('template/assets/svg/leaf.svg#leaf')}}"></use>
                     </svg>
                 </span>
-                <p>A virtual assistant collects the products from your list</p>
+                <p>{{ page('product_home')->subtitle }}</p>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="slider-5 ratio_87">
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <a href="blog-detail.html" class="blog-image">
-                                        <img src="{{ asset('template/assets/images/veg-2/blog/1.jpg')}}" class="bg-img blur-up lazyload"
-                                            alt="">
-                                    </a>
-                                </div>
+                        @foreach ($products as $product)
+                            <div>
+                                <div class="blog-box">
+                                    <div class="blog-box-image">
+                                        <a href="blog-detail.html" class="blog-image">
+                                            <img src="{{ asset($product->image)}}" class="bg-img blur-up lazyload"
+                                                alt="">
+                                        </a>
+                                    </div>
 
-                                <div class="blog-detail">
-                                    <h6>Farmart</h6>
-                                    <h5>Fresh Meat Saugage</h5>
+                                    <div class="blog-detail">
+                                        <h6>{{ $product->title }}</h6>
+                                        <h5>{{ $product->subcategory->category->title }}</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
 
-                        <div>
+                        {{-- <div>
                             <div class="blog-box">
                                 <div class="blog-box-image">
                                     <a href="blog-detail.html" class="blog-image">
@@ -91,7 +93,7 @@
                                     <h5>Fresh Milk</h5>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
