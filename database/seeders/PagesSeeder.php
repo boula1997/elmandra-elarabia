@@ -21,8 +21,9 @@ class PagesSeeder extends Seeder
                         "Home Products ",
                         "Special Offers ",
                         "Join our newsletter and get our news",
-                        "TESTIMONIAL",
-                        "Products"
+                        "Latest Testimonials",
+                        "Products",
+                        "About Us",
 
                     ];
 
@@ -33,8 +34,9 @@ class PagesSeeder extends Seeder
                             "A virtual assistant collects the products from your list",
                             "of the week!",
                             "$20 discount for your first order",
-                            "OUR CLIENT SAY",
-                            "Our Products"
+                            "What People Say about us",
+                            "Our Products",
+                            "We Make Organic Fruits and vegetables In Market",
                         
                         ];
 
@@ -50,6 +52,7 @@ class PagesSeeder extends Seeder
                             null,
                             null,
                             null,
+                            "<p>Introducing asleltawfeer, your neighborhood grocery store dedicated to providing convenience, quality, and friendly service. Step into our welcoming space where you'll find a wide range of fresh produce, pantry staples, household essentials, and more. With a focus on sourcing locally and offering competitive prices, we strive to meet all your grocery needs while delivering an enjoyable shopping experience. Visit asleltawfeer today and discover the difference of personalized attention and a carefully curated selection of products that cater to your everyday requirements.</p>",
                         ];
 
 
@@ -62,8 +65,9 @@ class PagesSeeder extends Seeder
                         "منتجات الرئيسية",
                         "عروض خاصة",
                         "انضم إلى نشرتنا الإخبارية واحصل على أخبارنا",
-                        "اراء عملائنا",
+                        "أحدث اراء عملائنا",
                         "منتجات",
+                        "من نحن",
                     ];
     
             $subtitle_ar = [
@@ -75,8 +79,9 @@ class PagesSeeder extends Seeder
 
                                 "خصم 20% لطلبك الأول",
                                 
-                                "بعض من اراء عملائنا",
+                                "ماذا يقول الناس عنا",
                                 "احدث منتجاتنا",
+                                "نحن نصنع الفواكه والخضروات الطازجة في السوق",
                             ];
     
             $description_ar = [
@@ -88,22 +93,24 @@ class PagesSeeder extends Seeder
                                 null,
                                 null,
                                 null,
+                                "<p>نقدم لكم اصل التوفير متجر البقالة في منطقتكم المخصص لتوفير الراحة والجودة والخدمة الودية. ادخل إلى مساحتنا الترحيبية حيث ستجد مجموعة واسعة من المنتجات الطازجة والمواد الغذائية الأساسية والمستلزمات المنزلية والمزيد. مع التركيز على المصادر المحلية وتقديم أسعار تنافسية، فإننا نسعى جاهدين لتلبية جميع احتياجات البقالة الخاصة بك مع تقديم تجربة تسوق ممتعة. قم بزيارة اصل توفير اليوم واكتشف الفرق في الاهتمام الشخصي ومجموعة مختارة بعناية من المنتجات التي تلبي متطلباتك اليومية.</p>",
 
                             ];    
 
             $identifiers=[ "slider","mini_slider","discount","product_home",
-                           "counter","newsletter","testimonial","product"
+                           "counter","newsletter","testimonial","product","about"
                          ];  
 
              $images=[ 
-                        ["images/6Uc5BhjmQJtfneedg6lKQ4U0Mh4SHOs5OAd8StZd.webp"],
-                        ["images/aYXssFYileyBQJwArUU3zA1gJHUhzocSQ3agfdoZ.jpg"],
+                        ["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg"],
+                        ["images/0g7IJLg63Nydimuc64Tf8MP1MXk5LGXIntnrMdS8.webp"],
+                        ["images/XJur2tRb3uXS8qWmkgSbuAJBUcgotx3dltGhcuQz.jpg"],
+                            null,
+                        ["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg"],
                             null,
                             null,
                             null,
-                            null,
-                            ["images/mHmk6YZAj2FqyQamlB6DRXHdkcLONAYNG68cjE13.jpg"],
-                            null,
+                        ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg","images/LMx63k9eMcVgWhQmT2LcGxKsChXKJiGdeY5vGKKm.jpg",]
                     ];
        
 

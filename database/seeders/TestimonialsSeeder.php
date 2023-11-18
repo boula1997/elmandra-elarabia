@@ -48,9 +48,9 @@ class TestimonialsSeeder extends Seeder
                          
                          "<p>لقد اكتشفت مؤخرًا العالمية، وأصبح المكان الذي أقصده لكل ما يتعلق بالألعاب. المتجر منظم جيدًا، والموظفون متعاونون بشكل لا يصدق. إنهم يبذلون قصارى جهدهم لضمان العثور على الألعاب التي أبحث عنها أبحث عنه. إنها حقًا جنة اللاعب!</p>"];
  
-        $image=["images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",
-                "images/w66o7ZleB0PAmRNOOiLp37gmh9iwImRphogPhjFy.webp",];
+        $image=["images/a1PBmbxz4BV96qfoWxoUqusXnfgTBL8DxzPe6Bpg.jpg",
+                "images/a1PBmbxz4BV96qfoWxoUqusXnfgTBL8DxzPe6Bpg.jpg",
+                "images/a1PBmbxz4BV96qfoWxoUqusXnfgTBL8DxzPe6Bpg.jpg",];
        
 
         for ($i = 0; $i < count($title_ar); $i++) {

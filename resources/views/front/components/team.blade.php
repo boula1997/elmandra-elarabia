@@ -2,53 +2,61 @@
 <section class="team-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="about-us-title text-center">
-                <h4 class="text-content">Our Creative Team</h4>
-                <h2 class="center">fastkart team member</h2>
+                <h4 class="text-content">{{ __('general.our_team') }}</h4>
+                <h2 class="center">{{ __('general.asleltawfeer_team') }}</h2>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="slider-user product-wrapper">
-                        <div>
-                            <div class="team-box">
-                                <div class="team-iamge">
-                                    <img src="{{asset('template/assets/images/inner-page/user/1.jpg')}}" class="img-fluid blur-up lazyload"
-                                        alt="">
-                                </div>
+                        @foreach ( $teams as $team )
+                            <div>
+                                <div class="team-box">
+                                    <div class="team-iamge">
+                                        <img src="{{ asset( $team->image )}}" class="img-fluid blur-up lazyload"
+                                            alt="">
+                                    </div>
 
-                                <div class="team-name">
-                                    <h3>Anna Baranov</h3>
-                                    <h5>Marketing</h5>
-                                    <p>cheeseburger airedale mozzarella the big cheese fondue.</p>
-                                    <ul class="team-media">
-                                        <li>
-                                            <a href="https://www.facebook.com/" class="fb-bg">
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </a>
-                                        </li>
+                                    <div class="team-name">
+                                        <h3>{{ $team->title  }}</h3>
+                                        <h5>{{ $team->subtitle  }}</h5>
+                                        <p>{!! $team->description  !!}</p>
+                                        <ul class="team-media">
+                                            <li>
+                                                <a href="{{$team->facebook}}" class="fb-bg">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </a>
+                                            </li>
 
-                                        <li>
-                                            <a href="https://in.pinterest.com/" class="pint-bg">
-                                                <i class="fa-brands fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
+                                            {{-- <li>
+                                                <a href="https://in.pinterest.com/" class="pint-bg">
+                                                    <i class="fa-brands fa-pinterest-p"></i>
+                                                </a>
+                                            </li> --}}
 
-                                        <li>
-                                            <a href="https://twitter.com/" class="twitter-bg">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </li>
+                                            <li>
+                                                <a href="{{$team->twitter}}" class="twitter-bg">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                            </li>
 
-                                        <li>
-                                            <a href="https://www.instagram.com/" class="insta-bg">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                            <li>
+                                                <a href="{{$team->linkedin}}" class="pint-bg">
+                                                    <i class="fa-brands fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{$team->instagram}}" class="insta-bg">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
+                       
 
-                        <div>
+                        {{-- <div>
                             <div class="team-box">
                                 <div class="team-iamge">
                                     <img src="{{asset('template/assets/images/inner-page/user/2.jpg')}}" class="img-fluid blur-up lazyload"
@@ -206,7 +214,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

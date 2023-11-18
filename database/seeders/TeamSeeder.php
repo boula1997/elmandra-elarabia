@@ -15,43 +15,74 @@ class TeamSeeder extends Seeder
     {
         $title_en = ["Boula Nessim",
                      "Ibrahim Samy",
-                     "Gerges Makram"];
+                     "Gerges Makram",
+                     "Boula Nessim",
+                     "Ibrahim Samy",
+                     "Gerges Makram",
+                    ];
 
-        $subtitle_en = ["Gammer",
-                        "Gammer",
-                        "Gammer"];
-        $description_en = [null,null,null,];
+        $subtitle_en = ["Software Engineer",
+                        "Software Engineer",
+                        "Co Founder",
+                        "Software Engineer",
+                        "Software Engineer",
+                        "Co Founder",];
+        $description_en = [null,null,null,null,null,null,];
       
         $title_ar = ["بولا نسيم",
                      "ابراهيم سامى",
-                     "جرجس مكرم"];
+                     "جرجس مكرم",
+                     "بولا نسيم",
+                     "ابراهيم سامى",
+                     "جرجس مكرم",
+                    ];
 
-        $subtitle_ar =["لاعب",
-                       "لاعب",
-                       "لاعب"];
-        $description_ar =  [null,null,null];
+        $subtitle_ar =["مهندس برمجة",
+                       "مهندس برمجة",
+                       "رئيس الادارة",
+                       "مهندس برمجة",
+                       "مهندس برمجة",
+                       "رئيس الادارة",
+                    ];
+        $description_ar =  [null,null,null,null,null,null];
 
         $facebooks=["https://www.facebook.com",
                     "https://www.facebook.com",
-                    "https://www.facebook.com"
+                    "https://www.facebook.com",
+                    "https://www.facebook.com",
+                    "https://www.facebook.com",
+                    "https://www.facebook.com",
                     ];
         $twitters=["https://www.twitter.com",
                     "https://www.twitter.com",
-                    "https://www.twitter.com"
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
                   ];
-        $instagrams=["https://www.instagram.com",
-                    "https://www.instagram.com",
-                    "https://www.instagram.com"
+        $instagrams=["https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
+                    "https://www.twitter.com",
                     ];
 
         $linkedins=["https://www.linkedin.com",
                     "https://www.linkedin.com",
-                    "https://www.linkedin.com"
+                    "https://www.linkedin.com",
+                    "https://www.linkedin.com",
+                    "https://www.linkedin.com",
+                    "https://www.linkedin.com",
                     ];
 
-        $image=["images/YE92B4LXiM6QhFcQbr5YKECGaMU5k8NokXve9o1m.jpg",
-                "images/YQXLPLiQgi8H1E9YE77J3lwUX0qSOYXkHMP192Nz.png",
-                "images/pekmLKsEWdfVwDSwbG0sSIZARXfO8GavZPaoOF1D.jpg"];
+        $image=["images/ViwJYS4TckT5HGp8L1Qmnvrdn3XI3hVsGtNVU8eM.png",
+                "images/ViwJYS4TckT5HGp8L1Qmnvrdn3XI3hVsGtNVU8eM.png",
+                "images/ViwJYS4TckT5HGp8L1Qmnvrdn3XI3hVsGtNVU8eM.png",
+                "images/ViwJYS4TckT5HGp8L1Qmnvrdn3XI3hVsGtNVU8eM.png",
+                "images/ViwJYS4TckT5HGp8L1Qmnvrdn3XI3hVsGtNVU8eM.png",
+                "images/ViwJYS4TckT5HGp8L1Qmnvrdn3XI3hVsGtNVU8eM.png",
+            ];
        
        
 

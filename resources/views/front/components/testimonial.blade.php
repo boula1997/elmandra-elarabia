@@ -2,56 +2,57 @@
     <section class="review-section section-lg-space">
         <div class="container-fluid">
             <div class="about-us-title text-center">
-                <h4 class="text-content">Latest Testimonals</h4>
-                <h2 class="center">What people say</h2>
+                <h4 class="text-content">{{ page('testimonial')->title }}</h4>
+                <h2 class="center">{{ page('testimonial')->subtitle }}</h2>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="slider-4-half product-wrapper">
-                        <div>
-                            <div class="reviewer-box">
-                                <i class="fa-solid fa-quote-right"></i>
-                                <div class="product-rating">
-                                    <ul class="rating">
-                                        <li>
-                                            <i data-feather="star" class="fill"></i>
-                                        </li>
-                                        <li>
-                                            <i data-feather="star" class="fill"></i>
-                                        </li>
-                                        <li>
-                                            <i data-feather="star" class="fill"></i>
-                                        </li>
-                                        <li>
-                                            <i data-feather="star" class="fill"></i>
-                                        </li>
-                                        <li>
-                                            <i data-feather="star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h3>Top Quality, Beautiful Location</h3>
-
-                                <p>"I usually try to keep my sadness pent up inside where it can fester quietly as a
-                                    mental illness. There, now he's trapped in a book I wrote: a crummy world of plot
-                                    holes and spelling errors! As an interesting side note."</p>
-
-                                <div class="reviewer-profile">
-                                    <div class="reviewer-image">
-                                        <img src="{{asset('template/assets/images/inner-page/user/1.jpg')}}" class="blur-up lazyload"
-                                            alt="">
+                        @foreach ($testimonials as $testimonial )
+                            <div>
+                                <div class="reviewer-box">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                    <div class="product-rating">
+                                        <ul class="rating">
+                                            <li>
+                                                <i data-feather="star" class="fill"></i>
+                                            </li>
+                                            <li>
+                                                <i data-feather="star" class="fill"></i>
+                                            </li>
+                                            <li>
+                                                <i data-feather="star" class="fill"></i>
+                                            </li>
+                                            <li>
+                                                <i data-feather="star" class="fill"></i>
+                                            </li>
+                                            <li>
+                                                <i data-feather="star"></i>
+                                            </li>
+                                        </ul>
                                     </div>
 
-                                    <div class="reviewer-name">
-                                        <h4>Betty J. Turner</h4>
-                                        <h6>CTO, Company</h6>
+                                    {{-- <h3>Top Quality, Beautiful Location</h3> --}}
+
+                                    <p>{!! $testimonial->description !!}</p>
+
+                                    <div class="reviewer-profile">
+                                        <div class="reviewer-image">
+                                            <img src="{{asset( $testimonial->image )}}" class="blur-up lazyload"
+                                                alt="">
+                                        </div>
+
+                                        <div class="reviewer-name">
+                                            <h4>{{ $testimonial->title }}</h4>
+                                            <h6>{{ $testimonial->subtitle }}</h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
+                        
 
-                        <div>
+                        {{-- <div>
                             <div class="reviewer-box">
                                 <i class="fa-solid fa-quote-right"></i>
                                 <div class="product-rating">
@@ -344,7 +345,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

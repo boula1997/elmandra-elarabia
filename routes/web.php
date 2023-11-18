@@ -74,13 +74,8 @@ Route::group(
         Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
         Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
     });
-    Route::get('/team',function(){
-        return view('front.team');
-    })->name('front.team');
-
-    Route::get('/testimonial',function(){
-        return view('front.testimonial');
-    })->name('front.testimonial');
+    Route::get('/team',[HomeController::class,'showteam'])->name('front.team');
+    Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');
 
     
     Route::get('/wishlist',function(){

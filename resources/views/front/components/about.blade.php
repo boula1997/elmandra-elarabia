@@ -7,7 +7,7 @@
                         <div class="col-6">
                             <div class="fresh-image-2">
                                 <div>
-                                    <img src="{{asset('template/assets/images/inner-page/about-us/1.jpg')}}"
+                                    <img src="{{asset(isset(page('about')->images[0]->url) ? page('about')->images[0]->url : asset('default.jpg'))}}"
                                         class="bg-img blur-up lazyload" alt="">
                                 </div>
                             </div>
@@ -16,7 +16,7 @@
                         <div class="col-6">
                             <div class="fresh-image">
                                 <div>
-                                    <img src="{{asset('template/assets/images/inner-page/about-us/2.jpg')}}"
+                                    <img src="{{asset(isset(page('about')->images[1]->url) ? page('about')->images[1]->url : asset('default.jpg'))}}"
                                         class="bg-img blur-up lazyload" alt="">
                                 </div>
                             </div>
@@ -28,17 +28,12 @@
                     <div class="fresh-contain p-center-left">
                         <div>
                             <div class="review-title">
-                                <h4>About Us</h4>
-                                <h2>We make Organic Food In Market</h2>
+                                <h4>{{ page('about')->title }}</h4>
+                                <h2>{{ page('about')->subtitle }}</h2>
                             </div>
 
                             <div class="delivery-list">
-                                <p class="text-content">Just a few seconds to measure your body temperature. Up to 5
-                                    users! The battery lasts up to 2 years. There are many variations of passages of
-                                    Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A
-                                    global brand that doesn't sleep, we are 24/7 and always bringing something new with
-                                    over 100 new products dropping on the monhtly, bringing you the latest looks for
-                                    less.</p>
+                                <p class="text-content">{!! page('about')->description !!}</p>
 
                                 <ul class="delivery-box">
                                     <li>
@@ -48,7 +43,7 @@
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Free delivery for all orders</h5>
+                                                <h5 class="text">{{ __('general.free_delivery') }}</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -60,7 +55,7 @@
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Only fresh foods</h5>
+                                                <h5 class="text">{{ __('general.daily_mega') }}</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -68,11 +63,11 @@
                                     <li>
                                         <div class="delivery-box">
                                             <div class="delivery-icon">
-                                                <img src="{{asset('template/assets/svg/3/delivery.svg')}}" class="blur-up lazyload" alt="">
+                                                <img src="{{ asset('template/assets/svg/market.svg') }}" class="blur-up lazyload" alt="">
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Free delivery for all orders</h5>
+                                                <h5 class="text">{{ __('general.best_price') }}</h5>
                                             </div>
                                         </div>
                                     </li>
@@ -80,11 +75,11 @@
                                     <li>
                                         <div class="delivery-box">
                                             <div class="delivery-icon">
-                                                <img src="{{asset('template/assets/svg/3/leaf.svg')}}" class="blur-up lazyload" alt="">
+                                                <img src="{{ asset('template/assets/svg/product.svg') }}" class="blur-up lazyload" alt="">
                                             </div>
 
                                             <div class="delivery-detail">
-                                                <h5 class="text">Only fresh foods</h5>
+                                                <h5 class="text">{{ __('general.every_amazing') }}</h5>
                                             </div>
                                         </div>
                                     </li>

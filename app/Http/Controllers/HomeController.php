@@ -67,4 +67,13 @@ class HomeController extends Controller
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
         }
     }
+    public function showteam(){
+       $teams =Team::get();    
+        return view('front.team', compact('teams'));
+    }
+    public function showtestimonial(){
+        $testimonials =Testimonial::get();    
+         return view('front.testimonial', compact('testimonials'));
+     }
+    
 }

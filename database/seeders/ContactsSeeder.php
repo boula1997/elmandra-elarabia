@@ -21,12 +21,12 @@ class ContactsSeeder extends Seeder
                 "fas fa-phone",
                 "fab fa-whatsapp"];
 
-        $contacts=["https://www.facebook.com/profile.php?id=61551949000995&mibextid=ZbWKwL",
+        $contacts=["https://www.facebook.com",
                    "https://www.linkedin.com",
-                   "https://instagram.com/el_alamia_games?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr",
-                   "alalamia@gmail.com",
-                   "01020202019",
-                   "01208050298"
+                   "https://instagram.com",
+                   "asleltawfeer@gmail.com",
+                   "+963993732270",
+                   "+963993732270"
                     ];
 
         $type=['social','social','social','email','phone','whatsapp'];

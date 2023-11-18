@@ -133,7 +133,7 @@ return [
     "dashboard" => "Dashboard",
     "userreg" => "Registered Users",
     "moreinfo" => "More Info",
-    "add" => "Add New",
+    "add" => "Add",
     "choose_file" => "Choose File",
     "upload_file" => "Upload File",
     "confirm_password" => "Confirm Password",
@@ -328,6 +328,9 @@ return [
     'free_delivery'=>'Free Delivery For Order Over 50',
     'daily_mega'=>'Daily Mega Discounts',
     'best_price'=>'Best Price On The Market',
+    'our_team'=>'Our Creative Team',
+    'asleltawfeer_team'=>'Asl El Tawfeer team member',
+    
     
     
    
