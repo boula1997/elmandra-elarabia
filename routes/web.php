@@ -48,36 +48,37 @@ Route::group(
         Route::get('/portfolio', 'App/Http/Controllers/PortfolioController@index')->name('front.portfolio');
         Route::get('/orderproduct', 'App/Http/Controllers/OrderproductController@index')->name('front.orderproduct');
         Route::get('/product/{id}', [ProductController::class,'index'])->name('front.products');
+        Route::get('/products', [ProductController::class,'showallproducts'])->name('front.show-products');
         Route::get('/product/{id}/show', [ProductController::class,'show'])->name('front.show.product');
         Route::get('/about', [AboutController::class,'index'])->name('front.about');
         Route::post('/message', [MessageController::class,'store'])->name('front.message.post');
         Route::post('/order', [OrderController::class,'store'])->name('front.order.post');
-
+        
         Route::get('/single-portfolio/{id}', [ServiceController::class,'showportfolio'])->name('front.show.portfolio');
         // Route::post('/newsletter', 'App/Http/Controllers/NewsletterController@store')->name('front.newsletter.post');
         Route::post('/newsletter', [NewsletterController::class,'store'])->name('front.newsletter.post');
-
-
+        
+        
         Route::group(['middleware' => ['auth:web']], function () {
             
-        Route::get('/addToCart/{id}', [CartController::class,'addToCart'])->name('addTo.cart');
-        Route::get('/removeFromCart/{hash}', [CartController::class,'removeItemCart'])->name('removeFrom.cart');
-        Route::get('/updateItemCount/{hash}/{quantity}', [CartController::class,'updateItemCount'])->name('updateItem.count');
-        
-        Route::get('/add_to_cart', function () {
+            Route::get('/addToCart/{id}', [CartController::class,'addToCart'])->name('addTo.cart');
+            Route::get('/removeFromCart/{hash}', [CartController::class,'removeItemCart'])->name('removeFrom.cart');
+            Route::get('/updateItemCount/{hash}/{quantity}', [CartController::class,'updateItemCount'])->name('updateItem.count');
             
-            return view("front.shopping");
-        })->name('front.shopping');
-        Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
-        Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
-        Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
-        Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
-        Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
-    });
-    Route::get('/team',[HomeController::class,'showteam'])->name('front.team');
-    Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');
-
-    
+            Route::get('/add_to_cart', function () {
+                
+                return view("front.shopping");
+            })->name('front.shopping');
+            Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
+            Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
+            Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
+            Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
+            Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
+        });
+        Route::get('/team',[HomeController::class,'showteam'])->name('front.team');
+        Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');
+        
+        
     Route::get('/wishlist',function(){
         return view('front.wishlist');
     })->name('front.wishlist');

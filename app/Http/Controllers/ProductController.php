@@ -64,4 +64,10 @@ class ProductController extends Controller
         $portfolio= $this->portfolio->findorfail($id);
         return view('front.portfolio.single_portfolio', compact('portfolio'));
     }
+    
+    public function showallproducts()
+    {
+        $products= Product::get();
+        return view('front.products.product', compact('products'));
+    }
 }

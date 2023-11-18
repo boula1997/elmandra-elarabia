@@ -14,21 +14,25 @@
                 <div class="col-12">
                     <div class="slider-5 ratio_87">
                         @foreach ($products as $product)
-                            <div>
-                                <div class="blog-box">
-                                    <div class="blog-box-image">
-                                        <a href="blog-detail.html" class="blog-image">
-                                            <img src="{{ asset($product->image)}}" class="bg-img blur-up lazyload"
-                                                alt="">
-                                        </a>
-                                    </div>
+                            @if($loop->iteration <= 10)
+                                <div>
+                                    <div class="blog-box">
+                                        <div class="blog-box-image">
+                                            <a href="blog-detail.html" class="blog-image">
+                                                <img src="{{ asset($product->image)}}" class="bg-img blur-up lazyload"
+                                                    alt="">
+                                            </a>
+                                        </div>
 
-                                    <div class="blog-detail">
-                                        <h6>{{ $product->title }}</h6>
-                                        <h5>{{ $product->subcategory->category->title }}</h5>
+                                        <div class="blog-detail">
+                                            <h6>{{ $product->title }}</h6>
+                                            <h5>{{ $product->subcategory->category->title }}</h5>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                @else
+                                @break
+                            @endif 
                         @endforeach
 
                         {{-- <div>

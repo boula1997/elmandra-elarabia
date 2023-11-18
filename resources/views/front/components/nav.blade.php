@@ -866,7 +866,7 @@
                                         </li>
 
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.product') ? 'active' : '' }}" href="{{ route('front.products',1) }}"
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.show-products') ? 'active' : '' }}" href="{{ route('front.show-products') }}"
                                                 data-bs-toggle="dropdown">{{ __('general.products') }}</a>
 
                                             {{-- <ul class="dropdown-menu">
