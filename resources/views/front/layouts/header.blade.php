@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="29jc-UBYKY132um7fY6PwBi4ykjXlzGhzrInZKJ3e5I" />
+    <meta title="Elalmia Gaming Store">
+    <meta name="description" content="Gaming store playstation">
+    <meta name="keywords" content="Games, Playstation, Devices">
+    <meta name="author" content="Boula Nessim">
+    <meta descrip>
     <title>{{ settings()->website_title }}</title>
 
     <!-- Favicon -->
