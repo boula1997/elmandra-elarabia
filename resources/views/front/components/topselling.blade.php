@@ -13,13 +13,13 @@
                                 @foreach ($products as $product)
                                   @if($loop->iteration <= 10)
                                     <div class="top-selling-contain wow fadeInUp">
-                                        <a href="product-left-thumbnail.html" class="top-selling-image">
+                                        <a href="{{ route('front.show-products') }}" class="top-selling-image">
                                             <img src="{{asset($product->image)}}"
                                                 class="img-fluid blur-up lazyload" alt="">
                                         </a>
 
                                         <div class="top-selling-detail">
-                                            <a href="product-left-thumbnail.html">
+                                            <a href="{{ route('front.show-products') }}">
                                                 <h5>{{$product->title}}</h5>
                                             </a>
                                             <div class="product-rating">
@@ -166,13 +166,13 @@
                                 @foreach ($products as $product)
                                     @if($loop->iteration <= 10)
                                         <div class="top-selling-contain wow fadeInUp">
-                                            <a href="product-left-thumbnail.html" class="top-selling-image">
+                                            <a href="{{ route('front.show-products') }}" class="top-selling-image">
                                                 <img src="{{asset($product->image)}}"
                                                     class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <div class="top-selling-detail">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{{ route('front.show-products') }}">
                                                     <h5>{{ $product->title }}</h5>
                                                 </a>
                                                 <div class="product-rating">
@@ -319,13 +319,13 @@
                                 @foreach ($products as $product)
                                         @if($loop->iteration <= 10)
                                             <div class="top-selling-contain wow fadeInUp">
-                                                <a href="product-left-thumbnail.html" class="top-selling-image">
+                                                <a href="{{ route('front.show-products') }}" class="top-selling-image">
                                                     <img src="{{asset($product->image)}}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
 
                                                 <div class="top-selling-detail">
-                                                    <a href="product-left-thumbnail.html">
+                                                    <a href="{{ route('front.show-products') }}">
                                                         <h5>{{ $product->title }}</h5>
                                                     </a>
                                                     <div class="product-rating">
@@ -474,13 +474,13 @@
                                 @foreach ($products as $product)
                                     @if($loop->iteration <= 10)
                                         <div class="top-selling-contain wow fadeInUp">
-                                            <a href="product-left-thumbnail.html" class="top-selling-image">
+                                            <a href="{{ route('front.show-products') }}" class="top-selling-image">
                                                 <img src="{{asset($product->image)}}"
                                                     class="img-fluid blur-up lazyload" alt="">
                                             </a>
 
                                             <div class="top-selling-detail">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{{ route('front.show-products') }}">
                                                     <h5>{{ $product->title }}</h5>
                                                 </a>
                                                 <div class="product-rating">

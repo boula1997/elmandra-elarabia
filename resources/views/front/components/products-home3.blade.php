@@ -8,7 +8,7 @@
                             @if($loop->iteration <= 20)
                                 <div>
                                     <div class="product-slider wow fadeInUp">
-                                        <a href="shop-left-sidebar.html" class="product-slider-image">
+                                        <a href="{{ route('front.show-products') }}" class="product-slider-image">
                                             <img src="{{asset($product->image)}}" class="w-100 blur-up lazyload rounded-3"
                                                 alt="">
                                         </a>
@@ -40,7 +40,7 @@
                                                     <span>(34)</span>
                                                 </div>
                                                 <h6>By <span class="theme-color">{{ $product->subcategory->category->title }}</span></h6>
-                                                <button onclick="location.href = 'shop-left-sidebar.html';"
+                                                <button onclick="location.href = '{{ route('front.show-products') }}';"
                                                     class="btn btn-animation product-button btn-sm">{{ __('general.shop_now') }}<i
                                                         class="fa-solid fa-arrow-right icon"></i></button>
                                             </div>

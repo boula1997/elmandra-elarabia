@@ -11,7 +11,7 @@
                                 <h1 class="w-75 text-uppercase poster-1">{{ page('slider')->title }} <span
                                         class="daily">{{ page('slider')->subtitle }}</span></h1>
                                 <p class="w-58 d-none d-sm-block">{!! page('slider')->description !!}</p>
-                                <button onclick="location.href = '{{ route('front.products',1) }}';"
+                                <button onclick="location.href = '{{ route('front.show-products') }}';"
                                     class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.shop_now') }}<i
                                         class="fa-solid fa-right-long ms-2 icon"></i></button>
                             </div>
@@ -29,7 +29,7 @@
                                 <h3 class="w-75 text-uppercase poster-1">{{ page('mini_slider')->title }}</h3>
                                 <h3 class="theme-color">{{ page('mini_slider')->subtitle }}</h3>
                                 <h5 class="text-content">{!! page('mini_slider')->description !!}</h5>
-                                <a href="{{ route('front.products',1) }}" class="shop-button">{{ __('general.shop_now') }}<i
+                                <a href="{{ route('front.show-products') }}" class="shop-button">{{ __('general.shop_now') }}<i
                                         class="fa-solid fa-right-long ms-2"></i></a>
                             </div>
                         </div>

@@ -11,24 +11,24 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3>Welcome To Fastkart</h3>
-                            <h4>Log In Your Account</h4>
+                            <h3>{{ __('general.welcome_to') }} {{ settings()->title }}</h3>
+                            <h4>{{ __('general.log_in_your_account') }}</h4>
                         </div>
 
                         <div class="input-box">
                             <form class="row g-4">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
-                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="{{ __('general.log_in_your_account') }}">
+                                        <label for="email">{{ __('general.email_address') }}</label>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
                                         <input type="password" class="form-control" id="password"
-                                            placeholder="Password">
-                                        <label for="password">Password</label>
+                                            placeholder="{{ __('general.password') }}">
+                                        <label for="password">{{ __('general.password') }}</label>
                                     </div>
                                 </div>
 
@@ -37,20 +37,19 @@
                                         <div class="form-check ps-0 m-0 remember-box">
                                             <input class="checkbox_animated check-box" type="checkbox"
                                                 id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                                            <label class="form-check-label" for="flexCheckDefault">{{ __('general.remember_me') }}</label>
                                         </div>
-                                        <a href="forgot.html" class="forgot-password">Forgot Password?</a>
+                                        <a href="{{ route('user.forget') }}" class="forgot-password">{{ __('general.forget') }}</a>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100 justify-content-center" type="submit">Log
-                                        In</button>
+                                    <button class="btn btn-animation w-100 justify-content-center" type="submit">{{ __('general.login') }}</button>
                                 </div>
                             </form>
                         </div>
 
-                        <div class="other-log-in">
+                        {{-- <div class="other-log-in">
                             <h6>or</h6>
                         </div>
 
@@ -69,15 +68,15 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
 
                         <div class="other-log-in">
                             <h6></h6>
                         </div>
 
                         <div class="sign-up-box">
-                            <h4>Don't have an account?</h4>
-                            <a href="sign-up.html">Sign Up</a>
+                            <h4>{{ __('general.dont_have_an_account') }}</h4>
+                            <a href="{{ route('user.register') }}">{{ __('general.sign_up') }}</a>
                         </div>
                     </div>
                 </div>

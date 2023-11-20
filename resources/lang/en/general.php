@@ -54,6 +54,7 @@ return [
     'controls'  => 'Controls',
     'register'  => 'Register',
     'forget'  => 'Forgot Password',
+    'log_in_your_account'  => 'Log In Your Account',
 
     "permission" => "Permission",
     "setting" => "Setting",
@@ -330,14 +331,14 @@ return [
     'best_price'=>'Best Price On The Market',
     'our_team'=>'Our Creative Team',
     'asleltawfeer_team'=>'Asl El Tawfeer team member',
-    
-    
-    
+    'welcome_to'=>'Welcome To',
+    'remember_me'=>'Remember me',
+    'dont_have_an_account'=>"Don't have an account?",
+    'create_new_account'=>'Create New Account',
+    'wrap_new'=>'Wrap new offers/gift every single day on Weekends.',
+    'new_code'=>'New Coupon Code:',
+    'something_you_love'=>'Something you love is now on sale!',
+    'buy_now'=>'Buy Now!',
    
-    
-    
-    
-
-    
-        
+      
 ];

@@ -12,7 +12,7 @@
                 <div class="col-xxl-3 d-xxl-block d-none">
                     <div class="top-left-header">
                         <i class="iconly-Location icli text-white"></i>
-                        <span class="text-white">1418 Riverwood Drive, CA 96052, US</span>
+                        <span class="text-white">{{ settings()->translate(app()->getLocale())->address }}</span>
                     </div>
                 </div>
 
@@ -21,8 +21,7 @@
                         <div class="notification-slider">
                             <div>
                                 <div class="timer-notification">
-                                    <h6><strong class="me-1">Welcome to Fastkart!</strong>Wrap new offers/gift
-                                        every signle day on Weekends.<strong class="ms-1">New Coupon Code: Fast024
+                                    <h6><strong class="me-1">{{ __('general.welcome_to') }} {{ settings()->title }}</strong>{{ __('general.wrap_new') }}<strong class="ms-1">{{ __('general.new_code') }} {{ settings()->title }}24
                                         </strong>
 
                                     </h6>
@@ -31,9 +30,8 @@
 
                             <div>
                                 <div class="timer-notification">
-                                    <h6>Something you love is now on sale!
-                                        <a href="shop-left-sidebar.html" class="text-white">Buy Now
-                                            !</a>
+                                    <h6>{{ __('general.something_you_love') }}
+                                        <a href="{{ route('front.show-products') }}" class="text-white">{{ __('general.buy_now') }}</a>
                                     </h6>
                                 </div>
                             </div>

@@ -11,34 +11,34 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
                     <div class="log-in-box">
                         <div class="log-in-title">
-                            <h3>Welcome To Fastkart</h3>
-                            <h4>Create New Account</h4>
+                            <h3>{{ __('general.welcome_to') }} {{ settings()->title }}</h3>
+                            <h4>{{ __('general.create_new_account') }}</h4>
                         </div>
 
                         <div class="input-box">
                             <form class="row g-4">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="text" class="form-control" id="fullname" placeholder="Full Name">
-                                        <label for="fullname">Full Name</label>
+                                        <input type="text" class="form-control" id="fullname" placeholder="{{ __('general.fullname') }}">
+                                        <label for="fullname">{{ __('general.fullname') }}</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
-                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="{{ __('general.email_address') }}">
+                                        <label for="email">{{ __('general.email_address') }}</label>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
                                         <input type="password" class="form-control" id="password"
-                                            placeholder="Password">
-                                        <label for="password">Password</label>
+                                            placeholder="{{ __('general.password') }}">
+                                        <label for="password">{{ __('general.password') }}</label>
                                     </div>
                                 </div>
 
-                                <div class="col-12">
+                                {{-- <div class="col-12">
                                     <div class="forgot-box">
                                         <div class="form-check ps-0 m-0 remember-box">
                                             <input class="checkbox_animated check-box" type="checkbox"
@@ -47,15 +47,15 @@
                                                 <span>Terms</span> and <span>Privacy</span></label>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100" type="submit">Sign Up</button>
+                                    <button class="btn btn-animation w-100" type="submit">{{ __('general.sign_up') }}</button>
                                 </div>
                             </form>
                         </div>
 
-                        <div class="other-log-in">
+                        {{-- <div class="other-log-in">
                             <h6>or</h6>
                         </div>
 
@@ -76,15 +76,15 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
 
                         <div class="other-log-in">
                             <h6></h6>
                         </div>
 
                         <div class="sign-up-box">
-                            <h4>Already have an account?</h4>
-                            <a href="login.html">Log In</a>
+                            <h4>{{ __('general.already_have_account!') }}</h4>
+                            <a href="{{ route('user.login') }}">{{ __('general.login') }}</a>
                         </div>
                     </div>
                 </div>

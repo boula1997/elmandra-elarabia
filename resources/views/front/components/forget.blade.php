@@ -12,8 +12,8 @@
                     <div class="d-flex align-items-center justify-content-center h-100">
                         <div class="log-in-box">
                             <div class="log-in-title">
-                                <h3>Welcome To Fastkart</h3>
-                                <h4>Forgot your password</h4>
+                                <h3>{{ __('general.welcome_to') }} {{ settings()->title }}</h3>
+                                <h4>{{ __('general.forget') }} </h4>
                             </div>
 
                             <div class="input-box">
@@ -21,14 +21,13 @@
                                     <div class="col-12">
                                         <div class="form-floating theme-form-floating log-in-form">
                                             <input type="email" class="form-control" id="email"
-                                                placeholder="Email Address">
-                                            <label for="email">Email Address</label>
+                                                placeholder="{{ __('general.email_address') }}">
+                                            <label for="email">{{ __('general.email_address') }}</label>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <button class="btn btn-animation w-100" type="submit">Forgot
-                                            Password</button>
+                                        <button class="btn btn-animation w-100" type="submit">{{ __('general.forget') }}</button>
                                     </div>
                                 </form>
                             </div>
