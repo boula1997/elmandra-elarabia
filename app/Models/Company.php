@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 class Company extends Model implements TranslatableContract
 {
     use HasFactory, Translatable;
-    protected $table = 'companys';
+    protected $table = 'companies';
     protected $guarded = [];
     public $translatedAttributes = ['title'];
     public $timestamps = true;

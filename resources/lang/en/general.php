@@ -339,6 +339,10 @@ return [
     'new_code'=>'New Coupon Code:',
     'something_you_love'=>'Something you love is now on sale!',
     'buy_now'=>'Buy Now!',
-   
+    'advertisements'=>'Advertisements',
+    'advantages'=>'Advantages',
+    'companies'=>'Companies',
+    'sellers'=>'Sellers',
+    'stores'=>'Stores', 
       
 ];

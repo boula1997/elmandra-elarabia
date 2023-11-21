@@ -109,6 +109,22 @@ class PermissionTableSeeder extends Seeder
            'advertisement-create',
            'advertisement-edit',
            'advertisement-delete',
+           'advantage-list',
+           'advantage-create',
+           'advantage-edit',
+           'advantage-delete',
+           'company-list',
+           'company-create',
+           'company-edit',
+           'company-delete',
+           'seller-list',
+           'seller-create',
+           'seller-edit',
+           'seller-delete',
+           'store-list',
+           'store-create',
+           'store-edit',
+           'store-delete',
         ];
      
         foreach ($permissions as $permission) {

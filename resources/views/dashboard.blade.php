@@ -134,6 +134,70 @@
                                         class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                             </div>
                         </div>
+                          <!-- ./col -->
+                          <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3>{{itemsCount('advantages')}}</h3>
+
+                                    <p>@lang('general.advantages')</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{{route('advantages.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
+                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
+                            </div>
+                        </div>
+                         <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3>{{itemsCount('companies')}}</h3>
+
+                                    <p>@lang('general.companies')</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{{route('companies.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
+                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
+                            </div>
+                        </div>
+                         <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3>{{itemsCount('sellers')}}</h3>
+
+                                    <p>@lang('general.sellers')</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{{route('sellers.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
+                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
+                            </div>
+                        </div>
+                         <!-- ./col -->
+                         <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3>{{itemsCount('stores')}}</h3>
+
+                                    <p>@lang('general.stores')</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{{route('stores.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
+                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
+                            </div>
+                        </div>
                         <!-- ./col -->
                     </div>
                     <!-- /.row -->

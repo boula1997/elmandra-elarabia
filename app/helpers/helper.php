@@ -1,8 +1,10 @@
 <?php
 
 use App\Models\Admin;
+use App\Models\Advantage;
 use App\Models\Advertisement;
 use App\Models\Category;
+use App\Models\Company;
 use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Counter;
@@ -22,6 +24,8 @@ use App\Models\Slider;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Models\Orderproduct;
+use App\Models\Seller;
+use App\Models\Store;
 use Illuminate\Support\Facades\File;
 use Jackiedo\Cart\Facades\Cart;
 use Spatie\Permission\Models\Role;
@@ -98,7 +102,11 @@ function itemsCount($model)
         "roles" => count(Role::get()),
         "orders" => count(Order::get()),
         "advertisements" => count(Advertisement::get()),
-
+        "advantages" => count(Advantage::get()),
+        "companies" => count(Company::get()),
+        "sellers" => count(Seller::get()),
+        "stores" => count(Store::get()),
+        
         
     ];
 

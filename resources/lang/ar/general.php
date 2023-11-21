@@ -343,8 +343,10 @@ return [
     'new_code'=>'رمز القسيمة الجديد:',
     'something_you_love'=>'شيء تحبه معروض للبيع الآن!',
     'buy_now'=>'اشتري الآن!',
+    'advertisements'=>'الاعلانات',
+    'advantages'=>'المميزات',
+    'companies'=>'الشركات',
+    'sellers'=>'المناديب',
+    'stores'=>'المستودعات', 
 
-
-
-   
 ];

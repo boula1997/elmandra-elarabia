@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\AdvertisementController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
@@ -26,7 +27,10 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\SellerController;
+use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Models\Advertisement;
 use Illuminate\Support\Facades\Auth;
@@ -80,10 +84,14 @@ Route::group(
                 Route::resource('partners', PartnerController::class);
                 Route::resource('portfolios', PortfolioController::class);
                 Route::resource('counters', CounterController::class);
-                Route::resource('advertisements', AdvertisementController::class);
                 Route::resource('contacts', ContactController::class);
                 Route::resource('orderproducts', OrderproductController::class);
                 Route::resource('tests', ImageController::class);
+                Route::resource('advertisements', AdvertisementController::class);
+                Route::resource('advantages', AdvantageController::class);
+                Route::resource('companies', CompanyController::class);
+                Route::resource('sellers', SellerController::class);
+                Route::resource('stores', StoreController::class);
             
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);

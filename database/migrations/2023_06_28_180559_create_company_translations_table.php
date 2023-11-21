@@ -19,7 +19,7 @@ class CreateCompanyTranslationsTable extends Migration
             $table->unsignedBigInteger('company_id');
             $table->string('locale')->index();
             $table->unique(['company_id', 'locale']);
-            $table->foreign('company_id')->references('id')->on('companys')->onDelete('cascade');
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->timestamps();
         });
     }
