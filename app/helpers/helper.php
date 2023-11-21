@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Admin;
+use App\Models\Advertisement;
 use App\Models\Category;
 use App\Models\Faq;
 use App\Models\Message;
@@ -96,6 +97,9 @@ function itemsCount($model)
         "orderproducts" => count(Orderproduct::get()),
         "roles" => count(Role::get()),
         "orders" => count(Order::get()),
+        "advertisements" => count(Advertisement::get()),
+
+        
     ];
 
 

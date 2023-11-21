@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdvertisementController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 // use App\Http\Controllers\Admin\MessageController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SubcategoryController;
+use App\Models\Advertisement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -78,6 +80,7 @@ Route::group(
                 Route::resource('partners', PartnerController::class);
                 Route::resource('portfolios', PortfolioController::class);
                 Route::resource('counters', CounterController::class);
+                Route::resource('advertisements', AdvertisementController::class);
                 Route::resource('contacts', ContactController::class);
                 Route::resource('orderproducts', OrderproductController::class);
                 Route::resource('tests', ImageController::class);

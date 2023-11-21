@@ -432,6 +432,27 @@
                     </li>
                 @endcan
 
+                @can('advertisement-list')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class=" px-1 fas fa-users"></i>
+                            <p>
+                                @lang('general.advertisements')
+                                <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('advertisements') }}</span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('advertisements.index') }}" class="nav-link">
+                                    <i class=" px-1 far fa-circle nav-icon"></i>
+                                    <p>@lang('general.show')</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
+
                 @can('setting-list')
                     <li class="nav-item">
                         <a href="{{ route('edit.setting') }}" class="nav-link">
