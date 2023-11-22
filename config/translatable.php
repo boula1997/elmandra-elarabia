@@ -11,7 +11,7 @@ return [
     |
     */
     'locales' => [
-        'en',
+        // 'en',
         'ar',
     ],
 
@@ -80,7 +80,7 @@ return [
     | is used first. So "es" will be checked before "es_MX".
     |
     */
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ar',
 
     /*
     |--------------------------------------------------------------------------

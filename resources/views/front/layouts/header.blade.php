@@ -8,12 +8,12 @@
     <meta name="description" content="Fastkart">
     <meta name="keywords" content="Fastkart">
     <meta name="author" content="Fastkart">
-    <link rel="icon" href="{{ asset('template/assets/images/favicon/3.png') }}" type="image/x-icon">
+    <link rel="icon"  href="{{ settings()->tab }}" type="image/x-icon">
     <title>{{ settings()->website_title }}</title>
 
 
     <!-- Favicon -->
-    <link href="{{ asset('front/img/favicon.ico') }}" rel="icon">
+    <link  href="{{ settings()->tab }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
