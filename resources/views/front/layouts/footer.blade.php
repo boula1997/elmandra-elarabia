@@ -218,6 +218,9 @@
                                     </ul>
                                 </li>
                             </ul>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('images/asleltawfeer.png') }}" style="width:50%; height:50%" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
