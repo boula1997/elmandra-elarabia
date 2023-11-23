@@ -23,10 +23,12 @@ class CompanyRequest extends FormRequest
 
 
         $rules = [
-            'count' =>  'required|numeric',
+            'owner' =>  'required',
+            'phone' =>  'required',
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
+            $rules += [$locale . '.address' => ['required']];
         }
         return  $rules;
     }

@@ -346,5 +346,6 @@ return [
     'stores'=>'Stores', 
     'start_date'=>'Start Date', 
     'end_date'=>'End Date', 
+    'owner'=>'Owner', 
       
 ];

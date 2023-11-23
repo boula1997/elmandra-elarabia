@@ -37,7 +37,8 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
-                                                <th>@lang('general.count')</th>
+                                                <th>@lang('general.owner')</th>
+                                                <th>@lang('general.phone')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -46,7 +47,8 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $company->title }}</td>
-                                                    <td>{{ $company->count }}</td>
+                                                    <td>{{ $company->owner }}</td>
+                                                    <td>{{ $company->phone }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'companies',

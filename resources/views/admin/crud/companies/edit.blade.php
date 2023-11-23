@@ -41,16 +41,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> *
+                                    <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> *
                                         </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle', $company->translate($locale)->subtitle) }}">
+                                        <input type="text" name="{{ $locale . '[address]' }}"
+                                            placeholder="@lang('general.address')"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
+                                            value="{{ old($locale . '.address', $company->translate($locale)->address) }}">
                                     </div>
                                 </div>
 
@@ -63,10 +63,6 @@
                                         {!! old($locale . '.description', $company->translate($locale)->description) !!} 
                                     </textarea>
                                 </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('companies.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -80,9 +76,21 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">{{ __('general.count') }}</label>
-                                        <input type="text" name="count" value="{{ old('count', $company->count) }}"
-                                            class="form-control" id="exampleInputName" placeholder="@lang('general.count')">
+                                        <label for="exampleInputEmail1">{{ __('general.owner') }}</label>
+                                        <input type="text" name="owner" value="{{ old('owner', $company->owner) }}"
+                                            class="form-control" id="exampleInputName" placeholder="@lang('general.owner')">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{{ __('general.phone') }}</label>
+                                        <input type="text" name="phone" value="{{ old('phone', $company->phone) }}"
+                                            class="form-control" id="exampleInputName" placeholder="@lang('general.phone')">
                                     </div>
                                 </div>
 

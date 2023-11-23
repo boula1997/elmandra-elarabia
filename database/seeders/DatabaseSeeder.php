@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class,
             TestimonialsSeeder::class,
             UsersSeeder::class,
+            CompaniesSeeder::class,
             // OrderproductsSeeder::class,
         ]);
         
