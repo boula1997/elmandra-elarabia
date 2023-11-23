@@ -1,5 +1,5 @@
 @extends('admin.components.form')
-@section('form_action', route('companys.update', $company->id))
+@section('form_action', route('companies.update', $company->id))
 @section('form_type', 'POST')
 @section('fields_content')
     <div class="content-wrapper">
@@ -11,7 +11,7 @@
             </div>
             <div class="card card-custom mb-2">
                  <div class="card-header card-header-tabs-line">
-                     @include('admin.components.breadcrumb', ['module' => 'companys', 'action' => 'edit'])
+                     @include('admin.components.breadcrumb', ['module' => 'companies', 'action' => 'edit'])
                  </div>
                 <div class="card-toolbar px-3">
                     <ul class="nav nav-tabs nav-bold nav-tabs-line">
@@ -64,7 +64,7 @@
                                     </textarea>
                                 </div>
                                 {{-- <div class="form-group">
-                                        <label>@lang('companys.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
+                                        <label>@lang('companies.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
                                         <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
                                     </div> --}}
                             </div>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
-                            <a href="{{ route('companys.index') }}"
+                            <a href="{{ route('companies.index') }}"
                                 class="btn btn-outline-danger font-weight-bold">@lang('general.cancel')</a>
                         </div>
                     </div>

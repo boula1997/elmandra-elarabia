@@ -23,7 +23,7 @@ class AdvantageRequest extends FormRequest
 
 
         $rules = [
-            'count' =>  'required|numeric',
+            'icon' =>  'required',
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];

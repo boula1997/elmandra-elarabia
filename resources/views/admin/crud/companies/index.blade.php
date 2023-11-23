@@ -19,7 +19,7 @@
                                             <h1 class="card-title fw-bold">@lang('general.pages')</h3>
                                         </div>
                                         <div class="col-md-6 d-flex d-flex justify-content-end">
-                                            <a href="{{ route('companys.create') }}">
+                                            <a href="{{ route('companies.create') }}">
 
                                                 <button
                                                     class="btn btn-outline-primary px-5
@@ -42,14 +42,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($companys as $company)
+                                            @foreach ($companies as $company)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $company->title }}</td>
                                                     <td>{{ $company->count }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
-                                                            'route' => 'companys',
+                                                            'route' => 'companies',
                                                             'role' => 'company',
                                                             'module' => $company,
                                                         ])

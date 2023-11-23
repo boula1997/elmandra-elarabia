@@ -5,7 +5,7 @@
         <div class="container p-3">
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-header card-header-tabs-line">
-                    @include('admin.components.breadcrumb', ['module' => 'companys', 'action' => 'show'])
+                    @include('admin.components.breadcrumb', ['module' => 'companies', 'action' => 'show'])
                 </div>
                 <div class="card-toolbar px-3">
                     <ul class="nav nav-tabs nav-bold nav-tabs-line">

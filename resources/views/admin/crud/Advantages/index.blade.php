@@ -37,7 +37,6 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
-                                                <th>@lang('general.count')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -46,7 +45,6 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $advantage->title }}</td>
-                                                    <td>{{ $advantage->count }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'advantages',

@@ -29,8 +29,8 @@ class CompanyController extends Controller
     public function index()
     {
         try {
-            $companys = $this->company->latest()->get();
-            return view('admin.crud.companys.index', compact('companys'))
+            $companies = $this->company->latest()->get();
+            return view('admin.crud.companies.index', compact('companies'))
                 ->with('i', (request()->input('page', 1) - 1) * 5);
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -45,7 +45,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.companys.create');
+        return view('admin.crud.companies.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class CompanyController extends Controller
     {
         try {
             $this->company->create($request->all());
-            return redirect()->route('companys.index')
+            return redirect()->route('companies.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -74,7 +74,7 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        return view('admin.crud.companys.show', compact('company'));
+        return view('admin.crud.companies.show', compact('company'));
     }
 
     /**
@@ -86,7 +86,7 @@ class CompanyController extends Controller
     public function edit(Company $company)
     {
         //    dd($company->title);
-        return view('admin.crud.companys.edit', compact('company'));
+        return view('admin.crud.companies.edit', compact('company'));
     }
     /**
      * Update the specified resource in storage.
@@ -100,7 +100,7 @@ class CompanyController extends Controller
         try {
             $data = $request->all();
             $company->update($data);
-            return redirect()->route('companys.index')
+            return redirect()->route('companies.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -117,7 +117,7 @@ class CompanyController extends Controller
     {
         try {
             $company->delete();
-            return redirect()->route('companys.index')
+            return redirect()->route('companies.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
