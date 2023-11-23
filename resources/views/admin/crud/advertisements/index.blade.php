@@ -37,7 +37,8 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
-                                                <th>@lang('general.count')</th>
+                                                <th>@lang('general.start_date')</th>
+                                                <th>@lang('general.end_date')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -46,7 +47,8 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $advertisement->title }}</td>
-                                                    <td>{{ $advertisement->count }}</td>
+                                                    <td>{{ $advertisement->start_date }}</td>
+                                                    <td>{{ $advertisement->end_date }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'advertisements',

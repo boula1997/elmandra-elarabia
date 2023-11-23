@@ -23,10 +23,13 @@ class AdvertisementRequest extends FormRequest
 
 
         $rules = [
-            'count' =>  'required|numeric',
+            'start_date' =>  'required',
+            'end_date' =>  'required',
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
+            $rules += [$locale . '.subtitle' => ['required', 'string']];
+            $rules += [$locale . '.description' => ['required']];
         }
         return  $rules;
     }
