@@ -41,8 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> *
-                                        </span></label>
+                                    <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger">                                        </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>

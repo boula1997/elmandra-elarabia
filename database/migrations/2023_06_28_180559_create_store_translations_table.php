@@ -16,6 +16,8 @@ class CreateStoreTranslationsTable extends Migration
         Schema::create('store_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('address')->nullable();
             $table->unsignedBigInteger('store_id');
             $table->string('locale')->index();
             $table->unique(['store_id', 'locale']);

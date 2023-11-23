@@ -25,44 +25,44 @@
                     <div class="tab-content">
 
                         @foreach (config('translatable.locales') as $key => $locale)
-                        <div class="tab-pane fade show @if ($key == 0) active @endif"
-                            id="{{ $locale }}" role="tabpanel">
-                            <div class="form-group">
-                                <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                <div class="tab-pane fade show @if ($key == 0) active @endif"
+                                    id="{{ $locale }}" role="tabpanel">
+                                    <div class="form-group">
+                                        <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                            </div>
+                                            <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
+                                                class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                                value="{{ old($locale . '.title') }}">
+                                        </div>
                                     </div>
-                                    <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
-                                        class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
-                                        value="{{ old($locale . '.title') }}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    <div class="form-group">
+                                        <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                            </div>
+                                            <input type="text" name="{{ $locale . '[address]' }}"
+                                                placeholder="@lang('general.address')"
+                                                class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
+                                                value="{{ old($locale . '.address') }}">
+                                        </div>
                                     </div>
-                                    <input type="text" name="{{ $locale . '[address]' }}"
-                                        placeholder="@lang('general.address')"
-                                        class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
-                                        value="{{ old($locale . '.address') }}">
+
+
+
+                                        <div class="col-form-group">
+                                            <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger"></span></label>
+                                            <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
+                                                name="{{ $locale . '[description]' }}">
+                                                {!! old($locale . '.description') !!} 
+                                            </textarea>
+                                        </div>
+
                                 </div>
-                            </div>
-
-
-
-                            <div class="col-form-group">
-                                <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger"></span></label>
-                                <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
-                                    name="{{ $locale . '[description]' }}">
-                                    {!! old($locale . '.description') !!} 
-                                </textarea>
-                            </div>
-
-                        </div>
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
