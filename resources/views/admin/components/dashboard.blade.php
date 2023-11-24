@@ -432,7 +432,7 @@
                         </ul>
                     </li>
                 @endcan
-                @can('seller-list')
+                {{-- @can('seller-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-users"></i>
@@ -451,7 +451,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
                 @can('store-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
