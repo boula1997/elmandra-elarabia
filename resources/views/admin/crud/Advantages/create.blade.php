@@ -48,17 +48,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">{{ __('general.count') }}</label>
-                                    <input type="text" name="count" value="{{ old('count') }}" class="form-control"
-                                        id="exampleInputName" placeholder="@lang('general.count')">
-                                </div>
-                            </div>
+                            @include('admin.components.icon', [
+                                'label' => 'label' ,
+                                'required' => true,
+                                'value' => 'fas fa-desktop',
+                            ])
 
                         </div>
-
-
                     </div>
                 </div>
                 <div class="card-footer mb-5">

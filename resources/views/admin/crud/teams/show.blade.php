@@ -55,9 +55,9 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
-                        </div>
+                        @endforeach
                     </div>
+                </div>
                     
                     <div class="card card-custom">
                         <div class="card-body">

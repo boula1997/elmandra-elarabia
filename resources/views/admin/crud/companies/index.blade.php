@@ -19,7 +19,7 @@
                                             <h1 class="card-title fw-bold">@lang('general.pages')</h3>
                                         </div>
                                         <div class="col-md-6 d-flex d-flex justify-content-end">
-                                            <a href="{{ route('companys.create') }}">
+                                            <a href="{{ route('companies.create') }}">
 
                                                 <button
                                                     class="btn btn-outline-primary px-5
@@ -37,19 +37,21 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
-                                                <th>@lang('general.count')</th>
+                                                <th>@lang('general.owner')</th>
+                                                <th>@lang('general.phone')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($companys as $company)
+                                            @foreach ($companies as $company)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $company->title }}</td>
-                                                    <td>{{ $company->count }}</td>
+                                                    <td>{{ $company->owner }}</td>
+                                                    <td>{{ $company->phone }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
-                                                            'route' => 'companys',
+                                                            'route' => 'companies',
                                                             'role' => 'company',
                                                             'module' => $company,
                                                         ])

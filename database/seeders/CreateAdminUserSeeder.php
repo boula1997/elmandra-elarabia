@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\Seller;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
@@ -23,13 +24,23 @@ class CreateAdminUserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => bcrypt('123456789')
         ]);
+
+        $seller = Admin::create([
+            'name' => 'Seller', 
+            'email' => 'Seller@gmail.com',
+            'password' => bcrypt('123456789')
+        ]);
     
-        $role = Role::create(['name' => 'Admin','guard_name'=>'admin']);
+        $role1 = Role::create(['name' => 'Admin','guard_name'=>'admin']);
+        $role2 = Role::create(['name' => 'Seller','guard_name'=>'admin']);
      
-        $permissions = Permission::pluck('id','id')->all();
+        $permissions1 = Permission::pluck('id','id')->all();
+        $permissions2 = Permission::pluck('id','id')->all();
    
-        $role->syncPermissions($permissions);
+        $role1->syncPermissions($permissions1);
+        $role2->syncPermissions($permissions2);
      
-        $user->assignRole([$role->id]);
+        $user->assignRole([$role1->id]);
+        $seller->assignRole([$role2->id]);
     }
 }

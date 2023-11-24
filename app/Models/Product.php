@@ -31,7 +31,10 @@ class Product extends Model implements TranslatableContract
         return  $this->file? asset($this->file->url): asset('default.jpg');
    }
 
-
+   public function company()
+   {
+       return $this->belongsTo(Company::class, 'company_id');
+   }
     
 }
 

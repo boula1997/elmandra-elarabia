@@ -17,6 +17,8 @@ class AdvertisementsSeeder extends Seeder
         $title_en = ["EXPERIENCE","OUR Gamers","Our Games","HAPPY CLIENTS"];
         $count=['10','50',"150","1235"];
         $icon=["fa fa-star","fa fa-users","fa fa-check","fa fa-mug-hot"];
+        $start_date=[null,null,null,null];
+        $end_date=[null,null,null,null];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -29,7 +31,9 @@ class AdvertisementsSeeder extends Seeder
                     'title' => $title_en[$i],
                 ],
                'count'=>$count[$i],
-               'icon' => $icon[$i]
+               'icon' => $icon[$i],
+               'start_date' => $start_date[$i],
+               'end_date' => $end_date[$i],
             ]);
         }
     }

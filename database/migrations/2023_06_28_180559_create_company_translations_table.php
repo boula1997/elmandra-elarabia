@@ -16,6 +16,8 @@ class CreateCompanyTranslationsTable extends Migration
         Schema::create('company_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('address')->nullable();
+            $table->text('description')->nullable();
             $table->unsignedBigInteger('company_id');
             $table->string('locale')->index();
             $table->unique(['company_id', 'locale']);

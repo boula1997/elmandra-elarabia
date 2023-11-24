@@ -20,19 +20,22 @@
                 <div class="card-body p-10">
                     <div class="tab-content">
                         @foreach (config('translatable.locales') as $key => $locale)
-                            <div class="tab-pane fade show @if ($key == 0) active @endif"
-                                id="{{ $locale }}" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
-                                            <div class="card-title fw-bold">
-                                                <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $advantage->translate($locale)->title }}</p>
-                                            </div>
+                        <div class="tab-pane fade show @if ($key == 0) active @endif"
+                            id="{{ $locale }}" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="card-title fw-bold">
+                                            <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
+                                            <p class="m-0">{{ $advantage->translate($locale)->title }}</p>
                                         </div>
                                     </div>
                                 </div>
-                        @endforeach
+                                
+                            </div>
+                            
+                        </div>
+                    @endforeach
                     </div>
                 </div>
             </div>
@@ -41,8 +44,8 @@
                 <div class="col-md-6">
                     <div class="mb-7 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
-                            <h5 class="font-weight-bolder text-dark">@lang('general.count'):</h5>
-                            <p class="m-0">{{ $advantage->count }}</p>
+                            <h5 class="font-weight-bolder text-dark">@lang('general.icon'):</h5>
+                            <i class="{{ $advantage->icon }}"></i>
                         </div>
                     </div>
                 </div>

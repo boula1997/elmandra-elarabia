@@ -40,34 +40,7 @@
                                             value="{{ old($locale . '.title', $advantage->translate($locale)->title) }}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> *
-                                        </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle', $advantage->translate($locale)->subtitle) }}">
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-form-group">
-                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
-                                    <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
-                                        name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $advantage->translate($locale)->description) !!} 
-                                    </textarea>
-                                </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('advantages.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
-                            </div>
+                           </div>
                         @endforeach
                     </div>
                 </div>
@@ -75,19 +48,15 @@
             <div class="card card-custom">
                 <div class="card-body mb-5">
                     <div class="row mt-5" >
+                        <div class="col-md-12">
+                            @include('admin.components.icon', [
+                                'label' => 'icon',
+                                'required' => true,
+                                'value' => old('icon', $advantage->icon),
+                            ])
 
-                        <div class="col-md-6">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">{{ __('general.count') }}</label>
-                                        <input type="text" name="count" value="{{ old('count', $advantage->count) }}"
-                                            class="form-control" id="exampleInputName" placeholder="@lang('general.count')">
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
+                        
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
                             <a href="{{ route('advantages.index') }}"

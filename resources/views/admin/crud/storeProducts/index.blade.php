@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <!-- Content Wrapper. Contains advantage content -->
+    <!-- Content Wrapper. Contains storeProduct content -->
     <div class="content-wrapper">
         <!-- Main content -->
         <div class="container p-3">
@@ -19,7 +19,7 @@
                                             <h1 class="card-title fw-bold">@lang('general.pages')</h3>
                                         </div>
                                         <div class="col-md-6 d-flex d-flex justify-content-end">
-                                            <a href="{{ route('advantages.create') }}">
+                                            <a href="{{ route('storeProducts.create') }}">
 
                                                 <button
                                                     class="btn btn-outline-primary px-5
@@ -36,20 +36,24 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>@lang('general.title')</th>
+                                                <th>@lang('general.product')</th>
+                                                <th>@lang('general.store')</th>
+                                                <th>@lang('general.quantity')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($advantages as $advantage)
+                                            @foreach ($storeProducts as $storeProduct)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $advantage->title }}</td>
+                                                    <td>{{ $storeProduct->product->title }}</td>
+                                                    <td>{{ $storeProduct->store->title }}</td>
+                                                    <td>{{ $storeProduct->quantity }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
-                                                            'route' => 'advantages',
-                                                            'role' => 'advantage',
-                                                            'module' => $advantage,
+                                                            'route' => 'storeProducts',
+                                                            'role' => 'storeProduct',
+                                                            'module' => $storeProduct,
                                                         ])
                                                     </td>
                                                 </tr>

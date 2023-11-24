@@ -2,35 +2,37 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Company;
+use App\Models\StoreProduct;
+use App\Models\Product;
+use App\Models\Store;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\CompanyRequest;
+use App\Http\Requests\Dashboard\StoreProductRequest;
 use Exception;
 
-class CompanyController extends Controller
+class StoreProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    private $company;
-    function __construct(Company $company)
+    private $storeProduct;
+    function __construct(StoreProduct $storeProduct)
     {
-        $this->middleware('permission:company-list|company-create|company-edit|company-delete', ['only' => ['index', 'show']]);
-        $this->middleware('permission:company-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:company-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:company-delete', ['only' => ['destroy']]);
-        $this->company = $company;
+        $this->middleware('permission:storeProduct-list|storeProduct-create|storeProduct-edit|storeProduct-delete', ['only' => ['index', 'show']]);
+        $this->middleware('permission:storeProduct-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:storeProduct-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:storeProduct-delete', ['only' => ['destroy']]);
+        $this->storeProduct = $storeProduct;
     }
 
 
     public function index()
     {
         try {
-            $companies = $this->company->latest()->get();
-            return view('admin.crud.companies.index', compact('companies'))
+            $storeProducts = $this->storeProduct->latest()->get();
+            return view('admin.crud.storeProducts.index', compact('storeProducts'))
                 ->with('i', (request()->input('page', 1) - 1) * 5);
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -45,7 +47,9 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.companies.create');
+        $products=Product::get();
+        $stores=Store::get();
+        return view('admin.crud.storeProducts.create',compact('products','stores'));
     }
 
     /**
@@ -54,11 +58,11 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CompanyRequest $request)
+    public function store(StoreProductRequest $request)
     {
         try {
-            $this->company->create($request->all());
-            return redirect()->route('companies.index')
+            $this->storeProduct->create($request->all());
+            return redirect()->route('storeProducts.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -69,38 +73,40 @@ class CompanyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\StoreProduct  $storeProduct
      * @return \Illuminate\Http\Response
      */
-    public function show(Company $company)
+    public function show(StoreProduct $storeProduct)
     {
-        return view('admin.crud.companies.show', compact('company'));
+        return view('admin.crud.storeProducts.show', compact('storeProduct'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\StoreProduct  $storeProduct
      * @return \Illuminate\Http\Response
      */
-    public function edit(Company $company)
+    public function edit(StoreProduct $storeProduct)
     {
-        //    dd($company->title);
-        return view('admin.crud.companies.edit', compact('company'));
+        //    dd($storeProduct->title);
+        $products=Product::get();
+        $stores=Store::get();
+        return view('admin.crud.storeProducts.edit', compact('storeProduct','products','stores'));
     }
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\portfolio  $company
+     * @param  \App\Models\portfolio  $storeProduct
      * @return \Illuminate\Http\Response
      */
-    public function update(CompanyRequest $request, Company $company)
+    public function update(StoreProductRequest $request, StoreProduct $storeProduct)
     {
         try {
             $data = $request->all();
-            $company->update($data);
-            return redirect()->route('companies.index')
+            $storeProduct->update($data);
+            return redirect()->route('storeProducts.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -110,14 +116,14 @@ class CompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\StoreProduct  $storeProduct
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Company $company)
+    public function destroy(StoreProduct $storeProduct)
     {
         try {
-            $company->delete();
-            return redirect()->route('companies.index')
+            $storeProduct->delete();
+            return redirect()->route('storeProducts.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());

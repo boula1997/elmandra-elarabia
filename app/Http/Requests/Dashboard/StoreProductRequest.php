@@ -4,7 +4,7 @@ namespace App\Http\Requests\Dashboard;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CompanyRequest extends FormRequest
+class StoreProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,13 +23,10 @@ class CompanyRequest extends FormRequest
 
 
         $rules = [
-            'owner' =>  'required',
-            'phone' =>  'required',
+            'quantity' =>  'required|numeric',
+            'product_id' =>  'required',
+            'store_id' =>  'required',
         ];
-        foreach (config('translatable.locales') as $locale) {
-            $rules += [$locale . '.title' => ['required', 'string']];
-            $rules += [$locale . '.address' => ['required']];
-        }
         return  $rules;
     }
 

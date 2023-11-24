@@ -63,10 +63,6 @@
                                         {!! old($locale . '.description', $advertisement->translate($locale)->description) !!} 
                                     </textarea>
                                 </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('advertisements.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -75,17 +71,31 @@
             <div class="card card-custom">
                 <div class="card-body mb-5">
                     <div class="row mt-5" >
-
-                        <div class="col-md-6">
-                            <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">{{ __('general.count') }}</label>
-                                        <input type="text" name="count" value="{{ old('count', $advertisement->count) }}"
-                                            class="form-control" id="exampleInputName" placeholder="@lang('general.count')">
+                                    <label for="exampleInputEmail1">@lang('general.start_date')</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="datetime-local" id="start_date" class="form-control" value="{{ old('start_date',$advertisement->start_date) }}"
+                                            name="start_date">
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">@lang('general.end_date')</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="datetime-local" id="end_date" class="form-control" value="{{ old('end_date',$advertisement->end_date) }}"
+                                            name="end_date">
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-footer mb-5 mt-5">
@@ -95,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-            </div>]
+            </div>
         </div>
 
 

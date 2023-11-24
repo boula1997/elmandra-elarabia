@@ -33,12 +33,35 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="{{ $locale . '[title]' }}"
-                                            placeholder="@lang('general.title')"
+                                        <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
                                             class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title') }}">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
+                                            placeholder="@lang('general.subtitle')"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                            value="{{ old($locale . '.subtitle') }}">
+                                    </div>
+                                </div>
+    
+    
+    
+                                <div class="col-form-group">
+                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
+                                    <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
+                                        name="{{ $locale . '[description]' }}">
+                                        {!! old($locale . '.description') !!} 
+                                    </textarea>
+                                </div>
+    
+                               
                             </div>
                         @endforeach
                     </div>
@@ -49,16 +72,30 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">{{ __('general.count') }}</label>
-                                    <input type="text" name="count" value="{{ old('count') }}" class="form-control"
-                                        id="exampleInputName" placeholder="@lang('general.count')">
+                                <label for="exampleInputEmail1">@lang('general.start_date')</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="datetime-local" id="start_date" class="form-control" value="{{ old('start_date') }}"
+                                        name="start_date">
+                                    
                                 </div>
                             </div>
-
                         </div>
-
-
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">@lang('general.end_date')</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="datetime-local" id="end_date" class="form-control" value="{{ old('end_date') }}"
+                                        name="end_date">
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer mb-5">

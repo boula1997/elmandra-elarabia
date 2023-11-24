@@ -26,6 +26,7 @@ use App\Models\User;
 use App\Models\Orderproduct;
 use App\Models\Seller;
 use App\Models\Store;
+use App\Models\StoreProduct;
 use Illuminate\Support\Facades\File;
 use Jackiedo\Cart\Facades\Cart;
 use Spatie\Permission\Models\Role;
@@ -106,8 +107,7 @@ function itemsCount($model)
         "companies" => count(Company::get()),
         "sellers" => count(Seller::get()),
         "stores" => count(Store::get()),
-        
-        
+        "storeProducts" => count(StoreProduct::get()),
     ];
 
 

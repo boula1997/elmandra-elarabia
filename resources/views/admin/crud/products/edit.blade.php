@@ -38,21 +38,6 @@
                                             value="{{ old($locale . '.title', $product->translate($locale)->title) }}">
                                     </div>
                                 </div>
-
-
-
-
-                                <div class="col-form-group">
-                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
-                                    <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
-                                        name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $product->translate($locale)->description) !!} 
-                                    </textarea>
-                                </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('products.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -113,6 +98,17 @@
                                 <select class="form-select form-select-lg" name="subcategory_id" id="subcategory">
                                     @foreach ($subcategories as $subcategory)
                                         <option value="{{ $subcategory->id }}" {{ old('subcategory_id',$subcategory->id)==$subcategory->id? 'selected' : '' }}>{{ $subcategory->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                <select class="form-select form-select-lg" name="company_id" id="company">
+                                    @foreach ($companies as $company)
+                                        <option value="{{ $company->id }}" {{ old('company_id',$company->id)==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -16,6 +16,8 @@ class CreateAdvertisementTranslationsTable extends Migration
         Schema::create('advertisement_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->text('description')->nullable();
             $table->unsignedBigInteger('advertisement_id');
             $table->string('locale')->index();
             $table->unique(['advertisement_id', 'locale']);

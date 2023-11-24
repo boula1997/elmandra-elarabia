@@ -13,24 +13,33 @@ class StoresSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["خبرتنا","لاعبينا","ألعابنا","عملائنا"];
-        $title_en = ["EXPERIENCE","OUR Gamers","Our Games","HAPPY CLIENTS"];
-        $count=['10','50',"150","1235"];
-        $icon=["fa fa-star","fa fa-users","fa fa-check","fa fa-mug-hot"];
+        $title_ar = ["مستودع 1"];
+        $title_en = ["Store 1"];
+        $description_ar = ["اقلام"];
+        $description_en = ["pens"];
+        $address_ar = ["القاهرة"];
+        $address_en = ["Cairo"];
+        $owner = ["boula"];
+        $phone = ["012457893"];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
-            $Store_Translation = Store::create([
+            $store = Store::create([
                 'ar' => [
                     'title' => $title_ar[$i],
+                    'description' => $description_ar[$i],
+                    'address' => $address_ar[$i],
     
                 ],
                 'en' => [
                     'title' => $title_en[$i],
+                    'description' => $description_en[$i],
+                    'address' => $address_en[$i],
                 ],
-               'count'=>$count[$i],
-               'icon' => $icon[$i]
+               'owner'=>$owner[$i],
+               'phone' => $phone[$i]
             ]);
+
         }
     }
 }
