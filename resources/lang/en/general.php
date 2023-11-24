@@ -347,5 +347,7 @@ return [
     'start_date'=>'Start Date', 
     'end_date'=>'End Date', 
     'owner'=>'Owner', 
+    'company'=>'Company', 
+    'subcategory'=>'Subcategory', 
       
 ];

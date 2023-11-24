@@ -64,8 +64,16 @@
                 <div class="col-md-6">
                     <div class="mb-7 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
-                            <h5 class="font-weight-bolder text-dark">@lang('general.count'):</h5>
-                            <p class="m-0">{{ $store->count }}</p>
+                            <h5 class="font-weight-bolder text-dark">@lang('general.owner'):</h5>
+                            <p class="m-0">{{ $store->owner }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-7 bg-light p-3 rounded h-100">
+                        <div class="card-title fw-bold">
+                            <h5 class="font-weight-bolder text-dark">@lang('general.phone'):</h5>
+                            <p class="m-0">{{ $store->phone }}</p>
                         </div>
                     </div>
                 </div>

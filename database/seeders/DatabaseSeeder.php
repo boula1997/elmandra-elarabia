@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             SlidersSeeder::class,
             CategorySeeder::class,
             SubcategorySeeder::class,
+            CompaniesSeeder::class,
             ProductSeeder::class,
             PermissionTableSeeder::class,
             CreateAdminUserSeeder::class,
@@ -37,7 +38,6 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class,
             TestimonialsSeeder::class,
             UsersSeeder::class,
-            CompaniesSeeder::class,
             StoresSeeder::class,
         ]);
         
