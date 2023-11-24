@@ -33,7 +33,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -88,7 +88,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -143,7 +143,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -198,7 +198,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -253,7 +253,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -308,7 +308,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -362,7 +362,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -417,7 +417,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -472,7 +472,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -527,7 +527,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">
@@ -582,7 +582,7 @@
                             <div class="add-to-cart-box bg-white mt-2">
                                 <button class="btn btn-add-cart addcart-button">Add
                                     <span class="add-icon bg-light-gray">
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-plus px-2"></i>
                                     </span>
                                 </button>
                                 <div class="cart_qty qty-box">

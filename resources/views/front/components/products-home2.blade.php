@@ -77,10 +77,10 @@
                                                     <div class="counter-box">
                                                         <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
 
-                                                        <div class="addtocart_btn">
+                                                        <div class="addtocart_btn pt-5">
                                                             <button class="add-button addcart-button btn buy-button text-light">
                                                                 <span>{{ __('general.add') }}</span>
-                                                                <i class="fa-solid fa-plus"></i>
+                                                                <i class="fa-solid fa-plus px-2"></i>
                                                             </button>
                                                             <div class="qty-box cart_qty">
                                                                 <div class="input-group">
@@ -162,10 +162,10 @@
                                                     <div class="counter-box">
                                                         <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
 
-                                                        <div class="addtocart_btn">
+                                                        <div class="addtocart_btn pt-5">
                                                             <button class="add-button addcart-button btn buy-button text-light">
                                                                 <span>{{ __('general.add') }}</span>
-                                                                <i class="fa-solid fa-plus"></i>
+                                                                <i class="fa-solid fa-plus px-2"></i>
                                                             </button>
                                                             <div class="qty-box cart_qty">
                                                                 <div class="input-group">
@@ -245,10 +245,10 @@
                                                     <div class="counter-box">
                                                         <h6 class="sold theme-color">$ 80.00</h6>
 
-                                                        <div class="addtocart_btn">
+                                                        <div class="addtocart_btn pt-5">
                                                             <button class="add-button addcart-button btn buy-button text-light">
                                                                 <span>Add</span>
-                                                                <i class="fa-solid fa-plus"></i>
+                                                                <i class="fa-solid fa-plus px-2"></i>
                                                             </button>
                                                             <div class="qty-box cart_qty">
                                                                 <div class="input-group">
@@ -336,10 +336,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -420,10 +420,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -508,10 +508,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -592,10 +592,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -680,10 +680,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -764,10 +764,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -852,10 +852,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -936,10 +936,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -1024,10 +1024,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -1108,10 +1108,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -1196,10 +1196,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -1280,10 +1280,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -1368,10 +1368,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">
@@ -1452,10 +1452,10 @@
                                         <div class="counter-box">
                                             <h6 class="sold theme-color">$ 80.00</h6>
 
-                                            <div class="addtocart_btn">
+                                            <div class="addtocart_btn pt-5">
                                                 <button class="add-button addcart-button btn buy-button text-light">
                                                     <span>Add</span>
-                                                    <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
                                                 <div class="qty-box cart_qty">
                                                     <div class="input-group">

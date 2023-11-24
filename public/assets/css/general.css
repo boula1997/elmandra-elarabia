@@ -216,9 +216,6 @@
     background-color: #5b3286 !important;
     border-color: #4a3264 !important;
 }
-.nav-link:hover{
-    color: #ffffff !important;
-}
 
 .nav-link{
     font-size: small !important;
@@ -329,6 +326,11 @@
 
 iframe{
   width: 100%;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0) !important;
 }
   
   @-webkit-keyframes sk-rotate {
