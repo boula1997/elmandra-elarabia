@@ -13,76 +13,39 @@
                  <div class="card-header card-header-tabs-line">
                      @include('admin.components.breadcrumb', ['module' => 'storeProducts', 'action' => 'edit'])
                  </div>
-                <div class="card-toolbar px-3">
-                    <ul class="nav nav-tabs nav-bold nav-tabs-line">
-                        @foreach (config('translatable.locales') as $key => $locale)
-                            <li class="nav-item">
-                                <a class="nav-link  @if ($key == 0) active @endif" data-toggle="tab"
-                                    href="{{ '#' . $locale }}">@lang('general.' . $locale)</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content">
-                        @foreach (config('translatable.locales') as $key => $locale)
-                            <div class="tab-pane fade show @if ($key == 0) active @endif"
-                                id="{{ $locale }}" role="tabpanel">
-                                <div class="form-group">
-                                    <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[title]' }}"
-                                            placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
-                                            value="{{ old($locale . '.title', $storeProduct->translate($locale)->title) }}">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> *
-                                        </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle', $storeProduct->translate($locale)->subtitle) }}">
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-form-group">
-                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
-                                    <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
-                                        name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $storeProduct->translate($locale)->description) !!} 
-                                    </textarea>
-                                </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('storeProducts.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
             </div>
             <div class="card card-custom">
                 <div class="card-body mb-5">
                     <div class="row mt-5" >
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.products') }}</label>
+                                <select class="form-select form-select-lg" name="product_id" id="product">
+                                    @foreach ($products as $product)
+                                        <option value="{{ $product->id }}" {{ old('product_id',$storeProduct->product->id)==$product->id? 'selected' : '' }}>{{ $product->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.stores') }}</label>
+                                <select class="form-select form-select-lg" name="store_id" id="store">
+                                    @foreach ($stores as $store)
+                                        <option value="{{ $store->id }}" {{ old('store_id',$storeProduct->store->id)==$store->id? 'selected' : '' }}>{{ $store->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">{{ __('general.count') }}</label>
-                                        <input type="text" name="count" value="{{ old('count', $storeProduct->count) }}"
-                                            class="form-control" id="exampleInputName" placeholder="@lang('general.count')">
+                                        <label for="exampleInputEmail1">{{ __('general.quantity') }}</label>
+                                        <input type="text" name="quantity" value="{{ old('quantity', $storeProduct->quantity) }}"
+                                            class="form-control" id="exampleInputName" placeholder="@lang('general.quantity')">
                                     </div>
                                 </div>
 

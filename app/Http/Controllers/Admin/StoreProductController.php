@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\StoreProduct;
+use App\Models\Product;
+use App\Models\Store;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreProductRequest;
@@ -45,7 +47,9 @@ class StoreProductController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.storeProducts.create');
+        $products=Product::get();
+        $stores=Store::get();
+        return view('admin.crud.storeProducts.create',compact('products','stores'));
     }
 
     /**
@@ -86,7 +90,9 @@ class StoreProductController extends Controller
     public function edit(StoreProduct $storeProduct)
     {
         //    dd($storeProduct->title);
-        return view('admin.crud.storeProducts.edit', compact('storeProduct'));
+        $products=Product::get();
+        $stores=Store::get();
+        return view('admin.crud.storeProducts.edit', compact('storeProduct','products','stores'));
     }
     /**
      * Update the specified resource in storage.

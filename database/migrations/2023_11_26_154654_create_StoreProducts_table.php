@@ -15,8 +15,11 @@ class CreateStoreProductsTable extends Migration
     {
         Schema::create('storeProducts', function (Blueprint $table) {
             $table->id();
-            $table->text('count')->nullable();
-            $table->string('icon')->nullable();
+            $table->text('quantity')->nullable();
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->unsignedBigInteger('store_id');
+            $table->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');
             $table->timestamps();
         });
     }

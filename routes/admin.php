@@ -31,8 +31,10 @@ use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\StoreController;
+use App\Http\Controllers\Admin\StoreProductController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Models\Advertisement;
+use App\Models\StoreProduct;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -92,6 +94,7 @@ Route::group(
                 Route::resource('companies', CompanyController::class);
                 Route::resource('sellers', SellerController::class);
                 Route::resource('stores', StoreController::class);
+                Route::resource('storeProducts', StoreProductController::class);
             
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);

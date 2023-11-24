@@ -36,8 +36,9 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>@lang('general.title')</th>
-                                                <th>@lang('general.count')</th>
+                                                <th>@lang('general.product')</th>
+                                                <th>@lang('general.store')</th>
+                                                <th>@lang('general.quantity')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -45,8 +46,9 @@
                                             @foreach ($storeProducts as $storeProduct)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $storeProduct->title }}</td>
-                                                    <td>{{ $storeProduct->count }}</td>
+                                                    <td>{{ $storeProduct->product->title }}</td>
+                                                    <td>{{ $storeProduct->store->title }}</td>
+                                                    <td>{{ $storeProduct->quantity }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'storeProducts',

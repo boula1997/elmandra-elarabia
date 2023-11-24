@@ -472,6 +472,27 @@
                         </ul>
                     </li>
                 @endcan
+                @can('storeProduct-list')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class=" px-1 fas fa-users"></i>
+                            <p>
+                                @lang('general.storeProducts')
+                                <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('storeProducts') }}</span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('storeProducts.index') }}" class="nav-link">
+                                    <i class=" px-1 far fa-circle nav-icon"></i>
+                                    <p>@lang('general.show')</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
+                
                 @can('contact-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">

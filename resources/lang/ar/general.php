@@ -353,4 +353,9 @@ return [
     'owner'=>'المالك',
     'company'=>'الشركة', 
     'subcategory'=>'الفئة الفرعية', 
+    'delete_confirm'=>'تأكيد الحذف', 
+    'quantity'=>'الكمية', 
+    'storeProducts'=>'المنتجات في المستودعات', 
+    'store'=>'المستودع', 
+
 ];

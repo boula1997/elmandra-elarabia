@@ -39,6 +39,7 @@ class DatabaseSeeder extends Seeder
             TestimonialsSeeder::class,
             UsersSeeder::class,
             StoresSeeder::class,
+            StoreProductsSeeder::class,
         ]);
         
     }

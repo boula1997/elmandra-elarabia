@@ -4,16 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
-use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
-class StoreProduct extends Model implements TranslatableContract
+class StoreProduct extends Model 
 {
-    use HasFactory, Translatable;
+    use HasFactory;
     protected $table = 'storeProducts';
     protected $guarded = [];
-    public $translatedAttributes = ['title'];
     public $timestamps = true;
-    
+ 
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'product_id');
+    }
+    public function store()
+    {
+        return $this->belongsTo(Store::class, 'store_id');
+    }
 }
