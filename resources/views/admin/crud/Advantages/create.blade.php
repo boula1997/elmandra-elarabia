@@ -48,13 +48,24 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
+                            @include('admin.components.image', [
+                                'label' => __('general.image'),
+                                'value' => old('image'),
+                                'name' => 'image',
+                                'id' => 'kt_image_3',
+                                'accept' => 'image/*',
+                                'required' => true,
+                            ])
+
+                        </div>
+                        {{-- <div class="col-md-6">
                             @include('admin.components.icon', [
                                 'label' => 'label' ,
                                 'required' => true,
                                 'value' => 'fas fa-desktop',
                             ])
 
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="card-footer mb-5">

@@ -54,7 +54,7 @@
     
     
                                 <div class="col-form-group">
-                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
+                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger"></span></label>
                                     <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
                                         name="{{ $locale . '[description]' }}">
                                         {!! old($locale . '.description') !!} 
@@ -95,6 +95,30 @@
                                     
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">@lang('general.code')</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="code" value="{{ old('code') }}" class="form-control"
+                                    id="exampleInputName" placeholder="@lang('general.code')">
+                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            @include('admin.components.image', [
+                                'label' => __('general.image'),
+                                'value' => old('image'),
+                                'name' => 'image',
+                                'id' => 'kt_image_3',
+                                'accept' => 'image/*',
+                                'required' => true,
+                            ])
+
                         </div>
                     </div>
                 </div>

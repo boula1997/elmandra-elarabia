@@ -42,11 +42,12 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <div class="mb-7 bg-light p-3 rounded h-100">
-                        <div class="card-title fw-bold">
-                            <h5 class="font-weight-bolder text-dark">@lang('general.icon'):</h5>
-                            <i class="{{ $advantage->icon }}"></i>
-                        </div>
+                    <div class="form-group">
+                        @if ($advantage->file !== null)
+                            <label class="col-form-label d-block">@lang('general.image')</label>
+                            <br>
+                            <img src="{{ asset($advantage->image) }}" class="w-50">
+                        @endif
                     </div>
                 </div>
             </div>

@@ -37,8 +37,9 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
-                                                <th>@lang('general.start_date')</th>
-                                                <th>@lang('general.end_date')</th>
+                                                <th>@lang('general.subtitle')</th>
+                                                {{-- <th>@lang('general.end_date')</th> --}}
+                                                <th>@lang('general.image')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -46,9 +47,13 @@
                                             @foreach ($advertisements as $advertisement)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $advertisement->title }}</td>
-                                                    <td>{{ $advertisement->start_date }}</td>
-                                                    <td>{{ $advertisement->end_date }}</td>
+                                                    <td>{{ $advertisement->title   }}</td>
+                                                    <td>{{ $advertisement->translate(app()->getLocale())->subtitle !==null? $advertisement->translate(app()->getLocale())->subtitle : __('general.nothing')}}</td>
+
+                                                    {{-- <td>{{ $advertisement->start_date!==null?$advertisement->start_date :__('general.nothing')  }}</td>   --}}
+                                                    {{-- <td>{{ $advertisement->end_date!==null?$advertisement->end_date :__('general.nothing')  }}</td>  --}}
+                                                    <td><img width="100" height="100" src="{{ $advertisement->image }}"
+                                                        alt="{{ $advertisement->title }}"></td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'advertisements',

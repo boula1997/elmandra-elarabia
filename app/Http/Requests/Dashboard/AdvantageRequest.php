@@ -22,8 +22,9 @@ class AdvantageRequest extends FormRequest
         //  $this->merge(['user_id' => auth('api')->user()->id]);
 
 
+        $image = request()->isMethod('put') ? 'nullable' : 'required';
         $rules = [
-            'icon' =>  'required',
+            'image' =>  $image ,
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
