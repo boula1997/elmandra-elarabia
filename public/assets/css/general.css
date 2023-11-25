@@ -331,8 +331,17 @@ iframe{
 .blur-up.lazyloaded {
   -webkit-filter: blur(0);
   filter: blur(0) !important;
-}
   
+}
+.blur-up.lazyloaded {
+  filter:grayscale(100%);
+  
+}
+
+.form-floating::placeholder{
+  text-align: right !important;
+}
+
   @-webkit-keyframes sk-rotate {
     100% {
       -webkit-transform: rotate(360deg);

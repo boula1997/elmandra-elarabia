@@ -4,11 +4,12 @@
             <div class="row">
                 <div class="col-xxl-6 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
                     <div class="image-contain">
-                        <img src="{{ asset('template/assets/images/inner-page/sign-up.png')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('template/assets/images/inner-page/sign-up.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                 </div>
 
-                <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">
+                <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto" dir="ltr">
                     <div class="log-in-box">
                         <div class="log-in-title">
                             <h3>{{ __('general.welcome_to') }} {{ settings()->title }}</h3>
@@ -16,25 +17,48 @@
                         </div>
 
                         <div class="input-box">
-                            <form class="row g-4">
+                            <form method="post" action="{{ route('user.register') }}" class="row g-4">
+                                @csrf
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="text" class="form-control" id="fullname" placeholder="{{ __('general.fullname') }}">
+                                        <input type="text" class="form-control @error('name') invalid @enderror"
+                                            id="fullname" name="name" placeholder="{{ __('general.fullname') }}">
                                         <label for="fullname">{{ __('general.fullname') }}</label>
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="{{ __('general.email_address') }}">
+                                        <input type="email" name="email" class="form-control @error('email') invalid @enderror"
+                                            id="email" placeholder="{{ __('general.email_address') }}">
                                         <label for="email">{{ __('general.email_address') }}</label>
+                                        @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating">
-                                        <input type="password" class="form-control" id="password"
+                                        <input type="password" name="password" class="form-control  @error('password') invalid @enderror" id="password"
                                             placeholder="{{ __('general.password') }}">
                                         <label for="password">{{ __('general.password') }}</label>
+                                        @error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating theme-form-floating">
+                                        <input type="password" name="password_confirmation" class="form-control  @error('password_confirmation') invalid @enderror" id="password_confirmation"
+                                            placeholder="{{ __('general.password_confirmation') }}">
+                                        <label for="password_confirmation">{{ __('general.password_confirmation') }}</label>
+                                        @error('password_confirmation')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -50,7 +74,8 @@
                                 </div> --}}
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100" type="submit">{{ __('general.sign_up') }}</button>
+                                    <button class="btn btn-animation w-100"
+                                        type="submit">{{ __('general.sign_up') }}</button>
                                 </div>
                             </form>
                         </div>
@@ -94,8 +119,8 @@
         </div>
     </section>
     <!-- log in section end -->
-<!-- Section: Design Block -->
-{{-- <section class="text-center text-lg-start">
+    <!-- Section: Design Block -->
+    {{-- <section class="text-center text-lg-start">
     <style>
         :lang(en).cascading-right {
             margin-right: -30px;
@@ -204,4 +229,4 @@
     </div>
     <!-- Jumbotron -->
 </section> --}}
-<!-- Section: Design Block -->
+    <!-- Section: Design Block -->

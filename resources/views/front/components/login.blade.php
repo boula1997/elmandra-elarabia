@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-xxl-6 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
                     <div class="image-contain">
-                        <img src="{{ asset('template/assets/images/inner-page/log-in.png')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('template/assets/images/inner-page/log-in.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                 </div>
 
@@ -16,19 +17,28 @@
                         </div>
 
                         <div class="input-box">
-                            <form class="row g-4">
+                            <form action="{{ route('user.login')}}" method="post" class="row g-4">
+                                @csrf
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email" class="form-control" id="email" placeholder="{{ __('general.log_in_your_account') }}">
+                                        <input type="email"
+                                            class="form-control -bottom-3 @error('email') invalid @enderror"
+                                            id="email" placeholder="{{ __('general.log_in_your_account') }}">
                                         <label for="email">{{ __('general.email_address') }}</label>
+                                        @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="password" class="form-control" id="password"
+                                        <input type="password" class="form-control @error('password') invalid @enderror" id="password"
                                             placeholder="{{ __('general.password') }}">
                                         <label for="password">{{ __('general.password') }}</label>
+                                        @error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -37,14 +47,17 @@
                                         <div class="form-check ps-0 m-0 remember-box">
                                             <input class="checkbox_animated check-box" type="checkbox"
                                                 id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">{{ __('general.remember_me') }}</label>
+                                            <label class="form-check-label"
+                                                for="flexCheckDefault">{{ __('general.remember_me') }}</label>
                                         </div>
-                                        <a href="{{ route('user.forget') }}" class="forgot-password">{{ __('general.forget') }}</a>
+                                        <a href="{{ route('user.forget') }}"
+                                            class="forgot-password">{{ __('general.forget') }}</a>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <button class="btn btn-animation w-100 justify-content-center" type="submit">{{ __('general.login') }}</button>
+                                    <button class="btn btn-animation w-100 justify-content-center"
+                                        type="submit">{{ __('general.login') }}</button>
                                 </div>
                             </form>
                         </div>
@@ -85,8 +98,8 @@
     </section>
     <!-- log in section end -->
 
-<!-- Section: Design Block -->
-{{-- <section class="text-center text-lg-start">
+    <!-- Section: Design Block -->
+    {{-- <section class="text-center text-lg-start">
     <style>
         :lang(en).cascading-right {
             margin-right: -30px;
@@ -176,4 +189,4 @@
     </div>
     <!-- Jumbotron -->
 </section> --}}
-<!-- Section: Design Block -->
+    <!-- Section: Design Block -->
