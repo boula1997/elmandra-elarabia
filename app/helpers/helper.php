@@ -159,13 +159,25 @@ if (!function_exists('getHash()')) {
         foreach(cart()->getItems() as $item)
         if($item->getId() == $id)
         return $item->getHash();
+        return "";
+    }
+}
+if (!function_exists('getQuantity()')) {
+
+    function getQuantity($id)
+    {
+        foreach(cart()->getItems() as $item)
+        if($item->getId() == $id)
+        return $item->get('quantity');
+
+        return "";
     }
 }
 if (!function_exists('cartItem()')) {
-
+    
     function cartItem($id)
     {
-       return Product::findorfail($id);
+        return Product::findorfail($id);
     }
 }
 
@@ -176,5 +188,3 @@ if (!function_exists('categories()')) {
        return Category::get();
     }
 }
-
-
