@@ -37,6 +37,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
+                                                <th>@lang('general.image')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -45,6 +46,8 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $advantage->title }}</td>
+                                                    <td><img width="100" height="100" src="{{ $advantage->image }}"
+                                                        alt="{{ $advantage->title }}"></td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'advantages',

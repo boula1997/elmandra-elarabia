@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Advertisement;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\AdvertisementRequest;
+use Illuminate\Support\Facades\File;
+use App\Models\Advertisement;
+use Illuminate\Http\Request;
+use App\Models\File as ModelsFile;
 use Exception;
 
 class AdvertisementController extends Controller
@@ -57,7 +59,9 @@ class AdvertisementController extends Controller
     public function store(AdvertisementRequest $request)
     {
         try {
-            $this->advertisement->create($request->all());
+            $data = $request->except('image','profile_avatar_remove');
+            $advertisement = $this->advertisement->create($data);
+            $advertisement->uploadFile();
             return redirect()->route('advertisements.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
@@ -98,8 +102,9 @@ class AdvertisementController extends Controller
     public function update(AdvertisementRequest $request, Advertisement $advertisement)
     {
         try {
-            $data = $request->all();
+            $data = $request->except('image','profile_avatar_remove');
             $advertisement->update($data);
+            $advertisement->updateFile();
             return redirect()->route('advertisements.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
@@ -117,6 +122,7 @@ class AdvertisementController extends Controller
     {
         try {
             $advertisement->delete();
+            $advertisement->deleteFile();
             return redirect()->route('advertisements.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {

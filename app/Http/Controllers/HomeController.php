@@ -14,6 +14,8 @@ use App\Models\Setting;
 use App\Models\Partner;
 use App\Models\Slider;
 use App\Models\Product;
+use App\Models\Advantage;
+use App\Models\Advertisement;
 use Exception;
 
 class HomeController extends Controller
@@ -31,8 +33,11 @@ class HomeController extends Controller
     private $slider;
     private $subcategory;
     private $products;
+    private $advantages;
+    private $advertisements;
+    
 
-    public function __construct( Testimonial $testimonial, Team $team, Counter $counter,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory,Product $products)
+    public function __construct( Testimonial $testimonial, Team $team, Counter $counter,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory,Product $products,Advantage $advantages,Advertisement $advertisements)
     {
         $this->testimonial = $testimonial;
         $this->team = $team;
@@ -42,6 +47,9 @@ class HomeController extends Controller
         $this->slider=$slider;
         $this->subcategory=$subcategory;
         $this->products=$products;
+        $this->advantages=$advantages;
+        $this->advertisements=$advertisements;
+        
     }
 
     /**
@@ -60,8 +68,11 @@ class HomeController extends Controller
             $partners=$this->partners->get();
             $sliders=$this->slider->get();
             $subcategories=$this->subcategory->get();
+            $advantages=$this->advantages->get();
+            $advertisements=$this->advertisements->get();
+            
 
-            return view('front.index', compact('testimonials', 'teams', 'counters','teams','partners','sliders','subcategories','products'));
+            return view('front.index', compact('testimonials', 'teams', 'counters','teams','partners','sliders','subcategories','products','advantages','advertisements'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);

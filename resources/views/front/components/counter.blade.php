@@ -4,11 +4,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="offer-box hover-effect">
-                    <img src="{{ asset(isset(page('counter')->images[0]->url) ? page('counter')->images[0]->url : asset('default.jpg')) }}" class="bg-img blur-up lazyload" alt="">
+                    <img src="{{ asset($advertisements[3]->image)  }}" class="bg-img blur-up lazyload" alt="">
                     <div class="offer-contain p-4">
                         <div class="offer-detail">
-                            <h2 class="text-dark">{{ page('counter')->title }} <span class="text-danger fw-bold">{{ page('counter')->subtitle }}</span></h2>
-                            <p class="text-content">{!! page('counter')->description !!}</p>
+                            <h2 class="text-dark">{{ $advertisements[3]->title  }} <span class="text-danger fw-bold">{{ page('counter')->subtitle }}</span></h2>
+                            <p class="text-content">{!! $advertisements[3]->translate(app()->getLocale())->description !!}</p>
                         </div>
                         <div class="offer-timing">
                             <div class="time" id="clockdiv-1" data-hours="1" data-minutes="2" data-seconds="3">

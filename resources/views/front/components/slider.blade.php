@@ -7,7 +7,7 @@
                         <img src="{{ asset(isset(page('slider')->images[0]->url) ? page('slider')->images[0]->url : asset('default.jpg')) }}" class="bg-img blur-up lazyload" alt="">
                         <div class="home-detail p-center-left w-75 position-relative mend-auto">
                             <div>
-                                <h6>Exclusive offer <span>30% Off</span></h6>
+                                <h6>{{$advertisements[0]->translate(app()->getLocale())->subtitle}}<span>{{$advertisements[0]->title}}</span></h6>
                                 <h1 class="w-75 text-uppercase poster-1">{{ page('slider')->title }} <span
                                         class="daily">{{ page('slider')->subtitle }}</span></h1>
                                 <p class="w-58 d-none d-sm-block">{!! page('slider')->description !!}</p>
@@ -24,7 +24,7 @@
                         <img src="{{ asset(isset(page('mini_slider')->images[0]->url) ? page('mini_slider')->images[0]->url : asset('default.jpg')) }}" class="bg-img blur-up lazyload" alt="">
                         <div class="home-detail p-top-left home-p-sm w-75">
                             <div>
-                                <h2 class="mt-0 text-danger">45% <span class="discount text-title">OFF</span>
+                                <h2 class="mt-0 text-danger">{{$advertisements[1]->translate(app()->getLocale())->subtitle}} <span class="discount text-title">{{$advertisements[1]->title}}</span>
                                 </h2>
                                 <h3 class="w-75 text-uppercase poster-1">{{ page('mini_slider')->title }}</h3>
                                 <h3 class="theme-color">{{ page('mini_slider')->subtitle }}</h3>

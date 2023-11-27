@@ -5,16 +5,18 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <div class="service-contain">
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/product.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
+                            @foreach ($advantages as $advantage)
+                                <div class="service-box">
+                                    <div class="service-image">
+                                        <img src="{{ asset($advantage->image) }}" class="blur-up lazyload" alt="">
+                                    </div>
 
-                                <div class="service-detail">
-                                    <h5>{{ __('general.every_amazing') }}</h5>
+                                    <div class="service-detail">
+                                        <h5>{{$advantage->title }}</h5>
+                                    </div>
                                 </div>
-                            </div>
-
+                            @endforeach
+{{-- 
                             <div class="service-box">
                                 <div class="service-image">
                                     <img src="{{ asset('template/assets/svg/delivery.svg') }}" class="blur-up lazyload" alt="">
@@ -43,7 +45,7 @@
                                 <div class="service-detail">
                                     <h5>{{ __('general.best_price') }}</h5>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

@@ -13,9 +13,24 @@ class AdvantagesSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["خبرتنا","لاعبينا","ألعابنا","عملائنا"];
-        $title_en = ["EXPERIENCE","OUR Gamers","Our Games","HAPPY CLIENTS"];
-        $icon=["fa fa-star","fa fa-users","fa fa-check","fa fa-mug-hot"];
+
+        $title_ar = [
+                    "كل المنتجات المذهلة",
+                    "توصيل مجاني للطلبات التي تزيد عن 50",
+                    "الخصومات الكبرى اليومية",
+                    "أفضل الأسعار في السوق"];
+
+        $title_en = [
+                    "Every Amazing Products",
+                    "Free Delivery For Order Over 50",
+                    "Daily Mega Discounts",
+                    "Best Price On The Market"];
+       $image=[
+                "images/qGDvh5RwLxxMxLHTFWifhiaPORWiTwpHzIXOYLzu.svg",
+                "images/NkLFFDhwBR1ZLZhBc7iQIAFl8puRtRjxJDGbI1zo.svg",
+                "images/QvS8l6iB5fHENFPGjytIgYS8oaN7CRG1rj81QM4w.svg",
+                "images/IzDM3TmrhlquOlKULgO3CRFrYftVmZeSsFGAP7VP.svg",
+            ];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -27,8 +42,8 @@ class AdvantagesSeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-               'icon' => $icon[$i],
             ]);
+            $Advantage_Translation->file()->create(["url"=>$image[$i]]);
         }
     }
 }

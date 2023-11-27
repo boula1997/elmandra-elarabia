@@ -329,10 +329,6 @@ return [
     'recently_added'=>'أضيف مؤخرا',
     'trending_products'=>'المنتجات الترند',
     'subscribe'=>'اشترك',
-    'every_amazing'=>'كل المنتجات المذهلة',
-    'free_delivery'=>'توصيل مجاني للطلبات التي تزيد عن 50',
-    'daily_mega'=>'الخصومات الكبرى اليومية',
-    'best_price'=>'أفضل الأسعار في السوق',
     'our_team'=>'فريقنا المتميز',
     'asleltawfeer_team'=>'عضو فريق أصل التوفير',
     'welcome_to'=>'مرحبا بك في',
@@ -357,5 +353,7 @@ return [
     'quantity'=>'الكمية', 
     'storeProducts'=>'المنتجات في المستودعات', 
     'store'=>'المستودع', 
+    'nothing'=>'لايوجد', 
+    'code'=>'الكود', 
 
 ];

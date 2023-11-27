@@ -97,6 +97,30 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">@lang('general.code')</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="code" value="{{ old('code',$advertisement->code) }}" class="form-control"
+                                        id="exampleInputName" placeholder="@lang('general.code')">
+                                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                @include('admin.components.image', [
+                                    'label' => __('general.image'),
+                                    'value' => old('image', $advertisement->image),
+                                    'name' => 'image',
+                                    'id' => 'kt_image_3',
+                                    'accept' => 'image/*',
+                                    'required' => true,
+                                ])
+    
+                            </div>
                         </div>
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>

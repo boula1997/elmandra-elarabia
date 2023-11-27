@@ -49,7 +49,7 @@
                                         <div class="mb-7 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                                <p class="m-0">{!! $advertisement->translate($locale)->description !!}</p>
+                                                <p class="m-0">{!!  $advertisement->description!==null?$advertisement->translate($locale)->description : __('general.nothing') !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -65,7 +65,7 @@
                     <div class="mb-7 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
                             <h5 class="font-weight-bolder text-dark">@lang('general.start_date'):</h5>
-                            <p class="m-0">{{ $advertisement->start_date }}</p>
+                            <p class="m-0">{{  $advertisement->start_date!==null?$advertisement->start_date :__('general.nothing')}}</p>
                         </div>
                     </div>
                 </div>
@@ -73,10 +73,29 @@
                     <div class="mb-7 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
                             <h5 class="font-weight-bolder text-dark">@lang('general.end_date'):</h5>
-                            <p class="m-0">{{ $advertisement->end_date }}</p>
+                            <p class="m-0">{{ $advertisement->end_date!==null?$advertisement->end_date :__('general.nothing') }}</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="mb-7 bg-light p-3 rounded h-100">
+                        <div class="card-title fw-bold">
+                            <h5 class="font-weight-bolder text-dark">@lang('general.code'):</h5>
+                            <p class="m-0">{{  $advertisement->code!==null?$advertisement->code :__('general.nothing') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @if ($advertisement->file !== null)
+                            <label class="col-form-label d-block">@lang('general.image')</label>
+                            <br>
+                            <img src="{{ asset($advertisement->image) }}" class="w-50">
+                        @endif
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -48,11 +48,14 @@
             <div class="card card-custom">
                 <div class="card-body mb-5">
                     <div class="row mt-5" >
-                        <div class="col-md-12">
-                            @include('admin.components.icon', [
-                                'label' => 'icon',
+                        <div class="col-md-6">
+                            @include('admin.components.image', [
+                                'label' => __('general.image'),
+                                'value' => old('image', $advantage->image),
+                                'name' => 'image',
+                                'id' => 'kt_image_3',
+                                'accept' => 'image/*',
                                 'required' => true,
-                                'value' => old('icon', $advantage->icon),
                             ])
 
                         </div>

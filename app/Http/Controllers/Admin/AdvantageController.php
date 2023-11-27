@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Advantage;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\AdvantageRequest;
+use Illuminate\Support\Facades\File;
+use App\Models\Advantage;
+use Illuminate\Http\Request;
+use App\Models\File as ModelsFile;
 use Exception;
 
 class AdvantageController extends Controller
@@ -57,7 +59,10 @@ class AdvantageController extends Controller
     public function store(AdvantageRequest $request)
     {
         try {
-            $this->advantage->create($request->all());
+            $data = $request->except('image','profile_avatar_remove');
+            $advantage = $this->advantage->create($data);
+            $advantage->uploadFile();
+            // $this->advantage->create($request->all());
             return redirect()->route('advantages.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
@@ -98,8 +103,9 @@ class AdvantageController extends Controller
     public function update(AdvantageRequest $request, Advantage $advantage)
     {
         try {
-            $data = $request->all();
+            $data = $request->except('image','profile_avatar_remove');
             $advantage->update($data);
+            $advantage->updateFile();
             return redirect()->route('advantages.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
@@ -117,6 +123,7 @@ class AdvantageController extends Controller
     {
         try {
             $advantage->delete();
+            $advantage->deleteFile();
             return redirect()->route('advantages.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
