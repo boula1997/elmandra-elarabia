@@ -100,14 +100,18 @@
                                                                 </button>
                                                             </a>
                                                         @endif
-                                                        <div class="qty-box {{isInCart($product->id)?'cart_qty open' : 'cart_qty' }}">
+                                                        <div
+                                                            class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
                                                             <div class="input-group">
                                                                 <button type="button" class="btn qty-left-minus"
                                                                     data-type="minus" data-field="">
                                                                     <i class="fa fa-minus" aria-hidden="true"></i>
                                                                 </button>
-                                                                <input class="form-control input-number qty-input itemCount"
-                                                                    type="text" name="itemCount" value="{{ getQuantity($product->id) }}" hash="{{ getHash($product->id) }}">
+                                                                <input
+                                                                    class="form-control input-number qty-input itemCount"
+                                                                    type="text" name="itemCount"
+                                                                    value="{{ getQuantity($product->id) }}"
+                                                                    hash="{{ getHash($product->id) }}">
                                                                 <button type="button" class="btn qty-right-plus"
                                                                     data-type="plus" data-field="">
                                                                     <i class="fa fa-plus" aria-hidden=true"></i>
@@ -146,7 +150,7 @@
                 type: 'get',
                 url: url,
                 success: (response) => {
-                    $(this).next().next().next().next().attr('hash',response.hash);
+                    $(this).next().next().next().next().attr('hash', response.hash);
 
                     $('.cart-count').text(response.count);
                     toastr.options = {
@@ -222,152 +226,155 @@
         });
     </script>
 
-        {{-- Item Count --}}
-        <script>
-            $('.itemCount').on('change', function(e) {
-                console.log('clicked!');
-                e.preventDefault(); 
-                var hash = $(this).attr('hash');
-                var quantity = $(this).val();
-                let url = "{{ route('updateItem.count', [':hash',':quantity']) }}";
-                url = url.replace(':hash', hash);
-                url = url.replace(':quantity', quantity);
-                $.ajax({
-                    type: 'get',
-                    url: url,
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        'quantity': $("input[name=quantity]").val(),
-                    },
-                    success: (response) => {
-                        $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total)+50);
-                        $(this).parent().parent().find('.itemTotalPrice').text(response.price*response.quantity);
-                        // $('.itemTotalPrice').remove();
-                        toastr.options = {
-                            "closeButton": true,    
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                        };
-    
-                        toastr.success("{{ __('general.added_successfully') }}");
-                    },
-                    error: function(response) {
-            
-                        $(".err").addClass("d-block");
-                        $(".err").removeClass("d-none");
-                    }
-                });
+    {{-- Item Count --}}
+    <script>
+        $('.itemCount').on('change', function(e) {
+            console.log('clicked!');
+            e.preventDefault();
+            var hash = $(this).attr('hash');
+            var quantity = $(this).val();
+            let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
+            url = url.replace(':hash', hash);
+            url = url.replace(':quantity', quantity);
+            $.ajax({
+                type: 'get',
+                url: url,
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'quantity': $("input[name=quantity]").val(),
+                },
+                success: (response) => {
+                    $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total) + 50);
+                    $(this).parent().parent().find('.itemTotalPrice').text(response.price * response
+                        .quantity);
+                    // $('.itemTotalPrice').remove();
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.added_successfully') }}");
+                },
+                error: function(response) {
+
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
             });
-            $('.itemCount').next().on('click', function(e) {
-                console.log('clicked!');
-                e.preventDefault(); 
-                var hash = $(this).prev().attr('hash');
-                var quantity = $(this).prev().val();
-                let url = "{{ route('updateItem.count', [':hash',':quantity']) }}";
-                url = url.replace(':hash', hash);
-                url = url.replace(':quantity', quantity);
-                $.ajax({
-                    type: 'get',
-                    url: url,
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        'quantity': $("input[name=quantity]").val(),
-                    },
-                    success: (response) => {
-                        $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total)+50);
-                        $(this).prev().parent().parent().find('.itemTotalPrice').text(response.price*response.quantity);
-                        // $('.itemTotalPrice').remove();
-                        toastr.options = {
-                            "closeButton": true,    
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                        };
-    
-                        toastr.success("{{ __('general.added_successfully') }}");
-                    },
-                    error: function(response) {
-            
-                        $(".err").addClass("d-block");
-                        $(".err").removeClass("d-none");
-                    }
-                });
+        });
+        $('.itemCount').next().on('click', function(e) {
+            console.log('clicked!');
+            e.preventDefault();
+            var hash = $(this).prev().attr('hash');
+            var quantity = $(this).prev().val();
+            let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
+            url = url.replace(':hash', hash);
+            url = url.replace(':quantity', quantity);
+            $.ajax({
+                type: 'get',
+                url: url,
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'quantity': $("input[name=quantity]").val(),
+                },
+                success: (response) => {
+                    $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total) + 50);
+                    $(this).prev().parent().parent().find('.itemTotalPrice').text(response.price *
+                        response.quantity);
+                    // $('.itemTotalPrice').remove();
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.added_successfully') }}");
+                },
+                error: function(response) {
+
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
             });
-            $('.itemCount').prev().on('click', function(e) {
-                console.log('clicked!');
-                e.preventDefault(); 
-                var hash = $(this).next().attr('hash');
-                var quantity = $(this).next().val();
-                let url = "{{ route('updateItem.count', [':hash',':quantity']) }}";
-                url = url.replace(':hash', hash);
-                url = url.replace(':quantity', quantity);
-                $.ajax({
-                    type: 'get',
-                    url: url,
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        'quantity': $("input[name=quantity]").val(),
-                    },
-                    success: (response) => {
-                        $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total)+50);
-                        $(this).next().parent().parent().find('.itemTotalPrice').text(response.price*response.quantity);
-                        // $('.itemTotalPrice').remove();
-                        toastr.options = {
-                            "closeButton": true,    
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                        };
-    
-                        toastr.success("{{ __('general.removed_successfully') }}");
-                    },
-                    error: function(response) {
-            
-                        $(".err").addClass("d-block");
-                        $(".err").removeClass("d-none");
-                    }
-                });
+        });
+        $('.itemCount').prev().on('click', function(e) {
+            console.log('clicked!');
+            e.preventDefault();
+            var hash = $(this).next().attr('hash');
+            var quantity = $(this).next().val();
+            let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
+            url = url.replace(':hash', hash);
+            url = url.replace(':quantity', quantity);
+            $.ajax({
+                type: 'get',
+                url: url,
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'quantity': $("input[name=quantity]").val(),
+                },
+                success: (response) => {
+                    $('.cart-count').text(response.count);
+                    $('.cart-total').text(response.total);
+                    $('.cart-total-shipping').text((response.total) + 50);
+                    $(this).next().parent().parent().find('.itemTotalPrice').text(response.price *
+                        response.quantity);
+                    // $('.itemTotalPrice').remove();
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.removed_successfully') }}");
+                },
+                error: function(response) {
+
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
             });
-        </script>
-        {{-- Item Count --}}
+        });
+    </script>
+    {{-- Item Count --}}
 @endpush
