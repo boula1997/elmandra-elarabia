@@ -100,8 +100,7 @@
                                                                 </button>
                                                             </a>
                                                         @endif
-                                                        <div
-                                                            class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
+                                                        <div class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
                                                             <div class="input-group">
                                                                 <button type="button" class="btn qty-left-minus"
                                                                     data-type="minus" data-field="">
@@ -150,8 +149,7 @@
                 type: 'get',
                 url: url,
                 success: (response) => {
-                    $(this).next().next().next().next().attr('hash', response.hash);
-
+                    $(this).next().children().children().next().attr('hash', response.hash);
                     $('.cart-count').text(response.count);
                     toastr.options = {
                         "closeButton": true,

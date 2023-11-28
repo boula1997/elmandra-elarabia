@@ -86,10 +86,9 @@
                                                                 data-type="minus" data-field="">
                                                                 <i class="fa fa-minus" aria-hidden="true"></i>
                                                             </button>
-                                                            <input
-                                                                class="form-control input-number qty-input itemCount"
+                                                            <input class="form-control input-number qty-input itemCount"
                                                                 type="text" name="itemCount"
-                                                                value="{{ $item->get('quantity')}}"
+                                                                value="{{ $item->get('quantity') }}"
                                                                 hash="{{ $item->getHash() }}">
                                                             <button type="button" class="btn qty-right-plus"
                                                                 data-type="plus" data-field="">
@@ -109,7 +108,8 @@
                                                 <h4 class="table-title text-content">Action</h4>
                                                 <a class="save notifi-wishlist" href="javascript:void(0)">Save for
                                                     later</a>
-                                                <a class="remove close_button removeCart link" hash="{{ $item->getHash() }}">Remove</a>
+                                                <a class="remove close_button removeCart link"
+                                                    hash="{{ $item->getHash() }}">Remove</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -323,8 +323,8 @@
                 e.preventDefault();
                 var hash = $(this).attr('hash');
                 var quantity = $(this).val();
-                if(quantity==0)
-                $(this).parents().eq(4).remove();
+                if (quantity == 0)
+                    $(this).parents().eq(4).remove();
                 let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
                 url = url.replace(':hash', hash);
                 url = url.replace(':quantity', quantity);
@@ -425,8 +425,8 @@
                 e.preventDefault();
                 var hash = $(this).next().attr('hash');
                 var quantity = $(this).next().val();
-                if(quantity==0)
-                $(this).parents().eq(4).remove();
+                if (quantity == 0)
+                    $(this).parents().eq(4).remove();
                 let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
                 url = url.replace(':hash', hash);
                 url = url.replace(':quantity', quantity);

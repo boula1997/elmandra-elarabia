@@ -170,7 +170,7 @@ if (!function_exists('getQuantity()')) {
         if($item->getId() == $id)
         return $item->get('quantity');
 
-        return "";
+        return 1;
     }
 }
 if (!function_exists('cartItem()')) {
