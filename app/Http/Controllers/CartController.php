@@ -84,9 +84,14 @@ class CartController extends Controller
     public function updateItemCount($hash, $quantity)
     {
         try {
+            
             $updatedItem = $this->cart->updateItem($hash, [
                 'quantity'      => $quantity,
             ]);
+            
+            
+            if($quantity==0)
+            return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems()),'total'=>cart()->getTotal()]);
             return response()->json(['success' => trans('general.sent_successfully'),'count'=>count(cart()->getItems()),'price'=>$updatedItem->get('price'),'quantity'=>$updatedItem->get('quantity'),'total'=>cart()->getTotal()]);
             
         } catch (Exception $e) {
