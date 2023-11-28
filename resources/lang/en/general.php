@@ -260,7 +260,7 @@ return [
     'delete_confirm '=>'Delete Confirm ',
     'delete_message'=>'Delete Message',
     'no_result'=>'No Result',
-    'price'=>'Price ',
+    'price'=>'Price',
     'price_bd'=>'Price Before Discount',
     'stock'=>'Stock',
     // heading
@@ -355,5 +355,19 @@ return [
     'store'=>'Store', 
     'nothing'=>'Nothing',
     'code'=>'Code',
+    'sold_by'=>'Sold By:',
+    'asleltawfeer'=>'Asl El Tawfeer',
+    'save'=>'Saving :',
+    'action'=>'Action',
+    'save_for_later'=>'Save for later',
+    'remove'=>'Remove',
+    'cart_total'=>'Cart Total',
+    'coupon_apply'=>'Coupon Apply',
+    'apply'=>'Apply',
+    'enter_coupon_code'=>'Enter Coupon Code Here...',
+    'personal_information'=>'Personal Information',
+    'process_to_checkout'=>'Process To Checkout',
+    'return_to_shopping'=>'Return To Shopping',
+    
       
 ];
