@@ -188,3 +188,10 @@ if (!function_exists('categories()')) {
        return Category::get();
     }
 }
+if (!function_exists('advantages()')) {
+
+    function advantages()
+    {
+       return Advantage::get();
+    }
+}

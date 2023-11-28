@@ -110,7 +110,7 @@
                                                                     type="text" name="itemCount" value="{{ getQuantity($product->id) }}" hash="{{ getHash($product->id) }}">
                                                                 <button type="button" class="btn qty-right-plus"
                                                                     data-type="plus" data-field="">
-                                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                                    <i class="fa fa-plus" aria-hidden=true"></i>
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -146,6 +146,8 @@
                 type: 'get',
                 url: url,
                 success: (response) => {
+                    $(this).next().next().next().next().attr('hash',response.hash);
+
                     $('.cart-count').text(response.count);
                     toastr.options = {
                         "closeButton": true,
@@ -190,6 +192,7 @@
                     $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
                         'btn btn-primary').attr('hash', '');
                     $('.cart-count').text(response.count);
+
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,
@@ -356,7 +359,7 @@
                             "hideMethod": "fadeOut"
                         };
     
-                        toastr.success("{{ __('general.added_successfully') }}");
+                        toastr.success("{{ __('general.removed_successfully') }}");
                     },
                     error: function(response) {
             

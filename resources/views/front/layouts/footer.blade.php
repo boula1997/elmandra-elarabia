@@ -5,7 +5,7 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <div class="service-contain">
-                            @foreach ($advantages as $advantage)
+                            @foreach (advantages() as $advantage)
                                 <div class="service-box">
                                     <div class="service-image">
                                         <img src="{{ asset($advantage->image) }}" class="blur-up lazyload" alt="">
