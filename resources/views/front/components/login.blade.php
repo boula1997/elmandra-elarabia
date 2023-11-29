@@ -50,8 +50,8 @@
                                             <label class="form-check-label"
                                                 for="flexCheckDefault">{{ __('general.remember_me') }}</label>
                                         </div>
-                                        <a href="{{ route('user.forget') }}"
-                                            class="forgot-password">{{ __('general.forget') }}</a>
+                                        {{-- <a href="{{ route('user.forget') }}"
+                                            class="forgot-password">{{ __('general.forget') }}</a> --}}
                                     </div>
                                 </div>
 
