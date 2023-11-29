@@ -21,7 +21,7 @@
                                 @csrf
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email"
+                                        <input type="email" name="email"
                                             class="form-control -bottom-3 @error('email') invalid @enderror"
                                             id="email" placeholder="{{ __('general.log_in_your_account') }}">
                                         <label for="email">{{ __('general.email_address') }}</label>
@@ -34,7 +34,7 @@
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
                                         <input type="password" class="form-control @error('password') invalid @enderror" id="password"
-                                            placeholder="{{ __('general.password') }}">
+                                            placeholder="{{ __('general.password') }}" name="password">
                                         <label for="password">{{ __('general.password') }}</label>
                                         @error('password')
                                             <span class="text-danger">{{ $message }}</span>
