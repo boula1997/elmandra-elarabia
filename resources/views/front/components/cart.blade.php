@@ -137,7 +137,7 @@
                             <ul>
                                 <li>
                                     <h4>Subtotal</h4>
-                                    <h4 class="price">$125.65</h4>
+                                    <h4 class="price">{{ cart()->getTotal() }}</h4>
                                 </li>
 
                                 <li>
@@ -147,7 +147,7 @@
 
                                 <li class="align-items-start">
                                     <h4>Shipping</h4>
-                                    <h4 class="price text-end">$6.90</h4>
+                                    <h4 class="price text-end">$25</h4>
                                 </li>
                             </ul>
                         </div>
@@ -155,7 +155,7 @@
                         <ul class="summery-total">
                             <li class="list-total border-top-0">
                                 <h4>Total (USD)</h4>
-                                <h4 class="price theme-color">$132.58</h4>
+                                <h4 class="price theme-color cart-total">${{ cart()->getTotal() +25 }}</h4>
                             </li>
                         </ul>
 
