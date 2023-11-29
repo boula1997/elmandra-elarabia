@@ -147,7 +147,7 @@
                                         <h6 class="text-content mb-2">{{ __('general.name') }}</h6>
                                         <div class="mb-3 coupon-box input-group">
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="{{ __('general.name') }}" name="name">
+                                                placeholder="{{ __('general.name') }}" name="name" value="{{ old('name',auth('web')->user()->name) }}">
                                             </div>
                                             <div class="err" id="name"></div>
                                     </div>
@@ -155,7 +155,7 @@
                                         <h6 class="text-content mb-2">{{ __('general.your_email') }}</h6>
                                         <div class="mb-3 coupon-box input-group">
                                             <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="{{ __('general.your_email') }}" name="email">
+                                                placeholder="{{ __('general.your_email') }}" name="email" value="{{ old('email',auth('web')->user()->email) }}">
                                             </div>
                                             <div class="err" id="email"></div>
                                     </div>
@@ -163,7 +163,7 @@
                                         <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
                                         <div class="mb-3 coupon-box input-group">
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="{{ __('general.address') }}" name="address">
+                                                placeholder="{{ __('general.address') }}" name="address" value="{{ old('address',auth('web')->user()->name) }}">
                                             </div>
                                             <div class="err" id="address"></div>
                                     </div>
@@ -171,7 +171,7 @@
                                         <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
                                         <div class="mb-3 coupon-box input-group">
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="{{ __('general.phone') }}" name="phone">
+                                                placeholder="{{ __('general.phone') }}" name="phone" value="{{ old('phone',auth('web')->user()->phone) }}">
                                             </div>
                                             <div class="err" id="phone"></div>
                                     </div>
