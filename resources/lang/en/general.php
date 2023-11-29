@@ -368,6 +368,7 @@ return [
     'personal_information'=>'Personal Information',
     'process_to_checkout'=>'Process To Checkout',
     'return_to_shopping'=>'Return To Shopping',
+    'password_confirmation'=>'Password Confirmation',
     
       
 ];

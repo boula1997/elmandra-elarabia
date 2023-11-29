@@ -369,5 +369,7 @@ return [
     'personal_information'=>'البيانات شخصية',
     'process_to_checkout'=>'عملية الدفع',
     'return_to_shopping'=>'العودة إلى التسوق',
+    'password_confirmation'=>'تأكيد كلمة المرور',
+
 
 ];
