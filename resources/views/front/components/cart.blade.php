@@ -25,46 +25,17 @@
 
                                                                 <li class="text-content"><span class="text-title">{{ __('general.sold_by') }}</span> {{ __('general.asleltawfeer') }}</li>
 
-                                                                <li class="text-content"><span
-                                                                        class="text-title">{{ __('general.quantity') }}</span>
-                                                                    {{ $item->get('quantity') }}</li>
+
 
                                                                 <li>
-                                                                    <h5 class="text-content d-inline-block">{{ __('general.price') }}</h5>
-                                                                    <span>$35.10</span>
-                                                                    <span
-                                                                        class="text-content">{{ $item->get('price') }}</span>
+                                                                    <h5 class="text-content d-inline-block"></h5>
+                                                                    <span></span>
                                                                 </li>
+
+        
 
                                                                 <li>
-                                                                    <h5 class="saving theme-color">{{ __('general.save') }} $20.68</h5>
-                                                                </li>
-
-                                                                <li class="quantity-price-box">
-                                                                    <div class="cart_qty">
-                                                                        <div class="input-group">
-                                                                            <button type="button"
-                                                                                class="btn qty-left-minus" data-type="minus"
-                                                                                data-field="">
-                                                                                <i class="fa fa-minus ms-0"
-                                                                                    aria-hidden="true"></i>
-                                                                            </button>
-                                                                            <input
-                                                                                class="form-control input-number qty-input"
-                                                                                type="text" name="quantity"
-                                                                                value="{{ old('quantity', $item->get('quantity')) }}">
-                                                                            <button type="button"
-                                                                                class="btn qty-right-plus" data-type="plus"
-                                                                                data-field="">
-                                                                                <i class="fa fa-plus ms-0"
-                                                                                    aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-                                                                <li>
-                                                                    <h5>{{ __('general.total') }} $35.10</h5>
+                                                                    <h5>{{ __('general.total') }} {{ $item->get('quantity') * $item->get('price') }}</h5>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -73,8 +44,7 @@
 
                                                 <td class="price">
                                                     <h4 class="table-title text-content">{{ __('general.price') }}</h4>
-                                                    <h5>$35.10 <del class="text-content">$45.68</del></h5>
-                                                    <h6 class="theme-color">{{ __('general.save') }} $20.68</h6>
+                                                    <h5>{{ $item->get('price') }}</h5>
                                                 </td>
 
                                                 <td class="quantity">
@@ -88,8 +58,8 @@
                                                                 </button>
                                                                 <input class="form-control input-number qty-input itemCount"
                                                                     type="text" name="itemCount"
-                                                                    value="{{ $item->get('quantity') }}"
-                                                                    hash="{{ $item->getHash() }}">
+                                                                    value="{{ $item->get('quantity') }}" price="{{ $item->get('price') }}"
+                                                                    hash="{{ $item->getHash() }}" index="{{ $loop->index }}">
                                                                 <button type="button" class="btn qty-right-plus"
                                                                     data-type="plus" data-field="">
                                                                     <i class="fa fa-plus" aria-hidden=true"></i>
@@ -101,7 +71,7 @@
 
                                                 <td class="subtotal">
                                                     <h4 class="table-title text-content">{{ __('general.total') }}</h4>
-                                                    <h5>$35.10</h5>
+                                                    <h5 class="single-total{{ $loop->index }}">${{$item->get('price') * $item->get('quantity')}}</h5>
                                                 </td>
 
                                                 <td class="save-remove">
@@ -159,84 +129,71 @@
                         </ul>
                         <br><br>
                         <br>
-                        {{-- <div class="button-group cart-button">
-                            <ul>
-                                <li>
-                                    <button onclick="location.href = 'checkout.html';"
-                                        class="btn btn-animation proceed-btn fw-bold">Process To Checkout</button>
-                                </li>
-
-                                <li>
-                                    <button onclick="location.href = 'index.html';"
-                                        class="btn btn-light shopping-button text-dark">
-                                        <i class="fa-solid fa-arrow-left-long"></i>Return To Shopping</button>
-                                </li>
-                            </ul>
-                        </div> --}}
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="col-xxl-6">
-                    <div class="summery-box p-sticky">
-                        <div class="summery-header">
-                            <h3>{{ __('general.personal_information') }}</h3>
-                        </div>
-
-                        <div class="summery-contain">
-                            <div class="coupon-cart">
-                                <h6 class="text-content mb-2">{{ __('general.name') }}</h6>
-                                <div class="mb-3 coupon-box input-group">
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="{{ __('general.name') }}">
-                                    {{-- <button class="btn-apply">Apply</button> --}}
-                                </div>
+            <form method="post" id="order-form">
+                <div class="col-md-6">
+                    <div class="col-xxl-6">
+                        <div class="summery-box p-sticky">
+                            <div class="summery-header">
+                                <h3>{{ __('general.personal_information') }}</h3>
                             </div>
-                            <div class="coupon-cart">
-                                <h6 class="text-content mb-2">{{ __('general.your_email') }}</h6>
-                                <div class="mb-3 coupon-box input-group">
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="{{ __('general.your_email') }}">
-                                    {{-- <button class="btn-apply">Apply</button> --}}
+    
+                            <div class="summery-contain">
+                                <div class="coupon-cart">
+                                    <h6 class="text-content mb-2">{{ __('general.name') }}</h6>
+                                    <div class="mb-3 coupon-box input-group">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="{{ __('general.name') }}" name="name">
+                                        <div id="name"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="coupon-cart">
-                                <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
-                                <div class="mb-3 coupon-box input-group">
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="{{ __('general.address') }}">
-                                    {{-- <button class="btn-apply">Apply</button> --}}
+                                <div class="coupon-cart">
+                                    <h6 class="text-content mb-2">{{ __('general.your_email') }}</h6>
+                                    <div class="mb-3 coupon-box input-group">
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="{{ __('general.your_email') }}" name="email">
+                                        <div id="email"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="coupon-cart">
-                                <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
-                                <div class="mb-3 coupon-box input-group">
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="{{ __('general.phone') }}">
-                                    {{-- <button class="btn-apply">Apply</button> --}}
+                                <div class="coupon-cart">
+                                    <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
+                                    <div class="mb-3 coupon-box input-group">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="{{ __('general.address') }}" name="address">
+                                        <div id="address"></div>
+                                    </div>
                                 </div>
+                                <div class="coupon-cart">
+                                    <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
+                                    <div class="mb-3 coupon-box input-group">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="{{ __('general.phone') }}" name="phone">
+                                        <div id="phone"></div>
+                                    </div>
+                                </div>
+                             
                             </div>
-                         
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <div class="button-group cart-button">
-                    <ul>
-                        <li>
-                            <button onclick="location.href = 'checkout.html';"
-                                class="btn btn-animation proceed-btn fw-bold">{{ __('general.process_to_checkout') }}</button>
-                        </li>
-
-                        <li>
-                            <button onclick="location.href = '{{ route('front.show-products') }}';"
-                                class="btn btn-light shopping-button text-dark">
-                                <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
-                        </li>
-                    </ul>
+                <div class="col-md-12">
+                    <div class="button-group cart-button">
+                        <ul>
+                            <li>
+                                <button type="submit" class="btn btn-animation proceed-btn fw-bold">{{ __('general.process_to_checkout') }}</button>
+                            </li>
+    
+                            <li>
+                                <button onclick="location.href = '{{ route('front.show-products') }}';"
+                                    class="btn btn-light shopping-button text-dark">
+                                    <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     </section>
@@ -264,6 +221,7 @@
                         $(this).parents().eq(1).remove();
                         $('.cart-count').text(response.count);
                         $('.cart-total').text(response.total);
+                        $('.single-total').text(response.total);
                         $('.cart-total-shipping').text((response.total) + 50);
                         toastr.options = {
                             "closeButton": true,
@@ -385,11 +343,12 @@
                 e.preventDefault();
                 var hash = $(this).attr('hash');
                 var quantity = $(this).val();
+                var index = $(this).attr('index');
                 if (quantity == 0)
-                    $(this).parents().eq(4).remove();
-                let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
-                url = url.replace(':hash', hash);
-                url = url.replace(':quantity', quantity);
+                $(this).parents().eq(4).remove();
+            let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
+            url = url.replace(':hash', hash);
+            url = url.replace(':quantity', quantity);
                 $.ajax({
                     type: 'get',
                     url: url,
@@ -398,6 +357,7 @@
                         'quantity': $("input[name=quantity]").val(),
                     },
                     success: (response) => {
+                        $('.single-total'+index).text(quantity * $(this).attr('price'));
                         $('.cart-count').text(response.count);
                         $('.cart-total').text(response.total);
                         $('.cart-total-shipping').text((response.total) + 50);
@@ -437,6 +397,7 @@
                 e.preventDefault();
                 var hash = $(this).prev().attr('hash');
                 var quantity = $(this).prev().val();
+                var index = $(this).prev().attr('index');
                 let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
                 url = url.replace(':hash', hash);
                 url = url.replace(':quantity', quantity);
@@ -448,6 +409,7 @@
                         'quantity': $("input[name=quantity]").val(),
                     },
                     success: (response) => {
+                        $('.single-total'+index).text(quantity * $(this).prev().attr('price'));
                         $('.cart-count').text(response.count);
                         $('.cart-total').text(response.total);
                         $('.cart-total-shipping').text((response.total) + 50);
@@ -487,8 +449,9 @@
                 e.preventDefault();
                 var hash = $(this).next().attr('hash');
                 var quantity = $(this).next().val();
+                var index = $(this).next().attr('index');
                 if (quantity == 0)
-                    $(this).parents().eq(4).remove();
+                $(this).parents().eq(4).remove();
                 let url = "{{ route('updateItem.count', [':hash', ':quantity']) }}";
                 url = url.replace(':hash', hash);
                 url = url.replace(':quantity', quantity);
@@ -500,6 +463,7 @@
                         'quantity': $("input[name=quantity]").val(),
                     },
                     success: (response) => {
+                        $('.single-total'+index).text(quantity * $(this).next().attr('price'));
                         $('.cart-count').text(response.count);
                         $('.cart-total').text(response.total);
                         $('.cart-total-shipping').text((response.total) + 50);
