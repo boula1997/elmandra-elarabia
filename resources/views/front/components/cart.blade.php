@@ -132,68 +132,72 @@
                     </div>
                 </div>
             </div>
-            <form method="post" id="order-form">
-                <div class="col-md-6">
-                    <div class="col-xxl-6">
-                        <div class="summery-box p-sticky">
-                            <div class="summery-header">
-                                <h3>{{ __('general.personal_information') }}</h3>
-                            </div>
-    
-                            <div class="summery-contain">
-                                <div class="coupon-cart">
-                                    <h6 class="text-content mb-2">{{ __('general.name') }}</h6>
-                                    <div class="mb-3 coupon-box input-group">
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="{{ __('general.name') }}" name="name">
-                                        <div id="name"></div>
-                                    </div>
+            <div class="col-md-6">
+
+                <form method="post" id="order-form">
+                    <div class="col-md-12">
+                        <div class="col-xxl-6">
+                            <div class="summery-box p-sticky">
+                                <div class="summery-header">
+                                    <h3>{{ __('general.personal_information') }}</h3>
                                 </div>
-                                <div class="coupon-cart">
-                                    <h6 class="text-content mb-2">{{ __('general.your_email') }}</h6>
-                                    <div class="mb-3 coupon-box input-group">
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="{{ __('general.your_email') }}" name="email">
-                                        <div id="email"></div>
+        
+                                <div class="summery-contain">
+                                    <div class="coupon-cart">
+                                        <h6 class="text-content mb-2">{{ __('general.name') }}</h6>
+                                        <div class="mb-3 coupon-box input-group">
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="{{ __('general.name') }}" name="name">
+                                            </div>
+                                            <div id="name"></div>
                                     </div>
-                                </div>
-                                <div class="coupon-cart">
-                                    <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
-                                    <div class="mb-3 coupon-box input-group">
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="{{ __('general.address') }}" name="address">
-                                        <div id="address"></div>
+                                    <div class="coupon-cart">
+                                        <h6 class="text-content mb-2">{{ __('general.your_email') }}</h6>
+                                        <div class="mb-3 coupon-box input-group">
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="{{ __('general.your_email') }}" name="email">
+                                            </div>
+                                            <div id="email"></div>
                                     </div>
-                                </div>
-                                <div class="coupon-cart">
-                                    <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
-                                    <div class="mb-3 coupon-box input-group">
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="{{ __('general.phone') }}" name="phone">
-                                        <div id="phone"></div>
+                                    <div class="coupon-cart">
+                                        <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
+                                        <div class="mb-3 coupon-box input-group">
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="{{ __('general.address') }}" name="address">
+                                            </div>
+                                            <div id="address"></div>
                                     </div>
+                                    <div class="coupon-cart">
+                                        <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
+                                        <div class="mb-3 coupon-box input-group">
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="{{ __('general.phone') }}" name="phone">
+                                            </div>
+                                            <div id="phone"></div>
+                                    </div>
+                                 
                                 </div>
-                             
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="button-group cart-button">
-                        <ul>
-                            <li>
-                                <button type="submit" class="btn btn-animation proceed-btn fw-bold">{{ __('general.process_to_checkout') }}</button>
-                            </li>
-    
-                            <li>
-                                <button onclick="location.href = '{{ route('front.show-products') }}';"
-                                    class="btn btn-light shopping-button text-dark">
-                                    <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
-                            </li>
-                        </ul>
+                    <div class="col-md-12">
+                        <div class="button-group cart-button">
+                            <ul>
+                                <li>
+                                    
+                                    <button type="submit" class="btn btn-animation proceed-btn fw-bold"><i class="fa fa-spinner fa-spin d-none mx-1 " id="spinner-order"></i> {{ __('general.process_to_checkout') }}</button>
+                                </li>
+        
+                                <li>
+                                    <button onclick="location.href = '{{ route('front.show-products') }}';"
+                                        class="btn btn-light shopping-button text-dark">
+                                        <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     </section>
