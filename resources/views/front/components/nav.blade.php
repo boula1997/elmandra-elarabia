@@ -202,15 +202,17 @@
 
                                     </div>
                                 </li>
+                                
+                                @if (!auth('web')->user())
                                 <li class="right-side onhover-dropdown">
                                     <div class="delivery-login-box">
                                         <div class="delivery-icon">
                                             <i data-feather="user"></i>
                                         </div>
-                                        <div class="delivery-detail">
+                                        {{-- <div class="delivery-detail">
                                             <h6>Hello,</h6>
                                             <h5>My Account</h5>
-                                        </div>
+                                        </div> --}}
                                     </div>
 
                                     <div class="onhover-div onhover-div-login">
@@ -224,12 +226,46 @@
                                                 <a href="{{ route('user.register') }}">{{ __('general.register') }}</a>
                                             </li>
 
-                                            <li class="product-box-contain">
+                                            {{-- <li class="product-box-contain">
                                                 <a href="{{ route('user.forget') }}">{{ __('general.forget') }}</a>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </div>
                                 </li>
+                                @else
+                                <li class="right-side onhover-dropdown">
+                                    <div class="delivery-login-box">
+                                        <div class="delivery-icon">
+                                            <i data-feather="user"></i>
+                                        </div>
+                                        {{-- <div class="delivery-detail">
+                                            <h6>Hello,</h6>
+                                            <h5>My Account</h5>
+                                        </div> --}}
+                                    </div>
+
+                                    <div class="onhover-div onhover-div-login">
+                                        <ul class="user-box-name">
+                                            <li class="product-box-contain">
+                                                <i></i>
+                                                <a href="{{ route('show_profile') }}">{{ __('general.profile') }}</a>
+                                            </li>
+
+                                            <li class="product-box-contain">
+                                                <a href="{{ route('show.orders') }}">{{ __('general.orders') }}</a>
+                                            </li>
+
+                                            <form action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                                <button class="btn p-0 close-button text-content"
+                                                    type="submit">@lang('general.logout')</button>
+                                            </form>
+                                        </ul>
+                                    </div>
+                                </li>
+                                @endif
+ 
+                             
                             </ul>
                         </div>
                     </div>
