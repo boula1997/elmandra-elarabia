@@ -50,32 +50,35 @@
                                                 </ul>
                                             </div>
                                             <div class="product-detail">
-                                                <a href="product-left-thumbnail.html">
-                                                    <h6 class="name name-2 h-100">{{ $product->title }}</h6>
-                                                </a>
+                                                <div>
 
-                                                <div class="product-rating mt-2">
-                                                    <ul class="rating">
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <span>(34)</span>
+                                                    <a href="product-left-thumbnail.html">
+                                                        <h6 class="name name-2 h-100">{{ $product->title }}</h6>
+                                                    </a>
+    
+                                                    {{-- <div class="product-rating mt-2">
+                                                        <ul class="rating">
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star"></i>
+                                                            </li>
+                                                        </ul>
+                                                        <span>(34)</span>
+                                                    </div> --}}
+    
+                                                    <h6 class="sold weight textus-content fw-normal">1 KG</h6>
                                                 </div>
-
-                                                <h6 class="sold weight textus-content fw-normal">1 KG</h6>
 
                                                 <div class="counter-box">
                                                     <h6 class="sold theme-color">{{ $product->price }}
@@ -245,8 +248,6 @@
                     $('.cart-count').text(response.count);
                     $('.cart-total').text(response.total);
                     $('.cart-total-shipping').text((response.total) + 50);
-                    $(this).parent().parent().find('.itemTotalPrice').text(response.price * response
-                        .quantity);
                 },
                 error: function(response) {
 
@@ -274,8 +275,6 @@
                     $('.cart-count').text(response.count);
                     $('.cart-total').text(response.total);
                     $('.cart-total-shipping').text((response.total) + 50);
-                    $(this).prev().parent().parent().find('.itemTotalPrice').text(response.price *
-                        response.quantity);
                 },
                 error: function(response) {
 
@@ -303,8 +302,7 @@
                     $('.cart-count').text(response.count);
                     $('.cart-total').text(response.total);
                     $('.cart-total-shipping').text((response.total) + 50);
-                    $(this).next().parent().parent().find('.itemTotalPrice').text(response.price *
-                        response.quantity);
+
                 },
                 error: function(response) {
 

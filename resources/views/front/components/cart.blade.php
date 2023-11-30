@@ -163,7 +163,7 @@
                                         <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
                                         <div class="mb-3 coupon-box input-group">
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="{{ __('general.address') }}" name="address" value="{{ old('address',auth('web')->user()->name) }}">
+                                                placeholder="{{ __('general.address') }}" name="address" value="{{ old('address',auth('web')->user()->address) }}">
                                             </div>
                                             <div class="err" id="address"></div>
                                     </div>
@@ -365,8 +365,6 @@
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
                         $('.cart-total').text((response.total) + 25);
-                        $(this).parent().parent().find('.itemTotalPrice').text(response.price * response
-                            .quantity);
                     },
                     error: function(response) {
 
@@ -397,8 +395,6 @@
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
                         $('.cart-total').text((response.total) + 25);
-                        $(this).prev().parent().parent().find('.itemTotalPrice').text(response.price *
-                            response.quantity);
                     },
                     error: function(response) {
 
@@ -431,8 +427,6 @@
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
                         $('.cart-total').text((response.total) + 25);
-                        $(this).next().parent().parent().find('.itemTotalPrice').text(response.price *
-                            response.quantity);
                     },
                     error: function(response) {
 
