@@ -92,7 +92,7 @@
                                                                 <i class="fa-solid fa-plus px-2"></i>
                                                             </button>
                                                         @else
-                                                            <a href="{{ route('addTo.cart', $product->id) }}">
+                                                            <a href="{{ route('user.login') }}">
                                                                 <button
                                                                     class="add-button addcart-button btn buy-button text-light">
                                                                     <span>{{ __('general.add') }}</span>
@@ -247,26 +247,6 @@
                     $('.cart-total-shipping').text((response.total) + 50);
                     $(this).parent().parent().find('.itemTotalPrice').text(response.price * response
                         .quantity);
-                    // $('.itemTotalPrice').remove();
-                    toastr.options = {
-                        "closeButton": true,
-                        "debug": false,
-                        "newestOnTop": false,
-                        "progressBar": true,
-                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                        "preventDuplicates": false,
-                        "onclick": null,
-                        "showDuration": "300",
-                        "hideDuration": "1000",
-                        "timeOut": "5000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
-                    };
-
-                    toastr.success("{{ __('general.added_successfully') }}");
                 },
                 error: function(response) {
 
@@ -296,26 +276,6 @@
                     $('.cart-total-shipping').text((response.total) + 50);
                     $(this).prev().parent().parent().find('.itemTotalPrice').text(response.price *
                         response.quantity);
-                    // $('.itemTotalPrice').remove();
-                    toastr.options = {
-                        "closeButton": true,
-                        "debug": false,
-                        "newestOnTop": false,
-                        "progressBar": true,
-                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                        "preventDuplicates": false,
-                        "onclick": null,
-                        "showDuration": "300",
-                        "hideDuration": "1000",
-                        "timeOut": "5000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
-                    };
-
-                    toastr.success("{{ __('general.added_successfully') }}");
                 },
                 error: function(response) {
 
@@ -345,26 +305,6 @@
                     $('.cart-total-shipping').text((response.total) + 50);
                     $(this).next().parent().parent().find('.itemTotalPrice').text(response.price *
                         response.quantity);
-                    // $('.itemTotalPrice').remove();
-                    toastr.options = {
-                        "closeButton": true,
-                        "debug": false,
-                        "newestOnTop": false,
-                        "progressBar": true,
-                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                        "preventDuplicates": false,
-                        "onclick": null,
-                        "showDuration": "300",
-                        "hideDuration": "1000",
-                        "timeOut": "5000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
-                    };
-
-                    toastr.success("{{ __('general.removed_successfully') }}");
                 },
                 error: function(response) {
 

@@ -34,8 +34,8 @@
 
         
 
-                                                                <li>
-                                                                    <h5>{{ __('general.total') }} {{ $item->get('quantity') * $item->get('price') }}</h5>
+                                                                <li class="item-total{{ $loop->index }}">
+                                                                    <h5 class="bg-danger">{{ __('general.total') }}$ {{ $item->get('quantity') * $item->get('price') }}</h5>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -44,7 +44,7 @@
 
                                                 <td class="price">
                                                     <h4 class="table-title text-content">{{ __('general.price') }}</h4>
-                                                    <h5>{{ $item->get('price') }}</h5>
+                                                    <h5>$ {{ $item->get('price') }}</h5>
                                                 </td>
 
                                                 <td class="quantity">
@@ -71,7 +71,7 @@
 
                                                 <td class="subtotal">
                                                     <h4 class="table-title text-content">{{ __('general.total') }}</h4>
-                                                    <h5 class="single-total{{ $loop->index }}">${{$item->get('price') * $item->get('quantity')}}</h5>
+                                                    <h5>$ <span  class="single-total{{ $loop->index }}">{{$item->get('price') * $item->get('quantity')}}</span></h5>
                                                 </td>
 
                                                 <td class="save-remove">
@@ -106,7 +106,7 @@
                             <ul>
                                 <li>
                                     <h4>Subtotal</h4>
-                                    <h4 class="price">{{ cart()->getTotal() }}</h4>
+                                    <h4 class="price">$ <span class="cart-subtotal">{{ cart()->getTotal() }}</span></h4>
                                 </li>
 
                                 <li>
@@ -124,7 +124,7 @@
                         <ul class="summery-total">
                             <li class="list-total border-top-0">
                                 <h4>Total (USD)</h4>
-                                <h4 class="price theme-color cart-total">${{ cart()->getTotal() +25 }}</h4>
+                                <h4 class="price theme-color">$ <span class="cart-total">{{ cart()->getTotal() +25 }}</span></h4>
                             </li>
                         </ul>
                         <br><br>
@@ -224,9 +224,9 @@
                         }
                         $(this).parents().eq(1).remove();
                         $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
+                        $('.cart-subtotal').text(response.total);
                         $('.single-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total) + 50);
+                        $('.cart-total').text((response.total) + 25);
                         toastr.options = {
                             "closeButton": true,
                             "debug": false,
@@ -363,30 +363,10 @@
                     success: (response) => {
                         $('.single-total'+index).text(quantity * $(this).attr('price'));
                         $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total) + 50);
+                        $('.cart-subtotal').text(response.total);
+                        $('.cart-total').text((response.total) + 25);
                         $(this).parent().parent().find('.itemTotalPrice').text(response.price * response
                             .quantity);
-                        // $('.itemTotalPrice').remove();
-                        toastr.options = {
-                            "closeButton": true,
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                        };
-
-                        toastr.success("{{ __('general.added_successfully') }}");
                     },
                     error: function(response) {
 
@@ -415,30 +395,10 @@
                     success: (response) => {
                         $('.single-total'+index).text(quantity * $(this).prev().attr('price'));
                         $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total) + 50);
+                        $('.cart-subtotal').text(response.total);
+                        $('.cart-total').text((response.total) + 25);
                         $(this).prev().parent().parent().find('.itemTotalPrice').text(response.price *
                             response.quantity);
-                        // $('.itemTotalPrice').remove();
-                        toastr.options = {
-                            "closeButton": true,
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                        };
-
-                        toastr.success("{{ __('general.added_successfully') }}");
                     },
                     error: function(response) {
 
@@ -469,30 +429,10 @@
                     success: (response) => {
                         $('.single-total'+index).text(quantity * $(this).next().attr('price'));
                         $('.cart-count').text(response.count);
-                        $('.cart-total').text(response.total);
-                        $('.cart-total-shipping').text((response.total) + 50);
+                        $('.cart-subtotal').text(response.total);
+                        $('.cart-total').text((response.total) + 25);
                         $(this).next().parent().parent().find('.itemTotalPrice').text(response.price *
                             response.quantity);
-                        // $('.itemTotalPrice').remove();
-                        toastr.options = {
-                            "closeButton": true,
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                        };
-
-                        toastr.success("{{ __('general.removed_successfully') }}");
                     },
                     error: function(response) {
 
