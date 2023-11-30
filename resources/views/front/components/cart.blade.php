@@ -21,12 +21,6 @@
                                                 class="cart-count">{{ count(cart()->getItems()) }}</span>
                                             {{ __('general.items_in_your_cart') }}</p>
                                     </div>
-                                    {{-- <div>
-                                      <p class="mb-0"><span class="text-muted">{{ __('general.sort_by') }}:</span>
-                                          <a href="#!" class="text-body">price <i
-                                                  class="fas fa-angle-down mt-1"></i></a>
-                                      </p>
-                                  </div> --}}
                                 </div>
                                 @foreach (cart()->getItems() as $item)
                                     <div class="card mb-3">

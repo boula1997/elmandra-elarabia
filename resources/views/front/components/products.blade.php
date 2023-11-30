@@ -32,7 +32,7 @@
                                         product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
                                         {{ __('general.add_to_cart') }}</button>
                                 @else
-                                    <a href="{{ route('addTo.cart', $product->id) }}">
+                                    <a href="{{ route('user.login') }}">
                                         <button
                                             class="btn  btn-sm w-100 mt-1  {{ isInCart($product->id) ? 'd-none' : 'btn-primary' }}"
                                             product_id="{{ $product->id }}"><i class="fas fa-shopping-cart"></i>
