@@ -510,8 +510,8 @@
            <div class="modal-content">
                <div class="modal-header">
                    <div>
-                       <h5 class="modal-title w-100" id="deal_today">Deal Today</h5>
-                       <p class="mt-1 text-content">Recommended deals for you.</p>
+                       <h5 class="modal-title w-100" id="deal_today">عروض اليوم</h5>
+                       <p class="mt-1 text-content">العروض المقترحة لك</p>
                    </div>
                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                        <i class="fa-solid fa-xmark"></i>
