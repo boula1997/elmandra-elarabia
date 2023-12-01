@@ -56,26 +56,6 @@
                                                         <h6 class="name name-2 h-100">{{ $product->title }}</h6>
                                                     </a>
     
-                                                    {{-- <div class="product-rating mt-2">
-                                                        <ul class="rating">
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <span>(34)</span>
-                                                    </div> --}}
     
                                                     <h6 class="sold weight textus-content fw-normal">1 KG</h6>
                                                 </div>
