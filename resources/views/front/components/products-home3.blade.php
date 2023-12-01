@@ -14,35 +14,34 @@
                                         </a>
 
                                         <div class="product-slider-detail">
-                                            <div>
-                                                <a href="#" class="d-block">
-                                                    <h3 class="text-title">{{ $product->title }}</h3>
-                                                </a>
-                                                <h5>{{ $product->subcategory->title }}</h5>
-                                                <div class="product-rating">
-                                                    <ul class="rating">
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <span>(34)</span>
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <a href="#" class="d-block">
+                                                        <h3 class="text-title">{{ $product->title }}</h3>
+                                                    </a>
+                                                    <h5>{{ $product->subcategory->title }}</h5>
+                                                    <div class="product-rating">
+                                                        <ul class="rating">
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star" class="fill"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i data-feather="star"></i>
+                                                            </li>
+                                                        </ul>
+                                                        <span>(34)</span>
+                                                    </div>
+                                                    <h6>بواسطة <span class="theme-color">{{ $product->subcategory->category->title }}</span></h6>
                                                 </div>
-                                                <h6>By <span class="theme-color">{{ $product->subcategory->category->title }}</span></h6>
-                                                <button onclick="location.href = '{{ route('front.show-products') }}';"
-                                                    class="btn btn-animation product-button btn-sm">{{ __('general.shop_now') }}<i
-                                                        class="fa-solid fa-arrow-right icon"></i></button>
                                             </div>
                                         </div>
                                     </div>
