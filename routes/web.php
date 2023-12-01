@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShoppingController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ServiceController;
@@ -37,6 +38,7 @@ Route::group(
         Route::get('/forget', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'forget'])->name('user.forget'); 
 
         Route::get('/', [HomeController::class, 'index'])->name('front.home');
+        Route::get('/shopping', [ShoppingController::class, 'index'])->name('front.shopping_now');
         Route::get('/faq-page', 'App/Http/Controllers/FaqController@index')->name('front.faq');
         Route::get('/message', [MessageController::class,'index'])->name('front.message');
         Route::get('/newsletter', [NewsletterController::class,'index'])->name('front.newsletter');

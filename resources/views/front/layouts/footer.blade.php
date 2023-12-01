@@ -130,6 +130,9 @@
                                     <a href="{{ route('front.home') }}" class="text-content">{{ __('general.home') }}</a>
                                 </li>
                                 <li>
+                                    <a href="{{ route('front.shopping_now') }}" class="text-content">{{ __('general.shop_now') }}</a>
+                                </li>
+                                <li>
                                     <a href="{{ route('front.about') }}" class="text-content">{{ __('general.about') }}</a>
                                 </li>
                                 <li>
