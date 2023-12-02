@@ -780,77 +780,18 @@
                                 <div class="offcanvas-body">
                                     <ul class="navbar-nav">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.home') ? 'active' : '' }}" href="{{ route('front.home') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.home') }}</a>
+                                            <a class="nav-link  {{ request()->routeIs('front.home') ? 'active' : '' }}" href="{{ route('front.home') }}"
+                                                >{{ __('general.home') }}</a>
 
-                                            {{-- <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="index.html">Kartshop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-2.html">Sweetshop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-3.html">Organic</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-4.html">Supershop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-5.html">Classic shop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-6.html">Furniture</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-7.html">Search Oriented</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-8.html">Category Focus</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-9.html">Fashion</a>
-                                                </li>
-                                            </ul> --}}
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.shopping_now') ? 'active' : '' }}" href="{{ route('front.shopping_now') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.shop_now') }}</a>
-
-                                            {{-- <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="index.html">Kartshop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-2.html">Sweetshop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-3.html">Organic</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-4.html">Supershop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-5.html">Classic shop</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-6.html">Furniture</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-7.html">Search Oriented</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-8.html">Category Focus</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="index-9.html">Fashion</a>
-                                                </li>
-                                            </ul> --}}
+                                            <a class="nav-link  {{ request()->routeIs('front.shopping_now') ? 'active' : '' }}" href="{{ route('front.shopping_now') }}"
+                                                >{{ __('general.shop_now') }}</a>
                                         </li>
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle {{ request()->routeIs('front.about') ? 'active' : '' }}" href="{{ route('front.about') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.about') }}</a>
+                                                >{{ __('general.about') }}</a>
 
                                             {{-- <ul class="dropdown-menu">
                                                 <li>
