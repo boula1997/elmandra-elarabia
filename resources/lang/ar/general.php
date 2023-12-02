@@ -38,7 +38,7 @@ return [
     'counters'  => 'العدادات',
     'contacts'  => 'وسائل الاتصال',
     'orderproducts'  => 'منتجات الطلب',
-    'partners'  => 'الشركاء',
+    'partners'  => 'شركاء النجاح',
     'teams'  => 'فريق العمل',
     'messages'  => 'جهات الاتصال',
     'logout'  => 'تسجيل الخروج',
@@ -370,6 +370,9 @@ return [
     'process_to_checkout'=>'عملية الدفع',
     'return_to_shopping'=>'العودة إلى التسوق',
     'password_confirmation'=>'تأكيد كلمة المرور',
-
+    'app_store'=>'اب ستور',
+    'google_play'=>'جوجل بلاى',
+    'huawei'=>'هواوى',
+    'order_now'=>'اطلب الان',
 
 ];

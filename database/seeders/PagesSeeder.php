@@ -24,6 +24,7 @@ class PagesSeeder extends Seeder
                         "Latest Testimonials",
                         "Products",
                         "About Us",
+                        null,
 
                     ];
 
@@ -37,6 +38,7 @@ class PagesSeeder extends Seeder
                             "What People Say about us",
                             "Our Products",
                             "We Make Organic Fruits and vegetables In Market",
+                            "Asl Eltawfeer application.. to deliver food items of all kinds",
                         
                         ];
 
@@ -53,6 +55,7 @@ class PagesSeeder extends Seeder
                             null,
                             null,
                             "<p>Introducing asleltawfeer, your neighborhood grocery store dedicated to providing convenience, quality, and friendly service. Step into our welcoming space where you'll find a wide range of fresh produce, pantry staples, household essentials, and more. With a focus on sourcing locally and offering competitive prices, we strive to meet all your grocery needs while delivering an enjoyable shopping experience. Visit asleltawfeer today and discover the difference of personalized attention and a carefully curated selection of products that cater to your everyday requirements.</p>",
+                            "<p> We work as an intermediary between all our valued customers and companies that supply food supplies, so that the food supplies are delivered to the customer’s location, whether it is the home or another location requested by the customer, a school, an office, a mosque, or something else.</p>",
                         ];
 
 
@@ -68,6 +71,7 @@ class PagesSeeder extends Seeder
                         "أحدث اراء عملائنا",
                         "منتجات",
                         "من نحن",
+                        null,
                     ];
     
             $subtitle_ar = [
@@ -82,6 +86,8 @@ class PagesSeeder extends Seeder
                                 "ماذا يقول الناس عنا",
                                 "احدث منتجاتنا",
                                 "نحن نصنع الفواكه والخضروات الطازجة في السوق",
+                                "تطبيق اصل التوفير.. لتوصيل المواد الغذائية بشتي أنواعها",
+
                             ];
     
             $description_ar = [
@@ -94,11 +100,12 @@ class PagesSeeder extends Seeder
                                 null,
                                 null,
                                 "<p>نقدم لكم اصل التوفير متجر البقالة في منطقتكم المخصص لتوفير الراحة والجودة والخدمة الودية. ادخل إلى مساحتنا الترحيبية حيث ستجد مجموعة واسعة من المنتجات الطازجة والمواد الغذائية الأساسية والمستلزمات المنزلية والمزيد. مع التركيز على المصادر المحلية وتقديم أسعار تنافسية، فإننا نسعى جاهدين لتلبية جميع احتياجات البقالة الخاصة بك مع تقديم تجربة تسوق ممتعة. قم بزيارة اصل توفير اليوم واكتشف الفرق في الاهتمام الشخصي ومجموعة مختارة بعناية من المنتجات التي تلبي متطلباتك اليومية.</p>",
-
+                                "<p>نعمل كوسيط بين جميع عملائنا الكرام والشركات التي تقوم بتوريد المواد الغذائية بحيث يتم توصيل المواد الغذائية إلى موقع العميل سواء كان المنزل أو موقع آخر يطلبه العميل أو مدرسة أو مكتب أو مسجد أو شيء من آخر.</p>",
                             ];    
 
             $identifiers=[ "slider","mini_slider","discount","product_home",
-                           "counter","newsletter","testimonial","product","about"
+                           "counter","newsletter","testimonial","product","about",
+                           "slider-index"
                          ];  
 
              $images=[ 
@@ -110,7 +117,8 @@ class PagesSeeder extends Seeder
                             null,
                             null,
                             null,
-                        ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg","images/LMx63k9eMcVgWhQmT2LcGxKsChXKJiGdeY5vGKKm.jpg",]
+                        ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg","images/LMx63k9eMcVgWhQmT2LcGxKsChXKJiGdeY5vGKKm.jpg",],
+                        ["images/LtrW75RLVuHGYAZa1DYoubuK7sqE2AONu9ieqolt.jpg"],
                     ];
        
 

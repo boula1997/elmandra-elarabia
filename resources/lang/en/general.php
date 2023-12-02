@@ -39,7 +39,7 @@ return [
     'counters'  => 'Counters',
     'contacts'  => 'Contacts',
     'orderproducts'  => 'Orderproducts',
-    'partners'  => 'Partners',
+    'partners'  => 'Our Partners',
 
     'teams'  => 'Teams',
     'messages'  => 'Messages',
@@ -369,6 +369,16 @@ return [
     'process_to_checkout'=>'Process To Checkout',
     'return_to_shopping'=>'Return To Shopping',
     'password_confirmation'=>'Password Confirmation',
+    'app_store'=>'App Store',
+    'google_play'=>'Google Play',
+    'huawei'=>'Huawei',
+    'order_now'=>'Order Now',
+   
+ 
+
+
+   
+    
     
       
 ];
