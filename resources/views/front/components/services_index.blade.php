@@ -14,21 +14,21 @@
                  <div class="col-md-3 text-center">
                      <div class="d-flex mt-5">
                          <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                             style="width: 60px; height: 60px;">
+                             style="width: 64px; height: 60px;">
                              <i class="{{ $counters[0]->icon }} fs-4 text-white"></i>
                          </div>
                          <h2 class="mx-5 mt-3">{{ $counters[0]->title }}</h2>
                      </div>
                      <div class="d-flex mt-5">
                          <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                             style="width: 60px; height: 60px;">
+                             style="width: 64px; height: 60px;">
                              <i class="{{ $counters[1]->icon }} fs-4 text-white"></i>
                          </div>
                          <h2 class="mx-5 mt-3">{{ $counters[1]->title }}</h2>
                      </div>
                      <div class="d-flex mt-5">
                          <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                             style="width: 60px; height: 60px;">
+                             style="width: 64px; height: 60px;">
                              <i class="{{ $counters[2]->icon }} fs-4 text-white"></i>
                          </div>
                          <h2 class="mx-5 mt-3">{{ $counters[2]->title }}</h2>
@@ -43,21 +43,21 @@
                  <div class="col-md-3 text-center">
                     <div class="d-flex mt-5">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
+                            style="width: 64px; height: 60px;">
                             <i class="{{ $counters[3]->icon }} fs-4 text-white"></i>
                         </div>
                         <h2 class="mx-5 mt-3">{{ $counters[3]->title }}</h2>
                     </div>
                     <div class="d-flex mt-5">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
+                            style="width: 64px; height: 60px;">
                             <i class="{{ $counters[4]->icon }} fs-4 text-white"></i>
                         </div>
                         <h2 class="mx-5 mt-3">{{ $counters[4]->title }}</h2>
                     </div>
                     <div class="d-flex mt-5">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
+                            style="width: 64px; height: 60px;">
                             <i class="{{ $counters[5]->icon }} fs-4 text-white"></i>
                         </div>
                         <h2 class="mx-5 mt-3">{{ $counters[5]->title }}</h2>

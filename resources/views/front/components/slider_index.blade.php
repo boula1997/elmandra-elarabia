@@ -6,9 +6,9 @@
                       <div class="home-contain h-100">
                           <div class="home-detail p-center-left position-relative mend-auto">
                               <div class="index-number">
-                                  <h2 class="text-uppercase poster-1 text-primary display-7">{{ page('slider-index')->title }} <span
+                                  <h2 class="text-uppercase poster-1 text-primary display-7 fw-bold">{{ page('slider-index')->title }} <span
                                           class="daily">{{ page('slider-index')->subtitle }}</span></h2>
-                                  <div class="description">{!! page('slider-index')->description !!}</div>
+                                  <div class="description fw-bold mt-5">{!! page('slider-index')->description !!}</div>
                                   <div class="d-flex mt-5">
                                       <button onclick="location.href = '#';"
                                           class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }}<i

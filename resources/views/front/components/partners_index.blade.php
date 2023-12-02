@@ -2,8 +2,8 @@
     <div class="swiper-wrapper pb-4">
         <div class="row text-center">
             <div class="col-md-12 " >
-                <div class="title title-flex ">
-                        <h2>{{ __('general.partners') }}</h2>
+                <div class="title title-flex d-flex justify-content-center ">
+                        <h2 class="text-center">{{ __('general.partners') }}</h2>
                 </div>
             </div>
             
