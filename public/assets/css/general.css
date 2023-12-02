@@ -7,7 +7,7 @@
     --heading-font: "Rajdhani", sans-serif;
     --body-font-size: 16px;
     --line-height30: 1.7;
-    --primary: #6f5190 !important;
+    --primary: #0da487 !important;
   }
   
   html {
@@ -352,6 +352,7 @@ iframe{
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .index-number{
@@ -367,6 +368,16 @@ iframe{
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   z-index: 1;
+}
+
+.slider-mobile{
+  position: relative;
+  z-index:3;
+}
+
+.home-detail .description p{
+  text-align: justify !important;
+  color:white !important;
 }
 
 

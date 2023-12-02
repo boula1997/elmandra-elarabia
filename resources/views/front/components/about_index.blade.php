@@ -15,18 +15,18 @@
                              <div class="description">{!! page('about-index')->description !!}</div>
                          </div>
                      </div>
-                     <div class="d-flex p-0 m-0">
+                     <div class="d-flex p-0 m-0 justify-between" dir="rtl">
                          <button onclick="location.href = '#';"
-                             class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }}
-                             <i class="fab fa-apple ms-2 icon"></i>
+                             class="btn btn-animation mt-xxl-4 mt-2 home-button  me-2  mx-5 ">{{ __('general.app_store') }}
+                             <i class="fab fa-apple me-2  icon"></i>
                          </button>
                          <button onclick="location.href = '#';"
-                             class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }}
-                             <i class="fab fa-google-play ms-2 icon"></i>
+                             class="btn btn-animation mt-xxl-4 mt-2 home-button  me-2  mx-5 ">{{ __('general.google_play') }}
+                             <i class="fab fa-google-play me-2  icon"></i>
                          </button>
                          <button onclick="location.href = '#';"
-                             class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}
-                             <i class="fas fa-shopping-cart ms-2 icon"></i>
+                             class="btn btn-animation mt-xxl-4 mt-2 home-button  me-2  mx-5 ">{{ __('general.order_now') }}
+                             <i class="fas fa-shopping-cart me-2  icon"></i>
                          </button>
                      </div>
                  </div>
