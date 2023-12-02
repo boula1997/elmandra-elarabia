@@ -476,7 +476,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-users"></i>
-                            <p>
+                            <p class="display-6"> 
                                 @lang('general.storeProducts')
                                 <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('storeProducts') }}</span>

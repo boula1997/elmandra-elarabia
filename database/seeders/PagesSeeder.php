@@ -132,7 +132,7 @@ class PagesSeeder extends Seeder
                             null,
                             null,
                         ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg","images/LMx63k9eMcVgWhQmT2LcGxKsChXKJiGdeY5vGKKm.jpg",],
-                        ["images/h0VHaWNgtURyVAOrQL8tflcii2gTVqF7uig09r2F.png"],
+                        ["images/LtrW75RLVuHGYAZa1DYoubuK7sqE2AONu9ieqolt.jpg","images/h0VHaWNgtURyVAOrQL8tflcii2gTVqF7uig09r2F.png"],
                         ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg",],
                         ["images/h0VHaWNgtURyVAOrQL8tflcii2gTVqF7uig09r2F.png"],
                     ];
