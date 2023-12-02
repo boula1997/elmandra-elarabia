@@ -108,6 +108,7 @@
 
 .description p{
     text-align: justify !important;
+    line-height: 2  ;
 }
 
 .footer-image{
@@ -346,6 +347,28 @@ iframe{
   margin-left: auto !important;
   text-align: right !important;
 }
+
+.bg-banner{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-number{
+  position: relative;
+  z-index: 2;
+}
+.bg-banner::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
 
   @-webkit-keyframes sk-rotate {
     100% {

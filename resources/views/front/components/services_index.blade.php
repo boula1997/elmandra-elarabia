@@ -1,70 +1,76 @@
-         
-                <!-- Vision section start -->
-                <section>
-                    <div class="row">
-                           
-                            <div class="col-md-12" >
-                                <div class="title title-flex">
-                                    <div >
-                                        <h2>{{ page('service-index')->title }}</h2>
-                                        <h2>{{ page('service-index')->subtitle }}</h2>
-                                        <p class="text-justify">{!! page('service-index')->description !!}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 text-center">
-                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="{{ $counters[0]->icon }} fs-4 text-white"></i>
-                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
-                                </div>
-                                    <h2>{{ $counters[0]->title }}</h2>
+         <!-- Vision section start -->
+         <section>
+             <div class="row">
 
-                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="{{ $counters[1]->icon }} fs-4 text-white"></i>
-                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
-                                </div>
-                                     <h2>{{ $counters[1]->title }}</h2>
+                 <div class="col-md-12">
+                     <div class="title title-flex d-flex justify-content-center">
+                         <div>
+                             <h2>{{ page('service-index')->title }}</h2>
+                             <h2>{{ page('service-index')->subtitle }}</h2>
+                             <p class="text-justify">{!! page('service-index')->description !!}</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3 text-center">
+                     <div class="d-flex mt-5">
+                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                             style="width: 60px; height: 60px;">
+                             <i class="{{ $counters[0]->icon }} fs-4 text-white"></i>
+                         </div>
+                         <h2 class="mx-5 mt-3">{{ $counters[0]->title }}</h2>
+                     </div>
+                     <div class="d-flex mt-5">
+                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                             style="width: 60px; height: 60px;">
+                             <i class="{{ $counters[1]->icon }} fs-4 text-white"></i>
+                         </div>
+                         <h2 class="mx-5 mt-3">{{ $counters[1]->title }}</h2>
+                     </div>
+                     <div class="d-flex mt-5">
+                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                             style="width: 60px; height: 60px;">
+                             <i class="{{ $counters[2]->icon }} fs-4 text-white"></i>
+                         </div>
+                         <h2 class="mx-5 mt-3">{{ $counters[2]->title }}</h2>
+                     </div>
 
-                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="{{ $counters[2]->icon }} fs-4 text-white"></i>
-                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
-                                </div>
-                                    <h2>{{ $counters[2]->title }}</h2>
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <img class="rounded float-right" style="width: 50%; height: 80%" src="{{asset(isset(page('service-index')->images[0]->url) ? page('service-index')->images[0]->url : asset('default.jpg'))}}" alt="">
-                            </div>
-                            <div class="col-md-3 text-center">
-                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                                style="width: 60px; height: 60px;">
-                                <i class="{{ $counters[3]->icon }} fs-4 text-white"></i>
-                                {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
-                                </div>
-                                    <h2>{{ $counters[3]->title }}</h2>
-                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="{{ $counters[4]->icon }} fs-4 text-white"></i>
-                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
-                                </div>
-                                    <h2>{{ $counters[4]->title }}</h2>
-                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="{{ $counters[5]->icon }} fs-4 text-white"></i>
-                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
-                                </div>
-                                    <h2>{{ $counters[5]->title }}</h2>
-                            </div>
-
+                 </div>
+                 <div class="col-md-6 text-center">
+                     <img class="rounded float-right" style="width: 50%; height: 80%"
+                         src="{{ asset(isset(page('service-index')->images[0]->url) ? page('service-index')->images[0]->url : asset('default.jpg')) }}"
+                         alt="">
+                 </div>
+                 <div class="col-md-3 text-center">
+                    <div class="d-flex mt-5">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="{{ $counters[3]->icon }} fs-4 text-white"></i>
                         </div>
-
+                        <h2 class="mx-5 mt-3">{{ $counters[3]->title }}</h2>
                     </div>
-                </section>
-                <!-- Vision section end -->
+                    <div class="d-flex mt-5">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="{{ $counters[4]->icon }} fs-4 text-white"></i>
+                        </div>
+                        <h2 class="mx-5 mt-3">{{ $counters[4]->title }}</h2>
+                    </div>
+                    <div class="d-flex mt-5">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="{{ $counters[5]->icon }} fs-4 text-white"></i>
+                        </div>
+                        <h2 class="mx-5 mt-3">{{ $counters[5]->title }}</h2>
+                    </div>
+                 </div>
+
+             </div>
+
+             </div>
+         </section>
+         <!-- Vision section end -->
          <!-- Fresh Vegetable Section Start -->
-    {{-- <section class="fresh-vegetable-section section-lg-space">
+         {{-- <section class="fresh-vegetable-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
                 <div class="col-xl-6 col-12">
@@ -156,10 +162,10 @@
             </div>
         </div>
     </section> --}}
-    <!-- Fresh Vegetable Section End -->
+         <!-- Fresh Vegetable Section End -->
 
-    <!-- Client Section Start -->
-    {{-- <section class="client-section section-lg-space">
+         <!-- Client Section Start -->
+         {{-- <section class="client-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-12">
@@ -209,14 +215,14 @@
             </div>
         </div>
     </section> --}}
-    <!-- Client Section End -->
-
- 
+         <!-- Client Section End -->
 
 
 
-    <!-- Blog Section Start -->
-    {{-- <section class="section-lg-space">
+
+
+         <!-- Blog Section Start -->
+         {{-- <section class="section-lg-space">
         <div class="container-fluid-lg">
             <div class="about-us-title text-center">
                 <h4 class="text-content">Our Blog</h4>
@@ -319,9 +325,9 @@
     </section> --}}
 
 
-    <!-- Blog Section End -->
-       <!-- About Start -->
-        {{-- <div class="container-fluid p-5">
+         <!-- Blog Section End -->
+         <!-- About Start -->
+         {{-- <div class="container-fluid p-5">
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" data-aos="fade-{{ app()->getLocale()=='ar'?'left':'right'}}">
                     <div class="position-relative h-100">
@@ -357,5 +363,4 @@
                 </div>
             </div>
         </div> --}}
-        <!-- About End -->
-
+         <!-- About End -->

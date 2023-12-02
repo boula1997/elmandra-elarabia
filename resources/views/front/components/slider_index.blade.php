@@ -1,40 +1,50 @@
       <!-- Home Section Start -->
       <section class="home-section pt-2">
-        <div class="carousel slide carousel-fade">
-            <div class="row g-4">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="home-contain h-100">
-                        <img src="{{ asset(isset(page('slider-index')->images[0]->url) ? page('slider-index')->images[0]->url : asset('default.jpg')) }}" class="bg-img blur-up lazyload"  alt="">
-                        <div class="home-detail p-center-left w-75 position-relative mend-auto">
-                            <div>
-                                <h1 class="w-75 text-uppercase poster-1">{{ page('slider-index')->title }} <span
-                                        class="daily">{{ page('slider-index')->subtitle }}</span></h1>
-                                <p class="w-58 d-none d-sm-block">{!! page('slider-index')->description !!}</p>
-                                        <button onclick="location.href = '#';"
-                                            class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }}<i class="fab fa-apple ms-2 icon"></i>
-                                        </button>
-                                        <button onclick="location.href = '#';"
-                                            class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }}<i class="fab fa-google-play ms-2 icon"></i>
-                                        </button>
-                                        <button onclick="location.href = '#';"
-                                            class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.huawei') }}<i class="fab fi-brands-huawei ms-2 icon"></i>
-                                        </button>
-                                        <button onclick="location.href = '#';"
-                                        class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}<i class="fas fa-shopping-cart ms-2 icon"></i>
-                                        </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="carousel slide carousel-fade">
+              <div class="row g-4 bg-banner" style="background-image: url('{{ asset(isset(page('slider-index')->images[0]->url) ? page('slider-index')->images[0]->url : asset('default.jpg')) }}')">
+                  <div class="col-xl-6 col-lg-6">
+                      <div class="home-contain h-100">
+                          <div class="home-detail p-center-left position-relative mend-auto">
+                              <div class="index-number">
+                                  <h2 class="text-uppercase poster-1 text-white">{{ page('slider-index')->title }} <span
+                                          class="daily">{{ page('slider-index')->subtitle }}</span></h2>
+                                  <div class="text-white">{!! page('slider-index')->description !!}</div>
+                                  <div class="d-flex">
 
-            </div>
-        </div>
-    </section>
-    <!-- Home Section End -->
-    
-    
-    <!-- Carousel Start -->
-    {{-- <div class="container-fluid p-0 h-100">
+                                      <button onclick="location.href = '#';"
+                                          class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }}<i
+                                              class="fab fa-apple ms-2 icon"></i>
+                                      </button>
+                                      <button onclick="location.href = '#';"
+                                          class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }}<i
+                                              class="fab fa-google-play ms-2 icon"></i>
+                                      </button>
+                                      <button onclick="location.href = '#';"
+                                          class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.huawei') }}<i
+                                              class="fab fi-brands-huawei ms-2 icon"></i>
+                                      </button>
+                                      <button onclick="location.href = '#';"
+                                          class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}<i
+                                              class="fas fa-shopping-cart ms-2 icon"></i>
+                                  </div>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="{{ page('slider-index')->images[1]->url }}" class="w-50" alt="">
+                  </div>
+
+              </div>
+          </div>
+      </section>
+      <!-- Home Section End -->
+
+
+      <!-- Carousel Start -->
+      {{-- <div class="container-fluid p-0 h-100">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                
@@ -65,4 +75,4 @@
             </button>
         </div>
     </div> --}}
-    <!-- Carousel End -->
+      <!-- Carousel End -->

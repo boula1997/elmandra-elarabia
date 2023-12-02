@@ -1,36 +1,42 @@
-         
-                <!-- Vision section start -->
-                <section>
-                    <div class="row">
-                            <div class="col-md-6 text-center">
-                            
-                                <img class="rounded float-right" style="width: 80%; height: 80%" src="{{asset(isset(page('about-index')->images[0]->url) ? page('about-index')->images[0]->url : asset('default.jpg'))}}" alt="">
-                            </div>
-                            <div class="col-md-6" >
-                                <div class="title title-flex">
-                                    <div >
-                                        <h2>{{ page('about-index')->title }}</h2>
-                                        <h2>{{ page('about-index')->subtitle }}</h2>
-                                        <p class="text-justify">{!! page('about-index')->description !!}</p>
-                                    </div>
-                                </div>
-                                <button onclick="location.href = '#';"
-                                class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }} <i class="fab fa-apple ms-2 icon"></i>
-                                </button>
-                                <button onclick="location.href = '#';"
-                                    class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }} <i class="fab fa-google-play ms-2 icon"></i>
-                                </button>
-                                <button onclick="location.href = '#';"
-                                    class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }} <i class="fas fa-shopping-cart ms-2 icon"></i>
-                                </button>
-                            </div>
-                        </div>
+         <!-- Vision section start -->
+         <section class="container">
+             <div class="row">
+                 <h2 class="text-center mb-3">{{ page('about-index')->title }}</h2>
+                 <div class="col-md-4 text-center d-flex justify-center align-items-center">
 
-                    </div>
-                </section>
-                <!-- Vision section end -->
+                     <img class="rounded float-right w-100"
+                         src="{{ asset(isset(page('about-index')->images[0]->url) ? page('about-index')->images[0]->url : asset('default.jpg')) }}"
+                         alt="">
+                 </div>
+                 <div class="col-md-8 p-5">
+                     <div class="title title-flex">
+                         <div>
+                             <h2>{{ page('about-index')->subtitle }}</h2>
+                             <div class="description">{!! page('about-index')->description !!}</div>
+                         </div>
+                     </div>
+                     <div class="d-flex p-0 m-0">
+                         <button onclick="location.href = '#';"
+                             class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }}
+                             <i class="fab fa-apple ms-2 icon"></i>
+                         </button>
+                         <button onclick="location.href = '#';"
+                             class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }}
+                             <i class="fab fa-google-play ms-2 icon"></i>
+                         </button>
+                         <button onclick="location.href = '#';"
+                             class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}
+                             <i class="fas fa-shopping-cart ms-2 icon"></i>
+                         </button>
+                     </div>
+                 </div>
+             </div>
+
+             </div>
+         </section>
+         <!-- Vision section end -->
          <!-- Fresh Vegetable Section Start -->
-    {{-- <section class="fresh-vegetable-section section-lg-space">
+         {{-- <section class="fresh-vegetable-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
                 <div class="col-xl-6 col-12">
@@ -122,10 +128,10 @@
             </div>
         </div>
     </section> --}}
-    <!-- Fresh Vegetable Section End -->
+         <!-- Fresh Vegetable Section End -->
 
-    <!-- Client Section Start -->
-    {{-- <section class="client-section section-lg-space">
+         <!-- Client Section Start -->
+         {{-- <section class="client-section section-lg-space">
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-12">
@@ -175,14 +181,14 @@
             </div>
         </div>
     </section> --}}
-    <!-- Client Section End -->
-
- 
+         <!-- Client Section End -->
 
 
 
-    <!-- Blog Section Start -->
-    {{-- <section class="section-lg-space">
+
+
+         <!-- Blog Section Start -->
+         {{-- <section class="section-lg-space">
         <div class="container-fluid-lg">
             <div class="about-us-title text-center">
                 <h4 class="text-content">Our Blog</h4>
@@ -285,9 +291,9 @@
     </section> --}}
 
 
-    <!-- Blog Section End -->
-       <!-- About Start -->
-        {{-- <div class="container-fluid p-5">
+         <!-- Blog Section End -->
+         <!-- About Start -->
+         {{-- <div class="container-fluid p-5">
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" data-aos="fade-{{ app()->getLocale()=='ar'?'left':'right'}}">
                     <div class="position-relative h-100">
@@ -323,5 +329,4 @@
                 </div>
             </div>
         </div> --}}
-        <!-- About End -->
-
+         <!-- About End -->
