@@ -342,6 +342,11 @@ iframe{
   text-align: right !important;
 }
 
+[dir="rtl"] .home-contain .home-detail * {
+  margin-left: auto !important;
+  text-align: right !important;
+}
+
   @-webkit-keyframes sk-rotate {
     100% {
       -webkit-transform: rotate(360deg);
