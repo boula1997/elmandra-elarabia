@@ -2,28 +2,62 @@
                 <!-- Vision section start -->
                 <section>
                     <div class="row">
-                            <div class="col-md-6 text-center">
-                            
-                                <img class="rounded float-right" style="width: 80%; height: 80%" src="{{asset(isset(page('about-index')->images[0]->url) ? page('about-index')->images[0]->url : asset('default.jpg'))}}" alt="">
-                            </div>
-                            <div class="col-md-6" >
+                           
+                            <div class="col-md-12" >
                                 <div class="title title-flex">
                                     <div >
-                                        <h2>{{ page('about-index')->title }}</h2>
-                                        <h2>{{ page('about-index')->subtitle }}</h2>
-                                        <p class="text-justify">{!! page('about-index')->description !!}</p>
+                                        <h2>{{ page('service-index')->title }}</h2>
+                                        <h2>{{ page('service-index')->subtitle }}</h2>
+                                        <p class="text-justify">{!! page('service-index')->description !!}</p>
                                     </div>
                                 </div>
-                                <button onclick="location.href = '#';"
-                                class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.app_store') }} <i class="fab fa-apple ms-2 icon"></i>
-                                </button>
-                                <button onclick="location.href = '#';"
-                                    class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }} <i class="fab fa-google-play ms-2 icon"></i>
-                                </button>
-                                <button onclick="location.href = '#';"
-                                    class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }} <i class="fas fa-shopping-cart ms-2 icon"></i>
-                                </button>
                             </div>
+                            <div class="col-md-3 text-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="{{ $counters[0]->icon }} fs-4 text-white"></i>
+                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
+                                </div>
+                                    <h2>{{ $counters[0]->title }}</h2>
+
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="{{ $counters[1]->icon }} fs-4 text-white"></i>
+                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
+                                </div>
+                                     <h2>{{ $counters[1]->title }}</h2>
+
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="{{ $counters[2]->icon }} fs-4 text-white"></i>
+                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
+                                </div>
+                                    <h2>{{ $counters[2]->title }}</h2>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img class="rounded float-right" style="width: 50%; height: 80%" src="{{asset(isset(page('service-index')->images[0]->url) ? page('service-index')->images[0]->url : asset('default.jpg'))}}" alt="">
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="{{ $counters[3]->icon }} fs-4 text-white"></i>
+                                {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
+                                </div>
+                                    <h2>{{ $counters[3]->title }}</h2>
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="{{ $counters[4]->icon }} fs-4 text-white"></i>
+                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
+                                </div>
+                                    <h2>{{ $counters[4]->title }}</h2>
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="{{ $counters[5]->icon }} fs-4 text-white"></i>
+                                    {{-- <i class="{{ $counters[0]->title }} fs-4 text-white"></i> --}}
+                                </div>
+                                    <h2>{{ $counters[5]->title }}</h2>
+                            </div>
+
                         </div>
 
                     </div>

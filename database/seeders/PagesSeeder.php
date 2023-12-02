@@ -25,6 +25,8 @@ class PagesSeeder extends Seeder
                         "Products",
                         "About Us",
                         null,
+                        'Why Asl Eltwfeer..?',
+                        'How does your Asl Eltwfeer work..?',
 
                     ];
 
@@ -39,7 +41,8 @@ class PagesSeeder extends Seeder
                             "Our Products",
                             "We Make Organic Fruits and vegetables In Market",
                             "Asl Eltawfeer application.. to deliver food items of all kinds",
-                        
+                            null,
+                            null,
                         ];
 
         $description_en = [
@@ -56,6 +59,10 @@ class PagesSeeder extends Seeder
                             null,
                             "<p>Introducing asleltawfeer, your neighborhood grocery store dedicated to providing convenience, quality, and friendly service. Step into our welcoming space where you'll find a wide range of fresh produce, pantry staples, household essentials, and more. With a focus on sourcing locally and offering competitive prices, we strive to meet all your grocery needs while delivering an enjoyable shopping experience. Visit asleltawfeer today and discover the difference of personalized attention and a carefully curated selection of products that cater to your everyday requirements.</p>",
                             "<p> We work as an intermediary between all our valued customers and companies that supply food supplies, so that the food supplies are delivered to the customer’s location, whether it is the home or another location requested by the customer, a school, an office, a mosque, or something else.</p>",
+                            "<p>With the Asl Savings application... you can now order food items from anywhere and at any time without thinking about driving the car, going to the store and carrying food items... We save you time and effort...
+
+                            The Asl Savings application... has all food products in all sizes. All you have to do is download the application, browse all the products, then order the product you want and we will deliver it to any place you want, whether a home, a mosque, an office, or anything else... What? Waiting!! Download the application now</p>",
+                            null,
                         ];
 
 
@@ -72,6 +79,8 @@ class PagesSeeder extends Seeder
                         "منتجات",
                         "من نحن",
                         null,
+                        "لماذا اصل التوفير..؟",
+                        "كيف يعمل اصل التوفير..؟",
                     ];
     
             $subtitle_ar = [
@@ -87,7 +96,8 @@ class PagesSeeder extends Seeder
                                 "احدث منتجاتنا",
                                 "نحن نصنع الفواكه والخضروات الطازجة في السوق",
                                 "تطبيق اصل التوفير.. لتوصيل المواد الغذائية بشتي أنواعها",
-
+                                null,
+                                null,
                             ];
     
             $description_ar = [
@@ -101,11 +111,15 @@ class PagesSeeder extends Seeder
                                 null,
                                 "<p>نقدم لكم اصل التوفير متجر البقالة في منطقتكم المخصص لتوفير الراحة والجودة والخدمة الودية. ادخل إلى مساحتنا الترحيبية حيث ستجد مجموعة واسعة من المنتجات الطازجة والمواد الغذائية الأساسية والمستلزمات المنزلية والمزيد. مع التركيز على المصادر المحلية وتقديم أسعار تنافسية، فإننا نسعى جاهدين لتلبية جميع احتياجات البقالة الخاصة بك مع تقديم تجربة تسوق ممتعة. قم بزيارة اصل توفير اليوم واكتشف الفرق في الاهتمام الشخصي ومجموعة مختارة بعناية من المنتجات التي تلبي متطلباتك اليومية.</p>",
                                 "<p>نعمل كوسيط بين جميع عملائنا الكرام والشركات التي تقوم بتوريد المواد الغذائية بحيث يتم توصيل المواد الغذائية إلى موقع العميل سواء كان المنزل أو موقع آخر يطلبه العميل أو مدرسة أو مكتب أو مسجد أو شيء من آخر.</p>",
+                                "<p>مع تطبيق اصل التوفير .. يمكنك الآن طلب المواد الغذائية من أى مكان وفى أى وقت دون التفكير فى قيادة السيارة والذهاب للمتجر وحمل المواد الغذائية.. نحن نوفر عليك الوقت والجهد ..
+
+                                تطبيق اصل التوفير .. به جميع منتجات المواد الغذائية وبجميع الأحجام, كل ما عليك هو تحميل التطبيق وقم بتصفح جميع المنتجات ومن ثم قم بطلب المنتج الذى تريده وسوف نقوم بإصاله إلى أى مكان تريده سواء منزل أو مسجد أو مكتب أو غير ذلك ... ماذا تنتظر !! حمل التطبيق الآن</p>",
+                                null,
                             ];    
 
             $identifiers=[ "slider","mini_slider","discount","product_home",
                            "counter","newsletter","testimonial","product","about",
-                           "slider-index"
+                           "slider-index","about-index","service-index"
                          ];  
 
              $images=[ 
@@ -119,6 +133,8 @@ class PagesSeeder extends Seeder
                             null,
                         ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg","images/LMx63k9eMcVgWhQmT2LcGxKsChXKJiGdeY5vGKKm.jpg",],
                         ["images/LtrW75RLVuHGYAZa1DYoubuK7sqE2AONu9ieqolt.jpg"],
+                        ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg",],
+                        ["images/n1VCwL5B5srOF8Gf22AKf4wUMeNeuKzTfDlKjfc6.png"],
                     ];
        
 

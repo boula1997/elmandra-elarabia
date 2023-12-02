@@ -13,10 +13,14 @@ class CountersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["خبرتنا","لاعبينا","ألعابنا","عملائنا"];
-        $title_en = ["EXPERIENCE","OUR Gamers","Our Games","HAPPY CLIENTS"];
-        $count=['10','50',"150","1235"];
-        $icon=["fa fa-star","fa fa-users","fa fa-check","fa fa-mug-hot"];
+        $title_ar = ["حمل التطبيق","سجل بياناتك","تصفح المنتجات",
+        "إختر منتجك المفضل","أكمل عملية الشراء","نوصل إليك طلبك"];
+        $title_en = [
+        "Download the application","Register your data","Browse products",
+        "Choose your favorite product","Complete your purchase","We deliver your order to you",];
+        $count=['10','50',"150","1235",'10','50',];
+        $icon=["fas fa-cloud-download-alt","fas fa-pen","fas fa-window-restore",
+                "fas fa-check","fas fa-shopping-cart","fas fa-truck",];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
