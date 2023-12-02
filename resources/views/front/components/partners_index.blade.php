@@ -12,7 +12,7 @@
             <div class="col-md-3">
                 <div class="item">
                     <div >
-                        <img  style="width: 50%; height: 50%;" src="{{asset(isset(page('about')->images[0]->url) ? page('about')->images[0]->url : asset('default.jpg'))}}" alt="img">
+                        <img  style="width: 50%; height: 50%;" src="{{asset($partner->image)}}" alt="img">
                     </div>
                 </div>
             </div>

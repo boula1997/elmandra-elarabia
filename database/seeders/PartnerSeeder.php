@@ -13,9 +13,9 @@ class PartnerSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = [null];
+        $title_en = [null, null, null, null,null,null, null, null, null,null,null, null, null, null,null,];
       
-        $title_ar = [null];
+        $title_ar =  [null, null, null, null,null,null, null, null, null,null,null, null, null, null,null,];
 
         $image=[
                     "images/MKoLM94lVoP7563PD42PUUGxLhgHtwjjundCE1vt.png",
@@ -32,7 +32,7 @@ class PartnerSeeder extends Seeder
                     "images/QPgJqDFz7xwXho35MvueTKmQnAnEKNYNRfceaMSd.png",
                     "images/DJKlf5R71cxa4LdkqhxEr1XL812Xndj8oCktwgo8.png",
                     "images/ubZCHYntUgutPBIlYiCD5p5HqzpaualsUdBe5TDd.png",
-                    "mages/vC2s56BB7zx0aQugzENp4aIk72yjKYIQjXTpCzIj.png",
+                    "images/vC2s56BB7zx0aQugzENp4aIk72yjKYIQjXTpCzIj.png",
                 ];
        
        
