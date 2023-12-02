@@ -375,7 +375,7 @@
                 @can('advertisement-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
+                            <i class="fas fa-ad"></i>
                             <p>
                                 @lang('general.advertisements')
                                 <i class=" px-1 fas fa-angle-left right"></i>
@@ -392,10 +392,11 @@
                         </ul>
                     </li>
                 @endcan
+
                 @can('advantage-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
+                            <i class="fas fa-check-square"></i>
                             <p>
                                 @lang('general.advantages')
                                 <i class=" px-1 fas fa-angle-left right"></i>
@@ -415,7 +416,7 @@
                 @can('company-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
+                            <i class="far fa-building"></i>
                             <p>
                                 @lang('general.companies')
                                 <i class=" px-1 fas fa-angle-left right"></i>
@@ -455,7 +456,7 @@
                 @can('store-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
+                            <i class="fas fa-store"></i>
                             <p>
                                 @lang('general.stores')
                                 <i class=" px-1 fas fa-angle-left right"></i>
@@ -475,9 +476,9 @@
                 @can('storeProduct-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
+                            <i class="fas fa-store-alt"></i>
                             <p > 
-                               <h style="font-size: 75%"> @lang('general.storeProducts') </h>
+                               <p style="font-size: 75%"> @lang('general.storeProducts') </p>
                                 <i class=" px-1 fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">{{ itemsCount('storeProducts') }}</span>
                             </p>
