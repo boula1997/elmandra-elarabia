@@ -99,7 +99,6 @@ function itemsCount($model)
         "partners" => count(Partner::get()),
         "sliders" => count(Slider::get()),
         "users" => count(User::get()),
-        "admins" => count(Admin::get()),
         "orderproducts" => count(Orderproduct::get()),
         "roles" => count(Role::get()),
         "orders" => count(Order::get()),
@@ -110,6 +109,8 @@ function itemsCount($model)
         "stores" => count(Store::get()),
         "storeProducts" => count(StoreProduct::get()),
         "offers" => count(Offer::get()),
+        "adminsAdmin" => count(Admin::where('type','Admin')->get()),
+        "sellersAdmin" => count(Admin::where('type','Seller')->get()),
     ];
 
 

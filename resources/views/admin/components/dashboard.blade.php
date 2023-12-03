@@ -129,7 +129,7 @@
                             <p>
                                 @lang('general.admins')
                                 <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('admins') }}</span>
+                                <span class="badge badge-info right">{{ itemsCount('adminsAdmin') }}</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -150,7 +150,7 @@
                         <p>
                             @lang('general.sellers')
                             <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('admins') }}</span>
+                            <span class="badge badge-info right">{{ itemsCount('sellersAdmin') }}</span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
