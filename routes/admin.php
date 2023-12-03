@@ -89,6 +89,7 @@ Route::group(
                 Route::resource('counters', CounterController::class);
                 Route::resource('contacts', ContactController::class);
                 Route::resource('orderproducts', OrderproductController::class);
+                Route::get('orderproduct/{id}', [OrderproductController::class,'create'])->name('orderproduct.create');
                 Route::resource('tests', ImageController::class);
                 Route::resource('advertisements', AdvertisementController::class);
                 Route::resource('offers', OfferController::class);

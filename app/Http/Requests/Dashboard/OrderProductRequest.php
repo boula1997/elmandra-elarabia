@@ -23,11 +23,10 @@ class OrderproductRequest extends FormRequest
 
 
         $rules = [
+            'product_id'=>'required',
+            'count'=>'required',
+          ];
           
-        ];
-        foreach (config('translatable.locales') as $locale) {
-            $rules += [$locale . '.title' => ['required', 'string']];
-        }
         return  $rules;
     }
 

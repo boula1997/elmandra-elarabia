@@ -8,58 +8,98 @@
             <div class="card-header card-header-tabs-line">
                 @include('admin.components.breadcrumb', ['module' => 'orderproducts', 'action' => 'create'])
             </div>
-                <div class="card-toolbar px-3">
-                    <ul class="nav nav-tabs nav-bold nav-tabs-line">
-                        @foreach (config('translatable.locales') as $key => $locale)
-                            <li class="nav-item">
-                                <a class="nav-link  @if ($key == 0) active @endif" data-toggle="tab"
-                                    href="{{ '#' . $locale }}">@lang('general.' . $locale)</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
+               
                 <div class="card-body">
                     <div class="tab-content">
-                        @foreach (config('translatable.locales') as $key => $locale)
-                            <div class="tab-pane fade show @if ($key == 0) active @endif"
-                                id="{{ $locale }}" role="tabpanel">
-                                <div class="form-group">
-                                    <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[title]' }}"
-                                            placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
-                                            value="{{ old($locale . '.title') }}">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.name'):</h5>
+                                        <p class="m-0">{{ $order->name }}</p>
                                     </div>
                                 </div>
-
                             </div>
-                        @endforeach
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.email'):</h5>
+                                        <p class="m-0">{{ $order->email }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.address'):</h5>
+                                        <p class="m-0">{{ $order->address }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.total-delivery'):</h5>
+                                        <p class="m-0">{{ $order->total }} {{ __('general.pound') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">{{ __('general.products') }}</label>
+                                    <select class="form-select form-select-lg" name="product_id" id="product">
+                                        @foreach ($products as $product)
+                                            <option value="{{ $product->id }}" {{ old('product_id')==$product->id? 'selected' : '' }}>{{ $product->title }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">{{ __('general.youtube_link') }}</label>
+                                    <label>@lang('general.count') <span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                         <input type="text" name="youtube_link" value="{{ old('youtube_link') }}"
-                                        class="form-control" id="exampleInputName"
-                                        placeholder="{{ __('general.youtube_link') }}">
+                                        <input type="text" name="count"
+                                            placeholder="@lang('general.count')"
+                                            class="form-control  pl-1 min-h-40px @error('count') is-invalid @enderror"
+                                            value="{{old('count')}}">
                                     </div>
                                 </div>
                             </div>
+                            {{-- <div class="col-md-3">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.total'):</h5>
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <input  id="total" name="total" value="{{$product->price}}">
+                                    </div>
+                                </div>
+                            </div> --}}
 
+                            <div class="col-md-3">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <input type="hidden" id="order" name="order_id" value="{{$order->id}}">
+                                    </div>
+                                </div>
+                            </div>
+                           
+    
                         </div>
+                        <br>
 
                     </div>
                 </div>
@@ -67,7 +107,7 @@
                     <button type="submit"
                         class="btn btn-outline-primary px-5
                             ">@lang('general.save')</button>
-                    <a href="{{ route('orderproducts.index') }}"
+                    <a href="{{ route('orders.index') }}"
                         class="btn btn-outline-danger px-5
                             ">@lang('general.cancel')</a>
                 </div>
