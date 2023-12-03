@@ -3,36 +3,37 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\FaqRequest;
-use App\Models\File as ModelsFile;
-use App\Models\Faq;
-use Exception;
+use App\Http\Requests\Dashboard\OfferRequest;
 use Illuminate\Support\Facades\File;
+use App\Models\Offer;
+use Illuminate\Http\Request;
+use App\Models\File as ModelsFile;
+use Exception;
 
-class FaqController extends Controller
+class OfferController extends Controller
 {
-    /**s
+    /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Responses
+     * @return \Illuminate\Http\Response
      */
-    private $faq;
-
-    function __construct(Faq $faq)
+    private $offer;
+    function __construct(Offer $offer)
     {
-        $this->middleware('permission:faq-list|faq-create|faq-edit|faq-delete', ['only' => ['index', 'show']]);
-        $this->middleware('permission:faq-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:faq-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:faq-delete', ['only' => ['destroy']]);
-        $this->faq = $faq;
+        $this->middleware('permission:offer-list|offer-create|offer-edit|offer-delete', ['only' => ['index', 'show']]);
+        $this->middleware('permission:offer-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:offer-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:offer-delete', ['only' => ['destroy']]);
+        $this->offer = $offer;
     }
+
 
     public function index()
     {
         try {
-            $faqs = $this->faq->latest()->get();
-            return view('admin.crud.faqs.index', compact('faqs'))
-                ->with('i', (request()->input('faq', 1) - 1) * 5);
+            $offers = $this->offer->latest()->get();
+            return view('admin.crud.offers.index', compact('offers'))
+                ->with('i', (request()->input('page', 1) - 1) * 5);
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
@@ -46,7 +47,7 @@ class FaqController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.faqs.create');
+        return view('admin.crud.offers.create');
     }
 
     /**
@@ -55,13 +56,13 @@ class FaqController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(FaqRequest $request)
+    public function store(OfferRequest $request)
     {
-
         try {
             $data = $request->except('image','profile_avatar_remove');
-            $faq = $this->faq->create($data);
-            return redirect()->route('faqs.index')
+            $offer = $this->offer->create($data);
+            $offer->uploadFile();
+            return redirect()->route('offers.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -72,38 +73,39 @@ class FaqController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Faq  $faq
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Http\Response
      */
-    public function show(Faq $faq)
+    public function show(Offer $offer)
     {
-        return view('admin.crud.faqs.show', compact('faq'));
+        return view('admin.crud.offers.show', compact('offer'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Faq  $faq
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Faq $faq)
+    public function edit(Offer $offer)
     {
-        // dd($faq);
-        return view('admin.crud.faqs.edit', compact('faq'));
+        //    dd($offer->title);
+        return view('admin.crud.offers.edit', compact('offer'));
     }
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\portfolio  $faq
+     * @param  \App\Models\portfolio  $offer
      * @return \Illuminate\Http\Response
      */
-    public function update(FaqRequest $request, Faq $faq)
+    public function update(OfferRequest $request, Offer $offer)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
-            $faq->update($data);
-            return redirect()->route('faqs.index', compact('faq'))
+            $offer->update($data);
+            $offer->updateFile();
+            return redirect()->route('offers.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -113,15 +115,15 @@ class FaqController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Faq  $faq
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Faq $faq)
+    public function destroy(Offer $offer)
     {
-
         try {
-            $faq->delete();
-            return redirect()->route('faqs.index')
+            $offer->delete();
+            $offer->deleteFile();
+            return redirect()->route('offers.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());

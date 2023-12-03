@@ -819,53 +819,9 @@
                                             </ul> --}}
                                            </li>
 
-                                           <li class="nav-item dropdown">
-                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.show-products') ? 'active' : '' }}"
-                                                   href="{{ route('front.show-products') }}"
-                                                   data-bs-toggle="dropdown">{{ __('general.products') }}</a>
-
-                                               {{-- <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="product-4-image.html">Product
-                                                        4 Image</a>
-                                                </li>
-                                                <li class="sub-dropdown-hover">
-                                                    <a href="javascript:void(0)" class="dropdown-item">Product
-                                                        Thumbnail</a>
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a href="product-left-thumbnail.html">Left Thumbnail</a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="product-right-thumbnail.html">Right
-                                                                Thumbnail</a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="product-bottom-thumbnail.html">Bottom
-                                                                Thumbnail</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="product-bundle.html" class="dropdown-item">Product
-                                                        Bundle</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product-slider.html" class="dropdown-item">Product
-                                                        Slider</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product-sticky.html" class="dropdown-item">Product
-                                                        Sticky</a>
-                                                </li>
-                                            </ul> --}}
-                                           </li>
-                                           <li class="nav-item dropdown">
-                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}"
-                                                   href="{{ route('front.message') }}"
-                                                   data-bs-toggle="dropdown">{{ __('general.contact') }}</a>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
+                                              > {{ __('general.contact') }}</a>
 
                                                {{-- <ul class="dropdown-menu">
                                                 <li>
@@ -906,74 +862,6 @@
                                             </ul> --}}
                                            </li>
 
-                                           <li class="nav-item dropdown">
-                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.team') ? 'active' : '' }}"
-                                                   href="{{ route('front.team') }}"
-                                                   data-bs-toggle="dropdown">{{ __('general.team') }}</a>
-
-                                               {{-- <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-category-slider.html">Shop
-                                                        Category Slider</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-category.html">Shop
-                                                        Category Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-banner.html">Shop Banner</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
-                                                        Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-list.html">Shop List</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-right-sidebar.html">Shop
-                                                        Right Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-top-filter.html">Shop Top
-                                                        Filter</a>
-                                                </li>
-                                            </ul> --}}
-                                           </li>
-                                           <li class="nav-item dropdown">
-                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.testimonial') ? 'active' : '' }}"
-                                                   href="{{ route('front.testimonial') }}"
-                                                   data-bs-toggle="dropdown">{{ __('general.testimonials') }}</a>
-
-                                               {{-- <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-category-slider.html">Shop
-                                                        Category Slider</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-category.html">Shop
-                                                        Category Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-banner.html">Shop Banner</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
-                                                        Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-list.html">Shop List</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-right-sidebar.html">Shop
-                                                        Right Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="shop-top-filter.html">Shop Top
-                                                        Filter</a>
-                                                </li>
-                                            </ul> --}}
-                                           </li>
 
                                            {{-- <li class="nav-item dropdown dropdown-mega">
                                             <a class="nav-link dropdown-toggle ps-xl-2 ps-0"

@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Offer;
 use Exception;
 use Illuminate\Http\Request;
 use Jackiedo\Cart\Facades\Cart;
 
 class CartController extends Controller
 {
-    public $cart, $product, $favourite;
-    public function __construct(Cart $cart, Product $product)
+    public $cart, $product, $favourite, $offers;
+    public function __construct(Cart $cart, Product $product,Offer $offers)
     {
         $this->cart = cart();
         $this->favourite = favourite();
         $this->product = $product;
+        $this->offers = $offers;
     }
     /**
      * Display a listing of the resource.
@@ -25,8 +27,9 @@ class CartController extends Controller
 
     public function getCartItems()
     {
+        $offers=$this->offers->get();
         $items = $this->cart->getItems();
-        return view('front.cart', compact('items'));
+        return view('front.cart', compact('items','offers'));
     }
 
     public function getFavourites()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\user;
+use App\Models\Offer;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
@@ -12,7 +13,8 @@ use Illuminate\Validation\Rules;
 class ProfileController extends Controller
 {
     public function show(){
-        return view('front.profile');
+        $offers=Offer::get();
+        return view('front.profile',compact('offers'));
     }
 
     public function  update(Request $request,$id)

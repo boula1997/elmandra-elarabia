@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\OrderRequest;
+use App\Http\Requests\API\OrderRequest as APIOrderRequest;
+use App\Http\Requests\OrderRequest;
+use App\Http\Requests\OrderRequest as RequestsOrderRequest;
 use App\Mail\OrderAdminMail;
 use App\Mail\OrderMail;
 use App\Models\Order;
+use App\Models\Orderproduct;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -52,7 +55,24 @@ class OrderController extends Controller
         return view('admin.crud.orders.show', compact('order'));
     }
 
+    public function edit(Order $order)
+    {
+        // $products=Product::get();
+        return view('admin.crud.orders.edit', compact('order'));
+    }
 
+    public function update(OrderRequest $request, Order $order)
+    {
+        try {
+            $data = $request->except('image','profile_avatar_remove');
+            $order->update($data);
+            return redirect()->route('orders.index', compact('order'))
+                ->with('success', trans('general.update_successfully'));
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            return redirect()->back()->with(['error' => __('general.something_wrong')]);
+        }
+    }
     /**
      * Remove the specified resource from storage.
      *

@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\OfferController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\StoreController;
@@ -88,8 +89,10 @@ Route::group(
                 Route::resource('counters', CounterController::class);
                 Route::resource('contacts', ContactController::class);
                 Route::resource('orderproducts', OrderproductController::class);
+                Route::get('orderproduct/{id}', [OrderproductController::class,'create'])->name('orderproduct.create');
                 Route::resource('tests', ImageController::class);
                 Route::resource('advertisements', AdvertisementController::class);
+                Route::resource('offers', OfferController::class);
                 Route::resource('advantages', AdvantageController::class);
                 Route::resource('companies', CompanyController::class);
                 Route::resource('sellers', SellerController::class);

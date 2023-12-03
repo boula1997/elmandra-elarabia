@@ -136,14 +136,9 @@
                                     <a href="{{ route('front.about') }}" class="text-content">{{ __('general.about') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('front.show-products') }}" class="text-content">{{ __('general.products') }}</a>
-                                </li>
-                                <li>
                                     <a href="{{ route('front.message') }}" class="text-content">{{ __('general.contact') }}</a>
                                 </li>
-                                <li>
-                                    <a href="{{ route('front.testimonial') }}" class="text-content">{{ __('general.testimonials') }}</a>
-                                </li>
+                              
                               
                             </ul>
                         </div>
@@ -517,67 +512,30 @@
                        <i class="fa-solid fa-xmark"></i>
                    </button>
                </div>
-               <div class="modal-body">
-                   <div class="deal-offer-box">
-                       <ul class="deal-offer-list">
-                           <li class="list-1">
-                               <div class="deal-offer-contain">
-                                   <a href="shop-left-sidebar.html" class="deal-image">
-                                       <img src="../assets/images/vegetable/product/10.png" class="blur-up lazyload"
-                                           alt="">
-                                   </a>
+               @if (auth('web')->user())
+                    <div class="modal-body">
+                        <div class="deal-offer-box">
+                            <ul class="deal-offer-list">
+                                @foreach ($offers as $offer)
 
-                                   <a href="shop-left-sidebar.html" class="deal-contain">
-                                       <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                       <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                   </a>
-                               </div>
-                           </li>
+                                <li class="list-1">
+                                    <div class="deal-offer-contain">
+                                        <a href="#" class="deal-image">
+                                            <img src="{{asset($offer->image)}}" class="blur-up lazyload"
+                                                alt="">
+                                        </a>
 
-                           <li class="list-2">
-                               <div class="deal-offer-contain">
-                                   <a href="shop-left-sidebar.html" class="deal-image">
-                                       <img src="../assets/images/vegetable/product/11.png" class="blur-up lazyload"
-                                           alt="">
-                                   </a>
-
-                                   <a href="shop-left-sidebar.html" class="deal-contain">
-                                       <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                       <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                   </a>
-                               </div>
-                           </li>
-
-                           <li class="list-3">
-                               <div class="deal-offer-contain">
-                                   <a href="shop-left-sidebar.html" class="deal-image">
-                                       <img src="../assets/images/vegetable/product/12.png" class="blur-up lazyload"
-                                           alt="">
-                                   </a>
-
-                                   <a href="shop-left-sidebar.html" class="deal-contain">
-                                       <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                       <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                   </a>
-                               </div>
-                           </li>
-
-                           <li class="list-1">
-                               <div class="deal-offer-contain">
-                                   <a href="shop-left-sidebar.html" class="deal-image">
-                                       <img src="../assets/images/vegetable/product/13.png" class="blur-up lazyload"
-                                           alt="">
-                                   </a>
-
-                                   <a href="shop-left-sidebar.html" class="deal-contain">
-                                       <h5>Blended Instant Coffee 50 g Buy 1 Get 1 Free</h5>
-                                       <h6>$52.57 <del>57.62</del> <span>500 G</span></h6>
-                                   </a>
-                               </div>
-                           </li>
-                       </ul>
-                   </div>
-               </div>
+                                        <a href="shop-left-sidebar.html" class="deal-contain">
+                                            <h5>{{$offer->title}}</h5>
+                                            <h6><span>{{$offer->translate(app()->getLocale())->description}}</span></h6>
+                                        </a>
+                                    </div>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+               @endif
            </div>
        </div>
    </div>

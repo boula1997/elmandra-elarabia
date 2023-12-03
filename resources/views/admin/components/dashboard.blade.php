@@ -393,6 +393,27 @@
                     </li>
                 @endcan
 
+                @can('offer-list')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-ad"></i>
+                            <p>
+                                @lang('general.offers')
+                                <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('offers') }}</span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('offers.index') }}" class="nav-link">
+                                    <i class=" px-1 far fa-circle nav-icon"></i>
+                                    <p>@lang('general.show')</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endcan
+
                 @can('advantage-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">

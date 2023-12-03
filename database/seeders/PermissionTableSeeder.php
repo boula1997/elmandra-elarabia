@@ -99,6 +99,7 @@ class PermissionTableSeeder extends Seeder
            'message-delete',
            'message-reply',
            'order-list',
+           'order-edit',
            'order-delete',
            'order-reply',
            'newsletter-list',
@@ -129,6 +130,10 @@ class PermissionTableSeeder extends Seeder
            'storeProduct-create',
            'storeProduct-edit',
            'storeProduct-delete',
+           'offer-list',
+           'offer-create',
+           'offer-edit',
+           'offer-delete',
         ];
      
         foreach ($permissions as $permission) {

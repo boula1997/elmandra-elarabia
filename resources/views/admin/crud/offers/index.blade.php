@@ -1,70 +1,76 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <!-- Content Wrapper. Contains order content -->
+    <!-- Content Wrapper. Contains offer content -->
     <div class="content-wrapper">
-        <div class="conainer p-5">
-
-            <!-- Main content -->
+        <!-- Main content -->
+        <div class="container p-3">
             <section class="content pt-2">
                 <div class="container-fluid">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-12">
+                            <!-- general form elements -->
                             <div class="card">
                                 <div class="card-header">
                                     <!-- general form elements -->
                                     <div class="row">
                                         <div class="col-md-6 d-flex d-flex justify-content-start">
-                                            <h1 class="card-title fw-bold">@lang('general.orders')</h3>
+                                            <h1 class="card-title fw-bold">@lang('general.pages')</h3>
+                                        </div>
+                                        <div class="col-md-6 d-flex d-flex justify-content-end">
+                                            <a href="{{ route('offers.create') }}">
+
+                                                <button
+                                                    class="btn btn-outline-primary px-5
+                                                    "><i
+                                                        class="fa fa-plus fa-sm px-2" aria-hidden="true"></i>
+                                                    @lang('general.add')</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.card-header -->
                                 <div class="card-body">
                                     
                                     <table id="example1" class="table  table-hover">
-                                        <thead class="h-2">
-                                            <tr class="p-0 m-0">
+                                        <thead>
+                                            <tr>
                                                 <th>#</th>
-                                                <th>@lang('general.name')</th>
-                                                <th>@lang('general.email')</th>
-                                                <th>@lang('general.address')</th>
-                                                <th>@lang('general.total-delivery')</th>
+                                                <th>@lang('general.title')</th>
+                                                <th>@lang('general.image')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($data as $order)
-                                                <tr class="p-0 m-0">
+                                            @foreach ($offers as $offer)
+                                                <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $order->name }}</td>
-                                                    <td>{{ $order->email }}</td>
-                                                    <td>{{ $order->address }}</td>
-                                                    <td>{{ $order->total }}</td>
+                                                    <td>{{ $offer->title   }}</td>
+                                                    <td><img width="100" height="100" src="{{ $offer->image }}"
+                                                        alt="{{ $offer->title }}"></td>
                                                     <td>
                                                         @include('admin.components.controls', [
-                                                            'route' => 'orders',
-                                                            'role' => 'order',
-                                                            'module' => $order,
+                                                            'route' => 'offers',
+                                                            'role' => 'offer',
+                                                            'module' => $offer,
                                                         ])
                                                     </td>
                                                 </tr>
                                             @endforeach
-    
+
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                     </div>
-    
+
                 </div><!-- /.container-fluid -->
             </section>
-            <!-- /.content -->
         </div>
+        <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
 @endsection

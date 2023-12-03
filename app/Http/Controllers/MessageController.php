@@ -12,6 +12,7 @@ use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Counter;
+use App\Models\Offer;
 use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;
@@ -40,7 +41,8 @@ class MessageController extends Controller
     public function index()
     {
         try {
-            return view('front.message');
+            $offers=Offer::get();
+            return view('front.message',compact('offers'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
