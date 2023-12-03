@@ -12,6 +12,7 @@ use App\Models\Newsletter;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Image;
+use App\Models\Offer;
 use App\Models\Order;
 use App\Models\Page;
 use App\Models\Team;
@@ -108,6 +109,7 @@ function itemsCount($model)
         "sellers" => count(Seller::get()),
         "stores" => count(Store::get()),
         "storeProducts" => count(StoreProduct::get()),
+        "offers" => count(Offer::get()),
     ];
 
 

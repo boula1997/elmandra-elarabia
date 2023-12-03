@@ -357,7 +357,7 @@ return [
     'code'=>'الكود', 
     'sold_by'=>'يباع بواسطة:',
     'asleltawfeer'=>'اصل التوفير',
-    'save'=>'توفير :',
+    // 'save'=>'توفير :',
     'action'=>'الفعل',
     'save_for_later'=>'احفظ لوقت لاحق',
     'remove'=>'ازالة',
@@ -374,5 +374,7 @@ return [
     'google_play'=>'جوجل بلاى',
     'huawei'=>'هواوى',
     'order_now'=>'اطلب الان',
+    'offers'=>'العروض',  
+
 
 ];

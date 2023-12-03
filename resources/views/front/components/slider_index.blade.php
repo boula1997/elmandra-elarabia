@@ -19,10 +19,6 @@
                                               class="fab fa-google-play ms-2 icon"></i>
                                       </button>
                                       <button onclick="location.href = '#';"
-                                          class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.huawei') }}<i
-                                              class="fab fi-brands-huawei ms-2 icon"></i>
-                                      </button>
-                                      <button onclick="location.href = '#';"
                                           class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}<i
                                               class="fas fa-shopping-cart ms-2 icon"></i>
                                   </div>

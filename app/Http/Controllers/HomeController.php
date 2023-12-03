@@ -16,6 +16,7 @@ use App\Models\Slider;
 use App\Models\Product;
 use App\Models\Advantage;
 use App\Models\Advertisement;
+use App\Models\Offer;
 use Exception;
 
 class HomeController extends Controller
@@ -35,9 +36,10 @@ class HomeController extends Controller
     private $products;
     private $advantages;
     private $advertisements;
+    private $offers;
     
 
-    public function __construct( Testimonial $testimonial, Team $team, Counter $counter,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory,Product $products,Advantage $advantages,Advertisement $advertisements)
+    public function __construct( Testimonial $testimonial, Team $team, Counter $counter,Team $teams,Partner $partners,Slider $slider,Subcategory $subcategory,Product $products,Advantage $advantages,Advertisement $advertisements,Offer $offers)
     {
         $this->testimonial = $testimonial;
         $this->team = $team;
@@ -49,6 +51,7 @@ class HomeController extends Controller
         $this->products=$products;
         $this->advantages=$advantages;
         $this->advertisements=$advertisements;
+        $this->offers=$offers;
         
     }
 
@@ -70,9 +73,10 @@ class HomeController extends Controller
             $subcategories=$this->subcategory->get();
             $advantages=$this->advantages->get();
             $advertisements=$this->advertisements->get();
+            $offers=$this->offers->get();
             
 
-            return view('front.index', compact('testimonials', 'teams', 'counters','teams','partners','sliders','subcategories','products','advantages','advertisements'));
+            return view('front.index', compact('testimonials', 'teams', 'counters','teams','partners','sliders','subcategories','products','advantages','advertisements','offers'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
@@ -85,6 +89,14 @@ class HomeController extends Controller
     public function showtestimonial(){
         $testimonials =Testimonial::get();    
          return view('front.testimonial', compact('testimonials'));
+     }
+     public function showwishlist(){
+        $offers =Offer::get();    
+         return view('front.wishlist', compact('offers'));
+     }
+     public function showaddtocart(){
+        $offers =Offer::get();    
+         return view('front.shopping', compact('offers'));
      }
     
 }

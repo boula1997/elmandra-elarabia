@@ -66,11 +66,12 @@ Route::group(
             Route::get('/addToCart/{id}', [CartController::class,'addToCart'])->name('addTo.cart');
             Route::get('/removeFromCart/{hash}', [CartController::class,'removeItemCart'])->name('removeFrom.cart');
             Route::get('/updateItemCount/{hash}/{quantity}', [CartController::class,'updateItemCount'])->name('updateItem.count');
+            Route::get('/add_to_cart',[HomeController::class,'showaddtocart'])->name('front.shopping');
             
-            Route::get('/add_to_cart', function () {
+            // Route::get('/add_to_cart', function () {
                 
-                return view("front.shopping");
-            })->name('front.shopping');
+            //     return view("front.shopping");
+            // })->name('front.shopping');
             Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
             Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
             Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
@@ -79,11 +80,12 @@ Route::group(
         });
         Route::get('/team',[HomeController::class,'showteam'])->name('front.team');
         Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');
+        Route::get('/wishlit',[HomeController::class,'showwishlist'])->name('front.wishlist');
         
         
-    Route::get('/wishlist',function(){
-        return view('front.wishlist');
-    })->name('front.wishlist');
+    // Route::get('/wishlist',function(){
+    //     return view('front.wishlist');
+    // })->name('front.wishlist');
 
     // Route::get('/cart-view',function(){
     //     return view('front.cart');

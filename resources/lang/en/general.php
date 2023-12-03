@@ -372,12 +372,8 @@ return [
     'app_store'=>'App Store',
     'google_play'=>'Google Play',
     'huawei'=>'Huawei',
-    'order_now'=>'Order Now',
-   
- 
-
-
-   
+    'order_now'=>'Order Now',  
+    'offers'=>'Offers',  
     
     
       

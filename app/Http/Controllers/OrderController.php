@@ -14,6 +14,7 @@ use App\Models\Team;
 use App\Models\Counter;
 use App\Models\Orderproduct;
 use App\Models\Product;
+use App\Models\Offer;
 use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;
@@ -29,12 +30,14 @@ class OrderController extends Controller
 
     private $order;
     private $orderproduct;
+    private $offers;
 
 
-    public function __construct(Order $order, Orderproduct $orderproduct)
+    public function __construct(Order $order, Orderproduct $orderproduct,Offer $offers)
     {
         $this->order = $order;
         $this->orderproduct = $orderproduct;
+        $this->offers = $offers;
     }
 
     /**
@@ -86,8 +89,8 @@ class OrderController extends Controller
         }
     }
     public function showOrders(){
-
-        return view('front.order_index');
+        $offers =$this->offers->get();
+        return view('front.order_index',compact('offers'));
     }
 
     public function showOneOrder($id)
