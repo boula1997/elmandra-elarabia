@@ -80,14 +80,6 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="col-md-3">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.total'):</h5>
-                                <div class="mb-7 bg-light p-3 rounded h-100">
-                                    <div class="card-title fw-bold">
-                                        <input  id="total" name="total" value="{{$product->price}}">
-                                    </div>
-                                </div>
-                            </div> --}}
 
                             <div class="col-md-3">
                                 <div class="mb-7 bg-light p-3 rounded h-100">

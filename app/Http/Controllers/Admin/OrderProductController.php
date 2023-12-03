@@ -44,11 +44,12 @@ class OrderproductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        // dd($order_id);
+        $order = Order::find($id);
         $products=Product::get();
-        return view('admin.crud.orderproducts.create',compact('products'));
+        // dd($orderproduct);
+        return view('admin.crud.orderproducts.create',compact('products','order'));
     }
 
     /**
@@ -99,6 +100,7 @@ class OrderproductController extends Controller
         $products=Product::get();
         $order=Order::get();
         return view('admin.crud.orderproducts.show',compact('products','order','orderproduct'));
+
     }
 
     /**

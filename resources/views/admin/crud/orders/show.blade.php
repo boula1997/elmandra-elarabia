@@ -64,7 +64,7 @@
                             </h3>
                         </div>
                         <div class="col-md-6 d-flex d-flex justify-content-end">
-                            <a href="{{ route('orderproducts.show',$order->id) }}">
+                            <a href="{{ route('orderproduct.create',$order->id) }}">
 
                                 <button
                                     class="btn btn-outline-primary px-5
