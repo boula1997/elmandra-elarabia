@@ -16,9 +16,6 @@
                                     <h5 class="text-limit" style="--lines:1;" title="{{ $product->title }}">
                                         {{ $product->title }}</h5>
                                 </div>
-                                {{-- <div>
-                                    <h5 class="text-dark mb-0">{{ __('general.stock') }} {{$product->stock}}</h5>
-                                </div> --}}
                                 <div class="d-flex justify-content-between">
 
                                     <p class="small text-danger">
