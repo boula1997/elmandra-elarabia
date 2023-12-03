@@ -62,7 +62,7 @@
                                 <label for="" class="form-label">{{ __('general.products') }}</label>
                                 <select class="form-select form-select-lg" name="product_id" id="product">
                                     @foreach ($products as $product)
-                                        <option value="{{ $orderproduct->product->id }}" {{ old('orderproduct->product_id',$orderproduct->product->id)==$product->id? 'selected' : '' }}>{{ $product->title }}</option>
+                                        <option value="{{ $product->id }}" {{ old('orderproduct->product_id',$orderproduct->product->id)==$product->id? 'selected' : '' }}>{{ $product->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
