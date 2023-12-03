@@ -6,71 +6,73 @@
 
    <!-- Header Start -->
    <header class="pb-md-4 pb-0">
-    <div class="header-top">
-        <div class="container-fluid-lg">
-            <div class="row">
-                <div class="col-xxl-3 d-xxl-block d-none">
-                    <div class="top-left-header">
-                        <i class="iconly-Location icli text-white"></i>
-                        <span class="text-white">{{ settings()->translate(app()->getLocale())->address }}</span>
-                    </div>
-                </div>
+       <div class="header-top">
+           <div class="container-fluid-lg">
+               <div class="row">
+                   <div class="col-xxl-3 d-xxl-block d-none">
+                       <div class="top-left-header">
+                           <i class="iconly-Location icli text-white"></i>
+                           <span class="text-white">{{ settings()->translate(app()->getLocale())->address }}</span>
+                       </div>
+                   </div>
 
-                <div class="col-xxl-6 col-lg-9 d-lg-block d-none">
-                    <div class="header-offer">
-                        <div class="notification-slider">
-                            <div>
-                                <div class="timer-notification">
-                                    <h6><strong class="me-1">{{ __('general.welcome_to') }} {{ settings()->title }}</strong>{{ __('general.wrap_new') }}<strong class="ms-1">{{ __('general.new_code') }} {{ settings()->title }}24
-                                        </strong>
+                   <div class="col-xxl-6 col-lg-9 d-lg-block d-none">
+                       <div class="header-offer">
+                           <div class="notification-slider">
+                               <div>
+                                   <div class="timer-notification">
+                                       <h6><strong class="me-1">{{ __('general.welcome_to') }}
+                                               {{ settings()->title }}</strong>{{ __('general.wrap_new') }}<strong
+                                               class="ms-1">{{ __('general.new_code') }} {{ settings()->title }}24
+                                           </strong>
 
-                                    </h6>
-                                </div>
-                            </div>
+                                       </h6>
+                                   </div>
+                               </div>
 
-                            <div>
-                                <div class="timer-notification">
-                                    <h6>{{ __('general.something_you_love') }}
-                                        <a href="{{ route('front.show-products') }}" class="text-white">{{ __('general.buy_now') }}</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                               <div>
+                                   <div class="timer-notification">
+                                       <h6>{{ __('general.something_you_love') }}
+                                           <a href="{{ route('front.show-products') }}"
+                                               class="text-white">{{ __('general.buy_now') }}</a>
+                                       </h6>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
 
-                <div class="col-lg-3">
-                    <ul class="about-list right-nav-about">
-                        <li class="right-nav-list">
-                            <div class="dropdown theme-form-select">
-                                <button class="btn dropdown-toggle" type="button" id="select-language"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ asset('flags/' . app()->getLocale(). '.png') }}"
-                                        class="img-fluid blur-up lazyload" alt="">
-                                    <span>{{ app()->getLocale() == 'en' ? 'English' : 'العربية' }}</span>
-                                </button>
+                   <div class="col-lg-3">
+                       <ul class="about-list right-nav-about">
+                           <li class="right-nav-list">
+                               <div class="dropdown theme-form-select">
+                                   <button class="btn dropdown-toggle" type="button" id="select-language"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       <img src="{{ asset('flags/' . app()->getLocale() . '.png') }}"
+                                           class="img-fluid blur-up lazyload" alt="">
+                                       <span>{{ app()->getLocale() == 'en' ? 'English' : 'العربية' }}</span>
+                                   </button>
 
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
+                                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
 
-                                    @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                    <li>
-                                    <a class="dropdown-item" rel="alternate"
-                                        hreflang="{{ $localeCode }}"
-                                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                        <img src="{{ asset('flags/' . $localeCode . '.png') }}"
-                                                class="img-fluid blur-up lazyload" alt="">
-                                        <span>{{ $localeCode == 'en' ? 'English' : 'العربية' }}</span>
-                                    </a>
-                                </li>
-                                @endforeach
-                                    {{-- <li>
+                                       @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                           <li>
+                                               <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                   <img src="{{ asset('flags/' . $localeCode . '.png') }}"
+                                                       class="img-fluid blur-up lazyload" alt="">
+                                                   <span>{{ $localeCode == 'en' ? 'English' : 'العربية' }}</span>
+                                               </a>
+                                           </li>
+                                       @endforeach
+                                       {{-- <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="english">
                                             <img src="{{ asset('template/assets/images/country/united-kingdom.png')}}"
                                                 class="img-fluid blur-up lazyload" alt="">
                                             <span>English</span>
                                         </a>
                                     </li> --}}
-                                    {{-- <li>
+                                       {{-- <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="france">
                                             <img src="{{ asset('template/assets/images/country/germany.png')}}"
                                                 class="img-fluid blur-up lazyload" alt="">
@@ -84,10 +86,10 @@
                                             <span>Turki</span>
                                         </a>
                                     </li> --}}
-                                </ul>
-                            </div>
-                        </li>
-                        {{-- <li class="right-nav-list">
+                                   </ul>
+                               </div>
+                           </li>
+                           {{-- <li class="right-nav-list">
                             <div class="dropdown theme-form-select">
                                 <button class="btn dropdown-toggle" type="button" id="select-dollar"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,212 +109,222 @@
                                 </ul>
                             </div>
                         </li> --}}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
 
-    <div class="top-nav top-header sticky-header">
-        <div class="container-fluid-lg">
-            <div class="row">
-                <div class="col-12">
-                    <div class="navbar-top">
-                        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
-                            data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
-                            <span class="navbar-toggler-icon">
-                                <i class="fa-solid fa-bars"></i>
-                            </span>
-                        </button>
-                        <a href="{{ route('front.home') }}" class="web-logo nav-logo">
-                            <img src="{{ settings()->logo }}" class="img-fluid blur-up lazyload logo" alt="">
-                        </a>
+       <div class="top-nav top-header sticky-header">
+           <div class="container-fluid-lg">
+               <div class="row">
+                   <div class="col-12">
+                       <div class="navbar-top">
+                           <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                               data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                               <span class="navbar-toggler-icon">
+                                   <i class="fa-solid fa-bars"></i>
+                               </span>
+                           </button>
+                           <a href="{{ route('front.home') }}" class="web-logo nav-logo">
+                               <img src="{{ settings()->logo }}" class="img-fluid blur-up lazyload logo"
+                                   alt="">
+                           </a>
 
-                        <div class="middle-box">
-                            <div class="location-box">
-                                <button class="btn location-button" data-bs-toggle="modal"
-                                    data-bs-target="#locationModal">
-                                    <span class="location-arrow">
-                                        <i data-feather="map-pin"></i>
-                                    </span>
-                                    <span class="locat-name">{{ __('general.your_location') }}</span>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </button>
-                            </div>
+                           <div class="middle-box">
+                               <div class="location-box">
+                                   <button class="btn location-button" data-bs-toggle="modal"
+                                       data-bs-target="#locationModal">
+                                       <span class="location-arrow">
+                                           <i data-feather="map-pin"></i>
+                                       </span>
+                                       <span class="locat-name">{{ __('general.your_location') }}</span>
+                                       <i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                               </div>
 
-                            <div class="search-box">
-                                <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="{{ __('general.iam_searching') }}"
-                                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                                    <button class="btn" type="button" id="button-addon2">
-                                        <i data-feather="search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                               <div class="search-box">
+                                   <div class="input-group">
+                                       <input type="search" class="form-control"
+                                           placeholder="{{ __('general.iam_searching') }}"
+                                           aria-label="Recipient's username" aria-describedby="button-addon2">
+                                       <button class="btn" type="button" id="button-addon2">
+                                           <i data-feather="search"></i>
+                                       </button>
+                                   </div>
+                               </div>
+                           </div>
 
-                        <div class="rightside-box">
-                            <div class="search-full">
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <i data-feather="search" class="font-light"></i>
-                                    </span>
-                                    <input type="text" class="form-control search-type" placeholder="Search here..">
-                                    <span class="input-group-text close-search">
-                                        <i data-feather="x" class="font-light"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <ul class="right-side-menu">
-                                <li class="right-side">
-                                    <div class="delivery-login-box">
-                                        <div class="delivery-icon">
-                                            <div class="search-box">
-                                                <i data-feather="search"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="right-side">
-                                    <a href="{{ route('front.message') }}" class="delivery-login-box">
-                                        <div class="delivery-icon">
-                                            <i data-feather="phone-call"></i>
-                                        </div>
-                                        <div class="delivery-detail">
-                                            <h6>24/7 Delivery</h6>
-                                            <h5>+91 888 104 2340</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="right-side">
-                                    <a href="{{ route('front.wishlist') }}" class="btn p-0 position-relative header-wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                                <li class="right-side">
-                                    <div class="onhover-dropdown header-badge">
-                                        <a href="{{ route('front.shopping') }}">
-                                            <button type="button" class="btn p-0 position-relative header-wishlist">
-                                                <i data-feather="shopping-cart"></i>
-                                                <span class="position-absolute top-0 start-100 translate-middle badge cart-count">{{ count(cart()->getItems()) }}
-                                                    <span class="visually-hidden">unread messages</span>
-                                                </span>
-                                            </button>
-                                        </a>
+                           <div class="rightside-box">
+                               <div class="search-full">
+                                   <div class="input-group">
+                                       <span class="input-group-text">
+                                           <i data-feather="search" class="font-light"></i>
+                                       </span>
+                                       <input type="text" class="form-control search-type"
+                                           placeholder="Search here..">
+                                       <span class="input-group-text close-search">
+                                           <i data-feather="x" class="font-light"></i>
+                                       </span>
+                                   </div>
+                               </div>
+                               <ul class="right-side-menu">
+                                   <li class="right-side">
+                                       <div class="delivery-login-box">
+                                           <div class="delivery-icon">
+                                               <div class="search-box">
+                                                   <i data-feather="search"></i>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </li>
+                                   <li class="right-side">
+                                       <a href="{{ route('front.message') }}" class="delivery-login-box">
+                                           <div class="delivery-icon">
+                                               <i data-feather="phone-call"></i>
+                                           </div>
+                                           <div class="delivery-detail">
+                                               <h6>24/7 Delivery</h6>
+                                               <h5>+91 888 104 2340</h5>
+                                           </div>
+                                       </a>
+                                   </li>
+                                   <li class="right-side">
+                                       <a href="{{ route('front.wishlist') }}"
+                                           class="btn p-0 position-relative header-wishlist">
+                                           <i data-feather="heart"></i>
+                                       </a>
+                                   </li>
+                                   <li class="right-side">
+                                       <div class="onhover-dropdown header-badge">
+                                           <a href="{{ route('front.shopping') }}">
+                                               <button type="button"
+                                                   class="btn p-0 position-relative header-wishlist">
+                                                   <i data-feather="shopping-cart"></i>
+                                                   <span
+                                                       class="position-absolute top-0 start-100 translate-middle badge cart-count">{{ count(cart()->getItems()) }}
+                                                       <span class="visually-hidden">unread messages</span>
+                                                   </span>
+                                               </button>
+                                           </a>
 
-                                    </div>
-                                </li>
-                                
-                                @if (!auth('web')->user())
-                                <li class="right-side onhover-dropdown">
-                                    <div class="delivery-login-box">
-                                        <div class="delivery-icon">
-                                            <i data-feather="user"></i>
-                                        </div>
-                                        {{-- <div class="delivery-detail">
+                                       </div>
+                                   </li>
+
+                                   @if (!auth('web')->user())
+                                       <li class="right-side onhover-dropdown">
+                                           <div class="delivery-login-box">
+                                               <div class="delivery-icon">
+                                                   <i data-feather="user"></i>
+                                               </div>
+                                               {{-- <div class="delivery-detail">
                                             <h6>Hello,</h6>
                                             <h5>My Account</h5>
                                         </div> --}}
-                                    </div>
+                                           </div>
 
-                                    <div class="onhover-div onhover-div-login">
-                                        <ul class="user-box-name">
-                                            <li class="product-box-contain">
-                                                <i></i>
-                                                <a href="{{ route('user.login') }}">{{ __('general.login') }}</a>
-                                            </li>
+                                           <div class="onhover-div onhover-div-login">
+                                               <ul class="user-box-name">
+                                                   <li class="product-box-contain">
+                                                       <i></i>
+                                                       <a
+                                                           href="{{ route('user.login') }}">{{ __('general.login') }}</a>
+                                                   </li>
 
-                                            <li class="product-box-contain">
-                                                <a href="{{ route('user.register') }}">{{ __('general.register') }}</a>
-                                            </li>
+                                                   <li class="product-box-contain">
+                                                       <a
+                                                           href="{{ route('user.register') }}">{{ __('general.register') }}</a>
+                                                   </li>
 
-                                            {{-- <li class="product-box-contain">
+                                                   {{-- <li class="product-box-contain">
                                                 <a href="{{ route('user.forget') }}">{{ __('general.forget') }}</a>
                                             </li> --}}
-                                        </ul>
-                                    </div>
-                                </li>
-                                @else
-                                <li class="right-side onhover-dropdown">
-                                    <div class="delivery-login-box">
-                                        <div class="delivery-icon">
-                                            <i data-feather="user"></i>
-                                        </div>
-                                        {{-- <div class="delivery-detail">
+                                               </ul>
+                                           </div>
+                                       </li>
+                                   @else
+                                       <li class="right-side onhover-dropdown">
+                                           <div class="delivery-login-box">
+                                               <div class="delivery-icon">
+                                                   <i data-feather="user"></i>
+                                               </div>
+                                               {{-- <div class="delivery-detail">
                                             <h6>Hello,</h6>
                                             <h5>My Account</h5>
                                         </div> --}}
-                                    </div>
+                                           </div>
 
-                                    <div class="onhover-div onhover-div-login">
-                                        <ul class="user-box-name">
-                                            <li class="product-box-contain">
-                                                <i></i>
-                                                <a href="{{ route('show_profile') }}">{{ __('general.profile') }}</a>
-                                            </li>
+                                           <div class="onhover-div onhover-div-login">
+                                               <ul class="user-box-name">
+                                                   <li class="product-box-contain">
+                                                       <i></i>
+                                                       <a
+                                                           href="{{ route('show_profile') }}">{{ __('general.profile') }}</a>
+                                                   </li>
 
-                                            <li class="product-box-contain">
-                                                <a href="{{ route('show.orders') }}">{{ __('general.orders') }}</a>
-                                            </li>
+                                                   <li class="product-box-contain">
+                                                       <a
+                                                           href="{{ route('show.orders') }}">{{ __('general.orders') }}</a>
+                                                   </li>
 
-                                            <form action="{{ route('logout') }}" method="POST">
-                                                @csrf
-                                                <button class="btn p-0 close-button text-content"
-                                                    type="submit">@lang('general.logout')</button>
-                                            </form>
-                                        </ul>
-                                    </div>
-                                </li>
-                                @endif
- 
-                             
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                                   <form action="{{ route('logout') }}" method="POST">
+                                                       @csrf
+                                                       <button class="btn p-0 close-button text-content"
+                                                           type="submit">@lang('general.logout')</button>
+                                                   </form>
+                                               </ul>
+                                           </div>
+                                       </li>
+                                   @endif
 
-    <div class="container-fluid-lg">
-        <div class="row">
-            <div class="col-12">
-                <div class="header-nav">
-                    <div class="header-nav-left">
-                        <button class="dropdown-category">
-                            <i data-feather="align-left"></i>
-                            <span>{{ __('general.categories') }}</span>
-                        </button>
-                        <div class="category-dropdown">
-                            <div class="category-title">
-                                <h5>Categories</h5>
-                                <button type="button" class="btn p-0 close-button text-content">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
-                            </div>
-                            <ul class="category-list">
 
-                                @foreach (categories() as $category)
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
 
-                                <li class="onhover-category-list">
-                                    <a href="javascript:void(0)" class="category-name">
-                                        <img src="{{ asset($category->image )}}" alt="">
-                                        <h6>{{ $category->title }}</h6>
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
+       <div class="container-fluid-lg">
+           <div class="row">
+               <div class="col-12">
+                   <div class="header-nav">
+                       <div class="header-nav-left">
+                           <button class="dropdown-category">
+                               <i data-feather="align-left"></i>
+                               <span>{{ __('general.categories') }}</span>
+                           </button>
+                           <div class="category-dropdown">
+                               <div class="category-title">
+                                   <h5>Categories</h5>
+                                   <button type="button" class="btn p-0 close-button text-content">
+                                       <i class="fa-solid fa-xmark"></i>
+                                   </button>
+                               </div>
+                               <ul class="category-list">
 
-                                    <div class="onhover-category-box">
-                                        
-                                            <div class="list-1">
-                                                <div class="category-title-box">
-                                                    <h5>{{ __('general.subcategories') }}</h5>
-                                                </div>
-                                                @foreach ($category->subcategories as $subcategory)
-                                                    <ul>
-                                                        <li>
-                                                            <a  href="{{ route('front.products', $subcategory->id) }}">{{ $subcategory->title }}</a>
-                                                        </li>
-                                                        {{-- <li>
+                                   @foreach (categories() as $category)
+                                       <li class="onhover-category-list">
+                                           <a href="javascript:void(0)" class="category-name">
+                                               <img src="{{ asset($category->image) }}" alt="">
+                                               <h6>{{ $category->title }}</h6>
+                                               <i class="fa-solid fa-angle-right"></i>
+                                           </a>
+
+                                           <div class="onhover-category-box">
+
+                                               <div class="list-1">
+                                                   <div class="category-title-box">
+                                                       <h5>{{ __('general.subcategories') }}</h5>
+                                                   </div>
+                                                   @foreach ($category->subcategories as $subcategory)
+                                                       <ul>
+                                                           <li>
+                                                               <a
+                                                                   href="{{ route('front.products', $subcategory->id) }}">{{ $subcategory->title }}</a>
+                                                           </li>
+                                                           {{-- <li>
                                                             <a href="javascript:void(0)">Cucumber & Capsicum</a>
                                                         </li>
                                                         <li>
@@ -333,11 +345,11 @@
                                                         <li>
                                                             <a href="javascript:void(0)">Specialty</a>
                                                         </li> --}}
-                                                    </ul>
-                                                @endforeach
-                                            </div>
+                                                       </ul>
+                                                   @endforeach
+                                               </div>
 
-                                            {{-- <div class="list-2">
+                                               {{-- <div class="list-2">
                                                 <div class="category-title-box">
                                                     <h5>Fresh Fruit</h5>
                                                 </div>
@@ -362,22 +374,11 @@
                                                     </li>
                                                 </ul>
                                             </div> --}}
-                                       
-                                    </div>
-                                </li>
-                                {{-- <li cla ss="nav-item dropdown">
-                                    <a class="nav-link text-nowrap dropdown-toggle position-relative" href="#"
-                                        id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">{{ $category->title }}</a>
-                                    <div class="dropdown-menu position-absolute" aria-labelledby="dropdownId">
-                                        @foreach ($category->subcategories as $subcategory)
-                                            <a class="dropdown-item text-wrap"
-                                                href="{{ route('front.products', $subcategory->id) }}"><span>{{ $subcategory->title }}</span></a>
-                                        @endforeach
-                                    </div>
-                                </li> --}}
-                            @endforeach
-                                {{-- <li class="onhover-category-list">
+
+                                           </div>
+                                       </li>
+                                   @endforeach
+                                   {{-- <li class="onhover-category-list">
                                     <a href="javascript:void(0)" class="category-name">
                                         <img src="{{ asset('template/assets/svg/1/vegetable.svg')}}" alt="">
                                         <h6>Vegetables & Fruit</h6>
@@ -765,35 +766,30 @@
                                         </div>
                                     </div>
                                 </li> --}}
-                            </ul>
-                        </div>
-                    </div>
+                               </ul>
+                           </div>
+                       </div>
 
-                    <div class="header-nav-middle">
-                        <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
-                            <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
-                                {{-- <div class="offcanvas-header navbar-shadow">
-                                    <h5>Menu</h5>
-                                    <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-                                </div> --}}
-                                <div class="offcanvas-body">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link  {{ request()->routeIs('front.home') ? 'active' : '' }}" href="{{ route('front.home') }}"
-                                                >{{ __('general.home') }}</a>
+                       <div class="header-nav-middle">
+                           <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                               <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                                   <div class="offcanvas-body">
+                                       <ul class="navbar-nav">
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link  {{ request()->routeIs('front.home') ? 'active' : '' }}"
+                                                   href="{{ route('front.home') }}">{{ __('general.home') }}</a>
 
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link  {{ request()->routeIs('front.shopping_now') ? 'active' : '' }}" href="{{ route('front.shopping_now') }}"
-                                                >{{ __('general.shop_now') }}</a>
-                                        </li>
+                                           </li>
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link  {{ request()->routeIs('front.shopping_now') ? 'active' : '' }}"
+                                                   href="{{ route('front.shopping_now') }}">{{ __('general.shop_now') }}</a>
+                                           </li>
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.about') ? 'active' : '' }}" href="{{ route('front.about') }}"
-                                                >{{ __('general.about') }}</a>
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.about') ? 'active' : '' }}"
+                                                   href="{{ route('front.about') }}">{{ __('general.about') }}</a>
 
-                                            {{-- <ul class="dropdown-menu">
+                                               {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="shop-category-slider.html">Shop
                                                         Category Slider</a>
@@ -821,13 +817,14 @@
                                                         Filter</a>
                                                 </li>
                                             </ul> --}}
-                                        </li>
+                                           </li>
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.show-products') ? 'active' : '' }}" href="{{ route('front.show-products') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.products') }}</a>
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.show-products') ? 'active' : '' }}"
+                                                   href="{{ route('front.show-products') }}"
+                                                   data-bs-toggle="dropdown">{{ __('general.products') }}</a>
 
-                                            {{-- <ul class="dropdown-menu">
+                                               {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="product-4-image.html">Product
                                                         4 Image</a>
@@ -864,12 +861,13 @@
                                                         Sticky</a>
                                                 </li>
                                             </ul> --}}
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.contact') }}</a>
+                                           </li>
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}"
+                                                   href="{{ route('front.message') }}"
+                                                   data-bs-toggle="dropdown">{{ __('general.contact') }}</a>
 
-                                            {{-- <ul class="dropdown-menu">
+                                               {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="product-4-image.html">Product
                                                         4 Image</a>
@@ -906,13 +904,14 @@
                                                         Sticky</a>
                                                 </li>
                                             </ul> --}}
-                                        </li>
+                                           </li>
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.team') ? 'active' : '' }}" href="{{ route('front.team') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.team') }}</a>
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.team') ? 'active' : '' }}"
+                                                   href="{{ route('front.team') }}"
+                                                   data-bs-toggle="dropdown">{{ __('general.team') }}</a>
 
-                                            {{-- <ul class="dropdown-menu">
+                                               {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="shop-category-slider.html">Shop
                                                         Category Slider</a>
@@ -940,12 +939,13 @@
                                                         Filter</a>
                                                 </li>
                                             </ul> --}}
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.testimonial') ? 'active' : '' }}" href="{{ route('front.testimonial') }}"
-                                                data-bs-toggle="dropdown">{{ __('general.testimonials') }}</a>
+                                           </li>
+                                           <li class="nav-item dropdown">
+                                               <a class="nav-link dropdown-toggle {{ request()->routeIs('front.testimonial') ? 'active' : '' }}"
+                                                   href="{{ route('front.testimonial') }}"
+                                                   data-bs-toggle="dropdown">{{ __('general.testimonials') }}</a>
 
-                                            {{-- <ul class="dropdown-menu">
+                                               {{-- <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="shop-category-slider.html">Shop
                                                         Category Slider</a>
@@ -973,9 +973,9 @@
                                                         Filter</a>
                                                 </li>
                                             </ul> --}}
-                                        </li>
+                                           </li>
 
-                                        {{-- <li class="nav-item dropdown dropdown-mega">
+                                           {{-- <li class="nav-item dropdown dropdown-mega">
                                             <a class="nav-link dropdown-toggle ps-xl-2 ps-0"
                                                 href="javascript:void(0)" data-bs-toggle="dropdown">Mega Menu</a>
 
@@ -1212,68 +1212,68 @@
                                                 </li>
                                             </ul>
                                         </li> --}}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
 
-                    <div class="header-nav-right">
-                        <button class="btn deal-button" data-bs-toggle="modal" data-bs-target="#deal-box">
-                            <i data-feather="zap"></i>
-                            <span>عروض اليوم</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- Header End -->
+                       <div class="header-nav-right">
+                           <button class="btn deal-button" data-bs-toggle="modal" data-bs-target="#deal-box">
+                               <i data-feather="zap"></i>
+                               <span>عروض اليوم</span>
+                           </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+   <!-- Header End -->
 
-     <!-- mobile fix menu start -->
-     <div class="mobile-menu d-md-none d-block mobile-cart">
-        <ul>
-            <li class="active">
-                <a href="{{ route('front.home') }}">
-                    <i class="iconly-Home icli"></i>
-                    <span>{{ __('general.home') }}</span>
-                </a>
-            </li>
+   <!-- mobile fix menu start -->
+   <div class="mobile-menu d-md-none d-block mobile-cart">
+       <ul>
+           <li class="active">
+               <a href="{{ route('front.home') }}">
+                   <i class="iconly-Home icli"></i>
+                   <span>{{ __('general.home') }}</span>
+               </a>
+           </li>
 
-            <li class="mobile-category">
-                <a href="#">
-                    <i class="iconly-Category icli js-link"></i>
-                    <span>{{ __('general.category') }}</span>
-                </a>
-            </li>
+           <li class="mobile-category">
+               <a href="#">
+                   <i class="iconly-Category icli js-link"></i>
+                   <span>{{ __('general.category') }}</span>
+               </a>
+           </li>
 
-            {{-- <li>
+           {{-- <li>
                 <a href="search.html" class="search-box">
                     <i class="iconly-Search icli"></i>
                     <span>{{ __('general.search') }}</span>
                 </a>
             </li> --}}
 
-            <li>
-                <a href="{{ route('front.wishlist') }}" class="notifi-wishlist">
-                    <i class="iconly-Heart icli"></i>
-                    <span>{{ __('general.mywish') }}</span>
-                </a>
-            </li>
+           <li>
+               <a href="{{ route('front.wishlist') }}" class="notifi-wishlist">
+                   <i class="iconly-Heart icli"></i>
+                   <span>{{ __('general.mywish') }}</span>
+               </a>
+           </li>
 
-            <li>
-                <a href="{{ route('front.shopping') }}">
-                    <i class="iconly-Bag-2 icli fly-cate"></i>
-                    <span>{{ __('general.cart') }}</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
+           <li>
+               <a href="{{ route('front.shopping') }}">
+                   <i class="iconly-Bag-2 icli fly-cate"></i>
+                   <span>{{ __('general.cart') }}</span>
+               </a>
+           </li>
+       </ul>
+   </div>
+   <!-- mobile fix menu end -->
 
 
-     <!-- navbar start -->
+   <!-- navbar start -->
    <!-- Header Start -->
    {{-- <div style="height: 10vh">
        <div class="container-fluid nav-section bg-dark px-0 position-fixed">

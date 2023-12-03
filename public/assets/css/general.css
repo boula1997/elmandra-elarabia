@@ -49,6 +49,11 @@
     transform: rotateY(180deg);
 
 }
+
+.onhover-category-list{
+  position: relative;
+  z-index: 1000;
+}
 .whats {
 
     .img-team-container {
