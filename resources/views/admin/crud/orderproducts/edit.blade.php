@@ -10,41 +10,63 @@
                 <div class="card-header card-header-tabs-line">
                     @include('admin.components.breadcrumb', ['module' => 'orderproducts', 'action' => 'edit'])
                 </div>
-                <div class="card-toolbar px-3">
-                    <ul class="nav nav-tabs nav-bold nav-tabs-line">
-                        @foreach (config('translatable.locales') as $key => $locale)
-                            <li class="nav-item">
-                                <a class="nav-link  @if ($key == 0) active @endif" data-toggle="tab"
-                                    href="{{ '#' . $locale }}">@lang('general.' . $locale)</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
                 <div class="card-body">
                     <div class="tab-content">
-                        @foreach (config('translatable.locales') as $key => $locale)
-                            <div class="tab-pane fade show @if ($key == 0) active @endif"
-                                id="{{ $locale }}" role="tabpanel">
-                                <div class="form-group">
-                                    <label>@lang('general.title') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[title]' }}"
-                                            placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
-                                            value="{{ old($locale . '.title', $orderproduct->translate($locale)->title) }}">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.name'):</h5>
+                                        <p class="m-0">{{ $orderproduct->order->name }}</p>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.email'):</h5>
+                                        <p class="m-0">{{ $orderproduct->order->email }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.address'):</h5>
+                                        <p class="m-0">{{ $orderproduct->order->address }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.total-delivery'):</h5>
+                                        <p class="m-0">{{ $orderproduct->order->total }} {{ __('general.pound') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.products') }}</label>
+                                <select class="form-select form-select-lg" name="product_id" id="product">
+                                    @foreach ($products as $product)
+                                        <option value="{{ $orderproduct->product->id }}" {{ old('orderproduct->product_id',$orderproduct->product->id)==$product->id? 'selected' : '' }}>{{ $product->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-group">
@@ -59,31 +81,29 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">{{ __('general.total') }}</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                     <input type="text" name="total" disabled
-                                        value="{{ old('total', $orderproduct->total) }}" class="form-control"
-                                        id="exampleInputhName" placeholder="{{ __('general.total') }}">
-                                    </div>
+                        {{-- <div class="col-md-3">
+                            <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="card-title fw-bold">
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.total'):</h5>
+                                    <label  class="m-0">{{ $orderproduct->total }}</label>
                                 </div>
                             </div>
-
+                        </div> --}}
+                       
+                        <div class="col-md-3">
+                            <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="card-title fw-bold">
+                                    <input type="hidden" id="order" name="order_id" value="{{$orderproduct->order->id}}">
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                     <br>
                 </div>
-                <div class="card-footer mb-5">
+                <div class="card-footer mb-5 text-center">
                     <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
-                    <a href="{{ route('orderproducts.index') }}" class="btn btn-outline-danger font-weight-bold">@lang('general.cancel')</a>
+                    <a href="{{ route('orders.index') }}" class="btn btn-outline-danger font-weight-bold">@lang('general.cancel')</a>
                 </div>
             </div>
         </div>

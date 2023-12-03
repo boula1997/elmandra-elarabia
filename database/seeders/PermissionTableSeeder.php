@@ -99,6 +99,7 @@ class PermissionTableSeeder extends Seeder
            'message-delete',
            'message-reply',
            'order-list',
+           'order-edit',
            'order-delete',
            'order-reply',
            'newsletter-list',
