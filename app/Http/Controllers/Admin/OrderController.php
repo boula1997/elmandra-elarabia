@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\OrderRequest as APIOrderRequest;
-use App\Http\Requests\Dashboard\OrderRequest;
+use App\Http\Requests\OrderRequest;
 use App\Http\Requests\OrderRequest as RequestsOrderRequest;
 use App\Mail\OrderAdminMail;
 use App\Mail\OrderMail;
