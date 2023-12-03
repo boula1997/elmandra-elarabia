@@ -31,12 +31,12 @@ class AdminController extends Controller
     }
 
 
-    public function index(Request $request)
+    public function index($id)
     {
+        
         try {
-            $data = Admin::orderBy('id', 'DESC')->paginate(5);
-            return view('admin.crud.admins.index', compact('data'))
-                ->with('i', ($request->input('page', 1) - 1) * 5);
+            $data = Admin::where('type',$id)->get();
+            return view('admin.crud.admins.index', compact('data'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
@@ -65,6 +65,7 @@ class AdminController extends Controller
         try {
             $input = $request->except('image','profile_avatar_remove');
             $input['password'] = Hash::make($input['password']);
+            $input['type'] = $request->input('roles');
             $admin = Admin::create($input);
             $admin->assignRole($request->input('roles'));
             $admin->uploadFile();
@@ -119,6 +120,9 @@ class AdminController extends Controller
                 $input['password'] = Hash::make($input['password']);
             } else {
                 $input = Arr::except($input, array('password'));
+            }
+            if (!empty($input['type'])) {
+                $input['type'] =  $request->input('roles');
             }
             $admin = Admin::find($id);
             $admin->update($input);

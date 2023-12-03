@@ -98,10 +98,11 @@ Route::group(
                 Route::resource('sellers', SellerController::class);
                 Route::resource('stores', StoreController::class);
                 Route::resource('storeProducts', StoreProductController::class);
-            
+                
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);
                 Route::resource('admins', AdminController::class);
+                Route::get('admin/{id}', [AdminController::class,'index'])->name('admin.index');
                 Route::resource('products', ProductController::class);
                 Route::resource('messages', MessageController::class);
                 Route::resource('orders', OrderController::class);

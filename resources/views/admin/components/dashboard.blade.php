@@ -134,7 +134,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('admins.index') }}" class="nav-link">
+                                <a href="{{ route('admin.index','Admin') }}" class="nav-link">
                                     <i class=" px-1 far fa-circle nav-icon"></i>
                                     <p>@lang('general.show')</p>
                                 </a>
@@ -143,7 +143,28 @@
                     </li>
                 @endcan
 
-                @can('seller-list')
+                @can('admin-list')
+                <li class="nav-item">   
+                    <a href="#" class="nav-link">
+                        <i class=" px-1 fas fa-users-cog"></i>
+                        <p>
+                            @lang('general.sellers')
+                            <i class=" px-1 fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">{{ itemsCount('admins') }}</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.index','Seller') }}" class="nav-link">
+                                <i class=" px-1 far fa-circle nav-icon"></i>
+                                <p>@lang('general.show')</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+
+                {{-- @can('seller-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-users"></i>
@@ -162,7 +183,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('role-list')
                     <li class="nav-item">
