@@ -30,6 +30,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\OfferController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\StoreProductController;
@@ -98,6 +99,7 @@ Route::group(
                 Route::resource('sellers', SellerController::class);
                 Route::resource('stores', StoreController::class);
                 Route::resource('storeProducts', StoreProductController::class);
+                Route::resource('reviews', ReviewController::class);
                 
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);

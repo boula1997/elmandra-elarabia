@@ -25,6 +25,7 @@ use App\Models\Slider;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Models\Orderproduct;
+use App\Models\Review;
 use App\Models\Seller;
 use App\Models\Store;
 use App\Models\StoreProduct;
@@ -111,6 +112,7 @@ function itemsCount($model)
         "offers" => count(Offer::get()),
         "adminsAdmin" => count(Admin::where('type','Admin')->get()),
         "sellersAdmin" => count(Admin::where('type','Seller')->get()),
+        "reviews" => count(Review::get()),
     ];
 
 
