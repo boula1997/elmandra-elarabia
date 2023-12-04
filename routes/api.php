@@ -17,6 +17,7 @@ use App\Http\Controllers\API\SettingController;
 use App\Http\Controllers\API\PartnerController;
 use App\Http\Controllers\API\SubcategoryController;
 use App\Http\Controllers\API\TeamController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
