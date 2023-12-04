@@ -375,6 +375,15 @@ return [
     'huawei'=>'هواوى',
     'order_now'=>'اطلب الان',
     'offers'=>'العروض',  
-
-
+    'additional_info'=>'معلومات إضافية',  
+    'care_instuctions'=>'تعليمات',  
+    'review'=>'التقيمات', 
+    'customer_reviews'=>'تقيمات العملاء',  
+    'add_a_review'=>'اضافة تقييم',  
+    'give_your_review_a_title'=>'أعط تعليقك عنوانا',  
+    'review_title'=>'عنوان التقييم',  
+    'leave_a_comment_here'=>'اترك التعليق هنا',  
+    'write_your_comment'=>'اكتب تعليقك', 
+    'related_products'=>'منتجات ذات صله', 
+    
 ];

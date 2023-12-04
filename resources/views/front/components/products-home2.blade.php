@@ -24,8 +24,7 @@
                                     <ul class="product-option justify-content-around">
 
                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                            <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                data-bs-target="#view">
+                                            <a href="{{ route('front.show.product',$product->id) }}">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>

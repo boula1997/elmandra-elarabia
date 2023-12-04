@@ -87,9 +87,9 @@ Route::group(
     //     return view('front.wishlist');
     // })->name('front.wishlist');
 
-    // Route::get('/cart-view',function(){
-    //     return view('front.cart');
-    // })->name('front.cart');
+    // Route::get('/single-product',function(){
+    //     return view('front.products.single-product');
+    // })->name('front.single-product');
 
     }
 );

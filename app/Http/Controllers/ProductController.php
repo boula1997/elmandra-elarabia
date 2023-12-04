@@ -55,8 +55,9 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        $products=$this->product->get();
         $product= $this->product->findorfail($id);
-        return view('front.products.single-product', compact('product'));
+        return view('front.products.single-product', compact('product','products'));
     }
 
     public function showportfolio($id)

@@ -8,7 +8,7 @@
                             @if($loop->iteration <= 20)
                                 <div>
                                     <div class="product-slider wow fadeInUp">
-                                        <a href="{{ route('front.show-products') }}" class="product-slider-image">
+                                        <a href="{{ route('front.show.product',$product->id) }}" class="product-slider-image">
                                             <img src="{{asset($product->image)}}" class="w-100 blur-up lazyload rounded-3"
                                                 alt="">
                                         </a>

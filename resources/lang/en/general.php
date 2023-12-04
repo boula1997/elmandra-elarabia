@@ -374,7 +374,16 @@ return [
     'huawei'=>'Huawei',
     'order_now'=>'Order Now',  
     'offers'=>'Offers',  
-    
-    
+    'additional_info'=>'Additional info',  
+    'care_instuctions'=>'Care Instuctions',  
+    'review'=>'Review',  
+    'customer_reviews'=>'Customer Reviews',  
+    'add_a_review'=>'Add a review',  
+    'give_your_review_a_title'=>'Give your review a title',  
+    'review_title'=>'Review Title',  
+    'leave_a_comment_here'=>'Leave a comment here',  
+    'write_your_comment'=>'Write Your Comment', 
+    'related_products'=>'Related Products', 
+       
       
 ];
