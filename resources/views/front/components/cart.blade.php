@@ -285,6 +285,7 @@
                         'email': $("input[name=email]").val(),
                         'phone': $("input[name=phone]").val(),
                         'address': $("input[name=address]").val(),
+                        'store_id': $("select[name=store_id]").val(),
                     },
                     success: (response) => {
                         $('.cart-count').text(response.count);
@@ -344,6 +345,11 @@
                         if (response.responseJSON.errors.address) {
                             $("#address").append(
                                 `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.address}</div>`
+                            );
+                        }
+                        if (response.responseJSON.errors.store_id) {
+                            $("#store_id").append(
+                                `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.store_id}</div>`
                             );
                         }
 

@@ -8,16 +8,22 @@
                             <div class="col-xxl-4 col-lg-5 col-md-7 col-sm-9 offset-xxl-2 offset-md-1">
                                 <div class="newsletter-detail">
                                     <h2>{{ page('newsletter')->title }}</h2>
-                                    <h5>{{ page('newsletter')->subtitle }}</h5>
-                                    <div class="input-box">
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="{{ __('general.email_address') }}">
-                                        <i class="fa-solid fa-envelope arrow"></i>
-                                        <button class="sub-btn btn">
-                                            <span class="d-sm-block d-none">{{ __('general.subscribe') }}</span>
-                                            <i class="fa-solid fa-arrow-right icon"></i>
-                                        </button>
-                                    </div>
+                                    <form method="post" id="newsletter-form">
+                                        <h5>{{ page('newsletter')->subtitle }}</h5>
+                                        <div class="input-box">
+                                            <input type="newsletterEmail" name="newsletterEmail" class="form-control"
+                                                placeholder="{{ __('general.email_address') }}">
+                                            <i class="fa-solid fa-envelope arrow"></i>
+                                            <button class="sub-btn btn">
+                                                <span class="d-sm-block d-none" type="submit"> <i
+                                                        class="fa fa-spinner fa-spin d-none"
+                                                        id="spinner-newsletter"></i>
+                                                    {{ __('general.subscribe') }}</span>
+                                                <i class="fa-solid fa-arrow-right icon"></i>
+                                            </button>
+                                        </div>
+                                        <div id="newsletterEmail" class="err"></div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -27,83 +33,69 @@
         </div>
     </section>
     <!-- Newsletter Section End -->
-{{-- <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
-    <h4 class="text-uppercase text-white mb-4">{{ __('general.newsletters') }}</h4>
-    <h6 class="text-uppercase text-white">{{ __('general.subscribe_now') }}</h6>
-    <form method="post" id="newsletter-form">
-        <div class="input-group">
-            <input type="text input-sm" name="newsletterEmail" class="form-control border-white p-3 w-25" placeholder="{{ __('general.your_email') }}">
-            <button type="submit" class="btn btn-dark" id="btn-newsletter">
-                <i class="fa fa-spinner fa-spin d-none" id="spinner-newsletter"></i>
-                {{ __('general.sign_up') }}
-            </button>
-            <div id="newsletterEmail" class="err"></div>
-        </div>
-    </form>
-</div> --}}
 
 
-@push('js')
-<script>
-    $('#newsletter-form').submit(function(e) {
-        e.preventDefault();
-        let formData = new FormData(this);
-        $(".err").empty();
-        $(".err").addClass("d-none");
-        $('#btn-newsletter').attr('disabled', 'disabled').addClass('bg-secondary');
-        $('#spinner-newsletter').removeClass('d-none');
-        $.ajax({
-            type: 'POST',
-            url: "{{ route('front.newsletter.post') }}",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                'newsletterEmail': $("input[name=newsletterEmail]").val(),
-            },
-            success: (response) => {
-                toastr.options = {
-                    "closeButton": true,
-                    "debug": false,
-                    "newestOnTop": false,
-                    "progressBar": true,
-                    "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
-                    "preventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "5000",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
-                };
+    @push('js')
+        <script>
+            $('#newsletter-form').submit(function(e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+                $(".err").empty();
+                $(".err").addClass("d-none");
+                $('#btn-newsletter').attr('disabled', 'disabled').addClass('bg-secondary');
+                $('#spinner-newsletter').removeClass('d-none');
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ route('front.newsletter.post') }}",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        'newsletterEmail': $("input[name=newsletterEmail]").val(),
+                    },
+                    success: (response) => {
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": true,
+                            "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        };
 
-                toastr.success(response.success);
-                
-                this.reset();
-                $('#spinner-newsletter').addClass('d-none');
-                $('#btn-newsletter').removeAttr('disabled').removeClass(
-                    'bg-secondary');
-                $('.alert-success').removeClass('d-none').text(response.success);
-                setTimeout(() => {
-                    $('.alert-success').addClass('d-none').text(response.success);
-                }, 5000);
-            },
-            error: function(response) {
-                $('#spinner-newsletter').addClass('d-none');
-                $('#btn-newsletter').removeAttr('disabled').removeClass('bg-secondary');
+                        toastr.success(response.success);
 
-                $(".err").addClass("d-block");
-                $(".err").removeClass("d-none");
+                        this.reset();
+                        $('#spinner-newsletter').addClass('d-none');
+                        $('#btn-newsletter').removeAttr('disabled').removeClass(
+                            'bg-secondary');
+                        $('.alert-success').removeClass('d-none').text(response.success);
+                        setTimeout(() => {
+                            $('.alert-success').addClass('d-none').text(response.success);
+                        }, 5000);
+                    },
+                    error: function(response) {
+                        $('#spinner-newsletter').addClass('d-none');
+                        $('#btn-newsletter').removeAttr('disabled').removeClass('bg-secondary');
 
-                if (response.responseJSON.errors.newsletterEmail) {
-                    $("#newsletterEmail").append(
-                        `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.newsletterEmail}</div>`
-                    );
-                }
+                        $(".err").addClass("d-block");
+                        $(".err").removeClass("d-none");
 
-            }
-        });
-    });
-</script>
-@endpush
+                        if (response.responseJSON.errors.newsletterEmail) {
+                            $("#newsletterEmail").append(
+                                `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.newsletterEmail}</div>`
+                            );
+                        }
+
+                    }
+                });
+            });
+        </script>
+    @endpush
