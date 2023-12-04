@@ -159,6 +159,18 @@
                                             </div>
                                             <div class="err" id="email"></div>
                                     </div>
+                                    
+                                    <div class="coupon-cart">
+                                        <h6 class="text-content mb-2">{{ __('general.store') }}</h6>
+                                        <div class="mb-3 coupon-box input-group">
+                                            <select class="form-select form-select-lg" name="store_id" id="store">
+                                                @foreach ($stores as $store)
+                                                    <option value="{{ $store->id }}" {{ old('store_id')==$store->id? 'selected' : '' }}>{{ $store->title }}</option>
+                                                @endforeach
+                                            </select>
+                                            <div class="err" id="store"></div>
+                                    </div>
+
                                     <div class="coupon-cart">
                                         <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
                                         <div class="mb-3 coupon-box input-group">
