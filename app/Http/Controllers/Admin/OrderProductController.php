@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Exception;
 
-class OrderproductController extends Controller
+class OrderProductController extends Controller
 {
     /**
      * Display a listing of the resource.
