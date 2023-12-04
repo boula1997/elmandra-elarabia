@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Dashboard\OrderProductRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Store;
 use Exception;
 
 class OrderProductController extends Controller
@@ -46,10 +47,11 @@ class OrderProductController extends Controller
      */
     public function create($id)
     {
+        $stores=Store::get();
         $order = Order::find($id);
         $products=Product::get();
         // dd($orderproduct);
-        return view('admin.crud.orderproducts.create',compact('products','order'));
+        return view('admin.crud.orderproducts.create',compact('products','order','stores'));
     }
 
 
@@ -111,8 +113,9 @@ class OrderProductController extends Controller
      */
     public function edit(Orderproduct $orderproduct)
     {
+        $stores=Store::get();
         $products=Product::get();
-        return view('admin.crud.orderproducts.edit', compact('orderproduct','products'));
+        return view('admin.crud.orderproducts.edit', compact('orderproduct','products','stores'));
     }
     /**
      * Update the specified resource in storage.

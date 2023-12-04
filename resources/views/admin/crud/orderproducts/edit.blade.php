@@ -82,15 +82,18 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="col-md-3">
-                            <div class="mb-7 bg-light p-3 rounded h-100">
-                                <div class="card-title fw-bold">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.total'):</h5>
-                                    <label  class="m-0">{{ $orderproduct->total }}</label>
-                                </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.stores') }}</label>
+                                <select class="form-select form-select-lg" name="store_id" id="store">
+                                    @foreach ($stores as $store)
+                                        <option value="{{ $store->id }}" {{ old('orderproduct->store_id',$orderproduct->store->id)==$store->id? 'selected' : '' }}>{{ $store->title }}</option>
+                                    @endforeach
+                                </select>
                             </div>
-                        </div> --}}
-                       
+                        </div>
+
                         <div class="col-md-3">
                             <div class="mb-7 bg-light p-3 rounded h-100">
                                 <div class="card-title fw-bold">

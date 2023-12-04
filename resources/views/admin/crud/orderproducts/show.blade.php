@@ -56,14 +56,14 @@
                     <div class="card card-custom">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="col-form-label d-block">@lang('general.product')</label>
                                         <br>
                                         <p class="m-0">{{ $orderproduct->product->title }}</p>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label class="col-form-label d-block">@lang('general.count')</label>
                                         <br>
@@ -77,7 +77,15 @@
                                         <p class="m-0">{{ $orderproduct->total }}</p>
                                     </div>
                                 </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="col-form-label d-block">@lang('general.store')</label>
+                                        <br>
+                                        <p class="m-0">{{ $orderproduct->store->title }}</p>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
         </div>

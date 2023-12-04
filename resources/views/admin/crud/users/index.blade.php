@@ -16,13 +16,15 @@
                                     <div class="col-md-6 d-flex d-flex justify-content-start">
                                         <h1 class="card-title fw-bold"><th>@lang('general.users')</th></h3>
                                     </div>
-                                    <div class="col-md-6 d-flex d-flex justify-content-end">
-                                        <a href="{{route('users.create')}}">
-                                            
-                                            <button class="btn btn-outline-primary px-5
-"><i class="fa fa-plus fa-sm px-2" aria-hidden="true"></i> @lang('general.add')</button>
-                                        </a>
-                                    </div>
+                                    @can('user-create')
+                                        <div class="col-md-6 d-flex d-flex justify-content-end">
+                                            <a href="{{route('users.create')}}">
+                                                
+                                                <button class="btn btn-outline-primary px-5
+                                                "><i class="fa fa-plus fa-sm px-2" aria-hidden="true"></i> @lang('general.add')</button>
+                                            </a>
+                                        </div>
+                                    @endcan
                                 </div>
                             </div>
                             <!-- /.card-header -->

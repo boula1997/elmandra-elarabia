@@ -24,6 +24,7 @@ class OrderproductRequest extends FormRequest
 
         $rules = [
             'product_id'=>'required',
+            'store_id'=>'required',
             'count'=>'required',
           ];
           

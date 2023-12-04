@@ -63,6 +63,7 @@
                                 <th>@lang('general.orderproducts')</th>
                             </h3>
                         </div>
+                        @can('orderproduct-create')
                         <div class="col-md-6 d-flex d-flex justify-content-end">
                             <a href="{{ route('orderproduct.create',$order->id) }}">
 
@@ -73,6 +74,7 @@
                                         aria-hidden="true"></i>@lang('general.add')</button>
                             </a>
                         </div>
+                        @endcan
                     </div>
                 </div>
                 <div class="card-body">
@@ -84,6 +86,7 @@
                                 <th>@lang('general.title')</th>
                                 <th>@lang('general.count')</th>
                                 <th>@lang('general.total')</th>
+                                <th>@lang('general.store')</th>
                                 <th>@lang('general.controls')</th>
                             </tr>
                         </thead>
@@ -94,6 +97,7 @@
                                     <td>{{ $orderproduct->product->title }}</td>
                                     <td>{{ $orderproduct->count }}</td>
                                     <td>{{ $orderproduct->total }} {{ __('general.pound') }}</td>
+                                    <td>{{ $orderproduct->store->title }}</td>
                                     <td>
                                         @include('admin.components.controls', [
                                             'route' => 'orderproducts',

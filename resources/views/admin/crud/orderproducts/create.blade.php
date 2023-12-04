@@ -80,14 +80,16 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="col-md-3">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.total'):</h5>
-                                <div class="mb-7 bg-light p-3 rounded h-100">
-                                    <div class="card-title fw-bold">
-                                        <input  id="total" name="total" value="{{$product->price}}">
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">{{ __('general.stores') }}</label>
+                                    <select class="form-select form-select-lg" name="store_id" id="store">
+                                        @foreach ($stores as $store)
+                                            <option value="{{ $store->id }}" {{ old('store_id')==$store->id? 'selected' : '' }}>{{ $store->title }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                            </div> --}}
+                            </div>
 
                             <div class="col-md-3">
                                 <div class="mb-7 bg-light p-3 rounded h-100">
