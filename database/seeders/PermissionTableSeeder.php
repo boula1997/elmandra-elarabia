@@ -134,6 +134,8 @@ class PermissionTableSeeder extends Seeder
            'offer-create',
            'offer-edit',
            'offer-delete',
+           'review-list',
+           'review-delete',
         ];
      
         foreach ($permissions as $permission) {

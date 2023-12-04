@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Offer;
 use App\Models\Testimonial;
 use App\Models\Team;
 use App\Models\Subcategory;
@@ -55,9 +56,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        $offers=Offer::get();
         $products=$this->product->get();
         $product= $this->product->findorfail($id);
-        return view('front.products.single-product', compact('product','products'));
+        return view('front.products.single-product', compact('product','products','offers'));
     }
 
     public function showportfolio($id)
