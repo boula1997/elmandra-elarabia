@@ -1,10 +1,10 @@
  <!-- Loader Start -->
- {{-- <div class="fullpage-loader">
+ <div class="fullpage-loader">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-</div> --}}
+</div>
 <!-- Loader End -->
