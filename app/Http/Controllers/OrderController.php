@@ -66,13 +66,14 @@ class OrderController extends Controller
     public function store(OrderRequest $request)
     {
         try {
-            $data = $request->all();
+            $data = $request->except('store_id');
             $data['total']=cart()->getTotal()+50;
             $data['user_id']=auth('web')->user()->id;
             $order = $this->order->create($data);
             foreach(cart()->getItems() as $item){
                 $orderproduct=$this->orderproduct->create([
                     'order_id' => $order->id,
+                    'store_id' => $request->store_id,
                     'product_id' => $item->getId(),
                     'count' => $item->get('quantity'),
                     'total' => $item->get('quantity') * $item->getPrice(),

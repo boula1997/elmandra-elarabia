@@ -1,175 +1,164 @@
-
-    <!-- Contact Box Section Start -->
-    <section class="contact-box-section">
-        <div class="container-fluid-lg">
-            <div class="row g-lg-5 g-3">
-                <div class="col-lg-6">
-                    <div class="left-sidebar-box">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-image">
-                                    <img src="{{ asset('template/assets/images/inner-page/contact-us.png') }}"
-                                        class="img-fluid blur-up lazyloaded" alt="">
-                                </div>
+<!-- Contact Box Section Start -->
+<section class="contact-box-section">
+    <div class="container-fluid-lg">
+        <div class="row g-lg-5 g-3">
+            <div class="col-lg-6">
+                <div class="left-sidebar-box">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="contact-image">
+                                <img src="{{ asset('template/assets/images/inner-page/contact-us.png') }}"
+                                    class="img-fluid blur-up lazyloaded" alt="">
                             </div>
-                            <div class="col-xl-12">
-                                <div class="contact-title">
-                                    <h3>{{ __('general.get_in_touch') }}</h3>
-                                </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="contact-title">
+                                <h3>{{ __('general.get_in_touch') }}</h3>
+                            </div>
 
-                                <div class="contact-detail">
-                                    <div class="row g-4">
-                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-phone"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>{{ __('general.call_us') }}</h4>
-                                                </div>
+                            <div class="contact-detail">
+                                <div class="row g-4">
+                                    <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                        <div class="contact-detail-box">
+                                            <div class="contact-icon">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
+                                            <div class="contact-detail-title">
+                                                <h4>{{ __('general.call_us') }}</h4>
+                                            </div>
 
-                                                <div class="contact-detail-contain">
-                                                    <p>{{ contacts('phone')[0]->contact }}</p>
-                                                </div>
+                                            <div class="contact-detail-contain">
+                                                <p>{{ contacts('phone')[0]->contact }}</p>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-envelope"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>{{ __('general.email') }}</h4>
-                                                </div>
+                                    <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                        <div class="contact-detail-box">
+                                            <div class="contact-icon">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <div class="contact-detail-title">
+                                                <h4>{{ __('general.email') }}</h4>
+                                            </div>
 
-                                                <div class="contact-detail-contain">
-                                                    <p>{{ contacts('email')[0]->contact }}</p>
-                                                </div>
+                                            <div class="contact-detail-contain">
+                                                <p>{{ contacts('email')[0]->contact }}</p>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-location-dot"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>{{ __('general.address') }}</h4>
-                                                </div>
+                                    <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                        <div class="contact-detail-box">
+                                            <div class="contact-icon">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </div>
+                                            <div class="contact-detail-title">
+                                                <h4>{{ __('general.address') }}</h4>
+                                            </div>
 
-                                                <div class="contact-detail-contain">
-                                                    <p>{{ settings()->translate(app()->getLocale())->address }}</p>
-                                                </div>
+                                            <div class="contact-detail-contain">
+                                                <p>{{ settings()->translate(app()->getLocale())->address }}</p>
                                             </div>
                                         </div>
-{{-- 
-                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                            <div class="contact-detail-box">
-                                                <div class="contact-icon">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
-                                                </div>
-
-                                                <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
-                                                </div>
-                                            </div>
-                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-6">
-                    <div class="title d-xxl-none d-block">
-                        <h2>{{ __('general.contact_us') }}</h2>
-                    </div>
+            <div class="col-lg-6">
+                <div class="title d-xxl-none d-block">
+                    <h2>{{ __('general.contact_us') }}</h2>
+                </div>
+                <form id="message-form" method="POST">
+                    @csrf
                     <div class="right-sidebar-box">
                         <div class="row">
+    
+    
                             <div class="col-xxl-6 col-lg-12 col-sm-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput" class="form-label">{{ __('general.first_name') }}</label>
+                                    <label for="exampleFormControlInput1"
+                                        class="form-label">{{ __('general.name') }}</label>
                                     <div class="custom-input">
-                                        <input type="text" class="form-control" id="exampleFormControlInput"
-                                            placeholder="{{ __('general.first_name') }}">
+                                        <input type="text" name="name" class="form-control"
+                                            id="exampleFormControlInput1" placeholder="{{ __('general.name') }}">
                                         <i class="fa-solid fa-user"></i>
                                     </div>
+                                    <div id="name" class="err"></div>
                                 </div>
                             </div>
-
+    
                             <div class="col-xxl-6 col-lg-12 col-sm-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput1" class="form-label">{{ __('general.last_name') }}</label>
+                                    <label for="exampleFormControlInput2"
+                                        class="form-label">{{ __('general.email') }}</label>
                                     <div class="custom-input">
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="{{ __('general.last_name') }}">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput2" class="form-label">{{ __('general.email') }}</label>
-                                    <div class="custom-input">
-                                        <input type="email" class="form-control" id="exampleFormControlInput2"
-                                            placeholder="{{ __('general.email') }}">
+                                        <input type="email" name="email" class="form-control"
+                                            id="exampleFormControlInput2" placeholder="{{ __('general.email') }}">
                                         <i class="fa-solid fa-envelope"></i>
                                     </div>
+                                    <div id="email" class="err"></div>
                                 </div>
                             </div>
-
+    
                             <div class="col-xxl-6 col-lg-12 col-sm-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput3" class="form-label">{{ __('general.phone') }}</label>
+                                    <label for="exampleFormControlInput3"
+                                        class="form-label">{{ __('general.phone') }}</label>
                                     <div class="custom-input">
-                                        <input type="tel" class="form-control" id="exampleFormControlInput3"
-                                            placeholder="{{ __('general.phone') }}" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
-                                            this.value.slice(0, this.maxLength);">
+                                        <input type="tel" name="phone" class="form-control"
+                                            id="exampleFormControlInput3" placeholder="{{ __('general.phone') }}"
+                                            maxlength="10"
+                                            oninput="javascript: if (this.value.length > this.maxLength) this.value =
+                                                this.value.slice(0, this.maxLength);">
                                         <i class="fa-solid fa-mobile-screen-button"></i>
                                     </div>
+                                    <div id="phone" class="err"></div>
                                 </div>
                             </div>
-
+    
                             <div class="col-12">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlTextarea" class="form-label">{{ __('general.message') }}</label>
+                                    <label for="exampleFormControlTextarea"
+                                        class="form-label">{{ __('general.message') }}</label>
                                     <div class="custom-textarea">
-                                        <textarea class="form-control" id="exampleFormControlTextarea"
+                                        <textarea class="form-control" id="message" name="message" id="exampleFormControlTextarea"
                                             placeholder="{{ __('general.message') }}" rows="6"></textarea>
                                         <i class="fa-solid fa-message"></i>
                                     </div>
+                                    <div id="message_err" class="err"></div>
+    
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-animation btn-md fw-bold ms-auto">{{ __('general.send_message') }}</button>
+                        <button type="submit" class="btn btn-animation btn-md fw-bold ms-auto">{{ __('general.send_message') }}</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-    </section>
-    <!-- Contact Box Section End -->
+    </div>
+</section>
+<!-- Contact Box Section End -->
 
-    <!-- Map Section Start -->
-    <section class="map-section">
-        <div class="container-fluid p-0">
-            <div class="map-box">
-                {!! settings()->map !!}
-                {{-- <iframe
+<!-- Map Section Start -->
+<section class="map-section">
+    <div class="container-fluid p-0">
+        <div class="map-box">
+            {!! settings()->map !!}
+            {{-- <iframe
                     src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2994.3803116994895!2d55.29773782339708!3d25.222534631321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!3m2!1d25.2048493!2d55.2707828!4m0!5e1!3m2!1sen!2sin!4v1652217109535!5m2!1sen!2sin"
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-            </div>
         </div>
-    </section>
-    <!-- Map Section End -->
- <!-- Contact Start -->
-  {{-- <div class="container-fluid p-5">
+    </div>
+</section>
+<!-- Map Section End -->
+<!-- Contact Start -->
+{{-- <div class="container-fluid p-5">
     <div class="mb-5 text-center" data-aos="zoom-in-up">
         <h5 class="text-primary text-uppercase">{{ __('general.contact_us') }}</h5>
         <h1 class="display-5 text-uppercase mb-0">{{ __('general.get_in_touch') }}</h1>
