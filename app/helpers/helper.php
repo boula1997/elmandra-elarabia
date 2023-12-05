@@ -209,6 +209,7 @@ if (!function_exists('advantages()')) {
                 // dd($storeproduct);
                 if(isset($storeproduct)){
                     if($storeproduct->quantity >= $count){
+                        $storeproduct->update(['quantity'=>$storeproduct->quantity-$count]);
                         return true;
                     }else
                     {

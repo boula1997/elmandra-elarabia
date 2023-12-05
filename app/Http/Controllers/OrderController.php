@@ -84,6 +84,8 @@ class OrderController extends Controller
                 ]);
                 $product=$orderproduct->product;
                 $product->update(['stock'=> $product->stock-$item->get('quantity')]);
+
+                
             }
          
             cart()->destroy();
