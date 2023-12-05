@@ -1,8 +1,9 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use Validator;
 
 class AuthController extends Controller
@@ -28,10 +29,14 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
-        if (! $token = auth()->attempt($validator->validated())) {
+        $token = auth('api')->attempt($validator->validated());
+        if($token === false){
             return response()->json(['error' => 'Unauthorized'], 401);
         }
         return $this->createNewToken($token);
+
+
+
     }
     /**
      * Register a User.
@@ -47,7 +52,7 @@ class AuthController extends Controller
         if($validator->fails()){
             return response()->json($validator->errors()->toJson(), 400);
         }
-        $user = User::create(array_merge(
+        $user = Admin::create(array_merge(
                     $validator->validated(),
                     ['password' => bcrypt($request->password)]
                 ));
@@ -63,7 +68,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function logout() {
-        auth()->logout();
+        auth('admin')->logout();
         return response()->json(['message' => 'User successfully signed out']);
     }
     /**
@@ -72,7 +77,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function refresh() {
-        return $this->createNewToken(auth()->refresh());
+        return $this->createNewToken(auth('admin')->refresh());
     }
     /**
      * Get the authenticated User.
@@ -80,7 +85,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function userProfile() {
-        return response()->json(auth()->user());
+        return response()->json(auth('admin')->user());
     }
     /**
      * Get the token array structure.
@@ -94,7 +99,7 @@ class AuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth('api')->factory()->getTTL() * 60,
-            'user' => auth()->user()
+            'user' => auth('api')->user()
         ]);
     }
 }
