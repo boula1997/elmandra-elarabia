@@ -384,6 +384,11 @@ return [
     'leave_a_comment_here'=>'Leave a comment here',  
     'write_your_comment'=>'Write Your Comment', 
     'related_products'=>'Related Products', 
+    'pending'=>'Pending', 
+    'missing'=>'Missing', 
+    'shipped'=>'Shipped', 
+    'processing'=>'Processing', 
+    'delivered'=>'Delivered', 
        
       
 ];

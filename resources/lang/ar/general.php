@@ -385,5 +385,10 @@ return [
     'leave_a_comment_here'=>'اترك التعليق هنا',  
     'write_your_comment'=>'اكتب تعليقك', 
     'related_products'=>'منتجات ذات صله', 
+    'pending'=>'قيد الانتظار', 
+    'missing'=>'مفتقد', 
+    'shipped'=>'قيد الشحن', 
+    'processing'=>'قيد التوصيل', 
+    'delivered'=>'تم التوصيل',
     
 ];
