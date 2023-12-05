@@ -87,6 +87,7 @@
                                 <th>@lang('general.count')</th>
                                 <th>@lang('general.total')</th>
                                 <th>@lang('general.store')</th>
+                                <th>@lang('general.status')</th>
                                 <th>@lang('general.controls')</th>
                             </tr>
                         </thead>
@@ -98,6 +99,7 @@
                                     <td>{{ $orderproduct->count }}</td>
                                     <td>{{ $orderproduct->total }} {{ __('general.pound') }}</td>
                                     <td>{{ $orderproduct->store->title }}</td>
+                                    <td>{{ $orderproduct->status }}</td>
                                     <td>
                                         @include('admin.components.controls', [
                                             'route' => 'orderproducts',

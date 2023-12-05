@@ -25,8 +25,8 @@ class ContactsSeeder extends Seeder
                    "https://www.linkedin.com",
                    "https://instagram.com",
                    "asleltawfeer@gmail.com",
-                   "+963993732270",
-                   "+963993732270"
+                   "+966536392629",
+                   "+966536392629"
                     ];
 
         $type=['social','social','social','email','phone','whatsapp'];

@@ -200,3 +200,37 @@ if (!function_exists('advantages()')) {
        return Advantage::get();
     }
 }
+
+    function orderproductStatus($count,$store_id,$product_id)
+    {
+        
+        $storeproduct=StoreProduct::where('store_id',$store_id)
+                                    ->where('product_id',$product_id)->first();
+            // dd($storeproduct);
+        if($storeproduct->quantity >= $count){
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
+
+    function orderStatus($order_id)
+    {
+        $orderproducts=Orderproduct::find($order_id)->get();
+        
+        foreach($orderproducts as $orderproduct)
+        {
+            if($orderproduct->status == 0)
+            {
+                return 'missing';
+            }
+            else
+            {
+                return 'pending';
+            }
+        }
+    }
+
+

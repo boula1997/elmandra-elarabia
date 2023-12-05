@@ -67,6 +67,10 @@ class OrderProductController extends Controller
             
             $data = $request->except('image','profile_avatar_remove');
             // update Product Stock
+            if (!orderproductStatus($request->count,$request->store_id,$request->product_id))
+            {
+                return redirect()->back()->with(['error' => __('general.out_of_store')]);
+            }
             $product = Product::find($request->product_id);
             $stock =$product->stock - $request->count;
             $product->update([
@@ -129,6 +133,10 @@ class OrderProductController extends Controller
        
         try {
             $data = $request->except('image','profile_avatar_remove');
+            if (!orderproductStatus($request->count,$request->store_id,$request->product_id))
+            {
+                return redirect()->back()->with(['error' => __('general.out_of_store')]);
+            }
 
             $orderproduct1 = Orderproduct::where('order_id',$request->order_id )
                                          ->where('product_id',$request->product_id)->first();

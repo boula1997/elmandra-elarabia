@@ -31,6 +31,7 @@
                                                 <th>@lang('general.email')</th>
                                                 <th>@lang('general.address')</th>
                                                 <th>@lang('general.total-delivery')</th>
+                                                <th>@lang('general.status')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -42,6 +43,7 @@
                                                     <td>{{ $order->email }}</td>
                                                     <td>{{ $order->address }}</td>
                                                     <td>{{ $order->total }}</td>
+                                                    <td>{{ __('general.'.$order->status) }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'orders',

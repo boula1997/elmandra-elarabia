@@ -72,6 +72,7 @@ class OrderController extends Controller
             $order = $this->order->create($data);
             foreach(cart()->getItems() as $item){
                 $orderproduct=$this->orderproduct->create([
+                    'status' => orderproductStatus($item->get('quantity'),$request->store_id,$request->$item->getId()),
                     'order_id' => $order->id,
                     'store_id' => $request->store_id,
                     'product_id' => $item->getId(),
