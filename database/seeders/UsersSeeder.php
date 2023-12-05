@@ -24,6 +24,7 @@ class UsersSeeder extends Seeder
                     'name' => $name[$i],
                     'email' => $email[$i],
                     'password' =>Hash::make($pass[$i]),
+                    'seller_id' =>1,
                     
              
             ]);

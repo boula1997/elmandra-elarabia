@@ -17,6 +17,7 @@ use App\Http\Controllers\API\SettingController;
 use App\Http\Controllers\API\PartnerController;
 use App\Http\Controllers\API\SubcategoryController;
 use App\Http\Controllers\API\TeamController;
+use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -109,5 +110,6 @@ Route::group([
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
     Route::get('/user-profile', [AuthController::class, 'userProfile']);    
+    Route::post('/user/store', [UserController::class, 'store']);
 });
 

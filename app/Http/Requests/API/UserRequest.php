@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Requests\Dashboard;
+namespace App\Http\Requests\API;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
+
+
 class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -20,18 +21,23 @@ class UserRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules()
+    public function rules(): array
     {
-        $image=request()->isMethod('put')?'nullable':'required';
-        // dd(request()->all());
         return [
-            'image' => $image,
             'name' => 'required',
             'email' => ['required','email',Rule::unique('users', 'email')->ignore($this->id)],
-            'password' => 'required_without:_method|same:confirm-password',
+            'location' => 'required',
         ];
     }
 
+    protected function failedValidation(Validator $validator)
+    {
+        $response = failedResponse($validator->errors());
+        throw new ValidationException($validator,$response);
+    }
+
+
+    
 }
