@@ -204,14 +204,21 @@ if (!function_exists('advantages()')) {
     function orderproductStatus($count,$store_id,$product_id)
     {
         
-        $storeproduct=StoreProduct::where('store_id',$store_id)
-                                    ->where('product_id',$product_id)->first();
-            // dd($storeproduct);
-        if($storeproduct->quantity >= $count){
-            return true;
-        }else
-        {
-            return false;
+        try{
+            $storeproduct=StoreProduct::where('store_id',$store_id)->where('product_id',$product_id)->first();
+                // dd($storeproduct);
+                if(isset($storeproduct)){
+                    if($storeproduct->quantity >= $count){
+                        return true;
+                    }else
+                    {
+                        return false;
+                    }
+                }
+                return false;
+
+        } catch(Exception $e){
+            dd($e);
         }
 
     }
@@ -232,5 +239,3 @@ if (!function_exists('advantages()')) {
             }
         }
     }
-
-

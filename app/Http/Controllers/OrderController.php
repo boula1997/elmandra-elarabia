@@ -70,19 +70,22 @@ class OrderController extends Controller
             $data['total']=cart()->getTotal()+50;
             $data['user_id']=auth('web')->user()->id;
             $order = $this->order->create($data);
+           
             foreach(cart()->getItems() as $item){
+               
+               
                 $orderproduct=$this->orderproduct->create([
-                    'status' => orderproductStatus($item->get('quantity'),$request->store_id,$request->$item->getId()),
+                    'status' => orderproductStatus($item->get('quantity'),$request->store_id,$item->getId()),
                     'order_id' => $order->id,
                     'store_id' => $request->store_id,
                     'product_id' => $item->getId(),
                     'count' => $item->get('quantity'),
                     'total' => $item->get('quantity') * $item->getPrice(),
                 ]);
-
                 $product=$orderproduct->product;
                 $product->update(['stock'=> $product->stock-$item->get('quantity')]);
             }
+         
             cart()->destroy();
             // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
             return response()->json(['success' => __('general.sent_successfully'),'count'=>count(cart()->getItems())]);
