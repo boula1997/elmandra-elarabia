@@ -78,6 +78,9 @@
                                         <a href="tel:{{contacts('phone')[0]->contact }}">{{ contacts('phone')[0]->contact }}</a>
                                     </li>
                                 </ul>
+
+                                <img class="mt-3" src="{{ asset('images/asleltawfeer.png') }}" style="width:50%; height:50%" alt="">
+
                             </div>
                         </div>
                     </div>
@@ -94,27 +97,6 @@
                                     <a href="{{ route('front.products',1) }}" class="text-content">{{ $category->title }}</a>
                                 </li>
                                 @endforeach
-                                {{-- <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Vegetables & Fruit</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Vegetables & Fruit</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Beverages</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Meats & Seafood</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Frozen Foods</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Biscuits & Snacks</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Grocery & Staples</a>
-                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -201,7 +183,7 @@
                                 </li>
 
                                 <li class="social-app">
-                                    <h5 class="mb-2 text-content">{{ __('general.download_app') }}</h5>
+                                    <h5 class="mb-2 text-content fw-bold">{{ __('general.download_app') }}</h5>
                                     <ul>
                                         <li class="mb-0">
                                             <a href="#" target="_blank">
@@ -218,9 +200,6 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('images/asleltawfeer.png') }}" style="width:50%; height:50%" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>
