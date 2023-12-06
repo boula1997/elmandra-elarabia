@@ -405,7 +405,8 @@ return [
     'reply2'=>"Amazing deals, updates, interesting news right in your inbox",
     'order_mail1'=>"Thanks For your Order",
     'order_mail2'=>"You'll receive an email when your items are shipped. if you have any questions, Call Us",
-    
+    'message_user'=>"Your message has been received and we will respond to you shortly",
+   
     
 
     

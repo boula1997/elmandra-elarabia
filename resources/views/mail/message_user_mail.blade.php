@@ -126,12 +126,8 @@
                     <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr class="header"
                             style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
-                            <td class="header-logo" style="padding: 10px 32px;">
-                                <a href="{{ route('front.home') }}" style="display: block; text-align: left;">
-                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
-                                </a>
-                            </td>
-                            <td class="header-menu" style="display: block; padding: 10px 32px;text-align: right;">
+                         
+                            <td class="header-menu d-flex justify-content-center align-items-center" style="display: block; padding: 10px 32px;text-align: center;">
                                 <ul>
                                     <li>
                                         <a href="{{ route('front.home') }}">{{ __('general.home') }}</a>
@@ -146,6 +142,15 @@
                                         <a href="{{ route('front.message') }}">{{ __('general.contact') }}</a>
                                     </li>
                                 </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td >
+                                <a href="{{ route('front.home') }}">
+                                    <img src="{{ settings()->logo }}" class="main-logo W-25" alt="logo">
+                                </a>
                             </td>
                         </tr>
                     </table>
@@ -168,13 +173,15 @@
                                 <td style="display: block;">
                                     <h3
                                         style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                                        {{ __('general.hi') }}{{ Auth('web')->name }} {{ __('general.welcome_to') }}</h3>
+                                        {{ __('general.hi') }}{{ $data->name }} </h3>
+                                        <h3
+                                      
                                 </td>
 
                                 <td>
                                     <p
                                         style="font-size: 14px;font-weight: 600;width: 82%;margin: 8px auto 0;line-height: 1.5;color: #939393;font-family: 'Nunito Sans', sans-serif;">
-                                        {{ __('general.weic_mail_desc1') }}
+                                        {{ __('general.message_user') }}
                                     </p>
                                 </td>
                             </tr>
@@ -186,7 +193,7 @@
                         <thead>
                             <tr style="display: block;">
                                 <td style="display: block;">
-                                    <button class="password-button">{{ __('general.verify_email') }}</button>
+                                    <button class="password-button"></button>
                                 </td>
                             </tr>
                         </thead>
