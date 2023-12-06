@@ -332,7 +332,7 @@ ul.social li{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td class="logo" style="text-align: center;">
-                        <a href="{{route('front.home')}}"> <img src="{{ assetsettings()->logo) }}" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;" alt="img"></a>
+                        <a href="{{ route('front.home') }}"> <img src="{{ settings()->logo }}" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;" alt="img"></a>
 			          </td>
           		</tr>
           	</table>
@@ -340,7 +340,7 @@ ul.social li{
 	      </tr><!-- end tr -->
 	      <tr>
             <td valign="middle" class="hero bg_white" style="padding: 3em 0 2em 0;">
-                <img src="images/email.png" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
+                <img src="{{ asset('template/images/email.png') }}" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
             </td>
             </tr>
              <!-- end tr -->
@@ -350,9 +350,8 @@ ul.social li{
             	<tr>
             		<td>
             			<div class="text" style="padding: 0 2.5em; text-align: center;">
-            				<h2>Please verify your email</h2>
-            				<h3>Amazing deals, updates, interesting news right in your inbox</h3>
-                            {{-- <a class="btn btn-black mt-3" href="{{route('front.message')}}">{{ __('general.visit_our_website') }}</a> --}}
+            				<h2>{{ __('general.reply1') }}</h2>
+            				<h3>{{ __('general.reply2') }}</h3>
             				<p><a href="{{route('front.home')}}" class="btn btn-primary" style="background: #151423 ">{{ __('general.visit_our_website') }}</a></p>
             			</div>
             		</td>

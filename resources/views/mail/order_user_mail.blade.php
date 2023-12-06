@@ -10,7 +10,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>Voxo | Email template </title>
+    <title>{{ setting()->title }}  </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -143,8 +143,8 @@
                         <tr class="header"
                             style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: center;width: 100%;">
                             <td class="header-logo" style="padding: 10px 32px;">
-                                <a href="../front-end/index.html" style="display: block; text-align: left;">
-                                    <img src="images/logo.png" class="main-logo" alt="logo">
+                                <a href="{{ route('front.home') }}" style="display: block; text-align: left;">
+                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
                                 </a>
                             </td>
                         </tr>
@@ -165,13 +165,11 @@
                             <tr>
                                 <td>
                                     <div class="title title-2 text-center">
-                                        <h2 style="font-size: 20px;font-weight: 700;margin: 24px 0 0;">Thanks For your
-                                            Order
+                                        <h2 style="font-size: 20px;font-weight: 700;margin: 24px 0 0;">{{ __('general.order_mail1')}}
                                         </h2>
                                         <p
                                             style="font-size: 14px;margin: 5px auto 0;line-height: 1.5;color: #939393;font-weight: 500;width: 70%;">
-                                            You'll receive an email when your items are shipped. if you have any
-                                            questions, Call Us 1-978-8767.</p>
+                                            {{ __('general.order_mail') }} {{ contacts('phone')[0]->contact }} </p>
                                     </div>
                                 </td>
                             </tr>

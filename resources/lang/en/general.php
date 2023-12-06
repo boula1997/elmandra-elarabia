@@ -393,6 +393,26 @@ return [
     'status'=>'Status', 
     'available'=>'Available', 
     'not_available'=>'Not Available', 
+    'weic_mail_desc1'=>"We hope our product will lead you, like many other before you. to a place where yourideas where your ideas can spark and grow.n a place where you’ll find all your inspiration needs. before we get started, we’ll need to verify your email.",
+    'weic_mail_desc2'=>' If you have any question, please email us at', 
+    'weic_mail_desc3'=>' or visit our',
+    'weic_mail_desc4'=>'You can also chat with a real live human during our operating hours. they can answer questions about account or help you with your meditation practice.',
+    'verify_email'=>'Verify Email',
+    'shop_for'=>'Shop For',
+    'hi'=>'Hi',
+    'wlecome_to'=>"AND WELCOME TO Asl El Twfeer.!",
+    'reply1'=>"Please verify your email",
+    'reply2'=>"Amazing deals, updates, interesting news right in your inbox",
+    'order_mail1'=>"Thanks For your Order",
+    'order_mail2'=>"You'll receive an email when your items are shipped. if you have any questions, Call Us",
+    
+    
+
+    
+     
+    
+
+    
 
     
       

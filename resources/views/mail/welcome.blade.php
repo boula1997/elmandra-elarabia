@@ -10,7 +10,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>Voxo | Email template </title>
+    <title>{{ setting()->title }} </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -127,23 +127,23 @@
                         <tr class="header"
                             style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
                             <td class="header-logo" style="padding: 10px 32px;">
-                                <a href="../front-end/index.html" style="display: block; text-align: left;">
-                                    <img src="images/logo.png" class="main-logo" alt="logo">
+                                <a href="{{ route('front.home') }}" style="display: block; text-align: left;">
+                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
                                 </a>
                             </td>
                             <td class="header-menu" style="display: block; padding: 10px 32px;text-align: right;">
                                 <ul>
                                     <li>
-                                        <a href="../front-end/index.html">Home</a>
+                                        <a href="{{ route('front.home') }}">{{ __('general.home') }}</a>
                                     </li>
                                     <li>
-                                        <a href="../front-end/wishlist.html">Wishlist</a>
+                                        <a href="{{ route('front.shopping_now') }}">{{ __('general.shop_now') }}</a>
                                     </li>
                                     <li>
-                                        <a href="../front-end/cart.html">My Cart</a>
+                                        <a href="{{ route('front.about') }}">{{ __('general.about') }}</a>
                                     </li>
                                     <li>
-                                        <a href="../front-end/contact-us.html">Contact</a>
+                                        <a href="{{ route('front.message') }}">{{ __('general.contact') }}</a>
                                     </li>
                                 </ul>
                             </td>
@@ -155,7 +155,7 @@
                         <thead>
                             <tr>
                                 <td>
-                                    <img src="images/welcome-poster.jpg" alt="">
+                                    <img src="{{ asset('template/images/welcome-poster.jpg') }}" alt="">
                                 </td>
                             </tr>
                         </thead>
@@ -168,15 +168,13 @@
                                 <td style="display: block;">
                                     <h3
                                         style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                                        Hi Jonny And Welcome To Fastkart.!</h3>
+                                        {{ __('general.hi') }}{{ Auth('web')->name }} {{ __('general.welcome_to') }}</h3>
                                 </td>
 
                                 <td>
                                     <p
                                         style="font-size: 14px;font-weight: 600;width: 82%;margin: 8px auto 0;line-height: 1.5;color: #939393;font-family: 'Nunito Sans', sans-serif;">
-                                        We hope our product will lead you, like many other before you. to a place where
-                                        yourideas where your ideas can spark and grow.n a place where you’ll find all
-                                        your inspiration needs. before we get started, we’ll need to verify your email.
+                                        {{ __('general.weic_mail_desc1') }}
                                     </p>
                                 </td>
                             </tr>
@@ -188,7 +186,7 @@
                         <thead>
                             <tr style="display: block;">
                                 <td style="display: block;">
-                                    <button class="password-button">Verify Email</button>
+                                    <button class="password-button">{{ __('general.verify_email') }}</button>
                                 </td>
                             </tr>
                         </thead>
@@ -200,11 +198,9 @@
                                 <td style="display: block;">
                                     <p
                                         style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                                        If you have any question, please email us at <span
-                                            class="theme-color">Fastkart@example.com</span> or vixit our <span
-                                            class="theme-color">FAQs.</span> You can also chat with a real live human
-                                        during our operating hours. they can answer questions about account or help you
-                                        with your meditation practice.</p>
+                                        {{ __('general.weic_mail_desc2') }} <span
+                                            class="theme-color">{{ contacts('email')[0]->contact }}</span>   {{ __('general.weic_mail_desc3') }}<span
+                                            class="theme-color" href="{{ route('front.home') }}">{{ setting()->title }}.</span>   {{ __('general.weic_mail_desc4') }}</p>
                                 </td>
                             </tr>
                         </thead>
@@ -219,60 +215,8 @@
                                     align="center" style="margin: 8px auto 11px;">
                                     <tr>
                                         <td>
-                                            <h4 style="font-size: 19px; font-weight: 700; margin: 0;">Shop For <span
-                                                    class="theme-color">Fastkart</span></h4>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
-                                    align="center" style="margin: 8px auto 20px;">
-                                    <tr>
-                                        <td>
-                                            <a href="javascript:void(0)"
-                                                style="font-size: 14px; font-weight: 600; color: #fff; text-decoration: underline; text-transform: capitalize;">Contact
-                                                Us</a>
-                                        </td>
-                                        <td>
-                                            <a href="javascript:void(0)"
-                                                style="font-size: 14px; font-weight: 600; color: #fff; text-decoration: underline; text-transform: capitalize; margin-left: 20px;">unsubscribe</a>
-                                        </td>
-                                        <td>
-                                            <a href="javascript:void(0)"
-                                                style="font-size: 14px; font-weight: 600; color: #fff; text-decoration: underline; text-transform: capitalize; margin-left: 20px;">privacy
-                                                Policy</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
-                                    align="center" style="margin: 23px auto;">
-                                    <tr>
-                                        <td>
-                                            <a href="www.facebook.com">
-                                                <img src="images/fb.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="www.twitter.com">
-                                                <img src="images/twitter.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="www.instagram.com">
-                                                <img src="images/insta.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="www.pinterest.com">
-                                                <img src="images/pinterest.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
+                                            <h4 style="font-size: 19px; font-weight: 700; margin: 0;">{{ __('general.shop_for') }}<span
+                                                    class="theme-color">{{ settings()->title }}</span></h4>
                                         </td>
                                     </tr>
                                 </table>
@@ -280,11 +224,10 @@
                                     <tr>
                                         <td>
                                             <h5 style="font-size: 13px; text-transform: uppercase; margin: 0; color:#ddd;
-                                letter-spacing:1px; font-weight: 500;">Want to change how you receive these emails?
+                                letter-spacing:1px; font-weight: 500;">
                                             </h5>
                                             <h5 style="font-size: 13px; text-transform: uppercase; margin: 10px 0 0; color:#ddd;
-                                letter-spacing:1px; font-weight: 500;">2021-22 copy right by themeforest powerd by
-                                                pixelstrap</h5>
+                                letter-spacing:1px; font-weight: 500;">{{ settings()->copyright }}</h5>
                                         </td>
                                     </tr>
                                 </table>
