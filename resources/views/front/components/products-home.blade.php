@@ -173,7 +173,7 @@
                 url: url,
                 success: (response) => {
                     $(this).removeClass('disabled');
-                    $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
+                    $(this).addClass('d-none').prev().addClass(
                         'btn btn-primary').attr('hash', '');
                     $('.cart-count').text(response.count);
 

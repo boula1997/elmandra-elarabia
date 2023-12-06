@@ -78,10 +78,22 @@
                                                     <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
 
                                                     <div class="addtocart_btn pt-5">
-                                                        <button class="add-button addcart-button btn buy-button text-light addCart">
+                                                        @if (auth('web')->user())
+                                                        <button
+                                                            class="add-button addcart-button btn buy-button text-light addCart"
+                                                            product_id="{{ $product->id }}">
                                                             <span>{{ __('general.add') }}</span>
                                                             <i class="fa-solid fa-plus px-2"></i>
                                                         </button>
+                                                    @else
+                                                        <a href="{{ route('user.login') }}">
+                                                            <button
+                                                                class="add-button addcart-button btn buy-button text-light">
+                                                                <span >{{ __('general.add') }}</span>
+                                                                <i class="fa-solid fa-plus px-2"></i>
+                                                            </button>
+                                                        </a>
+                                                    @endif
                                                         <div class="qty-box cart_qty">
                                                             <div class="input-group">
                                                                 <button type="button" class="btn qty-left-minus"
@@ -163,10 +175,23 @@
                                                     <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
 
                                                     <div class="addtocart_btn pt-5">
-                                                        <button class="add-button addcart-button btn buy-button text-light addCart">
-                                                            <span>{{ __('general.add') }}</span>
-                                                            <i class="fa-solid fa-plus px-2"></i>
-                                                        </button>
+
+                                                        @if (auth('web')->user())
+                                                            <button
+                                                                class="add-button addcart-button btn buy-button text-light addCart"
+                                                                product_id="{{ $product->id }}">
+                                                                <span>{{ __('general.add') }}</span>
+                                                                <i class="fa-solid fa-plus px-2"></i>
+                                                            </button>
+                                                        @else
+                                                            <a href="{{ route('user.login') }}">
+                                                                <button
+                                                                    class="add-button addcart-button btn buy-button text-light">
+                                                                    <span >{{ __('general.add') }}</span>
+                                                                    <i class="fa-solid fa-plus px-2"></i>
+                                                                </button>
+                                                            </a>
+                                                        @endif
                                                         <div class="qty-box cart_qty">
                                                             <div class="input-group">
                                                                 <button type="button" class="btn qty-left-minus"
@@ -219,8 +244,7 @@
 
                     console.log(response);
                     $('.cart-count').text(response.count);
-                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass(
-                        'btn btn-danger').attr('hash', response.hash);
+                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').attr('hash', response.hash);
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,
@@ -261,7 +285,7 @@
                 url: url,
                 success: (response) => {
                     $(this).removeClass('disabled');
-                    $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
+                    $(this).addClass('d-none').prev().addClass(
                         'btn btn-primary').attr('hash', '');
                     $('.cart-count').text(response.count);
                     toastr.options = {
