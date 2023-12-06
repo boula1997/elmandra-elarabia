@@ -83,7 +83,6 @@
                                             </div>
                                             <select name="status" value="{{ old('status',$order->status) }}" id="status"
                                                 class="form-control js-searchBox">
-                                                <option value="{{ $order->status }}" selected disabled hidden>{{ __('general.'.$order->status) }}</option>
                                                 <option value="pending">{{ __('general.pending') }}</option>
                                                 <option value="missing">{{ __('general.missing') }}</option>
                                                 <option value="shipped">{{ __('general.shipped') }}</option>

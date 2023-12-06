@@ -37,6 +37,7 @@
                                             value="{{ old($locale . '.title') }}">
                                     </div>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
@@ -86,8 +87,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
                 <div class="card-footer mb-5">
