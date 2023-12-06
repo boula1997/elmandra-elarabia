@@ -116,15 +116,14 @@
                                     <div class="col-12 px-0">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{{ route('front.show.product',$product->id) }}">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
                                                 <ul class="product-option justify-content-around">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                            data-bs-target="#view">
+                                                        <a href="{{ route('front.show.product',$product->id) }}">
                                                             <i data-feather="eye"></i>
                                                         </a>
                                                     </li>
@@ -143,7 +142,7 @@
                                                 </ul>
                                             </div>
                                             <div class="product-detail">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{{ route('front.show.product',$product->id) }}">
                                                     <h6 class="name name-2 h-100">{{ $product->title }}</h6>
                                                 </a>
 

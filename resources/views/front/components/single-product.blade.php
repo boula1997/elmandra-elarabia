@@ -244,43 +244,24 @@
                     <div class="col-xxl-3 col-xl-4 col-lg-5 d-none d-lg-block wow fadeInUp">
                         <div class="right-sidebar-box">
 
-                            <!-- Banner Section -->
-                             {{-- <div class="ratio_156 pt-25">
-                                <div class="home-contain">
-                                    <img src="{{ asset('template/assets/images/vegetable/banner/8.jpg') }}" class="bg-img blur-up lazyload"
-                                        alt="">
-                                    <div class="home-detail p-top-left home-p-medium">
-                                        <div>
-                                            <h6 class="text-yellow home-banner">Seafood</h6>
-                                            <h3 class="text-uppercase fw-normal"><span
-                                                    class="theme-color fw-bold">Freshes</span> Products</h3>
-                                            <h3 class="fw-light">every hour</h3>
-                                            <button onclick="location.href = 'shop-left-sidebar.html';"
-                                                class="btn btn-animation btn-md fw-bold mend-auto">Shop Now <i
-                                                    class="fa-solid fa-arrow-right icon"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-
                             <!-- Trending Product -->
                             <div class="pt-25">
                                 <div class="category-menu">
                                     <h3>{{ __('general.trending_products') }}</h3>
 
                                     <ul class="product-list product-right-sidebar border-0 p-0">
-                                        @foreach ($products as $product)
+                                        @foreach ($product->subcategory->products as $product)
                                              @if ($loop->iteration <= 5)
                                                 <li>
                                                     <div class="offer-product">
-                                                        <a href="product-left-thumbnail.html" class="offer-image">
+                                                        <a href="{{ route('front.show.product',$product->id) }}" class="offer-image">
                                                             <img src="{{ asset($product->image) }}"
                                                                 class="img-fluid blur-up lazyload" alt="">
                                                         </a>
 
                                                         <div class="offer-detail">
                                                             <div>
-                                                                <a href="product-left-thumbnail.html">
+                                                                <a href="{{ route('front.show.product',$product->id) }}">
                                                                     <h6 class="name">{{ $product->title }}</h6>
                                                                 </a>
                                                                 <h6 class="price theme-color">{{ $product->price }}</h6>
@@ -317,7 +298,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="slider-6_1 product-wrapper">
-                                @foreach ($products as $product)
+                                @foreach ($product->subcategory->products as $product)
                                     @if ($loop->iteration <= 8)
                                         <div>
                                             <div class="product-box-3 wow fadeInUp">
@@ -353,7 +334,7 @@
                                                 <div class="product-footer">
                                                     <div class="product-detail">
                                                         <span class="span-name">{{ $product->subcategory->title }}</span>
-                                                        <a href="product-left-thumbnail.html">
+                                                        <a href="{{ route('front.show.product',$product->id) }}">
                                                             <h5 class="name">{{ $product->title }}</h5>
                                                         </a>
                                                         <div class="product-rating mt-2">
@@ -412,76 +393,3 @@
                 </div>
             </section>
         <!-- Releted Product Section End -->
-
-        <!-- Sticky Cart Box Start -->
-        {{-- <div class="sticky-bottom-cart">
-            <div class="container-fluid-lg">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cart-content">
-                            <div class="product-image">
-                                <img src="../assets/images/product/category/1.jpg" class="img-fluid blur-up lazyload"
-                                    alt="">
-                                <div class="content">
-                                    <h5>Creamy Chocolate Cake</h5>
-                                    <h6>$32.96<del class="text-danger">$96.00</del><span>55% off</span></h6>
-                                </div>
-                            </div>
-                            <div class="selection-section">
-                                <div class="form-group mb-0">
-                                    <select id="input-state" class="form-control form-select">
-                                        <option selected disabled>Choose Weight...</option>
-                                        <option>1/2 KG</option>
-                                        <option>1 KG</option>
-                                        <option>1.5 KG</option>
-                                    </select>
-                                </div>
-                                <div class="cart_qty qty-box product-qty m-0">
-                                    <div class="input-group h-100">
-                                        <button type="button" class="qty-left-minus" data-type="minus" data-field="">
-                                            <i class="fa fa-minus" aria-hidden="true"></i>
-                                        </button>
-                                        <input class="form-control input-number qty-input" type="text" name="quantity"
-                                            value="1">
-                                        <button type="button" class="qty-right-plus" data-type="plus" data-field="">
-                                            <i class="fa fa-plus" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="add-btn">
-                                <a class="btn theme-bg-color text-white wishlist-btn" href="wishlist.html"><i
-                                        class="fa fa-bookmark"></i> Wishlist</a>
-                                <a class="btn theme-bg-color text-white" href="cart.html"><i
-                                        class="fas fa-shopping-cart"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!-- Sticky Cart Box End -->
-
-<!-- Product details page endt -->
-
-
-<!-- Product details page start -->
-    {{-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title mb-4">
-                        <h5 class="position-relative d-inline-block text-primary text-uppercase">{{ __('general.products') }}</h5>
-                        <h1 class="display-5 mb-0">{{ $product->title }}</h1>
-                    </div>
-                    <p class="mb-4">    {!! $product->description !!}</p> 
-                </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ $product->image }}" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Product details page endt -->
