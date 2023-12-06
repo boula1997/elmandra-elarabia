@@ -73,6 +73,31 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{{ __('general.status') }}</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                            </div>
+                                            <select name="status" value="{{ old('status',$order->status) }}" id="status"
+                                                class="form-control js-searchBox">
+                                                <option value="{{ $order->status }}" selected disabled hidden>{{ __('general.'.$order->status) }}</option>
+                                                <option value="pending">{{ __('general.pending') }}</option>
+                                                <option value="missing">{{ __('general.missing') }}</option>
+                                                <option value="shipped">{{ __('general.shipped') }}</option>
+                                                <option value="processing">{{ __('general.processing') }}</option>
+                                                <option value="delivered">{{ __('general.delivered') }}</option>
+                                             
+                                            </select>
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
                         </div>
                     </div>
                 </div>

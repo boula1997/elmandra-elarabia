@@ -226,17 +226,41 @@ if (!function_exists('advantages()')) {
 
     function orderStatus($order_id)
     {
-        $orderproducts=Orderproduct::find($order_id)->get();
-        
-        foreach($orderproducts as $orderproduct)
-        {
-            if($orderproduct->status == 0)
+        try{
+            $orderproducts=Orderproduct::where('order_id',$order_id)->get();
+            $status='pending';
+            foreach($orderproducts as $orderproduct)
             {
-                return 'missing';
+                if($orderproduct->status == 0)
+                {
+                    $status= 'missing';
+                    break;
+                }
             }
-            else
-            {
-                return 'pending';
-            }
+            return $status;
+
+        }catch(Exception $e) {
+            dd($e);
         }
+       
+    }
+
+    function productstouck($product_id,$quantity)
+    {
+        try{
+            
+            $product=Product::where('id',$product_id)->first();
+            $storeproducts=StoreProduct::where('product_id',$product_id)->get();
+            $count=$quantity;
+            foreach($storeproducts as $storeproduct){
+                $count +=$storeproduct->quantity;
+            }
+            if($product->stock >= $quantity && $product->stock >= $count)
+            {
+                return true;
+            }
+        }catch(Exception $e) {
+            dd($e);
+        }
+           
     }

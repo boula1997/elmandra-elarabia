@@ -61,6 +61,11 @@ class StoreProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         try {
+        //    dd($request);
+           if(!productstouck($request->product_id,$request->quantity))
+           {
+            return redirect()->back()->with(['error' => __('general.out_of_store')]);
+           }
             $this->storeProduct->create($request->all());
             return redirect()->route('storeProducts.index')
                 ->with('success', trans('general.created_successfully'));
@@ -104,7 +109,12 @@ class StoreProductController extends Controller
     public function update(StoreProductRequest $request, StoreProduct $storeProduct)
     {
         try {
+            
             $data = $request->all();
+            if(!productstouck($request->product_id,$request->quantity))
+            {
+             return redirect()->back()->with(['error' => __('general.out_of_store')]);
+            }
             $storeProduct->update($data);
             return redirect()->route('storeProducts.index')
                 ->with('success', trans('general.update_successfully'));
@@ -122,6 +132,9 @@ class StoreProductController extends Controller
     public function destroy(StoreProduct $storeProduct)
     {
         try {
+            $product=Product::find($storeProduct->product_id)->first();
+            $product->update(['stock'=>$product->stock +$storeProduct->quantity ]);
+
             $storeProduct->delete();
             return redirect()->route('storeProducts.index')
                 ->with('success', trans('general.deleted_successfully'));

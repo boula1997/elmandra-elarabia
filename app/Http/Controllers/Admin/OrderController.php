@@ -10,6 +10,7 @@ use App\Mail\OrderAdminMail;
 use App\Mail\OrderMail;
 use App\Models\Order;
 use App\Models\Orderproduct;
+use App\Models\StoreProduct;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -82,6 +83,14 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         try {
+            $orderproducts=Orderproduct::where('order_id',$order->id)->get();
+            foreach($orderproducts as $orderproduct){
+                $orderproduct->product->update(['stock'=> $orderproduct->product->stock +$orderproduct->count ]);
+
+            $storeproduct =StoreProduct::where('store_id',$orderproduct->store_id)->where('product_id',$orderproduct->product->id)->first();
+            
+            $storeproduct->update(['quantity'=>$storeproduct->quantity +$orderproduct->count ]);
+        }
             $order->delete();
             return redirect()->route('orders.index')
                 ->with('success', trans('general.deleted_successfully'));

@@ -63,8 +63,7 @@ class OrderProductController extends Controller
      */
     public function store(OrderProductRequest $request)
     {
-        try {
-            
+        try {            
             $data = $request->except('image','profile_avatar_remove');
             // update Product Stock
             if (!orderproductStatus($request->count,$request->store_id,$request->product_id))
@@ -151,18 +150,22 @@ class OrderProductController extends Controller
             
             $new_count_stock =$orderproduct1->count - $request->count;
             $new_stock= $orderproduct1->product->stock + $new_count_stock;
-
+            
             $orderproduct1->update([
                 'count' => $count,
-                'total' => $total
-            ]);
-            $orderproduct1->order->update([
-                'total' => $order_total
+                'total' => $total,
+                'status'=>1,
             ]);
             $orderproduct1->product->update([
                 'stock' => $new_stock
             ]);
+            $orderproduct1->order->update([
+                'total' => $order_total,
+                'status'=>orderStatus($request->order_id),
+            ]);
+            // dd($orderproduct1);
             $orderproduct->update($data);
+            
             return redirect()->route('orders.index', compact('orderproduct'))
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {

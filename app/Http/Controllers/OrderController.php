@@ -71,9 +71,7 @@ class OrderController extends Controller
             $data['user_id']=auth('web')->user()->id;
             $order = $this->order->create($data);
            
-            foreach(cart()->getItems() as $item){
-               
-               
+            foreach(cart()->getItems() as $item){ 
                 $orderproduct=$this->orderproduct->create([
                     'status' => orderproductStatus($item->get('quantity'),$request->store_id,$item->getId()),
                     'order_id' => $order->id,
@@ -83,11 +81,10 @@ class OrderController extends Controller
                     'total' => $item->get('quantity') * $item->getPrice(),
                 ]);
                 $product=$orderproduct->product;
-                $product->update(['stock'=> $product->stock-$item->get('quantity')]);
-
-                
+                $product->update(['stock'=> $product->stock-$item->get('quantity')]);    
             }
-         
+            $order->update(['status'=>orderStatus($order->id)]);
+            
             cart()->destroy();
             // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OrderUserMail($order));
             return response()->json(['success' => __('general.sent_successfully'),'count'=>count(cart()->getItems())]);

@@ -39,9 +39,10 @@ class ProductController extends Controller
     public function index($id)
     {
         try {
+            $offers=Offer::get();
             $subcategory=$this->subcategory->findorfail($id);
             $products = $subcategory->products()->paginate(8);
-            return view('front.products.product', compact( 'products','subcategory'));
+            return view('front.products.product', compact( 'products','subcategory','offers'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
@@ -70,7 +71,8 @@ class ProductController extends Controller
     
     public function showallproducts()
     {
+        $offers=Offer::get();
         $products= Product::get();
-        return view('front.products.product', compact('products'));
+        return view('front.products.product', compact('products','offers'));
     }
 }
