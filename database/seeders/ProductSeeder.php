@@ -537,7 +537,11 @@ class ProductSeeder extends Seeder
                 $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
                 $prices_bd=[100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
                 $stock=    [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
-
+               
+                $description_ar ="<div><br></div><div>كعكة الجيلي والفاصوليا والجزر والبسكويت المثلج وكعكة الشوفان وجمي بيرز تارت. قطرات الليمون، كعكة الجزر، بودنغ الحلوى اللذيذة. كعكة الشوكولاتة، تارت، كب كيك، دونات، تعلوها عرق السوس، السكر، البرقوق، بار الشوكولاتة. جيلي فول تيراميسو كراميل عناب بسكويت عرق سوس شوكولاتة. بودنغ، توفي، عناب، كعكة الشوفان، سويت رول. قطرات الليمون، حلوى، كرواسون، كعكة دانمركية، كب كيك. سويت رول حلوى شوكولاتة توفي جيلي سويت رول حلاوة براوني. مسحوق الخطمي، حلوى السمسم، حلوى الهلام، حلوى قصب الخطمي، فطيرة الزنجبيل.</div><div><br></div><div><b>عضوي:</b></div><div>السيرة الذاتية والأسد مزدوجان كحامل لا يحمل بطاقة هوية واحدة على الأقل الدهليز المبتذل المؤلم ينشأ في كثير من الأحيان مما يعوق بقاءه خاليًا من الجاذبية مع مجتمعه الطبيعي العقابي وما يحويه من أطفال كثيرين من السخرية من سيرة موريس ليو في</div>";
+                
+                
+                $description_en='<div class="nav-desh" style="margin-bottom: calc(22px + 8 * ((100vw - 320px) / 1600)); color: rgb(34, 34, 34); font-family: &quot;Public Sans&quot;, sans-serif; font-size: 14px;"><p style="text-align: left; margin-bottom: 0px; font-size: calc(14px + 1 * ((100vw - 320px) / 1600)); line-height: 1.7; color: rgb(74, 85, 104);">Jelly beans carrot cake icing biscuit oat cake gummi bears tart. Lemon drops carrot cake pudding sweet gummi bears. Chocolate cake tart cupcake donut topping liquorice sugar plum chocolate bar. Jelly beans tiramisu caramels jujubes biscuit liquorice chocolate. Pudding toffee jujubes oat cake sweet roll. Lemon drops dessert croissant danish cake cupcake. Sweet roll candy chocolate toffee jelly sweet roll halvah brownie topping. Marshmallow powder candy sesame snaps jelly beans candy canes marshmallow gingerbread pie.</p></div><div class="nav-desh" style="margin-bottom: calc(22px + 8 * ((100vw - 320px) / 1600)); color: rgb(34, 34, 34); font-family: &quot;Public Sans&quot;, sans-serif; font-size: 14px;"><div class="desh-title" style="margin-bottom: 8px;"><h5 style="text-align: left; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: 700; font-size: calc(15px + 1 * ((100vw - 320px) / 1600));">Organic:</h5></div><p style="text-align: left; margin-bottom: 0px; font-size: calc(14px + 1 * ((100vw - 320px) / 1600)); line-height: 1.7; color: rgb(74, 85, 104);">vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p></div>';
                 $y=0;
         for ($i = 0; $i < count($title_ar); $i++) {
             if($i % 2 === 0){
@@ -546,9 +550,11 @@ class ProductSeeder extends Seeder
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
+                    'description' => $description_ar,
                 ],
                 'en' => [
                     'title' => $title_en[$i],
+                    'description' => $description_en,
                 ],
                 'subcategory_id'=>$y,
                 'company_id'=>1,

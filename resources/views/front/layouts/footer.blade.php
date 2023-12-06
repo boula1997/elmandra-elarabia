@@ -16,36 +16,6 @@
                                     </div>
                                 </div>
                             @endforeach
-{{-- 
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/delivery.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="service-detail">
-                                    <h5>{{ __('general.free_delivery') }}</h5>
-                                </div>
-                            </div>
-
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/discount.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="service-detail">
-                                    <h5>{{ __('general.daily_mega') }}</h5>
-                                </div>
-                            </div>
-
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/market.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="service-detail">
-                                    <h5>{{ __('general.best_price') }}</h5>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -57,7 +27,7 @@
                         <div class="footer-logo">
                             <div class="theme-logo">
                                 <a href="{{ route('front.home') }}">
-                                    <img src="{{ settings()->logo }}" class="blur-up lazyload" alt="">
+                                    <img src="{{ settings()->logo }}" class="blur-up lazyload p-0 m-0 w-100" alt="">
                                 </a>
                             </div>
 
@@ -94,27 +64,6 @@
                                     <a href="{{ route('front.products',1) }}" class="text-content">{{ $category->title }}</a>
                                 </li>
                                 @endforeach
-                                {{-- <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Vegetables & Fruit</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Vegetables & Fruit</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Beverages</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Meats & Seafood</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Frozen Foods</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Biscuits & Snacks</a>
-                                </li>
-                                <li>
-                                    <a href="shop-left-sidebar.html" class="text-content">Grocery & Staples</a>
-                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -141,7 +90,9 @@
                               
                               
                             </ul>
+                            
                         </div>
+                        <img class="mt-3 qr-code w-100" src="{{ asset('images/asleltawfeer.png') }}"  alt="">
                     </div>
 
                     <div class="col-xl-2 col-sm-3">
@@ -201,7 +152,7 @@
                                 </li>
 
                                 <li class="social-app">
-                                    <h5 class="mb-2 text-content">{{ __('general.download_app') }}</h5>
+                                    <h5 class="mb-2 text-content fw-bold">{{ __('general.download_app') }}</h5>
                                     <ul>
                                         <li class="mb-0">
                                             <a href="#" target="_blank">
@@ -218,9 +169,6 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('images/asleltawfeer.png') }}" style="width:50%; height:50%" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -36,7 +36,7 @@
             
 
                                                                     <li class="item-total{{ $loop->index }}">
-                                                                        <h5 class="bg-danger">{{ __('general.total') }}$ {{ $item->get('quantity') * $item->get('price') }}</h5>
+                                                                        <h5>{{ __('general.total') }}$ {{ $item->get('quantity') * $item->get('price') }}</h5>
                                                                     </li>
                                                                 </ul>
                                                             </div>

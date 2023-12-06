@@ -158,11 +158,7 @@
     width: 100%;
 }
 
-.contact-icon {
-    font-size: 2em !important;
-    margin-top: 10%;
-    color: white;
-}
+
 
 .contact-h2 {
     color: white;
@@ -383,6 +379,32 @@ iframe{
 .home-detail .description p{
   text-align: justify !important;
   color:white !important;
+}
+
+
+header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: -12px;
+}
+
+.timer-notification{
+  color: white !important;
+  text-align: right !important;
+}
+
+.notification-slider *{
+  color: white !important;
+}
+
+.product-slider-image{
+  height: 200px !important;
+}
+
+.qr-code{
+  height: fit-content;
 }
 
 

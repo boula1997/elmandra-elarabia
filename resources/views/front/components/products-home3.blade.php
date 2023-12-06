@@ -9,7 +9,7 @@
                                 <div>
                                     <div class="product-slider wow fadeInUp">
                                         <a href="{{ route('front.show.product',$product->id) }}" class="product-slider-image">
-                                            <img src="{{asset($product->image)}}" class="w-100 blur-up lazyload rounded-3"
+                                            <img src="{{asset($product->image)}}" class="w-100 blur-up lazyload rounded-3 product-slider-image"
                                                 alt="">
                                         </a>
 

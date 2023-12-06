@@ -23,11 +23,6 @@
                                                 aria-selected="false">{{ __('general.additional_info') }}</button>
                                         </li>
 
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="care-tab" data-bs-toggle="tab"
-                                                data-bs-target="#care" type="button" role="tab" aria-controls="care"
-                                                aria-selected="false">{{ __('general.care_instuctions') }}</button>
-                                        </li>
 
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="review-tab" data-bs-toggle="tab"
@@ -52,7 +47,7 @@
                                                         class="bg-img blur-up lazyload" alt="">
                                                     <div class="banner-details p-center banner-b-space w-100 text-center">
                                                         <div>
-                                                            <h2>{{ $product->subcategory->category->title }}</h2>
+                                                            <h2 class="text-white">{{ $product->subcategory->category->title }}</h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -96,29 +91,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="tab-pane fade" id="care" role="tabpanel" aria-labelledby="care-tab">
-                                            <div class="information-box">
-                                                <ul>
-                                                    <li>Store cream cakes in a refrigerator. Fondant cakes should be
-                                                        stored in an air conditioned environment.</li>
 
-                                                    <li>Slice and serve the cake at room temperature and make sure
-                                                        it is not exposed to heat.</li>
-
-                                                    <li>Use a serrated knife to cut a fondant cake.</li>
-
-                                                    <li>Sculptural elements and figurines may contain wire supports
-                                                        or toothpicks or wooden skewers for support.</li>
-
-                                                    <li>Please check the placement of these items before serving to
-                                                        small children.</li>
-
-                                                    <li>The cake should be consumed within 24 hours.</li>
-
-                                                    <li>Enjoy your cake!</li>
-                                                </ul>
-                                            </div>
-                                        </div>
 
                                         <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                                             <div class="review-box">

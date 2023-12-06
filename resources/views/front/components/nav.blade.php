@@ -14,12 +14,12 @@
 
                    <div class="col-xxl-6 col-lg-9 d-lg-block d-none">
                        <div class="header-offer">
-                           <div class="notification-slider">
+                           <div class="notification-slider text-right text-white">
                                <div>
-                                   <div class="timer-notification">
-                                       <h6><strong class="me-1">{{ __('general.welcome_to') }}
+                                   <div class="timer-notification text-white">
+                                       <h6><strong class="mx-1 text-white">{{ __('general.welcome_to') }}
                                                {{ settings()->title }}</strong>{{ __('general.wrap_new') }}<strong
-                                               class="ms-1">{{ __('general.new_code') }} {{ settings()->title }}24
+                                               class="mx-1 text-white">{{ __('general.new_code') }} <span class="text-white">{{ settings()->title }}</span>24
                                            </strong>
 
                                        </h6>
@@ -27,7 +27,7 @@
                                </div>
 
                                <div>
-                                   <div class="timer-notification">
+                                   <div class="timer-notification text-white">
                                        <h6>{{ __('general.something_you_love') }}
                                            <a href="{{ route('front.show-products') }}"
                                                class="text-white">{{ __('general.buy_now') }}</a>

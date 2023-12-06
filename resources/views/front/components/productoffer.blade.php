@@ -70,8 +70,7 @@
                     $(this).removeClass('disabled');
                     console.log(response);
                     $('.cart-count').text(response.count);
-                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').addClass(
-                        'btn btn-danger').attr('hash', response.hash);
+                    $(this).addClass('d-none').next().removeClass('d-none btn btn-primary').attr('hash', response.hash);
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,
@@ -112,7 +111,7 @@
                 url: url,
                 success: (response) => {
                     $(this).removeClass('disabled');
-                    $(this).addClass('d-none').prev().removeClass('d-none btn btn-danger').addClass(
+                    $(this).addClass('d-none').prev().addClass(
                         'btn btn-primary').attr('hash', '');
                     $('.cart-count').text(response.count);
                     toastr.options = {
