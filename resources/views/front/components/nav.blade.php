@@ -249,10 +249,10 @@
 
                                    @foreach (categories() as $category)
                                        <li class="onhover-category-list">
-                                           <a href="javascript:void(0)" class="category-name">
+                                           <a href="{{ route('front.category',$category->id) }}" class="category-name">
                                                <img src="{{ asset($category->image) }}" alt="">
                                                <h6>{{ $category->title }}</h6>
-                                               <i class="fa-solid fa-angle-right"></i>
+                                               <i class="fa-solid fa-angle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i>
                                            </a>
 
                                            <div class="onhover-category-box">
