@@ -99,7 +99,8 @@
                                     <td>{{ $orderproduct->count }}</td>
                                     <td>{{ $orderproduct->total }} {{ __('general.pound') }}</td>
                                     <td>{{ $orderproduct->store->title }}</td>
-                                    <td>{{ $orderproduct->status }}</td>
+ 
+                                    <td>{{ $orderproduct->status !==0? __('general.available'): __('general.not_available') }}</td>
                                     <td>
                                         @include('admin.components.controls', [
                                             'route' => 'orderproducts',

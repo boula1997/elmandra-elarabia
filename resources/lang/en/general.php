@@ -389,6 +389,11 @@ return [
     'shipped'=>'Shipped', 
     'processing'=>'Processing', 
     'delivered'=>'Delivered', 
-       
+    'out_of_store'=>'Out of store', 
+    'status'=>'Status', 
+    'available'=>'Available', 
+    'not_available'=>'Not Available', 
+
+    
       
 ];

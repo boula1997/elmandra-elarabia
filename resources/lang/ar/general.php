@@ -390,5 +390,9 @@ return [
     'shipped'=>'قيد الشحن', 
     'processing'=>'قيد التوصيل', 
     'delivered'=>'تم التوصيل',
+    'out_of_store'=>'لا توجد هذه الكمية', 
+    'status'=>'الحالة', 
+    'available'=>'متاح', 
+    'not_available'=>'غير متاح', 
     
 ];
