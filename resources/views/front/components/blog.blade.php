@@ -18,7 +18,7 @@
                                   <div>
                                       <div class="blog-box">
                                           <div class="blog-box-image">
-                                              <a href="{{ route('front.show-products') }}" class="blog-image">
+                                              <a href="{{ route('front.show.product',$product->id) }}" class="blog-image">
                                                   <img src="{{ asset($product->image) }}"
                                                       class="bg-img blur-up lazyload" alt="">
                                               </a>

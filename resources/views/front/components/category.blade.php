@@ -15,7 +15,7 @@
                 <div class="slider-9">
                     @foreach (categories() as $category)
                         <div>
-                            <a href="#" class="category-box wow fadeInUp">
+                            <a href="{{ route('front.category',$category->id) }}" class="category-box wow fadeInUp">
                                 <div>
                                     <img src="{{ asset($category->image )}}" class="blur-up lazyload" alt="">
                                     <h5>{{ $category->title }}</h5>

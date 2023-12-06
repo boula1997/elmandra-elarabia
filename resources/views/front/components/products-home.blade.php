@@ -21,7 +21,7 @@
                                     <div class="col-3 px-0 p-3">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{{ route('front.show.product',$product->id) }}">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>

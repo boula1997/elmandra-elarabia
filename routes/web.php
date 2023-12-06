@@ -50,6 +50,8 @@ Route::group(
         Route::get('/portfolio', 'App/Http/Controllers/PortfolioController@index')->name('front.portfolio');
         Route::get('/orderproduct', 'App/Http/Controllers/OrderProductController@index')->name('front.orderproduct');
         Route::get('/product/{id}', [ProductController::class,'index'])->name('front.products');
+        Route::get('/category/{id}', [ProductController::class,'categoryproduct'])->name('front.category');
+        Route::get('/subcategory/{id}', [ProductController::class,'subcategoryproduct'])->name('front.subcategory');
         Route::get('/products', [ProductController::class,'showallproducts'])->name('front.show-products');
         Route::get('/product/{id}/show', [ProductController::class,'show'])->name('front.show.product');
         Route::get('/about', [AboutController::class,'index'])->name('front.about');
