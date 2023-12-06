@@ -382,6 +382,23 @@ iframe{
 }
 
 
+header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: -12px;
+}
+
+.timer-notification{
+  color: white !important;
+  text-align: right !important;
+}
+
+.notification-slider *{
+  color: white !important;
+}
+
   @-webkit-keyframes sk-rotate {
     100% {
       -webkit-transform: rotate(360deg);
