@@ -222,7 +222,7 @@
                                                     <ul class="product-detail">
                                                         <li>{{ $orderproduct->product->title }}</li>
                                                         <li>{{ __('general.qty') }}: <span>{{ $orderproduct->count }}</span></li>
-                                                        <li>{{ __('general.Price') }}: <span>{{ $orderproduct->total }}</span></li>
+                                                        <li>{{ __('general.price') }}: <span>{{ $orderproduct->total }}</span></li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -258,10 +258,10 @@
                                             <tr>
                                                 <td
                                                     style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    {{ __('general.shipping') }}</td>
+                                                    {{ __('general.shipping_value') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    00,00</td>
+                                                    {{ settings()->shipping }}</td>
                                             </tr>
                                             <tr>
                                                 <td

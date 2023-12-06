@@ -20,6 +20,7 @@ class CreateSettingsTable extends Migration
             $table->string('tab')->nullable();
             $table->string('image')->nullable();
             $table->text('map')->nullable();
+            $table->double('shipping')->nullable();
             $table->timestamps();
         });
     }

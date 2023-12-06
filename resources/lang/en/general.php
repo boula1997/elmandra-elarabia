@@ -389,6 +389,7 @@ return [
     'shipped'=>'Shipped', 
     'processing'=>'Processing', 
     'delivered'=>'Delivered', 
+    'shipping_value'=>'Shipping',
     'out_of_store'=>'Out of store', 
     'status'=>'Status', 
     'available'=>'Available', 
@@ -410,6 +411,8 @@ return [
     'qty'=>"QTY",
     'order_summary'=>"Order summary",
     'order_number'=>"Order Number",
+    'coupon_discount'=>"Coupon discount value",
+    'discount'=>"Discount",
     
     
     

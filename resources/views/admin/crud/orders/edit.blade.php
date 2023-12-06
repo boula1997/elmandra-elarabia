@@ -81,13 +81,13 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
-                                            <select name="status" value="{{ old('status',$order->status) }}" id="status"
+                                            <select name="status" id="status"
                                                 class="form-control js-searchBox">
-                                                <option value="pending">{{ __('general.pending') }}</option>
-                                                <option value="missing">{{ __('general.missing') }}</option>
-                                                <option value="shipped">{{ __('general.shipped') }}</option>
-                                                <option value="processing">{{ __('general.processing') }}</option>
-                                                <option value="delivered">{{ __('general.delivered') }}</option>
+                                                <option value="pending"   @selected($order->status =='pending')>{{ __('general.pending') }}</option>
+                                                <option value="missing"   @selected($order->status =='missing')>{{ __('general.missing') }}</option>
+                                                <option value="shipped"   @selected($order->status =='shipped')>{{ __('general.shipped') }}</option>
+                                                <option value="processing"@selected($order->status =='processing')>{{ __('general.processing') }}</option>
+                                                <option value="delivered" @selected($order->status =='delivered')>{{ __('general.delivered') }}</option>
                                              
                                             </select>
                 
