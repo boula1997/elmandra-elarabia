@@ -10,7 +10,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>{{ setting()->title }}  </title>
+    <title>{{ settings()->title }}  </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link

@@ -10,7 +10,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>{{ setting()->title }} </title>
+    <title>{{ settings()->title }} </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -200,7 +200,7 @@
                                         style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
                                         {{ __('general.weic_mail_desc2') }} <span
                                             class="theme-color">{{ contacts('email')[0]->contact }}</span>   {{ __('general.weic_mail_desc3') }}<span
-                                            class="theme-color" href="{{ route('front.home') }}">{{ setting()->title }}.</span>   {{ __('general.weic_mail_desc4') }}</p>
+                                            class="theme-color" href="{{ route('front.home') }}">{{ settings()->title }}.</span>   {{ __('general.weic_mail_desc4') }}</p>
                                 </td>
                             </tr>
                         </thead>
