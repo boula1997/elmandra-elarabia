@@ -57,7 +57,7 @@
                         <div class="footer-logo">
                             <div class="theme-logo">
                                 <a href="{{ route('front.home') }}">
-                                    <img src="{{ settings()->logo }}" class="blur-up lazyload" alt="">
+                                    <img src="{{ settings()->logo }}" class="blur-up lazyload p-0 m-0 w-100" alt="">
                                 </a>
                             </div>
 
