@@ -403,7 +403,9 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
   height: 200px !important;
 }
 
-
+.qr-code{
+  height: fit-content;
+}
 
 
   @-webkit-keyframes sk-rotate {

@@ -16,36 +16,6 @@
                                     </div>
                                 </div>
                             @endforeach
-{{-- 
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/delivery.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="service-detail">
-                                    <h5>{{ __('general.free_delivery') }}</h5>
-                                </div>
-                            </div>
-
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/discount.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="service-detail">
-                                    <h5>{{ __('general.daily_mega') }}</h5>
-                                </div>
-                            </div>
-
-                            <div class="service-box">
-                                <div class="service-image">
-                                    <img src="{{ asset('template/assets/svg/market.svg') }}" class="blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="service-detail">
-                                    <h5>{{ __('general.best_price') }}</h5>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -78,9 +48,6 @@
                                         <a href="tel:{{contacts('phone')[0]->contact }}">{{ contacts('phone')[0]->contact }}</a>
                                     </li>
                                 </ul>
-
-                                <img class="mt-3" src="{{ asset('images/asleltawfeer.png') }}" style="width:50%; height:50%" alt="">
-
                             </div>
                         </div>
                     </div>
@@ -123,7 +90,9 @@
                               
                               
                             </ul>
+                            
                         </div>
+                        <img class="mt-3 qr-code w-100" src="{{ asset('images/asleltawfeer.png') }}"  alt="">
                     </div>
 
                     <div class="col-xl-2 col-sm-3">
