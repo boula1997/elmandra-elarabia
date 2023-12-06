@@ -244,3 +244,23 @@ if (!function_exists('advantages()')) {
         }
        
     }
+
+    function productstouck($product_id,$quantity)
+    {
+        try{
+            
+            $product=Product::where('id',$product_id)->first();
+            $storeproducts=StoreProduct::where('product_id',$product_id)->get();
+            $count=$quantity;
+            foreach($storeproducts as $storeproduct){
+                $count +=$storeproduct->quantity;
+            }
+            if($product->stock >= $quantity && $product->stock >= $count)
+            {
+                return true;
+            }
+        }catch(Exception $e) {
+            dd($e);
+        }
+           
+    }
