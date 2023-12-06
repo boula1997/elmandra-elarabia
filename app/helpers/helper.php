@@ -226,17 +226,21 @@ if (!function_exists('advantages()')) {
 
     function orderStatus($order_id)
     {
-        $orderproducts=Orderproduct::find($order_id)->get();
-        
-        foreach($orderproducts as $orderproduct)
-        {
-            if($orderproduct->status == 0)
+        try{
+            $orderproducts=Orderproduct::where('order_id',$order_id)->get();
+            $status='pending';
+            foreach($orderproducts as $orderproduct)
             {
-                return 'missing';
+                if($orderproduct->status == 0)
+                {
+                    $status= 'missing';
+                    break;
+                }
             }
-            else
-            {
-                return 'pending';
-            }
+            return $status;
+
+        }catch(Exception $e) {
+            dd($e);
         }
+       
     }
