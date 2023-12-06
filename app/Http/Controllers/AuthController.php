@@ -68,7 +68,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function logout() {
-        auth('admin')->logout();
+        auth('api')->logout();
         return response()->json(['message' => 'User successfully signed out']);
     }
     /**
@@ -77,7 +77,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function refresh() {
-        return $this->createNewToken(auth('admin')->refresh());
+        return $this->createNewToken(auth('api')->refresh());
     }
     /**
      * Get the authenticated User.
@@ -85,7 +85,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function userProfile() {
-        return response()->json(auth('admin')->user());
+        return response()->json(auth('api')->user());
     }
     /**
      * Get the token array structure.
