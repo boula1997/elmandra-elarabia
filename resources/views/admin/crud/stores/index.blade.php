@@ -41,6 +41,7 @@
                                                 <th>@lang('general.title')</th>
                                                 <th>@lang('general.owner')</th>
                                                 <th>@lang('general.phone')</th>
+                                                <th>@lang('general.address')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -51,6 +52,7 @@
                                                     <td>{{ $store->title }}</td>
                                                     <td>{{ $store->owner }}</td>
                                                     <td>{{ $store->phone }}</td>
+                                                    <td>{{ $store->translate(app()->getLocale())->address }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'stores',

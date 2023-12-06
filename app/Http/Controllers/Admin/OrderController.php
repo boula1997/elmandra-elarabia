@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\OrderRequest as APIOrderRequest;
-use App\Http\Requests\OrderRequest;
+use App\Http\Requests\Dashboard\OrderRequest;
 use App\Http\Requests\OrderRequest as RequestsOrderRequest;
 use App\Mail\OrderAdminMail;
 use App\Mail\OrderMail;
@@ -65,6 +65,7 @@ class OrderController extends Controller
     public function update(OrderRequest $request, Order $order)
     {
         try {
+            dd($request);
             $data = $request->except('image','profile_avatar_remove');
             $order->update($data);
             return redirect()->route('orders.index', compact('order'))
@@ -83,17 +84,27 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         try {
+        //    dd($order->status=='delivered');
+           if($order->status=='delivered')
+           {
+            // dd("trueeeeeee");
+            $order->delete();
+            return redirect()->route('orders.index')
+                ->with('success', trans('general.deleted_successfully'));
+           }
+        //    dd("falseee");
             $orderproducts=Orderproduct::where('order_id',$order->id)->get();
             foreach($orderproducts as $orderproduct){
                 $orderproduct->product->update(['stock'=> $orderproduct->product->stock +$orderproduct->count ]);
 
-            $storeproduct =StoreProduct::where('store_id',$orderproduct->store_id)->where('product_id',$orderproduct->product->id)->first();
-            
-            $storeproduct->update(['quantity'=>$storeproduct->quantity +$orderproduct->count ]);
-        }
+                $storeproduct =StoreProduct::where('store_id',$orderproduct->store_id)->where('product_id',$orderproduct->product->id)->first();
+                
+                $storeproduct->update(['quantity'=>$storeproduct->quantity +$orderproduct->count ]);
+                }
             $order->delete();
             return redirect()->route('orders.index')
                 ->with('success', trans('general.deleted_successfully'));
+           
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
