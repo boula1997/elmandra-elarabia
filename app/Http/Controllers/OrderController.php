@@ -66,7 +66,7 @@ class OrderController extends Controller
     public function store(OrderRequest $request)
     {
         try {
-            $data = $request->except('store_id');
+            $data = $request->except('store_id','status');
             $data['total']=cart()->getTotal()+50;
             $data['user_id']=auth('web')->user()->id;
             $order = $this->order->create($data);

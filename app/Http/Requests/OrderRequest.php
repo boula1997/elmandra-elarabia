@@ -28,7 +28,6 @@ class OrderRequest extends FormRequest
             'phone'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'email'=>'required|email',
             'address'=>'required',
-            'status'=>'required',
         ];
 
         return $rules;
