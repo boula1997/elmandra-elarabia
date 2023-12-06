@@ -8,12 +8,12 @@
                         <h2 class="mb-2">{{ $name }}</h2>
                         <nav>
                             <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item">
+                                <li class="breadcrumb-item new">
                                     <a href="{{ route('front.home') }}">
-                                        <i class="fa-solid fa-house"></i>
+                                        <i class="fa-solid fa-house mx-2"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item active">{{ $name }}</li>
+                                <li class="breadcrumb-item active mb-2 -3">{{ $name }}</li>
                             </ol>
                         </nav>
                     </div>
