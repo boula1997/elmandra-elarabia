@@ -1,3 +1,4 @@
+@if (count($products) > 0)
     <!-- Product Section Start -->
     <section>
         <div class="container-fluid-lg">
@@ -21,92 +22,14 @@
                                     <div class="col-3 px-0 p-3">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="{{ route('front.show.product',$product->id) }}">
+                                                <a href="{{ route('front.show.product', $product->id) }}">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
                                                 <ul class="product-option justify-content-around">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                        <a href="{{ route('front.show.product',$product->id) }}" >
-                                                        <a href="{{ route('front.show.product',$product->id) }}"  >
-                                                            <i data-feather="eye"></i>
-                                                        </a>
-                                                    </li>
-
-                                                    <li data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Compare">
-                                                        <a href="compare.html">
-                                                            <i data-feather="refresh-cw"></i>
-                                                        </a>
-                                                    </li>
-
-                                                    <li data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Wishlist">
-                                                        <a href="wishlist.html" class="notifi-wishlist">
-                                                            <i data-feather="heart"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-detail">
-                                                <a href="product-left-thumbnail.html">
-                                                    <h6 class="name name-2 h-100">{{ $product->title }}</h6>
-                                                </a>
-
-                                                <div class="product-rating mt-2">
-                                                    <ul class="rating">
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <span>(34)</span>
-                                                </div>
-
-                                                <h6 class="sold weight text-content fw-normal">1 KG</h6>
-
-                                                <div class="counter-box">
-                                                    <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
-
-            <div class="title">
-                <h2>{{ page('product_home')->title }}</h2>
-                <span class="title-leaf">
-                    <svg class="icon-width">
-                        <use xlink:href="{{ asset('template/assets/svg/leaf.svg#leaf') }}"></use>
-                    </svg>
-                </span>
-                <p>{{ page('product_home')->subtitle }}</p>
-            </div>
-
-            <div class="product-border">
-                <div class="no-arrow">
-                    <div>
-                        <div class="row m-0">
-                            @foreach ($products as $product)
-                                @if ($loop->iteration <= 20)
-                                    <div class="col-3 px-0 p-3">
-                                        <div class="product-box wow fadeIn">
-                                            <div class="product-image">
-                                                <a href="product-left-thumbnail.html">
-                                                    <img src="{{ asset($product->image) }}"
-                                                        class="img-fluid blur-up lazyload" alt="">
-                                                </a>
-                                                <ul class="product-option justify-content-around">
-
-                                                    <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                        <a href="{{ route('front.show.product',$product->id) }}"  >
+                                                        <a href="{{ route('front.show.product', $product->id) }}">
                                                             <i data-feather="eye"></i>
                                                         </a>
                                                     </li>
@@ -132,8 +55,8 @@
                                                     <a href="product-left-thumbnail.html">
                                                         <h6 class="name name-2 h-100">{{ $product->title }}</h6>
                                                     </a>
-    
-    
+
+
                                                     <h6 class="sold weight textus-content fw-normal">1 KG</h6>
                                                 </div>
 
@@ -146,7 +69,7 @@
 
                                                         @if (auth('web')->user())
                                                             <button
-                                                                class="add-button addcart-button btn buy-button text-light addCart"
+                                                                class="add-button addcart-button btn buy-button text-light addCart" index="{{ $loop->index }}"
                                                                 product_id="{{ $product->id }}">
                                                                 <span>{{ __('general.add') }}</span>
                                                                 <i class="fa-solid fa-plus px-2"></i>
@@ -160,14 +83,15 @@
                                                                 </button>
                                                             </a>
                                                         @endif
-                                                        <div class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
+                                                        <div
+                                                            class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
                                                             <div class="input-group">
                                                                 <button type="button" class="btn qty-left-minus"
                                                                     data-type="minus" data-field="">
                                                                     <i class="fa fa-minus" aria-hidden="true"></i>
                                                                 </button>
                                                                 <input
-                                                                    class="form-control input-number qty-input itemCount"
+                                                                    class="form-control input-number qty-input itemCount loop{{ $loop->index }}"
                                                                     type="text" name="itemCount"
                                                                     value="{{ getQuantity($product->id) }}"
                                                                     hash="{{ getHash($product->id) }}">
@@ -194,15 +118,18 @@
     </div>
 </section>
 <!-- Product Section End -->
+@endif
 
 
-
+@include('front.components.noproducts');
 
 @push('js')
     <script>
         $('.addCart').on('click', function(e) {
             e.preventDefault();
             var product_id = $(this).attr('product_id');
+            var index = $(this).attr('index');
+            $('.loop'+index).val(1);
             let url = "{{ route('addTo.cart', ':id') }}";
             url = url.replace(':id', product_id);
             $.ajax({

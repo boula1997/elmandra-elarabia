@@ -21,14 +21,14 @@
                                     <div class="col-3 px-0 p-3">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="{{ route('front.show.product',$product->id) }}">
+                                                <a href="{{ route('front.show.product', $product->id) }}">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
                                                 <ul class="product-option justify-content-around">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                        <a href="{{ route('front.show.product',$product->id) }}"  >
+                                                        <a href="{{ route('front.show.product', $product->id) }}">
                                                             <i data-feather="eye"></i>
                                                         </a>
                                                     </li>
@@ -54,8 +54,8 @@
                                                     <a href="product-left-thumbnail.html">
                                                         <h6 class="name name-2 h-100">{{ $product->title }}</h6>
                                                     </a>
-    
-    
+
+
                                                     <h6 class="sold weight textus-content fw-normal">1 KG</h6>
                                                 </div>
 
@@ -68,7 +68,7 @@
 
                                                         @if (auth('web')->user())
                                                             <button
-                                                                class="add-button addcart-button btn buy-button text-light addCart"
+                                                                class="add-button addcart-button btn buy-button text-light addCart" index="{{ $loop->index }}"
                                                                 product_id="{{ $product->id }}">
                                                                 <span>{{ __('general.add') }}</span>
                                                                 <i class="fa-solid fa-plus px-2"></i>
@@ -82,14 +82,15 @@
                                                                 </button>
                                                             </a>
                                                         @endif
-                                                        <div class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
+                                                        <div
+                                                            class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
                                                             <div class="input-group">
                                                                 <button type="button" class="btn qty-left-minus"
                                                                     data-type="minus" data-field="">
                                                                     <i class="fa fa-minus" aria-hidden="true"></i>
                                                                 </button>
                                                                 <input
-                                                                    class="form-control input-number qty-input itemCount"
+                                                                    class="form-control input-number qty-input itemCount loop{{ $loop->index }}"
                                                                     type="text" name="itemCount"
                                                                     value="{{ getQuantity($product->id) }}"
                                                                     hash="{{ getHash($product->id) }}">
@@ -125,6 +126,8 @@
         $('.addCart').on('click', function(e) {
             e.preventDefault();
             var product_id = $(this).attr('product_id');
+            var index = $(this).attr('index');
+            $('.loop'+index).val(1);
             let url = "{{ route('addTo.cart', ':id') }}";
             url = url.replace(':id', product_id);
             $.ajax({
