@@ -16,7 +16,7 @@
                                         <div class="product-slider-detail">
                                             <div class="d-flex flex-column">
                                                 <div>
-                                                    <a href="#" class="d-block">
+                                                    <a href="{{ route('front.show.product',$product->id) }}" class="d-block">
                                                         <h3 class="text-title">{{ $product->title }}</h3>
                                                     </a>
                                                     <h5>{{ $product->subcategory->title }}</h5>

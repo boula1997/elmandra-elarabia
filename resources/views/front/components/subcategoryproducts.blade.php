@@ -1,4 +1,4 @@
-@if (count($products) > 0)
+@if (count($subcategory->products) > 0)
 <section>
     <div class="container-fluid-lg">
         <div class="title">
@@ -12,7 +12,7 @@
         </div>
         <div class="product-border border-row">
             <div class="slider-6_2 no-arrow">
-                @foreach ($products as $product)
+                @foreach ($subcategory->products as $product)
                     @if($loop->iteration <= 20)
                         <div>
                                 <div class="row m-0">
@@ -46,7 +46,7 @@
                                                 </ul>
                                             </div>
                                             <div class="product-detail">
-                                                <a href="product-left-thumbnail.html">
+                                                <a href="{{ route('front.show.product',$product->id) }}">
                                                     <h6 class="name name-2 h-100">{{ $product->title }}</h6>
                                                 </a>
 
@@ -222,9 +222,6 @@
     </div>
 </section>
 @endif
-
-
-@include('front.components.noproducts');
 
 @push('js')
     <script>
