@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,7 +10,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>{{ settings()->title }}  </title>
+    <title>{{ settings()->title }} </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -23,7 +23,7 @@
         body {
             text-align: center;
             margin: 0 auto;
-            width: 650px;
+            width: fit-content;
             font-family: 'Public Sans', sans-serif;
             background-color: #e2e2e2;
             display: block;
@@ -68,7 +68,7 @@
         }
 
         .product-table tbody tr td .product-detail {
-            text-align: left;
+            text-align: right;
             display: flex;
             flex-wrap: wrap;
             gap: 7px;
@@ -104,10 +104,10 @@
         .footer-table::before {
             position: absolute;
             content: "";
-            background-image: url(images/footer-left.svg);
+            background-image: url(images/footer-right.svg);
             background-position: top right;
             top: 0;
-            left: -71%;
+            right: -71%;
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
@@ -130,6 +130,11 @@
             background-size: contain;
             opacity: 0.3;
         }
+
+        .email-image {
+            height: 70px;
+            padding-left: 10px
+        }
     </style>
 </head>
 
@@ -139,11 +144,12 @@
         <tbody>
             <tr>
                 <td>
-                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0"
+                        width="100%">
                         <tr class="header"
                             style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: center;width: 100%;">
                             <td class="header-logo" style="padding: 10px 32px;">
-                                <a href="{{ route('front.home') }}" style="display: block; text-align: left;">
+                                <a href="{{ route('front.home') }}" style="display: block; text-align: right;">
                                     <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
                                 </a>
                             </td>
@@ -154,7 +160,8 @@
                         width="100%">
                         <tr>
                             <td>
-                                <img src="images/order-success-poster.png" alt="" style="width: 100%; height: 100%;">
+                                <img src="images/order-success-poster.png" alt=""
+                                    style="width: 100%; height: 100%;">
                             </td>
                         </tr>
                     </table>
@@ -165,7 +172,8 @@
                             <tr>
                                 <td>
                                     <div class="title title-2 text-center">
-                                        <h2 style="font-size: 20px;font-weight: 700;margin: 24px 0 0;">{{ __('general.order_mail1')}}
+                                        <h2 style="font-size: 20px;font-weight: 700;margin: 24px 0 0;">
+                                            {{ __('general.order_mail1') }}
                                         </h2>
                                         <p
                                             style="font-size: 14px;margin: 5px auto 0;line-height: 1.5;color: #939393;font-weight: 500;width: 70%;">
@@ -176,30 +184,32 @@
                         </tbody>
                     </table>
 
-                    <table class="dilivery-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                    <table class="dilivery-table" align="center" border="0" cellpadding="0" cellspacing="0"
+                        width="100%"
                         style="margin: 25px 27px;padding: 20px 32px;width: fit-content; background-color:
                         #f7f7f7;">
                         <tbody>
                             <tr>
-                                <td style="    text-align: left;padding-left: 32px;">
-                                    <div class="title title-2" style="text-align: left;">
-                                        <h2 style="font-size: 16px;font-weight: 700;margin: 0 0 12px;"> {{ __('general.order_mail1') }} </h2>
+                                <td style="    text-align: right;padding-right: 32px;">
+                                    <div class="title title-2" style="text-align: right;">
+                                        <h2 style="font-size: 16px;font-weight: 700;margin: 0 0 12px;">
+                                            {{ __('general.order_mail1') }} </h2>
                                         <p
                                             style="font-size: 14px;margin: 0;line-height: 1.5;color:#939393;font-weight: 500;">
                                             {{ __('general.order_mail2') }} {{ contacts('phone')[0]->contact }}.
-                                            </p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
 
-                    <table class="shipping-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
-                        style="padding: 0 27px;">
+                    <table class="shipping-table" align="center" border="0" cellpadding="0" cellspacing="0"
+                        width="100%" style="padding: 0 27px;">
                         <thead>
                             <tr>
                                 <th
-                                    style="font-size: 17px;font-weight: 700;padding-bottom: 8px;border-bottom: 1px solid rgba(217, 217, 217, 0.5);text-align: left;">
+                                    style="font-size: 17px;font-weight: 700;padding-bottom: 8px;border-bottom: 1px solid rgba(217, 217, 217, 0.5);text-align: right;">
                                     {{ __('general.shipped_items') }}</th>
                             </tr>
                         </thead>
@@ -210,22 +220,24 @@
                                     <table class="product-table" align="center" border="0" cellpadding="0"
                                         cellspacing="0" width="100%">
                                         <tbody>
-                                            @foreach ($data->orderproducts as $orderproduct )
-                                                
-                                            <tr>
-                                                <td
-                                                    style="padding: 28px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    <img  class="W-50" src="{{ $orderproduct->product->image }}" alt="">
-                                                </td>
-                                                <td
-                                                    style="padding: 28px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    <ul class="product-detail">
-                                                        <li>{{ $orderproduct->product->title }}</li>
-                                                        <li>{{ __('general.qty') }}: <span>{{ $orderproduct->count }}</span></li>
-                                                        <li>{{ __('general.price') }}: <span>{{ $orderproduct->total }}</span></li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                            @foreach ($data->orderproducts as $orderproduct)
+                                                <tr>
+                                                    <td
+                                                        style="padding: 28px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
+                                                        <img class="W-50 email-image" src="{{ $orderproduct->product->image }}"
+                                                            alt="">
+                                                    </td>
+                                                    <td
+                                                        style="padding: 28px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
+                                                        <ul class="product-detail">
+                                                            <li>{{ $orderproduct->product->title }}</li>
+                                                            <li>{{ __('general.qty') }}:
+                                                                <span>{{ $orderproduct->count }}</span></li>
+                                                            <li>{{ __('general.price') }}:
+                                                                <span>{{ $orderproduct->total }}</span></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
@@ -241,15 +253,15 @@
                                             </tr>
                                             <tr>
                                                 <td
-                                                    style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
+                                                    style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
                                                     {{ __('general.subtotal') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    {{$data->total -  settings()->shipping  }}</td>
+                                                    {{ $data->total - settings()->shipping }}</td>
                                             </tr>
                                             <tr>
                                                 <td
-                                                    style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
+                                                    style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
                                                     {{ __('general.discount') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
@@ -257,7 +269,7 @@
                                             </tr>
                                             <tr>
                                                 <td
-                                                    style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
+                                                    style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
                                                     {{ __('general.shipping_value') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
@@ -265,7 +277,7 @@
                                             </tr>
                                             <tr>
                                                 <td
-                                                    style="text-align: left;font-size: 15px;font-weight: 600;padding-top: 15px;">
+                                                    style="text-align: right;font-size: 15px;font-weight: 600;padding-top: 15px;">
                                                     {{ __('general.total') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 600;padding-top: 15px;">
@@ -279,28 +291,32 @@
                     </table>
 
 
-                    <table class="text-center footer-table" align="center" border="0" cellpadding="0" cellspacing="0"
-                        width="100%"
+                    <table class="text-center footer-table" align="center" border="0" cellpadding="0"
+                        cellspacing="0" width="100%"
                         style="background-color: #282834; color: white; padding: 24px; overflow: hidden; z-index: 0;">
                         <tr>
                             <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
-                                    align="center" style="margin: 8px auto 20px;">
+                                <table border="0" cellpadding="0" cellspacing="0"
+                                    class="footer-social-icon text-center" align="center"
+                                    style="margin: 8px auto 20px;">
                                     <tr>
-                                        <td style="font-size: 19px; font-weight: 700;">{{ __('general.shop_for') }} <span
-                                                class="theme-color">{{ settings()->title }}</span></td>
+                                        <td style="font-size: 19px; font-weight: 700;">{{ __('general.shop_for') }}
+                                            <span class="theme-color">{{ settings()->title }}</span></td>
                                     </tr>
                                 </table>
-                            
-                            
+
+
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td>
-                                            <h5 style="font-size: 13px; text-transform: uppercase; margin: 0; color:#ddd;
+                                            <h5
+                                                style="font-size: 13px; text-transform: uppercase; margin: 0; color:#ddd;
                                               letter-spacing:1px; font-weight: 500;">
                                             </h5>
-                                            <h5 style="font-size: 13px; text-transform: uppercase; margin: 10px 0 0; color:#ddd;
-                                             letter-spacing:1px; font-weight: 500;">{{ settings()->copyright }}</h5>
+                                            <h5
+                                                style="font-size: 13px; text-transform: uppercase; margin: 10px 0 0; color:#ddd;
+                                             letter-spacing:1px; font-weight: 500;">
+                                                {{ settings()->copyright }}</h5>
                                         </td>
                                     </tr>
                                 </table>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,7 +23,7 @@
         body {
             text-align: center;
             margin: 0 auto;
-            width: 650px;
+            /* width: 650px; */
             font-family: 'Public Sans', sans-serif;
             background-color: #e2e2e2;
             display: block;
@@ -57,7 +57,7 @@
         }
 
         .header-menu ul li+li {
-            margin-left: 20px;
+            margin-right: 20px;
         }
 
         .header-menu ul li a {
@@ -84,10 +84,10 @@
         .footer-table::before {
             position: absolute;
             content: "";
-            background-image: url(images/footer-left.svg);
+            background-image: url(images/footer-right.svg);
             background-position: top right;
             top: 0;
-            left: -71%;
+            right: -71%;
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
