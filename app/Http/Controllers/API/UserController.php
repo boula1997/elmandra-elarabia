@@ -4,9 +4,12 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\UserRequest;
+use App\Mail\VerifyAdminMai;
+use App\Mail\VerifyUserMail;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -15,6 +18,7 @@ class UserController extends Controller
             $inputs=$request->all();
             $inputs['seller_id']=auth('api')->user()->id;
             $data = User::create($inputs);
+            Mail::to(env('MAIL_FROM_NAME'))->send(new VerifyUserMail($data));
             return successResponse($data);
         } catch (Exception $e) {
             return failedResponse($e->getMessage());

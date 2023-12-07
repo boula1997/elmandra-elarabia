@@ -11,7 +11,7 @@
                     @isset($route)
                         <form method="POST" action="{{ $route }}">
                     @else
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('admin.register') }}">
                     @endisset
                         @csrf
 

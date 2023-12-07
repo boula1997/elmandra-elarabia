@@ -114,6 +114,9 @@
         .theme-color {
             color: #0DA487;
         }
+        .main-logo{
+            height: 150px;
+        }
     </style>
 </head>
 
@@ -123,9 +126,9 @@
         <tbody>
             <tr>
                 <td>
-                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: flex; justify-content: center; align-items: center;">
                         <tr class="header"
-                            style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
+                            style="display: flex;align-items: center;justify-content: space-between;width: 100%;">
                             <td class="header-logo" style="padding: 10px 32px;">
                                 <a href="{{ route('front.home') }}" style="display: block; text-align: right;">
                                     <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
@@ -177,13 +180,13 @@
                             </tr>
                         </thead>
                     </table>
-                    <tbody>
+                  
 
                         <table class="shipping-table" align="center" border="0" cellpadding="0" cellspacing="0"
                             width="100%" style="padding: 0 27px;">
                             <tr
                                 style="column-count: 2;column-rule-style: dashed;column-rule-color: rgba(82, 82, 108, 0.7);column-gap: 22px;column-rule-width: 1px;display: flex;align-items: center;">
-                                <td style="width: 70%;">
+                                <td style="width: 100%;">
                                     <table class="dilivery-table" align="center" border="0" cellpadding="0"
                                         style="background-color: #F7F7F7;padding: 14px;" cellspacing="0" width="100%">
                                         <tbody>
@@ -194,7 +197,8 @@
                                                     {{ __('general.name') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    {{ $data->name}} </td>
+                                                    {{ $data->name}}
+                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -202,7 +206,8 @@
                                                     {{ __('general.email') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    {{ $data->email}} </td>
+                                                    {{ $data->email}} 
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>

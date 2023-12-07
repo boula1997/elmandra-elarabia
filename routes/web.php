@@ -32,7 +32,7 @@ Route::group(
     function () {
         
         // Route::get('/mail', function () {
-        //     return view('mail.welcome');
+        //     return view('mail.admin_verify');
         // })->name('dashboard');
 
         Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('user.register-view');

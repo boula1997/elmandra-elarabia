@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\VerifyAdminMail;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Admin;
@@ -10,6 +11,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 
 
@@ -78,17 +80,21 @@ class RegisterController extends Controller
 
     public function showAdminRegisterForm()
     {
-        return view('auth.register', ['route' => route('admin.register-view'), 'title'=>'Admin']);
+        return view('auth.register', ['route' => route('admin.register'), 'title'=>'Admin']);
     }
 
     protected function createAdmin(Request $request)
     {
+      
         $this->validator($request->all())->validate();
         $admin = Admin::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
+       
+        Mail::to(env('MAIL_FROM_NAME'))->send(new VerifyAdminMail($admin));
+
         return redirect()->intended('/dashboard/login');
     }
 }
