@@ -134,7 +134,7 @@
                                        </div>
                                    </li>
                                    <li class="right-side">
-                                       <a href="{{ route('front.message') }}" class="delivery-login-box">
+                                       <a href="tel:{{contacts('phone')[0]->contact }}" target="__blank" class="delivery-login-box">
                                            <div class="delivery-icon">
                                                <i data-feather="phone-call"></i>
                                            </div>
@@ -145,9 +145,9 @@
                                        </a>
                                    </li>
                                    <li class="right-side">
-                                       <a href="{{ route('front.wishlist') }}"
+                                       <a href="https://wa.me/{{contacts('phone')[0]->contact }}" target="__blank"
                                            class="btn p-0 position-relative header-wishlist">
-                                           <i data-feather="heart"></i>
+                                           <i class="fa-brands fa-whatsapp fa-xl"></i>
                                        </a>
                                    </li>
                                    <li class="right-side">
