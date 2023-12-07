@@ -25,11 +25,12 @@
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
-                                                <ul class="product-option justify-content-around">
+                                                <ul class="product-option justify-content-center eye-show bg-transparent text-white">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
                                                         <a href="{{ route('front.show.product', $product->id) }}">
-                                                            <i data-feather="eye"></i>
+                                                            <i class="fas fa-eye text-white fa-lg fs-1"></i>
+                                                           
                                                         </a>
                                                     </li>
                                                 </ul>
