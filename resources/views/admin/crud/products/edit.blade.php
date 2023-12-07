@@ -45,6 +45,18 @@
                                         {!! old($locale . '.description', $product->translate($locale)->description) !!} 
                                     </textarea>
                                 </div>
+                                <div class="form-group">
+                                    <label>@lang('general.unit') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="{{ $locale . '[unit]' }}"
+                                            placeholder="@lang('general.unit')"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.unit') is-invalid @enderror"
+                                            value="{{ old($locale . '.unit', $product->translate($locale)->unit) }}">
+                                    </div>
+                                </div>
                             </div>
                         @endforeach
                     </div>

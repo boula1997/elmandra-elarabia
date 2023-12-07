@@ -18,28 +18,10 @@
                                                 <div>
                                                     <a href="{{ route('front.show.product',$product->id) }}" class="d-block">
                                                         <h3 class="text-title">{{ $product->title }}</h3>
+                                                        <h3 class="text-title">{{ $product->unit }}</h3>
                                                     </a>
                                                     <h5>{{ $product->subcategory->title }}</h5>
-                                                    <div class="product-rating">
-                                                        <ul class="rating">
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <span>(34)</span>
-                                                    </div>
+                                                  
                                                     <h6>بواسطة <span class="theme-color">{{ $product->subcategory->category->title }}</span></h6>
                                                 </div>
                                             </div>

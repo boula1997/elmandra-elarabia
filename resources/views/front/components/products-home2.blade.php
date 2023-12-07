@@ -28,20 +28,6 @@
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
-
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Compare">
-                                            <a href="compare.html">
-                                                <i data-feather="refresh-cw"></i>
-                                            </a>
-                                        </li>
-
-                                        <li data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Wishlist">
-                                            <a href="wishlist.html" class="notifi-wishlist">
-                                                <i data-feather="heart"></i>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                                 <div class="product-detail">
@@ -49,31 +35,12 @@
                                         <h6 class="name name-2 h-100">{{ $product->title }}</h6>
                                     </a>
 
-                                    <div class="product-rating mt-2">
-                                        <ul class="rating">
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star" class="fill"></i>
-                                            </li>
-                                            <li>
-                                                <i data-feather="star"></i>
-                                            </li>
-                                        </ul>
-                                        <span>(34)</span>
-                                    </div>
+                             
 
-                                    <h6 class="sold weight textus-content fw-normal">1 KG</h6>
+                                    <h6 class="sold weight textus-content fw-normal">{{$product->unit}}</h6>
 
                                     <div class="counter-box">
-                                        <h6 class="sold theme-color">{{ $product->price }}
+                                        <h6 class="sold theme-color"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>
                                             {{ app()->getLocale() == 'ar' ? 'L.E' : '$' }}</h6>
 
                                         <div class="addtocart_btn pt-5">
