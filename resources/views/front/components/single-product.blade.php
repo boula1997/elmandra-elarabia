@@ -264,7 +264,8 @@
                                                                 <a href="{{ route('front.show.product',$product->id) }}">
                                                                     <h6 class="name">{{ $product->title }}</h6>
                                                                 </a>
-                                                                <h6 class="price theme-color">{{ $product->price }}</h6>
+                                                                <h5 class="span-name">{{ $product->unit }}</h5>
+                                                                <h6 class="price theme-color"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del></h6>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -315,18 +316,6 @@
                                                                     <i data-feather="eye"></i>
                                                                 </a>
                                                             </li>
-                
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-                                                                <a href="compare.html">
-                                                                    <i data-feather="refresh-cw"></i>
-                                                                </a>
-                                                            </li>
-                
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                                <a href="wishlist.html" class="notifi-wishlist">
-                                                                    <i data-feather="heart"></i>
-                                                                </a>
-                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -337,27 +326,7 @@
                                                         <a href="{{ route('front.show.product',$product->id) }}">
                                                             <h5 class="name">{{ $product->title }}</h5>
                                                         </a>
-                                                        <div class="product-rating mt-2">
-                                                            <ul class="rating">
-                                                                <li>
-                                                                    <i data-feather="star" class="fill"></i>
-                                                                </li>
-                                                                <li>
-                                                                    <i data-feather="star" class="fill"></i>
-                                                                </li>
-                                                                <li>
-                                                                    <i data-feather="star" class="fill"></i>
-                                                                </li>
-                                                                <li>
-                                                                    <i data-feather="star" class="fill"></i>
-                                                                </li>
-                                                                <li>
-                                                                    <i data-feather="star" class="fill"></i>
-                                                                </li>
-                                                            </ul>
-                                                            
-                                                        </div>
-                                                        
+                                                        <h5 class="span-name">{{ $product->unit }}</h5>
                                                         <h5 class="price"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>
                                                         </h5>
                                                         <div class="add-to-cart-box bg-white">

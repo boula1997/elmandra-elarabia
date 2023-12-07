@@ -22,27 +22,8 @@
                                             <a href="{{ route('front.show.product',$product->id) }}">
                                                 <h5>{{$product->title}}</h5>
                                             </a>
-                                            <div class="product-rating">
-                                                <ul class="rating">
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star" class="fill"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i data-feather="star"></i>
-                                                    </li>
-                                                </ul>
-                                                <span>(34)</span>
-                                            </div>
-                                            <h6> {{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                            <h5>{{$product->unit}}</h5>
+                                            <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
                                         </div>
                                     </div>
                                     @else
@@ -73,27 +54,9 @@
                                                 <a href="{{ route('front.show.product',$product->id) }}">
                                                     <h5>{{ $product->title }}</h5>
                                                 </a>
-                                                <div class="product-rating">
-                                                    <ul class="rating">
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <span>(34)</span>
-                                                </div>
-                                                <h6>{{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                
+                                                <h5>{{$product->unit}}</h5>
+                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
                                             </div>
                                         </div>
                                         @else
@@ -124,27 +87,8 @@
                                                     <a href="{{ route('front.show.product',$product->id) }}">
                                                         <h5>{{ $product->title }}</h5>
                                                     </a>
-                                                    <div class="product-rating">
-                                                        <ul class="rating">
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star" class="fill"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i data-feather="star"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <span>(34)</span>
-                                                    </div>
-                                                    <h6>{{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                    <h5>{{$product->unit}}</h5>
+                                                    <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
                                                 </div>
                                             </div>
                                           @else
@@ -177,27 +121,9 @@
                                                 <a href="{{ route('front.show.product',$product->id) }}">
                                                     <h5>{{ $product->title }}</h5>
                                                 </a>
-                                                <div class="product-rating">
-                                                    <ul class="rating">
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star" class="fill"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i data-feather="star"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <span>(34)</span>
-                                                </div>
-                                                <h6>{{$product->price}}{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                             
+                                                <h5>{{$product->unit}}</h5>
+                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
                                             </div>
                                         </div>
                                         @else
