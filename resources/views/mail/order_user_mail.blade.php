@@ -232,9 +232,9 @@
                                                         <ul class="product-detail">
                                                             <li>{{ $orderproduct->product->title }}</li>
                                                             <li>{{ __('general.qty') }}:
-                                                                <span>{{ $orderproduct->count }}</span></li>
+                                                                <span>{{ $orderproduct->count }} {{ $orderproduct->product->translate(app()->getLocale())->unit }}</span></li>
                                                             <li>{{ __('general.price') }}:
-                                                                <span>{{ $orderproduct->total }}</span></li>
+                                                                <span>{{ $orderproduct->total }} ر.س </span></li>
                                                         </ul>
                                                     </td>
                                                 </tr>
@@ -257,7 +257,7 @@
                                                     {{ __('general.subtotal') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    {{ $data->total - settings()->shipping }}</td>
+                                                    {{ $data->total - settings()->shipping }} ر.س </td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -265,7 +265,7 @@
                                                     {{ __('general.discount') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    00,00</td>
+                                                    00,00 ر.س </td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -273,7 +273,7 @@
                                                     {{ __('general.shipping_value') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    {{ settings()->shipping }}</td>
+                                                    {{ settings()->shipping }} ر.س </td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -281,7 +281,7 @@
                                                     {{ __('general.total') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 600;padding-top: 15px;">
-                                                    {{ $data->total }}</td>
+                                                    {{ $data->total }} ر.س </td>
                                             </tr>
                                         </tbody>
                                     </table>

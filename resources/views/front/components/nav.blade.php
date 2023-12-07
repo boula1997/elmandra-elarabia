@@ -301,7 +301,7 @@
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
-                                              > {{ __('general.contact') }}</a>
+                                              > {{ __('general.contact_us') }}</a>
                                            </li>
 
                                        </ul>
