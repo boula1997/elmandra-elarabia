@@ -378,7 +378,7 @@ iframe {
 
 .slider-mobile {
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .home-detail .description p {
@@ -456,6 +456,9 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
   background-color: #151423;
   top: 0;
   height: 100%;
+}
+.mobile-menu{
+  z-index: 3;
 }
 @-webkit-keyframes sk-rotate {
   100% {
