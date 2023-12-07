@@ -428,6 +428,15 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
 
 }
 
+.trash-icon {
+  cursor: pointer;
+  
+}
+.trash-icon:hover {
+ color:red !important;
+
+}
+
 @-webkit-keyframes sk-rotate {
   100% {
     -webkit-transform: rotate(360deg);

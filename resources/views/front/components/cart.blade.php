@@ -7,7 +7,7 @@
                         <div class="col-xxl-9">
                             <div class="cart-table">
                                 <div class="table-responsive-xl">
-                                    <table class="table">
+                                    <table class="table" id="shipping-fees" shipping="{{ settings()->shipping }}">
                                         <tbody>
                                             @foreach (cart()->getItems() as $item)
                                                 <tr class="product-box-contain">
@@ -77,9 +77,9 @@
 
                                                     <td class="save-remove">
                                                         <h4 class="table-title text-content">{{ __('general.action') }}</h4>
-                                                        <a class="save notifi-wishlist" href="javascript:void(0)">{{ __('general.save_for_later') }}</a>
-                                                        <a class="remove close_button removeCart link"
-                                                            hash="{{ $item->getHash() }}">{{ __('general.remove') }}</a>
+
+                                                        <a class="remove close_button removeCart cursor-pointer"
+                                                            hash="{{ $item->getHash() }}"><i class="fas fa-trash text-secondary trash-icon  fa-lg"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -261,7 +261,7 @@
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
                         $('.single-total').text(response.total);
-                        $('.cart-total').text((response.total) + 25);
+                        $('.cart-total').text((response.total) + $('#shipping-fees-fees').attr('shipping'));
                         toastr.options = {
                             "closeButton": true,
                             "debug": false,
@@ -405,7 +405,7 @@
                         $('.single-total'+index).text(quantity * $(this).attr('price'));
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
-                        $('.cart-total').text((response.total) + 25);
+                        $('.cart-total').text((response.total) + Number($('#shipping-fees').attr('shipping')));
                     },
                     error: function(response) {
 
@@ -435,7 +435,7 @@
                         $('.single-total'+index).text(quantity * $(this).prev().attr('price'));
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
-                        $('.cart-total').text((response.total) + 25);
+                        $('.cart-total').text((response.total) + Number($('#shipping-fees').attr('shipping')));
                     },
                     error: function(response) {
 
@@ -467,7 +467,7 @@
                         $('.single-total'+index).text(quantity * $(this).next().attr('price'));
                         $('.cart-count').text(response.count);
                         $('.cart-subtotal').text(response.total);
-                        $('.cart-total').text((response.total) + 25);
+                        $('.cart-total').text((response.total) + Number($('#shipping-fees').attr('shipping')));
                     },
                     error: function(response) {
 
