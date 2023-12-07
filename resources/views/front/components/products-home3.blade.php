@@ -18,7 +18,7 @@
                                                 <div>
                                                     <a href="{{ route('front.show.product',$product->id) }}" class="d-block">
                                                         <h3 class="text-title">{{ $product->title }}</h3>
-                                                        <h3 class="text-title">{{ $product->unit }}</h3>
+                                                        <h3 class="text-title">{{  $product->translate(app()->getLocale())->unit }}</h3>
                                                     </a>
                                                     <h5>{{ $product->subcategory->title }}</h5>
                                                   

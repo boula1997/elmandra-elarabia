@@ -227,7 +227,7 @@ return [
     'total'=>'Total',
     'profile'=>'Profile',
     'account'=>'My Account',
-    'pound'=>'SAR',
+    'pound'=>'ر.س',
     'checkout'=>'Checkout',
     'add_to_cart'=>'Add to Cart',
     'add_to_favourite'=>'Add to Favourite',

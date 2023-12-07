@@ -22,8 +22,8 @@
                                             <a href="{{ route('front.show.product',$product->id) }}">
                                                 <h5>{{$product->title}}</h5>
                                             </a>
-                                            <h5>{{$product->unit}}</h5>
-                                            <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
+                                            <h5>{{ $product->translate(app()->getLocale())->unit}}</h5>
+                                            <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'ر.س':'$' }}</h6>
                                         </div>
                                     </div>
                                     @else
@@ -55,8 +55,8 @@
                                                     <h5>{{ $product->title }}</h5>
                                                 </a>
                                                 
-                                                <h5>{{$product->unit}}</h5>
-                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
+                                                <h5>{{ $product->translate(app()->getLocale())->unit}}</h5>
+                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'ر.س':'$' }}</h6>
                                             </div>
                                         </div>
                                         @else
@@ -87,8 +87,8 @@
                                                     <a href="{{ route('front.show.product',$product->id) }}">
                                                         <h5>{{ $product->title }}</h5>
                                                     </a>
-                                                    <h5>{{$product->unit}}</h5>
-                                                    <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
+                                                    <h5>{{ $product->translate(app()->getLocale())->unit}}</h5>
+                                                    <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'ر.س':'$' }}</h6>
                                                 </div>
                                             </div>
                                           @else
@@ -122,8 +122,8 @@
                                                     <h5>{{ $product->title }}</h5>
                                                 </a>
                                              
-                                                <h5>{{$product->unit}}</h5>
-                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
+                                                <h5>{{ $product->translate(app()->getLocale())->unit}}</h5>
+                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'ر.س':'$' }}</h6>
                                             </div>
                                         </div>
                                         @else

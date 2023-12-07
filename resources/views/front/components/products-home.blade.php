@@ -43,12 +43,12 @@
                                                     </a>
 
 
-                                                    <h6 class="sold weight textus-content fw-normal">{{ $product->unit }}</h6>
+                                                    <h6 class="sold weight textus-content fw-normal">{{  $product->translate(app()->getLocale())->unit }}</h6>
                                                 </div>
 
                                                 <div class="counter-box">
                                                     <h6 class="price"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>
-                                                        {{ app()->getLocale() == 'ar' ? 'SAR' : '$' }}
+                                                        {{ app()->getLocale() == 'ar' ? 'ر.س' : '$' }}
                                                     </h6>
 
                                                     <div class="addtocart_btn pt-5">
