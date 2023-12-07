@@ -18,7 +18,7 @@
                                           class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.google_play') }}<i
                                               class="fab fa-google-play ms-2 icon"></i>
                                       </button>
-                                      <button onclick="location.href = '#';"
+                                      <button onclick="location.href = '{{ route('front.shopping_now') }}';"
                                           class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}<i
                                               class="fas fa-shopping-cart ms-2 icon"></i>
                                   </div>

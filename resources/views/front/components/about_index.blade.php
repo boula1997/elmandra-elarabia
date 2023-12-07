@@ -24,7 +24,7 @@
                              class="btn btn-animation mt-xxl-4 mt-2 home-button  me-2  mx-5 ">{{ __('general.google_play') }}
                              <i class="fab fa-google-play me-2  icon"></i>
                          </button>
-                         <button onclick="location.href = '#';"
+                         <button onclick="location.href = '{{ route('front.shopping_now') }}';"
                              class="btn btn-animation mt-xxl-4 mt-2 home-button  me-2  mx-5 ">{{ __('general.order_now') }}
                              <i class="fas fa-shopping-cart me-2  icon"></i>
                          </button>
@@ -181,152 +181,8 @@
             </div>
         </div>
     </section> --}}
-         <!-- Client Section End -->
+        <!-- Client Section End -->
+   
 
 
-
-
-
-         <!-- Blog Section Start -->
-         {{-- <section class="section-lg-space">
-        <div class="container-fluid-lg">
-            <div class="about-us-title text-center">
-                <h4 class="text-content">Our Blog</h4>
-                <h2 class="center">Our Latest Blog</h2>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="slider-5 ratio_87">
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="{{asset('template/assets/images/veg-2/blog/1.jpg')}}" class="bg-img blur-up lazyload"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Farmart</h6>
-                                    <h5>Fresh Meat Saugage</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="{{asset('template/assets/images/veg-2/blog/2.jpg')}}" class="bg-img blur-up lazyload"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Soda Brand</h6>
-                                    <h5>Soda 500ml - 20% OFF</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="{{asset('template/assets/images/veg-2/blog/3.jpg')}}" class="bg-img blur-up lazyload"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Beer Brand</h6>
-                                    <h5>Soda 500ml - 20% OFF</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-box-image">
-                                    <div class="blog-image">
-                                        <a href="blog-detail.html" class="rounded-3">
-                                            <img src="{{asset('template/assets/images/veg-2/blog/4.jpg')}}" class="bg-img blur-up lazyload"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Beer Brand</h6>
-                                    <h5>Fresh Beer -30% OFF</h5>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="blog-box">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="rounded-3">
-                                        <img src="{{asset('template/assets/images/veg-2/blog/5.jpg')}}" class="bg-img blur-up lazyload"
-                                            alt="">
-                                    </a>
-                                </div>
-
-                                <a href="blog-detail.html" class="blog-detail d-block">
-                                    <h6>Milk Brand</h6>
-                                    <h5>Fresh Milk</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-
-         <!-- Blog Section End -->
-         <!-- About Start -->
-         {{-- <div class="container-fluid p-5">
-            <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;" data-aos="fade-{{ app()->getLocale()=='ar'?'left':'right'}}">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="{{ asset(isset(page('about')->images[0]->url) ? page('about')->images[0]->url : asset('default.jpg')) }}" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7"data-aos="fade-{{ app()->getLocale()=='ar'?'right':'left'}}">
-                    <div class="mb-4" >
-                        <h5 class="text-primary text-uppercase">{{ __('general.about') }}</h5>
-                        
-                        <h1 class="display-5 text-uppercase mb-0">{{ page('about')->title }}</h1>
-                    </div>
-                    <h4 class="text-body mb-4">{{ page('about')->subtitle }}</h4>
-                    <div class="mb-4 description">{!! page('about')->description !!}</div>
-                    <div class="rounded bg-dark p-5">
-                        <ul class="nav nav-pills justify-content-between mb-3">
-                            <li class="nav-item w-50">
-                                <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">{{ __('general.vision') }}</a>
-                            </li>
-                            <li class="nav-item w-50">
-                                    <a class="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">{{ __('general.mission') }}</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="pills-1">
-                                <div class="text-white description mb-0">{!! page('vision')->description !!}</div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-2">
-                                <div class="text-white description  mb-0">{!! page('mission')->description !!}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-         <!-- About End -->
+   
