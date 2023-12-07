@@ -433,7 +433,12 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
   
 }
 .trash-icon:hover {
- color:red !important;
+  color:red !important;
+  
+}
+
+.cursor-pointer{
+  cursor: pointer !important;
 
 }
 

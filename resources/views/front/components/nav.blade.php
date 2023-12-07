@@ -136,7 +136,7 @@
                                    <li class="right-side">
                                        <a href="tel:{{contacts('phone')[0]->contact }}" target="__blank" class="delivery-login-box">
                                            <div class="delivery-icon">
-                                               <i data-feather="phone-call"></i>
+                                               <i class="cursor-pointer" data-feather="phone-call"></i>
                                            </div>
                                            <div class="delivery-detail">
                                                <h6>24/7 Delivery</h6>
@@ -145,7 +145,7 @@
                                        </a>
                                    </li>
                                    <li class="right-side">
-                                       <a href="https://wa.me/{{contacts('phone')[0]->contact }}" target="__blank"
+                                       <a href="https://wa.me/{{contacts('whatsapp')[0]->contact }}" target="__blank"
                                            class="btn p-0 position-relative header-wishlist">
                                            <i class="fa-brands fa-whatsapp fa-xl"></i>
                                        </a>
@@ -193,7 +193,7 @@
                                        <li class="right-side onhover-dropdown">
                                            <div class="delivery-login-box">
                                                <div class="delivery-icon">
-                                                   <i data-feather="user"></i>
+                                                   <i class="cursor-pointer" data-feather="user"></i>
                                                </div>
                                            </div>
 
