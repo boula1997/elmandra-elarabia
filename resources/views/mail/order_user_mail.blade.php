@@ -169,7 +169,7 @@
                                         </h2>
                                         <p
                                             style="font-size: 14px;margin: 5px auto 0;line-height: 1.5;color: #939393;font-weight: 500;width: 70%;">
-                                            {{ __('general.order_mail') }} {{ contacts('phone')[0]->contact }} </p>
+                                            {{ __('general.order_number') }} {{ $data->id }} </p>
                                     </div>
                                 </td>
                             </tr>
@@ -181,26 +181,13 @@
                         #f7f7f7;">
                         <tbody>
                             <tr>
-                                <td
-                                    style="    text-align: left;padding-right: 28px;border-right: 2px solid rgba(217, 217, 217, 0.5);">
-                                    <div class="title title-2" style="text-align: left;">
-                                        <h2 style="font-size: 16px;font-weight: 700;margin: 0 0 12px;">Thanks For your
-                                            Order</h2>
-                                        <p
-                                            style="font-size: 14px;margin: 0;line-height: 1.5;color: #939393;font-weight: 500;">
-                                            268 Cambridge Lane New Albany, IN 47150268 Cambridge Lane New Albany, IN
-                                            47150</p>
-                                    </div>
-                                </td>
-
                                 <td style="    text-align: left;padding-left: 32px;">
                                     <div class="title title-2" style="text-align: left;">
-                                        <h2 style="font-size: 16px;font-weight: 700;margin: 0 0 12px;">Thanks For your
-                                            Order</h2>
+                                        <h2 style="font-size: 16px;font-weight: 700;margin: 0 0 12px;"> {{ __('general.order_mail1') }} </h2>
                                         <p
                                             style="font-size: 14px;margin: 0;line-height: 1.5;color:#939393;font-weight: 500;">
-                                            You'll receive an email when your items are shipped. if you have any
-                                            questions, Call Us 1-978-8767.</p>
+                                            {{ __('general.order_mail2') }} {{ contacts('phone')[0]->contact }}.
+                                            </p>
                                     </div>
                                 </td>
                             </tr>
@@ -213,7 +200,7 @@
                             <tr>
                                 <th
                                     style="font-size: 17px;font-weight: 700;padding-bottom: 8px;border-bottom: 1px solid rgba(217, 217, 217, 0.5);text-align: left;">
-                                    Shipped Items</th>
+                                    {{ __('general.shipped_items') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -223,33 +210,23 @@
                                     <table class="product-table" align="center" border="0" cellpadding="0"
                                         cellspacing="0" width="100%">
                                         <tbody>
+                                            @foreach ($data->orderproducts as $orderproduct )
+                                                
                                             <tr>
                                                 <td
                                                     style="padding: 28px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    <img src="images/product-4.png" alt="">
+                                                    <img  class="W-50" src="{{ $orderproduct->product->image }}" alt="">
                                                 </td>
                                                 <td
                                                     style="padding: 28px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
                                                     <ul class="product-detail">
-                                                        <li>Green Capsicum#1</li>
-                                                        <li>QTY: <span>01</span></li>
-                                                        <li>Price: <span>$35.15</span></li>
+                                                        <li>{{ $orderproduct->product->title }}</li>
+                                                        <li>{{ __('general.qty') }}: <span>{{ $orderproduct->count }}</span></li>
+                                                        <li>{{ __('general.price') }}: <span>{{ $orderproduct->total }}</span></li>
                                                     </ul>
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td style="padding-top: 28px;">
-                                                    <img src="images/product-5.png" alt="">
-                                                </td>
-                                                <td style="padding-top: 28px;">
-                                                    <ul class="product-detail">
-                                                        <li>Organic Orange#2</li>
-                                                        <li>QTY: <span>01</span></li>
-                                                        <li>Price: <span>$35.15</span></li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </td>
@@ -260,39 +237,39 @@
                                         <tbody>
                                             <tr>
                                                 <td style="font-weight: 700;font-size: 17px;padding-bottom: 15px;border-bottom: 1px solid rgba(217, 217, 217, 0.5);"
-                                                    colspan="2">Order summary</td>
+                                                    colspan="2">{{ __('general.order_summary') }}</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    Subtotal</td>
+                                                    {{ __('general.subtotal') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    $90,00</td>
+                                                    {{$data->total -  settings()->shipping  }}</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    Discount</td>
+                                                    {{ __('general.discount') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    -$20,00</td>
+                                                    00,00</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     style="text-align: left;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    Shipping</td>
+                                                    {{ __('general.shipping_value') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    $00,00</td>
+                                                    {{ settings()->shipping }}</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     style="text-align: left;font-size: 15px;font-weight: 600;padding-top: 15px;">
-                                                    Total</td>
+                                                    {{ __('general.total') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 600;padding-top: 15px;">
-                                                    $70,00</td>
+                                                    {{ $data->total }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -301,20 +278,6 @@
                         </tbody>
                     </table>
 
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="order-table">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="text-center">
-                                        <h5 style="font-size: 18px;font-weight: 700;margin: 0;color: #fff;">Get 25% off
-                                            your next order</h5>
-                                        <button
-                                            style="margin-top: 10px;padding: 9px 21px;background-color: rgba(255, 255, 255, 0.2);border: none;color: #fff;font-weight: 700;font-size: 14px;">Awesome</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
 
                     <table class="text-center footer-table" align="center" border="0" cellpadding="0" cellspacing="0"
                         width="100%"
@@ -324,71 +287,20 @@
                                 <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
                                     align="center" style="margin: 8px auto 20px;">
                                     <tr>
-                                        <td style="font-size: 19px; font-weight: 700;">Shop For <span
-                                                class="theme-color">Fastkart</span></td>
+                                        <td style="font-size: 19px; font-weight: 700;">{{ __('general.shop_for') }} <span
+                                                class="theme-color">{{ settings()->title }}</span></td>
                                     </tr>
                                 </table>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
-                                    align="center" style="margin: 8px auto 20px;">
-                                    <tr>
-                                        <td>
-                                            <a href="javascript:void(0)"
-                                                style="font-size: 14px; font-weight: 600; color: #fff; text-decoration: underline; text-transform: capitalize;">Contact
-                                                Us</a>
-                                        </td>
-                                        <td>
-                                            <a href="javascript:void(0)"
-                                                style="font-size: 14px; font-weight: 600; color: #fff; text-decoration: underline; text-transform: capitalize; margin-left: 20px;">unsubscribe</a>
-                                        </td>
-                                        <td>
-                                            <a href="javascript:void(0)"
-                                                style="font-size: 14px; font-weight: 600; color: #fff; text-decoration: underline; text-transform: capitalize; margin-left: 20px;">privacy
-                                                Policy</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon text-center"
-                                    align="center" style="margin: 23px auto;">
-                                    <tr>
-                                        <td>
-                                            <a href="www.facebook.com">
-                                                <img src="images/fb.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="www.twitter.com">
-                                                <img src="images/twitter.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="www.instagram.com">
-                                                <img src="images/insta.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="www.pinterest.com">
-                                                <img src="images/pinterest.png"
-                                                    style="font-size: 25px; margin: 0 18px 0 0;width: 22px;filter: invert(1);"
-                                                    alt="">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </table>
+                            
+                            
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td>
                                             <h5 style="font-size: 13px; text-transform: uppercase; margin: 0; color:#ddd;
-                                letter-spacing:1px; font-weight: 500;">Want to change how you receive these emails?
+                                              letter-spacing:1px; font-weight: 500;">
                                             </h5>
                                             <h5 style="font-size: 13px; text-transform: uppercase; margin: 10px 0 0; color:#ddd;
-                                letter-spacing:1px; font-weight: 500;">2021-22 copy right by themeforest powerd by
-                                                pixelstrap</h5>
+                                             letter-spacing:1px; font-weight: 500;">{{ settings()->copyright }}</h5>
                                         </td>
                                     </tr>
                                 </table>

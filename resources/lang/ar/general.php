@@ -228,7 +228,7 @@ return [
     'expiration'=>'انتهاء الصلاحية',
     'cvv'=>'رقم الكود',
     'subtotal'=>'المجموع الفرعي',
-    'shipping'=>'شحن',
+    'shipping_value'=>'قيمة الشحن',
     'total-delivery'=>'الإجمالي (شامل التوصيل)',
     'total'=>'الإجمالي',
     'pound'=>'جنيه',
@@ -365,7 +365,8 @@ return [
     'coupon_apply'=>'كود الخصم',
     'apply'=>'قدم',
     'enter_coupon_code'=>'أدخل رمز الخصم هنا...',
-    'coupon_discount'=>'قيمة خصم القسيمةyour_email',
+    'coupon_discount'=>'قيمة خصم القسيمة',
+    'discount'=>"خصم",
     'personal_information'=>'البيانات شخصية',
     'process_to_checkout'=>'عملية الدفع',
     'return_to_shopping'=>'العودة إلى التسوق',
@@ -386,8 +387,8 @@ return [
     'write_your_comment'=>'اكتب تعليقك', 
     'related_products'=>'منتجات ذات صله', 
     'pending'=>'قيد الانتظار', 
-    'missing'=>'مفتقد', 
-    'shipped'=>'قيد الشحن', 
+    'missing'=>'نافذ', 
+    'shipped'=>'الشحن', 
     'processing'=>'قيد التوصيل', 
     'delivered'=>'تم التوصيل',
     'out_of_store'=>'لا توجد هذه الكمية', 
@@ -407,8 +408,9 @@ return [
     'order_mail1'=>"شكرا لطلبك",
     'order_mail2'=>"ستتلقى بريدًا إلكترونيًا عندما يتم شحن العناصر الخاصة بك. إذا كان لديك أي أسئلة، اتصل بنا",
     'message_user'=>"تم تلقى رسالتك وسوف يتم الرد عليك قريبا",
-    
-
-
+    'shipped_items'=>"المشتريات",
+    'qty'=>"الكمية",
+    'order_summary'=>"ملخص الطلب",
+    'order_number'=>"رقم الطلب",
     
 ];

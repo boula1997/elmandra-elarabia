@@ -106,8 +106,8 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <h4>Subtotal</h4>
-                                            <h4 class="price">$ <span class="cart-subtotal">{{ cart()->getTotal() }}</span></h4>
+                                            <h4>{{ __('general.subtotal') }}</h4>
+                                            <h4 class="price"><span class="cart-subtotal">{{ cart()->getTotal() }}</span></h4>
                                         </li>
 
                                         <li>
@@ -116,16 +116,16 @@
                                         </li>
 
                                         <li class="align-items-start">
-                                            <h4>Shipping</h4>
-                                            <h4 class="price text-end">$25</h4>
+                                            <h4>{{ __('general.shipping_value') }}</h4>
+                                            <h4 class="price text-end">{{ settings()->shipping }}</h4>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <ul class="summery-total">
                                     <li class="list-total border-top-0">
-                                        <h4>Total (USD)</h4>
-                                        <h4 class="price theme-color">$ <span class="cart-total">{{ cart()->getTotal() +25 }}</span></h4>
+                                        <h4>{{ __('general.total') }}</h4>
+                                        <h4 class="price theme-color"> <span class="cart-total">{{ cart()->getTotal() + settings()->shipping }}</span></h4>
                                     </li>
                                 </ul>
                                 <br><br>

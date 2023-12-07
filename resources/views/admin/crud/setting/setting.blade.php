@@ -103,6 +103,18 @@
                             </div>
                         @endforeach
                     </div>
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">{{ __('general.shipping') }}</label>
+                                    <input type="number" name="shipping" value="{{ old('shipping',$setting->shipping) }}"
+                                        class="form-control" id="exampleInputName" placeholder="@lang('general.shipping')">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card card-custom">
