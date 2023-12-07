@@ -45,7 +45,7 @@
 
                                                     <td class="price">
                                                         <h4 class="table-title text-content">{{ __('general.price') }}</h4>
-                                                        <h5>$ {{ $item->get('price') }}</h5>
+                                                        <h5>{{ $item->get('price') }} ر.س </h5>
                                                     </td>
 
                                                     <td class="quantity">
@@ -72,7 +72,7 @@
 
                                                     <td class="subtotal">
                                                         <h4 class="table-title text-content">{{ __('general.total') }}</h4>
-                                                        <h5>$ <span  class="single-total{{ $loop->index }}">{{$item->get('price') * $item->get('quantity')}}</span></h5>
+                                                        <h5>  <span  class="single-total{{ $loop->index }}">{{$item->get('price') * $item->get('quantity')}}</span> ر.س </h5>
                                                     </td>
 
                                                     <td class="save-remove">
@@ -100,12 +100,12 @@
                                     <ul>
                                         <li>
                                             <h4>{{ __('general.subtotal') }}</h4>
-                                            <h4 class="price"><span class="cart-subtotal">{{ cart()->getTotal() }}</span></h4>
+                                            <h4 class="price"><span class="cart-subtotal">{{ cart()->getTotal() }} ر.س </span></h4>
                                         </li>
 
                                         <li class="align-items-start">
                                             <h4>{{ __('general.shipping_value') }}</h4>
-                                            <h4 class="price text-end">{{ settings()->shipping }}</h4>
+                                            <h4 class="price text-end">{{ settings()->shipping }} ر.س </h4>
                                         </li>
                                     </ul>
                                 </div>
@@ -113,7 +113,7 @@
                                 <ul class="summery-total">
                                     <li class="list-total border-top-0">
                                         <h4>{{ __('general.total') }}</h4>
-                                        <h4 class="price theme-color"> <span class="cart-total">{{ cart()->getTotal() + settings()->shipping }}</span></h4>
+                                        <h4 class="price theme-color"> <span class="cart-total">{{ cart()->getTotal() + settings()->shipping }} ر.س  </span></h4>
                                     </li>
                                 </ul>
                                 <br><br>
