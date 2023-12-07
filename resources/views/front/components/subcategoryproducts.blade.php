@@ -24,11 +24,12 @@
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
-                                                <ul class="product-option justify-content-around">
+                                                <ul class="product-option justify-content-center eye-show bg-transparent text-white">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                        <a href="{{ route('front.show.product',$product->id) }}" >
-                                                            <i data-feather="eye"></i>
+                                                        <a href="{{ route('front.show.product', $product->id) }}">
+                                                            <i class="fas fa-eye text-white fa-lg fs-1"></i>
+                                                           
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -67,7 +68,7 @@
                                                     <div class="addtocart_btn pt-5">
                                                         @if (auth('web')->user())
                                                         <button
-                                                            class="add-button addcart-button btn buy-button text-light addCart"
+                                                            class="add-button addcart-button btn buy-button text-light addCart" index="{{ $loop->index }}"
                                                             product_id="{{ $product->id }}">
                                                             <span>{{ __('general.add') }}</span>
                                                             <i class="fa-solid fa-plus px-2"></i>
@@ -76,7 +77,7 @@
                                                         <a href="{{ route('user.login') }}">
                                                             <button
                                                                 class="add-button addcart-button btn buy-button text-light">
-                                                                <span >{{ __('general.add') }}</span>
+                                                                <span>{{ __('general.add') }}</span>
                                                                 <i class="fa-solid fa-plus px-2"></i>
                                                             </button>
                                                         </a>
@@ -108,13 +109,14 @@
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                 </a>
-                                                <ul class="product-option justify-content-around">
+                                                <ul class="product-option justify-content-center eye-show bg-transparent text-white">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                        <a href="{{ route('front.show.product',$product->id) }}">
-                                                            <i data-feather="eye"></i>
+                                                        <a href="{{ route('front.show.product', $product->id) }}">
+                                                            <i class="fas fa-eye text-white fa-lg fs-1"></i>
+                                                           
                                                         </a>
-                                                    </li>                                                  
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="product-detail">
@@ -207,6 +209,7 @@
             var product_id = $(this).attr('product_id');
             let url = "{{ route('addTo.cart', ':id') }}";
             url = url.replace(':id', product_id);
+            var index = $(this).attr('index');
             $.ajax({
                 type: 'get',
                 url: url,
