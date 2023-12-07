@@ -39,6 +39,7 @@
             var product_id = $(this).attr('product_id');
             let url = "{{ route('addTo.cart', ':id') }}";
             url = url.replace(':id', product_id);
+            var index = $(this).attr('index');
             $.ajax({
                 type: 'get',
                 url: url,

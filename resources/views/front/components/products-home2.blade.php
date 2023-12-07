@@ -48,21 +48,21 @@
 
 
                                             @if (auth('web')->user())
+                                            <button
+                                                class="add-button addcart-button btn buy-button text-light addCart" index="{{ $loop->index }}"
+                                                product_id="{{ $product->id }}">
+                                                <span>{{ __('general.add') }}</span>
+                                                <i class="fa-solid fa-plus px-2"></i>
+                                            </button>
+                                        @else
+                                            <a href="{{ route('user.login') }}">
                                                 <button
-                                                    class="add-button addcart-button btn buy-button text-light addCart"
-                                                    product_id="{{ $product->id }}">
+                                                    class="add-button addcart-button btn buy-button text-light">
                                                     <span>{{ __('general.add') }}</span>
                                                     <i class="fa-solid fa-plus px-2"></i>
                                                 </button>
-                                            @else
-                                                <a href="{{ route('user.login') }}">
-                                                    <button
-                                                        class="add-button addcart-button btn buy-button text-light">
-                                                        <span>{{ __('general.add') }}</span>
-                                                        <i class="fa-solid fa-plus px-2"></i>
-                                                    </button>
-                                                </a>
-                                            @endif
+                                            </a>
+                                        @endif
                                             <div class="qty-box {{ isInCart($product->id) ? 'cart_qty open' : 'cart_qty' }}">
                                                 <div class="input-group">
                                                     <button type="button" class="btn qty-left-minus"
