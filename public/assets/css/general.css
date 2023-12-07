@@ -462,7 +462,13 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
   z-index: 3;
 }
 
-
+.select {
+  border: 1px solid var(--theme-color);
+  /* padding: 10px; */
+}
+.option{
+  background-color: var(--theme-color) !important;
+}
 
 @-webkit-keyframes sk-rotate {
   100% {

@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-animation btn-md fw-bold ms-auto">{{ __('general.send_message') }}</button>
+                        <button type="submit" class="btn btn-animation btn-md fw-bold ms-auto"><i class="fa fa-spinner fa-spin d-none mx-1 " id="spinner-contact"></i> {{ __('general.send_message') }}</button>
                     </div>
                 </form>
             </div>

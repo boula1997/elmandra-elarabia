@@ -114,6 +114,10 @@
         .theme-color {
             color: #0DA487;
         }
+
+        .main-logo{
+            height: 150px;
+        }
     </style>
 </head>
 
@@ -123,7 +127,7 @@
         <tbody>
             <tr>
                 <td>
-                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: flex; justify-content: center; align-items: center;">
                         <tr class="header"
                             style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
                          
@@ -145,11 +149,11 @@
                             </td>
                         </tr>
                     </table>
-                    <table>
+                    <table style="display: flex; justify-content: center; align-items: center;">
                         <tr>
-                            <td >
+                            <td>
                                 <a href="{{ route('front.home') }}">
-                                    <img src="{{ settings()->logo }}" class="main-logo W-25" alt="logo">
+                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
                                 </a>
                             </td>
                         </tr>
@@ -166,7 +170,7 @@
                         </thead>
                     </table>
 
-                    <table class="contant-table" style="margin-top: 40px;" align="center" border="0" cellpadding="0"
+                    <table class="contant-table" style="margin-top: 40px; display: flex; justify-content: center; align-items: center; margin-botton:50px;"   align="center" border="0" cellpadding="0"
                         cellspacing="0" width="100%">
                         <thead>
                             <tr style="display: block;">
@@ -174,13 +178,13 @@
                                     <h3
                                         style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
                                         {{ __('general.hi') }}{{ $data->name }} </h3>
-                                        <h3
+                                        
                                       
                                 </td>
 
                                 <td>
                                     <p
-                                        style="font-size: 14px;font-weight: 600;width: 82%;margin: 8px auto 0;line-height: 1.5;color: #939393;font-family: 'Nunito Sans', sans-serif;">
+                                        style="font-size: 14px;font-weight: 600;margin: 8px auto 0;line-height: 1.5;color: #000000;font-family: 'Nunito Sans', sans-serif; margin-bottom:50px;">
                                         {{ __('general.message_user') }}
                                     </p>
                                 </td>
@@ -188,16 +192,7 @@
                         </thead>
                     </table>
 
-                    <table class="button-table" style="margin: 34px 0;" align="center" border="0" cellpadding="0"
-                        cellspacing="0" width="100%">
-                        <thead>
-                            <tr style="display: block;">
-                                <td style="display: block;">
-                                    <button class="password-button"></button>
-                                </td>
-                            </tr>
-                        </thead>
-                    </table>
+ 
 
                     <table class="contant-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <thead>

@@ -151,10 +151,10 @@
                                             
                                             <div class="coupon-cart">
                                                 <h6 class="text-content mb-2">{{ __('general.store') }}</h6>
-                                                <div class="mb-3 coupon-box input-group">
-                                                    <select class="form-select form-select-lg" name="store_id" id="store">
+                                                <div class="mb-3 coupon-box input-group select">
+                                                    <select class="form-select form-select-lg border-primary" name="store_id" id="store">
                                                         @foreach ($stores as $store)
-                                                            <option value="{{ $store->id }}" {{ old('store_id')==$store->id? 'selected' : '' }}>{{ $store->title }} {{ $store->translate(app()->getLocale())->address }}</option>
+                                                            <option class="form-control bg-primary option" value="{{ $store->id }}" {{ old('store_id')==$store->id? 'selected' : '' }}>{{ $store->title }} {{ $store->translate(app()->getLocale())->address }}</option>
                                                         @endforeach
                                                     </select>
                                                     <div class="err" id="store"></div>

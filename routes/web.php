@@ -30,6 +30,10 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],
     function () {
+        
+        // Route::get('/mail', function () {
+        //     return view('mail.welcome');
+        // })->name('dashboard');
 
         Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('user.register-view');
         Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store'])->name('user.register'); 
@@ -70,10 +74,7 @@ Route::group(
             Route::get('/updateItemCount/{hash}/{quantity}', [CartController::class,'updateItemCount'])->name('updateItem.count');
             Route::get('/add_to_cart',[HomeController::class,'showaddtocart'])->name('front.shopping');
             
-            // Route::get('/add_to_cart', function () {
-                
-            //     return view("front.shopping");
-            // })->name('front.shopping');
+
             Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
             Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
             Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');

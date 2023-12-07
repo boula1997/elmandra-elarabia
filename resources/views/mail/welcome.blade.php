@@ -114,6 +114,10 @@
         .theme-color {
             color: #0DA487;
         }
+        .main-logo{
+            height: 150px;
+
+        }
     </style>
 </head>
 
@@ -123,14 +127,10 @@
         <tbody>
             <tr>
                 <td>
-                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: flex; justify-content: center; align-items: center;">
                         <tr class="header"
                             style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
-                            <td class="header-logo" style="padding: 10px 32px;">
-                                <a href="{{ route('front.home') }}" style="display: block; text-align: right;">
-                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
-                                </a>
-                            </td>
                             <td class="header-menu" style="display: block; padding: 10px 32px;text-align: right;">
                                 <ul>
                                     <li>
@@ -147,8 +147,22 @@
                                     </li>
                                 </ul>
                             </td>
+
                         </tr>
                     </table>
+                    
+                    <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: flex; justify-content: center; align-items: center;">
+                        <tr class="header"
+                            style="display: flex;align-items: center;justify-content: space-between;width: 100%;">
+                            <td class="header-logo" style="padding: 10px 32px;">
+                                <a href="{{ route('front.home') }}" style="display: block; text-align: right;">
+                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
+                                </a>
+                            </td>
+
+                        </tr>
+                    </table>
+
 
                     <table class="contant-table" style="margin-bottom: -6px;" align="center" border="0" cellpadding="0"
                         cellspacing="0" width="100%">
@@ -166,9 +180,9 @@
                         <thead>
                             <tr style="display: block;">
                                 <td style="display: block;">
-                                    <h3
+                                    {{-- <h3
                                         style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                                        {{ __('general.hi') }}{{ $data->name }} </h3>
+                                        {{ __('general.hi') }}{{ $data->name }} </h3> --}}
                                 </td>
                                 <td style="display: block;">
                                     <h3
