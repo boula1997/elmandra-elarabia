@@ -77,9 +77,9 @@
 
                                                     <td class="save-remove">
                                                         <h4 class="table-title text-content">{{ __('general.action') }}</h4>
-                                                        <a class="save notifi-wishlist" href="javascript:void(0)">{{ __('general.save_for_later') }}</a>
-                                                        <a class="remove close_button removeCart link"
-                                                            hash="{{ $item->getHash() }}">{{ __('general.remove') }}</a>
+
+                                                        <a class="remove close_button removeCart cursor-pointer"
+                                                            hash="{{ $item->getHash() }}"><i class="fas fa-trash text-secondary trash-icon  fa-lg"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
