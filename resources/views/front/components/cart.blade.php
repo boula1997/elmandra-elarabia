@@ -154,7 +154,7 @@
                                                 <div class="mb-3 coupon-box input-group">
                                                     <select class="form-select form-select-lg" name="store_id" id="store">
                                                         @foreach ($stores as $store)
-                                                            <option value="{{ $store->id }}" {{ old('store_id')==$store->id? 'selected' : '' }}>{{ $store->title }}</option>
+                                                            <option value="{{ $store->id }}" {{ old('store_id')==$store->id? 'selected' : '' }}>{{ $store->title }} {{ $store->translate(app()->getLocale())->address }}</option>
                                                         @endforeach
                                                     </select>
                                                     <div class="err" id="store"></div>
