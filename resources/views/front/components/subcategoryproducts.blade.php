@@ -62,7 +62,7 @@
                                                 <h6 class="sold weight text-content fw-normal">1 KG</h6>
 
                                                 <div class="counter-box">
-                                                    <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                    <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
 
                                                     <div class="addtocart_btn pt-5">
                                                         @if (auth('web')->user())
@@ -146,7 +146,7 @@
                                                 <h6 class="sold weight text-content fw-normal">1 KG</h6>
 
                                                 <div class="counter-box">
-                                                    <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                    <h6 class="sold theme-color">{{ $product->price }} {{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
 
                                                     <div class="addtocart_btn pt-5">
 
