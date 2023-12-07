@@ -245,7 +245,7 @@
                                                     {{ __('general.subtotal') }}</td>
                                                 <td
                                                     style="text-align: right;font-size: 15px;font-weight: 400;padding: 15px 0;border-bottom: 1px solid rgba(217, 217, 217, 0.5);">
-                                                    00,00</td>
+                                                    {{$data->total -  settings()->shipping  }}</td>
                                             </tr>
                                             <tr>
                                                 <td
