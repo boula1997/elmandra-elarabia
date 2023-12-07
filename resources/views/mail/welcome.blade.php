@@ -168,8 +168,14 @@
                                 <td style="display: block;">
                                     <h3
                                         style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                                        {{ __('general.hi') }}{{ Auth('web')->name }} {{ __('general.welcome_to') }}</h3>
+                                        {{ __('general.hi') }}{{ $data->name }} </h3>
                                 </td>
+                                <td style="display: block;">
+                                    <h3
+                                        style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
+                                        {{ __('general.welcome_to') }}  {{ settings()->title }} </h3>
+                                </td>
+                                
 
                                 <td>
                                     <p
@@ -181,7 +187,7 @@
                         </thead>
                     </table>
 
-                    <table class="button-table" style="margin: 34px 0;" align="center" border="0" cellpadding="0"
+                    {{-- <table class="button-table" style="margin: 34px 0;" align="center" border="0" cellpadding="0"
                         cellspacing="0" width="100%">
                         <thead>
                             <tr style="display: block;">
@@ -190,7 +196,7 @@
                                 </td>
                             </tr>
                         </thead>
-                    </table>
+                    </table> --}}
 
                     <table class="contant-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <thead>

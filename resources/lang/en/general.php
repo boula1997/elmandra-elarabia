@@ -413,6 +413,7 @@ return [
     'order_number'=>"Order Number",
     'coupon_discount'=>"Coupon discount value",
     'discount'=>"Discount",
+    'unit'=>"Unit",
     
     
     

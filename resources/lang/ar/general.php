@@ -412,5 +412,7 @@ return [
     'qty'=>"الكمية",
     'order_summary'=>"ملخص الطلب",
     'order_number'=>"رقم الطلب",
+    'unit'=>"الوحدة",
+
     
 ];
