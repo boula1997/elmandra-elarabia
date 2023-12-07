@@ -1,7 +1,7 @@
     <!-- Cart Section Start -->
     <section class="cart-section section-b-space">
         <div class="container-fluid-lg ">
-            <div class="row {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
+            <div class="row full {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
                 <div class="row g-sm-5 g-3">
                 
                         <div class="col-xxl-9">
@@ -215,7 +215,7 @@
                 </div>
             </div>
             
-            <div class="row {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}"  data-aos="zoom-in-down">
+            <div class="row empty {{ count(cart()->getItems()) == 0 ? '' : 'd-none' }}"  data-aos="zoom-in-down">
                 <div class="card-header">
                     <h5>{{ __('general.cart') }}</h5>
                 </div>
