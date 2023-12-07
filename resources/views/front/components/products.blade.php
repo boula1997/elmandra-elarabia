@@ -48,7 +48,7 @@
 
                                                 <div class="counter-box">
                                                     <h6 class="sold theme-color"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>
-                                                        {{ app()->getLocale() == 'ar' ? 'L.E' : '$' }}</h6>
+                                                        {{ app()->getLocale() == 'ar' ? 'SAR' : '$' }}</h6>
 
                                                     <div class="addtocart_btn pt-5">
 

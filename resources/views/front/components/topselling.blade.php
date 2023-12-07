@@ -23,7 +23,7 @@
                                                 <h5>{{$product->title}}</h5>
                                             </a>
                                             <h5>{{$product->unit}}</h5>
-                                            <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                            <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
                                         </div>
                                     </div>
                                     @else
@@ -56,7 +56,7 @@
                                                 </a>
                                                 
                                                 <h5>{{$product->unit}}</h5>
-                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
                                             </div>
                                         </div>
                                         @else
@@ -88,7 +88,7 @@
                                                         <h5>{{ $product->title }}</h5>
                                                     </a>
                                                     <h5>{{$product->unit}}</h5>
-                                                    <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                    <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
                                                 </div>
                                             </div>
                                           @else
@@ -123,7 +123,7 @@
                                                 </a>
                                              
                                                 <h5>{{$product->unit}}</h5>
-                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'L.E':'$' }}</h6>
+                                                <h6> <span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>{{ app()->getLocale()=='ar'?'SAR':'$' }}</h6>
                                             </div>
                                         </div>
                                         @else
