@@ -513,3 +513,9 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
 .navbar-dark .navbar-nav .nav-link.active:hover {
   color: var(--primary) !important;
 }
+.btn-animation{
+  background: #bba011
+}
+.btn-animation::after{
+  background: #88750c
+}

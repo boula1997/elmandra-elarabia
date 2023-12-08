@@ -91,6 +91,7 @@
                     <div class="col-md-6">
                         <div class="col-xxl-6">
                             <div class="summery-box p-sticky">
+                               
                                 <div class="summery-header">
                                     <h3>{{ __('general.cart_total') }}</h3>
                                 </div>
@@ -98,6 +99,14 @@
                                 <div class="summery-contain">
                             
                                     <ul>
+                                        <div class="coupon-cart">
+                                            <h6 class="text-content mb-2">{{ __('general.coupon_apply') }}</h6>
+                                            <div class="mb-3 coupon-box input-group">
+                                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                    placeholder="{{ __('general.enter_coupon_code') }}">
+                                                <button class="btn-apply">{{ __('general.apply') }}</button>
+                                            </div>
+                                        </div>
                                         <li>
                                             <h4>{{ __('general.subtotal') }}</h4>
                                             <h4 class="price"><span class="cart-subtotal">{{ cart()->getTotal() }} ر.س </span></h4>

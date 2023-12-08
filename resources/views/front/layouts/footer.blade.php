@@ -87,6 +87,9 @@
                                 <li>
                                     <a href="{{ route('front.message') }}" class="text-content">{{ __('general.contact_us') }}</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('front.message') }}" class="text-content">{{ __('general.offers') }}</a>
+                                </li>
                               
                               
                             </ul>

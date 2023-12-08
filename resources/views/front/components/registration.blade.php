@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xxl-6 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
                     <div class="image-contain">
-                        <img src="{{ asset('template/assets/images/inner-page/sign-up.png') }}" class="img-fluid"
+                        <img src="{{ asset('images/login.png') }}" class="img-fluid h-75"
                             alt="">
                     </div>
                 </div>
@@ -25,6 +25,16 @@
                                             id="fullname" name="name" placeholder="{{ __('general.fullname') }}">
                                         <label for="fullname">{{ __('general.fullname') }}</label>
                                         @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating theme-form-floating">
+                                        <input type="phone" name="phone" class="form-control @error('phone') invalid @enderror"
+                                            id="phone" placeholder="{{ __('general.phone') }}">
+                                        <label for="phone">{{ __('general.phone') }}</label>
+                                        @error('phone')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>

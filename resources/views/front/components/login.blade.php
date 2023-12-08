@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xxl-6 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
                     <div class="image-contain">
-                        <img src="{{ asset('template/assets/images/inner-page/log-in.png') }}" class="img-fluid"
+                        <img src="{{ asset('images/login.png') }}" class="img-fluid h-75"
                             alt="">
                     </div>
                 </div>

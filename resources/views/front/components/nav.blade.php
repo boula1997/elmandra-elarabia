@@ -86,7 +86,7 @@
                                    alt="">
                            </a>
 
-                           <div class="middle-box">
+                           <div class="middle-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
                                <div class="location-box">
                                    <button class="btn location-button" data-bs-toggle="modal"
                                        data-bs-target="#locationModal">
@@ -98,20 +98,21 @@
                                    </button>
                                </div>
 
-                               <div class="search-box">
-                                   <div class="input-group">
-                                       <input type="search" class="form-control"
-                                           placeholder="{{ __('general.iam_searching') }}"
-                                           aria-label="Recipient's username" aria-describedby="button-addon2">
-                                       <button class="btn" type="button" id="button-addon2">
-                                           <i data-feather="search"></i>
-                                       </button>
-                                   </div>
-                               </div>
+                              
+                                    <div class="search-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control"
+                                                placeholder="{{ __('general.iam_searching') }}"
+                                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            <button class="btn" type="button" id="button-addon2">
+                                                <i data-feather="search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                            </div>
 
                            <div class="rightside-box">
-                               <div class="search-full">
+                               <div class="search-full ">
                                    <div class="input-group">
                                        <span class="input-group-text">
                                            <i data-feather="search" class="font-light"></i>
@@ -136,7 +137,7 @@
                                    <li class="right-side">
                                        <a href="tel:{{contacts('phone')[0]->contact }}" target="__blank" class="delivery-login-box">
                                            <div class="delivery-icon">
-                                               <i class="cursor-pointer" data-feather="phone-call"></i>
+                                               <i class="cursor-pointer" style="color: #bba011" data-feather="phone-call"></i>
                                            </div>
                                            <div class="delivery-detail">
                                                <h6>24/7 Delivery</h6>
@@ -147,10 +148,10 @@
                                    <li class="right-side">
                                        <a href="https://wa.me/{{contacts('whatsapp')[0]->contact }}" target="__blank"
                                            class="btn p-0 position-relative header-wishlist">
-                                           <i class="fa-brands fa-whatsapp fa-xl"></i>
+                                           <i class="fa-brands fa-whatsapp fa-xl" style="color: green"></i>
                                        </a>
                                    </li>
-                                   <li class="right-side">
+                                   <li class="right-side {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
                                        <div class="onhover-dropdown header-badge">
                                            <a href="{{ route('front.shopping') }}">
                                                <button type="button"
@@ -299,9 +300,14 @@
 
                                            </li>
 
-                                        <li class="nav-item dropdown">
+                                          <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
                                               > {{ __('general.contact_us') }}</a>
+                                           </li>
+
+                                           <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
+                                              > {{ __('general.offers') }}</a>
                                            </li>
 
                                        </ul>
