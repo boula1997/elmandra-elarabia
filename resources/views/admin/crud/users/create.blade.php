@@ -48,6 +48,17 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label for="exampleInputEmail1">@lang('general.phone')</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                                    </div>
+                                                    <input type="phone" name="phone" value="{{ old('phone') }}"
+                                                    class="form-control" id="exampleInputphone"
+                                                    placeholder="@lang('general.phone')">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="exampleInputEmail1">@lang('general.password')</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">

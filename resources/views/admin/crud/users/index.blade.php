@@ -37,6 +37,7 @@
                                             <th>@lang('general.image')</th>
                                             <th>@lang('general.name')</th>
                                             <th>@lang('general.email')</th>
+                                            <th>@lang('general.phone')</th>
                                             <th>@lang('general.controls')</th>
                                         </tr>
                                     </thead>
@@ -48,6 +49,7 @@
                                                         alt="{{ $user->name }}"></td>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
+                                                <td>{{ $user->phone }}</td>
                                                 <td>
                                                     @include('admin.components.controls', [
                                                         'route' => 'users',

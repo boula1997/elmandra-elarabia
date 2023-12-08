@@ -35,6 +35,10 @@
                                                     <label for="exampleInputEmail1">@lang('general.email')</label>
                                                     <p>{{ $user->email }}</p>
                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">@lang('general.phone')</label>
+                                                    <p>{{ $user->phone }}</p>
+                                                </div>
 
 
                                                 <div class="row">
