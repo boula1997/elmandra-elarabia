@@ -21,11 +21,11 @@
                                 @csrf
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email" name="email"
-                                            class="form-control -bottom-3 @error('email') invalid @enderror"
-                                            id="email" placeholder="{{ __('general.log_in_your_account') }}">
-                                        <label for="email">{{ __('general.email_address') }}</label>
-                                        @error('email')
+                                        <input type="text" name="phone"
+                                            class="form-control -bottom-3 @error('phone') invalid @enderror"
+                                            id="phone" placeholder="{{ __('general.log_in_your_account') }}">
+                                        <label for="phone">{{ __('general.phone') }}</label>
+                                        @error('phone')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
