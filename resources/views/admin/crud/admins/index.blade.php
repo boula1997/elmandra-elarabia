@@ -37,6 +37,7 @@
                                             <th>@lang('general.image')</th>
                                             <th>@lang('general.name')</th>
                                             <th>@lang('general.email')</th>
+                                            <th>@lang('general.phone')</th>
                                             <th>@lang('general.role')</th>
                                             <th>@lang('general.controls')</th>
                                         </tr>
@@ -49,6 +50,7 @@
                                                         alt="{{ $admin->name }}"></td>
                                                 <td>{{ $admin->name }}</td>
                                                 <td>{{ $admin->email }}</td>
+                                                <td>{{ $admin->phone }}</td>
                                                 <td>
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)

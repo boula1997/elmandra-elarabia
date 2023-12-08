@@ -28,6 +28,10 @@
                                         <p>{{ $admin->email }}</p>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputEmail1">@lang('general.phone')</label>
+                                        <p>{{ $admin->phone }}</p>
+                                    </div>
+                                    <div class="form-group">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <img width="300" height="300" src="{{ $admin->image }}" alt="">
