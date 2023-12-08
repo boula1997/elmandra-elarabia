@@ -85,14 +85,6 @@ Route::group(
         Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');
         Route::get('/wishlit',[HomeController::class,'showwishlist'])->name('front.wishlist');
         
-        
-    // Route::get('/wishlist',function(){
-    //     return view('front.wishlist');
-    // })->name('front.wishlist');
-
-    // Route::get('/single-product',function(){
-    //     return view('front.products.single-product');
-    // })->name('front.single-product');
 
     }
 );

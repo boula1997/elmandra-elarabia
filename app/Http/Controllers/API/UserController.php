@@ -18,6 +18,7 @@ class UserController extends Controller
             $inputs=$request->all();
             $inputs['seller_id']=auth('api')->user()->id;
             $data = User::create($inputs);
+            $data->uploadFile();
             Mail::to(env('MAIL_FROM_NAME'))->send(new VerifyUserMail($data));
             return successResponse($data);
         } catch (Exception $e) {
