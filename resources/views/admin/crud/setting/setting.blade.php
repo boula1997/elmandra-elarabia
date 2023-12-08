@@ -120,6 +120,20 @@
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{{ __('general.map') }}</label>
+                                        <input type="text" name="map" value="{{ old('map',$setting->map) }}"
+                                            class="form-control" id="exampleInputName" placeholder="@lang('general.map')">
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+
                         <div class="col-md-6">
                             @include('admin.components.image', [
                                 'label' => __('general.logo'),
