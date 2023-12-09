@@ -140,7 +140,7 @@ body {
 
 .logo {
   /* width: 100px !important; */
-  height: 70px !important;
+  height: 100px !important;
 }
 
 
@@ -514,7 +514,7 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
   color: var(--primary) !important;
 }
 .btn-animation{
-  background: #bba011
+  background: #e7c505
 }
 .btn-animation::after{
   background: #88750c
