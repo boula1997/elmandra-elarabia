@@ -1,4 +1,5 @@
-    <!-- Footer Section Start -->
+  
+  <!-- Footer Section Start -->
     <footer class="section-t-space">
         <div class="container-fluid-lg">
             <div class="service-section">
@@ -111,19 +112,11 @@
                                 <li>
                                     <a href="{{ route('show_profile') }}" class="text-content">{{ __('general.account') }}</a>
                                 </li>
-                                {{-- <li>
-                                    <a href="order-tracking.html" class="text-content">{{ __('general.Track Order') }}</a>
-                                </li> --}}
+                             
                                 <li>
                                     <a href="{{ route('front.wishlist') }}" class="text-content">{{ __('general.mywish') }}</a>
                                 </li>
-                                {{-- <li>
-                                    <a href="search.html" class="text-content">Search</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html" class="text-content">FAQ</a>
-                                </li> --}}
-                            </ul>
+                               
                         </div>
                     </div>
 
@@ -196,26 +189,7 @@
                                 </a>
                             </li>
                         @endforeach
-                        {{-- <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://in.pinterest.com/" target="_blank">
-                                <i class="fa-brands fa-pinterest-p"></i>
-                            </a>
-                        </li> --}}
+                       
                     </ul>
                 </div>
             </div>
@@ -428,27 +402,6 @@
    </div>
    <!-- Location Modal End -->
 
-
-   <!-- Cookie Bar Box Start -->
-   {{-- <div class="cookie-bar-box">
-       <div class="cookie-box">
-           <div class="cookie-image">
-               <img src="../assets/images/cookie-bar.png" class="blur-up lazyload" alt="">
-               <h2>Cookies!</h2>
-           </div>
-
-           <div class="cookie-contain">
-               <h5 class="text-content">We use cookies to make your experience better</h5>
-           </div>
-       </div>
-
-       <div class="button-group">
-           <button class="btn privacy-button">Privacy Policy</button>
-           <button class="btn ok-button">OK</button>
-       </div>
-   </div> --}}
-   <!-- Cookie Bar Box End -->
-
    <!-- Deal Box Modal Start -->
    <div class="modal fade theme-modal deal-modal" id="deal-box" tabindex="-1" aria-labelledby="exampleModalLabel"
        aria-hidden="true">
@@ -463,12 +416,11 @@
                        <i class="fa-solid fa-xmark"></i>
                    </button>
                </div>
-               @if (auth('web')->user())
-                    <div class="modal-body">
-                        <div class="deal-offer-box">
-                            <ul class="deal-offer-list">
-                                @foreach ($offers as $offer)
-
+               {{-- @if (auth('web')->user())
+               <div class="modal-body">
+                   <div class="deal-offer-box">
+                       <ul class="deal-offer-list">
+                           @foreach ($offers as $offer)
                                 <li class="list-1">
                                     <div class="deal-offer-contain">
                                         <a href="#" class="deal-image">
@@ -476,9 +428,9 @@
                                                 alt="">
                                         </a>
 
-                                        <a href="shop-left-sidebar.html" class="deal-contain">
-                                            <h5>{{$offer->title}}</h5>
-                                            <h6><span>{{$offer->translate(app()->getLocale())->description}}</span></h6>
+                                        <a href="#" class="deal-contain">
+                                            <h5 >{{$offer->title}}</h5>
+                                            <h6><span>{!! $offer->translate(app()->getLocale())->description!!}</span></h6>
                                         </a>
                                     </div>
                                 </li>
@@ -486,7 +438,7 @@
                             </ul>
                         </div>
                     </div>
-               @endif
+               @endif --}}
            </div>
        </div>
    </div>

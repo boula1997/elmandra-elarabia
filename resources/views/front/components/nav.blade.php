@@ -99,7 +99,7 @@
                                </div>
 
                               
-                                    <div class="search-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
+                                    <div class="search-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none' }}">
                                         <div class="input-group">
                                             <input type="search" class="form-control"
                                                 placeholder="{{ __('general.iam_searching') }}"
@@ -306,7 +306,7 @@
                                            </li>
 
                                            <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.message') ? 'active' : '' }}" href="{{ route('front.message') }}"
+                                            <a class="nav-link dropdown-toggle {{ request()->routeIs('front.offers') ? 'active' : '' }}" href="{{ route('front.offers') }}"
                                               > {{ __('general.offers') }}</a>
                                            </li>
 
@@ -315,13 +315,13 @@
                                </div>
                            </div>
                        </div>
-
+{{-- 
                        <div class="header-nav-right">
                            <button class="btn deal-button" data-bs-toggle="modal" data-bs-target="#deal-box">
                                <i data-feather="zap"></i>
                                <span>عروض اليوم</span>
                            </button>
-                       </div>
+                       </div> --}}
                    </div>
                </div>
            </div>

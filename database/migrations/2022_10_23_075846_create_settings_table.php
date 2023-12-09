@@ -19,8 +19,10 @@ class CreateSettingsTable extends Migration
             $table->string('white_logo')->nullable();
             $table->string('tab')->nullable();
             $table->string('image')->nullable();
-            $table->text('map')->nullable();
+            $table->text('latitude')->nullable();
+            $table->text('longitude')->nullable();
             $table->double('shipping')->nullable();
+            $table->double('taxes')->nullable();
             $table->timestamps();
         });
     }

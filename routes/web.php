@@ -11,6 +11,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 
@@ -80,6 +81,7 @@ Route::group(
             Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
             Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
             Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
+            Route::get('/offers',[OfferController::class,'showoffers'])->name('front.offers');
         });
         Route::get('/team',[HomeController::class,'showteam'])->name('front.team');
         Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');

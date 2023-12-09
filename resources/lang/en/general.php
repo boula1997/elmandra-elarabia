@@ -417,6 +417,8 @@ return [
     'user_verify1'=>"Please complete your information  to activate the account",
     'admin_verify1'=>"A request to register an admin account has been received with the following data",
     'confirm'=>"Confirm",
+    'taxes'=>"Tax",
+    
     
     
     

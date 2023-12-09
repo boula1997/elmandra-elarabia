@@ -21,10 +21,10 @@ class OffersSeeder extends Seeder
 
         $image=[
                    
-                    "images/XJur2tRb3uXS8qWmkgSbuAJBUcgotx3dltGhcuQz.jpg",
-                    "images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
-                    "images/XJur2tRb3uXS8qWmkgSbuAJBUcgotx3dltGhcuQz.jpg",
-                    "images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
+                    "images/zslOglrRHLMIV1ni4S5HUIIkE7C84Fo8AynXtqrd.jpg",
+                    "images/2MCEeUSkT8k343fTXJQZLnA9pnIk9VvjeIeispgt.jpg",
+                    "images/7A3z9pcII62l8k8MT0dp6Ephm7qePIg3TwvdtZEx.jpg",
+                    "images/7Zz8Blgmyuv55yZruW3p6rOLgR9hxntJU1SEQqL3.jpg",
                 ];
       
 

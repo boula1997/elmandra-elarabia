@@ -113,6 +113,11 @@
                                         </li>
 
                                         <li class="align-items-start">
+                                            <h4>{{ __('general.taxes') }}</h4>
+                                            <h4 class="price text-end">{{ ((cart()->getTotal()*settings()->taxes)/100 ) }} ر.س </h4>
+                                        </li>
+
+                                        <li class="align-items-start">
                                             <h4>{{ __('general.shipping_value') }}</h4>
                                             <h4 class="price text-end">{{ settings()->shipping }} ر.س </h4>
                                         </li>
@@ -122,7 +127,7 @@
                                 <ul class="summery-total">
                                     <li class="list-total border-top-0">
                                         <h4>{{ __('general.total') }}</h4>
-                                        <h4 class="price theme-color"> <span class="cart-total">{{ cart()->getTotal() + settings()->shipping }} ر.س  </span></h4>
+                                        <h4 class="price theme-color"> <span class="cart-total">{{ cart()->getTotal() + settings()->shipping +((cart()->getTotal()*settings()->taxes)/100 )}} ر.س  </span></h4>
                                     </li>
                                 </ul>
                                 <br><br>
@@ -169,15 +174,6 @@
                                                     <div class="err" id="store"></div>
                                                 </div>
                                             </div>
-
-                                            <div class="coupon-cart">
-                                                <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
-                                                <div class="mb-3 coupon-box input-group">
-                                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                        placeholder="{{ __('general.address') }}" name="address" value="{{ old('address',auth('web')->user()->address) }}">
-                                                    </div>
-                                                    <div class="err" id="address"></div>
-                                            </div>
                                             <div class="coupon-cart">
                                                 <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
                                                 <div class="mb-3 coupon-box input-group">
@@ -186,6 +182,18 @@
                                                     </div>
                                                     <div class="err" id="phone"></div>
                                             </div>
+
+                                            <div class="coupon-cart">
+                                                <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
+                                                <div class="mb-3 coupon-box input-group">
+                                                    <input type="hidden" id="latitude" name="latitude" placeholder="latitude" >
+                                                    <div class="err" id="latitude"></div>
+                                                    <input type="hidden" id="longitude" name="longitude" placeholder="longitude"  >
+                                                    <div class="err" id="longitude"></div>
+                                                    <div id="map" style="width:500px; height:300px"></div>
+                                                </div>
+                                            </div>
+                                           
                                         
                                         </div>
                                     </div>
@@ -304,7 +312,9 @@
                         'name': $("input[name=name]").val(),
                         'email': $("input[name=email]").val(),
                         'phone': $("input[name=phone]").val(),
-                        'address': $("input[name=address]").val(),
+                        'latitude': $("input[name=latitude]").val(),
+                        'longitude': $("input[name=longitude]").val(),
+                        // 'address': $("input[name=address]").val(),
                         'store_id': $("select[name=store_id]").val(),
                     },
                     success: (response) => {
@@ -362,9 +372,19 @@
                             );
                         }
 
-                        if (response.responseJSON.errors.address) {
-                            $("#address").append(
-                                `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.address}</div>`
+                        // if (response.responseJSON.errors.address) {
+                        //     $("#address").append(
+                        //         `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.address}</div>`
+                        //     );
+                        // }
+                        if (response.responseJSON.errors.latitude) {
+                            $("#latitude").append(
+                                `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.latitude}</div>`
+                            );
+                        }
+                        if (response.responseJSON.errors.longitude) {
+                            $("#longitude").append(
+                                `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.longitude}</div>`
                             );
                         }
                         if (response.responseJSON.errors.store_id) {
@@ -459,6 +479,8 @@
                     data: {
                         "_token": "{{ csrf_token() }}",
                         'quantity': $("input[name=quantity]").val(),
+                        'latitude': $("input[name=latitude]").val(),
+                        'longitude': $("input[name=longitude]").val(),
                     },
                     success: (response) => {
                         $('.single-total'+index).text(quantity * $(this).next().attr('price'));
@@ -475,4 +497,61 @@
             });
         </script>
         {{-- Item Count --}}
+
+        {{-- google map --}}
+        <script>
+            var geocoder = new google.maps.Geocoder();
+            var marker = null;
+            var map = null;
+            function initialize() {
+                  var $latitude = document.getElementById('latitude');
+                  var $longitude = document.getElementById('longitude');
+                  var latitude = 24.695374620580868
+                  var longitude = 46.68142318725586;
+                  var zoom = 10;
+    
+          var LatLng = new google.maps.LatLng(latitude, longitude);
+    
+          var mapOptions = {
+            zoom: zoom,
+            center: LatLng,
+            panControl: false,
+            zoomControl: false,
+            scaleControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+    
+          map = new google.maps.Map(document.getElementById('map'), mapOptions);
+          if (marker && marker.getMap) marker.setMap(map);
+          marker = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            title: 'Drag Me!',
+            draggable: true
+          });
+    
+          google.maps.event.addListener(marker, 'dragend', function(marker) {
+            var latLng = marker.latLng;
+            $latitude.value = latLng.lat();
+            $longitude.value = latLng.lng();
+          });
+    
+    
+        }
+        initialize();
+        $('#findbutton').click(function (e) {
+            var address = $("#Postcode").val();
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    $(latitude).val(marker.getPosition().lat());
+                    $(longitude).val(marker.getPosition().lng());
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+            e.preventDefault();
+        });
+      </script>
     @endpush
