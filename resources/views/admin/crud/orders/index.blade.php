@@ -29,9 +29,9 @@
                                                 <th>#</th>
                                                 <th>@lang('general.name')</th>
                                                 <th>@lang('general.email')</th>
-                                                <th>@lang('general.address')</th>
                                                 <th>@lang('general.total-delivery')</th>
                                                 <th>@lang('general.status')</th>
+                                                <th>@lang('general.connect')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -41,9 +41,14 @@
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $order->name }}</td>
                                                     <td>{{ $order->email }}</td>
-                                                    <td>{{ $order->address }}</td>
                                                     <td>{{ $order->total }}</td>
                                                     <td>{{ __('general.'.$order->status) }}</td>
+                                                    <td><a class="fab fa-whatsapp" style="padding: 10%" href="https://wa.me/2{{$order->phone }}"  target="__blank"></a>
+                                                        
+                                                        <a class="fas fa-phone-alt" style="padding: 10%" href="tel:{{$order->phone}}"  target="__blank"></a>
+                                                        
+                                                        <i class="far fa-file-pdf" style="padding: 10%"></i>
+                                                    </td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'orders',
