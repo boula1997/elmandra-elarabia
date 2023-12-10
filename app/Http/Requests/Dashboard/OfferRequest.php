@@ -24,6 +24,7 @@ class OfferRequest extends FormRequest
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];
+            $rules += [$locale . '.subtitle' => ['required', 'string']];
             $rules += [$locale . '.description' => ['required', 'string']];
             
         }

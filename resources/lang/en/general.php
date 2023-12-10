@@ -418,9 +418,6 @@ return [
     'admin_verify1'=>"A request to register an admin account has been received with the following data",
     'confirm'=>"Confirm",
     'taxes'=>"Tax",
-    
-    
-    
-    
-    
+    'copy_code'=>"Copy Code",
+      
 ];

@@ -31,6 +31,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                            <div class="card-title fw-bold">
+                                                <h5 class="font-weight-bolder text-dark">@lang('general.subtitle'):</h5>
+                                                <p class="m-0">{{ $offer->translate($locale)->subtitle }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <br>
                                 <br>
@@ -51,7 +59,14 @@
             </div>
 
             <div class="row">
-
+                <div class="col-md-6">
+                    <div class="mb-7 bg-light p-3 rounded h-100">
+                        <div class="card-title fw-bold">
+                            <h5 class="font-weight-bolder text-dark">@lang('general.code'):</h5>
+                            <p class="m-0">{{ $offer->code }}</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         @if ($offer->file !== null)
