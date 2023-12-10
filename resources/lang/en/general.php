@@ -419,5 +419,7 @@ return [
     'confirm'=>"Confirm",
     'taxes'=>"Tax",
     'copy_code'=>"Copy Code",
-      
+    'what_we_do'=>"What We Do",
+    'we_are_trusted'=>"We are Trusted by Clients",
+    
 ];

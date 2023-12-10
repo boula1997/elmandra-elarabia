@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Counter;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\CounterRequest;
+use App\Models\Counter;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
+use App\Models\File as ModelsFile;
 use Exception;
 
 class CounterController extends Controller
@@ -57,7 +59,9 @@ class CounterController extends Controller
     public function store(CounterRequest $request)
     {
         try {
-            $this->counter->create($request->all());
+
+            $this->counter->create($request->except('image','profile_avatar_remove'));
+            $this->counter->uploadFile();
             return redirect()->route('counters.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
@@ -98,8 +102,9 @@ class CounterController extends Controller
     public function update(CounterRequest $request, Counter $counter)
     {
         try {
-            $data = $request->all();
+            $data = $request->except('image','profile_avatar_remove');
             $counter->update($data);
+            $counter->updateFile();
             return redirect()->route('counters.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
@@ -117,6 +122,8 @@ class CounterController extends Controller
     {
         try {
             $counter->delete();
+            $counter->file->delete();
+            $counter->deleteFile();
             return redirect()->route('counters.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
