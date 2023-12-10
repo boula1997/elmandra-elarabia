@@ -65,7 +65,7 @@ class OrderController extends Controller
     public function update(OrderRequest $request, Order $order)
     {
         try {
-            dd($request);
+            // dd($request);
             $data = $request->except('image','profile_avatar_remove');
             $order->update($data);
             return redirect()->route('orders.index', compact('order'))

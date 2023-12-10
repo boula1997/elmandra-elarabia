@@ -43,21 +43,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">{{ __('general.address') }}</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                            </div>
-                                        <input type="text" name="address"
-                                            value="{{ old('address', $order->address) }}" class="form-control"
-                                            id="exampleInputName" placeholder="{{ __('general.address') }}">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="form-group">
@@ -95,6 +81,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">{{ __('general.your_location') }}</label>
+                                            <input type="hidden" id="latitude" name="latitude" placeholder="latitude" value="{{ old('latitude',$order->latitude) }}" >
+                                            <input type="hidden" id="longitude" name="longitude" placeholder="longitude" value="{{ old('longitude',$order->longitude) }}" >
+                                            <div id="map" style="width:1000px; height:400px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                            
                         </div>
@@ -124,4 +122,60 @@
             });
         })
     </script>
+
+<script>
+            var geocoder = new google.maps.Geocoder();
+            var marker = null;
+            var map = null;
+            function initialize() {
+                var $latitude = document.getElementById('latitude');
+                var $longitude = document.getElementById('longitude');
+                var latitude = '{{ $order->latitude }}'
+                var longitude = '{{ $order->longitude }}';
+                var zoom = 10;
+
+        var LatLng = new google.maps.LatLng(latitude, longitude);
+
+        var mapOptions = {
+            zoom: zoom,
+            center: LatLng,
+            panControl: false,
+            zoomControl: false,
+            scaleControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        if (marker && marker.getMap) marker.setMap(map);
+        marker = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            title: 'Drag Me!',
+            draggable: true
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function(marker) {
+            var latLng = marker.latLng;
+            $latitude.value = latLng.lat();
+            $longitude.value = latLng.lng();
+        });
+
+
+        }
+        initialize();
+        $('#findbutton').click(function (e) {
+            var address = $("#Postcode").val();
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    $(latitude).val(marker.getPosition().lat());
+                    $(longitude).val(marker.getPosition().lng());
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+            e.preventDefault();
+        });
+</script>
 @endpush

@@ -21,8 +21,8 @@
                                       <button onclick="location.href = '{{ route('front.shopping_now') }}';"
                                           class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">{{ __('general.order_now') }}<i
                                               class="fas fa-shopping-cart ms-2 icon"></i>
-                                  </div>
-                                  </button>
+                                        </button>
+                                    </div>                   
                               </div>
                           </div>
                       </div>

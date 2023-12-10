@@ -13,18 +13,22 @@ class OffersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["تخفيض 30%","تخفيض","احصل على 3 دولارات كاش باك! الحد الأدنى للطلب 30 دولارًا","عروض خاصة"];
-        $title_en = ["30% Off","OFF","Get $3 Cashback! Min Order of $30","Special Offers "];
+        $title_ar = ["تخفيض 30%","تخفيض","احصل على 3 ريال سعودى كاش باك! الحد الأدنى للطلب 30 دولارًا"];
+        $title_en = ["30% Off","OFF","Get $3 Cashback! Min Order of $30",];
 
-        $description_ar = ["أسرع","عرض خاص على هذا الخصم، أسرع!",null,"عرض خاص على هذا الخصم، أسرع!"];
-        $description_en = ["Special offer on this discount, Hurry Up!","Special offer on this discount, Hurry Up!",null,"Special offer on this discount, Hurry Up!"];
-
+        $subtitle_ar = ["تخفيض 30%","تخفيض","احصل على 3 ريال سعودى كاش باك! الحد الأدنى للطلب 30 دولارًا"];
+        $subtitle_en = ["30% Off","OFF","Get $3 Cashback! Min Order of $30",];
+        
+        $description_ar = ["أسرع","عرض خاص على هذا الخصم، أسرع!","عرض خاص على هذا الخصم، أسرع!"];
+        $description_en = ["Special offer on this discount, Hurry Up!","Special offer on this discount, Hurry Up!","Special offer on this discount, Hurry Up!"];
+        
+        $code = ["new2023","modern15","Get30"];
+        
         $image=[
                    
-                    "images/XJur2tRb3uXS8qWmkgSbuAJBUcgotx3dltGhcuQz.jpg",
-                    "images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
-                    "images/XJur2tRb3uXS8qWmkgSbuAJBUcgotx3dltGhcuQz.jpg",
-                    "images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
+                    "images/02zoDUov2wk3cHE7xGXazHKIXjtzaERpKaJkg3IJ.svg",
+                    "images/zj067tBFtzuzbNiybnYAHTMCnpJabbkGnjMiFXQy.svg",
+                    "images/JOWOwSYXuco9wRioVMlHdGXoqR1rWXdCwdSDIKM4.svg",
                 ];
       
 
@@ -32,13 +36,16 @@ class OffersSeeder extends Seeder
             $Offer_Translation = Offer::create([
                 'ar' => [
                     'title' => $title_ar[$i],
+                    'subtitle' => $subtitle_ar[$i],
                     'description' => $description_ar[$i],
     
                 ],
                 'en' => [
                     'title' => $title_en[$i],
+                    'subtitle' => $subtitle_en[$i],
                     'description' => $description_en[$i],
                 ],
+                'code'=> $code[$i],
             ]);
             $Offer_Translation->file()->create(["url"=>$image[$i]]);
         }

@@ -16,6 +16,7 @@ class CreateOfferTranslationsTable extends Migration
         Schema::create('offer_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('subtitle')->nullable();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('offer_id');
             $table->string('locale')->index();

@@ -90,6 +90,10 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+        {{-- google api keys --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMn2Lb6WoSOsXKtMoITtHMNsErkkz_w5k"></script>
 </head>
 
 <body class="sc5">
