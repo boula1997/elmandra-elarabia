@@ -2,7 +2,7 @@
 @section('content')
     @include('front.components.slider')
     @include('front.components.category')
-    @include('front.components.discount')
+    {{-- @include('front.components.discount') --}}
     @include('front.components.products-home')
     @include('front.components.counter')
     @include('front.components.products-home2')

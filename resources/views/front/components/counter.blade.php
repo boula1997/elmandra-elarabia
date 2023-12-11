@@ -1,5 +1,65 @@
+   
+      <!-- Client Section Start -->
+      <section class="client-section section-lg-space">
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="about-us-title text-center">
+                        <h4>{{ __('general.what_we_do') }}</h4>
+                        <h2 class="center">{{ __('general.we_are_trusted') }}</h2>
+                    </div>
+
+                    <div class="slider-3_1 product-wrapper">
+                        <div>
+                            <div class="clint-contain">
+                                <div class="client-icon">
+                                    <img src="{{ asset('template/assets/svg/3/work.svg') }}"
+                                        class="blur-up lazyload" alt="">
+                                </div>
+                                <h2>10</h2>
+                                <h4>Business Years</h4>
+                                <p>A coffee shop is a small business that sells coffee, pastries, and other
+                                    morning
+                                    goods. There are many different types of coffee shops around the world.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="clint-contain">
+                                <div class="client-icon">
+                                    <img src="{{ asset('template/assets/svg/3/buy.svg') }}"
+                                        class="blur-up lazyload" alt="">
+                                </div>
+                                <h2>80 K+</h2>
+                                <h4>Products Sales</h4>
+                                <p>Some coffee shops have a seating area, while some just have a spot to order
+                                    and then
+                                    go somewhere else to sit down. The coffee shop that I am going to.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="clint-contain">
+                                <div class="client-icon">
+                                    <img src="{{ asset('template/assets/svg/3/user.svg') }}"
+                                        class="blur-up lazyload" alt="">
+                                </div>
+                                <h2>90%</h2>
+                                <h4>Happy Customers</h4>
+                                <p>My goal for this coffee shop is to be able to get a coffee and get on with my
+                                    day.
+                                    It's a Thursday morning and I am rushing between meetings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client Section End -->
+
    <!-- Offer Section Start -->
-   <section>
+{{-- <section>
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12">
@@ -49,25 +109,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- Offer Section End -->
-
-<!-- Facts Start -->
-   {{-- <div class="container-fluid bg-dark facts p-5 my-5">
-       <div class="row gx-5 gy-4 py-5">
-           @foreach ($counters as $counter)
-               <div class="col-lg-3 col-md-6" data-aos="flip-up">
-                   <div class="d-flex">
-                       <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                           style="width: 60px; height: 60px;">
-                           <i class="{{ $counter->icon }} fs-4 text-white"></i>
-                       </div>
-                       <div class="ps-4">
-                           <h6 class="text-secondary text-uppercase text-nowrap">{{ $counter->title }}</h6>
-                           <h4 class="text-white mb-0" data-toggle="counter-up">{{ $counter->count }}</h4>
-                       </div>
-                   </div>
-               </div>
-           @endforeach
-       </div>
-   </div> --}}
