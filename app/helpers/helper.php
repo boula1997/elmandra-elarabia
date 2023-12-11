@@ -126,8 +126,17 @@ if (!function_exists('cart')) {
 
     function cart()
     {
-
-        return Cart::name('shopping')->useForCommercial();
+        $cart=Cart::name('shopping')->useForCommercial();
+        $tax = $cart->applyTax([
+            'id'         => 123,
+            'title'      => 'VAT 10%',
+            'rate'       => 10,
+            'extra_info' => [
+                'description'    => 'The V.A.T tax',
+                'reference_link' => 'https://example.com'
+            ]
+        ]);
+        return $cart;
     }
 }
 if (!function_exists('favourite')) {
