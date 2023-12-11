@@ -29,6 +29,7 @@ class SettingResource extends JsonResource
             "description" => $this->description,
             "meta_data" => $this->meta_data,
             "title" => $this->title,
+            "taxes" => $this->taxes,
         ];
     }
 }

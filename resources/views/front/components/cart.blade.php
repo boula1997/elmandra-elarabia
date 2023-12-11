@@ -174,6 +174,7 @@
                                                     <div class="err" id="store"></div>
                                                 </div>
                                             </div>
+                                            
                                             <div class="coupon-cart">
                                                 <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
                                                 <div class="mb-3 coupon-box input-group">
@@ -240,7 +241,6 @@
             </div>
         </div>
     </div>
-    </section>
     <!-- Cart Section End -->
 
 

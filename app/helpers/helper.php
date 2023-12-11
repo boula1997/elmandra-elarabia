@@ -130,7 +130,7 @@ if (!function_exists('cart')) {
         $tax = $cart->applyTax([
             'id'         => 123,
             'title'      => 'VAT 10%',
-            'rate'       => 10,
+            'rate'       => settings()->taxes,
             'extra_info' => [
                 'description'    => 'The V.A.T tax',
                 'reference_link' => 'https://example.com'
