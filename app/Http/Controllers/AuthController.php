@@ -61,7 +61,7 @@ class AuthController extends Controller
             'message' => 'User successfully registered',
             'user' => $user
         ], 201);
-    }
+    }   
 
     /**
      * Log the user out (Invalidate the token).
