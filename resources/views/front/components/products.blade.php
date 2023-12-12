@@ -22,7 +22,7 @@
                                     <div class="col-3 px-0 p-3">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="{{ route('front.show.product', $product->id) }}">
+                                                <a href="{{ route('front.show.product', $product->id) }}" class="position-relative">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
                                                         @if (in_array($product->id,topSelling()))                                                            

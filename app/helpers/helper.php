@@ -218,7 +218,7 @@ if (!function_exists('topSelling()')) {
          $tops=DB::select('select count(product_id) as cnt, product_id from orderproducts group by product_id order by cnt desc');
          $items=[];
          foreach($tops as $key=>$value){
-            if($key<4){
+            if($key<10){
               array_push($items,$value->product_id);
             }
          }
