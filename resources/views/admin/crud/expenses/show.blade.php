@@ -41,17 +41,31 @@
                 <div class="card card-custom">
                     <div class="card-body">
                         <div class="row">
-                            <div class="form-group">
-                                <label for="exampleInputFile1">{{ __('general.images') }}</label>
-                                <div class="row">
-                                    @foreach ($images as $image)
-                                        @if (isset($image->id))
-                                            <div class="col-md-3">
-                                                <img width="100" height="100" class="mx-3" src="{{ $image->url }}"
-                                                    alt="">
-                                            </div>
-                                        @endif
-                                    @endforeach
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">{{ __('general.your_location') }}</label>
+                                            <input type="hidden" id="latitude" name="latitude" placeholder="latitude" value="{{ old('latitude',$expense->latitude) }}" >
+                                            <input type="hidden" id="longitude" name="longitude" placeholder="longitude" value="{{ old('longitude',$expense->longitude) }}" >
+                                            <div id="map" style="width:1000px; height:400px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputFile1">{{ __('general.images') }}</label>
+                                    <div class="row">
+                                        @foreach ($images as $image)
+                                            @if (isset($image->id))
+                                                <div class="col-md-3">
+                                                    <img width="100" height="100" class="mx-3" src="{{ $image->url }}"
+                                                        alt="">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -61,3 +75,62 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+
+<script>
+            var geocoder = new google.maps.Geocoder();
+            var marker = null;
+            var map = null;
+            function initialize() {
+                var $latitude = document.getElementById('latitude');
+                var $longitude = document.getElementById('longitude');
+                var latitude = '{{ $expense->latitude }}'
+                var longitude = '{{ $expense->longitude }}';
+                var zoom = 10;
+
+        var LatLng = new google.maps.LatLng(latitude, longitude);
+
+        var mapOptions = {
+            zoom: zoom,
+            center: LatLng,
+            panControl: false,
+            zoomControl: false,
+            scaleControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        if (marker && marker.getMap) marker.setMap(map);
+        marker = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            title: 'Drag Me!',
+            draggable: true
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function(marker) {
+            var latLng = marker.latLng;
+            $latitude.value = latLng.lat();
+            $longitude.value = latLng.lng();
+        });
+
+
+        }
+        initialize();
+        $('#findbutton').click(function (e) {
+            var address = $("#Postcode").val();
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    $(latitude).val(marker.getPosition().lat());
+                    $(longitude).val(marker.getPosition().lng());
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+            e.preventDefault();
+        });
+</script>
+@endpush
