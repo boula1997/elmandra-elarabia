@@ -51,10 +51,16 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="{{ $locale . '[unit]' }}"
-                                            placeholder="@lang('general.unit')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.unit') is-invalid @enderror"
-                                            value="{{ old($locale . '.unit', $product->translate($locale)->unit) }}">
+                                        <div class="mb-3">
+                                            <select
+                                                class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
+                                                name="{{ $locale . '[unit]' }}" id="">
+                                                <option @selected(!old('unit'))>اختر الوحدة</option>
+                                                <option @selected(old('unit',$product->unit) == 'لتر') value="لتر">لتر</option>
+                                                <option @selected(old('unit',$product->unit) == 'عبوة') value="عبوة">عبوة</option>
+                                                <option @selected(old('unit',$product->unit) == 'كيلو') value="كيلو">كيلو</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

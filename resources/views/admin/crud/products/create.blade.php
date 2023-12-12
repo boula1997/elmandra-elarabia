@@ -49,10 +49,18 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="{{ $locale . '[unit]' }}"
-                                            placeholder="@lang('general.unit')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.unit') is-invalid @enderror"
-                                            value="{{ old($locale . '.unit') }}">
+
+                                        <div class="mb-3">
+                                            <select
+                                                class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
+                                                name="{{ $locale . '[unit]' }}" id="">
+                                                <option @selected(!old('unit'))>اختر الوحدة</option>
+                                                <option @selected(old('unit') == 'لتر') value="لتر">لتر</option>
+                                                <option @selected(old('unit') == 'عبوة') value="عبوة">عبوة</option>
+                                                <option @selected(old('unit') == 'كيلو') value="كيلو">كيلو</option>
+                                            </select>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -70,10 +78,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="size"
-                                        placeholder="@lang('general.size')"
+                                    <input type="text" name="size" placeholder="@lang('general.size')"
                                         class="form-control  pl-1 min-h-40px @error('size') is-invalid @enderror"
-                                        value="{{old('size')}}">
+                                        value="{{ old('size') }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -82,10 +89,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="price"
-                                        placeholder="@lang('general.price')"
+                                    <input type="text" name="price" placeholder="@lang('general.price')"
                                         class="form-control  pl-1 min-h-40px @error('price') is-invalid @enderror"
-                                        value="{{old('price')}}">
+                                        value="{{ old('price') }}">
                                 </div>
                             </div>
                         </div>
@@ -96,10 +102,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="price_bd"
-                                        placeholder="@lang('general.price_bd')"
+                                    <input type="text" name="price_bd" placeholder="@lang('general.price_bd')"
                                         class="form-control  pl-1 min-h-40px @error('price_bd') is-invalid @enderror"
-                                        value="{{old('price_bd')}}">
+                                        value="{{ old('price_bd') }}">
                                 </div>
                             </div>
                         </div>
@@ -110,10 +115,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="stock"
-                                        placeholder="@lang('general.stock')"
+                                    <input type="text" name="stock" placeholder="@lang('general.stock')"
                                         class="form-control  pl-1 min-h-40px @error('stock') is-invalid @enderror"
-                                        value="{{old('stock')}}">
+                                        value="{{ old('stock') }}">
                                 </div>
                             </div>
                         </div>
@@ -123,7 +127,9 @@
                                 <label for="" class="form-label">{{ __('general.subcategories') }}</label>
                                 <select class="form-select form-select-lg" name="subcategory_id" id="subcategory">
                                     @foreach ($subcategories as $subcategory)
-                                        <option value="{{ $subcategory->id }}" {{ old('subcategory_id')==$subcategory->id? 'selected' : '' }}>{{ $subcategory->title }}</option>
+                                        <option value="{{ $subcategory->id }}"
+                                            {{ old('subcategory_id') == $subcategory->id ? 'selected' : '' }}>
+                                            {{ $subcategory->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -133,7 +139,9 @@
                                 <label for="" class="form-label">{{ __('general.companies') }}</label>
                                 <select class="form-select form-select-lg" name="company_id" id="company">
                                     @foreach ($companies as $company)
-                                        <option value="{{ $company->id }}" {{ old('company_id')==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
+                                        <option value="{{ $company->id }}"
+                                            {{ old('company_id') == $company->id ? 'selected' : '' }}>{{ $company->title }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -150,7 +158,7 @@
 
                         </div>
 
-    
+
 
                     </div>
                 </div>
