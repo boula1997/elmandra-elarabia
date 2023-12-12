@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             NewslettersSeeder::class,
             FeaturesSeeder::class,
             ContactsSeeder::class,
+            CountersSeeder::class,
             PagesSeeder::class,
             SlidersSeeder::class,
             CategorySeeder::class,
