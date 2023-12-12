@@ -37,6 +37,7 @@ use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\StoreProductController;
 use App\Http\Controllers\Admin\SubcategoryController;
+use App\Http\Controllers\Admin\MarketerController;
 use App\Models\Advertisement;
 use App\Models\StoreProduct;
 use Illuminate\Support\Facades\Auth;
@@ -104,6 +105,7 @@ Route::group(
                 Route::resource('stores', StoreController::class);
                 Route::resource('storeProducts', StoreProductController::class);
                 Route::resource('reviews', ReviewController::class);
+                Route::resource('marketers', MarketerController::class);
                 
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);

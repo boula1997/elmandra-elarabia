@@ -31,6 +31,7 @@ use App\Models\Review;
 use App\Models\Seller;
 use App\Models\Store;
 use App\Models\StoreProduct;
+use App\Models\Marketer;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Jackiedo\Cart\Facades\Cart;
@@ -114,10 +115,12 @@ function itemsCount($model)
         "stores" => count(Store::get()),
         "storeProducts" => count(StoreProduct::get()),
         "offers" => count(Offer::get()),
+        "marketers" => count(Marketer::get()),
         "adminsAdmin" => count(Admin::where('type','Admin')->get()),
         "sellersAdmin" => count(Admin::where('type','Seller')->get()),
         "reviews" => count(Review::get()),
         "expenses" => count(Expense::get()),
+        "marketersAdmin" => count(Admin::where('type','Marketer')->get()),
         
     ];
 

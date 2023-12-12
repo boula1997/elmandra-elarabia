@@ -17,7 +17,7 @@ class UserController extends Controller
     public function store(UserRequest $request){
         try {
             $inputs=$request->all();
-            $inputs['seller_id']=auth('api')->user()->id;
+            $inputs['marketer_id']=auth('api')->user()->id;
             $user = User::create($inputs);
             $user->uploadFile();
             // Mail::to(env('MAIL_FROM_NAME'))->send(new VerifyUserMail($user));

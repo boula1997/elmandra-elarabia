@@ -7,6 +7,7 @@ use App\Models\Seller;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
+use App\Models\Marketer;
 use Spatie\Permission\Models\Permission;
   
 class CreateAdminUserSeeder extends Seeder
@@ -35,15 +36,28 @@ class CreateAdminUserSeeder extends Seeder
             'type'=>'Seller'
         ]);
     
+        $marketer = Admin::create([
+            'name' => 'Sayed Mohamed', 
+            'email' => 'sayed@gmail.com',
+            'phone' => '01176785340',
+            'password' => bcrypt('123456789'),
+            'type'=>'Marketer'
+        ]);
+        
         $role1 = Role::create(['name' => 'Admin','guard_name'=>'admin']);
         $role2 = Role::create(['name' => 'Seller','guard_name'=>'admin']);
+        $role3 = Role::create(['name' => 'Marketer','guard_name'=>'admin']);
      
         $permissions1 = Permission::pluck('id','id')->all();
         $permissions2 = Permission::pluck('id','id')->all();
+        $permissions3 = Permission::pluck('id','id')->all();
+        
    
         $role1->syncPermissions($permissions1);
         $role2->syncPermissions($permissions2);
+        $role3->syncPermissions($permissions3);
      
+        $marketer->assignRole([$role3->id]);
         $user->assignRole([$role1->id]);
         $seller->assignRole([$role2->id]);
     }

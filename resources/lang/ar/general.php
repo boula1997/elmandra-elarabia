@@ -51,7 +51,7 @@ return [
     'edit'  => 'تعديل',
     'delete'  => 'مسح',
     'products'  => 'المنتجات',
-    'bestsellerin'=>'الاكثر مبيعا في',
+    'bestmarketerin'=>'الاكثر مبيعا في',
 
     'profile'=>'الملف لشخصي',
     'account'=>'حسابي',
@@ -342,7 +342,7 @@ return [
     'advertisements'=>'الاعلانات',
     'advantages'=>'المميزات',
     'companies'=>'الشركات',
-    'sellers'=>'المناديب',
+    'marketers'=>'المناديب',
     'stores'=>'المستودعات', 
     'start_date'=>'تاريخ البدء', 
     'end_date'=>'تاريخ الانتهاء',
