@@ -9,7 +9,7 @@ use App\Http\Controllers\API\ContactController;
 use App\Http\Controllers\API\PageController;
 use App\Http\Controllers\API\PortfolioController;
 use Illuminate\Http\Request;
-use App\Http\Controllers\API\FeatureController;
+use App\Http\Controllers\API\CounterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\TestimonialController;
