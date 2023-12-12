@@ -30,6 +30,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\OfferController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ReviewController;
@@ -99,6 +100,7 @@ Route::group(
                 Route::resource('advertisements', AdvertisementController::class);
                 Route::resource('features', FeatureController::class);
                 Route::resource('offers', OfferController::class);
+                Route::resource('coupons', CouponController::class);
                 Route::resource('advantages', AdvantageController::class);
                 Route::resource('companies', CompanyController::class);
                 Route::resource('sellers', SellerController::class);

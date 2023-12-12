@@ -367,7 +367,7 @@ return [
     'enter_coupon_code'=>'أدخل رمز الخصم هنا...',
     'coupon_discount'=>'قيمة خصم القسيمة',
     'discount'=>"خصم",
-    'personal_information'=>'البيانات شخصية',
+    'personal_information'=>'بيانات الفاتورة',
     'process_to_checkout'=>'عملية الدفع',
     'return_to_shopping'=>'العودة إلى التسوق',
     'password_confirmation'=>'تأكيد كلمة المرور',
@@ -424,5 +424,8 @@ return [
     'free_delivery'=>'توصيل مجاني للطلبات التي تزيد عن 50',
     'daily_mega'=>'الخصومات الكبرى اليومية',
     'best_price'=>'أفضل الأسعار في السوق',
-   
+    'destination'=>"الحي",
+    'expenses'=>"المصروفات",
+    'coupons'=>"كوبونات",
+
 ];

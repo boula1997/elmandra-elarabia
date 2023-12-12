@@ -148,6 +148,10 @@ class PermissionTableSeeder extends Seeder
            'expense-create',
            'expense-edit',
            'expense-delete',
+           'coupon-list',
+           'coupon-create',
+           'coupon-edit',
+           'coupon-delete',
         ];
      
         foreach ($permissions as $permission) {
