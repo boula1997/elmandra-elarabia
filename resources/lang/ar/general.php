@@ -426,5 +426,6 @@ return [
     'best_price'=>'أفضل الأسعار في السوق',
     'destination'=>"الحي",
     'expenses'=>"المصروفات",
+    'coupons'=>"كوبونات",
 
 ];

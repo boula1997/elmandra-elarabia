@@ -423,6 +423,7 @@ return [
     'we_are_trusted'=>"We are Trusted by Clients",
     'destination'=>"Destination",
     'expenses'=>"Expenses",
+    'coupons'=>"Coupons",
     
     
 ];
