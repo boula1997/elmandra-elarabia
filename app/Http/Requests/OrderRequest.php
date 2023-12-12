@@ -27,6 +27,7 @@ class OrderRequest extends FormRequest
             'name'=>'required',
             'phone'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'email'=>'required|email',
+            'code'=>'nullable|exists:coupons,code',
             'latitude'=>'required',
             'longitude'=>'required',
         ];

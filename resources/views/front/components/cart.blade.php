@@ -103,14 +103,7 @@
                                 <div class="summery-contain">
                             
                                     <ul>
-                                        <div class="coupon-cart">
-                                            <h6 class="text-content mb-2">{{ __('general.coupon_apply') }}</h6>
-                                            <div class="mb-3 coupon-box input-group">
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="{{ __('general.enter_coupon_code') }}">
-                                                <button class="btn-apply">{{ __('general.apply') }}</button>
-                                            </div>
-                                        </div>
+                
                                         <li>
                                             <h4>{{ __('general.subtotal') }}</h4>
                                             <h4 class="price"><span class="cart-subtotal">{{ cart()->getTotal() }} ر.س </span></h4>
@@ -186,6 +179,14 @@
                                                         placeholder="{{ __('general.phone') }}" name="phone" value="{{ old('phone',auth('web')->user()->phone) }}">
                                                     </div>
                                                     <div class="err" id="phone"></div>
+                                                </div>
+                                            <div class="coupon-cart">
+                                                <h6 class="text-content mb-2">{{ __('general.have_code') }}</h6>
+                                                <div class="mb-3 coupon-box input-group">
+                                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                        placeholder="{{ __('general.code') }}" name="code" value="{{ old('code') }}">
+                                                    </div>
+                                                    <div class="err" id="code"></div>
                                                 </div>
                                                 
                                                 <div class="coupon-cart">
@@ -313,6 +314,7 @@
                         'name': $("input[name=name]").val(),
                         'email': $("input[name=email]").val(),
                         'phone': $("input[name=phone]").val(),
+                        'code': $("input[name=code]").val(),
                         'latitude': $("input[name=latitude]").val(),
                         'longitude': $("input[name=longitude]").val(),
                         // 'address': $("input[name=address]").val(),
@@ -370,6 +372,11 @@
                         if (response.responseJSON.errors.phone) {
                             $("#phone").append(
                                 `<div class="alert alert-danger my-1"   style="text-align:initial !important">${response.responseJSON.errors.phone}</div>`
+                            );
+                        }
+                        if (response.responseJSON.errors.code) {
+                            $("#code").append(
+                                `<div class="alert alert-danger my-1"   style="text-align:initial !important">${response.responseJSON.errors.code}</div>`
                             );
                         }
 
