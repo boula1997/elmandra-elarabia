@@ -85,6 +85,10 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+
+                                    <button onclick="location.href = '{{ route('front.show-products') }}';"
+                                    class="btn btn-light shopping-button text-dark">
+                                    <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +150,7 @@
                                         </div>
                 
                                         <div class="summery-contain">
-                                            <div class="coupon-cart">
+                                            <div class="coupon-cart d-none">
                                                 <h6 class="text-content mb-2">{{ __('general.name') }}</h6>
                                                 <div class="mb-3 coupon-box input-group">
                                                     <input type="text" class="form-control" id="exampleFormControlInput1"
@@ -154,7 +158,7 @@
                                                     </div>
                                                     <div class="err" id="name"></div>
                                             </div>
-                                            <div class="coupon-cart">
+                                            <div class="coupon-cart d-none">
                                                 <h6 class="text-content mb-2">{{ __('general.your_email') }}</h6>
                                                 <div class="mb-3 coupon-box input-group">
                                                     <input type="email" class="form-control" id="exampleFormControlInput1"
@@ -164,7 +168,7 @@
                                             </div>
                                             
                                             <div class="coupon-cart">
-                                                <h6 class="text-content mb-2">{{ __('general.store') }}</h6>
+                                                <h6 class="text-content mb-2">{{ __('general.destination') }}</h6>
                                                 <div class="mb-3 coupon-box input-group select">
                                                     <select class="form-select form-select-lg border-primary" name="store_id" id="store">
                                                         @foreach ($stores as $store)
@@ -209,12 +213,6 @@
                                         <li>
                                             
                                             <button type="submit" class="btn btn-animation proceed-btn fw-bold"><i class="fa fa-spinner fa-spin d-none mx-1 " id="spinner-order"></i> {{ __('general.process_to_checkout') }}</button>
-                                        </li>
-                
-                                        <li>
-                                            <button onclick="location.href = '{{ route('front.show-products') }}';"
-                                                class="btn btn-light shopping-button text-dark">
-                                                <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
                                         </li>
                                     </ul>
                                 </div>
