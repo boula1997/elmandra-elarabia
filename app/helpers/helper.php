@@ -29,6 +29,7 @@ use App\Models\Review;
 use App\Models\Seller;
 use App\Models\Store;
 use App\Models\StoreProduct;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Jackiedo\Cart\Facades\Cart;
 use Spatie\Permission\Models\Role;
@@ -207,6 +208,23 @@ if (!function_exists('advantages()')) {
     function advantages()
     {
        return Advantage::get();
+    }
+}
+if (!function_exists('topSelling()')) {
+
+    function topSelling()
+    {
+    
+         $tops=DB::select('select count(product_id) as cnt, product_id from orderproducts group by product_id order by cnt desc');
+         $items=[];
+         foreach($tops as $key=>$value){
+            if($key<4){
+              array_push($items,$value->product_id);
+            }
+         }
+      
+        return $items;
+
     }
 }
 

@@ -11,6 +11,14 @@
                                         <a href="{{ route('front.show.product',$product->id) }}" class="product-slider-image">
                                             <img src="{{asset($product->image)}}" class="w-100 blur-up lazyload rounded-3 product-slider-image"
                                                 alt="">
+
+                                                @if (in_array($product->id,topSelling()))                                                            
+                                                <span
+                                                    class="position-absolute top-0 right-5 start-100 translate-top badge rounded-pill bg-danger">
+                                                    الاكثر مبيعا
+                                                    <span class="visually-hidden">unread messages</span>
+                                                </span>
+                                                @endif
                                         </a>
 
                                         <div class="product-slider-detail">
