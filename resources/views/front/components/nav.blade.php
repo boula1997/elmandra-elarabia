@@ -151,7 +151,7 @@
                                            <i class="fa-brands fa-whatsapp fa-xl" style="color: green"></i>
                                        </a>
                                    </li>
-                                   <li class="right-side {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
+                                   <li class="right-side {{ request()->routeIs('front.shopping_now') ? '' : (request()->routeIs('front.shopping') ? '' :  'd-none')  }}">
                                        <div class="onhover-dropdown header-badge">
                                            <a href="{{ route('front.shopping') }}">
                                                <button type="button"
