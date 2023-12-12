@@ -23,6 +23,7 @@ class CouponsSeeder extends Seeder
         $description_en = ["Special coupon on this discount, Hurry Up!","Special coupon on this discount, Hurry Up!","Special coupon on this discount, Hurry Up!"];
         
         $code = ["new2023","modern15","Get30"];
+        $marketer_id = [1,1,1];
         
         $image=[
                    
@@ -46,6 +47,7 @@ class CouponsSeeder extends Seeder
                     'description' => $description_en[$i],
                 ],
                 'code'=> $code[$i],
+                'marketer_id'=> $marketer_id[$i],
             ]);
             $Coupon_Translation->file()->create(["url"=>$image[$i]]);
         }

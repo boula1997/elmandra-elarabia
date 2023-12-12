@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\Coupon;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
+use App\Models\Marketer;
 use Exception;
 
 class CouponController extends Controller
@@ -47,9 +48,10 @@ class CouponController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.coupons.create');
+        $marketers=Marketer::get();
+        return view('admin.crud.coupons.create',compact('marketers'));
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -69,7 +71,7 @@ class CouponController extends Controller
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
         }
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -80,7 +82,7 @@ class CouponController extends Controller
     {
         return view('admin.crud.coupons.show', compact('coupon'));
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -90,7 +92,8 @@ class CouponController extends Controller
     public function edit(Coupon $coupon)
     {
         //    dd($coupon->title);
-        return view('admin.crud.coupons.edit', compact('coupon'));
+        $marketers=Marketer::get();
+        return view('admin.crud.coupons.edit', compact('coupon','marketers'));
     }
     /**
      * Update the specified resource in storage.
