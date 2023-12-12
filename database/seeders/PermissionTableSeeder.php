@@ -136,6 +136,10 @@ class PermissionTableSeeder extends Seeder
            'offer-delete',
            'review-list',
            'review-delete',
+           'expense-list',
+           'expense-create',
+           'expense-edit',
+           'expense-delete',
         ];
      
         foreach ($permissions as $permission) {

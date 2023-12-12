@@ -15,6 +15,7 @@ use App\Models\Image;
 use App\Models\Offer;
 use App\Models\Order;
 use App\Models\Page;
+use App\Models\Expense;
 use App\Models\Team;
 use App\Models\Partner;
 use App\Models\Testimonial;
@@ -113,6 +114,8 @@ function itemsCount($model)
         "adminsAdmin" => count(Admin::where('type','Admin')->get()),
         "sellersAdmin" => count(Admin::where('type','Seller')->get()),
         "reviews" => count(Review::get()),
+        "expenses" => count(Expense::get()),
+        
     ];
 
 

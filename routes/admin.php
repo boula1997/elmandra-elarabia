@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\ExpenseController;
 use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\ContactController;
@@ -85,6 +86,7 @@ Route::group(
                 Route::resource('partners', PartnerController::class);
                 Route::resource('teams', TeamController::class);
                 Route::resource('pages', PageController::class);
+                Route::resource('expenses', ExpenseController::class);
                 Route::resource('partners', PartnerController::class);
                 Route::resource('portfolios', PortfolioController::class);
                 Route::resource('counters', CounterController::class);

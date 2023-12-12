@@ -164,26 +164,7 @@
                 </li>
             @endcan
 
-                {{-- @can('seller-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
-                            <p>
-                                @lang('general.sellers')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('sellers') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('sellers.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
+               
 
                 @can('role-list')
                     <li class="nav-item">
@@ -227,6 +208,26 @@
                     </li>
                 @endcan
 
+                @can('expense-list')
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class=" px-1 fas fa-users"></i>
+                        <p>
+                            @lang('general.expenses')
+                            <i class=" px-1 fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">{{ itemsCount('expenses') }}</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('expenses.index') }}" class="nav-link">
+                                <i class=" px-1 far fa-circle nav-icon"></i>
+                                <p>@lang('general.show')</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
 
                 @can('team-list')
                     <li class="nav-item">
