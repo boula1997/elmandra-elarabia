@@ -11,7 +11,7 @@ use App\Models\Testimonial;
 use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
-use App\Models\Counter;
+use App\Models\Feature;
 use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;

@@ -36,7 +36,7 @@ return [
     'testimonials'  => 'Testimonials',
     'processes'  => 'Processs',
     'faqs'  => 'Faqs',
-    'counters'  => 'Counters',
+    'features'  => 'Features',
     'contacts'  => 'Contacts',
     'orderproducts'  => 'Orderproducts',
     'partners'  => 'Our Partners',

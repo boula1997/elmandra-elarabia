@@ -3,36 +3,36 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\CounterRequest;
+use App\Http\Requests\Dashboard\FeatureRequest;
 use Illuminate\Support\Facades\File;
-use App\Models\Counter;
+use App\Models\Feature;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
 use Exception;
 
-class CounterController extends Controller
+class FeatureController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    private $counter;
-    function __construct(Counter $counter)
+    private $feature;
+    function __construct(Feature $feature)
     {
-        $this->middleware('permission:counter-list|counter-create|counter-edit|counter-delete', ['only' => ['index', 'show']]);
-        $this->middleware('permission:counter-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:counter-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:counter-delete', ['only' => ['destroy']]);
-        $this->counter = $counter;
+        $this->middleware('permission:feature-list|feature-create|feature-edit|feature-delete', ['only' => ['index', 'show']]);
+        $this->middleware('permission:feature-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:feature-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:feature-delete', ['only' => ['destroy']]);
+        $this->feature = $feature;
     }
 
 
     public function index()
     {
         try {
-            $counters = $this->counter->latest()->get();
-            return view('admin.crud.counters.index', compact('counters'))
+            $features = $this->feature->latest()->get();
+            return view('admin.crud.features.index', compact('features'))
                 ->with('i', (request()->input('page', 1) - 1) * 5);
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -47,7 +47,7 @@ class CounterController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.counters.create');
+        return view('admin.crud.features.create');
     }
 
     /**
@@ -56,13 +56,13 @@ class CounterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CounterRequest $request)
+    public function store(FeatureRequest $request)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
-            $counter= $this->counter->create($data);
-            $counter->uploadFile();
-            return redirect()->route('counters.index')
+            $feature= $this->feature->create($data);
+            $feature->uploadFile();
+            return redirect()->route('features.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -73,39 +73,39 @@ class CounterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Counter  $counter
+     * @param  \App\Models\Feature  $feature
      * @return \Illuminate\Http\Response
      */
-    public function show(Counter $counter)
+    public function show(Feature $feature)
     {
-        return view('admin.crud.counters.show', compact('counter'));
+        return view('admin.crud.features.show', compact('feature'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Counter  $counter
+     * @param  \App\Models\Feature  $feature
      * @return \Illuminate\Http\Response
      */
-    public function edit(Counter $counter)
+    public function edit(Feature $feature)
     {
-        //    dd($counter->title);
-        return view('admin.crud.counters.edit', compact('counter'));
+        //    dd($feature->title);
+        return view('admin.crud.features.edit', compact('feature'));
     }
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\portfolio  $counter
+     * @param  \App\Models\portfolio  $feature
      * @return \Illuminate\Http\Response
      */
-    public function update(CounterRequest $request, Counter $counter)
+    public function update(FeatureRequest $request, Feature $feature)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
-            $counter->update($data);
-            $counter->updateFile();
-            return redirect()->route('counters.index')
+            $feature->update($data);
+            $feature->updateFile();
+            return redirect()->route('features.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -115,16 +115,16 @@ class CounterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Counter  $counter
+     * @param  \App\Models\Feature  $feature
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Counter $counter)
+    public function destroy(Feature $feature)
     {
         try {
-            $counter->delete();
-            $counter->file->delete();
-            $counter->deleteFile();
-            return redirect()->route('counters.index')
+            $feature->delete();
+            $feature->file->delete();
+            $feature->deleteFile();
+            return redirect()->route('features.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());

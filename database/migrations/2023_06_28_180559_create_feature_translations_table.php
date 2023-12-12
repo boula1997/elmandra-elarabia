@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCounterTranslationsTable extends Migration
+class CreateFeatureTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateCounterTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('counter_translations', function (Blueprint $table) {
+        Schema::create('feature_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
             $table->string('subtitle')->nullable();
             $table->text('description')->nullable();
-            $table->unsignedBigInteger('counter_id');
+            $table->unsignedBigInteger('feature_id');
             $table->string('locale')->index();
-            $table->unique(['counter_id', 'locale']);
-            $table->foreign('counter_id')->references('id')->on('counters')->onDelete('cascade');
+            $table->unique(['feature_id', 'locale']);
+            $table->foreign('feature_id')->references('id')->on('features')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateCounterTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('counter_translations');
+        Schema::dropIfExists('feature_translations');
     }
 }

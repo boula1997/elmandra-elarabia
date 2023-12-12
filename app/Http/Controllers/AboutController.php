@@ -7,7 +7,7 @@ use App\Models\Testimonial;
 use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
-use App\Models\Counter;
+use App\Models\Feature;
 use App\Models\Offer;
 use Exception;
 
@@ -29,8 +29,8 @@ class AboutController extends Controller
     {
         try {
             $offers=Offer::get();
-            $counters=Counter::get();
-            return view('front.about',compact('offers','counters'));
+            $features=Feature::get();
+            return view('front.about',compact('offers','features'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);

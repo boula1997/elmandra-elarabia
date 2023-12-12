@@ -10,17 +10,17 @@
                     </div>
 
                     <div class="slider-3_1 product-wrapper">
-                        @foreach($counters as $counter)
+                        @foreach($features as $feature)
                             <div>
                                 <div class="clint-contain">
                                     <div class="client-icon">
-                                        <img src="{{ asset($counter->image) }}"
+                                        <img src="{{ asset($feature->image) }}"
                                             class="blur-up lazyload" alt="">
                                     </div>
-                                    <h2>{{$counter->count}}</h2>
-                                    <h4>{{$counter->title}}</h4>
-                                    <h4>{{$counter->subtitle}}</h4>
-                                    <p>{!! $counter->description !!}</p>
+                                    <h2>{{$feature->count}}</h2>
+                                    <h4>{{$feature->title}}</h4>
+                                    <h4>{{$feature->subtitle}}</h4>
+                                    <p>{!! $feature->description !!}</p>
                                 </div>
                             </div>
                             @endforeach

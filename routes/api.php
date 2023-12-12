@@ -3,12 +3,13 @@
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\FaqController;
 use App\Http\Controllers\API\MessageController;
-use App\Http\Controllers\API\CounterController;
+use App\Http\Controllers\API\FeatureController;
 use App\Http\Controllers\API\NewsletterController;
 use App\Http\Controllers\API\ContactController;
 use App\Http\Controllers\API\PageController;
 use App\Http\Controllers\API\PortfolioController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\API\FeatureController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\TestimonialController;
@@ -41,8 +42,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get('processes/{id}', 'ProcessController@show');
 // Route::get('partners', 'PartnerController@index');
 // Route::get('partners/{id}', 'PartnerController@show');
-// Route::get('counters', 'CounterController@index');
-// Route::get('counter/{id}', 'CounterController@show');
+// Route::get('features', 'FeatureController@index');
+// Route::get('feature/{id}', 'FeatureController@show');
 // Route::get('contacts', 'ContactController@index');
 // Route::get('contact/{id}', 'ContactController@show');
 // Route::get('settings', 'SettingController@index');
@@ -82,6 +83,8 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     
     Route::get('/pages', [PageController::class, 'index']);
     Route::get('/page/{id}', [PageController::class, 'show']);
+    Route::get('/features', [FeatureController::class, 'index']);
+    Route::get('/feature/{id}', [FeatureController::class, 'show']);
     
     Route::get('/portfolios', [PortfolioController::class, 'index']);
     Route::get('/portfolio/{id}', [PortfolioController::class, 'show']);

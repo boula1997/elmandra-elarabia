@@ -23,11 +23,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MessagesSeeder::class,
             NewslettersSeeder::class,
-            CountersSeeder::class,
+            FeaturesSeeder::class,
             ContactsSeeder::class,
             PagesSeeder::class,
             SlidersSeeder::class,
             CategorySeeder::class,
+            FeaturesSeeder::class,
             SubcategorySeeder::class,
             CompaniesSeeder::class,
             ProductSeeder::class,

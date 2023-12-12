@@ -12,6 +12,7 @@ use App\Models\Newsletter;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Image;
+use App\Models\Feature;
 use App\Models\Offer;
 use App\Models\Order;
 use App\Models\Page;
@@ -98,6 +99,7 @@ function itemsCount($model)
         "pages" => count(Page::get()),
         "teams" => count(Team::get()),
         "products" => count(Product::get()),
+        "features" => count(Feature::get()),
         "testimonials" => count(Testimonial::get()),
         "partners" => count(Partner::get()),
         "sliders" => count(Slider::get()),

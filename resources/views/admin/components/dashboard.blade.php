@@ -412,8 +412,27 @@
                     </ul>
                 </li>
             @endcan
-
-             
+            
+            @can('feature-list')
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class=" px-1 fas fa-globe"></i>
+                        <p>
+                            @lang('general.features') <i class=" px-1 fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">{{ itemsCount('features') }}</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('features.index') }}" class="nav-link">
+                                <i class=" px-1 far fa-circle nav-icon"></i>
+                                <p>@lang('general.show')</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+            
 
                 @can('advertisement-list')
                     <li class="nav-item">

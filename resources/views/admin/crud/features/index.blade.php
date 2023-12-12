@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <!-- Content Wrapper. Contains counter content -->
+    <!-- Content Wrapper. Contains feature content -->
     <div class="content-wrapper">
         <!-- Main content -->
         <div class="container p-3">
@@ -18,9 +18,9 @@
                                         <div class="col-md-6 d-flex d-flex justify-content-start">
                                             <h1 class="card-title fw-bold">@lang('general.pages')</h3>
                                         </div>
-                                        @can('counter-create')
+                                        @can('feature-create')
                                             <div class="col-md-6 d-flex d-flex justify-content-end">
-                                                <a href="{{ route('counters.create') }}">
+                                                <a href="{{ route('features.create') }}">
 
                                                     <button
                                                         class="btn btn-outline-primary px-5
@@ -45,18 +45,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($counters as $counter)
+                                            @foreach ($features as $feature)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td><img width="100" height="100" src="{{ $counter->image }}"
-                                                        alt="{{ $counter->title }}"></td>
-                                                    <td>{{ $counter->title }}</td>
-                                                    <td>{{ $counter->count }}</td>
+                                                    <td><img width="100" height="100" src="{{ $feature->image }}"
+                                                        alt="{{ $feature->title }}"></td>
+                                                    <td>{{ $feature->title }}</td>
+                                                    <td>{{ $feature->count }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
-                                                            'route' => 'counters',
-                                                            'role' => 'counter',
-                                                            'module' => $counter,
+                                                            'route' => 'features',
+                                                            'role' => 'feature',
+                                                            'module' => $feature,
                                                         ])
                                                     </td>
                                                 </tr>

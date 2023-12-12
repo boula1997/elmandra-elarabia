@@ -9,10 +9,10 @@ use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
-class Counter extends Model implements TranslatableContract
+class Feature extends Model implements TranslatableContract
 {
     use HasFactory, Translatable, MorphFile;
-    protected $table = 'counters';
+    protected $table = 'features';
     protected $guarded = [];
     public $translatedAttributes = ['title','subtitle','description'];
     public $timestamps = true;

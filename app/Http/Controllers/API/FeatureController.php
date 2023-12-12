@@ -3,23 +3,23 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CounterResource;
-use App\Models\Counter;
+use App\Http\Resources\FeatureResource;
+use App\Models\Feature;
 use Exception;
 use Illuminate\Http\Request;
 
-class CounterController extends Controller
+class FeatureController extends Controller
 {
-    private $counter;
-    public function __construct(Counter $counter)
+    private $feature;
+    public function __construct(Feature $feature)
     {
-        $this->counter = $counter;
+        $this->feature = $feature;
     }
 
     public function index()
     {
         try {
-            $data['counters'] = CounterResource::collection($this->counter->get());
+            $data['features'] = FeatureResource::collection($this->feature->get());
             return successResponse($data);
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -30,7 +30,7 @@ class CounterController extends Controller
     public function show($id)
     {
         try {
-            $data['counter'] = new CounterResource($this->counter->findorfail($id));
+            $data['feature'] = new FeatureResource($this->feature->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
             dd($e->getMessage());

@@ -27,6 +27,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\OfferController;
@@ -95,6 +96,7 @@ Route::group(
                 Route::get('orderproduct/{id}', [OrderProductController::class,'create'])->name('orderproduct.create');
                 Route::resource('tests', ImageController::class);
                 Route::resource('advertisements', AdvertisementController::class);
+                Route::resource('features', FeatureController::class);
                 Route::resource('offers', OfferController::class);
                 Route::resource('advantages', AdvantageController::class);
                 Route::resource('companies', CompanyController::class);

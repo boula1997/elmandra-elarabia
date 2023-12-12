@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Counter;
+use App\Models\Feature;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CountersSeeder extends Seeder
+class FeaturesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -41,7 +41,7 @@ class CountersSeeder extends Seeder
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
-            $Counter_Translation = Counter::create([
+            $Feature_Translation = Feature::create([
                 'ar' => [
                     'title' => $title_ar[$i],
                     'subtitle' => $subtitle_ar[$i],
@@ -55,7 +55,7 @@ class CountersSeeder extends Seeder
                 ],
                'count'=>$count[$i],
             ]);
-            $Counter_Translation->file()->create(["url"=>$image[$i]]);
+            $Feature_Translation->file()->create(["url"=>$image[$i]]);
         }
     }
 }
