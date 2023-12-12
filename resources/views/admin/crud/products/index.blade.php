@@ -40,6 +40,7 @@
                                                 <th>#</th>
                                                 <th>@lang('general.image')</th>
                                                 <th>@lang('general.title')</th>
+                                                <th>@lang('general.size')</th>
                                                 <th>@lang('general.category')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
@@ -51,6 +52,7 @@
                                                     <td><img width="100" height="100" src="{{ $product->image }}"
                                                             alt="{{ $product->title }}"></td>
                                                     <td>{{ $product->title }}</td>              
+                                                    <td>{{ $product->size }}</td>              
                                                     <td>{{ $product->subcategory->title }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [

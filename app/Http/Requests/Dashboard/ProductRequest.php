@@ -27,6 +27,7 @@ class ProductRequest extends FormRequest
             'image' =>  $image ,
             'subcategory_id' =>  'required' ,
             'company_id' =>  'required' ,
+            'size' =>  'required' ,
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];

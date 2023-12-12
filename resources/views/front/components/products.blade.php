@@ -51,7 +51,7 @@
                                                     </a>
 
 
-                                                    <h6 class="sold weight textus-content fw-normal">{{ $product->translate(app()->getLocale())->unit}}</h6>
+                                                    <h6 class="sold weight textus-content fw-normal">{{ $product->size}} {{ $product->translate(app()->getLocale())->unit}}</h6>
                                                 </div>
 
                                                 <div class="counter-box">

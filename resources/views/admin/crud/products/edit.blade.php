@@ -68,6 +68,21 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>@lang('general.size') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="size"
+                                        placeholder="@lang('general.size')"
+                                        class="form-control  pl-1 min-h-40px @error('size') is-invalid @enderror"
+                                        value="{{old('size',$product->size)}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">

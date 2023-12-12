@@ -264,7 +264,7 @@
                                                                 <a href="{{ route('front.show.product',$product->id) }}">
                                                                     <h6 class="name">{{ $product->title }}</h6>
                                                                 </a>
-                                                                <h5 class="span-name">{{  $product->translate(app()->getLocale())->unit }}</h5>
+                                                                <h5 class="span-name">{{ $product->size}} {{ $product->translate(app()->getLocale())->unit}}</h5>
                                                                 <h6 class="price theme-color"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del></h6>
                                                             </div>
                                                         </div>

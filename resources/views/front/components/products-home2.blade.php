@@ -44,7 +44,7 @@
 
 
                                         <h6 class="sold weight textus-content fw-normal">
-                                            {{ $product->translate(app()->getLocale())->unit }}</h6>
+                                            {{ $product->size}} {{ $product->translate(app()->getLocale())->unit}}  {{ $product->translate(app()->getLocale())->unit }}</h6>
                                     </div>
 
                                     <div class="counter-box">
