@@ -21,16 +21,24 @@
                                     <div class="col-3 px-0 p-3">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="{{ route('front.show.product', $product->id) }}">
+                                                <a href="{{ route('front.show.product', $product->id) }}" class="position-relative">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
+                                                        @if (in_array($product->id,topSelling()))                                                            
+                                                        <span
+                                                            class="position-absolute top-0 right-5 start-100 translate-top badge rounded-pill bg-danger">
+                                                            الاكثر مبيعا
+                                                            <span class="visually-hidden">unread messages</span>
+                                                        </span>
+                                                        @endif
                                                 </a>
-                                                <ul class="product-option justify-content-center eye-show bg-transparent text-white">
+                                                <ul
+                                                    class="product-option justify-content-center eye-show bg-transparent text-white">
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
                                                         <a href="{{ route('front.show.product', $product->id) }}">
                                                             <i class="fas fa-eye text-white fa-lg fs-1"></i>
-                                                           
+
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -39,15 +47,20 @@
                                                 <div>
 
                                                     <a href="product-left-thumbnail.html">
-                                                        <h6 class="name name-2 h-100">{{ $product->title }}</h6>
+                                                        <h6
+                                                            class="name name-2 h-100 {{ in_array($product->id, topSelling()) ? 'text-danger' : '' }}">
+                                                            {{ $product->title }}</h6>
                                                     </a>
 
 
-                                                    <h6 class="sold weight textus-content fw-normal">{{  $product->translate(app()->getLocale())->unit }}</h6>
+                                                    <h6 class="sold weight textus-content fw-normal">
+                                                        {{ $product->translate(app()->getLocale())->unit }}</h6>
                                                 </div>
 
                                                 <div class="counter-box">
-                                                    <h6 class="price"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>
+                                                    <h6 class="price"><span
+                                                            class="theme-color">{{ $product->price_bd }}</span>
+                                                        <del>{{ $product->price }}</del>
                                                         {{ app()->getLocale() == 'ar' ? 'ر.س' : '$' }}
                                                     </h6>
 
@@ -56,7 +69,8 @@
 
                                                         @if (auth('web')->user())
                                                             <button
-                                                                class="add-button addcart-button btn buy-button text-light addCart" index="{{ $loop->index }}"
+                                                                class="add-button addcart-button btn buy-button text-light addCart"
+                                                                index="{{ $loop->index }}"
                                                                 product_id="{{ $product->id }}">
                                                                 <span>{{ __('general.add') }}</span>
                                                                 <i class="fa-solid fa-plus px-2"></i>
@@ -115,7 +129,7 @@
             e.preventDefault();
             var product_id = $(this).attr('product_id');
             var index = $(this).attr('index');
-            $('.loop'+index).val(1);
+            $('.loop' + index).val(1);
             let url = "{{ route('addTo.cart', ':id') }}";
             url = url.replace(':id', product_id);
             $.ajax({

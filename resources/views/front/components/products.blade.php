@@ -22,9 +22,16 @@
                                     <div class="col-3 px-0 p-3">
                                         <div class="product-box wow fadeIn">
                                             <div class="product-image">
-                                                <a href="{{ route('front.show.product', $product->id) }}">
+                                                <a href="{{ route('front.show.product', $product->id) }}" class="position-relative">
                                                     <img src="{{ asset($product->image) }}"
                                                         class="img-fluid blur-up lazyload" alt="">
+                                                        @if (in_array($product->id,topSelling()))                                                            
+                                                        <span
+                                                            class="position-absolute top-0 right-5 start-100 translate-top badge rounded-pill bg-danger">
+                                                            الاكثر مبيعا
+                                                            <span class="visually-hidden">unread messages</span>
+                                                        </span>
+                                                        @endif
                                                 </a>
                                                 <ul class="product-option justify-content-center eye-show bg-transparent text-white">
 

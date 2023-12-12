@@ -182,20 +182,23 @@
                                                         placeholder="{{ __('general.phone') }}" name="phone" value="{{ old('phone',auth('web')->user()->phone) }}">
                                                     </div>
                                                     <div class="err" id="phone"></div>
-                                            </div>
-
-                                            <div class="coupon-cart">
-                                                <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
-                                                <div class="mb-3 coupon-box input-group">
-                                                    <input type="hidden" id="latitude" name="latitude" placeholder="latitude" >
-                                                    <div class="err" id="latitude"></div>
-                                                    <input type="hidden" id="longitude" name="longitude" placeholder="longitude"  >
-                                                    <div class="err" id="longitude"></div>
-                                                    <div id="map" style="width:500px; height:300px"></div>
                                                 </div>
-                                            </div>
-                                           
-                                        
+                                                
+                                                <div class="coupon-cart">
+                                                    <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
+                                                    <div class="mb-3 coupon-box input-group">
+                                                        <input type="hidden" id="latitude" name="latitude" placeholder="latitude" >
+                                                        <div class="err" id="latitude"></div>
+                                                        <input type="hidden" id="longitude" name="longitude" placeholder="longitude"  >
+                                                        <div class="err" id="longitude"></div>
+                                                        <div id="map" style="width:500px; height:300px"></div>
+                                                         <div class="err" id="long"></div>
+                                                         <div class="err" id="lat"></div>
+
+                                                    </div>
+                                                </div>
+                                                
+                                                
                                         </div>
                                     </div>
                                 </div>
@@ -378,12 +381,12 @@
                         //     );
                         // }
                         if (response.responseJSON.errors.latitude) {
-                            $("#latitude").append(
+                            $("#lat").append(
                                 `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.latitude}</div>`
                             );
                         }
                         if (response.responseJSON.errors.longitude) {
-                            $("#longitude").append(
+                            $("#long").append(
                                 `<div class="alert alert-danger text-initial my-1" style="text-align:initial !important">${response.responseJSON.errors.longitude}</div>`
                             );
                         }
