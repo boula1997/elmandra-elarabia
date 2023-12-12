@@ -4,18 +4,36 @@
 @section('fields_content')
     @method('post')
     <div class="content-wrapper">
-                <div class="container p-3">
+        <div class="container p-3">
             @include('admin.components.alert-error')
             <div class="card card-custom mb-2">
                 <div class="card-header card-header-tabs-line">
                     @include('admin.components.breadcrumb', ['module' => 'coupons', 'action' => 'create'])
                 </div>
-             
+
             </div>
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
 
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">{{ __('general.marketer') }}</label>
+                                    <div class="mb-3">
+                                        <select
+                                            class="form-select form-select-lg @error('marketer_id') is-invalid @enderror"
+                                            name="'marketer_id'" id="">
+                                            <option @selected(!old('marketer_id'))>{{ __('general.choose_marketer') }}
+                                            </option>
+                                            @foreach ($marketers as $marketer)
+                                                <option @selected(old('marketer_id') == $marketer->id) value="{{ $marketer->id }}">{{ $marketer->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <div class="form-group">

@@ -21,6 +21,7 @@ class CouponRequest extends FormRequest
         $rules = [
             'code' =>  'required' ,
             'discount' =>  'required|numeric' ,
+            'marketer_id' =>  'required' ,
         ];
         return  $rules;
     }

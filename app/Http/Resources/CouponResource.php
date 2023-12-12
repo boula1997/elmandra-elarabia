@@ -18,6 +18,7 @@ class CouponResource extends JsonResource
             "id" => $this->id,
             "title" => $this->title,
             "count" => $this->count,
+            "marketer" => $this->marketer->name,
         ];
     }
 }
