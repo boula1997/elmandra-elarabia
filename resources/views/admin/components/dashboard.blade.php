@@ -164,6 +164,27 @@
                 </li>
             @endcan
             
+            @can('admin-list')
+                <li class="nav-item">   
+                    <a href="#" class="nav-link">
+                        <i class=" px-1 fas fa-users-cog"></i>
+                        <p>
+                            @lang('general.marketers')
+                            <i class=" px-1 fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">{{ itemsCount('marketersAdmin') }}</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.index','Marketer') }}" class="nav-link">
+                                <i class=" px-1 far fa-circle nav-icon"></i>
+                                <p>@lang('general.show')</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
+            
             
             
             @can('role-list')
@@ -187,26 +208,7 @@
             </li>
             @endcan
             
-            @can('admin-list')
-            <li class="nav-item">   
-                <a href="#" class="nav-link">
-                    <i class=" px-1 fas fa-users-cog"></i>
-                    <p>
-                        @lang('general.marketers')
-                        <i class=" px-1 fas fa-angle-left right"></i>
-                        <span class="badge badge-info right">{{ itemsCount('marketersAdmin') }}</span>
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ route('admin.index','Marketer') }}" class="nav-link">
-                            <i class=" px-1 far fa-circle nav-icon"></i>
-                            <p>@lang('general.show')</p>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        @endcan
+          
                 @can('user-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">

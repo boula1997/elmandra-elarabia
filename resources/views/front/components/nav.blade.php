@@ -86,20 +86,8 @@
                                    alt="">
                            </a>
 
-                           <div class="middle-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
-                               <div class="location-box">
-                                   <button class="btn location-button" data-bs-toggle="modal"
-                                       data-bs-target="#locationModal">
-                                       <span class="location-arrow">
-                                           <i data-feather="map-pin"></i>
-                                       </span>
-                                       <span class="locat-name">{{ __('general.your_location') }}</span>
-                                       <i class="fa-solid fa-angle-down"></i>
-                                   </button>
-                               </div>
-
-                              
-                                    <div class="search-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none' }}">
+                            <div class="middle-box {{ request()->routeIs('front.shopping_now') ? '' : 'd-none'  }}">
+                                    <div class="search-box">
                                         <div class="input-group">
                                             <input type="search" class="form-control"
                                                 placeholder="{{ __('general.iam_searching') }}"
@@ -109,7 +97,7 @@
                                             </button>
                                         </div>
                                     </div>
-                           </div>
+                            </div>
 
                            <div class="rightside-box">
                                <div class="search-full ">
