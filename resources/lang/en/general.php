@@ -424,6 +424,6 @@ return [
     'destination'=>"Destination",
     'expenses'=>"Expenses",
     'coupons'=>"Coupons",
-    
+    'sellers'=>"Sellers",
     
 ];

@@ -342,7 +342,7 @@ return [
     'advertisements'=>'الاعلانات',
     'advantages'=>'المميزات',
     'companies'=>'الشركات',
-    'marketers'=>'المناديب',
+    'marketers'=>'المسوقين',
     'stores'=>'المستودعات', 
     'start_date'=>'تاريخ البدء', 
     'end_date'=>'تاريخ الانتهاء',
@@ -427,5 +427,6 @@ return [
     'destination'=>"الحي",
     'expenses'=>"المصروفات",
     'coupons'=>"كوبونات",
+    'sellers'=>"المناديب",
 
 ];

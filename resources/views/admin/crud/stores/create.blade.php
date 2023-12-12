@@ -39,13 +39,13 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
+                                    <label>@lang('general.your_location') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[address]' }}"
-                                            placeholder="@lang('general.address')"
+                                            placeholder="@lang('general.your_location')"
                                             class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
                                             value="{{ old($locale . '.address') }}">
                                     </div>
@@ -87,6 +87,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{{ __('general.your_location') }}</label>
+                                        <input type="hidden" id="latitude" name="latitude" placeholder="latitude" value="{{ old('latitude') }}" >
+                                        <input type="hidden" id="longitude" name="longitude" placeholder="longitude" value="{{ old('longitude') }}" >
+                                        <div id="map" style="width:1000px; height:400px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="card-footer mb-5">
@@ -115,6 +128,62 @@
                 });
             })
         </script>
+
+    <script>
+        var geocoder = new google.maps.Geocoder();
+        var marker = null;
+        var map = null;
+        function initialize() {
+            var $latitude = document.getElementById('latitude');
+            var $longitude = document.getElementById('longitude');
+            var latitude = 24.72106663666815;
+            var longitude = 46.63919448852539;
+            var zoom = 10;
+
+        var LatLng = new google.maps.LatLng(latitude, longitude);
+
+        var mapOptions = {
+            zoom: zoom,
+            center: LatLng,
+            panControl: false,
+            zoomControl: false,
+            scaleControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        if (marker && marker.getMap) marker.setMap(map);
+        marker = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            title: 'Drag Me!',
+            draggable: true
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function(marker) {
+            var latLng = marker.latLng;
+            $latitude.value = latLng.lat();
+            $longitude.value = latLng.lng();
+        });
+
+
+        }
+        initialize();
+        $('#findbutton').click(function (e) {
+            var address = $("#Postcode").val();
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    $(latitude).val(marker.getPosition().lat());
+                    $(longitude).val(marker.getPosition().lng());
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+            e.preventDefault();
+        });
+    </script>
     @endpush
 
 @endsection

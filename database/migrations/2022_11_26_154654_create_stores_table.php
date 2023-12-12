@@ -17,6 +17,8 @@ class CreateStoresTable extends Migration
             $table->id();
             $table->string('owner')->nullable();
             $table->string('phone')->nullable();
+            $table->text('latitude')->nullable();
+            $table->text('longitude')->nullable();
             $table->timestamps();
         });
     }
