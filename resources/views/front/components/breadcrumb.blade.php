@@ -1,27 +1,31 @@
-
-    <!-- Breadcrumb Section Start -->
-    <section class="breadscrumb-section pt-0">
-        <div class="container-fluid-lg">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadscrumb-contain">
-                        <h2 class="mb-2">{{ $name }}</h2>
-                        <nav>
-                            <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item new">
-                                    <a href="{{ route('front.home') }}">
-                                        <i class="fa-solid fa-house mx-2"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item active mb-2 -3">{{ $name }}</li>
-                            </ol>
-                        </nav>
-                    </div>
+<!-- Breadcrumb Section Start -->
+<section class="breadscrumb-section pt-0">
+    <div class="container-fluid-lg">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadscrumb-contain">
+                    <h2 class="mb-2">{{ $name }}</h2>
+                    <nav>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item new">
+                                <a href="{{ route('front.home') }}">
+                                    <i class="fa-solid fa-house mx-2"></i>
+                                </a>
+                            </li>
+                            @if (isset($mid))
+                                <a class="btn btn-primary py-md-2 px-md-3 me-3" onclick="history.back()">
+                                    <li class="breadcrumb-item active mb-2 -3">{{ $mid }}</li>
+                                </a>
+                            @endif
+                            <li class="breadcrumb-item active mb-2 -3">{{ $name }}</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
 
 {{-- <div class="container-fluid  bg-hero d-flex justify-content-center align-items-center" style="height: 50vh">
     <div class="row ">
