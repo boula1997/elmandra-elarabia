@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\CounterRequest;
-use App\Models\Counter;
 use Illuminate\Support\Facades\File;
+use App\Models\Counter;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
 use Exception;
@@ -59,9 +59,9 @@ class CounterController extends Controller
     public function store(CounterRequest $request)
     {
         try {
-
-            $this->counter->create($request->except('image','profile_avatar_remove'));
-            $this->counter->uploadFile();
+            $data = $request->except('image','profile_avatar_remove');
+            $counter= $this->counter->create($data);
+            $counter->uploadFile();
             return redirect()->route('counters.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {

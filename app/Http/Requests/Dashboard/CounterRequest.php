@@ -20,7 +20,6 @@ class CounterRequest extends FormRequest
     {
         //to add or remove input from request in validation class use $this->merge
         //  $this->merge(['user_id' => auth('api')->user()->id]);
-
         $image = request()->isMethod('put') ? 'nullable' : 'required';
         $rules = [
             'image' =>  $image  ,
@@ -31,6 +30,7 @@ class CounterRequest extends FormRequest
             $rules += [$locale . '.subtitle' => ['required', 'string']];
             $rules += [$locale . '.description' => ['required', 'string']];
         }
+           
         return  $rules;
     }
 

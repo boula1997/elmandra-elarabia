@@ -38,6 +38,7 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
+                                                <th>@lang('general.image')</th>
                                                 <th>@lang('general.title')</th>
                                                 <th>@lang('general.count')</th>
                                                 <th>@lang('general.controls')</th>
@@ -47,6 +48,8 @@
                                             @foreach ($counters as $counter)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
+                                                    <td><img width="100" height="100" src="{{ $counter->image }}"
+                                                        alt="{{ $counter->title }}"></td>
                                                     <td>{{ $counter->title }}</td>
                                                     <td>{{ $counter->count }}</td>
                                                     <td>

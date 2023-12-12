@@ -13,28 +13,49 @@ class CountersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["حمل التطبيق","سجل بياناتك","تصفح المنتجات",
-        "إختر منتجك المفضل","أكمل عملية الشراء","نوصل إليك طلبك"];
-        $title_en = [
-        "Download the application","Register your data","Browse products",
-        "Choose your favorite product","Complete your purchase","We deliver your order to you",];
-        $count=['10','50',"150","1235",'10','50',];
-        $icon=["fas fa-cloud-download-alt","fas fa-pen","fas fa-window-restore",
-                "fas fa-check","fas fa-shopping-cart","fas fa-truck",];
+        $title_ar = ["سنوات الخبرة","مبيعات المنتجات","عملائنا"];
+        $title_en = ["Business Years","Products Sales","Happy Customers"];
+
+        $subtitle_ar = [null,null,null];
+        $subtitle_en = [null,null,null];
+
+        $description_ar = [
+            "<p>لقد خدم سوبر ماركتنا المجتمع بكل فخر لمدة 10 سنوات. ومع إرث مبني على الجودة والموثوقية والخدمة الاستثنائية، فإننا نواصل كوننا وجهتك الموثوقة لجميع احتياجات البقالة الخاصة بك.</p>",
+            "<p>استكشف قسم مبيعات المنتجات لدينا للحصول على عروض وخصومات لا تقبل المنافسة على مجموعة واسعة من العناصر عالية الجودة. من المنتجات الطازجة إلى الضروريات المنزلية وغيرها، اكتشف توفيرًا كبيرًا دون المساس بالجودة. أسرع للحصول على عروض لفترة محدودة وصفقات رائعة على منتجاتك المفضلة!.</p>",
+            "<p>قسم العملاء السعداء يحتفل بكم! نحن نفخر بتقديم خدمة استثنائية ومنتجات عالية الجودة ترسم البسمة على وجوه عملائنا. انضم إلى عدد لا يحصى من المتسوقين الراضين الذين يثقون بنا للحصول على تجربة تسوق ممتعة في كل زيارة. رضاكم هو أولويتنا!</p>",
+        ];
+        $description_en = [
+                "<p>Our supermarket has proudly served the community for 10 years. With a legacy built on quality, reliability, and exceptional service, we continue to be your trusted destination for all your grocery needs.</p>",
+
+                "<p>Explore our Products Sales section for unbeatable deals and discounts on a wide range of quality items. From fresh produce to household essentials and beyond, discover great savings without compromising on quality. Hurry in for limited-time offers and fantastic bargains on your favorite products!.</p>",
+
+                "<p>Our Happy Customers section celebrates YOU! We take pride in delivering exceptional service and quality products that bring smiles to our customers' faces. Join the countless satisfied shoppers who trust us for a delightful shopping experience every visit. Your satisfaction is our priority!</p>"
+        ];
+
+        $count=[10,80,90];
+        $image=[
+            "images/4UPrBifentc75n3x5k51RHFbze9NhzcFoVl0u4WO.svg",
+            "images/KjmtwGFMoyOLxhlPUo8AOtHlPIRsjaX30mSJt8em.svg",
+            "images/JWUBXqPMgUNwwVadtZJa7V3rCZJeJRdHR7OifOMA.svg",
+        ];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
             $Counter_Translation = Counter::create([
                 'ar' => [
                     'title' => $title_ar[$i],
+                    'subtitle' => $subtitle_ar[$i],
+                    'description' => $description_ar[$i],
     
                 ],
                 'en' => [
                     'title' => $title_en[$i],
+                    'subtitle' => $subtitle_en[$i],
+                    'description' => $description_en[$i],
                 ],
                'count'=>$count[$i],
-               'icon' => $icon[$i]
             ]);
+            $Counter_Translation->file()->create(["url"=>$image[$i]]);
         }
     }
 }

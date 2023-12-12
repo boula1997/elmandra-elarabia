@@ -46,6 +46,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <img src="{{ $counter->image }}" class="w-50">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

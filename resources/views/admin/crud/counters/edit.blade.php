@@ -63,10 +63,7 @@
                                         {!! old($locale . '.description', $counter->translate($locale)->description) !!} 
                                     </textarea>
                                 </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('counters.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
+                               
                             </div>
                         @endforeach
                     </div>
@@ -87,6 +84,18 @@
                                 </div>
 
                             </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            @include('admin.components.image', [
+                                'label' => __('general.image'),
+                                'value' => old('image', $counter->image),
+                                'name' => 'image',
+                                'id' => 'kt_image_3',
+                                'accept' => 'image/*',
+                                'required' => true,
+                            ])
+
                         </div>
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
