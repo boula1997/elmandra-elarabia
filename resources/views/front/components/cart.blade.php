@@ -509,7 +509,7 @@
             function initialize() {
                   var $latitude = document.getElementById('latitude');
                   var $longitude = document.getElementById('longitude');
-                  var latitude = 24.695374620580868
+                  var latitude = 24.695374620580868;
                   var longitude = 46.68142318725586;
                   var zoom = 10;
     
