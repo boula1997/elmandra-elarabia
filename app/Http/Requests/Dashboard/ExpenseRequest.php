@@ -27,7 +27,7 @@ class ExpenseRequest extends FormRequest
             'longitude'=>'required',
         ];
         foreach (config('translatable.locales') as $locale) {
-            $rules += [$locale . '.description' => ['nullable']];
+            $rules += [$locale . '.description' => ['required', 'string']];
         }
         return  $rules;
     }
