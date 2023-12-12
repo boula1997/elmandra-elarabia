@@ -15,9 +15,6 @@ class CreateCouponTranslationsTable extends Migration
     {
         Schema::create('coupon_translations', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->string('subtitle')->nullable();
-            $table->text('description')->nullable();
             $table->unsignedBigInteger('coupon_id');
             $table->string('locale')->index();
             $table->unique(['coupon_id', 'locale']);

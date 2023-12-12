@@ -38,8 +38,8 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>@lang('general.title')</th>
-                                                <th>@lang('general.image')</th>
+                                                <th>@lang('general.code')</th>
+                                                <th>@lang('general.discount')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -47,9 +47,8 @@
                                             @foreach ($coupons as $coupon)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $coupon->title   }}</td>
-                                                    <td><img width="100" height="100" src="{{ $coupon->image }}"
-                                                        alt="{{ $coupon->title }}"></td>
+                                                    <td>{{ $coupon->code   }}</td>
+                                                    <td>{{ $coupon->discount   }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'coupons',

@@ -18,16 +18,10 @@ class CouponRequest extends FormRequest
  
     public function rules()
     {
-        $image = request()->isMethod('put') ? 'nullable' : 'required';
         $rules = [
-            'image' =>  $image ,
+            'code' =>  'required' ,
+            'discount' =>  'required|numeric' ,
         ];
-        foreach (config('translatable.locales') as $locale) {
-            $rules += [$locale . '.title' => ['required', 'string']];
-            $rules += [$locale . '.subtitle' => ['required', 'string']];
-            $rules += [$locale . '.description' => ['required', 'string']];
-            
-        }
         return  $rules;
     }
 
