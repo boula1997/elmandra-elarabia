@@ -420,6 +420,21 @@ header .navbar.navbar-expand-xl .navbar-nav .nav-link::before {
 
 }
 
+.mid{
+  position:relative;
+}
+
+
+.mid::before{
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f104";
+  color: #4a5568;
+  left: -11px;
+
+}
+
 .new::after {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;

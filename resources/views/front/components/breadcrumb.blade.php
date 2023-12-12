@@ -13,8 +13,8 @@
                                 </a>
                             </li>
                             @if (isset($mid))
-                                <a class="btn btn-primary py-md-2 px-md-3 me-3" onclick="history.back()">
-                                    <li class="breadcrumb-item active mb-2 -3">{{ $mid }}</li>
+                                <a class="btn btn-primary py-md-2 p-0 ps-3 pe-1" onclick="history.back()">
+                                    <li class="breadcrumb-item active mb-2 mid">{{ $mid }}</li>
                                 </a>
                             @endif
                             <li class="breadcrumb-item active mb-2 -3">{{ $name }}</li>
