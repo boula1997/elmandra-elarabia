@@ -29,7 +29,8 @@ class AboutController extends Controller
     {
         try {
             $offers=Offer::get();
-            return view('front.about',compact('offers'));
+            $counters=Counter::get();
+            return view('front.about',compact('offers','counters'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
