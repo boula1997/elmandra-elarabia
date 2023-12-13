@@ -38,12 +38,12 @@
                                             <th>@lang('general.name')</th>
                                             <th>@lang('general.email')</th>
                                             <th>@lang('general.phone')</th>
-                                            <th>@lang('general.verify_status')</th>
-                                            @if ($data[0]->type == 'Seller')
+                                            {{-- <th>@lang('general.verify_status')</th> --}}
+                                            @if ($data[0]->type == 'seller')
                                                 <th>@lang('general.nu_users')</th>
                                                 <th>@lang('general.nu_orders')</th>
                                             @endif
-                                            @if ($data[0]->type == 'Marketer')
+                                            @if ($data[0]->type == 'marketer')
                                                 <th>@lang('general.nu_coupons')</th>
                                                 <th>@lang('general.nu_coupon_orders')</th>
                                             @endif
@@ -60,13 +60,13 @@
                                                 <td>{{ $admin->name }}</td>
                                                 <td>{{ $admin->email }}</td>
                                                 <td>{{ $admin->phone }}</td>
-                                                <td><label class="badge {{$admin->verified ?'badge-success':'badge-danger' }}">{{$admin->verified ? __('general.verifed'):__('general.noverifed') }}</label></td>
+                                                {{-- <td><label class="badge {{$admin->verified ?'badge-success':'badge-danger' }} verified{{ $admin->id }}">{{$admin->verified ? __('general.verifed'):__('general.noverifed') }}</label></td> --}}
                                                 </td>
-                                                @if ($admin->type == 'Seller')
+                                                @if ($admin->type == 'seller')
                                                     <td>{{ count($admin->users) }}</td>
                                                     <td>{{ $order_numbers[$loop->index] }}</td>
                                                 @endif
-                                                @if ($admin->type == 'Marketer')
+                                                @if ($admin->type == 'marketer')
                                                     <td>{{ count($admin->coupons) }}</td>
                                                     <td>{{ $coupon_usage[$loop->index] }}</td>
                                                 @endif
@@ -74,7 +74,7 @@
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)
                                                             <label
-                                                                class="badge badge-success">{{ __('general.' . $v) }}</label>
+                                                                class="badge badge-success ">{{ __('general.' . $v) }}</label>
                                                         @endforeach
                                                     @endif
                                                 </td>
@@ -129,7 +129,7 @@
     <script>
         $('.fa-check-circle').on('click', function(e) {
             $(this).addClass('disabled');
-
+alert($(this).attr('index'));
             e.preventDefault();
             var module_id = $(this).attr('module_id');
             let url = "{{ route('verifications.verify', ':id') }}";
@@ -140,6 +140,8 @@
                 success: (response) => {
                     $(this).removeClass('disabled');
                     $(this).addClass('text-success');
+                    $('.verified'.$(this).attr('index')).addClass('badge-success');
+                    $('.verified'.$(this).attr('index')).text("{{ __('general.verifed') }}");
                     toastr.options = {
                         "closeButton": true,
                         "debug": false,
