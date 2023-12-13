@@ -571,5 +571,8 @@ return [
     "seller"=>'مندوب',
     "admin"=>'المدير',
     "have_code"=>'هل لديك كوبون!',
-
+    'choose_marketer'=>"اختر المسوق",
+    'wrong_calculation'=>"يوجد خطأ بالمخزون ",
+    'size'=>"الحجم",
+    
 ];

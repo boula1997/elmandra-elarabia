@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\Coupon;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
-use App\Models\Marketer;
+use App\Models\Admin;
 use Exception;
 
 class CouponController extends Controller
@@ -48,7 +48,8 @@ class CouponController extends Controller
      */
     public function create()
     {
-        $marketers=Marketer::get();
+        $marketers=Admin::where('type','Marketer')->get();
+        // dd($marketers);
         return view('admin.crud.coupons.create',compact('marketers'));
     }
     
