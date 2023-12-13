@@ -42,6 +42,7 @@
                                             <th>@lang('general.nu_users')</th>
                                             {{-- <th>@lang('general.nu_orders')</th> --}}
                                             <th>@lang('general.nu_coupons')</th>
+                                            <th>@lang('general.nu_coupon_orders')</th>
                                             <th>@lang('general.role')</th>
                                             <th>@lang('general.controls')</th>
                                         </tr>
@@ -60,6 +61,7 @@
                                                 <td>{{ count($admin->users) }}</td>
                                                 {{-- <td>{{ $order_numbers[$loop->index]}}</td> --}}
                                                 <td>{{ count($admin->coupons) }}</td>
+                                                <td>{{ $coupon_usage[$loop->index]}}</td>
                                                 <td>
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)
