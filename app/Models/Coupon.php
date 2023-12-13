@@ -22,7 +22,7 @@ class Coupon extends Model implements TranslatableContract
    }
 
    public function marketer(){
-    return $this->belongsTo(Marketer::class,'marketer_id');
+    return $this->belongsTo(Admin::class,'marketer_id');
    }
    public function users(){
     return $this->hasMany(Order::class,'user_id');

@@ -25,7 +25,7 @@ class CreateOrdersTable extends Migration
             $table->string('status')->default('pending');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('coupon_id');
+            $table->unsignedBigInteger('coupon_id')->nullable();
             $table->foreign('coupon_id')->references('id')->on('coupons')->onDelete('cascade');
             $table->timestamps();
         });

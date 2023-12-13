@@ -39,10 +39,14 @@
                                             <th>@lang('general.email')</th>
                                             <th>@lang('general.phone')</th>
                                             <th>@lang('general.verify_status')</th>
-                                            <th>@lang('general.nu_users')</th>
-                                            {{-- <th>@lang('general.nu_orders')</th> --}}
-                                            <th>@lang('general.nu_coupons')</th>
-                                            <th>@lang('general.nu_coupon_orders')</th>
+                                            @if ($data[0]->type == 'Seller')
+                                                <th>@lang('general.nu_users')</th>
+                                                <th>@lang('general.nu_orders')</th>
+                                            @endif
+                                            @if ($data[0]->type == 'Marketer')
+                                                <th>@lang('general.nu_coupons')</th>
+                                                <th>@lang('general.nu_coupon_orders')</th>
+                                            @endif
                                             <th>@lang('general.role')</th>
                                             <th>@lang('general.controls')</th>
                                         </tr>
@@ -56,16 +60,21 @@
                                                 <td>{{ $admin->name }}</td>
                                                 <td>{{ $admin->email }}</td>
                                                 <td>{{ $admin->phone }}</td>
-                                                <td>{{ $admin->verified ? __('general.verifed') : __('general.noverifed') }}
+                                                <td><label class="badge {{$admin->verified ?'badge-success':'badge-danger' }}">{{$admin->verified ? __('general.verifed'):__('general.noverifed') }}</label></td>
                                                 </td>
-                                                <td>{{ count($admin->users) }}</td>
-                                                {{-- <td>{{ $order_numbers[$loop->index]}}</td> --}}
-                                                <td>{{ count($admin->coupons) }}</td>
-                                                <td>{{ $coupon_usage[$loop->index]}}</td>
+                                                @if ($admin->type == 'Seller')
+                                                    <td>{{ count($admin->users) }}</td>
+                                                    <td>{{ $order_numbers[$loop->index] }}</td>
+                                                @endif
+                                                @if ($admin->type == 'Marketer')
+                                                    <td>{{ count($admin->coupons) }}</td>
+                                                    <td>{{ $coupon_usage[$loop->index] }}</td>
+                                                @endif
                                                 <td>
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)
-                                                            <label class="badge badge-success">{{ __('general.'.$v) }}</label>
+                                                            <label
+                                                                class="badge badge-success">{{ __('general.' . $v) }}</label>
                                                         @endforeach
                                                     @endif
                                                 </td>
