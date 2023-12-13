@@ -70,9 +70,10 @@ class OrderController extends Controller
         try {
             $coupon=Coupon::where('code',$request->code)->first();
             $discount=isset($coupon)?$coupon->discount:1;
-            $data = $request->except('store_id','status');
+            $data = $request->except('store_id','status','code');
             $data['total']=(cart()->getTotal()*settings()->taxes/100*$discount)+50;
             $data['user_id']=auth('web')->user()->id;
+            $data['coupon_id'] = isset($coupon)?$coupon->id:null;
             $order = $this->order->create($data);
            
             foreach(cart()->getItems() as $item){ 
@@ -83,7 +84,6 @@ class OrderController extends Controller
                     'product_id' => $item->getId(),
                     'count' => $item->get('quantity'),
                     'total' => $item->get('quantity') * $item->getPrice(),
-                    'coupon_id' => isset($coupon)?$coupon->id:null,
                 ]);
                 $product=$orderproduct->product;
                 $product->update(['stock'=> $product->stock-$item->get('quantity')]);    
