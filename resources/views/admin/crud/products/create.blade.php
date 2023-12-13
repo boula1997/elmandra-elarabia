@@ -121,6 +121,21 @@
                                 </div>
                             </div>
                         </div>
+                        @foreach ($stores as $store)
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>{{ $store->title }}<span class="text-danger"> * </span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="quantities[]" placeholder="{{ $store->title }}"
+                                            class="form-control  pl-1 min-h-40px @error('quantities') is-invalid @enderror"
+                                            value="{{ old('quantities[$loop->index]') }}">
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
 
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -140,7 +155,8 @@
                                 <select class="form-select form-select-lg" name="company_id" id="company">
                                     @foreach ($companies as $company)
                                         <option value="{{ $company->id }}"
-                                            {{ old('company_id') == $company->id ? 'selected' : '' }}>{{ $company->title }}
+                                            {{ old('company_id') == $company->id ? 'selected' : '' }}>
+                                            {{ $company->title }}
                                         </option>
                                     @endforeach
                                 </select>

@@ -11,6 +11,8 @@ use App\Models\Product;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
+use App\Models\Store;
+use App\Models\StoreProduct;
 use Exception;
 
 class ProductController extends Controller
@@ -55,9 +57,10 @@ class ProductController extends Controller
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::all();
         $companies=Company::all();
-        return view('admin.crud.products.create',compact('categories','subcategories','companies'));
+        $stores=Store::all();
+        return view('admin.crud.products.create',compact('categories','subcategories','companies','stores'));
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -67,17 +70,43 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         try {
-            $data = $request->except('image','profile_avatar_remove');
+            $total=0;
+            $stores=Store::all();
+            $quantities=$request->quantities;
+            foreach($stores as $key=>$value){
+                if($key<count($quantities)){
+                   $total+= $quantities[$key];
+                    
+                }
+            }
+
+
+            if($total>$request->stock)
+            return redirect()->back()->with(['error' => __('general.wrong_calculation')]);
+            
+            $data = $request->except('image','profile_avatar_remove','quantities');
             $product = $this->product->create($data);
             $product->uploadFile();
+            
+
+            foreach($stores as $key=>$value){
+                if($key<count($quantities)){
+                    StoreProduct::create([
+                     'store_id'=>$value->id,
+                     'product_id'=>$product->id,
+                     'quantity'=>$quantities[$key],
+                    ]);
+                    
+                }
+            }
             return redirect()->route('products.index')
-                ->with('success', trans('general.created_successfully'));
+            ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
         }
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -88,7 +117,7 @@ class ProductController extends Controller
     {
         return view('admin.crud.products.show', compact('product'));
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -99,8 +128,9 @@ class ProductController extends Controller
     {
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::get();
+        $stores=Store::all();
         $companies=Company::all();
-        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies'));
+        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies','stores'));
     }
     /**
      * Update the specified resource in storage.
@@ -112,9 +142,33 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         try {
-            $data = $request->except('image','profile_avatar_remove');
+            $total=0;
+            $stores=Store::all();
+            $quantities=$request->quantities;
+            foreach($stores as $key=>$value){
+                if($key<count($quantities)){
+                   $total+= $quantities[$key];
+                    
+                }
+            }
+            if($total>$request->stock)
+            return redirect()->back()->with(['error' => __('general.wrong_calculation')]);
+            $data = $request->except('image','profile_avatar_remove','quantities');
             $product->update($data);
             $product->updateFile();
+            $stores=$request->stores;
+            $stores=Store::all();
+
+
+
+            foreach($stores as $key=>$value){
+                if($key<count($quantities)){
+                    $storeProduct=StoreProduct::where('product_id',$product->id)->where('store_id',$value->id)->first();
+                    $storeProduct->update([
+                     'quantity'=>$quantities[$key],
+                    ]);
+                    
+                }}
             return redirect()->route('products.index', compact('product'))
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
