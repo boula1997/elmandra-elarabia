@@ -10,8 +10,6 @@ use App\Models\Message;
 use App\Models\Counter;
 use App\Models\Newsletter;
 use App\Models\Contact;
-use App\Models\Gallery;
-use App\Models\Image;
 use App\Models\Feature;
 use App\Models\Offer;
 use App\Models\Order;
@@ -20,7 +18,6 @@ use App\Models\Expense;
 use App\Models\Team;
 use App\Models\Partner;
 use App\Models\Testimonial;
-use App\Models\Process;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Slider;
@@ -237,6 +234,8 @@ if (!function_exists('topSelling()')) {
 
     }
 }
+
+
 
     function orderproductStatus($count,$store_id,$product_id)
     {
