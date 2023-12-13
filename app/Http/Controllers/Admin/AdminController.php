@@ -28,6 +28,7 @@ class AdminController extends Controller
         $this->middleware('permission:admin-create', ['only' => ['create', 'store']]);
         $this->middleware('permission:admin-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:admin-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:admin-verify', ['only' => ['verify']]);
     }
 
 
@@ -155,6 +156,19 @@ class AdminController extends Controller
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
+        }
+    }
+
+    public function verify($id){
+
+        try {
+            $verification = Admin::findorfail($id);
+            $verification->update(['verified'=>1]);
+            return response()->json(['success' => trans('general.edit_successfully')]);
+            
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            return response()->json(['error' => __($e->getMessage())]);
         }
     }
 }

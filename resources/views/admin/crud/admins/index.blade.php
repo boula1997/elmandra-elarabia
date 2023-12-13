@@ -29,7 +29,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                              
+
                                 <table id="example1" class="table  table-hover">
                                     <thead class="h-2">
                                         <tr class="p-0 m-0">
@@ -38,6 +38,7 @@
                                             <th>@lang('general.name')</th>
                                             <th>@lang('general.email')</th>
                                             <th>@lang('general.phone')</th>
+                                            <th>@lang('general.verify_status')</th>
                                             <th>@lang('general.role')</th>
                                             <th>@lang('general.controls')</th>
                                         </tr>
@@ -51,6 +52,8 @@
                                                 <td>{{ $admin->name }}</td>
                                                 <td>{{ $admin->email }}</td>
                                                 <td>{{ $admin->phone }}</td>
+                                                <td>{{ $admin->verified ? __('general.verifed') : __('general.noverifed') }}
+                                                </td>
                                                 <td>
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)
@@ -102,6 +105,50 @@
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
+            });
+        });
+    </script>
+
+    <script>
+        $('.fa-check-circle').on('click', function(e) {
+            $(this).addClass('disabled');
+
+            e.preventDefault();
+            var module_id = $(this).attr('module_id');
+            let url = "{{ route('verifications.verify', ':id') }}";
+            url = url.replace(':id', module_id);
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: (response) => {
+                    $(this).removeClass('disabled');
+                    $(this).addClass('text-success');
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+
+                    toastr.success("{{ __('general.verified_successfully') }}");
+
+                },
+                error: function(response) {
+                    alert(response.error);
+                    $(".err").addClass("d-block");
+                    $(".err").removeClass("d-none");
+                }
             });
         });
     </script>

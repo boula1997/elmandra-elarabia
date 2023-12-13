@@ -4,7 +4,7 @@
         action="{{ route($route . '.destroy', $module->id) }}" method="post">
 
         @can($role . '-list')
-            <a  class="mx-3" href="{{ route($route . '.show', $module) }}" title="show">
+            <a class="mx-3" href="{{ route($route . '.show', $module) }}" title="show">
                 <i class="fas fa-eye text-secondary fa-lg controlles"></i>
             </a>
         @endcan
@@ -15,8 +15,15 @@
             </a>
         @endcan
 
+        @can($role . '-verify')
+            <a href="" title="{{ $module->verified ? 'verified' : 'verify' }}"
+                module_id="{{ $module->id }}">
+                <i module_id="{{ $module->id }}"
+                    class="fas fa-check-circle fa-lg controlle  {{ $module->verified ? 'text-success' : 'text-secondary' }}"></i>
+            </a>
+        @endcan
+
         @can($role . '-delete')
-           
             @csrf
             @method('delete')
             <button type="button" class="btn btn-sm btn-clean btn-icon m-1 " title="{{ __('general.delete') }}"

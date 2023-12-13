@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OrderRequest;
 use App\Mail\OrderMail;
 use App\Mail\OrderUserMail;
+use App\Models\Coupon;
 use App\Models\Order;
 use App\Models\Service;
 use App\Models\Testimonial;
@@ -16,6 +17,7 @@ use App\Models\Orderproduct;
 use App\Models\Product;
 use App\Models\Offer;
 use Exception;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\Routing\Annotation\Route;
@@ -66,8 +68,10 @@ class OrderController extends Controller
     public function store(OrderRequest $request)
     {
         try {
+            $coupon=Coupon::where('code',$request->code)->first();
+            $discount=isset($coupon)?$coupon->discount:1;
             $data = $request->except('store_id','status');
-            $data['total']=cart()->getTotal()+50;
+            $data['total']=(cart()->getTotal()*settings()->taxes/100*$discount)+50;
             $data['user_id']=auth('web')->user()->id;
             $order = $this->order->create($data);
            
@@ -79,6 +83,7 @@ class OrderController extends Controller
                     'product_id' => $item->getId(),
                     'count' => $item->get('quantity'),
                     'total' => $item->get('quantity') * $item->getPrice(),
+                    'coupon_id' => isset($coupon)?$coupon->id:null,
                 ]);
                 $product=$orderproduct->product;
                 $product->update(['stock'=> $product->stock-$item->get('quantity')]);    
@@ -104,5 +109,8 @@ class OrderController extends Controller
         // dd($order);
         return view('front.single_order',compact('order'));
     }
-}
 
+    public function couponApply(Request $request){
+
+    }
+}

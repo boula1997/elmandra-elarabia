@@ -41,6 +41,7 @@
                                                 <th>@lang('general.code')</th>
                                                 <th>@lang('general.marketer')</th>
                                                 <th>@lang('general.discount')</th>
+                                                <th>@lang('general.nu_user')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -51,6 +52,7 @@
                                                     <td>{{ $coupon->code   }}</td>
                                                     <td>{{ $coupon->marketer->name   }}</td>
                                                     <td>{{ $coupon->discount   }}</td>
+                                                    <td>{{ count($coupon->users )  }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'coupons',

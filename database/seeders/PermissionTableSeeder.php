@@ -152,6 +152,8 @@ class PermissionTableSeeder extends Seeder
            'coupon-create',
            'coupon-edit',
            'coupon-delete',
+           'coupon-delete',
+           'admin-verify',
         ];
      
         foreach ($permissions as $permission) {
