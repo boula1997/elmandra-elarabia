@@ -37,7 +37,8 @@ class SlidersSeeder extends Seeder
       
         $image=["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
                 "images/0g7IJLg63Nydimuc64Tf8MP1MXk5LGXIntnrMdS8.webp",
-                "images/0GDQsQJRxQfVjqyHuZyXhql81eLGeNi714JuDeY4.webp",
+                "images/DR2gOqVsEw7lc7kUAbTV9rVU9pt439kDhiOWk3Hu.jpg",
+                // "images/0GDQsQJRxQfVjqyHuZyXhql81eLGeNi714JuDeY4.webp",
               ];
        
 
