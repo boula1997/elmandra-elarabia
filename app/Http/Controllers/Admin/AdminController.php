@@ -35,7 +35,7 @@ class AdminController extends Controller
     public function index($id)
     {
         $order_numbers=[];
-        $coupon_numbers=[];
+        $coupon_usage=[];
         try {
             $data = Admin::where('type',$id)->get();
             if($id=='Seller'){
@@ -61,10 +61,10 @@ class AdminController extends Controller
                            $total+=count($coupon->orders); 
                         }
 
-                        array_push($coupon_numbers,$total);
+                        array_push($coupon_usage,$total);
                     }
                 }
-                return view('admin.crud.admins.index', compact('data','coupon_numbers'));
+                return view('admin.crud.admins.index', compact('data','coupon_usage'));
             }
             return view('admin.crud.admins.index', compact('data'));
         } catch (Exception $e) {
