@@ -13,30 +13,32 @@ class SlidersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["Level Up Your Gaming Experience!",
-                     "Level Up Your Gaming Experience!",
-                    //  "Proposal and Agreement",
-                    //  "Executing and Delivering"
+        $title_en = ["STAY HOME & DELIVERED YOUR",
+                     "Your One-Stop Grocery Destination",
+                     "Fresh Choices, Every Aisle, Every Day",
                     ];
-        $subtitle_en = ["BUILD YOUR PLAYING LIFE WITH US",
-                        "GROW YOUR GAMING SKILLS WITH US",
-                        // null,null
-                    ];
-        $description_en = [null,null,];
-
         $title_ar = [
-                        "قم ببناء حياة اللعب الخاصة بك معنا",
-                        "ارفع مستوى تجربة الألعاب الخاصة بك!",
+                        "ابق في المنزل & قم بتوصيل طلبك",
+                        "وجهتك الشاملة لشراء البقالة",
+                        "خيارات جديدة، في كل ممر، كل يوم",
                    ];
 
-        $subtitle_ar =[ "قم ببناء حياة اللعب الخاصة بك معنا",
-                        "قم بتنمية مهاراتك في اللعب معنا",
+        $subtitle_ar =[ "الاحتياجات اليومية",
+                        "طعام طازج، عائلات سعيدة",
+                        "السوق الطازجة في منطقتك",
                      ];
+                     $subtitle_en = ["DAILY NEEDS",
+                                     "Fresh Food, Happy Families",
+                                     "Your Neighborhood's Fresh Market",
+                        ];
 
-        $description_ar =  [null,null,];
+        $description_ar =  [null,null,null];
+        $description_en = [null,null,null];
       
-        $image=["images/FHCziEMVj7afQLZkRaz1gLPv5LOP2yig79P6Ulke.jpg",
-                "images/ZkZhIoYrKq9kYBuULHrKnejt3V4iUF2Z9Ifav17f.jpg",
+        $image=["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
+                "images/0g7IJLg63Nydimuc64Tf8MP1MXk5LGXIntnrMdS8.webp",
+                "images/DR2gOqVsEw7lc7kUAbTV9rVU9pt439kDhiOWk3Hu.jpg",
+                // "images/0GDQsQJRxQfVjqyHuZyXhql81eLGeNi714JuDeY4.webp",
               ];
        
 
