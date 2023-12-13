@@ -4,94 +4,94 @@
             <div class="row full {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
                 <div class="row g-sm-5 g-3">
                 
-                        <div class="col-xxl-9">
-                            <div class="cart-table">
-                                <div class="table-responsive-xl">
-                                    <table class="table" id="shipping-fees" shipping="{{ settings()->shipping }}">
-                                        <tbody>
-                                            @foreach (cart()->getItems() as $item)
-                                                <tr class="product-box-contain">
-                                                    <td class="product-detail">
-                                                        <div class="product border-0">
-                                                            <a href="product-left-thumbnail.html" class="product-image">
-                                                                <img src="{{ cartItem($item->getId())->image }}"
-                                                                    class="img-fluid blur-up lazyload" alt="">
-                                                            </a>
-                                                            <div class="product-detail">
-                                                                <ul>
-                                                                    <li class="name">
-                                                                        <a
-                                                                            href="product-left-thumbnail.html">{{ cartItem($item->getId())->title }}</a>
-                                                                    </li>
+                    <div class="col-xxl-9">
+                        <div class="cart-table">
+                            <div class="table-responsive-xl">
+                                <table class="table" id="shipping-fees" shipping="{{ settings()->shipping }}">
+                                    <tbody>
+                                        @foreach (cart()->getItems() as $item)
+                                            <tr class="product-box-contain">
+                                                <td class="product-detail">
+                                                    <div class="product border-0">
+                                                        <a href="product-left-thumbnail.html" class="product-image">
+                                                            <img src="{{ cartItem($item->getId())->image }}"
+                                                                class="img-fluid blur-up lazyload" alt="">
+                                                        </a>
+                                                        <div class="product-detail">
+                                                            <ul>
+                                                                <li class="name">
+                                                                    <a
+                                                                        href="product-left-thumbnail.html">{{ cartItem($item->getId())->title }}</a>
+                                                                </li>
 
-                                                                    <li class="text-content"><span class="text-title">{{ __('general.sold_by') }}</span> {{ __('general.asleltawfeer') }}</li>
+                                                                <li class="text-content"><span class="text-title">{{ __('general.sold_by') }}</span> {{ __('general.asleltawfeer') }}</li>
 
 
 
-                                                                    <li>
-                                                                        <h5 class="text-content d-inline-block"></h5>
-                                                                        <span></span>
-                                                                    </li>
+                                                                <li>
+                                                                    <h5 class="text-content d-inline-block"></h5>
+                                                                    <span></span>
+                                                                </li>
 
-            
+        
 
-                                                                    <li class="item-total{{ $loop->index }}">
-                                                                        <h5>{{ __('general.total') }}$ {{ $item->get('quantity') * $item->get('price') }}</h5>
-                                                                    </li>
-                                                                </ul>
+                                                                <li class="item-total{{ $loop->index }}">
+                                                                    <h5>{{ __('general.total') }}$ {{ $item->get('quantity') * $item->get('price') }}</h5>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="price">
+                                                    <h4 class="table-title text-content">{{ __('general.price') }}</h4>
+                                                    <h5>{{ $item->get('price') }} ر.س </h5>
+                                                </td>
+
+                                                <td class="quantity">
+                                                    <h4 class="table-title text-content">{{ __('general.quantity') }}</h4>
+                                                    <div class="quantity-price">
+                                                        <div class="cart_qty">
+                                                            <div class="input-group">
+                                                                <button type="button" class="btn qty-left-minus"
+                                                                    data-type="minus" data-field="">
+                                                                    <i class="fa fa-minus" aria-hidden="true"></i>
+                                                                </button>
+                                                                <input class="form-control input-number qty-input itemCount"
+                                                                    type="text" name="itemCount"
+                                                                    value="{{ $item->get('quantity') }}" price="{{ $item->get('price') }}"
+                                                                    hash="{{ $item->getHash() }}" index="{{ $loop->index }}">
+                                                                <button type="button" class="btn qty-right-plus"
+                                                                    data-type="plus" data-field="">
+                                                                    <i class="fa fa-plus" aria-hidden=true"></i>
+                                                                </button>
                                                             </div>
                                                         </div>
-                                                    </td>
+                                                    </div>
+                                                </td>
 
-                                                    <td class="price">
-                                                        <h4 class="table-title text-content">{{ __('general.price') }}</h4>
-                                                        <h5>{{ $item->get('price') }} ر.س </h5>
-                                                    </td>
+                                                <td class="subtotal">
+                                                    <h4 class="table-title text-content">{{ __('general.total') }}</h4>
+                                                    <h5>  <span  class="single-total{{ $loop->index }}">{{$item->get('price') * $item->get('quantity')}}</span> ر.س </h5>
+                                                </td>
 
-                                                    <td class="quantity">
-                                                        <h4 class="table-title text-content">{{ __('general.quantity') }}</h4>
-                                                        <div class="quantity-price">
-                                                            <div class="cart_qty">
-                                                                <div class="input-group">
-                                                                    <button type="button" class="btn qty-left-minus"
-                                                                        data-type="minus" data-field="">
-                                                                        <i class="fa fa-minus" aria-hidden="true"></i>
-                                                                    </button>
-                                                                    <input class="form-control input-number qty-input itemCount"
-                                                                        type="text" name="itemCount"
-                                                                        value="{{ $item->get('quantity') }}" price="{{ $item->get('price') }}"
-                                                                        hash="{{ $item->getHash() }}" index="{{ $loop->index }}">
-                                                                    <button type="button" class="btn qty-right-plus"
-                                                                        data-type="plus" data-field="">
-                                                                        <i class="fa fa-plus" aria-hidden=true"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
+                                                <td class="save-remove">
+                                                    <h4 class="table-title text-content">{{ __('general.action') }}</h4>
 
-                                                    <td class="subtotal">
-                                                        <h4 class="table-title text-content">{{ __('general.total') }}</h4>
-                                                        <h5>  <span  class="single-total{{ $loop->index }}">{{$item->get('price') * $item->get('quantity')}}</span> ر.س </h5>
-                                                    </td>
+                                                    <a class="remove close_button removeCart cursor-pointer"
+                                                        hash="{{ $item->getHash() }}"><i class="fas fa-trash text-secondary trash-icon  fa-lg"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
 
-                                                    <td class="save-remove">
-                                                        <h4 class="table-title text-content">{{ __('general.action') }}</h4>
-
-                                                        <a class="remove close_button removeCart cursor-pointer"
-                                                            hash="{{ $item->getHash() }}"><i class="fas fa-trash text-secondary trash-icon  fa-lg"></i></a>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-
-                                    <button onclick="location.href = '{{ route('front.show-products') }}';"
-                                    class="btn btn-light shopping-button text-dark">
-                                    <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
-                                </div>
+                                <button onclick="location.href = '{{ route('front.show-products') }}';"
+                                class="btn btn-light shopping-button text-dark">
+                                <i class="fa-solid fa-arrow-left-long"></i>{{ __('general.return_to_shopping') }}</button>
                             </div>
                         </div>
+                    </div>
                     <div class="col-md-6">
                         <div class="col-xxl-6">
                             <div class="summery-box p-sticky">
@@ -133,7 +133,6 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-
                         <form method="post" id="order-form">
                             <div class="col-md-12">
                                 <div class="col-xxl-6">

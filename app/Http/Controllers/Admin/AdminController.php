@@ -34,9 +34,23 @@ class AdminController extends Controller
 
     public function index($id)
     {
-        
+        $order_numbers=[];
         try {
             $data = Admin::where('type',$id)->get();
+            if($id=='Seller'){
+                foreach($data as $item){
+                    if($item->type=='Seller'){
+                      
+                        $total=0;
+                        foreach($item->users as $user){
+                           $total+=count($user->orders); 
+                        }
+
+                        array_push($order_numbers,$total);
+                    }
+                }
+                return view('admin.crud.admins.index', compact('data','order_numbers'));
+            }
             return view('admin.crud.admins.index', compact('data'));
         } catch (Exception $e) {
             dd($e->getMessage());

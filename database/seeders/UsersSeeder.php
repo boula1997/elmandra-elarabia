@@ -26,7 +26,7 @@ class UsersSeeder extends Seeder
                     'email' => $email[$i],
                     'phone' => $phone[$i],
                     'password' =>Hash::make($pass[$i]),
-                    'seller_id' =>1,
+                    'seller_id' =>2,
                     
              
             ]);
