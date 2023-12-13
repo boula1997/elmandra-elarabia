@@ -574,5 +574,10 @@ return [
     'choose_marketer'=>"اختر المسوق",
     'wrong_calculation'=>"يوجد خطأ بالمخزون ",
     'size'=>"الحجم",
-    
+    'verifed'=>"مفعل",
+    'noverifed'=>"غير مفعل",
+    'verify_status'=>"التحقق من الحالة",
+    'nu_users'=>"العملاء المسجلين",
+    'nu_coupons'=>"عدد الكوبونات",
+    'verified_successfully'=>'تم التحقق بنجاح',
 ];
