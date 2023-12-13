@@ -4,7 +4,7 @@
             <div class="row full {{ count(cart()->getItems()) > 0 ? '' : 'd-none' }}">
                 <div class="row g-sm-5 g-3">
                 
-                    <div class="col-xxl-9">
+                    <div class="col-md-12">
                         <div class="cart-table">
                             <div class="table-responsive-xl">
                                 <table class="table" id="shipping-fees" shipping="{{ settings()->shipping }}">
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="col-xxl-6">
+                        <div class="col-md-12">
                             <div class="summery-box p-sticky">
                                
                                 <div class="summery-header">
@@ -135,7 +135,7 @@
                     <div class="col-md-6">
                         <form method="post" id="order-form">
                             <div class="col-md-12">
-                                <div class="col-xxl-6">
+                                <div class="col-md-12">
                                     <div class="summery-box p-sticky">
                                         <div class="summery-header">
                                             <h3>{{ __('general.personal_information') }}</h3>
@@ -176,9 +176,9 @@
                                                 <div class="mb-3 coupon-box input-group">
                                                     <input type="text" class="form-control" id="exampleFormControlInput1"
                                                         placeholder="{{ __('general.phone') }}" name="phone" value="{{ old('phone',auth('web')->user()->phone) }}">
-                                                    </div>
-                                                    <div class="err" id="phone"></div>
                                                 </div>
+                                                <div class="err" id="phone"></div>
+                                            </div>
                                             <div class="coupon-cart">
                                                 <h6 class="text-content mb-2">{{ __('general.have_code') }}</h6>
                                                 <div class="mb-3 coupon-box input-group">
@@ -189,13 +189,13 @@
                                                 </div>
                                                 
                                                 <div class="coupon-cart">
-                                                    <h6 class="text-content mb-2">{{ __('general.address') }}</h6>
+                                                    <h6 class="text-content mb-2">{{ __('general.your_location') }}</h6>
                                                     <div class="mb-3 coupon-box input-group">
                                                         <input type="hidden" id="latitude" name="latitude" placeholder="latitude" >
                                                         <div class="err" id="latitude"></div>
                                                         <input type="hidden" id="longitude" name="longitude" placeholder="longitude"  >
                                                         <div class="err" id="longitude"></div>
-                                                        <div id="map" style="width:500px; height:300px"></div>
+                                                        <div id="map" style="width:550px; height:300px"></div>
                                                          <div class="err" id="long"></div>
                                                          <div class="err" id="lat"></div>
 
@@ -241,7 +241,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Cart Section End -->
 
 
