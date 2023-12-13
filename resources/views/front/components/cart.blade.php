@@ -172,7 +172,7 @@
                                             </div>
                                             
                                             <div class="coupon-cart">
-                                                <h6 class="text-content mb-2">{{ __('general.phone') }}</h6>
+                                                <h6 class="text-content mb-2">{{ __('general.phone') }}- في حالة الرغبة باضافة رقم اخر</h6>
                                                 <div class="mb-3 coupon-box input-group">
                                                     <input type="text" class="form-control" id="exampleFormControlInput1"
                                                         placeholder="{{ __('general.phone') }}" name="phone" value="{{ old('phone',auth('web')->user()->phone) }}">

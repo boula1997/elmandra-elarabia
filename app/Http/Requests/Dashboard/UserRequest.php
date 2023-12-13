@@ -29,7 +29,7 @@ class UserRequest extends FormRequest
         return [
             'image' => $image,
             'name' => 'required',
-            'phone' => 'required|numeric',
+            'phone' => 'required|numeric|unique:users,phone',
             'email' => ['required','email',Rule::unique('users', 'email')->ignore($this->id)],
             'password' => 'required_without:_method|same:confirm-password',
         ];
