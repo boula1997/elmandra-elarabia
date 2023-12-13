@@ -55,7 +55,7 @@
                                         id="exampleInputphone" placeholder="@lang('general.phone')">
                                     </div>
                                 </div>
-                                {{dd(url()->previous() )}}
+                              
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">@lang('general.password')</label>
                                     <div class="input-group">
@@ -79,16 +79,15 @@
                                     </div>
                                 </div>
                                 
-                                <div class="form-group " display="none">
+                                <div class="form-group d-none">
                                     <label for="exampleInputEmail1">@lang('general.role')</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <select name="roles" id="" class="form-control">
-                                            @foreach ($roles as $role)
+                                                {{ $role=str_contains(url()->previous(),'/Admin')?'admin':(str_contains(url()->previous(),'/Seller')?'seller':'marketer' )}}
                                                 <option value="{{ $role }}">{{ $role }}</option>
-                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
