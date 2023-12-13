@@ -39,10 +39,6 @@
                                         <br />
                                         <div class="row">
                                             @foreach ($permission as $value)
-                                                {{-- <div class="col-md-3">
-                                                    <label>{{ Form::checkbox('permission[]', $value->id, false, ['class' => 'name']) }}
-                                                        {{ $value->name }}</label>
-                                                </div> --}}
                                                 <div class="col-md-3">
                                                     <div
                                                         class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
@@ -50,7 +46,7 @@
                                                             value="{{ $value->id }}" class="custom-control-input"
                                                             id="customSwitch{{ $value->id }}">
                                                         <label class="custom-control-label"
-                                                            for="customSwitch{{ $value->id }}">{{ $value->name }}</label>
+                                                            for="customSwitch{{ $value->id }}">{{ __('general.'.$value->name) }}</label>
                                                     </div>
                                                 </div>
                                             @endforeach
