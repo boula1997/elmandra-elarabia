@@ -217,6 +217,7 @@ if (!function_exists('advantages()')) {
        return Advantage::get();
     }
 }
+
 if (!function_exists('topSelling()')) {
 
     function topSelling()
@@ -232,7 +233,16 @@ if (!function_exists('topSelling()')) {
       
         return $items;
 
-    }
+    }   
+}
+if (!function_exists('rate()')) {
+
+    // function rate($id)
+    // {
+    //    $product=Product::findorfail($id);
+    //    $orderproducts=OrderProduct::get();
+    //    return (count($product->orderProducts)!=0?count($product->orderProducts):1)/count($orderproducts)*5;
+    // }
 }
 
 

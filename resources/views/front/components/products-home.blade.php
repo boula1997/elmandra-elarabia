@@ -57,12 +57,34 @@
                                                         {{ $product->size}} {{ $product->translate(app()->getLocale())->unit}}</h6>
                                                 </div>
 
+
+
                                                 <div class="counter-box">
                                                     <h6 class="price"><span
                                                             class="theme-color">{{ $product->price_bd }}</span>
                                                         <del>{{ $product->price }}</del>
                                                         {{ app()->getLocale() == 'ar' ? 'ر.س' : '$' }}
                                                     </h6>
+
+                                                                                                    <div class="product-rating custom-rate">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <i data-feather="star" class="fill"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="fill"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="fill"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="fill"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
                                                     <div class="addtocart_btn pt-5">
 

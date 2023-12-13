@@ -54,6 +54,26 @@
                                                     <h6 class="sold weight textus-content fw-normal">{{ $product->size}} {{ $product->translate(app()->getLocale())->unit}}</h6>
                                                 </div>
 
+                                                <div class="product-rating custom-rate">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <i data-feather="star" class="{{ rate($product->id)>0? 'fill':'' }}"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="{{ rate($product->id)>1? 'fill':'' }}"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="{{ rate($product->id)>2? 'fill':'' }}"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="{{ rate($product->id)>3? 'fill':'' }}"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i data-feather="star" class="{{ rate($product->id)>4? 'fill':'' }}"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
                                                 <div class="counter-box">
                                                     <h6 class="sold theme-color"><span class="theme-color">{{ $product->price_bd }}</span> <del>{{ $product->price}}</del>
                                                         {{ app()->getLocale() == 'ar' ? 'ر.س' : '$' }}</h6>
