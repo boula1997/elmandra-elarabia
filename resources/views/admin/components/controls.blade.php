@@ -19,7 +19,7 @@
             <a href="" title="{{ $module->verified ? 'verified' : 'verify' }}"
                 module_id="{{ $module->id }}">
                 <i module_id="{{ $module->id }}"
-                    class="fas fa-check-circle fa-lg controlle  {{ $module->verified ? 'text-success' : 'text-secondary' }}"></i>
+                    class="fas fa-check-circle fa-lg controlle  {{ $module->verified ? 'text-success' : 'text-secondary' }}" index="{{ $module->id }}"></i>
             </a>
         @endcan
 
