@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="card-footer mb-5">
                                     <button type="submit" class="btn btn-outline-primary px-5">@lang('general.save')</button>
-                                    <a href="{{ route('admins.index') }}"
+                                    <a onclick="history.back()"
                                         class="btn btn-outline-danger px-5
                                             ">@lang('general.cancel')</a>
                                 </div>

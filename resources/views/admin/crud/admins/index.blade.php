@@ -63,7 +63,7 @@
                                                 <td>
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)
-                                                            <label class="badge badge-success">{{ $v }}</label>
+                                                            <label class="badge badge-success">{{ __('general.'.$v) }}</label>
                                                         @endforeach
                                                     @endif
                                                 </td>
