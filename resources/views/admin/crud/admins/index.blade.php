@@ -40,7 +40,8 @@
                                             <th>@lang('general.phone')</th>
                                             <th>@lang('general.verify_status')</th>
                                             <th>@lang('general.nu_users')</th>
-                                            <th>@lang('general.nu_orders')</th>
+                                            {{-- <th>@lang('general.nu_orders')</th> --}}
+                                            <th>@lang('general.nu_coupons')</th>
                                             <th>@lang('general.role')</th>
                                             <th>@lang('general.controls')</th>
                                         </tr>
@@ -57,7 +58,8 @@
                                                 <td>{{ $admin->verified ? __('general.verifed') : __('general.noverifed') }}
                                                 </td>
                                                 <td>{{ count($admin->users) }}</td>
-                                                <td>{{ $order_numbers[$loop->index]}}</td>
+                                                {{-- <td>{{ $order_numbers[$loop->index]}}</td> --}}
+                                                <td>{{ count($admin->coupons) }}</td>
                                                 <td>
                                                     @if (!empty($admin->getRoleNames()))
                                                         @foreach ($admin->getRoleNames() as $v)

@@ -18,7 +18,7 @@ class CreateCouponsTable extends Migration
             $table->string('code')->nullable();
             $table->double('discount')->nullable();
             $table->unsignedBigInteger('marketer_id');
-            $table->foreign('marketer_id')->references('id')->on('marketers')->onDelete('cascade');
+            $table->foreign('marketer_id')->references('id')->on('admins')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -27,5 +27,8 @@ class Coupon extends Model implements TranslatableContract
    public function users(){
     return $this->hasMany(Order::class,'user_id');
    }
+   public function orders(){
+    return $this->hasMany(Order::class,'coupon_id');
+   }
    
 }
