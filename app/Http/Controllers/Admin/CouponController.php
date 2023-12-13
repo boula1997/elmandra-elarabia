@@ -93,7 +93,7 @@ class CouponController extends Controller
     public function edit(Coupon $coupon)
     {
         //    dd($coupon->title);
-        $marketers=Marketer::get();
+        $marketers=Admin::where('type','Marketer')->get();
         return view('admin.crud.coupons.edit', compact('coupon','marketers'));
     }
     /**

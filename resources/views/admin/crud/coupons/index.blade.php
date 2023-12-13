@@ -41,7 +41,7 @@
                                                 <th>@lang('general.code')</th>
                                                 <th>@lang('general.marketer')</th>
                                                 <th>@lang('general.discount')</th>
-                                                <th>@lang('general.nu_user')</th>
+                                                <th>@lang('general.nu_users')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>

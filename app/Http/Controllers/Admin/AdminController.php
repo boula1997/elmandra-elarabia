@@ -40,7 +40,7 @@ class AdminController extends Controller
             $data = Admin::where('type',$id)->get();
             if($id=='Seller'){
                 foreach($data as $item){
-                    if($item->type=='Seller'){
+                    if($item->type=='seller'){
                       
                         $total=0;
                         foreach($item->users as $user){
@@ -54,7 +54,7 @@ class AdminController extends Controller
             }
             if($id=='Marketer'){
                 foreach($data as $item){
-                    if($item->type=='Marketer'){
+                    if($item->type=='marketer'){
                       
                         $total=0;
                         foreach($item->coupons as $coupon){

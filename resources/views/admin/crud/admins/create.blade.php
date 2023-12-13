@@ -78,7 +78,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group " display="none">
                                     <label for="exampleInputEmail1">@lang('general.role')</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">

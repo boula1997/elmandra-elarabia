@@ -25,7 +25,7 @@ class CreateAdminUserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'phone' => '01126785910',
             'password' => bcrypt('123456789'),
-            'type'=>'Admin'
+            'type'=>'admin'
         ]);
         
         $seller = Admin::create([
@@ -33,7 +33,7 @@ class CreateAdminUserSeeder extends Seeder
             'email' => 'ahmed@gmail.com',
             'phone' => '01126785310',
             'password' => bcrypt('123456789'),
-            'type'=>'Seller'
+            'type'=>'seller'
         ]);
     
         $marketer = Admin::create([
@@ -41,7 +41,7 @@ class CreateAdminUserSeeder extends Seeder
             'email' => 'sayed@gmail.com',
             'phone' => '01176785340',
             'password' => bcrypt('123456789'),
-            'type'=>'Marketer',
+            'type'=>'marketer',
         ]);
         
         $role1 = Role::create(['name' => 'admin','guard_name'=>'admin']);

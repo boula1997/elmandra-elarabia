@@ -23,7 +23,7 @@
                                     <div class="mb-3">
                                         <select
                                             class="form-select form-select-lg @error('marketer_id') is-invalid @enderror"
-                                            name="'marketer_id'" id="">
+                                            name="marketer_id" id="">
                                             <option @selected(!old('marketer_id'))>{{ __('general.choose_marketer') }}
                                             </option>
                                             @foreach ($marketers as $marketer)

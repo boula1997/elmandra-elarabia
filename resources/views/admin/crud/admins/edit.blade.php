@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group d-none" >
                                     <label for="exampleInputEmail1">@lang('general.role')</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -84,7 +84,7 @@
                                         </div>
                                         <select name="roles" id="" class="form-control">
                                             @foreach ($roles as $role)
-                                                <option value="{{ $role }}">{{ $role }}</option>
+                                                <option @selected($admin->type==$role) value="{{ $role }}">{{ $role }}</option>
                                             @endforeach
                                         </select>
                                     </div>

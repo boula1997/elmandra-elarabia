@@ -22,30 +22,31 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">{{ __('general.code') }}</label>
-                                        <input type="text" name="code" value="{{ old('code',$coupon->code) }}" class="form-control"
-                                            id="exampleInputName" placeholder="@lang('general.code')">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="form-group">
                                         <label for="exampleInputEmail1">{{ __('general.marketer') }}</label>
                                         <div class="mb-3">
                                             <select
                                                 class="form-select form-select-lg @error('marketer_id') is-invalid @enderror"
-                                                name="'marketer_id'" id="">
+                                                name="marketer_id" id="">
                                                 <option @selected(!old('marketer_id'))>{{ __('general.choose_marketer') }}
                                                 </option>
                                                 @foreach ($marketers as $marketer)
-                                                    <option @selected(old('marketer_id') == $coupon->marketer->id) value="{{ $marketer->id }}">{{ $marketer->name }}</option>
+                                                    <option @selected(old('marketer_id',$coupon->marketer->id) == $coupon->marketer->id) value="{{ $marketer->id }}">{{ $marketer->name }}</option>
                                                 @endforeach
                                             </select>   
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{{ __('general.code') }}</label>
+                                        <input type="text" name="code" value="{{ old('code',$coupon->code) }}" class="form-control"
+                                            id="exampleInputName" placeholder="@lang('general.code')">
+                                    </div>
+                                </div>
+                            </div>
+                          
 
 
                             <div class="col-md-12">
