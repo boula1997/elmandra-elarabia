@@ -55,6 +55,7 @@
                                         id="exampleInputphone" placeholder="@lang('general.phone')">
                                     </div>
                                 </div>
+                                {{dd(url()->previous() )}}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">@lang('general.password')</label>
                                     <div class="input-group">
