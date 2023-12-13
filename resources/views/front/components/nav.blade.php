@@ -125,9 +125,7 @@
                                    <li class="right-side">
                                        <a href="tel:{{contacts('phone')[0]->contact }}" target="__blank" class="delivery-login-box">
                                            <div class="delivery-icon">
-                        
-                                            <i class="fas fa-mobile  fs-2"></i>
-                                               {{-- <i class="cursor-pointer" style="color: #bba011"  class="fas fa-mobile"></i> --}}
+                                               <i class="cursor-pointer" style="color: #bba011" data-feather="phone-call"></i>
                                            </div>
                                            <div class="delivery-detail">
                                                <h6>24/7 Delivery</h6>
