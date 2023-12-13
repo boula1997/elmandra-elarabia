@@ -579,7 +579,7 @@
                         </ul>
                     </li>
                 @endcan
-                @can('storeProduct-list')
+                {{-- @can('storeProduct-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="fas fa-store-alt"></i>
@@ -598,7 +598,7 @@
                             </li>
                         </ul>
                     </li>
-                @endcan
+                @endcan --}}
 
                 @can('review-list')
                 <li class="nav-item">

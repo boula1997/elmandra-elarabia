@@ -52,7 +52,9 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
-        Mail::to(env('MAIL_FROM_NAME'))->send(new WelcomeUserMail($user));
+        if(isset($request->email)){
+            Mail::to(env('MAIL_FROM_NAME'))->send(new WelcomeUserMail($user));
+        }
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);

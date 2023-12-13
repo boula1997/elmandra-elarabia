@@ -43,18 +43,9 @@
                 <div class="card card-custom">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <img src="{{ $category->image }}" class="w-50">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
-                                    <div class="card-title fw-bold">
-                                        <h5 class="font-weight-bolder text-dark">@lang('general.icon'):</h5>
-                                        <i class="{{ $category->icon }}"></i>
-                                    </div>
                                 </div>
                             </div>
                         </div>

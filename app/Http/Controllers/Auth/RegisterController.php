@@ -58,7 +58,8 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'numeric',  'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -74,6 +75,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
         ]);
     }
@@ -90,10 +92,12 @@ class RegisterController extends Controller
         $admin = Admin::create([
             'name' => $request['name'],
             'email' => $request['email'],
+            'phone' => $request['phone'],
             'password' => Hash::make($request['password']),
         ]);
-       
-        Mail::to(env('MAIL_FROM_NAME'))->send(new VerifyAdminMail($admin));
+        if(isset($request->email)){
+            Mail::to(env('MAIL_FROM_NAME'))->send(new VerifyAdminMail($admin));
+        }
 
         return redirect()->intended('/dashboard/login');
     }
