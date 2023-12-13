@@ -44,9 +44,9 @@ class CreateAdminUserSeeder extends Seeder
             'type'=>'Marketer'
         ]);
         
-        $role1 = Role::create(['name' => 'Admin','guard_name'=>'admin']);
-        $role2 = Role::create(['name' => 'Seller','guard_name'=>'admin']);
-        $role3 = Role::create(['name' => 'Marketer','guard_name'=>'admin']);
+        $role1 = Role::create(['name' => 'admin','guard_name'=>'admin']);
+        $role2 = Role::create(['name' => 'seller','guard_name'=>'admin']);
+        $role3 = Role::create(['name' => 'marketer','guard_name'=>'admin']);
      
         $permissions1 = Permission::pluck('id','id')->all();
         $permissions2 = Permission::pluck('id','id')->all();

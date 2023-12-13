@@ -28,7 +28,7 @@
                                     <div class="col-md-3">
                                         <div
                                             class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                                            <label class="" for="customSwitch">{{ $v->name }}</label>
+                                            <label class="" for="customSwitch">{{ __('general.'.$v->name) }}</label>
                                         </div>
                                     </div>
                                 @endforeach

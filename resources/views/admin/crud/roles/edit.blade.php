@@ -53,7 +53,7 @@
                                                             class="custom-control-input"
                                                             id="customSwitch{{ $value->id }}">
                                                         <label class="custom-control-label"
-                                                            for="customSwitch{{ $value->id }}">{{ $value->name }}</label>
+                                                            for="customSwitch{{ $value->id }}">{{ __('general.'.$value->name) }}</label>
                                                     </div>
                                                 </div>
                                             @endforeach

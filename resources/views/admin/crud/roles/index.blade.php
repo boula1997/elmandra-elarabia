@@ -47,7 +47,7 @@
                                         @foreach ($roles as $key => $role)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
-                                                <td>{{ $role->name }}</td>
+                                                <td>{{ __('general.'.$role->name) }}</td>
                                                 <td>
                                                     @include('admin.components.controls', [
                                                         'route' => 'roles',
