@@ -40,6 +40,7 @@
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
                                                 <th>@lang('general.count')</th>
+                                                <th>@lang('general.nu_users')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -49,6 +50,7 @@
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $seller->title }}</td>
                                                     <td>{{ $seller->count }}</td>
+                                                    <td>{{ count($seller->users) }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'sellers',

@@ -15,5 +15,9 @@ class Seller extends Model implements TranslatableContract
     protected $guarded = [];
     public $translatedAttributes = ['title'];
     public $timestamps = true;
+
+    public function users(){
+        return $this->hasMany(User::class);
+    }
     
 }

@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             FeaturesSeeder::class,
             ContactsSeeder::class,
             CountersSeeder::class,
+            CouponsSeeder::class,
             PagesSeeder::class,
             SlidersSeeder::class,
             CategorySeeder::class,

@@ -18,9 +18,9 @@ class CreateFeatureTranslationsTable extends Migration
             $table->string('title')->nullable();
             $table->string('subtitle')->nullable();
             $table->text('description')->nullable();
-            $table->unsignedBigInteger('feature_id');
             $table->string('locale')->index();
             $table->unique(['feature_id', 'locale']);
+            $table->unsignedBigInteger('feature_id');
             $table->foreign('feature_id')->references('id')->on('features')->onDelete('cascade');
             $table->timestamps();
         });

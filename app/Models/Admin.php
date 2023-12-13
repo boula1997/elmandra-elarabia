@@ -69,4 +69,8 @@ class Admin extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims() {
         return [];
     }  
+
+    public function users(){
+        return $this->hasMany(User::class,'seller_id');
+    }
 }
