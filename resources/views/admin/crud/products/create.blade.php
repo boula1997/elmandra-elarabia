@@ -19,7 +19,7 @@
                         @endforeach
                     </ul>
                 </div>
-                {{-- // TODO(Boula): organize inputs according to client needs --}}
+                {{-- // TODO(boula): organize inputs according to client needs --}}
                 <div class="card-body">
                     <div class="tab-content">
                         @foreach (config('translatable.locales') as $key => $locale)
@@ -55,7 +55,7 @@
                                             <select
                                                 class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
                                                 name="{{ $locale . '[unit]' }}" id="">
-                                                <option @selected(!old('unit'))>اختر الوحدة</option> // TODO(ibrahim): make units dynamic by adding units module
+                                                <option @selected(!old('unit'))>اختر الوحدة</option> // TODO(boula): make units dynamic by adding units module
                                                 <option @selected(old('unit') == 'لتر') value="لتر">لتر</option>
                                                 <option @selected(old('unit') == 'عبوة') value="عبوة">عبوة</option>
                                                 <option @selected(old('unit') == 'كيلو') value="كيلو">كيلو</option>

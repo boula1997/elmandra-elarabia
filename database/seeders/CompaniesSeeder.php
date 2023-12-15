@@ -19,7 +19,7 @@ class CompaniesSeeder extends Seeder
         $description_en = [null];
         $address_ar = ["المنيا"];
         $address_en = ["Minya"];
-        $owner=["Ibrahim"];
+        $owner=["ibrahim"];
         $phone=["01289189890"];
       
 

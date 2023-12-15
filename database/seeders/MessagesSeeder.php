@@ -14,7 +14,7 @@ class MessagesSeeder extends Seeder
     public function run(): void
     {
        
-        $name = ["Ibrahim Samy","Kero Boula","ابراهيم سامى"];
+        $name = ["ibrahim Samy","Kero boula","ابراهيم سامى"];
         $email = ["ibrahimsamy308@gmail.com","Kero@gmail.com","ibrahim@gmail.com"];
         $Phone = ["01289189890","0124578960","450015885"];
         $message = ["كيفيه عمل موقع بتكلفه اقل","كيفيه استخدام الموقع","We upload websites for free"];

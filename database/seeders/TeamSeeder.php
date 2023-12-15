@@ -13,11 +13,11 @@ class TeamSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["Boula Nessim",
-                     "Ibrahim Samy",
+        $title_en = ["boula Nessim",
+                     "ibrahim Samy",
                      "Gerges Makram",
-                     "Boula Nessim",
-                     "Ibrahim Samy",
+                     "boula Nessim",
+                     "ibrahim Samy",
                      "Gerges Makram",
                     ];
 

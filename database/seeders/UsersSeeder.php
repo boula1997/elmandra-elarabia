@@ -15,7 +15,7 @@ class UsersSeeder extends Seeder
     public function run(): void
     {
       
-        $name= ["Ibrahim Samy","Keroles Fouad","ابراهيم سامى"];
+        $name= ["ibrahim Samy","Keroles Fouad","ابراهيم سامى"];
         $email = ["ibrahimsamy308@gmail.com","Kero@gmail.com","ibrahim@gmail.com"];
         $pass = ["123456789","123456789","0125858952"];
         $phone = ["01126785910","01126985910","0125458952"];

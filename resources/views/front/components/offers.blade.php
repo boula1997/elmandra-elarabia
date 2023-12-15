@@ -25,7 +25,7 @@
                             <div class="bank-footer bank-footer-1">
                                 <h4>{{__('general.code')}} :
                                     <input id="clipboardexample" value="{{$offer->code}}" /> 
-                                    {{-- // TODO(Boula): apply offer for product only --}}
+                                    {{-- // TODO(boula): apply offer for product only --}}
                                 </h4>
                                 <button type="button" class="bank-coupon btn" id="copyText" data-clipboard-action="copy"
                                     data-clipboard-target="#clipboardexample">{{__('general.copy_code')}}</button>

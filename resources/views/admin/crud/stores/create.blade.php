@@ -20,7 +20,7 @@
                         @endforeach
                     </ul>
                 </div>
-{{-- // TODO(Boula): organize inputs --}}
+{{-- // TODO(boula): organize inputs --}}
                 <div class="card-body">
                     <div class="tab-content">
                         @foreach (config('translatable.locales') as $key => $locale)

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="slider-9">
-                    {{-- // TODO(ibrahim): change categories division according to what client needs --}}
+                    {{-- // TODO(boula): change categories division according to what client needs --}}
                     @foreach (categories() as $category)
                         <div>
                             <a href="{{ route('front.category',$category->id) }}" class="category-box wow fadeInUp">
