@@ -456,7 +456,7 @@
                     </ul>
                 </li>
             @endcan
-            
+            {{-- // TODO(ibrahim): add component or module to show coustmer on a map  --}}
             @can('feature-list')
                 <li class="nav-item">
                     <a href="#" class="nav-link">
