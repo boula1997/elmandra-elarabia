@@ -40,7 +40,10 @@
                                                 <th>#</th>
                                                 <th>@lang('general.title')</th>
                                                 <th>@lang('general.subtitle')</th>
-                                                {{-- <th>@lang('general.end_date')</th> --}}
+                                                <th>@lang('general.status')</th> 
+                                                {{-- // HACK(ibrahim): translate --}}
+                                                <th>@lang('general.start_date')</th>
+                                                <th>@lang('general.end_date')</th>
                                                 <th>@lang('general.image')</th>
                                                 <th>@lang('general.controls')</th>
                                                 {{-- // TODO(boula): make advertisments status controled --}}
@@ -52,9 +55,11 @@
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $advertisement->title   }}</td>
                                                     <td>{{ $advertisement->translate(app()->getLocale())->subtitle !==null? $advertisement->translate(app()->getLocale())->subtitle : __('general.nothing')}}</td>
+                                                    <td><label role="button" class="cursor-pointer badge {{ $advertisement->status? 'badge-success' : 'badge-danger'  }}" module_id={{ $advertisement->id }}  for="">{{ $advertisement->status? 'ظاهر' : 'مختفي'  }}</label></td>
+                                                    
 
-                                                    {{-- <td>{{ $advertisement->start_date!==null?$advertisement->start_date :__('general.nothing')  }}</td>   --}}
-                                                    {{-- <td>{{ $advertisement->end_date!==null?$advertisement->end_date :__('general.nothing')  }}</td>  --}}
+                                                    <td>{{ $advertisement->start_date!==null?$advertisement->start_date :__('general.nothing')  }}</td>  
+                                                    <td>{{ $advertisement->end_date!==null?$advertisement->end_date :__('general.nothing')  }}</td> 
                                                     <td><img width="100" height="100" src="{{ $advertisement->image }}"
                                                         alt="{{ $advertisement->title }}"></td>
                                                     <td>
@@ -105,4 +110,68 @@
             });
         });
     </script>
+
+<script>
+    $(function() {
+        // Summernote
+        $('.summernote').summernote()
+
+        // CodeMirror
+        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+            mode: "htmlmixed",
+            theme: "monokai"
+        });
+    })
+</script>
+
+<script>
+    $(function() {
+        bsCustomFileInput.init();
+    });
+</script>
+
+<script>
+    $('.cursor-pointer').on('click', function(e) {
+        $(this).addClass('disabled');
+        e.preventDefault();
+        var module_id = $(this).attr('module_id');
+        let url = "{{ route('advertisement.status', ':id') }}";
+        url = url.replace(':id', module_id);
+        $.ajax({
+            type: 'get',
+            url: url,
+            success: (response) => {
+                $(this).removeClass('disabled');
+                $(this).addClass(response.class);
+                $(this).removeClass(response.removeClass);
+                $(this).text(response.status);
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "{{ app()->getLocale() == 'ar' ? 'toast-top-left' : 'toast-top-right' }}",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+
+                toastr.success("{{ __('general.verified_successfully') }}");
+
+            },
+            error: function(response) {
+                alert(response.error);
+                $(".err").addClass("d-block");
+                $(".err").removeClass("d-none");
+            }
+        });
+    });
+</script>
 @endpush

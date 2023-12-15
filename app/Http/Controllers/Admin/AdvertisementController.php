@@ -130,4 +130,20 @@ class AdvertisementController extends Controller
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
         }
     }
+
+    public function adStatus($id){
+
+        try {
+            $advertisement = Advertisement::findorfail($id);
+            $advertisement->update(['status'=>!$advertisement->status]);
+            $status=$advertisement->status?'ظاهر':'مختفي';
+            $class=$advertisement->status?'badge-success':'badge-danger';
+            $removeClass=$advertisement->status?'badge-danger':'badge-success';
+            return response()->json(['success' => trans('general.edit_successfully'),'status'=>$status,'class'=>$class,'removeClass'=>$removeClass]);
+            
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            return response()->json(['error' => __($e->getMessage())]);
+        }
+    }
 }

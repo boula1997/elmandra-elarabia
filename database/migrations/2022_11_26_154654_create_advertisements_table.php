@@ -18,6 +18,7 @@ class CreateAdvertisementsTable extends Migration
             $table->string('code')->nullable();
             $table->dateTime('start_date')->nullable();
             $table->dateTime('end_date')->nullable();
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

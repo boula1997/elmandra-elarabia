@@ -136,7 +136,7 @@ Route::group(
             
                 Route::put('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'update'])->name('update.profile');
                 Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'edit'])->name('edit.profile');
-                Route::get('/verify/{id}', [App\Http\Controllers\Admin\AdminController::class, 'verify'])->name('verifications.verify');
+                Route::get('/status/{id}', [App\Http\Controllers\Admin\AdvertisementController::class, 'adStatus'])->name('advertisement.status');
 
             });
         });
