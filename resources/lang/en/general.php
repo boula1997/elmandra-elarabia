@@ -27,6 +27,7 @@ return [
     'identifier'  => 'Identifier',
     'edit'  => 'Edit',
     'products'  => 'Products',
+    'connect'  => 'Connect',
 
     'portfolios'  => 'Portfolios',
     'users'  => 'Users',

@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 class Seller extends Model implements TranslatableContract
 {
     use HasFactory, Translatable;
-    protected $table = 'sellers';
+    protected $table = 'sellers';  // TODO(Boula): make seller able to add order to client
     protected $guarded = [];
     public $translatedAttributes = ['title'];
     public $timestamps = true;

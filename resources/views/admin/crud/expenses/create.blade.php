@@ -20,6 +20,7 @@
                         @endforeach
                     </ul>
                 </div>
+                {{-- // TODO(ibrahim):change this module inputs to clients required inputs --}}
                 <div class="card-body">
                     <div class="tab-content">
                         @foreach (config('translatable.locales') as $key => $locale)

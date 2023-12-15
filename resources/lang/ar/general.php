@@ -347,7 +347,7 @@ return [
     'stores'=>'المستودعات', 
     'start_date'=>'تاريخ البدء', 
     'end_date'=>'تاريخ الانتهاء',
-    'owner'=>'المالك',
+    'owner'=>'المالك', // TODO: change it to responsibe
     'company'=>'الشركة', 
     'subcategory'=>'الفئة الفرعية', 
     'delete_confirm'=>'تأكيد الحذف', 

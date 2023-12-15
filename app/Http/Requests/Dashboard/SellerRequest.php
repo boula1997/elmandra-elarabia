@@ -20,7 +20,7 @@ class SellerRequest extends FormRequest
     {
         //to add or remove input from request in validation class use $this->merge
         //  $this->merge(['user_id' => auth('api')->user()->id]);
-
+       // TODO(ibrahim): translate all validations 
 
         $rules = [
             'count' =>  'required|numeric',

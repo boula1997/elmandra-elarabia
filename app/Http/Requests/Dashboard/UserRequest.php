@@ -26,6 +26,7 @@ class UserRequest extends FormRequest
     {
         $image=request()->isMethod('put')?'nullable':'required';
         // dd(request()->all());
+        // TODO(boula): make phone request better
         return [
             'image' => $image,
             'name' => 'required',

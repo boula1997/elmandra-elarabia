@@ -30,6 +30,7 @@
                                                 <th>@lang('general.name')</th>
                                                 <th>@lang('general.email')</th>
                                                 <th>@lang('general.controls')</th>
+                                                {{-- // TODO(ibrahim): show phone here --}}
                                             </tr>
                                         </thead>
                                         <tbody>

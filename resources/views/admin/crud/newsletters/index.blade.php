@@ -38,6 +38,7 @@
                                             <tr class="p-0 m-0">
                                                 <th>#</th>
                                                 <th>@lang('general.email')</th>
+                                                {{-- // TODO(ibrahim): show phone here  --}}
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>

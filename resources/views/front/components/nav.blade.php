@@ -122,7 +122,8 @@
                                            </div>
                                        </div>
                                    </li>
-                                   <li class="right-side">
+                                   <li class="right-side"> 
+                                    {{-- // TODO(ibrahim): Change icon --}}
                                        <a href="tel:{{contacts('phone')[0]->contact }}" target="__blank" class="delivery-login-box">
                                            <div class="delivery-icon">
                                                <i class="cursor-pointer" style="color: #bba011" data-feather="phone-call"></i>

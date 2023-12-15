@@ -422,6 +422,7 @@
                             <i class=" px-1 fas fa-globe"></i>
                             <p>
                                 @lang('general.counters') <i class=" px-1 fas fa-angle-left right"></i>
+                                 {{-- TODO(ibrahim): change counter to مراحل الاشتراك --}}
                                 <span class="badge badge-info right">{{ itemsCount('counters') }}</span>
                             </p>
                         </a>
@@ -435,6 +436,7 @@
                         </ul>
                     </li>
                 @endcan
+                {{-- // TODO(boula): make it sticky or scrollable --}}
                 @can('order-list')
                 <li class="nav-item">
                     <a href="#" class="nav-link">

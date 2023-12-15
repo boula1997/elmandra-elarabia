@@ -129,6 +129,7 @@
                             </div>
                         </div>
                     </div>
+                    {{-- // TODO(Boula): add toogle button to appear or disappear ads --}}
                 </div>
             </div>
             <div class="card card-custom">
