@@ -183,7 +183,11 @@ class ProductSeeder extends Seeder
                     // Sony
                     "Honor X9a Dual SIM",
                     "Nokia x30 5g smartphone",
+                    // water
+                    "Honor X9a Dual SIM",
+                    "Nokia x30 5g smartphone",
                     ];
+                    
                     $unit_en = [
                       
                         // Fruits
@@ -352,10 +356,14 @@ class ProductSeeder extends Seeder
                         // Sony
                         "Honor X9a Dual SIM",
                         "Nokia x30 5g smartphone",
+                        // Water
+                        "Honor X9a Dual SIM",
+                        "Nokia x30 5g smartphone",
                         ];
 
 
 
+       
         $title_ar = [    
             // الفاكهة
             "تفاحة",
@@ -523,9 +531,15 @@ class ProductSeeder extends Seeder
             // سوني
             "هونر X9a ثنائي الشريحة",
             "هاتف نوكيا x30 5g الذكي",
+            "مياه نقي 220 ملي كرتونة 48 قارورة",
+            "مياه صفا 1.5 لتر كرتونة 12 قارورة",
 
                   
+    
         ];
+
+       
+
         $unit_ar = [    
             // الفاكهة
             "كيلو",
@@ -693,8 +707,12 @@ class ProductSeeder extends Seeder
             // سوني
             "هونر X9a ثنائي الشريحة",
             "هاتف نوكيا x30 5g الذكي",
-
+            //مياه نقي
+            "مياه نقي 220 ملي كرتونة 48",
+            "مياه نقي 1 لتر كرتونة 24",
+            
                   
+    
         ];  
 
 
@@ -869,25 +887,27 @@ class ProductSeeder extends Seeder
                         // Exotic and Specialty Produce
                         "images/HoAcPPzk3P2uP9nrZHOHh6aTNBlsmbpkalFysJSL.jpg",
                         "images/uN7Phxdxf2TwMwjHlPV8itXbg7yqecpYwYy6vDX6.png",
+                        "images/5dc1cd56c0dd7.jpg",
+                        "images/5e4ff45f8216f.jpg",
 
                   ];
 
-                  
-                $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
-                $prices_bd=[100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
-                $stock=    [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
-                $sizes=    [10,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,10,];
+                  // TODO(ibrahim): data are not applicable with images and also products are not applicable with subcategories
+           
+                  $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,80,100,];
+                $prices_bd=[100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,80,100,];
+                $stock=    [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,80,100,];
+                $sizes=    [10,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,10,8,10,];
                 
                
                 $description_ar ="<div><br></div><div>كعكة الجيلي والفاصوليا والجزر والبسكويت المثلج وكعكة الشوفان وجمي بيرز تارت. قطرات الليمون، كعكة الجزر، بودنغ الحلوى اللذيذة. كعكة الشوكولاتة، تارت، كب كيك، دونات، تعلوها عرق السوس، السكر، البرقوق، بار الشوكولاتة. جيلي فول تيراميسو كراميل عناب بسكويت عرق سوس شوكولاتة. بودنغ، توفي، عناب، كعكة الشوفان، سويت رول. قطرات الليمون، حلوى، كرواسون، كعكة دانمركية، كب كيك. سويت رول حلوى شوكولاتة توفي جيلي سويت رول حلاوة براوني. مسحوق الخطمي، حلوى السمسم، حلوى الهلام، حلوى قصب الخطمي، فطيرة الزنجبيل.</div><div><br></div><div><b>عضوي:</b></div><div>السيرة الذاتية والأسد مزدوجان كحامل لا يحمل بطاقة هوية واحدة على الأقل الدهليز المبتذل المؤلم ينشأ في كثير من الأحيان مما يعوق بقاءه خاليًا من الجاذبية مع مجتمعه الطبيعي العقابي وما يحويه من أطفال كثيرين من السخرية من سيرة موريس ليو في</div>";
                 
                 
                 $description_en='<div class="nav-desh" style="margin-bottom: calc(22px + 8 * ((100vw - 320px) / 1600)); color: rgb(34, 34, 34); font-family: &quot;Public Sans&quot;, sans-serif; font-size: 14px;"><p style="text-align: left; margin-bottom: 0px; font-size: calc(14px + 1 * ((100vw - 320px) / 1600)); line-height: 1.7; color: rgb(74, 85, 104);">Jelly beans carrot cake icing biscuit oat cake gummi bears tart. Lemon drops carrot cake pudding sweet gummi bears. Chocolate cake tart cupcake donut topping liquorice sugar plum chocolate bar. Jelly beans tiramisu caramels jujubes biscuit liquorice chocolate. Pudding toffee jujubes oat cake sweet roll. Lemon drops dessert croissant danish cake cupcake. Sweet roll candy chocolate toffee jelly sweet roll halvah brownie topping. Marshmallow powder candy sesame snaps jelly beans candy canes marshmallow gingerbread pie.</p></div><div class="nav-desh" style="margin-bottom: calc(22px + 8 * ((100vw - 320px) / 1600)); color: rgb(34, 34, 34); font-family: &quot;Public Sans&quot;, sans-serif; font-size: 14px;"><div class="desh-title" style="margin-bottom: 8px;"><h5 style="text-align: left; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: 700; font-size: calc(15px + 1 * ((100vw - 320px) / 1600));">Organic:</h5></div><p style="text-align: left; margin-bottom: 0px; font-size: calc(14px + 1 * ((100vw - 320px) / 1600)); line-height: 1.7; color: rgb(74, 85, 104);">vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p></div>';
-                $y=0;
-        for ($i = 0; $i < count($title_ar); $i++) {
-            if($i % 2 === 0){
-                $y++;
-        }
+              
+       
+                for ($i = 0; $i < count($title_ar); $i++) {
+
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
@@ -899,7 +919,7 @@ class ProductSeeder extends Seeder
                     'description' => $description_en,
                     'unit' => $unit_en[$i],
                 ],
-                'subcategory_id'=>$y,
+                'subcategory_id'=>rand(1,35),
                 'company_id'=>1,
                 'price'=>$prices[$i],
                 'price_bd'=>$prices_bd[$i],
@@ -908,8 +928,9 @@ class ProductSeeder extends Seeder
               
 
             ]);
-
+             // TODO(ibrahim): try to reduce products and make them real exaples
             $product->file()->create(["url"=>$images[$i]]);
         }
+        
     }
 }

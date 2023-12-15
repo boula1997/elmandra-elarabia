@@ -50,7 +50,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-
+                                         {{-- // TODO(client): client should add all rpoducts details in title --}}
                                         <div class="mb-3">
                                             <select
                                                 class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"

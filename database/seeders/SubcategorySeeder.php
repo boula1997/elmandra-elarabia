@@ -56,30 +56,7 @@ class SubcategorySeeder extends Seeder
                         "Carbonated drinks",
                         "Juice and plant drinks",
                         "Beer",
-                        // Household and Cleaning
-                        "Carpet Cleaners",
-                        "Dish Detergent & Soap",
-                        "Glass & Surface Cleaners",
-                        "Floor Cleaners",
-                        "Oven & Grill Cleaners",
-                        // Baby and Infant Products
-                        "Booster Seats",
-                        "Bottle-Feeding",
-                        "Breastfeeding",
-                        "Feeding Accessories",
-                        "Food Mills",
-                        // Clothes
-                        "Casual Wear",
-                        "Formal Attire",
-                        "Sportswear",
-                        "Outerwear",
-                        "Active Wear",
-                        // Mobiles
-                        "Apple",
-                        "Samsung",
-                        "Huawei",
-                        "Xiaomi",
-                        "Sony",
+            
 
                     ];
 
@@ -123,58 +100,33 @@ class SubcategorySeeder extends Seeder
                         "الصلصات والتوابل والأطعمة القابلة للدهن",
                         "البضائع المعلبة",
                         // المشروبات
-                        "ماء",
+                        "مياه",
                         "لبن",
                         "المشروبات الكربونية",
                         "العصائر والمشروبات النباتية",
                         "جعة",
-                        // المنزل والتنظيف
-                        "منظفات السجاد",
-                        "منظف وصابون الأطباق",
-                        "منظفات الزجاج والأسطح",
-                        "منظفات الأرضيات",
-                        "منظفات الفرن والشوايات",
-                        // منتجات الأطفال والرضع
-                        "مقاعد معززة",
-                        "زجاجة الرضاعة",
-                        "الرضاعة الطبيعية",
-                        "ملحقات التغذية",
-                        "مطاحن الأغذية",
-                        // ملابس
-                        "لباس غير رسمي",
-                        "بالزي الرسمي",
-                        "ملابس رياضية",
-                        "ملابس خارجية",
-                        "ملابس نشطة",
-                        // الهواتف المحمولة
-                        "تفاحة",
-                        "سامسونج",
-                        "هواوي",
-                        "شاومى",
-                        "سوني",
                     ];  
 
+                    $category_id=[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4];
 
 
+// TODO(ibrahim): add subcategories to other categories
 
-        $images = [
-                    // "images/KCm7skKln2yd0wGNPpPif634tvV2tzDChNOCoGYU.webp",
-                    null,null,null,null,null,null,null,null,null,null,
-                    null,null,null,null,null,null,null,null,null,null,
-                    null,null,null,null,null,null,null,null,null,null,
-                    null,null,null,null,null,null,null,null,null,null,
-                    null,null,null,null,null,null,null,null,null,null,
-                    null,null,null,null,null,
+        // $images = [
+        //             // "images/KCm7skKln2yd0wGNPpPif634tvV2tzDChNOCoGYU.webp",
+        //             null,null,null,null,null,null,null,null,null,null,
+        //             null,null,null,null,null,null,null,null,null,null,
+        //             null,null,null,null,null,null,null,null,null,null,
+        //             null,null,null,null,null,null,null,null,null,null,
+        //             null,null,null,null,null,null,null,null,null,null,
+        //             null,null,null,null,null,
                  
-                    ];
+        //             ];
 
-                    $y=0;
+                   
         for ($i = 0; $i < count($title_ar); $i++) {
             
-            if($i % 5 === 0){
-                    $y++;
-            }
-            // print($y);
+
             $subcategory = Subcategory::create([
                 'ar' => [
                     'title' => $title_ar[$i],
@@ -182,9 +134,9 @@ class SubcategorySeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-                'category_id'=>$y,
+                'category_id'=>$category_id[$i],
             ]);
-            $subcategory->file()->create(["url"=>$images[$i]]);
+            // $subcategory->file()->create(["url"=>$images[$i]]);
           
            
            

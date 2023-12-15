@@ -14,32 +14,21 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-                        "Fresh Produce",
-                        "Meat and Seafood",
-                        "Dairy and Eggs",
+                        "Water",
+                        "Water Market",
+                        "Mousqies Offers",
                         "Bakery",
                         "Frozen Foods",
-                        "Pantry Staples",
-                        "Beverages",
-                        "Household and Cleaning",
-                        "Baby and Infant Products",
-                        "Clothes",
-                        "Mobiles",
+
 
                     ];
 
         $title_ar = [
-                        "سوق المنتجات الطازجة",
-                        "سوق اللحوم والمأكولات البحرية",
-                        "سوق الألبان والبيض",
-                        "سوق الخبز",
-                        "سوق الأغذية المجمدة",
-                        "سوق مواد أساسية للمؤن",
-                        "سوق المشروبات",
-                        "سوق المنزلية والتنظيف",
-                        "سوق منتجات الأطفال والرضع",
-                        "سوق ملابس",
-                        "سوق الجوالات",
+                        "المياه",
+                        "سوق المياه",
+                        "عروض المساجد",
+                        "المرطبات",
+                        "المواد الغذائية",
                     ];  
 
 
