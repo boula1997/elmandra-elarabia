@@ -19,7 +19,7 @@
                         @endforeach
                     </ul>
                 </div>
-                {{-- // TODO(boula): organize inputs according to client needs --}}
+                {{-- // TODO(boula): organize inputs according to client needs easy --}}
                 <div class="card-body">
                     <div class="tab-content">
                         @foreach (config('translatable.locales') as $key => $locale)
@@ -81,7 +81,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        {{-- // TODO(client): client should add all rpoducts details in title --}}
+                                        {{-- // TODO(client): client should add all rpoducts details in title easy --}}
                                         <div class="mb-3">
                                             <select
                                                 class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"

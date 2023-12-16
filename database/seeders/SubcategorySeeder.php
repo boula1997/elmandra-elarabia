@@ -110,7 +110,7 @@ class SubcategorySeeder extends Seeder
                     $category_id=[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4];
 
 
-// TODO(ibrahim): add subcategories to other categories
+// TODO(ibrahim): add subcategories to other categories easy
 
         // $images = [
         //             // "images/KCm7skKln2yd0wGNPpPif634tvV2tzDChNOCoGYU.webp",

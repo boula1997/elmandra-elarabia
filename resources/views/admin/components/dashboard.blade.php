@@ -422,7 +422,7 @@
                             <i class=" px-1 fas fa-globe"></i>
                             <p>
                                 @lang('general.counters') <i class=" px-1 fas fa-angle-left right"></i>
-                                 {{-- TODO(ibrahim): change counter to مراحل الاشتراك --}}
+                                 {{-- TODO(ibrahim): change counter to مراحل الاشتراك  easy--}} 
                                 <span class="badge badge-info right">{{ itemsCount('counters') }}</span>
                             </p>
                         </a>
@@ -436,7 +436,7 @@
                         </ul>
                     </li>
                 @endcan
-                {{-- // TODO(boula): make it sticky or scrollable --}}
+                {{-- // TODO(boula): make it sticky or scrollable easy --}}
                 @can('order-list')
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -466,7 +466,7 @@
                             <span class="badge badge-info right">{{ itemsCount('features') }}</span>
                         </p>
                     </a>
-                    {{-- // TODO(boula): make sidebar links go directlt to psge index without dropsown and add active to links --}}
+                    {{-- // TODO(boula): make sidebar links go directlt to psge index without dropsown and add active to links easy --}}
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('features.index') }}" class="nav-link">

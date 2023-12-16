@@ -79,7 +79,7 @@
                                                         {{ app()->getLocale() == 'ar' ? 'ر.س' : '$' }}</h6>
 
                                                     <div class="addtocart_btn pt-5">
-{{-- // TODO(ibrahim): show company in product card --}}
+{{-- // TODO(ibrahim): show company in product card easy --}}
 
 
 

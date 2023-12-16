@@ -46,7 +46,7 @@
                                                 <th>@lang('general.end_date')</th>
                                                 <th>@lang('general.image')</th>
                                                 <th>@lang('general.controls')</th>
-                                                {{-- // TODO(boula): make advertisments status controled --}}
+                                                {{-- // TODO(boula): make advertisments status controled easy--}}
                                             </tr>
                                         </thead>
                                         <tbody>

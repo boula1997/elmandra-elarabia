@@ -8,5 +8,5 @@
     @include('front.components.testimonial')
     @include('front.components.team')
     @include('front.components.newsletter')
-    {{-- TODO(boula): fix responsive --}}
+    {{-- TODO(boula): fix responsive easy--}}
 @endsection

@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
 
-                                {{-- // TODO(ibrahim): add upload bill as image --}}
+                                {{-- // TODO(ibrahim): add upload bill as image easy --}}
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-7 bg-light p-3 rounded h-100">

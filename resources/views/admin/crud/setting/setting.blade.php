@@ -129,7 +129,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- // TODO(boula): add toogle button to appear or disappear ads --}}
+                    {{-- // TODO(boula): add toogle button to appear or disappear rate easy --}}
                 </div>
             </div>
             <div class="card card-custom">
