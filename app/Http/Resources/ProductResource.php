@@ -20,6 +20,15 @@ class ProductResource extends JsonResource
             "title" => $this->title,
             "description" => $this->description,
             "category" => $this->category,
+            "price" => $this->price,
+            "kind" => $this->kind,
+            "engineCapacity" => $this->engineCapacity,
+            "suspensionType" => $this->suspensionType,
+            "mileAge" => $this->mileAge,
+            "manYear" => $this->manYear,
+            "configuration" => $this->configuration,
+            "gearBox" => $this->gearBox,
+            "axelsNumber" => $this->axelsNumber,
         ];
     }
 }

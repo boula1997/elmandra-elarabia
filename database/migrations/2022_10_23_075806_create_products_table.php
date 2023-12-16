@@ -16,6 +16,13 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->float('price');
+            $table->string('kind');
+            $table->string('suspensionType');
+            $table->bigInteger('axelsNumber');
+            $table->string('gearBox');
+            $table->string('configuration');
+            $table->double('mileAge');
+            $table->date('manYear');
             $table->unsignedBigInteger('subcategory_id');
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
             $table->timestamps();

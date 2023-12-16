@@ -65,6 +65,56 @@
 
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.kind'):</h5>
+                                <p class="m-0">{{ $product->kind }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.engineCapacity'):</h5>
+                                <p class="m-0">{{ $product->engineCapacity }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.axelsNumber'):</h5>
+                                <p class="m-0">{{ $product->axelsNumber }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.gearBox'):</h5>
+                                <p class="m-0">{{ $product->gearBox }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.configuration'):</h5>
+                                <p class="m-0">{{ $product->configuration }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.mileAge'):</h5>
+                                <p class="m-0">{{ $product->mileAge }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.manYear'):</h5>
+                                <p class="m-0">{{ $product->manYear }}</p>
+
+                            </div>
+                        </div>
 
 
 

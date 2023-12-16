@@ -532,15 +532,20 @@ class ProductSeeder extends Seeder
                         "images/uN7Phxdxf2TwMwjHlPV8itXbg7yqecpYwYy6vDX6.png",
 
                   ];
-
+                
                   
                 $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
-
-                $y=0;
+                $manYear=   [];
+                $mileAge=   [];
+                $configuration=   [];
+                $gearBox=   [];
+                $axelsNumber=   [];
+                $suspensionType=   [];
+                $engineCapacity=   [];
+                $kind=   [];
+                
         for ($i = 0; $i < count($title_ar); $i++) {
-            if($i % 2 === 0){
-                $y++;
-        }
+
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
@@ -548,8 +553,16 @@ class ProductSeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-                'subcategory_id'=>$y,
+                'subcategory_id'=>1,
                 'price'=>$prices[$i],
+                'kind'=>$kind[$i],
+                'engineCapacity'=>$engineCapacity[$i],
+                'suspensionType'=>$suspensionType[$i],
+                'manYear'=>$manYear[$i],
+                'mileAge'=>$mileAge[$i],
+                'configuration'=>$configuration[$i],
+                'gearBox'=>$gearBox[$i],
+                'axelsNumber'=>$axelsNumber[$i],
 
             ]);
 
