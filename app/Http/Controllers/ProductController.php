@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Product;
 use App\Models\Offer;
 use App\Models\Testimonial;
@@ -75,19 +74,5 @@ class ProductController extends Controller
         $offers=Offer::get();
         $products= Product::get();
         return view('front.products.product', compact('products','offers'));
-    }
-    public function categoryproduct($id)
-    {
-        
-        $offers=Offer::get();
-        $category=Category::findorfail($id);
-        return view('front.products.category', compact('category','offers'));
-    }
-    public function subcategoryproduct($id)
-    {
-        
-        $offers=Offer::get();
-        $subcategory = Subcategory::findorfail($id);
-        return view('front.products.subcategory', compact('subcategory','offers'));
     }
 }

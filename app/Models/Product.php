@@ -35,14 +35,6 @@ class Product extends Model implements TranslatableContract
    {
        return $this->belongsTo(Company::class, 'company_id');
    }
-   public function storeProducts()
-   {
-       return $this->hasMany(StoreProduct::class,'product_id');
-   }
-   public function orderProducts()
-   {
-       return $this->hasMany(OrderProduct::class,'product_id');
-   }
     
 }
 

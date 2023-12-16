@@ -7,13 +7,10 @@ use App\Http\Requests\Dashboard\ProductRequest;
 use App\Models\Category;
 use App\Models\Company;
 use App\Models\Subcategory;
-use App\Models\Product;
 use Illuminate\Support\Facades\File;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
-use App\Models\Store;
-use App\Models\StoreProduct;
-use App\Models\Unit;
 use Exception;
 
 class ProductController extends Controller
@@ -58,11 +55,9 @@ class ProductController extends Controller
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::all();
         $companies=Company::all();
-        $stores=Store::all();
-        $units=Unit::all();
-        return view('admin.crud.products.create',compact('categories','subcategories','companies','stores','units'));
+        return view('admin.crud.products.create',compact('categories','subcategories','companies'));
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -71,19 +66,18 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        try {            
-            $data = $request->except('image','profile_avatar_remove','quantities');
+        try {
+            $data = $request->except('image','profile_avatar_remove');
             $product = $this->product->create($data);
             $product->uploadFile();
-            
             return redirect()->route('products.index')
-            ->with('success', trans('general.created_successfully'));
+                ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
         }
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -94,7 +88,7 @@ class ProductController extends Controller
     {
         return view('admin.crud.products.show', compact('product'));
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -103,12 +97,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        $units=Unit::all();
-
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::get();
         $companies=Company::all();
-        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies','stores','units'));
+        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies'));
     }
     /**
      * Update the specified resource in storage.
@@ -120,12 +112,9 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         try {
-
-            $data = $request->except('image','profile_avatar_remove','quantities');
+            $data = $request->except('image','profile_avatar_remove');
             $product->update($data);
             $product->updateFile();
-            $stores=$request->stores;
-
             return redirect()->route('products.index', compact('product'))
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {

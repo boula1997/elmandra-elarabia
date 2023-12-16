@@ -35,38 +35,14 @@
                                 </div>
                                 <br>
                                 <br>
-                                <div class="col-md-12">
-                                    <div class="mb-7 bg-light p-3 rounded h-100">
-                                        <div class="card-title fw-bold">
-                                            <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                            <p class="m-0">{!! $product->translate($locale)->description !!}</p>
+                                    <div class="col-md-12">
+                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                            <div class="card-title fw-bold">
+                                                <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
+                                                <p class="m-0">{!! $product->translate($locale)->description !!}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <br>
-                                <br>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <h5 class="font-weight-bolder text-dark">@lang('general.subcategory'):</h5>
-                                        <p class="m-0">{{ $product->subcategory->translate($locale)->title }}</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
-                                        <p class="m-0">{{ $product->company->translate($locale)->title }}</p>
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
-                                <div class="col-md-12">
-                                    <div class="mb-7 bg-light p-3 rounded h-100">
-                                        <div class="card-title fw-bold">
-                                            <h5 class="font-weight-bolder text-dark">@lang('general.unit'):</h5>
-                                            <p class="m-0">{{ $product->translate($locale)->unit }}</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -75,58 +51,51 @@
                 <div class="card card-custom">
                     <div class="card-body">
                         <div class="row">
-
-
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.price'):</h5>
-                                    <p class="m-0">{{ $product->price }}</p>
-
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.subcategory'):</h5>
+                                    <p class="m-0">{{ $product->subcategory->translate($locale)->title }}</p>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.price_bd'):</h5>
-                                    <p class="m-0">{{ $product->price_bd }}</p>
-
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
+                                    <p class="m-0">{{ $product->company->translate($locale)->title }}</p>
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.size'):</h5>
-                                    <p class="m-0">{{ $product->size }}</p>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.stock'):</h5>
-                                    <p class="m-0">{{ $product->stock }}</p>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                @foreach ($product->storeProducts as $item)
-                                    <div class="form-group">
-                                        <h5 class="font-weight-bolder text-dark">{{ $item->store->title }}</h5>
-                                        <p class="m-0">{{ $item->quantity }}</p>
-
-                                    </div>
-                                @endforeach
-                            </div>
-
-
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <img src="{{ $product->image }}" class="w-50">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.price'):</h5>
+                                <p class="m-0">{{ $product->price }}</p>
+
                             </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.price_bd'):</h5>
+                                <p class="m-0">{{ $product->price_bd }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.stock'):</h5>
+                                <p class="m-0">{{ $product->stock }}</p>
+
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <img src="{{ $product->image }}" class="w-50">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 @endsection

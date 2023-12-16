@@ -19,7 +19,6 @@
                         @endforeach
                     </ul>
                 </div>
-                {{-- // TODO(boula): organize inputs according to client needs easy --}}
                 <div class="card-body">
                     <div class="tab-content">
                         @foreach (config('translatable.locales') as $key => $locale)
@@ -44,58 +43,6 @@
                                         {!! old($locale . '.description') !!} 
                                     </textarea>
                                 </div>
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <label for=""
-                                                class="form-label">{{ __('general.subcategories') }}</label>
-                                            <select class="form-select form-select-lg" name="subcategory_id"
-                                                id="subcategory">
-                                                @foreach ($subcategories as $subcategory)
-                                                    <option value="{{ $subcategory->id }}"
-                                                        {{ old('subcategory_id') == $subcategory->id ? 'selected' : '' }}>
-                                                        {{ $subcategory->title }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <label for="" class="form-label">{{ __('general.companies') }}</label>
-                                            <select class="form-select form-select-lg" name="company_id" id="company">
-                                                @foreach ($companies as $company)
-                                                    <option value="{{ $company->id }}"
-                                                        {{ old('company_id') == $company->id ? 'selected' : '' }}>
-                                                        {{ $company->title }}
-                                                    </option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>@lang('general.unit') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        {{-- // TODO(client): client should add all rpoducts details in title easy --}}
-                                        <div class="mb-3">
-                                            <select
-                                                class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
-                                                name="{{ $locale . '[unit]' }}" id="">
-                                                <option @selected(!old('unit'))>اختر الوحدة</option>
-                                                @foreach ($units as $unit)
-                                                    <option @selected(old('unit') == $unit->title) value="{{ $unit->id }}">
-                                                        {{ $unit->id }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-
-                                    </div>
-                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -104,7 +51,6 @@
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
-
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>
@@ -112,9 +58,10 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="price" placeholder="@lang('general.price')"
+                                    <input type="text" name="price"
+                                        placeholder="@lang('general.price')"
                                         class="form-control  pl-1 min-h-40px @error('price') is-invalid @enderror"
-                                        value="{{ old('price') }}">
+                                        value="{{old('price')}}">
                                 </div>
                             </div>
                         </div>
@@ -125,9 +72,10 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="price_bd" placeholder="@lang('general.price_bd')"
+                                    <input type="text" name="price_bd"
+                                        placeholder="@lang('general.price_bd')"
                                         class="form-control  pl-1 min-h-40px @error('price_bd') is-invalid @enderror"
-                                        value="{{ old('price_bd') }}">
+                                        value="{{old('price_bd')}}">
                                 </div>
                             </div>
                         </div>
@@ -138,41 +86,34 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="stock" placeholder="@lang('general.stock')"
+                                    <input type="text" name="stock"
+                                        placeholder="@lang('general.stock')"
                                         class="form-control  pl-1 min-h-40px @error('stock') is-invalid @enderror"
-                                        value="{{ old('stock') }}">
+                                        value="{{old('stock')}}">
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.subcategories') }}</label>
+                                <select class="form-select form-select-lg" name="subcategory_id" id="subcategory">
+                                    @foreach ($subcategories as $subcategory)
+                                        <option value="{{ $subcategory->id }}" {{ old('subcategory_id')==$subcategory->id? 'selected' : '' }}>{{ $subcategory->title }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.size') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="size" placeholder="@lang('general.size')"
-                                        class="form-control  pl-1 min-h-40px @error('size') is-invalid @enderror"
-                                        value="{{ old('size') }}">
-                                </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                <select class="form-select form-select-lg" name="company_id" id="company">
+                                    @foreach ($companies as $company)
+                                        <option value="{{ $company->id }}" {{ old('company_id')==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
-                        <h5>{{ __('general.stores') }}</h5>
-                        @foreach ($stores as $store)
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>{{ $store->title }}<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="quantities[]" placeholder="{{ $store->title }}"
-                                            class="form-control  pl-1 min-h-40px @error('quantities') is-invalid @enderror"
-                                            value="{{ old('quantities[$loop->index]') }}">
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
                         <div class="col-md-6">
                             @include('admin.components.image', [
                                 'label' => __('general.image'),
@@ -185,7 +126,7 @@
 
                         </div>
 
-
+    
 
                     </div>
                 </div>

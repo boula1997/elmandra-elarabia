@@ -17,7 +17,6 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->float('price');
             $table->float('price_bd');
-            $table->double('size')->nullable();
             $table->unsignedBigInteger('stock');
             $table->unsignedBigInteger('subcategory_id');
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');

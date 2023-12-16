@@ -183,187 +183,10 @@ class ProductSeeder extends Seeder
                     // Sony
                     "Honor X9a Dual SIM",
                     "Nokia x30 5g smartphone",
-                    // water
-                    "Honor X9a Dual SIM",
-                    "Nokia x30 5g smartphone",
                     ];
-                    
-                    $unit_en = [
-                      
-                        // Fruits
-                        "Apple",
-                        "Banana",
-                        // Vegetables
-                        "Tomato",
-                        "Cucumber",
-                        // Herbs
-                        "Thyme",
-                        "Lemongrass",
-                        // Organic Produce
-                        "Organic fruits",
-                        "Organic vegetables",
-                        // Exotic and Specialty Produce
-                        "Asian greens (bok choy, Chinese cabbage)",
-                        "Specialty mushrooms (shiitake, oyster, portobello)",
-                          
-                        // Beef
-                        "Steaks (ribeye, sirloin, filet mignon)",
-                        "Ground beef",
-                        // Poultry
-                        "Chicken (whole, breasts, thighs, drumsticks)",
-                        "Duck",
-                        // Deli Meats
-                        "Turkey breast",
-                        "Roast beef",
-                        // Lamb
-                        "Lamb chops",
-                        "Lamb leg",
-                        // Seafood
-                        "Shrimp",
-                        "Lobster",
-                        // Milk
-                        "Whole milk",
-                        "Reduced-fat milk",
-                        // Cheese
-                        "Cheddar",
-                        "Mozzarella",
-                        // Yogurt
-                        "Regular yogurt",
-                        "Dairy-free yogurt alternatives",
-                        // Butter and Margarine
-                        "Salted butter",
-                        "Spreadable butter",
-                        // Eggs
-                        "Chicken eggs (white, brown)",
-                        "Organic eggs",   
-                        // Bread
-                        "Sliced bread (white, whole wheat, multigrain)",
-                        "Baguettes",
-                        // Pastries
-                        "Croissants",
-                        "Muffins",
-                        // Cakes
-                        "Layer cakes (chocolate, vanilla, red velvet)",
-                        "Birthday cakes",
-                        // Cookies
-                        "Chocolate chip cookies",
-                        "Peanut butter cookies",
-                        // Pies and Tarts
-                        "Fruit tarts",
-                        "Custard tarts",
-                        // Frozen Fruits and Vegetables
-                        "Mixed berries",
-                        "Sliced strawberries",
-                        // Frozen Meals and Entrees
-                        "Frozen lasagna",
-                        "Frozen burritos",
-                        // Frozen Meat and Seafood
-                        "Frozen chicken breasts",
-                        "Frozen fish fillets",
-                        // Frozen Breakfast Items
-                        "Frozen breakfast burritos",
-                        "Frozen French toast sticks",
-                        // Frozen Snacks and Appetizers
-                       "Frozen onion rings",
-                        "Frozen mozzarella sticks",
-                        // Grains and Cereals
-                        "Rice (white, brown, basmati, jasmine)",
-                        "Pasta (spaghetti, penne, macaroni)",
-                        // Baking Supplies
-                        "Flour (all-purpose, whole wheat, cake flour)",
-                        "Sugar (granulated, brown sugar, powdered sugar)",
-                        // Cooking Oils and Vinegars
-                        "Olive oil",
-                        "Vegetable oil",
-                        // Sauces, Condiments, and Spreads
-                        "Ketchup",
-                        "Mayonnaise",
-                        // Canned Goods
-                        "Canned fruits",
-                        "Canned tuna",   
-                        // Water
-                        "Acqua Panna",
-                        "Cano Water",
-                        // Milk
-                        "Milky Way",
-                        "Holy Cow Milk",
-                        // Carbonated drinks
-                        "Pepsi",
-                        "coca cola",
-                        // Juice and plant drinks
-                        "Juicy Lucy",
-                        "Smitten Smoothies",
-                        // Beer
-                        "Wheat beer",
-                        "Brown ale",  
-                        // Carpet Cleaners
-                        "Bridgepoint Bio Break With Citrus Solv 2.72Kg.",
-                        "Bridgepoint Cleaning Booster Citrus Solv II 3.78L.",
-                        // Dish Detergent & Soap
-                        "Feba Dish Cleaner, 4 kg with 2 kg extra",
-                        "Max Clean Liquid Dish Wash with Lemon Scent - 10 Kg",
-                        // Glass & Surface Cleaners
-                        "Glass Storage Jar, Le Parfait",
-                        "Glow power glass cleaner 500ml with lavnder",
-                        // Floor Cleaners
-                        "Maxell Magic Floor Cleaner with Winter Ice Scent - 1 Liter",
-                        "Dettol morning dew disinfectant surface spray - 450 ml",
-                        // Oven & Grill Cleaners
-                        "Dettol Orange Healthy Kitchen Power Cleaner Spray 500Ml",
-                        "Clorox Kitchen Cleaner Lemon 500ML",
-                        // Booster Seats
-                        "Health Care Booster Seat with rainforest toy PINK",
-                        "Nania I-Max SP Racing Car Seat for Kids - Red and Black",
-                        // Bottle-Feeding
-                       "Bubbles natural feeding bottle without hand 280 ml - white",
-                        "Chicco Well-Being Plastic Bottle, 150 ml, Blue (0m+)", 
-                        // Breastfeeding
-                       "Nipple shields. ",
-                        "Nursing pads and nursing soothies.", 
-                        // Feeding Accessories
-                       "Newborns Dropper Anti-Choke Nutrition and Medicine Swirls • Feeding Sponge • Bowl• Blue",
-                        "Chicco Soft and Dream Baby Carrier 3 position", 
-                        // Food Mills
-                        "Passoire/Sieve",
-                        "Potato Ricer - Stainless Steel",
-                        // Casual Wear
-                        "Printonline Unisex Zip Hoodie Sweatshirt",
-                        "Mobaco Men Regular Fit Polo Shirt",
-                        // Formal Attire
-                       "Boss Suits H-Jeckson",
-                        "Boss Suits T-Harvers", 
-                        // Sportswear
-                       "Mobaco Men",
-                        "Hero Basic Mens Round Neck Short Sleeve Plain Undershirt", 
-                        // Outerwear
-                        "Boss Outerwear J_Sarek",
-                        "Boss Outerwear",  
-                        // Active Wear
-                        "Sport Top - Long Sleeve Crew Neck Sport T-shirt - Sport T-shirt - Women",
-                        "Athlete Sportive Training T-Shirt",   
-                        // Apple
-                        "Apple iPhone 14 ",
-                        "Apple iPhone 12 ", 
-                        // Samsung
-                        "Samsung Galaxy S23 Ultra",
-                        "Samsung Galaxy A04s", 
-                        // Huawei
-                        "Huawei Nova 10 SE",
-                        "HUAWEI nova Y61 Smartphone",
-                        // Xiaomi
-                        "Redmi Note 12 Dual SIM",
-                        "Realme C21 Y",  
-                        // Sony
-                        "Honor X9a Dual SIM",
-                        "Nokia x30 5g smartphone",
-                        // Water
-                        "Honor X9a Dual SIM",
-                        "Nokia x30 5g smartphone",
-                        ];
 
 
 
-       
         $title_ar = [    
             // الفاكهة
             "تفاحة",
@@ -531,188 +354,8 @@ class ProductSeeder extends Seeder
             // سوني
             "هونر X9a ثنائي الشريحة",
             "هاتف نوكيا x30 5g الذكي",
-            "مياه نقي 220 ملي كرتونة 48 قارورة",
-            "مياه صفا 1.5 لتر كرتونة 12 قارورة",
 
                   
-    
-        ];
-
-       
-
-        $unit_ar = [    
-            // الفاكهة
-            "كيلو",
-            "كيلو",
-            // خضروات
-            "كيلو",
-            "كيلو",
-            // أعشاب
-            "كيلو",
-            "عشب الليمون",
-           // المنتجات العضوية
-            "الفواكه العضوية",
-            "خضروات عضوية",
-            // المنتجات الغريبة والمتخصصة
-            "الخضر الآسيوية (بوك تشوي، الملفوف الصيني)",
-            "الفطر المميز (شيتاكي، المحار، بورتوبيللو)",
-             
-            // لحم
-            "شرائح اللحم (ريب آي، لحم الخاصرة، سمك فيليه)",
-            "اللحم المفروم",
-            // دواجن
-            "دجاج (كامل، صدور، أفخاذ، أفخاذ)",
-            "بطة",
-            // اللحوم الباردة
-            "صدور الديك الرومي",
-            "لحم البقر المشوي",
-            // حمَل
-            "شرائح لحم الضأن",
-            "ساق الضأن" ,
-            // مأكولات بحرية
-            "جمبري",
-            "سرطان البحر",
-            // لبن
-            "حليب صافي",
-            "الحليب قليل الدسم",
-            // جبنه
-            "شيدر",
-            "موزاريلا",
-            // زبادي
-            "الزبادي العادي",
-            "بدائل الزبادي الخالية من الألبان",
-            // الزبدة والسمن
-            "الزبدة المملحة",
-            "زبدة قابلة للدهن",
-            // بيض
-            "بيض الدجاج (أبيض، بني)",
-            "البيض العضوي",
-            // خبز
-            "شرائح الخبز (الأبيض، القمح الكامل، الحبوب المتعددة)",
-            "الرغيف الفرنسي",
-            // معجنات
-            "كرواسون",
-            "الكعك",
-            // كيك
-            "طبقات الكيك (شوكولاتة، فانيليا، ريد فيلفيت)",
-            "كعك عيد ميلاد",
-            // بسكويت
-            "كوكيز رقائق الشوكولاتة",
-            "بسكويت زبدة الفول السوداني",
-            // الفطائر والفطائر
-            "فطائر الفاكهة" ,
-            "فطائر الكاسترد",
-            // الفواكه والخضروات المجمدة
-            "التوت المختلطة",
-            "الفراولة المقطعة",
-            // الوجبات والمقبلات المجمدة
-            "لازانيا مجمدة",
-            "البوريتو المجمدة",
-            // اللحوم المجمدة والمأكولات البحرية
-            "صدور الدجاج المجمدة",
-            "شرائح السمك المجمدة",
-            // عناصر الإفطار المجمدة
-            "بوريتو الإفطار المجمدة",
-            "عصي الخبز المحمص الفرنسي المجمدة",
-            // الوجبات الخفيفة والمقبلات المجمدة
-           "حلقات البصل المجمدة",
-            "أصابع الموزاريلا المجمدة",
-            // الحبوب والحبوب
-            "أرز (أبيض، بني، بسمتي، ياسمين)",
-            "المعكرونة (السباغيتي، بيني، المعكرونة)",
-            // لوازم الخبز
-            "الدقيق (جميع الأغراض، القمح الكامل، دقيق الكيك)",
-            "السكر (السكر الحبيبي، السكر البني، السكر البودرة)",
-            // زيوت الطبخ والخل
-            "زيت الزيتون",
-            "زيت نباتي",
-            // الصلصات والتوابل، وينتشر
-            "كاتشب",
-            "مايونيز",
-            // البضائع المعلبة
-            "الفواكه المعلبة",
-            "التونة المعلبة",
-            // ماء
-            "أكوا بانا",
-            "ماء كانو",
-            // لبن
-            "درب التبانة",
-            "حليب البقر المقدس",
-            // المشروبات الكربونية
-            "بيبسي",
-            "كوكا كولا",
-            // العصائر والمشروبات النباتية
-            "جوسي لوسي" ,
-            "عصائر سمايتن" ,
-            // جعة
-            "بيره الشعير",
-            "البيرة البنية",
-            // منظفات السجاد
-            "بريدج بوينت بيو بريك بالحمضيات 2.72 كجم.",
-            "معزز التنظيف Bridgepoint Citrus Solv II 3.78 لتر.",
-            // منظف الأطباق والصابون
-            "منظف أطباق فيبا، 4 كيلو مع 2 كيلو إضافية",
-            "سائل غسيل الأطباق ماكس كلين برائحة الليمون - 10 كجم",
-            // منظفات الزجاج والأسطح
-            "جرة تخزين زجاجية، لو بارفيه",
-            "منظف الزجاج جلو باور 500 مل باللافندر",
-            // منظفات الأرضيات
-            "منظف الارضيات ماكسيل ماجيك برائحة الثلج الشتوي - 1 لتر",
-            "ديتول بخاخ مطهر للأسطح بندى الصباح - 450 مل",
-            // منظفات الفرن والشواية
-            "ديتول بخاخ منظف المطبخ الصحي بالبرتقال 500 مل",
-            "كلوركس منظف المطبخ بالليمون 500 مل",
-            // مقاعد معززة
-            "مقعد معزز للعناية الصحية مع لعبة الغابات المطيرة باللون الوردي",
-            "مقعد سيارة السباق للأطفال آي ماكس إس بي من نانيا - أحمر وأسود",
-            // زجاجة الرضاعة
-           "ببرونة بابلز ناتشورال بدون يد 280 مل - ابيض",
-            "شيكو ويل بينج، زجاجة بلاستيك، 150 مل، أزرق (من الولادة فما فوق)",
-            // الرضاعة الطبيعية
-           "دروع الحلمة",
-            "فوط الرضاعة ومهدئات الرضاعة.",
-            // ملحقات التغذية
-           "قطارة الأطفال حديثي الولادة المضادة للاختناق ودوامات طبية • إسفنجة تغذية • وعاء • أزرق",
-            "شيكو سوفت اند دريم بيبي كارير 3 وضعيات",
-            // مطاحن الغذاء
-            "باسواير/غربال",
-            "مضرب بطاطس - ستانلس ستيل",
-            // لباس غير رسمي
-            "برينتونلاين للجنسين الرمز البريدي هوديي البلوز",
-            "قميص بولو للرجال ذو قصة عادية من Mobaco",
-            // بالزي الرسمي
-           "بوس يناسب إتش جاكسون",
-            "بوس يناسب تي هارفرز",
-            // ملابس رياضية
-           "رجال موباكو",
-            "Hero Basic للرجال Round Nec",
-            // ملابس خارجية
-            "الملابس الخارجية بوس J_ساريك",
-            "ملابس خارجية بوس",
-            // ملابس نشطة
-            "بلوزة رياضية - تي شيرت رياضي بأكمام طويلة ورقبة دائرية - تي شيرت رياضي - للنساء",
-            "تيشيرت التدريب الرياضي",
-            // تفاحة
-            "آيفون 14",
-            "آيفون 12",
-            // سامسونج
-            "سامسونج جالاكسي اس 23 الترا",
-            "سامسونج جالاكسي A04s",
-            // هواوي
-            "هواوي نوفا 10 إس إي",
-            "هاتف هواوي نوفا Y61 الذكي",
-            // شاومى
-            "ريدمي نوت 12 ثنائي الشريحة",
-            "ريلمي سي21 واي",
-            // سوني
-            "هونر X9a ثنائي الشريحة",
-            "هاتف نوكيا x30 5g الذكي",
-            //مياه نقي
-            "مياه نقي 220 ملي كرتونة 48",
-            "مياه نقي 1 لتر كرتونة 24",
-            
-                  
-    
         ];  
 
 
@@ -887,50 +530,35 @@ class ProductSeeder extends Seeder
                         // Exotic and Specialty Produce
                         "images/HoAcPPzk3P2uP9nrZHOHh6aTNBlsmbpkalFysJSL.jpg",
                         "images/uN7Phxdxf2TwMwjHlPV8itXbg7yqecpYwYy6vDX6.png",
-                        "images/5dc1cd56c0dd7.jpg",
-                        "images/5e4ff45f8216f.jpg",
 
                   ];
 
-                  // TODO(ibrahim): data are not applicable with images and also products are not applicable with subcategories
-           
-                  $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,80,100,];
-                $prices_bd=[100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,80,100,];
-                $stock=    [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,80,100,];
-                $sizes=    [10,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,1,1,3,7,4,8,1,3,7,8,10,8,10,];
-                
-               
-                $description_ar ="<div><br></div><div>كعكة الجيلي والفاصوليا والجزر والبسكويت المثلج وكعكة الشوفان وجمي بيرز تارت. قطرات الليمون، كعكة الجزر، بودنغ الحلوى اللذيذة. كعكة الشوكولاتة، تارت، كب كيك، دونات، تعلوها عرق السوس، السكر، البرقوق، بار الشوكولاتة. جيلي فول تيراميسو كراميل عناب بسكويت عرق سوس شوكولاتة. بودنغ، توفي، عناب، كعكة الشوفان، سويت رول. قطرات الليمون، حلوى، كرواسون، كعكة دانمركية، كب كيك. سويت رول حلوى شوكولاتة توفي جيلي سويت رول حلاوة براوني. مسحوق الخطمي، حلوى السمسم، حلوى الهلام، حلوى قصب الخطمي، فطيرة الزنجبيل.</div><div><br></div><div><b>عضوي:</b></div><div>السيرة الذاتية والأسد مزدوجان كحامل لا يحمل بطاقة هوية واحدة على الأقل الدهليز المبتذل المؤلم ينشأ في كثير من الأحيان مما يعوق بقاءه خاليًا من الجاذبية مع مجتمعه الطبيعي العقابي وما يحويه من أطفال كثيرين من السخرية من سيرة موريس ليو في</div>";
-                
-                
-                $description_en='<div class="nav-desh" style="margin-bottom: calc(22px + 8 * ((100vw - 320px) / 1600)); color: rgb(34, 34, 34); font-family: &quot;Public Sans&quot;, sans-serif; font-size: 14px;"><p style="text-align: left; margin-bottom: 0px; font-size: calc(14px + 1 * ((100vw - 320px) / 1600)); line-height: 1.7; color: rgb(74, 85, 104);">Jelly beans carrot cake icing biscuit oat cake gummi bears tart. Lemon drops carrot cake pudding sweet gummi bears. Chocolate cake tart cupcake donut topping liquorice sugar plum chocolate bar. Jelly beans tiramisu caramels jujubes biscuit liquorice chocolate. Pudding toffee jujubes oat cake sweet roll. Lemon drops dessert croissant danish cake cupcake. Sweet roll candy chocolate toffee jelly sweet roll halvah brownie topping. Marshmallow powder candy sesame snaps jelly beans candy canes marshmallow gingerbread pie.</p></div><div class="nav-desh" style="margin-bottom: calc(22px + 8 * ((100vw - 320px) / 1600)); color: rgb(34, 34, 34); font-family: &quot;Public Sans&quot;, sans-serif; font-size: 14px;"><div class="desh-title" style="margin-bottom: 8px;"><h5 style="text-align: left; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: 700; font-size: calc(15px + 1 * ((100vw - 320px) / 1600));">Organic:</h5></div><p style="text-align: left; margin-bottom: 0px; font-size: calc(14px + 1 * ((100vw - 320px) / 1600)); line-height: 1.7; color: rgb(74, 85, 104);">vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p></div>';
-              
-       
-                for ($i = 0; $i < count($title_ar); $i++) {
+                  
+                $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
+                $prices_bd=[100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
+                $stock=    [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
 
+                $y=0;
+        for ($i = 0; $i < count($title_ar); $i++) {
+            if($i % 2 === 0){
+                $y++;
+        }
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => $description_ar,
-                    'unit' => $unit_ar[$i],
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'description' => $description_en,
-                    'unit' => $unit_en[$i],
                 ],
-                'subcategory_id'=>rand(1,35),
+                'subcategory_id'=>$y,
                 'company_id'=>1,
                 'price'=>$prices[$i],
                 'price_bd'=>$prices_bd[$i],
                 'stock'=>$stock[$i],
-                'size'=>$sizes[$i],
-              
 
             ]);
-             // TODO(ibrahim): try to reduce products and make them real exaples
+
             $product->file()->create(["url"=>$images[$i]]);
         }
-        
     }
 }
