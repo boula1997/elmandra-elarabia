@@ -40,7 +40,6 @@
                                                 <th>#</th>
                                                 <th>@lang('general.image')</th>
                                                 <th>@lang('general.title')</th>
-                                                <th>@lang('general.count')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -51,7 +50,6 @@
                                                     <td><img width="100" height="100" src="{{ $feature->image }}"
                                                         alt="{{ $feature->title }}"></td>
                                                     <td>{{ $feature->title }}</td>
-                                                    <td>{{ $feature->count }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'features',

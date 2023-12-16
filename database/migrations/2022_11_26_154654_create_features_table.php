@@ -15,7 +15,6 @@ class CreateFeaturesTable extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->text('count')->nullable();
             $table->string('icon')->nullable();
             $table->timestamps();
         });

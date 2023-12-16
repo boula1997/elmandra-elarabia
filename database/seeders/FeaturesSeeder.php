@@ -16,8 +16,7 @@ class FeaturesSeeder extends Seeder
         $title_ar = ["سنوات الخبرة","مبيعات المنتجات","عملائنا"];
         $title_en = ["Business Years","Products Sales","Happy Customers"];
 
-        $subtitle_ar = [null,null,null];
-        $subtitle_en = [null,null,null];
+
 
         $description_ar = [
             "<p>لقد خدم سوبر ماركتنا المجتمع بكل فخر لمدة 10 سنوات. ومع إرث مبني على الجودة والموثوقية والخدمة الاستثنائية، فإننا نواصل كوننا وجهتك الموثوقة لجميع احتياجات البقالة الخاصة بك.</p>",
@@ -32,7 +31,6 @@ class FeaturesSeeder extends Seeder
                 "<p>Our Happy Customers section celebrates YOU! We take pride in delivering exceptional service and quality products that bring smiles to our customers' faces. Join the countless satisfied shoppers who trust us for a delightful shopping experience every visit. Your satisfaction is our priority!</p>"
         ];
 
-        $count=[10,80,90];
         $image=[
             "images/4UPrBifentc75n3x5k51RHFbze9NhzcFoVl0u4WO.svg",
             "images/KjmtwGFMoyOLxhlPUo8AOtHlPIRsjaX30mSJt8em.svg",
@@ -44,16 +42,13 @@ class FeaturesSeeder extends Seeder
             $Feature_Translation = Feature::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'subtitle' => $subtitle_ar[$i],
                     'description' => $description_ar[$i],
     
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'subtitle' => $subtitle_en[$i],
                     'description' => $description_en[$i],
                 ],
-               'count'=>$count[$i],
             ]);
             $Feature_Translation->file()->create(["url"=>$image[$i]]);
         }

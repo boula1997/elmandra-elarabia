@@ -16,7 +16,6 @@ class CreateFeatureTranslationsTable extends Migration
         Schema::create('feature_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('subtitle')->nullable();
             $table->text('description')->nullable();
             $table->string('locale')->index();
             $table->unique(['feature_id', 'locale']);
