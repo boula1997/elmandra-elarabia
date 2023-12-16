@@ -71,36 +71,11 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        try {
-            $total=0;
-            $stores=Store::all();
-            $quantities=$request->quantities;
-            foreach($stores as $key=>$value){
-                if($key<count($quantities)){
-                   $total+= $quantities[$key];
-                    
-                }
-            }
-
-
-            if($total>$request->stock)
-            return redirect()->back()->with(['error' => __('general.wrong_calculation')]);
-            
+        try {            
             $data = $request->except('image','profile_avatar_remove','quantities');
             $product = $this->product->create($data);
             $product->uploadFile();
             
-
-            foreach($stores as $key=>$value){
-                if($key<count($quantities)){
-                    StoreProduct::create([
-                     'store_id'=>$value->id,
-                     'product_id'=>$product->id,
-                     'quantity'=>$quantities[$key],
-                    ]);
-                    
-                }
-            }
             return redirect()->route('products.index')
             ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
@@ -132,7 +107,6 @@ class ProductController extends Controller
 
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::get();
-        $stores=Store::all();
         $companies=Company::all();
         return view('admin.crud.products.edit', compact('product','categories','subcategories','companies','stores','units'));
     }
@@ -146,33 +120,12 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         try {
-            $total=0;
-            $stores=Store::all();
-            $quantities=$request->quantities;
-            foreach($stores as $key=>$value){
-                if($key<count($quantities)){
-                   $total+= $quantities[$key];
-                    
-                }
-            }
-            if($total>$request->stock)
-            return redirect()->back()->with(['error' => __('general.wrong_calculation')]);
+
             $data = $request->except('image','profile_avatar_remove','quantities');
             $product->update($data);
             $product->updateFile();
             $stores=$request->stores;
-            $stores=Store::all();
 
-
-
-            foreach($stores as $key=>$value){
-                if($key<count($quantities)){
-                    $storeProduct=StoreProduct::where('product_id',$product->id)->where('store_id',$value->id)->first();
-                    $storeProduct->update([
-                     'quantity'=>$quantities[$key],
-                    ]);
-                    
-                }}
             return redirect()->route('products.index', compact('product'))
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
