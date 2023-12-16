@@ -71,21 +71,6 @@
 
 
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.stock') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="stock"
-                                        placeholder="@lang('general.stock')"
-                                        class="form-control  pl-1 min-h-40px @error('stock') is-invalid @enderror"
-                                        value="{{old('stock',$product->stock)}}">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">{{ __('general.subcategories') }}</label>
                                 <select class="form-select form-select-lg" name="subcategory_id" id="subcategory">

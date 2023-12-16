@@ -67,13 +67,7 @@
                         </div>
 
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.stock'):</h5>
-                                <p class="m-0">{{ $product->stock }}</p>
 
-                            </div>
-                        </div>
                         
 
                         <div class="form-group">
