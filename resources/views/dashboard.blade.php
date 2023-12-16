@@ -71,21 +71,7 @@
                             </div>
                         </div>
 
-                            <!-- small box -->
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box bg-danger">
-                                    <div class="inner">
-                                        <h3>{{itemsCount('orders')}}</h3>
 
-                                        <p>@lang('general.orders')</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-bag"></i>
-                                    </div>
-                                    <a href="{{route('orders.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                            class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                                </div>
-                            </div>
 
                         <div class="col-lg-3 col-6">
                             <!-- small box -->
@@ -118,134 +104,12 @@
                                         class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                             </div>
                         </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3>{{itemsCount('advertisements')}}</h3>
 
-                                    <p>@lang('general.advertisements')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="{{route('advertisements.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div>
-                         <!-- ./col -->
-                         <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3>{{itemsCount('offers')}}</h3>
+          
 
-                                    <p>@lang('general.offers')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="{{route('offers.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div>
-                          <!-- ./col -->
-                          <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3>{{itemsCount('advantages')}}</h3>
 
-                                    <p>@lang('general.advantages')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="{{route('advantages.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div>
-                         <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3>{{itemsCount('companies')}}</h3>
+ 
 
-                                    <p>@lang('general.companies')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="{{route('companies.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div>
-                         <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-primary">
-                                    <div class="inner">
-                                        <h3>{{itemsCount('expenses')}}</h3>
-
-                                        <p>@lang('general.expenses')</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-pie-graph"></i>
-                                    </div>
-                                    <a href="{{route('expenses.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                            class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                                </div>
-                            </div> 
-                               <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3>{{itemsCount('coupons')}}</h3>
-
-                                    <p>@lang('general.coupons')</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="{{route('coupons.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                        class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                            </div>
-                        </div> 
-                            <!-- ./col -->
-                            <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-primary">
-                                    <div class="inner">
-                                        <h3>{{itemsCount('stores')}}</h3>
-
-                                        <p>@lang('general.stores')</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-pie-graph"></i>
-                                    </div>
-                                    <a href="{{route('stores.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                            class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                                </div>
-                            </div>
-                            <!-- ./col -->
-                            {{-- <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-primary">
-                                    <div class="inner">
-                                        <h3>{{itemsCount('storeProducts')}}</h3>
-
-                                        <p>@lang('general.storeProducts')</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-pie-graph"></i>
-                                    </div>
-                                    <a href="{{route('storeProducts.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
-                                            class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
-                                </div>
-                            </div> --}}
                          <!-- ./col -->
                          <div class="col-lg-3 col-6">
                             <!-- small box -->

@@ -3,7 +3,6 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\AdvertisementController;
-use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 // use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\GalleryController;
@@ -36,7 +35,6 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\StoreController;
-use App\Http\Controllers\Admin\StoreProductController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\MarketerController;
 use App\Models\Advertisement;
@@ -79,7 +77,6 @@ Route::group(
                 })->name('dashboard');
             
                 Route::resource('roles', RoleController::class);
-                Route::resource('faqs', FaqController::class);
                 Route::resource('services', ServiceController::class);
                 Route::resource('categories', CategoryController::class);
                 Route::resource('subcategories', SubcategoryController::class);
@@ -94,19 +91,11 @@ Route::group(
                 Route::resource('portfolios', PortfolioController::class);
                 Route::resource('counters', CounterController::class);
                 Route::resource('contacts', ContactController::class);
-                Route::resource('orderproducts', OrderProductController::class);
-                Route::get('orderproduct/{id}', [OrderProductController::class,'create'])->name('orderproduct.create');
-                Route::resource('tests', ImageController::class);
-                Route::resource('advertisements', AdvertisementController::class);
                 Route::resource('features', FeatureController::class);
-                Route::resource('units', UnitController::class);
                 Route::resource('offers', OfferController::class);
-                Route::resource('coupons', CouponController::class);
-                Route::resource('advantages', AdvantageController::class);
                 Route::resource('companies', CompanyController::class);
                 Route::resource('sellers', SellerController::class);
                 Route::resource('stores', StoreController::class);
-                Route::resource('storeProducts', StoreProductController::class);
                 Route::resource('reviews', ReviewController::class);
                 Route::resource('marketers', MarketerController::class);
                 

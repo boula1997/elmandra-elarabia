@@ -535,14 +535,130 @@ class ProductSeeder extends Seeder
                 
                   
                 $prices=   [100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,100,30,70,40,80,100,30,70,80,100,];
-                $manYear=   [];
-                $mileAge=   [];
-                $configuration=   [];
-                $gearBox=   [];
-                $axelsNumber=   [];
-                $suspensionType=   [];
-                $engineCapacity=   [];
-                $kind=   [];
+                $manYear=   ["2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13","2023-12-13",];
+
+                $gearBox=   ["automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic","automatic",];
+                $mileAge=   [70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,];
+                $axelsNumber=   [70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,];
+
+            
+                $configuration=   ["6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4","6*4",];
+                $kind=   ["Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit","Tractor unit",];
+
+
+                $engineCapacity=   ["247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP","247 HP",];
+                $suspensionType=   [                
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                "full air suspension",
+                ];
                 
         for ($i = 0; $i < count($title_ar); $i++) {
 

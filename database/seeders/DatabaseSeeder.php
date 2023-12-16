@@ -42,7 +42,6 @@ class DatabaseSeeder extends Seeder
             TestimonialsSeeder::class,
             UsersSeeder::class,
             StoresSeeder::class,
-            StoreProductsSeeder::class,
             AdvantagesSeeder::class,
             AdvertisementsSeeder::class,
             OffersSeeder::class,
