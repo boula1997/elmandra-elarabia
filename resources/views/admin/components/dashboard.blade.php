@@ -466,6 +466,7 @@
                             <span class="badge badge-info right">{{ itemsCount('features') }}</span>
                         </p>
                     </a>
+                    {{-- // TODO(boula): make sidebar links go directlt to psge index without dropsown and add active to links --}}
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('features.index') }}" class="nav-link">

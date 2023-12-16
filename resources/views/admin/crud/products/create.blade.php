@@ -44,18 +44,49 @@
                                         {!! old($locale . '.description') !!} 
                                     </textarea>
                                 </div>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for=""
+                                                class="form-label">{{ __('general.subcategories') }}</label>
+                                            <select class="form-select form-select-lg" name="subcategory_id"
+                                                id="subcategory">
+                                                @foreach ($subcategories as $subcategory)
+                                                    <option value="{{ $subcategory->id }}"
+                                                        {{ old('subcategory_id') == $subcategory->id ? 'selected' : '' }}>
+                                                        {{ $subcategory->title }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                            <select class="form-select form-select-lg" name="company_id" id="company">
+                                                @foreach ($companies as $company)
+                                                    <option value="{{ $company->id }}"
+                                                        {{ old('company_id') == $company->id ? 'selected' : '' }}>
+                                                        {{ $company->title }}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label>@lang('general.unit') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                         {{-- // TODO(client): client should add all rpoducts details in title --}}
+                                        {{-- // TODO(client): client should add all rpoducts details in title --}}
                                         <div class="mb-3">
                                             <select
                                                 class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
                                                 name="{{ $locale . '[unit]' }}" id="">
-                                                <option @selected(!old('unit'))>اختر الوحدة</option> // TODO(boula): make units dynamic by adding units module
+                                                <option @selected(!old('unit'))>اختر الوحدة</option> // TODO(boula):make units dynamic by adding units module
                                                 <option @selected(old('unit') == 'لتر') value="لتر">لتر</option>
                                                 <option @selected(old('unit') == 'عبوة') value="عبوة">عبوة</option>
                                                 <option @selected(old('unit') == 'كيلو') value="كيلو">كيلو</option>
@@ -72,18 +103,8 @@
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
+ 
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.size') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="size" placeholder="@lang('general.size')"
-                                        class="form-control  pl-1 min-h-40px @error('size') is-invalid @enderror"
-                                        value="{{ old('size') }}">
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
@@ -122,6 +143,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.size') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="size" placeholder="@lang('general.size')"
+                                        class="form-control  pl-1 min-h-40px @error('size') is-invalid @enderror"
+                                        value="{{ old('size') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <h5>{{ __('general.stores') }}</h5>
                         @foreach ($stores as $store)
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -137,32 +172,6 @@
                                 </div>
                             </div>
                         @endforeach
-
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.subcategories') }}</label>
-                                <select class="form-select form-select-lg" name="subcategory_id" id="subcategory">
-                                    @foreach ($subcategories as $subcategory)
-                                        <option value="{{ $subcategory->id }}"
-                                            {{ old('subcategory_id') == $subcategory->id ? 'selected' : '' }}>
-                                            {{ $subcategory->title }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.companies') }}</label>
-                                <select class="form-select form-select-lg" name="company_id" id="company">
-                                    @foreach ($companies as $company)
-                                        <option value="{{ $company->id }}"
-                                            {{ old('company_id') == $company->id ? 'selected' : '' }}>
-                                            {{ $company->title }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
                         <div class="col-md-6">
                             @include('admin.components.image', [
                                 'label' => __('general.image'),

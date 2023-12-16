@@ -45,6 +45,20 @@
                                 </div>
                                 <br>
                                 <br>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.subcategory'):</h5>
+                                        <p class="m-0">{{ $product->subcategory->translate($locale)->title }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
+                                        <p class="m-0">{{ $product->company->translate($locale)->title }}</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
                                 <div class="col-md-12">
                                     <div class="mb-7 bg-light p-3 rounded h-100">
                                         <div class="card-title fw-bold">
@@ -61,26 +75,7 @@
                 <div class="card card-custom">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.subcategory'):</h5>
-                                    <p class="m-0">{{ $product->subcategory->translate($locale)->title }}</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
-                                    <p class="m-0">{{ $product->company->translate($locale)->title }}</p>
-                                </div>
-                            </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.size'):</h5>
-                                    <p class="m-0">{{ $product->size }}</p>
-
-                                </div>
-                            </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -94,6 +89,14 @@
                                 <div class="form-group">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.price_bd'):</h5>
                                     <p class="m-0">{{ $product->price_bd }}</p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.size'):</h5>
+                                    <p class="m-0">{{ $product->size }}</p>
 
                                 </div>
                             </div>
@@ -125,6 +128,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
