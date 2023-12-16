@@ -99,6 +99,7 @@ function itemsCount($model)
         "teams" => count(Team::get()),
         "products" => count(Product::get()),
         "features" => count(Feature::get()),
+        "units" => count(Unit::get()),
         "testimonials" => count(Testimonial::get()),
         "partners" => count(Partner::get()),
         "sliders" => count(Slider::get()),

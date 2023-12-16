@@ -99,6 +99,7 @@ Route::group(
                 Route::resource('tests', ImageController::class);
                 Route::resource('advertisements', AdvertisementController::class);
                 Route::resource('features', FeatureController::class);
+                Route::resource('units', UnitController::class);
                 Route::resource('offers', OfferController::class);
                 Route::resource('coupons', CouponController::class);
                 Route::resource('advantages', AdvantageController::class);

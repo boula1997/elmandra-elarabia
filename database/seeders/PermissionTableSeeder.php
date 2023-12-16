@@ -152,7 +152,10 @@ class PermissionTableSeeder extends Seeder
            'coupon-create',
            'coupon-edit',
            'coupon-delete',
-           'coupon-delete',
+           'unit-list',
+           'unit-create',
+           'unit-edit',
+           'unit-delete',
            'admin-verify',
         ];
      
