@@ -551,7 +551,6 @@ class ProductSeeder extends Seeder
                     'title' => $title_en[$i],
                 ],
                 'subcategory_id'=>$y,
-                'company_id'=>1,
                 'price'=>$prices[$i],
                 'price_bd'=>$prices_bd[$i],
                 'stock'=>$stock[$i],

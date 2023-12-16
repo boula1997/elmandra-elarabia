@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\ProductRequest;
 use App\Models\Category;
-use App\Models\Company;
 use App\Models\Subcategory;
 use Illuminate\Support\Facades\File;
 use App\Models\Product;
@@ -54,8 +53,7 @@ class ProductController extends Controller
         // dd('eee');
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::all();
-        $companies=Company::all();
-        return view('admin.crud.products.create',compact('categories','subcategories','companies'));
+        return view('admin.crud.products.create',compact('categories','subcategories'));
     }
 
     /**
@@ -99,8 +97,7 @@ class ProductController extends Controller
     {
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::get();
-        $companies=Company::all();
-        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies'));
+        return view('admin.crud.products.edit', compact('product','categories','subcategories'));
     }
     /**
      * Update the specified resource in storage.
