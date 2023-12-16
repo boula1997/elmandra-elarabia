@@ -83,10 +83,11 @@
                                             <select
                                                 class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
                                                 name="{{ $locale . '[unit]' }}" id="">
-                                                <option @selected(!old('unit'))>اختر الوحدة</option>
-                                                <option @selected(old('unit', $product->unit) == 'لتر') value="لتر">لتر</option>
-                                                <option @selected(old('unit', $product->unit) == 'عبوة') value="عبوة">عبوة</option>
-                                                <option @selected(old('unit', $product->unit) == 'كيلو') value="كيلو">كيلو</option>
+                                                <option @selected(!old('unit',$product->unit))>اختر الوحدة</option>
+                                                @foreach ($units as $unit)
+                                                    <option @selected(old('unit',$product->unit) == $unit->title) value="{{ $unit->id }}">
+                                                        {{ $unit->id }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

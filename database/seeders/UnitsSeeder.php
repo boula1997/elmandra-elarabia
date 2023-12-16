@@ -13,16 +13,12 @@ class UnitsSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["سنوات الخبرة","مبيعات المنتجات","عملائنا"];
+        $title_ar = ["كرتونة قارورة","لتر عبوة","كجم"];
         $title_en = ["Business Years","Products Sales","Happy Customers"];
 
 
 
-        $image=[
-            "images/4UPrBifentc75n3x5k51RHFbze9NhzcFoVl0u4WO.svg",
-            "images/KjmtwGFMoyOLxhlPUo8AOtHlPIRsjaX30mSJt8em.svg",
-            "images/JWUBXqPMgUNwwVadtZJa7V3rCZJeJRdHR7OifOMA.svg",
-        ];
+
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -35,7 +31,6 @@ class UnitsSeeder extends Seeder
                     'title' => $title_en[$i],
                 ],
             ]);
-            $Unit_Translation->file()->create(["url"=>$image[$i]]);
         }
     }
 }

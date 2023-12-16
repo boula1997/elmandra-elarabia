@@ -86,10 +86,11 @@
                                             <select
                                                 class="form-select form-select-lg @error($locale . '.unit') is-invalid @enderror"
                                                 name="{{ $locale . '[unit]' }}" id="">
-                                                <option @selected(!old('unit'))>اختر الوحدة</option> // TODO(boula):make units dynamic by adding units module
-                                                <option @selected(old('unit') == 'لتر') value="لتر">لتر</option>
-                                                <option @selected(old('unit') == 'عبوة') value="عبوة">عبوة</option>
-                                                <option @selected(old('unit') == 'كيلو') value="كيلو">كيلو</option>
+                                                <option @selected(!old('unit'))>اختر الوحدة</option>
+                                                @foreach ($units as $unit)
+                                                    <option @selected(old('unit') == $unit->title) value="{{ $unit->id }}">
+                                                        {{ $unit->id }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
 
@@ -103,7 +104,7 @@
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
- 
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>

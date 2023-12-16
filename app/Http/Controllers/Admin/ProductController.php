@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
 use App\Models\Store;
 use App\Models\StoreProduct;
+use App\Models\Unit;
 use Exception;
 
 class ProductController extends Controller
@@ -58,7 +59,8 @@ class ProductController extends Controller
         $subcategories=Subcategory::all();
         $companies=Company::all();
         $stores=Store::all();
-        return view('admin.crud.products.create',compact('categories','subcategories','companies','stores'));
+        $units=Unit::all();
+        return view('admin.crud.products.create',compact('categories','subcategories','companies','stores','units'));
     }
     
     /**
@@ -126,11 +128,13 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $units=Unit::all();
+
         $categories=$this->category->latest()->get();
         $subcategories=Subcategory::get();
         $stores=Store::all();
         $companies=Company::all();
-        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies','stores'));
+        return view('admin.crud.products.edit', compact('product','categories','subcategories','companies','stores','units'));
     }
     /**
      * Update the specified resource in storage.
