@@ -66,13 +66,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.price_bd'):</h5>
-                                <p class="m-0">{{ $product->price_bd }}</p>
-
-                            </div>
-                        </div>
 
                         <div class="col-md-6">
                             <div class="form-group">

@@ -552,7 +552,6 @@ class ProductSeeder extends Seeder
                 ],
                 'subcategory_id'=>$y,
                 'price'=>$prices[$i],
-                'price_bd'=>$prices_bd[$i],
                 'stock'=>$stock[$i],
 
             ]);
