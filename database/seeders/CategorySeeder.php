@@ -23,6 +23,7 @@ class CategorySeeder extends Seeder
                         "Consoles & Hardware",
                         "Accessories",
                         "Pre Owned",
+                        "Toys & Collectibles",
                         // "Digital Products",
                         "Others",
                         "Offers",
