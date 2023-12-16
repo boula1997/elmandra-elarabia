@@ -52,6 +52,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {{-- // TODO(boula): admins that are not verified are not allowed to login --}}
                                         @foreach ($data as $admin)
                                             <tr class="p-0 m-0">
                                                 <td>{{ $loop->iteration }}</td>

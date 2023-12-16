@@ -72,7 +72,8 @@ class ShoppingController extends Controller
             $sliders=$this->slider->get();
             $subcategories=$this->subcategory->get();
             $advantages=$this->advantages->get();
-            $advertisements=$this->advertisements->get();
+            $advertisements=$this->advertisements->where('status',1)->get();
+
             $offers=$this->offers->get();
             
 
