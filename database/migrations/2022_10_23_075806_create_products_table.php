@@ -24,8 +24,8 @@ class CreateProductsTable extends Migration
             $table->string('engineCapacity')->nullable();
             $table->double('mileAge')->nullable();
             $table->date('manYear')->nullable();
-            $table->unsignedBigInteger('subcategory_id')->nullable();
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

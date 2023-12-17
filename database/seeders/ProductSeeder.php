@@ -669,7 +669,7 @@ class ProductSeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-                'subcategory_id'=>1,
+                'category_id'=>1,
                 'price'=>$prices[$i],
                 'kind'=>$kind[$i],
                 'engineCapacity'=>$engineCapacity[$i],

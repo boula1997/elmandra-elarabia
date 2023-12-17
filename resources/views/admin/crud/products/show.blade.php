@@ -53,8 +53,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <h5 class="font-weight-bolder text-dark">@lang('general.subcategory'):</h5>
-                                    <p class="m-0">{{ $product->subcategory->translate($locale)->title }}</p>
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.category'):</h5>
+                                    <p class="m-0">{{ $product->category->translate($locale)->title }}</p>
                                 </div>
                             </div>
 

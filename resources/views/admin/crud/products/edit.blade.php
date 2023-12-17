@@ -171,10 +171,10 @@
 
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.subcategories') }}</label>
-                                <select class="form-select form-select-lg" name="subcategory_id" id="subcategory">
-                                    @foreach ($subcategories as $subcategory)
-                                        <option value="{{ $subcategory->id }}" {{ old('subcategory_id',$subcategory->id)==$subcategory->id? 'selected' : '' }}>{{ $subcategory->title }}</option>
+                                <label for="" class="form-label">{{ __('general.categories') }}</label>
+                                <select class="form-select form-select-lg" name="category_id" id="category">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id',$category->id)==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
