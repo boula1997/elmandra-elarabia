@@ -20,7 +20,7 @@ class SettingSeeder extends Seeder
                 'copyright' => 'Copyright reserved by AlMandarah AlArabia © 2023',
                 'title' => 'AlMandarah AlArabia',
                 'address' => 'Saudi Arabia',
-                'description' => "Delivering Power, Reliability, and Efficiency: Our trucks company offers a robust fleet of vehicles designed to meet your transportation needs.",
+                'description' => "Almandara AlArabia was established in 2008, and it provide its services in many fields in all regions throughout the kingdom of Saudi Arabia, and it includes an team of experienced elite engineers, administrators and technicians whose number exceeded 200 employees.",
                 'meta_data' => 'Driving Success, Mile by Mile.',
             ],
             'ar' => [
@@ -28,7 +28,7 @@ class SettingSeeder extends Seeder
                 'copyright' => 'جميع الحقوق محفوظة لدي المندرة العربية © 2023 ',
                 'title' => 'المندرة العربية',
                 'address' => 'السعودية',
-                'description' => 'توفير القوة والموثوقية والكفاءة: تقدم شركة الشاحنات لدينا أسطولًا قويًا من المركبات المصممة لتلبية احتياجات النقل الخاصة بك.',
+                'description' => 'تأسست المندرة العربية عام 2008م, وتقوم بتقديم خدماتها في جميع مناطق المملكة العربية السعودية في عدة مجالات وقد تم تصنيفها من قبل وكالة وزارة الشؤون البلدية والقروية لشؤون تصنيف المقاولين (شهادة رقم 19205) في عدد من المجالات وهي تضم نخبة من المهندسين والإداريين والفنيين الذي تجاوز عددهم (220 ) موظف.',
                 'meta_data' => 'القيادة النجاح، ميلا بعد ميل.',
             ],
             'logo' => 'images/ApNRObV5QhmkEVoesh1rIRgovhev2vaxiQ5ekf21.png',

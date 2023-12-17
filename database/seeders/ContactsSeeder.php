@@ -24,7 +24,7 @@ class ContactsSeeder extends Seeder
         $contacts=["https://www.facebook.com",
                    "https://www.linkedin.com",
                    "https://instagram.com",
-                   "asleltawfeer@gmail.com",
+                   "info@almandarah.com",
                    "+966536392629",
                    "+966536392629"
                     ];
