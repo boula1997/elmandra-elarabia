@@ -14,100 +14,16 @@ class SubcategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-                        // Fresh Produce
-                        "Fruits",
-                        "Vegetables",
-                        "Herbs",
-                        "Organic Produce",
-                        "Exotic and Specialty Produce",
-                        // Meat and Seafood
-                        "Beef",
-                        "Poultry",
-                        "Deli Meats",
-                        "Lamb",
-                        "Seafood",
-                        // Dairy and Eggs
-                        "Milk",
-                        "Cheese",
-                        "Yogurt",
-                        "Butter and Margarine",
-                        "Eggs",
-                        // Bakery
-                        "Bread",
-                        "Pastries",
-                        "Cakes",
-                        "Cookies",
-                        "Pies and Tarts",
-                        // Frozen Foods
-                        "Frozen Fruits and Vegetables",
-                        "Frozen Meals and Entrees",
-                        "Frozen Meat and Seafood",
-                        "Frozen Breakfast Items",
-                        "Frozen Snacks and Appetizers",
-                        // Pantry Staples
-                        "Grains and Cereals",
-                        "Baking Supplies",
-                        "Cooking Oils and Vinegars",
-                        "Sauces, Condiments, and Spreads",
-                        "Canned Goods",
-                        // Beverages
-                        "Water",
-                        "Milk",
-                        "Carbonated drinks",
-                        "Juice and plant drinks",
-                        "Beer",
-            
-
+            "trucks"
                     ];
 
 
 
         $title_ar = [
-                        // المنتجات الطازجة
-                        "الفاكهة",
-                        "خضروات",
-                        "أعشاب",
-                        "المنتجات العضوية",
-                        "المنتجات الغريبة والمتخصصة",
-                        // اللحوم والمأكولات البحرية
-                        "لحم",
-                        "دواجن",
-                        "اللحوم الباردة",
-                        "حمَل",
-                        "مأكولات بحرية",
-                        // الألبان والبيض
-                        "لبن",
-                        "جبنه",
-                        "زبادي",
-                        "الزبدة والسمن",
-                        "بيض",
-                        // مخبز
-                        "خبز",
-                        "المعجنات",
-                        "كيك",
-                        "بسكويت",
-                        "الفطائر والتارت",
-                        // الأطعمة المجمدة
-                        "الفواكه والخضروات المجمدة",
-                        "الوجبات والمقبلات المجمدة",
-                        "اللحوم المجمدة والمأكولات البحرية",
-                        "عناصر الإفطار المجمدة",
-                        "الوجبات الخفيفة والمقبلات المجمدة",
-                        // ستابلز المخزن
-                        "الحبوب والحبوب",
-                        "مستلزمات الخبز",
-                        "زيوت الطبخ والخل",
-                        "الصلصات والتوابل والأطعمة القابلة للدهن",
-                        "البضائع المعلبة",
-                        // المشروبات
-                        "مياه",
-                        "لبن",
-                        "المشروبات الكربونية",
-                        "العصائر والمشروبات النباتية",
-                        "جعة",
+            "شاحنات"
                     ];  
 
-                    $category_id=[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4];
+                    $category_id=[5];
 
 
 // TODO(ibrahim): add subcategories to other categories easy

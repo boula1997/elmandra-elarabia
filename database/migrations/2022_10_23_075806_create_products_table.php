@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('configuration')->nullable();
             $table->string('engineCapacity')->nullable();
             $table->double('mileAge')->nullable();
+            $table->string('number')->nullable();
             $table->date('manYear')->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
