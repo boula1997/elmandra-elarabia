@@ -51,8 +51,7 @@ class ProductController extends Controller
     {
         // dd('eee');
         $categories=$this->category->latest()->get();
-        $categories=Category::all();
-        return view('admin.crud.products.create',compact('categories','categories'));
+        return view('admin.crud.products.create',compact('categories'));
     }
 
     /**
@@ -95,8 +94,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $categories=$this->category->latest()->get();
-        $categories=Category::get();
-        return view('admin.crud.products.edit', compact('product','categories','categories'));
+        return view('admin.crud.products.edit', compact('product','categories'));
     }
     /**
      * Update the specified resource in storage.

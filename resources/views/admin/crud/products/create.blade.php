@@ -182,16 +182,7 @@
 
 
 
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.categories') }}</label>
-                                <select class="form-select form-select-lg" name="category_id" id="category">
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
+
 
                         <div class="col-md-6">
                             @include('admin.components.image', [
