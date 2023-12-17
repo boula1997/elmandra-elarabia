@@ -16,6 +16,8 @@ use App\Http\Controllers\API\TestimonialController;
 use App\Http\Controllers\API\ProcessController;
 use App\Http\Controllers\API\SettingController;
 use App\Http\Controllers\API\PartnerController;
+use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\SliderController;
 use App\Http\Controllers\API\SubcategoryController;
 use App\Http\Controllers\API\TeamController;
 use App\Http\Controllers\API\UserController;
