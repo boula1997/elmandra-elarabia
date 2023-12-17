@@ -143,49 +143,8 @@
                     </li>
                 @endcan
 
-                @can('admin-list')
-                <li class="nav-item">   
-                    <a href="#" class="nav-link">
-                        <i class=" px-1 fas fa-users-cog"></i>
-                        <p>
-                            @lang('general.sellers')
-                            <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('sellersAdmin') }}</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin.index','Seller') }}" class="nav-link">
-                                <i class=" px-1 far fa-circle nav-icon"></i>
-                                <p>@lang('general.show')</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan
-            
-            @can('admin-list')
-                <li class="nav-item">   
-                    <a href="#" class="nav-link">
-                        <i class=" px-1 fas fa-users-cog"></i>
-                        <p>
-                            @lang('general.marketers')
-                            <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('marketersAdmin') }}</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin.index','Marketer') }}" class="nav-link">
-                                <i class=" px-1 far fa-circle nav-icon"></i>
-                                <p>@lang('general.show')</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan
-            
-            
+   
+
             
             @can('role-list')
             <li class="nav-item">
@@ -230,66 +189,7 @@
                     </li>
                 @endcan
 
-                @can('expense-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
-                            <p>
-                                @lang('general.expenses')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('expenses') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('expenses.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
-                @can('coupon-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-users"></i>
-                            <p>
-                                @lang('general.coupons')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('coupons') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('coupons.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
 
-                @can('team-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-user-friends"></i>
-                            <p>
-                                @lang('general.teams') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('teams') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('teams.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
 
 
 
@@ -436,26 +336,7 @@
                         </ul>
                     </li>
                 @endcan
-                {{-- // TODO(boula): make it sticky or scrollable easy --}}
-                @can('order-list')
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class=" px-1 fas fa-envelope-open-text"></i>
-                        <p>
-                            @lang('general.orders') <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('orders') }}</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('orders.index') }}" class="nav-link">
-                                <i class=" px-1 far fa-circle nav-icon"></i>
-                                <p>@lang('general.show')</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan
+
             {{-- // TODO(ibrahim): add component or module to show coustmer on a map  --}}
             @can('feature-list')
                 <li class="nav-item">
@@ -477,90 +358,11 @@
                     </ul>
                 </li>
             @endcan
-            @can('unit-list')
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class=" px-1 fas fa-globe"></i>
-                        <p>
-                            @lang('general.units') <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('units') }}</span>
-                        </p>
-                    </a>
-                    {{-- // TODO(boula): make sidebar links go directlt to psge index without dropsown and add active to links --}}
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('units.index') }}" class="nav-link">
-                                <i class=" px-1 far fa-circle nav-icon"></i>
-                                <p>@lang('general.show')</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan
+
             
 
-                @can('advertisement-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-ad"></i>
-                            <p>
-                                @lang('general.advertisements')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('advertisements') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('advertisements.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
 
-                @can('offer-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-ad"></i>
-                            <p>
-                                @lang('general.offers')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('offers') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('offers.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
 
-                @can('advantage-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-check-square"></i>
-                            <p>
-                                @lang('general.advantages')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('advantages') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('advantages.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
                 @can('company-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
