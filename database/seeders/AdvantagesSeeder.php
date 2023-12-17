@@ -15,21 +15,23 @@ class AdvantagesSeeder extends Seeder
     {
 
         $title_ar = [
-                    "كل المنتجات المذهلة",
-                    "توصيل مجاني للطلبات التي تزيد عن 50",
-                    "الخصومات الكبرى اليومية",
-                    "أفضل الأسعار في السوق"];
+                    "الموثوقية والمتانة",
+                    "التنوع والكفاءة",
+                    "السلامة والأمن",
+                    "التخصيص والمرونة",
+                ];
 
         $title_en = [
-                    "Every Amazing Products",
-                    "Free Delivery For Order Over 50",
-                    "Daily Mega Discounts",
-                    "Best Price On The Market"];
+                    "Reliability & Durability",
+                    "Versatility & Efficiency",
+                    "Safety & Security",
+                    "Customization & Flexibility"
+                ];
        $image=[
-                "images/qGDvh5RwLxxMxLHTFWifhiaPORWiTwpHzIXOYLzu.svg",
-                "images/NkLFFDhwBR1ZLZhBc7iQIAFl8puRtRjxJDGbI1zo.svg",
-                "images/QvS8l6iB5fHENFPGjytIgYS8oaN7CRG1rj81QM4w.svg",
-                "images/IzDM3TmrhlquOlKULgO3CRFrYftVmZeSsFGAP7VP.svg",
+                "images/WpyMZPfr4Jmd2jjLRedQkBhnDkF2usey1R91c7JE.jpg",
+                "images/hq5uWMiKLxENuRtj4nKw9J76O6w4cr4D8iT5yKnA.png",
+                "images/A6QcLBOoIHmoyRMLjbXLfGvMibmh7zvNkw5cU5lW.webp",
+                "images/SBtXJjGELtSQOA7DZ8qVJbt9f7DLp5ozZP7kJLu4.png",
             ];
       
 

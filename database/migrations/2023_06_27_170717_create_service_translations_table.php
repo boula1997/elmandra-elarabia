@@ -16,7 +16,6 @@ class CreateServiceTranslationsTable extends Migration
         Schema::create('service_translations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('subtitle')->nullable();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('service_id');
             $table->string('locale')->index();

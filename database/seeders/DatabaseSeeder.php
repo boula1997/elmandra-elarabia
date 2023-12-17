@@ -45,6 +45,7 @@ class DatabaseSeeder extends Seeder
             AdvantagesSeeder::class,
             AdvertisementsSeeder::class,
             OffersSeeder::class,
+            ServiceSeeder::class,
         ]);
         
     }
