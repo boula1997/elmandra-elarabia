@@ -7,7 +7,7 @@ use App\Models\Testimonial;
 use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
-use App\Models\Feature;
+use App\Models\Counter;
 use Exception;
 
 class ServiceController extends Controller
@@ -21,14 +21,17 @@ class ServiceController extends Controller
     private $testimonial;
     private $team;
     private $process;
-    private $feature;
+    private $counter;
     private $portfolio;
 
-    public function __construct( Testimonial $testimonial, Team $team, Feature $feature)
+    public function __construct(Service $service, Testimonial $testimonial, Team $team, Process $process, Counter $counter, Gallery $portfolio)
     {
+        $this->service = $service;
         $this->testimonial = $testimonial;
         $this->team = $team;
-        $this->feature = $feature;
+        $this->process = $process;
+        $this->counter = $counter;
+        $this->portfolio = $portfolio;
     }
 
     /**
