@@ -13,12 +13,11 @@ class CountersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["حمل التطبيق","سجل بياناتك","تصفح المنتجات",
-        "إختر منتجك المفضل","أكمل عملية الشراء","نوصل إليك طلبك"];
-        $title_en = [
-        "Download the application","Register your data","Browse products",
-        "Choose your favorite product","Complete your purchase","We deliver your order to you",];
-        $count=['10','50',"150","1235",'10','50',];
+        $title_ar = ["الشاحنات العاملة","سنوات من الخدمة الموثوقة","سجل التسليم في الوقت المحدد","معدل رضا العملاء"];
+       
+        $title_en = ["Trucks in Operation","Years of Reliable Service","On-Time Delivery Record","Customer Satisfaction Rate"];
+      
+        $count=['500','20',"95","98",];
         $icon=["fas fa-cloud-download-alt","fas fa-pen","fas fa-window-restore",
                 "fas fa-check","fas fa-shopping-cart","fas fa-truck",];
       
