@@ -58,10 +58,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="price"
-                                        placeholder="@lang('general.price')"
+                                    <input type="text" name="price" placeholder="@lang('general.price')"
                                         class="form-control  pl-1 min-h-40px @error('price') is-invalid @enderror"
-                                        value="{{old('price')}}">
+                                        value="{{ old('price') }}">
                                 </div>
                             </div>
                         </div>
@@ -73,10 +72,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="kind"
-                                        placeholder="@lang('general.kind')"
+                                    <input type="text" name="kind" placeholder="@lang('general.kind')"
                                         class="form-control  pl-1 min-h-40px @error('kind') is-invalid @enderror"
-                                        value="{{old('kind')}}">
+                                        value="{{ old('kind') }}">
                                 </div>
                             </div>
                         </div>
@@ -87,25 +85,23 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="engineCapacity"
-                                        placeholder="@lang('general.engineCapacity')"
+                                    <input type="text" name="engineCapacity" placeholder="@lang('general.engineCapacity')"
                                         class="form-control  pl-1 min-h-40px @error('engineCapacity') is-invalid @enderror"
-                                        value="{{old('engineCapacity')}}">
+                                        value="{{ old('engineCapacity') }}">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group"> 
+                            <div class="form-group">
                                 {{-- // TODO(boula): change to select --}}
                                 <label>@lang('general.suspensionType') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="suspensionType"
-                                        placeholder="@lang('general.suspensionType')"
+                                    <input type="text" name="suspensionType" placeholder="@lang('general.suspensionType')"
                                         class="form-control  pl-1 min-h-40px @error('suspensionType') is-invalid @enderror"
-                                        value="{{old('suspensionType')}}">
+                                        value="{{ old('suspensionType') }}">
                                 </div>
                             </div>
                         </div>
@@ -116,10 +112,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="axelsNumber"
-                                        placeholder="@lang('general.axelsNumber')"
+                                    <input type="text" name="axelsNumber" placeholder="@lang('general.axelsNumber')"
                                         class="form-control  pl-1 min-h-40px @error('axelsNumber') is-invalid @enderror"
-                                        value="{{old('axelsNumber')}}">
+                                        value="{{ old('axelsNumber') }}">
                                 </div>
                             </div>
                         </div>
@@ -130,10 +125,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="gearBox"
-                                        placeholder="@lang('general.gearBox')"
+                                    <input type="text" name="gearBox" placeholder="@lang('general.gearBox')"
                                         class="form-control  pl-1 min-h-40px @error('gearBox') is-invalid @enderror"
-                                        value="{{old('gearBox')}}">
+                                        value="{{ old('gearBox') }}">
                                 </div>
                             </div>
                         </div>
@@ -144,10 +138,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="configuration"
-                                        placeholder="@lang('general.configuration')"
+                                    <input type="text" name="configuration" placeholder="@lang('general.configuration')"
                                         class="form-control  pl-1 min-h-40px @error('configuration') is-invalid @enderror"
-                                        value="{{old('configuration')}}">
+                                        value="{{ old('configuration') }}">
                                 </div>
                             </div>
                         </div>
@@ -158,10 +151,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="mileAge"
-                                        placeholder="@lang('general.mileAge')"
+                                    <input type="text" name="mileAge" placeholder="@lang('general.mileAge')"
                                         class="form-control  pl-1 min-h-40px @error('mileAge') is-invalid @enderror"
-                                        value="{{old('mileAge')}}">
+                                        value="{{ old('mileAge') }}">
                                 </div>
                             </div>
                         </div>
@@ -172,10 +164,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="date" name="manYear"
-                                        placeholder="@lang('general.manYear')"
+                                    <input type="date" name="manYear" placeholder="@lang('general.manYear')"
                                         class="form-control  pl-1 min-h-40px @error('manYear') is-invalid @enderror"
-                                        value="{{old('manYear')}}">
+                                        value="{{ old('manYear') }}">
                                 </div>
                             </div>
                         </div>
@@ -196,7 +187,7 @@
 
                         </div>
 
-    
+
 
                     </div>
                 </div>
