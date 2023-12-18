@@ -15,7 +15,10 @@ class CreateSettingTranslationsTable extends Migration
     {
         Schema::create('setting_translations', function (Blueprint $table) {
             $table->id();
-            $table->text('address')->nullable();
+            $table->text('address1')->nullable();
+            $table->text('address2')->nullable();
+            $table->text('postcode1')->nullable();
+            $table->text('postcode2')->nullable();
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->text('appointment1')->nullable();

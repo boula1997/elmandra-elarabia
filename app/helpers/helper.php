@@ -104,7 +104,6 @@ function itemsCount($model)
         "sliders" => count(Slider::get()),
         "users" => count(User::get()),
         "roles" => count(Role::get()),
-        "orders" => count(Order::get()),
         "advertisements" => count(Advertisement::get()),
         "advantages" => count(Advantage::get()),
         "companies" => count(Company::get()),
@@ -245,66 +244,66 @@ if (!function_exists('rate()')) {
 
 
 
-    function orderproductStatus($count,$store_id,$product_id)
-    {
+    // function orderproductStatus($count,$store_id,$product_id)
+    // {
         
-        try{
-            $storeproduct=StoreProduct::where('store_id',$store_id)->where('product_id',$product_id)->first();
-                // dd($storeproduct);
-                if(isset($storeproduct)){
-                    if($storeproduct->quantity >= $count){
-                        $storeproduct->update(['quantity'=>$storeproduct->quantity-$count]);
-                        return true;
-                    }else
-                    {
-                        return false;
-                    }
-                }
-                return false;
+    //     try{
+    //         $storeproduct=StoreProduct::where('store_id',$store_id)->where('product_id',$product_id)->first();
+    //             // dd($storeproduct);
+    //             if(isset($storeproduct)){
+    //                 if($storeproduct->quantity >= $count){
+    //                     $storeproduct->update(['quantity'=>$storeproduct->quantity-$count]);
+    //                     return true;
+    //                 }else
+    //                 {
+    //                     return false;
+    //                 }
+    //             }
+    //             return false;
 
-        } catch(Exception $e){
-            dd($e);
-        }
+    //     } catch(Exception $e){
+    //         dd($e);
+    //     }
 
-    }
+    // }
 
-    function orderStatus($order_id)
-    {
-        try{
-            $orderproducts=Orderproduct::where('order_id',$order_id)->get();
-            $status='pending';
-            foreach($orderproducts as $orderproduct)
-            {
-                if($orderproduct->status == 0)
-                {
-                    $status= 'missing';
-                    break;
-                }
-            }
-            return $status;
+    // function orderStatus($order_id)
+    // {
+    //     try{
+    //         $orderproducts=Orderproduct::where('order_id',$order_id)->get();
+    //         $status='pending';
+    //         foreach($orderproducts as $orderproduct)
+    //         {
+    //             if($orderproduct->status == 0)
+    //             {
+    //                 $status= 'missing';
+    //                 break;
+    //             }
+    //         }
+    //         return $status;
 
-        }catch(Exception $e) {
-            dd($e);
-        }
+    //     }catch(Exception $e) {
+    //         dd($e);
+    //     }
        
-    }
+    // }
 
-    function productstouck($product_id,$quantity)
-    {
-        try{
+    // function productstouck($product_id,$quantity)
+    // {
+    //     try{
             
-            $product=Product::where('id',$product_id)->first();
-            $storeproducts=StoreProduct::where('product_id',$product_id)->get();
-            $count=$quantity;
-            foreach($storeproducts as $storeproduct){
-                $count +=$storeproduct->quantity;
-            }
-            if($product->stock >= $quantity && $product->stock >= $count)
-            {
-                return true;
-            }
-        }catch(Exception $e) {
-            dd($e);
-        }
+    //         $product=Product::where('id',$product_id)->first();
+    //         $storeproducts=StoreProduct::where('product_id',$product_id)->get();
+    //         $count=$quantity;
+    //         foreach($storeproducts as $storeproduct){
+    //             $count +=$storeproduct->quantity;
+    //         }
+    //         if($product->stock >= $quantity && $product->stock >= $count)
+    //         {
+    //             return true;
+    //         }
+    //     }catch(Exception $e) {
+    //         dd($e);
+    //     }
            
-    }
+    // }
