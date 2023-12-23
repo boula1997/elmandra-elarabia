@@ -102,10 +102,6 @@ function itemsCount($model)
         "sellersAdmin" => count(Admin::where('type','Seller')->get()),
         "reviews" => count(Review::get()),
         "marketersAdmin" => count(Admin::where('type','Marketer')->get()),
-<<<<<<< HEAD
-=======
-        "stores"=>count(Store::get()),
->>>>>>> 9b87b14f4dd79dd36da24ac3d57aef6351eb6e1e
         
     ];
 
