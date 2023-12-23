@@ -13,8 +13,8 @@ class CompaniesSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["خبرتنا"];
-        $title_en = ["EXPERIENCE"];
+        $title_ar = ["فاليو"];
+        $title_en = ["Valueo"];
         $description_ar = [null];
         $description_en = [null];
         $address_ar = ["المنيا"];
