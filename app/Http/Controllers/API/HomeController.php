@@ -46,7 +46,7 @@ class HomeController extends Controller
         try {
             $data['sliders'] = SliderResource::collection($this->slider->get());
             $data['about-section'] = new PageResource(page('about'));
-            $data['counters'] = CounterResource::collection($this->counter->get());
+            // $data['counters'] = CounterResource::collection($this->counter->get());
             $data['service-section'] = new PageResource(page('service-index'));
             $data['services'] = ServiceResource::collection($this->service->get());
             $data['teams'] = TeamResource::collection($this->team->get());
