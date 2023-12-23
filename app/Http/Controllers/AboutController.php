@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use App\Models\Testimonial;
-use App\Models\Process;
 use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Feature;
@@ -28,7 +27,6 @@ class AboutController extends Controller
     public function index()
     {
         try {
-            $offers=Offer::get();
             $features=Feature::get();
             return view('front.about',compact('offers','features'));
         } catch (Exception $e) {
