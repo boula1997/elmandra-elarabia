@@ -4,7 +4,7 @@
         (function () {
             var options = {
                 call: "01020202019", // Call phone number
-                whatsapp: "+201001908052", // WhatsApp number
+                whatsapp: "+201020202019", // WhatsApp number
                 call_to_action: "{{__('general.contact_us')}}", // Call to action
                 button_color: "#6f5190", // Color of button
                 position: "{{ app()->getLocale()=='ar'? 'right' : 'left' }}", // Position may be 'right' or 'left'
