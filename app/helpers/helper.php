@@ -107,16 +107,10 @@ function itemsCount($model)
         "advertisements" => count(Advertisement::get()),
         "advantages" => count(Advantage::get()),
         "companies" => count(Company::get()),
-        "sellers" => count(Seller::get()),
-        "stores" => count(Store::get()),
-        "offers" => count(Offer::get()),
-        "marketers" => count(Marketer::get()),
         "adminsAdmin" => count(Admin::where('type','Admin')->get()),
         "sellersAdmin" => count(Admin::where('type','Seller')->get()),
         "reviews" => count(Review::get()),
-        "expenses" => count(Expense::get()),
         "marketersAdmin" => count(Admin::where('type','Marketer')->get()),
-        "coupons" => count(Coupon::get()),
         
     ];
 
