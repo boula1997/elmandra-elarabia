@@ -9,6 +9,7 @@ use App\Models\Message;
 use App\Models\Counter;
 use App\Models\Newsletter;
 use App\Models\Contact;
+use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Page;
 use App\Models\Team;
@@ -103,6 +104,7 @@ function itemsCount($model)
         "reviews" => count(Review::get()),
         "marketersAdmin" => count(Admin::where('type','Marketer')->get()),
         "stores"=>count(Store::get()),
+        "faqs"=>count(Faq::get()),
         
     ];
 
