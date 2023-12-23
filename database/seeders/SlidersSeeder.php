@@ -13,32 +13,32 @@ class SlidersSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_en = ["STAY HOME & DELIVERED YOUR",
-                     "Your One-Stop Grocery Destination",
-                     "Fresh Choices, Every Aisle, Every Day",
+        $title_en = ["Driving Excellence, Delivering Beyond",
+                      "Moving Dreams, Delivering Success",
+                      "Onward and Upward, On Every Road",
                     ];
         $title_ar = [
-                        "ابق في المنزل & قم بتوصيل طلبك",
-                        "وجهتك الشاملة لشراء البقالة",
-                        "خيارات جديدة، في كل ممر، كل يوم",
+                       "قيادة التميز، تحقيق ما هو أبعد",
+                        "تحريك الأحلام، تحقيق النجاح",
+                        "إلى الأمام وإلى الأعلى، على كل طريق",
                    ];
 
-        $subtitle_ar =[ "الاحتياجات اليومية",
-                        "طعام طازج، عائلات سعيدة",
-                        "السوق الطازجة في منطقتك",
+        $subtitle_ar =[ "ميلك، ابتسامتنا: التميز في القيادة",
+                        "الأميال المقبلة في كل حمولة",
+                        "حيث تؤدي الطرق، نحن نوصل",
                      ];
-                     $subtitle_en = ["DAILY NEEDS",
-                                     "Fresh Food, Happy Families",
-                                     "Your Neighborhood's Fresh Market",
+                     $subtitle_en = ["Your Mile, Our Smile: Driving Excellence",
+                                     "Miles Ahead in Every Load",
+                                     "Where Roads Lead, We Deliver",
                         ];
 
         $description_ar =  [null,null,null];
         $description_en = [null,null,null];
       
-        $image=["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg",
-                "images/0g7IJLg63Nydimuc64Tf8MP1MXk5LGXIntnrMdS8.webp",
-                "images/DR2gOqVsEw7lc7kUAbTV9rVU9pt439kDhiOWk3Hu.jpg",
-                // "images/0GDQsQJRxQfVjqyHuZyXhql81eLGeNi714JuDeY4.webp",
+        $image=[
+                "images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg",
+                "images/p47SZc3Tzf8pMZJnFs8Y7iA3mQyrl56RiA5qNDSO.jpg",
+                "images/687upvbceoYtDqzlG5i88B6xv5cPEFWfmq2LHW1Q.jpg",
               ];
        
 

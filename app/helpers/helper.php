@@ -5,16 +5,12 @@ use App\Models\Advantage;
 use App\Models\Advertisement;
 use App\Models\Category;
 use App\Models\Company;
-use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Counter;
 use App\Models\Newsletter;
 use App\Models\Contact;
 use App\Models\Feature;
-use App\Models\Offer;
-use App\Models\Order;
 use App\Models\Page;
-use App\Models\Expense;
 use App\Models\Team;
 use App\Models\Partner;
 use App\Models\Testimonial;
@@ -23,13 +19,8 @@ use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Subcategory;
 use App\Models\User;
-use App\Models\Orderproduct;
 use App\Models\Review;
-use App\Models\Seller;
 use App\Models\Store;
-use App\Models\StoreProduct;
-use App\Models\Marketer;
-use App\Models\Coupon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Jackiedo\Cart\Facades\Cart;
@@ -107,16 +98,11 @@ function itemsCount($model)
         "advertisements" => count(Advertisement::get()),
         "advantages" => count(Advantage::get()),
         "companies" => count(Company::get()),
-        "sellers" => count(Seller::get()),
-        "stores" => count(Store::get()),
-        "offers" => count(Offer::get()),
-        "marketers" => count(Marketer::get()),
         "adminsAdmin" => count(Admin::where('type','Admin')->get()),
         "sellersAdmin" => count(Admin::where('type','Seller')->get()),
         "reviews" => count(Review::get()),
-        "expenses" => count(Expense::get()),
         "marketersAdmin" => count(Admin::where('type','Marketer')->get()),
-        "coupons" => count(Coupon::get()),
+        "stores"=>count(Store::get()),
         
     ];
 

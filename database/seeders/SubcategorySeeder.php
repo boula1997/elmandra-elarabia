@@ -14,30 +14,38 @@ class SubcategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-            "trucks"
+            "Tractor unit",
+            "Semi-trailer",
+            "Truck",
+            "Tipper",
+            "Trailer",
+            "Mixer",
                     ];
 
 
 
         $title_ar = [
-            "شاحنات"
+            "وحدة جرار",
+             "شبه مقطورة",
+             "شاحنة",
+             "قلاب",
+             "جَرَّار",
+             "خلاط",
                     ];  
 
-                    $category_id=[5];
+                    $category_id=[1];
 
 
 // TODO(ibrahim): add subcategories to other categories easy
 
-        // $images = [
-        //             // "images/KCm7skKln2yd0wGNPpPif634tvV2tzDChNOCoGYU.webp",
-        //             null,null,null,null,null,null,null,null,null,null,
-        //             null,null,null,null,null,null,null,null,null,null,
-        //             null,null,null,null,null,null,null,null,null,null,
-        //             null,null,null,null,null,null,null,null,null,null,
-        //             null,null,null,null,null,null,null,null,null,null,
-        //             null,null,null,null,null,
-                 
-        //             ];
+        $images = [
+                    "images/f2wiKkuDjDGHtiAZvgBz4KtITueRGd4aZsA6zkin.jpg",
+                    "images/4KWsSbCvhWtd5lCeCY0zWOTjqkB2gXqyClEOo5xF.jpg",
+                    "images/eImGahUtGberjGwXJJUjdZw1jnghl1aOfNDqWoH5.jpg",
+                    "images/WWfFAMUkX3T5oevRHJXGv0o9B0POnelNyuFl4rsq.jpg",
+                    "images/ghddBqq2iCrJlndwwwuO8wCyR3nnWR53qSj6qgC0.webp",
+                    "images/4gCtq2C0VrqKqWdG0nH3AWbUwHns1GDdiZKRX76W.jpg",
+                    ];
 
                    
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -52,7 +60,7 @@ class SubcategorySeeder extends Seeder
                 ],
                 'category_id'=>$category_id[$i],
             ]);
-            // $subcategory->file()->create(["url"=>$images[$i]]);
+            $subcategory->file()->create(["url"=>$images[$i]]);
           
            
            

@@ -15,126 +15,80 @@ class PagesSeeder extends Seeder
     {
         // English Data
         $title_en = [
-                        "STAY HOME & DELIVERED YOUR",
-                        null,
-                        "Get $3 Cashback! Min Order of $30",
-                        "Home Products ",
-                        "Special Offers ",
-                        "Join our newsletter and get our news",
-                        "Latest Testimonials",
-                        "Products",
-                        "About Us",
-                        null,
-                        'Why Asl Eltwfeer..?',
-                        'How does your Asl Eltwfeer work..?',
-
+                        "About us",
+                        "Our Services",
+                        "Testimonials",
+                        "Our Stuff",
+                        "Pricing",
+                        "Company Benefit",
+                        "Your Questions Answered",
                     ];
 
         $subtitle_en = [
-                            "DAILY NEEDS",
-                            "Real Refreshment",
-                            "GROCERY1920",
-                            "A virtual assistant collects the products from your list",
-                            "of the week!",
-                            "$20 discount for your first order",
-                            "What People Say about us",
-                            "Our Products",
-                            "We Make Organic Fruits and vegetables In Market",
-                            "Asl Eltawfeer application.. to deliver food items of all kinds",
-                            null,
-                            null,
+                           "Empowering Journeys, Redefining Logistics",
+                           "Tailored Solutions, Driven by Excellence",
+                           "What Our Customers Say",
+                           "Meet With Expert Team",
+                           "Our Best Pricing Plan",
+                           "Why Do You Like AlMandarah AlArabia?",
+                           "Clearing the Road: Your Queries, Our Solutions",
                         ];
 
         $description_en = [
-                            "<p>Many organizations have issued official statements encouraging people to reduce their intake of sugary drinks.</p>",
-                            "<p>Only this week, Don't miss..</p>", 
-                        
-                            null, 
-
-                            null,
-                            
-                            "Special offer on this discount, Hurry Up!",
+                           "<p>Born from a passion for seamless logistics and unwavering commitment, our trucking company thrives on the open road. With a heritage steeped in reliability and a future driven by innovation, we've evolved into a trusted name in transportation. Each journey symbolizes our dedication to precision, safety, and exceeding expectations. From humble beginnings to expansive horizons, we've built a legacy of delivering more than just goods - we deliver peace of mind.</p>",
                             null,
                             null,
                             null,
-                            "<p>Introducing asleltawfeer, your neighborhood grocery store dedicated to providing convenience, quality, and friendly service. Step into our welcoming space where you'll find a wide range of fresh produce, pantry staples, household essentials, and more. With a focus on sourcing locally and offering competitive prices, we strive to meet all your grocery needs while delivering an enjoyable shopping experience. Visit asleltawfeer today and discover the difference of personalized attention and a carefully curated selection of products that cater to your everyday requirements.</p>",
-                            "<p> We work as an intermediary between all our valued customers and companies that supply food supplies, so that the food supplies are delivered to the customer’s location, whether it is the home or another location requested by the customer, a school, an office, a mosque, or something else.</p>",
-                            "<p>With the Asl Savings application... you can now order food items from anywhere and at any time without thinking about driving the car, going to the store and carrying food items... We save you time and effort...
-
-                            The Asl Savings application... has all food products in all sizes. All you have to do is download the application, browse all the products, then order the product you want and we will deliver it to any place you want, whether a home, a mosque, an office, or anything else... What? Waiting!! Download the application now</p>",
+                            null,
+                            "<p>More than a supplier, we work as a true partner and accompany you with recommendations, based on your buing data, so that you can reduce your costs,</p>",
                             null,
                         ];
 
 
         // Arabic Data
         $title_ar = [
-                        
-                        "ابق في المنزل & قم بتوصيل طلبك",
-                        null,
-                        "احصل على 3 دولارات كاش باك! الحد الأدنى للطلب 30 دولارًا",
-                        "منتجات الرئيسية",
-                        "عروض خاصة",
-                        "انضم إلى نشرتنا الإخبارية واحصل على أخبارنا",
-                        "أحدث اراء عملائنا",
-                        "منتجات",
                         "من نحن",
-                        null,
-                        "لماذا اصل التوفير..؟",
-                        "كيف يعمل اصل التوفير..؟",
+                        "خدماتنا",
+                        "اراء العملاء",
+                        "فريقنا المتميز",
+                        "الاسعار",
+                        "منفعة الشركة",
+                        "الإجابة على أسئلتك",
                     ];
+
     
             $subtitle_ar = [
-                                "الاحتياجات اليومية" ,
-                                "المرطبات الحقيقية",
-                                "GROCERY1920",
-                                "يقوم المساعد الافتراضي بجمع المنتجات من قائمتك",
-                                "لهذا الأسبوع!",
-
-                                "خصم 20% لطلبك الأول",
-                                
-                                "ماذا يقول الناس عنا",
-                                "احدث منتجاتنا",
-                                "نحن نصنع الفواكه والخضروات الطازجة في السوق",
-                                "تطبيق اصل التوفير.. لتوصيل المواد الغذائية بشتي أنواعها",
-                                null,
-                                null,
+                           "تمكين الرحلات، وإعادة تعريف الخدمات اللوجستية",
+                           "حلول مخصصة يقودها التميز",
+                            "ما يقوله عملاؤنا",
+                            "لقاء مع فريق الخبراء",
+                            "افضل خطة اسعار لدينا",
+                            "لماذا تحب المندرة العربية؟",
+                            "تمهيد الطريق: استفساراتك، حلولنا",
                             ];
     
             $description_ar = [
-                                "<p>أصدرت العديد من المنظمات بيانات رسمية تشجع الناس على تقليل تناول المشروبات السكرية.</p>",
-                                "<p>هذا الاسبوع فقط لا يفوتك..</p>",
-                                null,
-                                null,
-                                "عرض خاص على هذا الخصم، أسرع!",
+                                "نشأت شركة النقل بالشاحنات لدينا من شغفنا بتقديم الخدمات اللوجستية السلسة والالتزام الذي لا يتزعزع، وتزدهر على الطريق المفتوح. مع تراث مليء بالموثوقية ومستقبل يقوده الابتكار، تطورنا لنصبح اسمًا موثوقًا به في مجال النقل. ترمز كل رحلة إلى التزامنا بالدقة والسلامة وتجاوز التوقعات. من بدايات متواضعة إلى آفاق واسعة، قمنا ببناء إرث لتقديم أكثر من مجرد سلع - فنحن نقدم راحة البال.",
                                 null,
                                 null,
                                 null,
-                                "<p>نقدم لكم اصل التوفير متجر البقالة في منطقتكم المخصص لتوفير الراحة والجودة والخدمة الودية. ادخل إلى مساحتنا الترحيبية حيث ستجد مجموعة واسعة من المنتجات الطازجة والمواد الغذائية الأساسية والمستلزمات المنزلية والمزيد. مع التركيز على المصادر المحلية وتقديم أسعار تنافسية، فإننا نسعى جاهدين لتلبية جميع احتياجات البقالة الخاصة بك مع تقديم تجربة تسوق ممتعة. قم بزيارة اصل توفير اليوم واكتشف الفرق في الاهتمام الشخصي ومجموعة مختارة بعناية من المنتجات التي تلبي متطلباتك اليومية.</p>",
-                                "<p>نعمل كوسيط بين جميع عملائنا الكرام والشركات التي تقوم بتوريد المواد الغذائية بحيث يتم توصيل المواد الغذائية إلى موقع العميل سواء كان المنزل أو موقع آخر يطلبه العميل أو مدرسة أو مكتب أو مسجد أو شيء من آخر.</p>",
-                                "<p>مع تطبيق اصل التوفير .. يمكنك الآن طلب المواد الغذائية من أى مكان وفى أى وقت دون التفكير فى قيادة السيارة والذهاب للمتجر وحمل المواد الغذائية.. نحن نوفر عليك الوقت والجهد ..
-
-                                تطبيق اصل التوفير .. به جميع منتجات المواد الغذائية وبجميع الأحجام, كل ما عليك هو تحميل التطبيق وقم بتصفح جميع المنتجات ومن ثم قم بطلب المنتج الذى تريده وسوف نقوم بإصاله إلى أى مكان تريده سواء منزل أو مسجد أو مكتب أو غير ذلك ... ماذا تنتظر !! حمل التطبيق الآن</p>",
+                                null,
+                                "<p>أكثر من مجرد مورد، نحن نعمل كشريك حقيقي ونرافقك بالتوصيات، بناءً على بيانات الشراء الخاصة بك، حتى تتمكن من تقليل تكاليفك،</p>",
                                 null,
                             ];    
 
-            $identifiers=[ "slider","mini_slider","discount","product_home",
-                           "counter","newsletter","testimonial","product","about",
-                           "slider-index","about-index","service-index"
+            $identifiers=[ "about","service","testimonials","team","pricing","company_benefit","faq",
                          ];  
 
              $images=[ 
-                        ["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg"],
-                        ["images/0g7IJLg63Nydimuc64Tf8MP1MXk5LGXIntnrMdS8.webp"],
-                        ["images/XJur2tRb3uXS8qWmkgSbuAJBUcgotx3dltGhcuQz.jpg"],
-                            null,
-                        ["images/rb4oTFL1D3Z8qONhw7PhdIdXrbXnOh6pbX0PZDkr.jpg"],
-                            null,
-                            null,
-                            null,
-                        ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg","images/LMx63k9eMcVgWhQmT2LcGxKsChXKJiGdeY5vGKKm.jpg",],
-                        ["images/LtrW75RLVuHGYAZa1DYoubuK7sqE2AONu9ieqolt.jpg","images/h0VHaWNgtURyVAOrQL8tflcii2gTVqF7uig09r2F.png"],
-                        ["images/bp9cUzaqFDb57OSfsU8BdMyzAIEJD0FS1ejUXwNC.jpg",],
-                        ["images/h0VHaWNgtURyVAOrQL8tflcii2gTVqF7uig09r2F.png"],
+                        ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
+                        ["images/p47SZc3Tzf8pMZJnFs8Y7iA3mQyrl56RiA5qNDSO.jpg"],
+                        ["images/wYjibhR2yMlf26YI4cK1ur3kgABYgmRLxfFxtzuF.jpg"],
+                        ["images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
+                        null,
+                        null,
+                        null,
+
                     ];
        
 

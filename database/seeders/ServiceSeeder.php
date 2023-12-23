@@ -27,7 +27,8 @@ class ServiceSeeder extends Seeder
                             "<p>Need to transport your new vehicle to your location? We have already compiled a list for you of the best transport companies.</p>",
                             "<p>We’ll get you on the road safely and securely – check out our delivery packages here.</p>",
                             "<p>Would you like to receive a competitive offer for your vehicle within 24 hours? Our Purchasing team will be happy to assist you.</p>",
-                            "<p>At Almandara AlArabia Vans you can choose from a continually changing stock of +500 used vans.</p>",];
+                            "<p>At Almandara AlArabia Vans you can choose from a continually changing stock of +500 used vans.</p>",
+                        ];
         $description_ar = [
                             "<p>لن نساعدك فقط في شراء المركبة، بل أيضًا في إدارة جميع المستندات المطلوبة وتقارير الفحص والخدمة والملحقات والأجزاء والمكونات.</p>",
                             "<p>نحن ندرك أن شراء مركبة جديدة يمكن أن يمثل نفقات كبيرة، ويسعدنا مساعدتك في استكشاف بعض البدائل المتاحة، بما في ذلك التأجير.</p>",
@@ -35,7 +36,7 @@ class ServiceSeeder extends Seeder
                             "<p>سننقلك إلى الطريق بأمان وإحكام - تحقق من باقات التوصيل لدينا هنا.</p>",
                             "<p>هل ترغب في الحصول على عرض تنافسي لمركبتك خلال 24 ساعة؟ سيسعد فريق الشراء لدينا مساعدتك.</p>",
                             "<p>معنا يمكنك الاختيار من بين مخزون دائم التغير يضم أكثر من 500 سيارة مستعملة.</p>",
-        ];
+                        ];
         
         $images = [
                     "images/0SabaGaIYDWMG8w2ddJaaH2L1sY7bW7sssNKVASy.jpg",

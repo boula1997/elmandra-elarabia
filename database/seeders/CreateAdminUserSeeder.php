@@ -28,37 +28,37 @@ class CreateAdminUserSeeder extends Seeder
             'type'=>'admin'
         ]);
         
-        $seller = Admin::create([
-            'name' => 'Ahmed Atef', 
-            'email' => 'ahmed@gmail.com',
-            'phone' => '01126785310',
-            'password' => bcrypt('123456789'),
-            'type'=>'seller'
-        ]);
+        // $seller = Admin::create([
+        //     'name' => 'Ahmed Atef', 
+        //     'email' => 'ahmed@gmail.com',
+        //     'phone' => '01126785310',
+        //     'password' => bcrypt('123456789'),
+        //     'type'=>'seller'
+        // ]);
     
-        $marketer = Admin::create([
-            'name' => 'Sayed Mohamed', 
-            'email' => 'sayed@gmail.com',
-            'phone' => '01176785340',
-            'password' => bcrypt('123456789'),
-            'type'=>'marketer',
-        ]);
+        // $marketer = Admin::create([
+        //     'name' => 'Sayed Mohamed', 
+        //     'email' => 'sayed@gmail.com',
+        //     'phone' => '01176785340',
+        //     'password' => bcrypt('123456789'),
+        //     'type'=>'marketer',
+        // ]);
         
         $role1 = Role::create(['name' => 'admin','guard_name'=>'admin']);
-        $role2 = Role::create(['name' => 'seller','guard_name'=>'admin']);
-        $role3 = Role::create(['name' => 'marketer','guard_name'=>'admin']);
+        // $role2 = Role::create(['name' => 'seller','guard_name'=>'admin']);
+        // $role3 = Role::create(['name' => 'marketer','guard_name'=>'admin']);
      
         $permissions1 = Permission::pluck('id','id')->all();
-        $permissions2 = Permission::pluck('id','id')->all();
-        $permissions3 = Permission::pluck('id','id')->all();
+        // $permissions2 = Permission::pluck('id','id')->all();
+        // $permissions3 = Permission::pluck('id','id')->all();
         
    
         $role1->syncPermissions($permissions1);
-        $role2->syncPermissions($permissions2);
-        $role3->syncPermissions($permissions3);
+        // $role2->syncPermissions($permissions2);
+        // $role3->syncPermissions($permissions3);
      
-        $marketer->assignRole([$role3->id]);
+        // $marketer->assignRole([$role3->id]);
         $user->assignRole([$role1->id]);
-        $seller->assignRole([$role2->id]);
+        // $seller->assignRole([$role2->id]);
     }
 }

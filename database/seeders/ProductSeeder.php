@@ -31,18 +31,18 @@ class ProductSeeder extends Seeder
 
 
         $title_ar = [
-            "RENAULT C 520 DTI13 6X4 287 TKM",
-            "DAF XF 460 SSC PTO+HYDR. 2S",
-            "DAF XF 480 6X2 FTG ALCOA'S",
-            "M.A.N. 18.460 TGX XLX,Standklima",
-            "M.A.N. 12.250 TGL",
-            "RENAULT T 480",
-            "DAF LF 45.130",
-            "VOLVO FH 500 8X4 TRIDEM HOOKLIFT",
-            "IVECO AD340T45 TRAKKER 8X4 TIPPER COMBI",
-            "SCANIA P450",
+                        "RENAULT C 520 DTI13 6X4 287 TKM",
+                        "DAF XF 460 SSC PTO+HYDR. 2S",
+                        "DAF XF 480 6X2 FTG ALCOA'S",
+                        "M.A.N. 18.460 TGX XLX,Standklima",
+                        "M.A.N. 12.250 TGL",
+                        "RENAULT T 480",
+                        "DAF LF 45.130",
+                        "VOLVO FH 500 8X4 TRIDEM HOOKLIFT",
+                        "IVECO AD340T45 TRAKKER 8X4 TIPPER COMBI",
+                        "SCANIA P450",
 
-        ];  
+                    ];  
 
 
 
