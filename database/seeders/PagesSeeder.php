@@ -22,6 +22,8 @@ class PagesSeeder extends Seeder
                         "Pricing",
                         "Company Benefit",
                         "Your Questions Answered",
+                        "latest projects",
+                        "GET IN TOUCH",
                     ];
 
         $subtitle_en = [
@@ -32,6 +34,8 @@ class PagesSeeder extends Seeder
                            "Our Best Pricing Plan",
                            "Why Do You Like AlMandarah AlArabia?",
                            "Clearing the Road: Your Queries, Our Solutions",
+                           "Driving Success, One Project at a Time",
+                           "Looking For The Best Trucks car",
                         ];
 
         $description_en = [
@@ -42,6 +46,8 @@ class PagesSeeder extends Seeder
                             null,
                             "<p>More than a supplier, we work as a true partner and accompany you with recommendations, based on your buing data, so that you can reduce your costs,</p>",
                             null,
+                            null,
+                            "<p>Transport Services</p>"
                         ];
 
 
@@ -54,6 +60,8 @@ class PagesSeeder extends Seeder
                         "الاسعار",
                         "منفعة الشركة",
                         "الإجابة على أسئلتك",
+                        "أحدث المشاريع",
+                        "ابقى على تواصل",
                     ];
 
     
@@ -65,6 +73,8 @@ class PagesSeeder extends Seeder
                             "افضل خطة اسعار لدينا",
                             "لماذا تحب المندرة العربية؟",
                             "تمهيد الطريق: استفساراتك، حلولنا",
+                            "قيادة النجاح، مشروع واحد في كل مرة",
+                            "أبحث عن أفضل سيارة الشاحنات",
                             ];
     
             $description_ar = [
@@ -75,9 +85,11 @@ class PagesSeeder extends Seeder
                                 null,
                                 "<p>أكثر من مجرد مورد، نحن نعمل كشريك حقيقي ونرافقك بالتوصيات، بناءً على بيانات الشراء الخاصة بك، حتى تتمكن من تقليل تكاليفك،</p>",
                                 null,
+                                null,
+                                "<p>خدمات النقل</p>",
                             ];    
 
-            $identifiers=[ "about","service","testimonials","team","pricing","company_benefit","faq",
+            $identifiers=[ "about","service","testimonials","team","pricing","company_benefit","faq","project","newsletter"
                          ];  
 
                         //  images/VaSC7BojUjitywEAhEwzNaxkeCntv2cgR58mhsTu.jpg
@@ -89,7 +101,8 @@ class PagesSeeder extends Seeder
                         null,
                         null,
                         ["images/I62Ioyia6DWF2AoN67RXITItqhRPfzMCPd8QBguc.jpg"],
-
+                        null,
+                        null,
                     ];
        
 

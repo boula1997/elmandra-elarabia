@@ -43,6 +43,7 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             FaqsSeeder::class,
             BenefitsSeeder::class,
+            ProjectsSeeder::class,
         ]);
         
     }

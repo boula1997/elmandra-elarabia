@@ -17,6 +17,7 @@ use App\Models\Team;
 use App\Models\Partner;
 use App\Models\Testimonial;
 use App\Models\Product;
+use App\Models\Project;
 use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Subcategory;
@@ -108,6 +109,7 @@ function itemsCount($model)
         "stores"=>count(Store::get()),
         "faqs"=>count(Faq::get()),
         "benefits"=>count(Benefit::get()),
+        "projects"=>count(Project::get()),
         
         
     ];

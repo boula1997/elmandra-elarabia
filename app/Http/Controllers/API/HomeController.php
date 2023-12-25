@@ -9,6 +9,7 @@ use App\Http\Resources\FaqResource;
 use App\Http\Resources\FeatureResource;
 use App\Http\Resources\PageResource;
 use App\Http\Resources\PartnerResource;
+use App\Http\Resources\ProjectResource;
 use App\Http\Resources\ServiceResource;
 use App\Http\Resources\SliderResource;
 use App\Http\Resources\TeamResource;
@@ -22,6 +23,7 @@ use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Testimonial;
 use App\Models\Benefit;
+use App\Models\Project;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -36,7 +38,8 @@ class HomeController extends Controller
     private $partner;
     private $faq;
     private $benefit;
-    public function __construct(Partner $partner,Slider $slider,Counter $counter,Service $service,Team $team,Feature $feature,Testimonial $testimonial,Faq $faq,Benefit $benefit)
+    private $project;
+    public function __construct(Partner $partner,Slider $slider,Counter $counter,Service $service,Team $team,Feature $feature,Testimonial $testimonial,Faq $faq,Benefit $benefit,Project $project)
     {
         $this->counter = $counter;
         $this->slider = $slider;
@@ -47,6 +50,7 @@ class HomeController extends Controller
         $this->partner = $partner;
         $this->faq = $faq;
         $this->benefit = $benefit;
+        $this->project = $project;
     }
 
     public function index()
@@ -68,11 +72,14 @@ class HomeController extends Controller
             // pricing module not needed
             $data['faq-section'] = new PageResource(page('faq'));
             $data['faqs'] = FaqResource::collection($this->faq->get());
-            // projects module not found
+
+            $data['project-section'] = new PageResource(page('project'));
+            $data['projects'] = ProjectResource::collection($this->project->get());
+
             $data['team-section'] = new PageResource(page('team'));
             $data['teams'] = TeamResource::collection($this->team->get());
             // post module not needed
-            // newsletter page not found
+            $data['newsletter-section'] = new PageResource(page('newsletter'));
             $data['features'] = FeatureResource::collection($this->feature->get());
             return successResponse($data);
         } catch (Exception $e) {

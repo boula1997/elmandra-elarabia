@@ -18,6 +18,7 @@ use App\Http\Controllers\API\TestimonialController;
 use App\Http\Controllers\API\SettingController;
 use App\Http\Controllers\API\PartnerController;
 use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\ProjectController;
 use App\Http\Controllers\API\SliderController;
 use App\Http\Controllers\API\SubcategoryController;
 use App\Http\Controllers\API\TeamController;
@@ -47,6 +48,9 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     
     Route::get('/faqs', [FaqController::class, 'index']);
     Route::get('/faq/{id}', [FaqController::class, 'show']);
+
+    Route::get('/projects', [ProjectController::class, 'index']);
+    Route::get('/project/{id}', [projectController::class, 'show']);
 
     Route::get('/benefits', [BenefitController::class, 'index']);
     Route::get('/benefit/{id}', [BenefitController::class, 'show']);

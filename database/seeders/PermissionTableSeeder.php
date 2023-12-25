@@ -161,6 +161,10 @@ class PermissionTableSeeder extends Seeder
            'benefit-create',
            'benefit-edit',
            'benefit-delete',
+           'project-list',
+           'project-create',
+           'project-edit',
+           'project-delete',
         ];
         
      
