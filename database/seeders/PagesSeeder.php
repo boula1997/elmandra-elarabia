@@ -80,6 +80,7 @@ class PagesSeeder extends Seeder
             $identifiers=[ "about","service","testimonials","team","pricing","company_benefit","faq",
                          ];  
 
+                        //  images/VaSC7BojUjitywEAhEwzNaxkeCntv2cgR58mhsTu.jpg
              $images=[ 
                         ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
                         ["images/p47SZc3Tzf8pMZJnFs8Y7iA3mQyrl56RiA5qNDSO.jpg"],
@@ -87,7 +88,7 @@ class PagesSeeder extends Seeder
                         ["images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
                         null,
                         null,
-                        null,
+                        ["images/I62Ioyia6DWF2AoN67RXITItqhRPfzMCPd8QBguc.jpg"],
 
                     ];
        
