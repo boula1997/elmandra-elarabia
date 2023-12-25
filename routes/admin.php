@@ -38,6 +38,7 @@ use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\MarketerController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\API\BenefitController;
 use App\Models\Advertisement;
 use App\Models\StoreProduct;
 use Illuminate\Support\Facades\Auth;
@@ -76,9 +77,10 @@ Route::group(
                 Route::get('/', function () {
                     return view('dashboard');
                 })->name('dashboard');
-            
+                
                 Route::resource('roles', RoleController::class);
                 Route::resource('faqs', FaqController::class);
+                Route::resource('benefits', BenefitController::class);
                 Route::resource('services', ServiceController::class);
                 Route::resource('categories', CategoryController::class);
                 Route::resource('subcategories', SubcategoryController::class);

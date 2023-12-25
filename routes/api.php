@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\BenefitController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\FaqController;
 use App\Http\Controllers\API\MessageController;
@@ -46,6 +47,9 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     
     Route::get('/faqs', [FaqController::class, 'index']);
     Route::get('/faq/{id}', [FaqController::class, 'show']);
+
+    Route::get('/benefits', [BenefitController::class, 'index']);
+    Route::get('/benefit/{id}', [BenefitController::class, 'show']);
     
     Route::get('/partners', [PartnerController::class, 'index']);
     Route::get('/partner/{id}', [PartnerController::class, 'show']);

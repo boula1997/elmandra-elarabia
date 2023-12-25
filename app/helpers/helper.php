@@ -3,6 +3,7 @@
 use App\Models\Admin;
 use App\Models\Advantage;
 use App\Models\Advertisement;
+use App\Models\Benefit;
 use App\Models\Category;
 use App\Models\Company;
 use App\Models\Message;
@@ -106,6 +107,8 @@ function itemsCount($model)
         "marketersAdmin" => count(Admin::where('type','Marketer')->get()),
         "stores"=>count(Store::get()),
         "faqs"=>count(Faq::get()),
+        "benefits"=>count(Benefit::get()),
+        
         
     ];
 

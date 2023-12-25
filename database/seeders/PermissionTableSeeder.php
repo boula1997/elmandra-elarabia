@@ -157,7 +157,12 @@ class PermissionTableSeeder extends Seeder
            'unit-edit',
            'unit-delete',
            'admin-verify',
+           'benefit-list',
+           'benefit-create',
+           'benefit-edit',
+           'benefit-delete',
         ];
+        
      
         foreach ($permissions as $permission) {
              Permission::updateOrCreate(['name' => $permission,'guard_name'=>'admin']);
