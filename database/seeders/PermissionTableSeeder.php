@@ -165,6 +165,11 @@ class PermissionTableSeeder extends Seeder
            'project-create',
            'project-edit',
            'project-delete',
+           'process-list',
+           'process-create',
+           'process-edit',
+           'process-delete',
+           
         ];
         
      

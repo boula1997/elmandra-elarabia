@@ -19,11 +19,13 @@ class PagesSeeder extends Seeder
                         "Our Services",
                         "Testimonials",
                         "Our Stuff",
-                        "Pricing",
                         "Company Benefit",
                         "Your Questions Answered",
                         "latest projects",
                         "GET IN TOUCH",
+                        "WORK PROCESS",
+                        "Vision",
+                        "Mission",
                     ];
 
         $subtitle_en = [
@@ -31,11 +33,13 @@ class PagesSeeder extends Seeder
                            "Tailored Solutions, Driven by Excellence",
                            "What Our Customers Say",
                            "Meet With Expert Team",
-                           "Our Best Pricing Plan",
                            "Why Do You Like AlMandarah AlArabia?",
                            "Clearing the Road: Your Queries, Our Solutions",
                            "Driving Success, One Project at a Time",
                            "Looking For The Best Trucks car",
+                           "Easy 3 Working Step",
+                            null,
+                            null,
                         ];
 
         $description_en = [
@@ -43,11 +47,13 @@ class PagesSeeder extends Seeder
                             null,
                             null,
                             null,
-                            null,
                             "<p>More than a supplier, we work as a true partner and accompany you with recommendations, based on your buing data, so that you can reduce your costs,</p>",
                             null,
                             null,
-                            "<p>Transport Services</p>"
+                            "<p>Transport Services</p>",
+                            null,
+                            "<p>Envisioning a future of seamless logistics, our company's vision is to revolutionize transportation. We aspire to lead with innovation, reliability, and sustainability, forging paths that exceed expectations, connect communities, and drive progress. Our aim is to set new standards, delivering excellence in every mile traveled, redefining the way goods move and connections thrive.</p>",
+                            "<p>Our mission is to deliver excellence in transportation by providing reliable, efficient, and sustainable logistics solutions. We are dedicated to meeting and exceeding our customers' needs, fostering innovation, and cultivating a collaborative culture that values integrity, safety, and environmental responsibility. Through our commitment to quality service, we aim to drive success, create lasting partnerships, and propel industries forward with every journey.</p>",
                         ];
 
 
@@ -57,11 +63,13 @@ class PagesSeeder extends Seeder
                         "خدماتنا",
                         "اراء العملاء",
                         "فريقنا المتميز",
-                        "الاسعار",
                         "منفعة الشركة",
                         "الإجابة على أسئلتك",
                         "أحدث المشاريع",
                         "ابقى على تواصل",
+                        "آلية العمل",
+                        "رؤيتنا",
+                        "رسالتنا",
                     ];
 
     
@@ -69,12 +77,13 @@ class PagesSeeder extends Seeder
                            "تمكين الرحلات، وإعادة تعريف الخدمات اللوجستية",
                            "حلول مخصصة يقودها التميز",
                             "ما يقوله عملاؤنا",
-                            "لقاء مع فريق الخبراء",
-                            "افضل خطة اسعار لدينا",
-                            "لماذا تحب المندرة العربية؟",
+                            "لقاء مع فريق الخبراء",                            "لماذا تحب المندرة العربية؟",
                             "تمهيد الطريق: استفساراتك، حلولنا",
                             "قيادة النجاح، مشروع واحد في كل مرة",
                             "أبحث عن أفضل سيارة الشاحنات",
+                            " اسهل 3 خطوات عمل",
+                            null,
+                            null,
                             ];
     
             $description_ar = [
@@ -82,27 +91,31 @@ class PagesSeeder extends Seeder
                                 null,
                                 null,
                                 null,
-                                null,
                                 "<p>أكثر من مجرد مورد، نحن نعمل كشريك حقيقي ونرافقك بالتوصيات، بناءً على بيانات الشراء الخاصة بك، حتى تتمكن من تقليل تكاليفك،</p>",
                                 null,
                                 null,
                                 "<p>خدمات النقل</p>",
+                                null,
+                                "<p>من خلال تصور مستقبل الخدمات اللوجستية السلسة، تتمثل رؤية شركتنا في إحداث ثورة في مجال النقل. نحن نطمح إلى الريادة بالابتكار والموثوقية والاستدامة، وتشكيل مسارات تتجاوز التوقعات، وتربط المجتمعات، وتدفع عجلة التقدم. هدفنا هو وضع معايير جديدة، وتحقيق التميز في كل ميل يتم قطعه، وإعادة تعريف الطريقة التي تتحرك بها البضائع وتزدهر الاتصالات.</p>",
+                                "<p>مهمتنا هي تقديم التميز في مجال النقل من خلال توفير حلول لوجستية موثوقة وفعالة ومستدامة. نحن ملتزمون بتلبية احتياجات عملائنا وتجاوزها، وتعزيز الابتكار، وتنمية ثقافة تعاونية تقدر النزاهة والسلامة والمسؤولية البيئية. ومن خلال التزامنا بجودة الخدمة، نهدف إلى تحقيق النجاح وإنشاء شراكات دائمة ودفع الصناعات إلى الأمام في كل رحلة.</p>",
                             ];    
 
-            $identifiers=[ "about","service","testimonials","team","pricing","company_benefit","faq","project","newsletter"
+            $identifiers=[ "about","service","testimonials","team","company_benefit","faq","project","newsletter","process","vision","mission",
                          ];  
 
                         //  images/VaSC7BojUjitywEAhEwzNaxkeCntv2cgR58mhsTu.jpg
              $images=[ 
-                        ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
+                        ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg","images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
                         ["images/p47SZc3Tzf8pMZJnFs8Y7iA3mQyrl56RiA5qNDSO.jpg"],
                         ["images/wYjibhR2yMlf26YI4cK1ur3kgABYgmRLxfFxtzuF.jpg"],
                         ["images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
                         null,
-                        null,
                         ["images/I62Ioyia6DWF2AoN67RXITItqhRPfzMCPd8QBguc.jpg"],
                         null,
                         null,
+                        ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
+                        ["images/Yy6qHtxrUnsTGYG6IonLYSAq7RSrWovi2QhDH7N0.png"],
+                        ["images/pJrWKqvuDTkd6iIsIs4s4iGmBLYb2Ekww17EGCoi.png"],
                     ];
        
 

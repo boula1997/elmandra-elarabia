@@ -15,6 +15,7 @@ use App\Models\Feature;
 use App\Models\Page;
 use App\Models\Team;
 use App\Models\Partner;
+use App\Models\Process;
 use App\Models\Testimonial;
 use App\Models\Product;
 use App\Models\Project;
@@ -110,6 +111,7 @@ function itemsCount($model)
         "faqs"=>count(Faq::get()),
         "benefits"=>count(Benefit::get()),
         "projects"=>count(Project::get()),
+        "processes"=>count(Process::get()),
         
         
     ];

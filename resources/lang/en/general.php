@@ -35,7 +35,7 @@ return [
     'pages'  => 'Pages',
     'services'  => 'Services',
     'testimonials'  => 'Testimonials',
-    'processes'  => 'Processs',
+    'processes'  => 'Processes',
     'faqs'  => 'Faqs',
     'features'  => 'Features',
     'contacts'  => 'Contacts',

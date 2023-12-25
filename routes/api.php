@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController as ControllersAboutController;
+use App\Http\Controllers\API\AboutController;
 use App\Http\Controllers\API\BenefitController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\FaqController;
@@ -78,6 +80,7 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     Route::get('/portfolios', [PortfolioController::class, 'index']);
     Route::get('/portfolio/{id}', [PortfolioController::class, 'show']);
     Route::get('/home', [HomeController::class, 'index']);
+    Route::get('/about-us', [AboutController::class, 'index']);
     
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/product/{id}', [ProductController::class, 'show']);

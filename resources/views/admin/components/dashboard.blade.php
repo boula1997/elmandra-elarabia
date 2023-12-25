@@ -209,6 +209,27 @@
                     </ul>
                 </li>
             @endcan
+
+            @can('process-list')
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class=" px-1 fas fa-user-tag"></i>
+                        <p>
+                            @lang('general.processes')
+                            <i class=" px-1 fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">{{ itemsCount('processes') }}</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('processes.index') }}" class="nav-link">
+                                <i class=" px-1 far fa-circle nav-icon"></i>
+                                <p>@lang('general.show')</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endcan
             
           
                 @can('user-list')
