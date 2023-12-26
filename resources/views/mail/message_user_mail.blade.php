@@ -153,7 +153,7 @@
                         <tr>
                             <td>
                                 <a href="{{ route('front.home') }}">
-                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
+                                    <img src="{{ settings()->logo }}" class=" img-fluid main-logo" alt="logo">
                                 </a>
                             </td>
                         </tr>

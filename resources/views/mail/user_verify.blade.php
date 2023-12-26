@@ -132,7 +132,7 @@
                             style="display: flex;align-items: center;justify-content: space-between;width: 100%;">
                             <td class="header-logo" style="padding: 10px 32px;">
                                 <a href="{{ route('front.home') }}" style="display: block; text-align: right;">
-                                    <img src="{{ settings()->logo }}" class="main-logo" alt="logo">
+                                    <img src="{{ settings()->logo }}" class=" img-fluid main-logo" alt="logo">
                                 </a>
                             </td>
                          

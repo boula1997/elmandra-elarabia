@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.72.0">
-  <title>Album example · Bootstrap</title>
+  <title>{{ settings()->title }}</title>
 
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/album/">
 
@@ -53,9 +53,9 @@
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Contact</h4>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-white">Follow on Twitter</a></li>
-              <li><a href="#" class="text-white">Like on Facebook</a></li>
-              <li><a href="#" class="text-white">Email me</a></li>
+            @foreach (contacts('social') as $contact)
+                <li><a href="{{ $contact->contact }}" class="text-white" target="_blank"> <i class="{{ $contact->icon }}"></i></a></li>
+            @endforeach
             </ul>
           </div>
         </div>
@@ -83,11 +83,9 @@
 
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto"> 
-          <h1 class="font-weight-light">{{ $data->name}}</h1>
-          <p class="lead text-muted">{{ $data->phone}}</p>
-          <p class="lead text-muted">{{ $data->serviceRequest}}</p>
-          <p class="lead text-muted">{{ $data->email }}</p>
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="font-weight-light">{{ $data['subject'] }}</h1>
+          <p class="lead text-muted">{{ $data['address'] }}</p>
           <p>
             <a href="#" class="btn btn-primary my-2">Main call to action</a>
             <a href="#" class="btn btn-secondary my-2">Secondary action</a>
