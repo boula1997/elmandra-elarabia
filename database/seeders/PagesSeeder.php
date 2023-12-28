@@ -26,6 +26,7 @@ class PagesSeeder extends Seeder
                         "WORK PROCESS",
                         "Vision",
                         "Mission",
+                        "Choosing Excellence: Why Us?",
                     ];
 
         $subtitle_en = [
@@ -38,6 +39,7 @@ class PagesSeeder extends Seeder
                            "Driving Success, One Project at a Time",
                            "Looking For The Best Trucks car",
                            "Easy 3 Working Step",
+                            null,
                             null,
                             null,
                         ];
@@ -54,6 +56,7 @@ class PagesSeeder extends Seeder
                             null,
                             "<p>Envisioning a future of seamless logistics, our company's vision is to revolutionize transportation. We aspire to lead with innovation, reliability, and sustainability, forging paths that exceed expectations, connect communities, and drive progress. Our aim is to set new standards, delivering excellence in every mile traveled, redefining the way goods move and connections thrive.</p>",
                             "<p>Our mission is to deliver excellence in transportation by providing reliable, efficient, and sustainable logistics solutions. We are dedicated to meeting and exceeding our customers' needs, fostering innovation, and cultivating a collaborative culture that values integrity, safety, and environmental responsibility. Through our commitment to quality service, we aim to drive success, create lasting partnerships, and propel industries forward with every journey.</p>",
+                            "<p>Our commitment to excellence sets us apart. At Almandara AlArabia, we embody reliability, innovation, and customer-centric service. With a dedicated team focused on delivering beyond expectations, we offer more than just transportation solutions—we offer a partnership built on trust and exceptional service.</p>",
                         ];
 
 
@@ -70,6 +73,7 @@ class PagesSeeder extends Seeder
                         "آلية العمل",
                         "رؤيتنا",
                         "رسالتنا",
+                        "اختيار التميز: لماذا نحن؟",
                     ];
 
     
@@ -77,11 +81,13 @@ class PagesSeeder extends Seeder
                            "تمكين الرحلات، وإعادة تعريف الخدمات اللوجستية",
                            "حلول مخصصة يقودها التميز",
                             "ما يقوله عملاؤنا",
-                            "لقاء مع فريق الخبراء",                            "لماذا تحب المندرة العربية؟",
+                            "لقاء مع فريق الخبراء",          
+                            "لماذا تحب المندرة العربية؟",
                             "تمهيد الطريق: استفساراتك، حلولنا",
                             "قيادة النجاح، مشروع واحد في كل مرة",
                             "أبحث عن أفضل سيارة الشاحنات",
                             " اسهل 3 خطوات عمل",
+                            null,
                             null,
                             null,
                             ];
@@ -98,9 +104,10 @@ class PagesSeeder extends Seeder
                                 null,
                                 "<p>من خلال تصور مستقبل الخدمات اللوجستية السلسة، تتمثل رؤية شركتنا في إحداث ثورة في مجال النقل. نحن نطمح إلى الريادة بالابتكار والموثوقية والاستدامة، وتشكيل مسارات تتجاوز التوقعات، وتربط المجتمعات، وتدفع عجلة التقدم. هدفنا هو وضع معايير جديدة، وتحقيق التميز في كل ميل يتم قطعه، وإعادة تعريف الطريقة التي تتحرك بها البضائع وتزدهر الاتصالات.</p>",
                                 "<p>مهمتنا هي تقديم التميز في مجال النقل من خلال توفير حلول لوجستية موثوقة وفعالة ومستدامة. نحن ملتزمون بتلبية احتياجات عملائنا وتجاوزها، وتعزيز الابتكار، وتنمية ثقافة تعاونية تقدر النزاهة والسلامة والمسؤولية البيئية. ومن خلال التزامنا بجودة الخدمة، نهدف إلى تحقيق النجاح وإنشاء شراكات دائمة ودفع الصناعات إلى الأمام في كل رحلة.</p>",
+                                "<p>التزامنا بالتميز يميزنا. في المندرة العربية، نجسد الموثوقية والابتكار والخدمة التي تركز على العملاء. مع فريق متخصص يركز على تقديم ما يفوق التوقعات، فإننا نقدم أكثر من مجرد حلول نقل - فنحن نقدم شراكة مبنية على الثقة والخدمة الاستثنائية.</p>",
                             ];    
 
-            $identifiers=[ "about","service","testimonials","team","company_benefit","faq","project","newsletter","process","vision","mission",
+            $identifiers=[ "about","service","testimonials","team","company_benefit","faq","project","newsletter","process","vision","mission","chooseus",
                          ];  
 
                         //  images/VaSC7BojUjitywEAhEwzNaxkeCntv2cgR58mhsTu.jpg
@@ -116,6 +123,7 @@ class PagesSeeder extends Seeder
                         ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
                         ["images/Yy6qHtxrUnsTGYG6IonLYSAq7RSrWovi2QhDH7N0.png"],
                         ["images/pJrWKqvuDTkd6iIsIs4s4iGmBLYb2Ekww17EGCoi.png"],
+                        null,
                     ];
        
 

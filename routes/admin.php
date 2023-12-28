@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ChooseusController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\OfferController;
@@ -84,6 +85,7 @@ Route::group(
                 Route::resource('projects', ProjectController::class);
                 Route::resource('benefits', BenefitController::class);
                 Route::resource('services', ServiceController::class);
+                Route::resource('chooseuss', ChooseusController::class);
                 Route::resource('categories', CategoryController::class);
                 Route::resource('subcategories', SubcategoryController::class);
                 Route::resource('sliders', SliderController::class);

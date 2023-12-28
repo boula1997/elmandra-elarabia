@@ -45,6 +45,7 @@ class DatabaseSeeder extends Seeder
             BenefitsSeeder::class,
             ProjectsSeeder::class,
             ProcessesSeeder::class,
+            ChooseusSeeder::class,
         ]);
         
     }

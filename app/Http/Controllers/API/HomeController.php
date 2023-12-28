@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BenefitResource;
+use App\Http\Resources\ChooseusResource;
 use App\Http\Resources\CounterResource;
 use App\Http\Resources\FaqResource;
 use App\Http\Resources\FeatureResource;
@@ -23,6 +24,7 @@ use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Testimonial;
 use App\Models\Benefit;
+use App\Models\Chooseus;
 use App\Models\Project;
 use Exception;
 use Illuminate\Http\Request;
@@ -39,7 +41,8 @@ class HomeController extends Controller
     private $faq;
     private $benefit;
     private $project;
-    public function __construct(Partner $partner,Slider $slider,Counter $counter,Service $service,Team $team,Feature $feature,Testimonial $testimonial,Faq $faq,Benefit $benefit,Project $project)
+    private $chooseus;
+    public function __construct(Partner $partner,Slider $slider,Counter $counter,Service $service,Team $team,Feature $feature,Testimonial $testimonial,Faq $faq,Benefit $benefit,Project $project,Chooseus $chooseus)
     {
         $this->counter = $counter;
         $this->slider = $slider;
@@ -51,6 +54,7 @@ class HomeController extends Controller
         $this->faq = $faq;
         $this->benefit = $benefit;
         $this->project = $project;
+        $this->chooseus = $chooseus;
     }
 
     public function index()
@@ -79,8 +83,13 @@ class HomeController extends Controller
             $data['team-section'] = new PageResource(page('team'));
             $data['teams'] = TeamResource::collection($this->team->get());
             // post module not needed
-            $data['newsletter-section'] = new PageResource(page('newsletter'));
+            
+            $data['chooseus-section'] = new PageResource(page('chooseus'));
+            $data['chooseus'] = ChooseusResource::collection($this->chooseus->get());
+            
             $data['features'] = FeatureResource::collection($this->feature->get());
+            
+            $data['newsletter-section'] = new PageResource(page('newsletter'));
             return successResponse($data);
         } catch (Exception $e) {
             dd($e->getMessage());

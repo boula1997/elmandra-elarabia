@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController as ControllersAboutController;
 use App\Http\Controllers\API\AboutController;
 use App\Http\Controllers\API\BenefitController;
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\ChooseusController;
 use App\Http\Controllers\API\FaqController;
 use App\Http\Controllers\API\MessageController;
 use App\Http\Controllers\API\FeatureController;
@@ -45,8 +46,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['middleware' => ['apiLocalization','cors']], function () {
     Route::get('/services', [ServiceController::class, 'index']);
     Route::get('/service/{id}', [ServiceController::class, 'show']);
+
     Route::get('/testimonials', [TestimonialController::class, 'index']);
     Route::get('/testimonial/{id}', [TestimonialController::class, 'show']);
+    
+    Route::get('/chooseuss', [ChooseusController::class, 'index']);
+    Route::get('/chooseus/{id}', [ChooseusController::class, 'show']);
     
     Route::get('/faqs', [FaqController::class, 'index']);
     Route::get('/faq/{id}', [FaqController::class, 'show']);

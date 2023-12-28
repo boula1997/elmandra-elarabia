@@ -5,6 +5,7 @@ use App\Models\Advantage;
 use App\Models\Advertisement;
 use App\Models\Benefit;
 use App\Models\Category;
+use App\Models\Chooseus;
 use App\Models\Company;
 use App\Models\Message;
 use App\Models\Counter;
@@ -112,6 +113,7 @@ function itemsCount($model)
         "benefits"=>count(Benefit::get()),
         "projects"=>count(Project::get()),
         "processes"=>count(Process::get()),
+        "chooseuss"=>count(Chooseus::get()),
         
         
     ];
