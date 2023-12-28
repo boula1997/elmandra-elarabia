@@ -37,11 +37,11 @@ class ChooseusSeeder extends Seeder
                                 "<p>We continuously invest in cutting-edge technology to improve our services. From GPS tracking to fuel-efficient vehicles, our commitment to innovation ensures streamlined operations and eco-friendly solutions.</p>",
                             ];
 
-        // $image=[
-        //     "images/4UPrBifentc75n3x5k51RHFbze9NhzcFoVl0u4WO.svg",
-        //     "images/KjmtwGFMoyOLxhlPUo8AOtHlPIRsjaX30mSJt8em.svg",
-        //     "images/JWUBXqPMgUNwwVadtZJa7V3rCZJeJRdHR7OifOMA.svg",
-        // ];
+        $image=[
+            "images/4UPrBifentc75n3x5k51RHFbze9NhzcFoVl0u4WO.svg",
+            "images/KjmtwGFMoyOLxhlPUo8AOtHlPIRsjaX30mSJt8em.svg",
+            "images/JWUBXqPMgUNwwVadtZJa7V3rCZJeJRdHR7OifOMA.svg",
+        ];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -56,7 +56,7 @@ class ChooseusSeeder extends Seeder
                     'description' => $description_en[$i],
                 ],
             ]);
-            // $Chooseus_Translation->file()->create(["url"=>$image[$i]]);
+            $Chooseus_Translation->file()->create(["url"=>$image[$i]]);
         }
     }
 }
