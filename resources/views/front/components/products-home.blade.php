@@ -3,8 +3,8 @@
         @if (count($subcategory->products) > 0)
             <div id="tab-{{ $loop->iteration }}"
                 class="tab-pane fade show p-0 {{ $loop->iteration == 1 ? 'active' : '' }}">
-                <div class="row g-5">
-                    <h1>{{ __('general.bestsellerin') }} {{ $subcategory->title }}</h1>
+                <div class="row g-5 mt-3">
+                    <h3>{{ __('general.bestsellerin') }} {{ $subcategory->title }}</h3>
                     @foreach ($subcategory->products as $product)
                         <div class="col-md-12 col-lg-3 mb-3 mb-lg-3">
                             <div class="card">

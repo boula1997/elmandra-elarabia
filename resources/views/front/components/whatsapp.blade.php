@@ -1,10 +1,14 @@
 <!-- GetButton.io widget -->
+<div class="d-none" id="settings" whatsapp="{{ contacts('whatsapp')[0]->contact }}" phone="{{ contacts('phone')[0]->contact }}"></div>
 @push('js')
     <script type="text/javascript">
+    let whatsapp =$('#settings').attr('whatsapp');
+    let phone =$('#settings').attr('phone');
+    console.log();
         (function () {
             var options = {
-                call: "01020202019", // Call phone number
-                whatsapp: "+201001908052", // WhatsApp number
+                call: phone, // Call phone number
+                whatsapp: whatsapp, // WhatsApp number
                 call_to_action: "{{__('general.contact_us')}}", // Call to action
                 button_color: "#6f5190", // Color of button
                 position: "{{ app()->getLocale()=='ar'? 'right' : 'left' }}", // Position may be 'right' or 'left'
