@@ -10,7 +10,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>{{ settings()->title }}</title>
+    <title>{{ settings()->title }} </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -23,7 +23,7 @@
         body {
             text-align: center;
             margin: 0 auto;
-            /* width: 650px; */
+            width: 650px;
             font-family: 'Public Sans', sans-serif;
             background-color: #e2e2e2;
             display: block;
@@ -129,33 +129,13 @@
                 <td>
                     <table class="header-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: flex; justify-content: center; align-items: center;">
                         <tr class="header"
-                            style="background-color: #f7f7f7;display: flex;align-items: center;justify-content: space-between;width: 100%;">
-                         
-                            <td class="header-menu d-flex justify-content-center align-items-center" style="display: block; padding: 10px 32px;text-align: center;">
-                                <ul>
-                                    <li>
-                                        <a href="{{ route('front.home') }}">{{ __('general.home') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('front.shopping_now') }}">{{ __('general.shop_now') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('front.about') }}">{{ __('general.about') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('front.message') }}">{{ __('general.contact') }}</a>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                    <table style="display: flex; justify-content: center; align-items: center;">
-                        <tr>
-                            <td>
-                                <a href="{{ route('front.home') }}">
+                            style="display: flex;align-items: center;justify-content: space-between;width: 100%;">
+                            <td class="header-logo" style="padding: 10px 32px;">
+                                <a href="{{ route('front.home') }}" style="display: block; text-align: right;">
                                     <img src="{{ settings()->logo }}" class=" img-fluid main-logo" alt="logo">
                                 </a>
                             </td>
+                         
                         </tr>
                     </table>
 
@@ -170,43 +150,50 @@
                         </thead>
                     </table>
 
-                    <table class="contant-table" style="margin-top: 40px; display: flex; justify-content: center; align-items: center; margin-botton:50px;"   align="center" border="0" cellpadding="0"
+                    <table class="contant-table" style="margin-top: 40px;" align="center" border="0" cellpadding="0"
                         cellspacing="0" width="100%">
                         <thead>
                             <tr style="display: block;">
                                 <td style="display: block;">
+                                    {{-- <h3
+                                        style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
+                                        {{ __('general.hi') }}{{ $data->name }} </h3> --}}
+                                </td>
+                                <td style="display: block;">
                                     <h3
                                         style="font-weight: 700; font-size: 20px; margin: 0; text-transform: uppercase;">
-                                        {{ __('general.hi') }}{{ $data->name }} </h3>
-                                        
-                                      
+                                        {{ __('general.welcome_to') }}  {{ settings()->title }} </h3>
                                 </td>
-
-                                <td>
-                                    <p
-                                        style="font-size: 14px;font-weight: 600;margin: 8px auto 0;line-height: 1.5;color: #000000;font-family: 'Nunito Sans', sans-serif; margin-bottom:50px;">
-                                        {{ __('general.message_user') }}
-                                    </p>
-                                </td>
+                                
                             </tr>
                         </thead>
                     </table>
-
- 
-
+                    
                     <table class="contant-table" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <thead>
                             <tr style="display: block;">
                                 <td style="display: block;">
                                     <p
                                         style="font-size: 14px; font-weight: 600; width: 82%; margin: 0 auto; line-height: 1.5; color: #939393; font-family: 'Nunito Sans', sans-serif;">
-                                        {{ __('general.weic_mail_desc2') }} <span
-                                            class="theme-color">{{ contacts('email')[0]->contact }}</span>  {{ __('general.weic_mail_desc3') }}<span
-                                            class="theme-color" href="{{ route('front.home') }}">{{ settings()->title }}.</span> {{ __('general.weic_mail_desc4') }}</p>
+                                        <span> {{ __('general.user_verify1') }} </span>
+                                           </p>
                                 </td>
                             </tr>
                         </thead>
                     </table>
+
+                    <table class="button-table" style="margin: 34px 0;" align="center" border="0" cellpadding="0"
+                        cellspacing="0" width="100%">
+                        <thead>
+                            <tr style="display: block;">
+                                <td style="display: block;">
+                                    <button class="password-button">{{ __('general.verify_email') }}</button>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+
+                   
 
                     <table class="text-center footer-table" align="center" border="0" cellpadding="0" cellspacing="0"
                         width="100%"
@@ -222,8 +209,6 @@
                                         </td>
                                     </tr>
                                 </table>
-                                
-                           
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td>

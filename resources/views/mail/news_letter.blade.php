@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-newsletter-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>{{ settings()->title }}</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
@@ -340,7 +340,7 @@ ul.social li{
 	      </tr><!-- end tr -->
 	      <tr>
             <td valign="middle" class="hero bg_white" style="padding: 3em 0 2em 0;">
-                <img src="images/email.png" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
+                <img src="{{ asset('template/images/email.png') }}" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
             </td>
             </tr>
              <!-- end tr -->
@@ -350,9 +350,8 @@ ul.social li{
             	<tr>
             		<td>
             			<div class="text" style="padding: 0 2.5em; text-align: center;">
-            				<h2>Please verify your email</h2>
-            				<h3>Amazing deals, updates, interesting news right in your inbox</h3>
-                            {{-- <a class="btn btn-black mt-3" href="{{route('front.newsletter')}}">{{ __('general.visit_our_website') }}</a> --}}
+            				<h2>{{ __('general.reply1') }}</h2>
+            				<h3>{{ __('general.reply2') }}</h3>
             				<p><a href="{{route('front.home')}}" class="btn btn-primary" style="background: #151423 ">{{ __('general.visit_our_website') }}</a></p>
             			</div>
             		</td>

@@ -15,14 +15,10 @@ class CategorySeeder extends Seeder
     {
         $title_en = [
                         "Video Games",
-                        // "PS4 Games",
-                        // "Nintendo Switch",
-                        // "XBOX Games",
-                        // "PC Games",
-                        // new 
                         "Consoles & Hardware",
                         "Accessories",
                         "Pre Owned",
+                        "Toys & Collectibles",
                         // "Digital Products",
                         "Others",
                         "Offers",
@@ -30,15 +26,10 @@ class CategorySeeder extends Seeder
 
         $title_ar = [
                         "ألعاب",
-                        // "العاب بلايستيشن 4",
-                        // "نينتندو سويتش",
-                        // "العاب اكس بوكس",
-                        // "العاب كمبيوتير",
-                        // new
                         "أجهزة الألعاب",
                         "اكسسوارات",
                         "مستعمل",
-                        // "المنتجات الرقمية",
+                        "الألعاب والمقتنيات",
                         "منتجات أخرى",
                         "العروض",
                     ];  
@@ -57,6 +48,7 @@ class CategorySeeder extends Seeder
                     "images/EidvJDSPrKwzkb2JOnbZ6PmbPNQ3R2RfHAWtNHjM.webp",
                     // "images/ULpxMEeY6vo7XRlkO5Ki4ZYYyUUTzHD0VRrkJH3q.webp",
                     "images/ffnJ3QBxG3aL7Y1JxwXTEHaCimitGQIj8YCbpc0k.webp",
+                    "images/8nljzVfkdhbm5xN5YtRgYtIUZ5hv8q9ZSy9XDc5P.webp",
                     "images/8nljzVfkdhbm5xN5YtRgYtIUZ5hv8q9ZSy9XDc5P.webp",
                     ];
 
