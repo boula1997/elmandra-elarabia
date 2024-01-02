@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\MorphFile;
+use App\Traits\MorphFiles;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
@@ -12,7 +13,7 @@ use Astrotomic\Translatable\Translatable;
 
 class Product extends Model implements TranslatableContract
 {
-    use HasFactory, Translatable, MorphFile;
+    use HasFactory, Translatable, MorphFile,MorphFiles;
     protected $table = 'products';
     public $translatedAttributes = ['title'];
     protected $guarded = [];
@@ -22,12 +23,20 @@ class Product extends Model implements TranslatableContract
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+    public function company()
+    {
+        return $this->belongsTo(Company::class, 'company_id');
+    }
 
 
     public function getImageAttribute(){
         return  $this->file? asset($this->file->url): asset('default.jpg');
    }
-
+   
+   public function getImagesAttribute()
+   {
+       return  count($this->files)>0?$this->files:["default.jpg"];
+   }
     
 }
 

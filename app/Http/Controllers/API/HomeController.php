@@ -87,6 +87,8 @@ class HomeController extends Controller
             $data['chooseus-section'] = new PageResource(page('chooseus'));
             $data['chooseus'] = ChooseusResource::collection($this->chooseus->get());
             
+            $data['contact-section'] = new PageResource(page('contact'));
+
             $data['features'] = FeatureResource::collection($this->feature->get());
             
             $data['newsletter-section'] = new PageResource(page('newsletter'));
