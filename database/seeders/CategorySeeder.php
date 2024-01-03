@@ -47,6 +47,7 @@ class CategorySeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
+                'company_id'=>1,
             ]);
 
             $category->file()->create(["url"=>$images[$i]]);

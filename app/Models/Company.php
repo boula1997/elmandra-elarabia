@@ -17,7 +17,7 @@ class Company extends Model implements TranslatableContract
     public $timestamps = true;
 
     public function categories(){
-        return $this->hasMany(Category::class,'category_id');
+        return $this->hasMany(Category::class);
     }
     
 }
