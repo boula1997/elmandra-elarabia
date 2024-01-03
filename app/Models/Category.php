@@ -28,7 +28,7 @@ class Category extends Model implements TranslatableContract
 
 
    public function products(){
-    return $this->hasMany(Product::class);
+    return $this->hasMany(Product::class,'product_id');
 }
    
    public function company()
