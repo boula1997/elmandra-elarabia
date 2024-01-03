@@ -25,5 +25,11 @@ class Category extends Model implements TranslatableContract
    public function subcategories(){
     return $this->hasMany(Subcategory::class);
    }
+   
+   public function company()
+   {
+       return $this->belongsTo(Company::class, 'company_id');
+   }
+
     
 }
