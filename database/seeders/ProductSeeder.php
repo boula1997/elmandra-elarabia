@@ -48,17 +48,30 @@ class ProductSeeder extends Seeder
 
 
         $images = [
-                        "images/7CzapEFYzk8hZLNXPXyHoY1KPb3h2MEQVndJ9I7T.jpg",
-                        "images/3lu5xyBjdXLPmH7i5BrSLurgPnO3eaaFJ4JzqiFS.jpg",
-                        "images/QGoTeufhCJLyaypQmH2XfoLmFc76mRVOasKh5ThK.jpg",
-                        "images/D0cYjhqSZxNlkoxaIEpYd8oYaBDNfaoI15lO0noq.jpg",
-                        "images/hMDnuDuXdynbNwcZIZJQVObbDdbaPciJGq0clZyC.jpg",
-                        "images/YWTNHoHqDKCNx7TIu372sjeWa03yvvQ4B62DCKjY.jpg",
-                        "images/Ob8dMmt9Ba0RI1dU3DLukuC8l5tlDGtoTOS1gNcD.jpg",
-                        "images/ziGbQ3lA7vf92TtH5Pa1DAw8yyFrekTt99xue74x.jpg",
-                        "images/usXzQ2TvNkHxBqOCRnL7Rkiy2D5Kzy3LkQyQ6X4e.jpg",
-                        "images/qVTmfFpnQvrjDn7CsLZlMFJXMqfjUFrGSH3prrWG.jpg",
-        ];
+                       [ "images/7CzapEFYzk8hZLNXPXyHoY1KPb3h2MEQVndJ9I7T.jpg","images/3lu5xyBjdXLPmH7i5BrSLurgPnO3eaaFJ4JzqiFS.jpg"],
+                       [ "images/3lu5xyBjdXLPmH7i5BrSLurgPnO3eaaFJ4JzqiFS.jpg"],
+                       [ "images/QGoTeufhCJLyaypQmH2XfoLmFc76mRVOasKh5ThK.jpg"],
+                       [ "images/D0cYjhqSZxNlkoxaIEpYd8oYaBDNfaoI15lO0noq.jpg"],
+                       [ "images/hMDnuDuXdynbNwcZIZJQVObbDdbaPciJGq0clZyC.jpg"],
+                       [ "images/YWTNHoHqDKCNx7TIu372sjeWa03yvvQ4B62DCKjY.jpg"],
+                       [ "images/Ob8dMmt9Ba0RI1dU3DLukuC8l5tlDGtoTOS1gNcD.jpg"],
+                       [ "images/ziGbQ3lA7vf92TtH5Pa1DAw8yyFrekTt99xue74x.jpg"],
+                       [ "images/usXzQ2TvNkHxBqOCRnL7Rkiy2D5Kzy3LkQyQ6X4e.jpg"],
+                       [ "images/qVTmfFpnQvrjDn7CsLZlMFJXMqfjUFrGSH3prrWG.jpg"],
+                  ];
+
+        $single_image = [
+            "images/7CzapEFYzk8hZLNXPXyHoY1KPb3h2MEQVndJ9I7T.jpg",
+             "images/3lu5xyBjdXLPmH7i5BrSLurgPnO3eaaFJ4JzqiFS.jpg",
+             "images/QGoTeufhCJLyaypQmH2XfoLmFc76mRVOasKh5ThK.jpg",
+             "images/D0cYjhqSZxNlkoxaIEpYd8oYaBDNfaoI15lO0noq.jpg",
+             "images/hMDnuDuXdynbNwcZIZJQVObbDdbaPciJGq0clZyC.jpg",
+             "images/YWTNHoHqDKCNx7TIu372sjeWa03yvvQ4B62DCKjY.jpg",
+             "images/Ob8dMmt9Ba0RI1dU3DLukuC8l5tlDGtoTOS1gNcD.jpg",
+             "images/ziGbQ3lA7vf92TtH5Pa1DAw8yyFrekTt99xue74x.jpg",
+             "images/usXzQ2TvNkHxBqOCRnL7Rkiy2D5Kzy3LkQyQ6X4e.jpg",
+             "images/qVTmfFpnQvrjDn7CsLZlMFJXMqfjUFrGSH3prrWG.jpg",
+];
                 
                   
         $number=   [306098,306331,306332,305866,306098,306331,306332,305866,306332,305866,];
@@ -111,7 +124,11 @@ class ProductSeeder extends Seeder
 
             ]);
 
-            $product->file()->create(["url"=>$images[$i]]);
+            $product->file()->create(["url"=>$single_image[$i]]);
+            
+            if(isset($images[$i]))
+            foreach($images[$i] as $image)
+            $product->file()->create(["url"=>$image[$i]]);
         }
     }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\API\AboutController;
 use App\Http\Controllers\API\BenefitController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\ChooseusController;
+use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\FaqController;
 use App\Http\Controllers\API\MessageController;
 use App\Http\Controllers\API\FeatureController;
@@ -56,6 +57,9 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     Route::get('/faqs', [FaqController::class, 'index']);
     Route::get('/faq/{id}', [FaqController::class, 'show']);
 
+    Route::get('/companies', [CompanyController::class, 'index']);
+    Route::get('/company/{id}', [CompanyController::class, 'show']);
+
     Route::get('/projects', [ProjectController::class, 'index']);
     Route::get('/project/{id}', [projectController::class, 'show']);
 
@@ -89,8 +93,10 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/product/{id}', [ProductController::class, 'show']);
+
     Route::get('/categories', [CategoryController::class, 'index']);
     Route::get('/category/{id}', [CategoryController::class, 'show']);
+    
     Route::get('/subcategories', [SubcategoryController::class, 'index']);
     Route::get('/subcategory/{id}', [SubcategoryController::class, 'show']);
 

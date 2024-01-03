@@ -20,6 +20,7 @@ class ProductResource extends JsonResource
             "title" => $this->title,
             "description" => $this->description,
             "category" => new ProductResource($this->category),
+            "company" => new CompanyResource($this->company),
             "price" => $this->price,
             "kind" => $this->kind,
             "engineCapacity" => $this->engineCapacity,
@@ -29,6 +30,9 @@ class ProductResource extends JsonResource
             "configuration" => $this->configuration,
             "gearBox" => $this->gearBox,
             "axelsNumber" => $this->axelsNumber,
+            "number"=>$this->number,
+            "images" => $this->images,
+        
         ];
     }
 }

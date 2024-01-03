@@ -13,7 +13,7 @@ class Company extends Model implements TranslatableContract
     use HasFactory, Translatable;
     protected $table = 'companies';
     protected $guarded = [];
-    public $translatedAttributes = ['title'];
+    public $translatedAttributes = ['title','description','address'];
     public $timestamps = true;
 
     public function categories(){
