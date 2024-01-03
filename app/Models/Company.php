@@ -15,5 +15,9 @@ class Company extends Model implements TranslatableContract
     protected $guarded = [];
     public $translatedAttributes = ['title'];
     public $timestamps = true;
+
+    public function categories(){
+        return $this->hasMany(Category::class);
+    }
     
 }

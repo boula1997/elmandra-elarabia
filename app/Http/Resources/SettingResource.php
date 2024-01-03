@@ -20,6 +20,7 @@ class SettingResource extends JsonResource
             "logo" => $this->logo,
             "white_logo" => $this->white_logo,
             "map" => $this->map,
+            "address" => $this->address,
             "phones" => contacts('phone'),
             "socials" => contacts('social'),
             "emails" => contacts('email'),
