@@ -13,14 +13,28 @@ class CompaniesSeeder extends Seeder
      */
     public function run(): void
     {
-        $title_ar = ["فاليو"];
-        $title_en = ["Valueo"];
-        $description_ar = [null];
-        $description_en = [null];
-        $address_ar = ["المنيا"];
-        $address_en = ["Minya"];
-        $owner=["ibrahim"];
-        $phone=["01289189890"];
+        $title_ar = [
+            "ناقلات مايلستون",
+            "أبيكس لحلول الشحن",
+            "ناقلات تيتان",
+            "قمة اكسبريس للخدمات اللوجستية",
+            "شركة الدقة للناقلات",
+            "شركة فانجارد للنقل بالشاحنات",
+        ];
+        $title_en = [
+            "Milestone Haulers",
+            "Apex Cargo Solutions",
+            "Titan Transporters",
+            "Summit Express Logistics",
+           "Precision Carriers Inc.",
+           "Vanguard Trucking Co.",
+        ];
+        $description_ar = [null,null,null,null,null,null,];
+        $description_en = [null,null,null,null,null,null,];
+        $address_ar = ["المنيا","القاهرة","الاسكندرية","القاهرة","القاهرة","الاسكندرية",];
+        $address_en = ["Minya","Cairo","Alex","Cairo","Cairo","Alex",];
+        $owner=["ibrahim","boula","ahmed","mohammed","emad","kero",];
+        $phone=["01289189890","01235489789","01145879789","01215469364","01025498982","0112458962",];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {

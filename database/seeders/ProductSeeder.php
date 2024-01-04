@@ -110,7 +110,7 @@ class ProductSeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-                'category_id'=>1,
+                'category_id'=>rand(1,36),
                 'price'=>$prices[$i],
                 'kind'=>$kind[$i],
                 'engineCapacity'=>$engineCapacity[$i],

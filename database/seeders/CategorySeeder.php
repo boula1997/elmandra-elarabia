@@ -14,32 +14,150 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $title_en = [
-                        "Trucks",
+                        // 1
+                        "Tractor unit",
+                        "Semi-trailer",
+                        "Truck",
+                        "Tipper",
+                        "Trailer",
+                        "Mixer",
+                        // 2
+                        "Tractor unit",
+                        "Semi-trailer",
+                        "Truck",
+                        "Tipper",
+                        "Trailer",
+                        "Mixer",
+                        // 3
+                        "Tractor unit",
+                        "Semi-trailer",
+                        "Truck",
+                        "Tipper",
+                        "Trailer",
+                        "Mixer",
+                        // 4
+                        "Tractor unit",
+                        "Semi-trailer",
+                        "Truck",
+                        "Tipper",
+                        "Trailer",
+                        "Mixer",
+                        // 5
+                        "Tractor unit",
+                        "Semi-trailer",
+                        "Truck",
+                        "Tipper",
+                        "Trailer",
+                        "Mixer",
+                        // 6
+                        "Tractor unit",
+                        "Semi-trailer",
+                        "Truck",
+                        "Tipper",
+                        "Trailer",
+                        "Mixer",
 
                     ];
 
         $title_ar = [
-                        "الشاحنات",
+                        // 1
+                        "وحدة جرار",
+                        "شبه مقطورة",
+                        "شاحنة",
+                        "قلاب",
+                        "جَرَّار",
+                        "خلاط",
+                        // 2
+                        "وحدة جرار",
+                        "شبه مقطورة",
+                        "شاحنة",
+                        "قلاب",
+                        "جَرَّار",
+                        "خلاط",
+                        // 3
+                        "وحدة جرار",
+                        "شبه مقطورة",
+                        "شاحنة",
+                        "قلاب",
+                        "جَرَّار",
+                        "خلاط",
+                        // 4
+                        "وحدة جرار",
+                        "شبه مقطورة",
+                        "شاحنة",
+                        "قلاب",
+                        "جَرَّار",
+                        "خلاط",
+                        // 5
+                        "وحدة جرار",
+                        "شبه مقطورة",
+                        "شاحنة",
+                        "قلاب",
+                        "جَرَّار",
+                        "خلاط",
+                        // 6
+                        "وحدة جرار",
+                        "شبه مقطورة",
+                        "شاحنة",
+                        "قلاب",
+                        "جَرَّار",
+                        "خلاط",
                     ];  
 
 
 
         $images = [
+                    // 1
                     "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
-                    // "images/3YLvN9pOEiB76sAOjEGBwfKfsb8WHdacxUtJwbGs.jpg",
-                    // "images/uYX3kVyoSh3B6mFzofJwyJDfTJBh6vd3z9TeNOzU.jpg",
-                    // "images/j9pQW3VTqKQdVbOQikuYYPWQtbCQgcamlY4QMNrI.webp",
-                    // "images/g2qexZhznYOpcFEqtlhmK8ujd1rzV77zLDNKQSMf.png",
-                    // "images/lBrGZFdpn6t2XVuxg43IozyKOGlgDy6g22KSpREa.jpg",
-                    // "images/YoKD3eY4Go9medsyhcBMxc1v6KOxl6zpUDzGTgw4.jpg",
-                    // "images/g0AraDWao4LYqSjmJqEW2skMGvF7qJqI4y1W81X4.jpg",
-                    // "images/99O9NLpVRGcCRWMEw8l1vACXFvdowYOvSM99fBRH.webp",
-                    // "images/bfl0Lc9jIo2eSyQekCYw3FP5zo0BlenBFmlSKwzV.jpg",
-                    // "images/fMfDdkvufJ6GnGpQ3Mo2a8c8Z1fjyV6Wu3xvOsxC.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    // 2
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    // 3
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    // 4
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    // 5
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    // 6
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+                    "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+
+                  
                     ];
 
-
+                    $y=0;
         for ($i = 0; $i < count($title_ar); $i++) {
+            if($i%6==0){
+                $y++;
+            }
             $category = Category::create([
                 'ar' => [
                     'title' => $title_ar[$i],
@@ -47,9 +165,8 @@ class CategorySeeder extends Seeder
                 'en' => [
                     'title' => $title_en[$i],
                 ],
-                'company_id'=>1,
+                'company_id'=>$y,
             ]);
-
             $category->file()->create(["url"=>$images[$i]]);
         }
     }
