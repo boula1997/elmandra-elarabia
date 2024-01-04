@@ -111,6 +111,7 @@ class ProductSeeder extends Seeder
                     'title' => $title_en[$i],
                 ],
                 'category_id'=>1,
+                'company_id'=>1,
                 'price'=>$prices[$i],
                 'kind'=>$kind[$i],
                 'engineCapacity'=>$engineCapacity[$i],
@@ -128,7 +129,7 @@ class ProductSeeder extends Seeder
             
             if(isset($images[$i]))
             foreach($images[$i] as $image)
-            $product->file()->create(["url"=>$image[$i]]);
+            $product->file()->create(["url"=>$image]);
         }
     }
 }
