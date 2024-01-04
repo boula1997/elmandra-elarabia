@@ -188,6 +188,7 @@
                         </div>
 
 
+                        @include('admin.components.images')
 
                     </div>
                 </div>

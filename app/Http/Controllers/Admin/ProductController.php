@@ -63,9 +63,10 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         try {
-            $data = $request->except('image','profile_avatar_remove');
+            $data = $request->except('image','images','profile_avatar_remove');
             $product = $this->product->create($data);
             $product->uploadFile();
+            $product->uploadFiles();
             return redirect()->route('products.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
@@ -82,7 +83,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.crud.products.show', compact('product'));
+        $images = $product->images;
+        return view('admin.crud.products.show', compact('product','images'));
     }
 
     /**
@@ -93,8 +95,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $images = $product->images;
         $categories=$this->category->latest()->get();
-        return view('admin.crud.products.edit', compact('product','categories'));
+        return view('admin.crud.products.edit', compact('product','categories','images'));
     }
     /**
      * Update the specified resource in storage.
@@ -106,9 +109,10 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         try {
-            $data = $request->except('image','profile_avatar_remove');
+            $data = $request->except('image','images','profile_avatar_remove');
             $product->update($data);
             $product->updateFile();
+            $product->uploadFiles();
             return redirect()->route('products.index', compact('product'))
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {

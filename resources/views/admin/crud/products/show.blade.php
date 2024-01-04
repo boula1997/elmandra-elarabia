@@ -123,6 +123,20 @@
                         <div class="form-group">
                             <img src="{{ $product->image }}" class="w-50">
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputFile1">{{ __('general.images') }}</label>
+                            <div class="row">
+                                @foreach ($images as $image)
+                                    @if (isset($image->id))
+                                        <div class="col-md-3">
+                                            <img width="100" height="100" class="mx-3" src="{{ $image->url }}"
+                                                alt="">
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

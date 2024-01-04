@@ -112,15 +112,15 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>@lang('general.gearBox   ') <span class="text-danger"> * </span></label>
+                                <label>@lang('general.gearBox') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="gearBox    "
-                                        placeholder="@lang('general.gearBox ')"
-                                        class="form-control  pl-1 min-h-40px @error('gearBox    ') is-invalid @enderror"
-                                        value="{{old('gearBox   ',$product->gearBox    )}}">
+                                    <input type="text" name="gearBox"
+                                        placeholder="@lang('general.gearBox')"
+                                        class="form-control  pl-1 min-h-40px @error('gearBox') is-invalid @enderror"
+                                        value="{{old('gearBox',$product->gearBox)}}">
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
 
                         </div>
 
-
+                    @include('admin.components.images', ['images' => $images])
                     </div>
                 </div>
                 <div class="card-footer mb-5 mt-5">
