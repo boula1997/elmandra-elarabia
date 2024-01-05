@@ -67,7 +67,7 @@
         }
 
         .password-button {
-            background-color: #0DA487;
+            background-color: #293f91;
             border: none;
             color: #fff;
             padding: 14px 26px;
@@ -112,7 +112,7 @@
         }
 
         .theme-color {
-            color: #0DA487;
+            color: #293f91;
         }
         .main-logo{
             height: 150px;
