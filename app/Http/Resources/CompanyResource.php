@@ -17,6 +17,7 @@ class CompanyResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "image"=>$this->image,
             "title" => $this->title,
             "count" => $this->count,
             "categories" =>CategoryResource::collection($this->categories),
