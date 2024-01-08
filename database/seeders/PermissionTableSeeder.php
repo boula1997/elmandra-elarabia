@@ -156,7 +156,6 @@ class PermissionTableSeeder extends Seeder
            'unit-create',
            'unit-edit',
            'unit-delete',
-           'admin-verify',
            'benefit-list',
            'benefit-create',
            'benefit-edit',

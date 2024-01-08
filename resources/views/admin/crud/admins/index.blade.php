@@ -127,7 +127,7 @@
             });
         </script>
 
-        <script>
+        {{-- <script>
             $('.fa-check-circle').on('click', function(e) {
                 $(this).addClass('disabled');
                 alert($(this).attr('index'));
@@ -171,5 +171,5 @@
                     }
                 });
             });
-        </script>
+        </script> --}}
     @endpush

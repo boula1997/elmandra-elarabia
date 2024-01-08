@@ -32,40 +32,10 @@ class AdminController extends Controller
     }
 
 
-    public function index($id)
+    public function index()
     {
-        $order_numbers=[];
-        $coupon_usage=[];
         try {
-            $data = Admin::where('type',$id)->get();
-            if($id=='Seller'){
-                foreach($data as $item){
-                    if($item->type=='seller'){
-                      
-                        $total=0;
-                        foreach($item->users as $user){
-                           $total+=count($user->orders); 
-                        }
-
-                        array_push($order_numbers,$total);
-                    }
-                }
-                return view('admin.crud.admins.index', compact('data','order_numbers'));
-            }
-            if($id=='Marketer'){
-                foreach($data as $item){
-                    if($item->type=='marketer'){
-                      
-                        $total=0;
-                        foreach($item->coupons as $coupon){
-                           $total+=count($coupon->orders); 
-                        }
-
-                        array_push($coupon_usage,$total);
-                    }
-                }
-                return view('admin.crud.admins.index', compact('data','coupon_usage'));
-            }
+            $data=Admin::get();
             return view('admin.crud.admins.index', compact('data'));
         } catch (Exception $e) {
             dd($e->getMessage());

@@ -39,7 +39,7 @@ use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\MarketerController;
 use App\Http\Controllers\Admin\FaqController;
-use App\Http\Controllers\API\BenefitController;
+use App\Http\Controllers\Admin\BenefitController;
 use App\Http\Controllers\API\ProjectController;
 use App\Models\Advertisement;
 use App\Models\StoreProduct;
