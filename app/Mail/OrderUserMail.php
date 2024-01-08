@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Http\Requests\Dashboard\ServiceRequestRequest;
+use App\Http\Requests\Dashboard\OrderRequest;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Address;
 
 
-class ServiceRequestAdminMail extends Mailable
+class OrderUserMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -26,7 +26,7 @@ class ServiceRequestAdminMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: new Address(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME')),
+            from: new Address($this->data->email, $this->data->name),
             subject: settings()->website_title,
         );
     }
@@ -35,13 +35,13 @@ class ServiceRequestAdminMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mail.serviceRequest_admin_mail',
+            view: 'mail.order_user_mail',
         );
     }
 
     public function attachments()
     {
-        // $file = $this->serviceRequest->file()->first();
+        // $file = $this->order->file()->first();
         // if ($file) {
         //     $path = $file->getRawOriginal('path');
         //     return [

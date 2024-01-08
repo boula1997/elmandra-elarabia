@@ -56,7 +56,7 @@ class RegisteredUserController extends Controller
             Mail::to(env('MAIL_FROM_NAME'))->send(new WelcomeUserMail($user));
         }
         Auth::login($user);
-
+        
         return redirect(RouteServiceProvider::HOME);
     }
 }

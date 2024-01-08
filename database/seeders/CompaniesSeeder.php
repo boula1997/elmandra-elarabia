@@ -35,6 +35,18 @@ class CompaniesSeeder extends Seeder
         $address_en = ["Minya","Cairo","Alex","Cairo","Cairo","Alex",];
         $owner=["ibrahim","boula","ahmed","mohammed","emad","kero",];
         $phone=["01289189890","01235489789","01145879789","01215469364","01025498982","0112458962",];
+
+        $images = [
+            // 1
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            // 2
+            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            ];
       
 
         for ($i = 0; $i < count($title_ar); $i++) {
@@ -52,6 +64,8 @@ class CompaniesSeeder extends Seeder
                     'phone'=>$phone[$i],
                     'owner'=>$owner[$i],
             ]);
+
+            $Company_Translation->file()->create(["url"=>$images[$i]]);
         }
     }
 }

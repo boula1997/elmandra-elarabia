@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\TestimonialRequest;
+use App\Http\Requests\Dashboard\BenefitRequest;
 use Illuminate\Support\Facades\File;
-use App\Models\Testimonial;
+use App\Models\Benefit;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
 use Exception;
 
-class TestimonialController extends Controller
+class BenefitController extends Controller
 {
     /**s
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class TestimonialController extends Controller
      * @return \Illuminate\Http\Responses
      */
     private $benefit;
-    function __construct(Testimonial $benefit)
+    function __construct(Benefit $benefit)
     {
         $this->middleware('permission:benefit-list|benefit-create|benefit-edit|benefit-delete', ['only' => ['index', 'show']]);
         $this->middleware('permission:benefit-create', ['only' => ['create', 'store']]);
@@ -55,7 +55,7 @@ class TestimonialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TestimonialRequest $request)
+    public function store(BenefitRequest $request)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
@@ -72,10 +72,10 @@ class TestimonialController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Testimonial  $benefit
+     * @param  \App\Models\Benefit  $benefit
      * @return \Illuminate\Http\Response
      */
-    public function show(Testimonial $benefit)
+    public function show(Benefit $benefit)
     {
         return view('admin.crud.benefits.show', compact('benefit'));
     }
@@ -83,10 +83,10 @@ class TestimonialController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Testimonial  $benefit
+     * @param  \App\Models\Benefit  $benefit
      * @return \Illuminate\Http\Response
      */
-    public function edit(Testimonial $benefit)
+    public function edit(Benefit $benefit)
     {
         // dd($benefit);
         return view('admin.crud.benefits.edit', compact('benefit'));
@@ -98,7 +98,7 @@ class TestimonialController extends Controller
      * @param  \App\Models\portfolio  $benefit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Testimonial $benefit)
+    public function update(Request $request, Benefit $benefit)
     {
         try {
             $data = $request->except('image','profile_avatar_remove');
@@ -115,10 +115,10 @@ class TestimonialController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Testimonial  $benefit
+     * @param  \App\Models\Benefit  $benefit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Testimonial $benefit)
+    public function destroy(Benefit $benefit)
     {
         try {
             $benefit->delete();
