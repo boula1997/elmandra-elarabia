@@ -53,15 +53,10 @@ Route::group(
         Route::get('/single-testimonial', 'App/Http/Controllers/TestimonialController@show')->name('front.show.testimonial');
         Route::get('/single-faq', 'App/Http/Controllers/FaqController@show')->name('front.show.faq');
         Route::get('/portfolio', 'App/Http/Controllers/PortfolioController@index')->name('front.portfolio');
-        Route::get('/orderproduct', 'App/Http/Controllers/OrderProductController@index')->name('front.orderproduct');
-        Route::get('/product/{id}', [ProductController::class,'index'])->name('front.products');
-        Route::get('/category/{id}', [ProductController::class,'categoryproduct'])->name('front.category');
-        Route::get('/subcategory/{id}', [ProductController::class,'subcategoryproduct'])->name('front.subcategory');
-        Route::get('/products', [ProductController::class,'showallproducts'])->name('front.show-products');
-        Route::get('/product/{id}/show', [ProductController::class,'show'])->name('front.show.product');
+
+
         Route::get('/about', [AboutController::class,'index'])->name('front.about');
         Route::post('/message', [MessageController::class,'store'])->name('front.message.post');
-        Route::post('/order', [OrderController::class,'store'])->name('front.order.post');
         
         Route::get('/single-portfolio/{id}', [ServiceController::class,'showportfolio'])->name('front.show.portfolio');
         // Route::post('/newsletter', 'App/Http/Controllers/NewsletterController@store')->name('front.newsletter.post');
@@ -79,9 +74,7 @@ Route::group(
             Route::get('/cart', [CartController::class,'getCartItems'])->name('front.shopping');
             Route::get('/profile',[ProfileController::class,'show'])->name('show_profile');
             Route::post('/update_profile/{id}',[ProfileController::class,'update'])->name('update_profile');
-            Route::get('/show.orders',[OrderController::class,'showOrders'])->name('show.orders');
-            Route::get('/show.one.order/{id}',[OrderController::class,'showOneOrder'])->name('show.one.order');
-            Route::get('/offers',[OfferController::class,'showoffers'])->name('front.offers');
+
         });
         Route::get('/team',[HomeController::class,'showteam'])->name('front.team');
         Route::get('/testimonial',[HomeController::class,'showtestimonial'])->name('front.testimonial');

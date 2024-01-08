@@ -81,7 +81,6 @@ Route::group(
                 })->name('dashboard');
                 
                 Route::resource('roles', RoleController::class);
-                Route::resource('faqs', FaqController::class);
                 Route::resource('projects', ProjectController::class);
                 Route::resource('benefits', BenefitController::class);
                 Route::resource('services', ServiceController::class);
@@ -94,18 +93,12 @@ Route::group(
                 Route::resource('partners', PartnerController::class);
                 Route::resource('teams', TeamController::class);
                 Route::resource('pages', PageController::class);
-                Route::resource('expenses', ExpenseController::class);
                 Route::resource('partners', PartnerController::class);
                 Route::resource('portfolios', PortfolioController::class);
                 Route::resource('counters', CounterController::class);
                 Route::resource('contacts', ContactController::class);
                 Route::resource('features', FeatureController::class);
-                Route::resource('offers', OfferController::class);
-                Route::resource('companies', CompanyController::class);
-                Route::resource('sellers', SellerController::class);
-                Route::resource('stores', StoreController::class);
-                Route::resource('reviews', ReviewController::class);
-                Route::resource('marketers', MarketerController::class);
+
                 
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);
@@ -113,12 +106,11 @@ Route::group(
                 Route::get('admin/{id}', [AdminController::class,'index'])->name('admin.index');
                 Route::resource('products', ProductController::class);
                 Route::resource('messages', MessageController::class);
-                Route::resource('orders', OrderController::class);
             
                 Route::get('/reply-message/{id}', [App\Http\Controllers\Admin\MessageController::class, 'reply'])->name('messages.reply');
-                Route::get('/reply-order/{id}', [App\Http\Controllers\Admin\OrderController::class, 'reply'])->name('orders.reply');
+
                 Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\MessageController::class, 'emailReply'])->name('messages.emailReply');
-                Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\OrderController::class, 'emailReply'])->name('orders.emailReply');
+
             
                 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
                 Route::resource('newsletters', NewsletterController::class);
