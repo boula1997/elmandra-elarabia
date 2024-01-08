@@ -581,4 +581,7 @@ return [
     "unit-edit"=>"unit-edit",
     "unit-delete"=>"unit-delete",
     "benefits"=>"Benefits",
+    "chooseuss"=>"Choose US",
+    "counters"=>"Counters",
+
 ];

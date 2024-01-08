@@ -45,10 +45,22 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="{{ $locale . '[address]' }}"
+                                        <input type="text" name="{{ $locale . '[address1]' }}"
                                             placeholder="@lang('general.address')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
-                                            value="{{ old($locale . '.address', $setting->translate($locale)->address) }}">
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.address1') is-invalid @enderror"
+                                            value="{{ old($locale . '.address1', $setting->translate($locale)->address1) }}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>@lang('general.address') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                        </div>
+                                        <input type="text" name="{{ $locale . '[address2]' }}"
+                                            placeholder="@lang('general.address')"
+                                            class="form-control  pl-1 min-h-40px @error($locale . '.address2') is-invalid @enderror"
+                                            value="{{ old($locale . '.address2', $setting->translate($locale)->address2) }}">
                                     </div>
                                 </div>
                                 <div class="form-group">

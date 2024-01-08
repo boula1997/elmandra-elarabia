@@ -51,6 +51,29 @@
             <div class="card card-custom">
                 <div class="card-body">
                     <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.categories') }}</label>
+                                <select class="form-select form-select-lg" name="category_id" id="category">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                <select class="form-select form-select-lg" name="company_id" id="company">
+                                    @foreach ($companies as $company)
+                                        <option value="{{ $company->id }}" {{ old('company_id')==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>

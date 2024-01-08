@@ -40,33 +40,6 @@
                                             value="{{ old($locale . '.title', $counter->translate($locale)->title) }}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> *
-                                        </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle', $counter->translate($locale)->subtitle) }}">
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-form-group">
-                                    <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
-                                    <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
-                                        name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $counter->translate($locale)->description) !!} 
-                                    </textarea>
-                                </div>
-                                {{-- <div class="form-group">
-                                        <label>@lang('counters.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
-                                    </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -95,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-            </div>]
+            </div>
         </div>
 
 

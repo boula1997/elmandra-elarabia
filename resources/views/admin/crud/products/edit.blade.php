@@ -55,6 +55,28 @@
                     <div class="row">
 
                         <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.categories') }}</label>
+                                <select class="form-select form-select-lg" name="category_id" id="category">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id',$product->category->id)==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                <select class="form-select form-select-lg" name="company_id" id="company">
+                                    @foreach ($companies as $company)
+                                        <option value="{{ $company->id }}" {{ old('company_id',$product->company->id)==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
@@ -96,6 +118,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.suspensionType') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="suspensionType"
+                                        placeholder="@lang('general.suspensionType')"
+                                        class="form-control  pl-1 min-h-40px @error('suspensionType') is-invalid @enderror"
+                                        value="{{old('suspensionType',$product->suspensionType)}}">
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.axelsNumber') <span class="text-danger"> * </span></label>
@@ -165,18 +202,6 @@
                                         class="form-control  pl-1 min-h-40px @error('manYear') is-invalid @enderror"
                                         value="{{old('manYear',$product->manYear)}}">
                                 </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.categories') }}</label>
-                                <select class="form-select form-select-lg" name="category_id" id="category">
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" {{ old('category_id',$category->id)==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
-                                    @endforeach
-                                </select>
                             </div>
                         </div>
 

@@ -1,5 +1,5 @@
 @extends('admin.components.form')
-@section('form_action', route('chooseuss.update', $chooseus->id))
+@section('form_action', route('chooseuss.update',$chooseus->id))
 @section('form_type', 'POST')
 @section('fields_content')
     <div class="content-wrapper">
@@ -74,6 +74,14 @@
                             ])
 
                         </div>
+                        <div class="col-md-6">
+                            @include('admin.components.icon', [
+                                'label' => 'icon',
+                                'required' => true,
+                                'value' => old('icon', $chooseus->icon),
+                            ])
+
+                        </div>
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
                             <a href="{{ route('chooseuss.index') }}"
@@ -81,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-            </div>]
+            </div>
         </div>
 
 

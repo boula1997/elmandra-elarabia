@@ -20,11 +20,6 @@ class FaqsSeeder extends Seeder
                         "How can I track my shipment's progress?",
                     ];
 
-        $subtitle_en = [
-                           null,
-                           null,
-                           null,
-                        ];
 
         $description_en = [
                                 "<p>Safety is our priority. We employ state-of-the-art equipment, trained personnel, and rigorous quality checks to ensure the secure transportation of goods.</p>",
@@ -40,11 +35,7 @@ class FaqsSeeder extends Seeder
                         "كيف يمكنني متابعة تقدم شحنتي؟",
                     ];
 
-        $subtitle_ar =[ 
-                           null,
-                           null,
-                           null,
-                        ];
+
 
         $description_ar =[
                             "<p>السلامة هي أولويتنا. نحن نستخدم أحدث المعدات والموظفين المدربين ونقوم بإجراء فحوصات صارمة للجودة لضمان النقل الآمن للبضائع.</p>",
@@ -64,13 +55,11 @@ class FaqsSeeder extends Seeder
                 'ar' => [
                     'title' => $title_ar[$i],
                     'description' => $description_ar[$i],
-                    'subtitle' => $subtitle_ar[$i],
                  
                 ],
                 'en' => [
                     'title' => $title_en[$i],
                     'description' => $description_en[$i],
-                    'subtitle' => $subtitle_en[$i],
                   
                 ],
             ]);

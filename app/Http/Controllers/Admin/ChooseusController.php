@@ -76,8 +76,9 @@ class ChooseusController extends Controller
      * @param  \App\Models\Chooseus  $chooseus
      * @return \Illuminate\Http\Response
      */
-    public function show(Chooseus $chooseus)
+    public function show($id)
     {
+            $chooseus=Chooseus::find($id);
         return view('admin.crud.chooseuss.show', compact('chooseus'));
     }
 
@@ -87,9 +88,9 @@ class ChooseusController extends Controller
      * @param  \App\Models\Chooseus  $chooseus
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chooseus $chooseus)
+    public function edit($id)
     {
-        //    dd($chooseus->title);
+           $chooseus=Chooseus::find($id);
         return view('admin.crud.chooseuss.edit', compact('chooseus'));
     }
     /**
