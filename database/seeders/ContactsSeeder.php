@@ -21,6 +21,8 @@ class ContactsSeeder extends Seeder
                 "fas fa-mail-bulk",
                 "fas fa-phone",
                 "fab fa-whatsapp",
+                "fas fa-phone",
+                "fab fa-whatsapp",
             ];
 
         $contacts=["https://www.facebook.com",
