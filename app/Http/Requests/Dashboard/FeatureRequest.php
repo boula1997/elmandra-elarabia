@@ -23,6 +23,7 @@ class FeatureRequest extends FormRequest
         $image = request()->isMethod('put') ? 'nullable' : 'required';
         $rules = [
             'image' =>  $image  ,
+            'icon' =>  'required'  ,
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];

@@ -54,7 +54,14 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.category'):</h5>
-                                    <p class="m-0">{{ $product->category->translate($locale)->title }}</p>
+                                    <p class="m-0">{{ $product->category->title }}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
+                                    <p class="m-0">{{ $product->company->title }}</p>
                                 </div>
                             </div>
 
@@ -72,10 +79,19 @@
 
                             </div>
                         </div>
+
+                       
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.engineCapacity'):</h5>
                                 <p class="m-0">{{ $product->engineCapacity }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.suspensionType'):</h5>
+                                <p class="m-0">{{ $product->suspensionType }}</p>
 
                             </div>
                         </div>

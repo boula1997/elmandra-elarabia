@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\ProductRequest;
 use App\Models\Category;
+use App\Models\Company;
 use Illuminate\Support\Facades\File;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -20,7 +21,8 @@ class ProductController extends Controller
      */
     private $product;
     private $category;
-    function __construct(Product $product,Category $category)
+    private $company;
+    function __construct(Product $product,Category $category,Company $company)
     {
         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index', 'show']]);
         $this->middleware('permission:product-create', ['only' => ['create', 'store']]);
@@ -28,6 +30,7 @@ class ProductController extends Controller
         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
         $this->product = $product;
         $this->category = $category;
+        $this->company = $company;
     }
 
     public function index()
@@ -51,7 +54,8 @@ class ProductController extends Controller
     {
         // dd('eee');
         $categories=$this->category->latest()->get();
-        return view('admin.crud.products.create',compact('categories'));
+        $companies=$this->company->latest()->get();
+        return view('admin.crud.products.create',compact('categories','companies'));
     }
 
     /**
@@ -95,9 +99,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $companies=$this->company->get();
         $images = $product->images;
-        $categories=$this->category->latest()->get();
-        return view('admin.crud.products.edit', compact('product','categories','images'));
+        $categories=$this->category->get();
+        return view('admin.crud.products.edit', compact('product','categories','images','companies'));
     }
     /**
      * Update the specified resource in storage.

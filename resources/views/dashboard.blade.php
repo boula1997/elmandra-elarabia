@@ -55,7 +55,7 @@
                                         class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
+                        {{-- <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-teal">
                                 <div class="inner">
@@ -69,7 +69,7 @@
                                 <a href="{{route('subcategories.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
                                         class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                             </div>
-                        </div>
+                        </div> --}}
 
 
 
@@ -111,7 +111,7 @@
  
 
                          <!-- ./col -->
-                         <div class="col-lg-3 col-6">
+                         {{-- <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-primary">
                                 <div class="inner">
@@ -125,7 +125,7 @@
                                 <a href="{{route('reviews.index')}}" class="small-box-footer">@lang('general.moreinfo') <i
                                         class="fas fa-arrow-circle-{{ app()->getLocale() =='ar'?'left':'right' }}"></i></a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- /.row -->
 

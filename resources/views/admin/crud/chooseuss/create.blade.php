@@ -70,6 +70,15 @@
 
                         </div>
 
+                        <div class="col-md-6">
+                            @include('admin.components.icon', [
+                                'label' => 'label' ,
+                                'required' => true,
+                                'value' => 'fas fa-desktop',
+                            ])
+
+                        </div>
+
 
                     </div>
                 </div>

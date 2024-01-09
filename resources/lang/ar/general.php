@@ -597,5 +597,6 @@ return [
     "unit-edit"=>"تحرير الوحدة",
     "unit-delete"=>"حذف الوحدة",
     "benefits"=>"فوائد",
+    "chooseuss"=>"لماذا نحن",
 
 ];

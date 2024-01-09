@@ -25,15 +25,15 @@
                                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                                     </div>
                                                 <select class="form-select form-select-lg" name="type" id="">
-                                                    <option {{ $contact->type = '' ? 'selected' : '' }} value="">
+                                                    <option {{ $contact->type == '' ? 'selected' : '' }} value="">
                                                         {{ __('general.selectOne') }}</option>
-                                                    <option {{ $contact->type = 'social' ? 'selected' : '' }} value="social">
+                                                    <option {{ $contact->type == 'social' ? 'selected' : '' }} value="social">
                                                         {{ __('general.social') }}</option>
-                                                    <option {{ $contact->type = 'whatsapp' ? 'selected' : '' }} value="whatsapp">
+                                                    <option {{ $contact->type == 'whatsapp' ? 'selected' : '' }} value="whatsapp">
                                                         {{ __('general.whatsapp') }}</option>
-                                                    <option {{ $contact->type = 'phone' ? 'selected' : '' }} value="phone">
+                                                    <option {{ $contact->type == 'phone' ? 'selected' : '' }} value="phone">
                                                         {{ __('general.phone') }}</option>
-                                                    <option {{ $contact->type = 'email' ? 'selected' : '' }} value="email">
+                                                    <option {{ $contact->type == 'email' ? 'selected' : '' }} value="email">
                                                         {{ __('general.email') }}</option>
                                                 </select>
                                             </div>

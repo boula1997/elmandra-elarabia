@@ -44,6 +44,14 @@
                         <img src="{{ $feature->image }}" class="w-50">
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="mb-7 bg-light p-3 rounded h-100">
+                        <div class="card-title fw-bold">
+                            <h5 class="font-weight-bolder text-dark">@lang('general.icon'):</h5>
+                            <i class="{{ $feature->icon }}"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

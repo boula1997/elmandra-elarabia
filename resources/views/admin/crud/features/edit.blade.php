@@ -74,6 +74,14 @@
                             ])
 
                         </div>
+                        <div class="col-md-6">
+                            @include('admin.components.icon', [
+                                'label' => 'icon',
+                                'required' => true,
+                                'value' => old('icon', $feature->icon),
+                            ])
+
+                        </div>
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
                             <a href="{{ route('features.index') }}"
