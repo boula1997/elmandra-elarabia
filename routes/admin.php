@@ -100,6 +100,10 @@ Route::group(
                 Route::resource('features', FeatureController::class);
 
                 
+                Route::resource('orderproducts', OrderProductController::class);
+                Route::get('orderproduct/{id}', [OrderProductController::class,'create'])->name('orderproduct.create');
+                Route::resource('tests', ImageController::class);
+            
                 Route::resource('roles', RoleController::class);
                 Route::resource('users', UserController::class);
                 Route::resource('admins', AdminController::class);

@@ -55,6 +55,9 @@ Route::group(
         Route::get('/portfolio', 'App/Http/Controllers/PortfolioController@index')->name('front.portfolio');
 
 
+        Route::get('/orderproduct', 'App/Http/Controllers/OrderProductController@index')->name('front.orderproduct');
+        Route::get('/product/{id}', [ProductController::class,'index'])->name('front.products');
+        Route::get('/product/{id}/show', [ProductController::class,'show'])->name('front.show.product');
         Route::get('/about', [AboutController::class,'index'])->name('front.about');
         Route::post('/message', [MessageController::class,'store'])->name('front.message.post');
         

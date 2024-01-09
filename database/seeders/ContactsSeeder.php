@@ -14,14 +14,13 @@ class ContactsSeeder extends Seeder
     public function run(): void
     {
        
-        $icon=[ "fab fa-facebook-f",
+        $icon=[ 
+                "fab fa-facebook-f",
                 "fab fa-linkedin",
                 "fab fa-instagram",
                 "fas fa-mail-bulk",
                 "fas fa-phone",
                 "fab fa-whatsapp",
-                "fas fa-phone",
-                "fab fa-whatsapp"
             ];
 
         $contacts=["https://www.facebook.com",
