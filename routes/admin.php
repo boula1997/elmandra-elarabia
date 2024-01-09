@@ -98,6 +98,8 @@ Route::group(
                 Route::resource('counters', CounterController::class);
                 Route::resource('contacts', ContactController::class);
                 Route::resource('features', FeatureController::class);
+                Route::resource('companies', CompanyController::class);
+                Route::resource('faqs', FaqController::class);
 
                 
                 Route::resource('orderproducts', OrderProductController::class);
