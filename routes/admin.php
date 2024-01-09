@@ -111,6 +111,7 @@ Route::group(
                 Route::resource('admins', AdminController::class);
                 Route::get('admin/{id}', [AdminController::class,'index'])->name('admin.index');
                 Route::resource('products', ProductController::class);
+                Route::resource('orders', OrderController::class);
                 Route::resource('messages', MessageController::class);
             
                 Route::get('/reply-message/{id}', [App\Http\Controllers\Admin\MessageController::class, 'reply'])->name('messages.reply');

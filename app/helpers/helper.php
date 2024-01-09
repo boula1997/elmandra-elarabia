@@ -13,6 +13,7 @@ use App\Models\Newsletter;
 use App\Models\Contact;
 use App\Models\Faq;
 use App\Models\Feature;
+use App\Models\Order;
 use App\Models\Page;
 use App\Models\Team;
 use App\Models\Partner;
@@ -95,6 +96,7 @@ function itemsCount($model)
         "pages" => count(Page::get()),
         "teams" => count(Team::get()),
         "products" => count(Product::get()),
+        "orders" => count(Order::get()),
         "features" => count(Feature::get()),
         "testimonials" => count(Testimonial::get()),
         "partners" => count(Partner::get()),
