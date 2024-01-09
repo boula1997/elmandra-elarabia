@@ -16,6 +16,7 @@ use App\Http\Controllers\API\PortfolioController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\CounterController;
 use App\Http\Controllers\API\HomeController;
+use App\Http\Controllers\API\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\TestimonialController;
@@ -104,6 +105,7 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
 
 Route::post('/newsletter', [NewsletterController::class, 'store']);
 Route::post('/message', [MessageController::class, 'store']);
+Route::post('/order', [OrderController::class, 'store']);
 
 
 Route::group([
