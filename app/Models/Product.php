@@ -37,6 +37,29 @@ class Product extends Model implements TranslatableContract
    {
        return  count($this->files)>0?$this->files:["default.jpg"];
    }
+
+
+   public function scopeSearch($query)
+   {
+      
+       $query->when(request()->title, function ($q) {
+           return $q->whereHas('translations', function ($q2) {
+               $q2->where('title', 'like', '%' . request()->title . '%');
+           });
+       })->when(request()->price, function ($q) {
+           return $q->where('price', request()->price);
+       })->when(request()->year, function ($q) {
+           return $q->whereYear('start_date', request()->year);
+       })->when(request()->city_id, function ($q) {
+           return $q->where('city_id', request()->city_id);
+       })->when(request()->section_id, function ($q) {
+           return $q->where('section_id', request()->section_id);
+       })->when(request()->category_id, function ($q) {
+        // dd( $q->where('category_id', request()->category_id)->get());
+           return $q->where('category_id', request()->category_id);
+       });
+   }
+
     
 }
 

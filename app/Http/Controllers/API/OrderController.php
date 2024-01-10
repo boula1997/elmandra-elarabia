@@ -28,17 +28,26 @@ class OrderController extends Controller
 
 
         try {
-            $order = Order::create($request->all());
+            $order = Order::create([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+            'address'=>$request->address,
+            'total'=>$request->totalPrice,
+            'user_id'=>1,
+            ]);
+
+            // dd($request->items);
             foreach($request->items as $item){
                 $orderproduct=$this->orderproduct->create([
                     'order_id' => $order->id,
-                    'product_id' => $item->getId(),
-                    'count' => $item->quantity,
-                    'total' => $item->quantity * $item->price,
+                    'product_id' => $item['id'],
+                    'count' => $item['qty'],
+                    'total' => $item['totalPrice'],
                 ]);
 
                 $product=$orderproduct->product;
-                $product->update(['stock'=> $product->stock-$item->quantity]);
+                // $product->update(['stock'=> $product->stock-$item['qty']]);
             }
             return successResponse($order);
         } catch (Exception $e) {
