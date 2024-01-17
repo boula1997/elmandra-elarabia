@@ -27,6 +27,20 @@ class ProductRequest extends FormRequest
             'image' =>  $image ,
             'category_id' =>  'required' ,
             'company_id' =>  'required' ,
+            'price' =>  'required' ,
+            'kind' =>  'required' ,
+            'promotions' =>  'required' ,
+            'configuration' =>  'required' ,
+            'emission_code' =>  'required' ,
+            'fuel_type' =>  'required' ,
+            'damaged' =>  'required' ,
+            'dutch_trucks' =>  'required' ,
+            'engineCapacity' =>  'required' ,
+            'suspensionType' =>  'required' ,
+            'axelsNumber' =>  'required' ,
+            'gearBox' =>  'required' ,
+            'mileAge' =>  'required' ,
+            'manYear' =>  'required' ,
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];

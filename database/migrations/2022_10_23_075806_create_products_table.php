@@ -25,6 +25,13 @@ class CreateProductsTable extends Migration
             $table->double('mileAge')->nullable();
             $table->string('number')->nullable();
             $table->date('manYear')->nullable();
+            // new
+            $table->string('promotions')->nullable();
+            $table->string('emission_code')->nullable();
+            $table->string('fuel_type')->nullable();
+            $table->boolean('damaged')->nullable();
+            $table->boolean('dutch_trucks')->nullable();
+            
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->unsignedBigInteger('company_id')->nullable();

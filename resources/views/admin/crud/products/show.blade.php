@@ -80,6 +80,56 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.promotions'):</h5>
+                                <p class="m-0">{{ __('general.'.$product->promotions) }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.configuration'):</h5>
+                                <p class="m-0">{{ $product->configuration }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.emission_code'):</h5>
+                                <p class="m-0">{{ $product->emission_code }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.fuel_type'):</h5>
+                                <p class="m-0">{{ $product->fuel_type }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.damaged'):</h5>
+                                <p class="m-0"> {{ $product->damaged == '1' ?   __('general.yes') : __('general.no') }}   </p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.dutch_trucks'):</h5>
+                                <p class="m-0"> {{ $product->dutch_trucks == '1' ?   __('general.yes') : __('general.no') }}   </p>
+
+                            </div>
+                        </div>
+
+                        
+
                        
                         <div class="col-md-6">
                             <div class="form-group">
@@ -109,13 +159,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.configuration'):</h5>
-                                <p class="m-0">{{ $product->configuration }}</p>
-
-                            </div>
-                        </div>
+                       
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.mileAge'):</h5>

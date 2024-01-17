@@ -87,20 +87,88 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-6">
-                            <div class="form-group">
-                                {{-- // TODO(boula): change to static select options --}}
-                                <label>@lang('general.kind') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="kind" placeholder="@lang('general.kind')"
-                                        class="form-control  pl-1 min-h-40px @error('kind') is-invalid @enderror"
-                                        value="{{ old('kind') }}">
-                                </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.kind') }}</label>
+                                <select class="form-select form-select-lg" name="kind" id="kind">                                
+                                        <option value="tractor_unit" {{ old('kind') }}>{{ __('general.tractor_unit') }}</option>
+                                        <option value="truck" {{ old('kind') }}>{{ __('general.truck') }}</option>
+                                        <option value="semi_trailer" {{ old('kind') }}>{{ __('general.semi_trailer') }}</option>
+                                        <option value="trailer" {{ old('kind') }}>{{ __('general.trailer') }}</option>
+                                        <option value="tipper" {{ old('kind') }}>{{ __('general.tipper') }}</option>
+                                        <option value="mixer" {{ old('kind') }}>{{ __('general.mixer') }}</option>
+                                </select>
                             </div>
                         </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.promotions') }}</label>
+                                <select class="form-select form-select-lg" name="promotions" id="promotions">                                
+                                        <option value="reduced_in_price" {{ old('promotions') }}>{{ __('general.reduced_in_price') }}</option>
+                                        <option value="new_in_stock" {{ old('promotions') }}>{{ __('general.new_in_stock') }}</option>                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.configuration') }}</label>
+                                <select class="form-select form-select-lg" name="configuration" id="configuration">                                
+                                        <option value="4*2" {{ old('configuration') }}>4x2</option>
+                                        <option value="6*2" {{ old('configuration') }}>6x2</option>                                
+                                        <option value="6*4" {{ old('configuration') }}>6x4</option>                                
+                                        <option value="8*4" {{ old('configuration') }}>8x4</option>                                
+                                        <option value="8*2" {{ old('configuration') }}>8x2</option>                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.emission_code') }}</label>
+                                <select class="form-select form-select-lg" name="emission_code" id="emission_code">                                
+                                        <option value="0" {{ old('emission_code') }}>0</option>
+                                        <option value="1" {{ old('emission_code') }}>1</option>                                
+                                        <option value="2" {{ old('emission_code') }}>2</option>                                
+                                        <option value="3" {{ old('emission_code') }}>3</option>                                
+                                        <option value="4" {{ old('emission_code') }}>4</option>  
+                                        <option value="5" {{ old('emission_code') }}>5</option>                                
+                                        <option value="6" {{ old('emission_code') }}>6</option>                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.fuel_type') }}</label>
+                                <select class="form-select form-select-lg" name="fuel_type" id="fuel_type">                                
+                                        <option value="diesel" {{ old('fuel_type') }}>{{ __('general.diesel') }}</option>
+                                        <option value="electrical" {{ old('fuel_type') }}>{{ __('general.electrical') }}</option>                                                             
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.damaged') }}</label>
+                                <select class="form-select form-select-lg" name="damaged" id="damaged">                                
+                                        <option value="1" {{ old('damaged') }}>{{ __('general.yes') }}</option>
+                                        <option value="0" {{ old('damaged') }}>{{ __('general.no') }}</option>                                                             
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.dutch_trucks') }}</label>
+                                <select class="form-select form-select-lg" name="dutch_trucks" id="dutch_trucks">                                
+                                        <option value="1" {{ old('dutch_trucks') }}>{{ __('general.yes') }}</option>
+                                        <option value="0" {{ old('dutch_trucks') }}>{{ __('general.no') }}</option>                                                             
+                                </select>
+                            </div>
+                        </div>
+                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.engineCapacity') <span class="text-danger"> * </span></label>
@@ -154,19 +222,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.configuration') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="configuration" placeholder="@lang('general.configuration')"
-                                        class="form-control  pl-1 min-h-40px @error('configuration') is-invalid @enderror"
-                                        value="{{ old('configuration') }}">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.mileAge') <span class="text-danger"> * </span></label>

@@ -90,20 +90,88 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.kind') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="kind"
-                                        placeholder="@lang('general.kind')"
-                                        class="form-control  pl-1 min-h-40px @error('kind') is-invalid @enderror"
-                                        value="{{old('kind',$product->kind)}}">
-                                </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.kind') }}</label>
+                                <select class="form-select form-select-lg" name="kind" id="kind">                                
+                                        <option {{ $product->kind == 'tractor_unit' ? 'selected' : '' }} value="tractor_unit" {{ old('kind') }}>{{ __('general.tractor_unit') }}</option>
+                                        <option {{ $product->kind == 'truck' ? 'selected' : '' }} value="truck" {{ old('kind') }}>{{ __('general.truck') }}</option>
+                                        <option {{ $product->kind == 'semi_trailer' ? 'selected' : '' }} value="semi_trailer" {{ old('kind') }}>{{ __('general.semi_trailer') }}</option>
+                                        <option {{ $product->kind == 'trailer' ? 'selected' : '' }} value="trailer" {{ old('kind') }}>{{ __('general.trailer') }}</option>
+                                        <option {{ $product->kind == 'tipper' ? 'selected' : '' }} value="tipper" {{ old('kind') }}>{{ __('general.tipper') }}</option>
+                                        <option {{ $product->kind == 'mixer' ? 'selected' : '' }} value="mixer" {{ old('kind') }}>{{ __('general.mixer') }}</option>
+                                </select>
                             </div>
                         </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.promotions') }}</label>
+                                <select class="form-select form-select-lg" name="promotions" id="promotions">                                
+                                        <option {{ $product->promotions == 'reduced_in_price' ? 'selected' : '' }} value="reduced_in_price" {{ old('promotions') }}>{{ __('general.reduced_in_price') }}</option>
+                                        <option {{ $product->promotions == 'new_in_stock' ? 'selected' : '' }} value="new_in_stock" {{ old('promotions') }}>{{ __('general.new_in_stock') }}</option>                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.configuration') }}</label>
+                                <select class="form-select form-select-lg" name="configuration" id="configuration">                                
+                                        <option {{ $product->configuration == '4*2' ? 'selected' : '' }} value="4*2" {{ old('configuration') }}>4x2</option>
+                                        <option {{ $product->configuration == '6*2' ? 'selected' : '' }} value="6*2" {{ old('configuration') }}>6x2</option>                                
+                                        <option {{ $product->configuration == '6*4' ? 'selected' : '' }} value="6*4" {{ old('configuration') }}>6x4</option>                                
+                                        <option {{ $product->configuration == '8*4' ? 'selected' : '' }} value="8*4" {{ old('configuration') }}>8x4</option>                                
+                                        <option {{ $product->configuration == '8*2' ? 'selected' : '' }} value="8*2" {{ old('configuration') }}>8x2</option>                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.emission_code') }}</label>
+                                <select class="form-select form-select-lg" name="emission_code" id="emission_code">                                
+                                        <option {{ $product->emission_code == '0' ? 'selected' : '' }} value="0" {{ old('emission_code') }}>0</option>
+                                        <option {{ $product->emission_code == '1' ? 'selected' : '' }} value="1" {{ old('emission_code') }}>1</option>                                
+                                        <option {{ $product->emission_code == '2' ? 'selected' : '' }} value="2" {{ old('emission_code') }}>2</option>                                
+                                        <option {{ $product->emission_code == '3' ? 'selected' : '' }} value="3" {{ old('emission_code') }}>3</option>                                
+                                        <option {{ $product->emission_code == '4' ? 'selected' : '' }} value="4" {{ old('emission_code') }}>4</option>  
+                                        <option {{ $product->emission_code == '5' ? 'selected' : '' }} value="5" {{ old('emission_code') }}>5</option>                                
+                                        <option {{ $product->emission_code == '6' ? 'selected' : '' }} value="6" {{ old('emission_code') }}>6</option>                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.fuel_type') }}</label>
+                                <select class="form-select form-select-lg" name="fuel_type" id="fuel_type">                                
+                                        <option {{ $product->fuel_type == 'diesel' ? 'selected' : '' }}  value="diesel" {{ old('fuel_type') }}>{{ __('general.diesel') }}</option>
+                                        <option {{ $product->fuel_type == 'electrical' ? 'selected' : '' }}  value="electrical" {{ old('fuel_type') }}>{{ __('general.electrical') }}</option>                                                             
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.damaged') }}</label>
+                                <select class="form-select form-select-lg" name="damaged" id="damaged">                                
+                                        <option {{ $product->damaged == '1' ? 'selected' : '' }} value="1" {{ old('damaged') }}>{{ __('general.yes') }}</option>
+                                        <option {{ $product->damaged == '0' ? 'selected' : '' }} value="0" {{ old('damaged') }}>{{ __('general.no') }}</option>                                                             
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.dutch_trucks') }}</label>
+                                <select class="form-select form-select-lg" name="dutch_trucks" id="dutch_trucks">                                
+                                        <option {{ $product->dutch_trucks == '1' ? 'selected' : '' }} value="1" {{ old('dutch_trucks') }}>{{ __('general.yes') }}</option>
+                                        <option  {{ $product->dutch_trucks == '0' ? 'selected' : '' }} value="0" {{ old('dutch_trucks') }}>{{ __('general.no') }}</option>                                                             
+                                </select>
+                            </div>
+                        </div>
+                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.engineCapacity') <span class="text-danger"> * </span></label>
@@ -111,28 +179,26 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="engineCapacity"
-                                        placeholder="@lang('general.engineCapacity')"
+                                    <input type="text" name="engineCapacity" placeholder="@lang('general.engineCapacity')"
                                         class="form-control  pl-1 min-h-40px @error('engineCapacity') is-invalid @enderror"
-                                        value="{{old('engineCapacity',$product->engineCapacity)}}">
+                                        value="{{ old('engineCapacity', $product->engineCapacity) }}">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                {{-- // TODO(boula): change to select --}}
                                 <label>@lang('general.suspensionType') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="suspensionType"
-                                        placeholder="@lang('general.suspensionType')"
+                                    <input type="text" name="suspensionType" placeholder="@lang('general.suspensionType')"
                                         class="form-control  pl-1 min-h-40px @error('suspensionType') is-invalid @enderror"
-                                        value="{{old('suspensionType',$product->suspensionType)}}">
+                                        value="{{ old('suspensionType', $product->suspensionType) }}">
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.axelsNumber') <span class="text-danger"> * </span></label>
@@ -140,10 +206,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="axelsNumber"
-                                        placeholder="@lang('general.axelsNumber')"
+                                    <input type="text" name="axelsNumber" placeholder="@lang('general.axelsNumber')"
                                         class="form-control  pl-1 min-h-40px @error('axelsNumber') is-invalid @enderror"
-                                        value="{{old('axelsNumber',$product->axelsNumber)}}">
+                                        value="{{ old('axelsNumber', $product->axelsNumber) }}">
                                 </div>
                             </div>
                         </div>
@@ -154,27 +219,13 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="gearBox"
-                                        placeholder="@lang('general.gearBox')"
+                                    <input type="text" name="gearBox" placeholder="@lang('general.gearBox')"
                                         class="form-control  pl-1 min-h-40px @error('gearBox') is-invalid @enderror"
-                                        value="{{old('gearBox',$product->gearBox)}}">
+                                        value="{{ old('gearBox', $product->gearBox) }}">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.configuration') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="configuration"
-                                        placeholder="@lang('general.configuration')"
-                                        class="form-control  pl-1 min-h-40px @error('configuration') is-invalid @enderror"
-                                        value="{{old('configuration',$product->configuration)}}">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.mileAge') <span class="text-danger"> * </span></label>
@@ -182,14 +233,12 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="mileAge"
-                                        placeholder="@lang('general.mileAge')"
+                                    <input type="text" name="mileAge" placeholder="@lang('general.mileAge')"
                                         class="form-control  pl-1 min-h-40px @error('mileAge') is-invalid @enderror"
-                                        value="{{old('mileAge',$product->mileAge)}}">
+                                        value="{{ old('mileAge', $product->mileAge) }}">
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.manYear') <span class="text-danger"> * </span></label>
@@ -197,13 +246,13 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="manYear"
-                                        placeholder="@lang('general.manYear')"
+                                    <input type="date" name="manYear" placeholder="@lang('general.manYear')"
                                         class="form-control  pl-1 min-h-40px @error('manYear') is-invalid @enderror"
-                                        value="{{old('manYear',$product->manYear)}}">
+                                        value="{{ old('manYear', $product->manYear) }}">
                                 </div>
                             </div>
                         </div>
+
 
 
                         <div class="col-md-6">
