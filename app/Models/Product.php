@@ -47,7 +47,7 @@ class Product extends Model implements TranslatableContract
                $q2->where('title', 'like', '%' . request()->title . '%');
            });
         })->when(request()->price, function ($q) {
-            return $q->where('price', request()->price);
+            return $q->where('price', '>=',request()->minPrice)->where('price', '<=',request()->maxPrice);
         })->when(request()->year, function ($q) {
             return $q->whereYear('start_date', request()->year);
         })->when(request()->city_id, function ($q) {
