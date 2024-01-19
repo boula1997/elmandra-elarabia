@@ -16,7 +16,6 @@ class ProductResource extends JsonResource
     public function toArray($request)
     {
 
-        if(request()->routeIs('product.api'))
         return [
             "id" => $this->id,
             "image" => $this->image,
@@ -35,28 +34,6 @@ class ProductResource extends JsonResource
             "axelsNumber" => $this->axelsNumber,
             "number"=>$this->number,
             "images" => $this->images,
-            "related_products" => Product::where('id','!=',$this->id)->get(),
-        
-        ];
-        return [
-            "id" => $this->id,
-            "image" => $this->image,
-            "title" => $this->title,
-            "description" => $this->description,
-            "category_id" => $this->category_id,
-            "company_id" => $this->company_id,
-            "price" => $this->price,
-            "kind" => $this->kind,
-            "engineCapacity" => $this->engineCapacity,
-            "suspensionType" => $this->suspensionType,
-            "mileAge" => $this->mileAge,
-            "manYear" => $this->manYear,
-            "configuration" => $this->configuration,
-            "gearBox" => $this->gearBox,
-            "axelsNumber" => $this->axelsNumber,
-            "number"=>$this->number,
-            "images" => $this->images,
-
         
         ];
     }

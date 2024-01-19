@@ -45,6 +45,7 @@ class ProductController extends Controller
     {
         try {
             $data['product'] = new ProductResource($this->product->findorfail($id));
+            $data['related_products'] = ProductResource::collection(Product::where('id','!=',$id)->get());
             return successResponse($data);
         } catch (Exception $e) {
             dd($e->getMessage());
