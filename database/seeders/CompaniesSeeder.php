@@ -38,14 +38,14 @@ class CompaniesSeeder extends Seeder
 
         $images = [
             // 1
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/aAqwbU92zEb3FYcEdhkcjSaJsaXyACMLhC4YuyB1.png",
+            "images/ogN9wycxsJRloWZszJ1AmCtgRvnQ7THgNUIz2JQQ.webp",
+            "images/JRm9sbXmZoG9MhXa6cm8xJSIdeez2l85JqhNPAcu.png",
+            "images/5QxSk4kw5bDixVXYsimhIy5UatNvHstSIINJML4n.png",
+            "images/d7M3qytjQk6lJev1DCSWfIxfpOg2FoKHSYZgxzKd.png",
+            "images/uPsojf7wep44yOGGfoSxdb84zyv8RqVWpb28khZ7.png",
             // 2
-            "images/VMDI1Vm3xP98PE5uLDHVwJrkHghCksca957gizea.jpg",
+            "images/m7E3LygclSPmXBG2iss7his9GjJ7a2EqnjBjci6t.png",
             ];
       
 
