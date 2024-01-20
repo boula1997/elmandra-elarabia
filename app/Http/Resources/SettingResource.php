@@ -34,6 +34,7 @@ class SettingResource extends JsonResource
             "title" => $this->title,
             "taxes" => $this->taxes,
             "breadcrumb" => asset($this->breadcrumb),
+            "whatsapp" =>contacts('whatsapp'),
         ];
     }
 }

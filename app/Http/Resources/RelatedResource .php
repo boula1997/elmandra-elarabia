@@ -6,7 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductResource extends JsonResource
+class RelatedResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -34,7 +34,29 @@ class ProductResource extends JsonResource
             "axelsNumber" => $this->axelsNumber,
             "number"=>$this->number,
             "images" => $this->images,
+
         
         ];
+        // return [
+        //     "id" => $this->id,
+        //     "image" => $this->image,
+        //     "title" => $this->title,
+        //     "description" => $this->description,
+        //     "category_id" => $this->category_id,
+        //     "company_id" => $this->company_id,
+        //     "price" => $this->price,
+        //     "kind" => $this->kind,
+        //     "engineCapacity" => $this->engineCapacity,
+        //     "suspensionType" => $this->suspensionType,
+        //     "mileAge" => $this->mileAge,
+        //     "manYear" => $this->manYear,
+        //     "configuration" => $this->configuration,
+        //     "gearBox" => $this->gearBox,
+        //     "axelsNumber" => $this->axelsNumber,
+        //     "number"=>$this->number,
+        //     "images" => $this->images,
+
+        
+        // ];
     }
 }
