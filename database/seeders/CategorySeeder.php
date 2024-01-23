@@ -110,7 +110,7 @@ class CategorySeeder extends Seeder
                     // 1
                     "images/ARou8tIIuzh08flNJnYIlRnqrBXEM0T6F3feyV45.png",
                     "images/4bApu2W78pmZkK9FSgH4tcR1E5869sV7vCDbbcWP.png",
-                    "images/UIbSco2ShVUVIhbGgqmS8AvAo7OBIMBId5xtTWf0.avif",
+                    "images/UIbSco2ShVUVIhbGgqmS8AvAo7OBIMBId5xtTWf0.png",
                     "images/IrmZfq1RrDHR9GZzjEo7fyVfdNb4oXddTPF7Jreo.png",
                     "images/o9kSYJLBcItMb7GxavR47OxShpm1VBY7VxzirEbg.png",
                     "images/8QjMfKGU9ligSjcJKZ0n5VQhSHAmX7wTaWEPrUrj.png",
