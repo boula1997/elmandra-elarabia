@@ -30,9 +30,9 @@ class ContactsSeeder extends Seeder
                    "https://instagram.com",
                    "info@almandarah.com",
                    "+0114007877",
-                   "+0501013113",
+                   "+9660501013113",
                    "+0172384287",
-                   "+0550837450",
+                   "+9660550837450",
                     ];
 
         $type=['social','social','social','email','phone','whatsapp','phone','whatsapp',];
