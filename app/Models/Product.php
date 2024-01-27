@@ -55,7 +55,7 @@ class Product extends Model implements TranslatableContract
         })->when(request()->section_id, function ($q) {
             return $q->where('section_id', request()->section_id);
         })->when(request()->category_id, function ($q) {
-            return $q->where('category_id', request()->category_id);
+            return $q->whereIn('category_id', json_decode(request()->category_id));
         })->when(request()->kind, function ($q) {
             return $q->where('kind', request()->kind);
         })->when(request()->suspensionType, function ($q) {
@@ -63,7 +63,7 @@ class Product extends Model implements TranslatableContract
         })->when(request()->axelsNumber, function ($q) {
             return $q->where('axelsNumber', request()->axelsNumber);
         })->when(request()->gearBox, function ($q) {
-            return $q->where('gearBox', request()->gearBox);
+            return $q->whereIn('gearBox', json_decode(request()->gearBox));
         })->when(request()->configuration, function ($q) {
             return $q->where('configuration', request()->configuration);
         })->when(request()->engineCapacity, function ($q) {
