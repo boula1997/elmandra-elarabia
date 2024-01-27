@@ -57,15 +57,15 @@ class Product extends Model implements TranslatableContract
         })->when(request()->category_id, function ($q) {
             return $q->whereIn('category_id', request()->category_id);
         })->when(request()->kind, function ($q) {
-            return $q->where('kind', request()->kind);
+            return $q->whereIn('kind', request()->kind);
         })->when(request()->suspensionType, function ($q) {
-            return $q->where('suspensionType', request()->suspensionType);
+            return $q->whereIn('suspensionType', request()->suspensionType);
         })->when(request()->axelsNumber, function ($q) {
             return $q->where('axelsNumber', request()->axelsNumber);
         })->when(request()->gearBox, function ($q) {
             return $q->whereIn('gearBox', request()->gearBox);
         })->when(request()->configuration, function ($q) {
-            return $q->where('configuration', request()->configuration);
+            return $q->whereIn('configuration', request()->configuration);
         })->when(request()->engineCapacity, function ($q) {
             return $q->where('engineCapacity', request()->engineCapacity);
         })->when(request()->mileAge, function ($q) {
