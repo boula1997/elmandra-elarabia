@@ -57,8 +57,8 @@ class CompanyController extends Controller
     public function store(CompanyRequest $request)
     {
         try {
-            $this->company->create($request->except('image','profile_avatar_remove'));
-            $this->company->uploadFile();
+            $company=$this->company->create($request->except('image','profile_avatar_remove'));
+            $company->uploadFile();
             return redirect()->route('companies.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
