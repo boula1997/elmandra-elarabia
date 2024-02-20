@@ -21,8 +21,10 @@ class CompanyRequest extends FormRequest
         //to add or remove input from request in validation class use $this->merge
         //  $this->merge(['user_id' => auth('api')->user()->id]);
 
+        $image = request()->isMethod('put') ? 'nullable|image|max:1000' : 'required|image|max:1000';
 
         $rules = [
+            'image' =>  $image ,
             'owner' =>  'required',
             'phone' =>  'required',
         ];

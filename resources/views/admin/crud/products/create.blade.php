@@ -54,10 +54,10 @@
 
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.categories') }}</label>
-                                <select class="form-select form-select-lg" name="category_id" id="category">
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
+                                <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                <select class="form-select form-select-lg" name="company_id" id="company">
+                                    @foreach ($companies as $company)
+                                        <option value="{{ $company->id }}" {{ old('company_id')==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -65,10 +65,10 @@
 
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.companies') }}</label>
-                                <select class="form-select form-select-lg" name="company_id" id="company">
-                                    @foreach ($companies as $company)
-                                        <option value="{{ $company->id }}" {{ old('company_id')==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
+                                <label for="" class="form-label">{{ __('general.categories') }}</label>
+                                <select class="form-select form-select-lg" name="category_id" id="categories">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id? 'selected' : '' }}>{{ $category->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -285,6 +285,80 @@
 @endsection
 
 @push('scripts')
+    <script>
+        $(document).ready(function() {
+            // $('#companies').append('<option value="">{{ trans('general.category_name') }}</option>');
+            let old = $('#categories').attr('old');
+            if (old != null) {
+                $('#categories').find('option').remove().end();
+                var company_id = $('#company').val();
+                console.log('company_id', company_id);
+
+                let url = "{{ route('company.categories', [':id']) }}"
+                url = url.replace(':id', company_id);
+                $.ajax({
+                    type: "Get",
+                    url: url,
+                    datatype: 'JSON',
+                    success: function(data) {
+                        console.log(data);
+
+                        if (data.status == 200) {
+                            alert(1);
+                            let equal;
+                            data.data.categories.forEach(element => {
+                                // equal = {{ old('category_id') }};
+                                // console.log(element.id);
+                                let equal = '';
+                                if (element.id == old)
+                                    equal = 'selected';
+                                var option =
+                                    `<option value ="${element.id}" ${equal}>${element.title}</option>`;
+                                $('#categories').append(option);
+                            });
+
+                        }	
+                    },
+                    error: function(reject) {
+                        console.log(reject);
+                    }
+                });
+            }
+            $('#company').on('change', function() {	
+
+                $('#categories').find('option').remove().end();
+                var company_id = $('#company').val();
+
+                let url = "{{ route('company.categories', [':id']) }}"
+                url = url.replace(':id', company_id);
+                $.ajax({
+                    type: "Get",
+                    url: url,
+                    datatype: 'JSON',
+                    success: function(data) {
+                        
+                    console.log(data.data);
+                            let equal;
+                            data.data.forEach(element => {
+                                let equal = '';
+                                if (element.id == old)
+                                    equal = 'selected';
+                                var option =
+                                    `<option value ="${element.id}" ${equal}>${element.title}</option>`;
+                                $('#categories').append(option);
+                            });
+
+
+                    
+                    },
+                    error: function(reject) {
+                        console.log(reject);
+                    }
+                });
+
+            });
+        });
+    </script>
     <script>
         $(function() {
             // Summernote

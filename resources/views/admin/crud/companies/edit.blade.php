@@ -95,6 +95,17 @@
 
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            @include('admin.components.image', [
+                                'label' => __('general.image'),
+                                'value' => old('image', $company->image),
+                                'name' => 'image',
+                                'id' => 'kt_image_3',
+                                'accept' => 'image/*',
+                                'required' => true,
+                            ])
+
+                        </div>
                         <div class="card-footer mb-5 mt-5">
                             <button type="submit" class="btn btn-outline-success">@lang('general.save')</button>
                             <a href="{{ route('companies.index') }}"
@@ -102,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-            </div>]
+            </div>
         </div>
 
 

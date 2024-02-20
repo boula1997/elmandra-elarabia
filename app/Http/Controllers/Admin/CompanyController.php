@@ -57,7 +57,8 @@ class CompanyController extends Controller
     public function store(CompanyRequest $request)
     {
         try {
-            $this->company->create($request->all());
+            $this->company->create($request->except('image','profile_avatar_remove'));
+            $this->company->uploadFile();
             return redirect()->route('companies.index')
                 ->with('success', trans('general.created_successfully'));
         } catch (Exception $e) {
@@ -98,8 +99,9 @@ class CompanyController extends Controller
     public function update(CompanyRequest $request, Company $company)
     {
         try {
-            $data = $request->all();
+            $data = $request->except('image','profile_avatar_remove',);
             $company->update($data);
+            $company->updateFile();
             return redirect()->route('companies.index')
                 ->with('success', trans('general.update_successfully'));
         } catch (Exception $e) {
@@ -117,11 +119,19 @@ class CompanyController extends Controller
     {
         try {
             $company->delete();
+            $company->file->delete();
+            $company->deleteFile();
             return redirect()->route('companies.index')
                 ->with('success', trans('general.deleted_successfully'));
         } catch (Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with(['error' => __('general.something_wrong')]);
         }
+    }
+    
+    public function categories($id){
+        //id here refers to category id
+        $company =Company::find($id);
+        return response()->json(['data'=>$company->categories]);
     }
 }

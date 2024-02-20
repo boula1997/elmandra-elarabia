@@ -134,6 +134,8 @@ Route::group(
                 Route::put('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'update'])->name('update.profile');
                 Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'edit'])->name('edit.profile');
                 Route::get('/status/{id}', [App\Http\Controllers\Admin\AdvertisementController::class, 'adStatus'])->name('advertisement.status');
+                Route::get('/company/categories/{id}', [App\Http\Controllers\Admin\CompanyController::class, 'categories'])->name('company.categories');
+
 
             });
         });

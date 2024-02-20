@@ -38,6 +38,7 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
+                                                <th>@lang('general.image')</th>
                                                 <th>@lang('general.title')</th>
                                                 <th>@lang('general.owner')</th>
                                                 <th>@lang('general.phone')</th>
@@ -48,6 +49,8 @@
                                             @foreach ($companies as $company)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
+                                                    <td><img width="100" height="100" src="{{ $company->image }}"
+                                                        alt="{{ $company->title }}"></td>
                                                     <td>{{ $company->title }}</td>
                                                     <td>{{ $company->owner }}</td>
                                                     <td>{{ $company->phone }}</td>

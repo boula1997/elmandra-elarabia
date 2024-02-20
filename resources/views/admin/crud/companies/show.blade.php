@@ -60,6 +60,7 @@
                 </div>
             </div>
 
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-7 bg-light p-3 rounded h-100">
@@ -75,6 +76,11 @@
                             <h5 class="font-weight-bolder text-dark">@lang('general.phone'):</h5>
                             <p class="m-0">{{ $company->phone }}</p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <img src="{{ $company->image }}" class="w-50">
                     </div>
                 </div>
             </div>
