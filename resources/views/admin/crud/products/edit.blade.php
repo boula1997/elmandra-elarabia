@@ -253,6 +253,16 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-check-input" type="checkbox" name="used_car" id="used_car" {{$product->used_car == 1 ? 'checked' : ''}}>
+                                    <label class="form-check-label" for="used_car">
+                                    {{ __('general.used_car') }} 
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
 
                         <div class="col-md-6">

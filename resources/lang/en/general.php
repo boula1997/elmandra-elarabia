@@ -608,5 +608,7 @@ return [
     "gearBox"=>'Gear Box',
     "mileAge"=>'Mile Age',
     "manYear"=>'Man Year',
-
+    'breadcrumb'=>"Breadcrumb",
+    'show_used_car'=>"Show used car",
+    'used_car'=>"Used car",
 ];

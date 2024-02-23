@@ -25,6 +25,7 @@ class CreateSettingsTable extends Migration
             $table->text('longitude')->nullable();
             $table->double('shipping')->nullable();
             $table->double('taxes')->nullable();
+            $table->boolean('used_car')->default(0);
             $table->timestamps();
         });
     }
