@@ -187,7 +187,7 @@
                                 'label' => __('general.white_logo'),
                                 'value' => old('white_logo', $setting->white_logo),
                                 'name' => 'white_logo',
-                                'id' => 'kt_image_2',
+                                'id' => 'kt_image_3',
                                 'accept' => 'image/*',
                                 'required' => true,
                             ])
@@ -198,7 +198,7 @@
                                 'label' => __('general.tab'),
                                 'value' => old('tab', $setting->tab),
                                 'name' => 'tab',
-                                'id' => 'kt_image_3',
+                                'id' => 'kt_image_6',
                                 'accept' => 'image/*',
                                 'required' => true,
                             ])
@@ -209,7 +209,7 @@
                                 'label' => __('general.breadcrumb'),
                                 'value' => old('breadcrumb',$setting->breadcrumb),
                                 'name' => 'breadcrumb',
-                                'id' => 'kt_image_4',
+                                'id' => 'kt_image_5',
                                 'accept' => 'image/*',
                                 'required' => true,
                             ])

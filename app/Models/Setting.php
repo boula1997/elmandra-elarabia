@@ -26,11 +26,11 @@ class Setting extends Model implements TranslatableContract
     {
         return file_exists($val) ? asset($val) :  asset('default.jpg');
     }
-    public function getwhiteLogoAttribute($val)
+    public function getWhiteLogoAttribute($val)
     {
         return file_exists($val) ? asset($val) :  asset('default.jpg');
     }
-    public function breadcrumbAttribute($val)
+    public function getbreadcrumbAttribute($val)
     {
         return file_exists($val) ? asset($val) :  asset('default.jpg');
     }
