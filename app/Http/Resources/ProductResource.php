@@ -33,6 +33,7 @@ class ProductResource extends JsonResource
             "gearBox" => $this->gearBox,
             "axelsNumber" => $this->axelsNumber,
             "number"=>$this->number,
+            "used_car"=>$this->used_car,
             "images" => $this->images,
         
         ];
