@@ -16,17 +16,16 @@ class ProductController extends Controller
         $this->product = $product;
     }
 
-    // public function index()
-    // {
-    //     try {
-    //         $query=$this->product;
-    //         $data['products'] = ProductResource::collection($this->product->scopeSearch($query));
-    //         return successResponse($data);
-    //     } catch (Exception $e) {
-    //         dd($e->getMessage());
-    //         return failedResponse($e->getMessage());
-    //     }
-    // }
+    public function index()
+    {
+        try {
+            $data['products'] = ProductResource::collection($this->product->get());
+            return successResponse($data);
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            return failedResponse($e->getMessage());
+        }
+    }
     public function store()
     {
         try {
