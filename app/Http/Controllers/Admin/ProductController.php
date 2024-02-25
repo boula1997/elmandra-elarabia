@@ -68,6 +68,12 @@ class ProductController extends Controller
     {
         try {
             $data = $request->except('image','images','profile_avatar_remove');
+            if ($request->has('used_car')) {
+                $data['used_car'] = 1;
+            
+            }else{
+                $data['used_car'] = 0;
+            }
             $product = $this->product->create($data);
             $product->uploadFile();
             $product->uploadFiles();
@@ -115,6 +121,12 @@ class ProductController extends Controller
     {
         try {
             $data = $request->except('image','images','profile_avatar_remove');
+            if ($request->has('used_car')) {
+                $data['used_car'] = 1;
+            
+            }else{
+                $data['used_car'] = 0;
+            }
             $product->update($data);
             $product->updateFile();
             $product->uploadFiles();

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Traits\MorphFile;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 class Setting extends Model implements TranslatableContract
 {
 
-    use HasFactory, Translatable;
+    use HasFactory, Translatable,MorphFile;
     protected $table = 'settings';
     protected $guarded = [];
     public $translatedAttributes = ['title', 'subtitle', 'description','copyright','address1','address2'];
@@ -26,7 +26,11 @@ class Setting extends Model implements TranslatableContract
     {
         return file_exists($val) ? asset($val) :  asset('default.jpg');
     }
-    public function getwhiteLogoAttribute($val)
+    public function getWhiteLogoAttribute($val)
+    {
+        return file_exists($val) ? asset($val) :  asset('default.jpg');
+    }
+    public function getbreadcrumbAttribute($val)
     {
         return file_exists($val) ? asset($val) :  asset('default.jpg');
     }

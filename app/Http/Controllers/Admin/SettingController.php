@@ -45,6 +45,18 @@ class SettingController extends Controller
                 $data['white_logo'] = $request->white_logo->store('images');
                 $file2->move('images', $data['white_logo']);
             }
+            if ($request->hasFile('breadcrumb'))
+                {File::delete($setting->breadcrumb);
+                $file = $request->file('breadcrumb');
+                $data['breadcrumb'] = $request->breadcrumb->store('images');
+                $file->move('images', $data['breadcrumb']); 
+            }
+                if ($request->has('used_car')) {
+                    $data['used_car'] = 1;
+                
+                }else{
+                    $data['used_car'] = 0;
+                }
             $setting->update($data);
             return redirect()->route('edit.setting')
                 ->with('success', trans('general.update_successfully'));

@@ -140,6 +140,16 @@
 
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-check-input" type="checkbox" name="used_car" id="used_car" {{$setting->used_car == 1 ? 'checked' : ''}}>
+                                    <label class="form-check-label" for="used_car">
+                                    {{ __('general.show_used_car') }} 
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     {{-- // TODO(boula): add toogle button to appear or disappear rate easy --}}
                 </div>
@@ -177,7 +187,7 @@
                                 'label' => __('general.white_logo'),
                                 'value' => old('white_logo', $setting->white_logo),
                                 'name' => 'white_logo',
-                                'id' => 'kt_image_2',
+                                'id' => 'kt_image_3',
                                 'accept' => 'image/*',
                                 'required' => true,
                             ])
@@ -188,7 +198,18 @@
                                 'label' => __('general.tab'),
                                 'value' => old('tab', $setting->tab),
                                 'name' => 'tab',
-                                'id' => 'kt_image_3',
+                                'id' => 'kt_image_6',
+                                'accept' => 'image/*',
+                                'required' => true,
+                            ])
+
+                        </div>
+                        <div class="col-md-6">
+                            @include('admin.components.image', [
+                                'label' => __('general.breadcrumb'),
+                                'value' => old('breadcrumb',$setting->breadcrumb),
+                                'name' => 'breadcrumb',
+                                'id' => 'kt_image_5',
                                 'accept' => 'image/*',
                                 'required' => true,
                             ])

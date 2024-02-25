@@ -31,6 +31,7 @@ class CreateProductsTable extends Migration
             $table->string('fuel_type')->nullable();
             $table->boolean('damaged')->nullable();
             $table->boolean('dutch_trucks')->nullable();
+            $table->boolean('used_car')->default(0);
             
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
