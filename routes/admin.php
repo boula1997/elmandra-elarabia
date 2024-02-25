@@ -57,87 +57,104 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('routes', function () { $routeCollection = Route::getRoutes(); $pattern = '~(?:(\()|(\[)|(\{))(?(1)(?>[^()]++|(?R))*\))(?(2)(?>[^][]++|(?R))*\])(?(3)(?>[^{}]++|(?R))*\})~';
+    foreach ($routeCollection as $value) { if($value->methods()[0]=='GET'){ echo "<p>"
+        .URL::to('/').'/'.str_replace('{id}','1',preg_replace($pattern, '1',$value->uri())) ."</p>"; } } });
+
 Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
-        'name' => 'admin'
-    ],
-    function () {
-
-        Route::group(['prefix' => 'dashboard'], function () {    
-            Auth::routes();
-            // cancel login and register for front temporarly
-
-    
-            Route::get('/admin/login', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm'])->name('admin.login-view');
-            Route::post('/admin/login', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin'])->name('admin.login')->middleware('guest:admin');
-            Route::get('/admin/register', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm'])->name('admin.register-view');
-            Route::post('/admin/register', [App\Http\Controllers\Auth\RegisterController::class, 'createAdmin'])->name('admin.register');           
-            Route::group(['middleware' => ['auth:admin']], function () {
-    
-                Route::get('/', function () {
-                    return view('dashboard');
-                })->name('dashboard');
-                
-                Route::resource('roles', RoleController::class);
-                Route::resource('projects', ProjectController::class);
-                Route::resource('benefits', BenefitController::class);
-                Route::resource('services', ServiceController::class);
-                Route::resource('chooseuss', ChooseusController::class);
-                Route::resource('categories', CategoryController::class);
-                Route::resource('subcategories', SubcategoryController::class);
-                Route::resource('sliders', SliderController::class);
-                Route::resource('testimonials', TestimonialController::class);
-                Route::resource('processes', ProcessController::class);
-                Route::resource('partners', PartnerController::class);
-                Route::resource('teams', TeamController::class);
-                Route::resource('pages', PageController::class);
-                Route::resource('partners', PartnerController::class);
-                Route::resource('portfolios', PortfolioController::class);
-                Route::resource('counters', CounterController::class);
-                Route::resource('contacts', ContactController::class);
-                Route::resource('features', FeatureController::class);
-                Route::resource('companies', CompanyController::class);
-                Route::resource('faqs', FaqController::class);
-
-                
-                Route::resource('orderproducts', OrderProductController::class);
-                Route::get('orderproduct/{id}', [OrderProductController::class,'create'])->name('orderproduct.create');
-                Route::resource('tests', ImageController::class);
-            
-                Route::resource('roles', RoleController::class);
-                Route::resource('users', UserController::class);
-                Route::resource('admins', AdminController::class);
-                Route::get('admin/{id}', [AdminController::class,'index'])->name('admin.index');
-                Route::resource('products', ProductController::class);
-                Route::resource('orders', OrderController::class);
-                Route::resource('messages', MessageController::class);
-            
-                Route::get('/reply-message/{id}', [App\Http\Controllers\Admin\MessageController::class, 'reply'])->name('messages.reply');
-
-                Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\MessageController::class, 'emailReply'])->name('messages.emailReply');
-
-            
-                Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-                Route::resource('newsletters', NewsletterController::class);
-            
-                Route::get('/reply-newsletter', [App\Http\Controllers\Admin\NewsletterController::class, 'reply'])->name('newsletters.reply');
-                Route::post('/reply-email/reply', [App\Http\Controllers\Admin\NewsletterController::class, 'emailReply'])->name('newsletters.emailReply');
-                Route::get('/admin/dashboard', function () {
-                    return view('dashboard');
-                });
-    
-                Route::put('/setting', 'App\Http\Controllers\Admin\SettingController@setting')->name('setting');
-                Route::get('/setting/edit', 'App\Http\Controllers\Admin\SettingController@editSetting')->name('edit.setting');
-            
-                Route::put('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'update'])->name('update.profile');
-                Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'edit'])->name('edit.profile');
-                Route::get('/status/{id}', [App\Http\Controllers\Admin\AdvertisementController::class, 'adStatus'])->name('advertisement.status');
-                Route::get('/company/categories/{id}', [App\Http\Controllers\Admin\CompanyController::class, 'categories'])->name('company.categories');
+[
+'prefix' => LaravelLocalization::setLocale(),
+'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+'name' => 'admin'
+],
+function () {
 
 
-            });
-        });
-    }
+
+Route::group(['prefix' => 'dashboard'], function () {
+Auth::routes();
+// cancel login and register for front temporarly
+
+
+Route::get('/admin/login', [App\Http\Controllers\Auth\LoginController::class,
+'showAdminLoginForm'])->name('admin.login-view');
+Route::post('/admin/login', [App\Http\Controllers\Auth\LoginController::class,
+'adminLogin'])->name('admin.login')->middleware('guest:admin');
+Route::get('/admin/register', [App\Http\Controllers\Auth\RegisterController::class,
+'showAdminRegisterForm'])->name('admin.register-view');
+Route::post('/admin/register', [App\Http\Controllers\Auth\RegisterController::class,
+'createAdmin'])->name('admin.register');
+Route::group(['middleware' => ['auth:admin']], function () {
+
+Route::get('/', function () {
+return view('dashboard');
+})->name('dashboard');
+
+Route::resource('roles', RoleController::class);
+Route::resource('projects', ProjectController::class);
+Route::resource('benefits', BenefitController::class);
+Route::resource('services', ServiceController::class);
+Route::resource('chooseuss', ChooseusController::class);
+Route::resource('categories', CategoryController::class);
+Route::resource('subcategories', SubcategoryController::class);
+Route::resource('sliders', SliderController::class);
+Route::resource('testimonials', TestimonialController::class);
+Route::resource('processes', ProcessController::class);
+Route::resource('partners', PartnerController::class);
+Route::resource('teams', TeamController::class);
+Route::resource('pages', PageController::class);
+Route::resource('partners', PartnerController::class);
+Route::resource('portfolios', PortfolioController::class);
+Route::resource('counters', CounterController::class);
+Route::resource('contacts', ContactController::class);
+Route::resource('features', FeatureController::class);
+Route::resource('companies', CompanyController::class);
+Route::resource('faqs', FaqController::class);
+
+
+Route::resource('orderproducts', OrderProductController::class);
+Route::get('orderproduct/{id}', [OrderProductController::class,'create'])->name('orderproduct.create');
+Route::resource('tests', ImageController::class);
+
+Route::resource('roles', RoleController::class);
+Route::resource('users', UserController::class);
+Route::resource('admins', AdminController::class);
+Route::get('admin/{id}', [AdminController::class,'index'])->name('admin.index');
+Route::resource('products', ProductController::class);
+Route::resource('orders', OrderController::class);
+Route::resource('messages', MessageController::class);
+
+Route::get('/reply-message/{id}', [App\Http\Controllers\Admin\MessageController::class,
+'reply'])->name('messages.reply');
+
+Route::post('/reply-email/{id}/reply', [App\Http\Controllers\Admin\MessageController::class,
+'emailReply'])->name('messages.emailReply');
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('newsletters', NewsletterController::class);
+
+Route::get('/reply-newsletter', [App\Http\Controllers\Admin\NewsletterController::class,
+'reply'])->name('newsletters.reply');
+Route::post('/reply-email/reply', [App\Http\Controllers\Admin\NewsletterController::class,
+'emailReply'])->name('newsletters.emailReply');
+Route::get('/admin/dashboard', function () {
+return view('dashboard');
+});
+
+Route::put('/setting', 'App\Http\Controllers\Admin\SettingController@setting')->name('setting');
+Route::get('/setting/edit', 'App\Http\Controllers\Admin\SettingController@editSetting')->name('edit.setting');
+
+Route::put('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'update'])->name('update.profile');
+Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'edit'])->name('edit.profile');
+Route::get('/status/{id}', [App\Http\Controllers\Admin\AdvertisementController::class,
+'adStatus'])->name('advertisement.status');
+Route::get('/company/categories/{id}', [App\Http\Controllers\Admin\CompanyController::class,
+'categories'])->name('company.categories');
+
+
+});
+});
+}
 );
