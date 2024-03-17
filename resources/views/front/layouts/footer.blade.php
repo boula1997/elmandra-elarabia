@@ -49,7 +49,7 @@
     <div class="row gx-5">
         <div class="col-lg-12">
             <div class="py-lg-4 text-center justify-content-center">
-                <p>{{ settings()->copyright }}</p>
+                <p>{{ settings()->copyright }}  <strong>  {{ _('general.developed_by') }} <a class="font-weight-bold text-primary" href="https://yousab-tech.com/yousab-tech/public/en"> {{ _('general.yousab_tech') }}</a></strong></p>
                 {{-- <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Your Site Name</a>. All Rights Reserved.</p> --}}
             </div>
         </div>

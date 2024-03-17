@@ -1,5 +1,6 @@
 <footer class="main-footer text-center fixed-bottom">
     <strong><a href="{{ route('home') }}">{{ settings()->copyright }}</a></strong>
+    <strong>  {{ __('general.developed_by') }} <a class="font-weight-bold text-primary" href="https://yousab-tech.com/yousab-tech/public/en"> {{ __('general.yousab_tech') }}</a></strong>
 </footer>
 
 <!-- Control Sidebar -->

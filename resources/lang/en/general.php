@@ -611,4 +611,6 @@ return [
     'breadcrumb'=>"Breadcrumb",
     'show_used_car'=>"Show used car",
     'used_car'=>"Used car",
+    'developed_by'=>'Developed by',
+    'yousab_tech'=>'Yousab Tech.',
 ];
