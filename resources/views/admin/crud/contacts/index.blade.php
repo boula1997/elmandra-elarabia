@@ -39,6 +39,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>@lang('general.contact')</th>
+                                                <th>@lang('general.type')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -47,6 +48,7 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $contact->contact }}</td>
+                                                    <td>{{ $contact->type }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'contacts',

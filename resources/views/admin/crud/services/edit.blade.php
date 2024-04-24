@@ -38,19 +38,7 @@
                                             value="{{ old($locale . '.title', $service->translate($locale)->title) }}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>@lang('general.subtitle') - @lang('general.' . $locale)<span class="text-danger"> * </span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
-                                        </div>
-                                        <input type="text" name="{{ $locale . '[subtitle]' }}"
-                                            placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-5 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
-                                            value="{{ old($locale . '.subtitle', $service->translate($locale)->subtitle) }}">
-                                    </div>
-                                </div>
-
+                            
 
 
                                 <div class="col-form-group">
@@ -81,15 +69,6 @@
                                 'id' => 'kt_image_3',
                                 'accept' => 'image/*',
                                 'required' => true,
-                            ])
-
-                        </div>
-
-                        <div class="col-md-6">
-                            @include('admin.components.icon', [
-                                'label' => 'icon',
-                                'required' => true,
-                                'value' => old('icon', $service->icon),
                             ])
 
                         </div>

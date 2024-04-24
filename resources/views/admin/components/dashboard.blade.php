@@ -246,6 +246,7 @@
                         </ul>
                     </li>
                 @endcan
+
                 @can('order-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -266,19 +267,19 @@
                     </li>
                 @endcan
 
-                @can('faq-list')
+                @can('service-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-user-tag"></i>
                             <p>
-                                @lang('general.faqs')
+                                @lang('general.services')
                                 <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('faqs') }}</span>
+                                <span class="badge badge-info right">{{ itemsCount('services') }}</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('faqs.index') }}" class="nav-link">
+                                <a href="{{ route('services.index') }}" class="nav-link">
                                     <i class=" px-1 far fa-circle nav-icon"></i>
                                     <p>@lang('general.show')</p>
                                 </a>
@@ -288,19 +289,19 @@
                 @endcan
 
             
-                @can('benefit-list')
+                @can('process-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class=" px-1 fas fa-user-tag"></i>
                             <p>
-                                @lang('general.benefits')
+                                @lang('general.processes')
                                 <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('benefits') }}</span>
+                                <span class="badge badge-info right">{{ itemsCount('processes') }}</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('benefits.index') }}" class="nav-link">
+                                <a href="{{ route('processes.index') }}" class="nav-link">
                                     <i class=" px-1 far fa-circle nav-icon"></i>
                                     <p>@lang('general.show')</p>
                                 </a>
@@ -308,68 +309,6 @@
                         </ul>
                     </li>
                 @endcan
-
-            {{-- @can('process-list')
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class=" px-1 fas fa-user-tag"></i>
-                        <p>
-                            @lang('general.processes')
-                            <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('processes') }}</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('processes.index') }}" class="nav-link">
-                                <i class=" px-1 far fa-circle nav-icon"></i>
-                                <p>@lang('general.show')</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan --}}
-
-                @can('chooseus-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class=" px-1 fas fa-user-tag"></i>
-                            <p>
-                                @lang('general.chooseuss')
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('chooseuss') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('chooseuss.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
-
-                {{-- @can('subcategory-list')
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fab fa-buromobelexperte"></i>
-                            <p>
-                                @lang('general.subcategories') <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('subcategories') }}</span>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('subcategories.index') }}" class="nav-link">
-                                    <i class=" px-1 far fa-circle nav-icon"></i>
-                                    <p>@lang('general.show')</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan --}}
 
                 @can('slider-list')
                     <li class="nav-item">
@@ -454,28 +393,6 @@
                         </ul>
                     </li>
                 @endcan
-
-            {{-- // TODO(ibrahim): add component or module to show coustmer on a map  --}}
-            @can('feature-list')
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class=" px-1 fas fa-globe"></i>
-                        <p>
-                            @lang('general.features') <i class=" px-1 fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ itemsCount('features') }}</span>
-                        </p>
-                    </a>
-                    {{-- // TODO(boula): make sidebar links go directlt to psge index without dropsown and add active to links easy --}}
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('features.index') }}" class="nav-link">
-                                <i class=" px-1 far fa-circle nav-icon"></i>
-                                <p>@lang('general.show')</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan
 
                 {{-- @can('review-list')
                     <li class="nav-item">

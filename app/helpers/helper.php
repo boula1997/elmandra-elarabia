@@ -26,6 +26,7 @@ use App\Models\Slider;
 use App\Models\Subcategory;
 use App\Models\User;
 use App\Models\Review;
+use App\Models\Service;
 use App\Models\Store;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -115,9 +116,8 @@ function itemsCount($model)
         "benefits"=>count(Benefit::get()),
         "projects"=>count(Project::get()),
         "processes"=>count(Process::get()),
-        "chooseuss"=>count(Chooseus::get()),
-        
-        
+        "services"=>count(Service::get()),
+    
     ];
 
 

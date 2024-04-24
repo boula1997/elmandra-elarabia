@@ -40,6 +40,7 @@
                                                 <th>#</th>
                                                 <th>@lang('general.image')</th>
                                                 <th>@lang('general.title')</th>
+                                                <th>@lang('general.company')</th>
                                                 <th>@lang('general.controls')</th>
                                             </tr>
                                         </thead>
@@ -50,6 +51,7 @@
                                                     <td><img width="100" height="100" src="{{ $category->image }}"
                                                             alt="{{ $category->title }}"></td>
                                                     <td>{{ $category->title }}</td>
+                                                    <td>{{ $category->company->title }}</td>
                                                     <td>
                                                         @include('admin.components.controls', [
                                                             'route' => 'categories',

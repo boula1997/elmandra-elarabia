@@ -69,7 +69,7 @@
             <div class="card card-custom">
                 <div class="card-body mt-5">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 d-none">
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.identifier') }}</label>
