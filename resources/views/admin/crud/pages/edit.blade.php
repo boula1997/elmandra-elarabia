@@ -81,6 +81,18 @@
 
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="video">{{ __('general.video') }}</label>
+                                <input id="video" type="text" class="form-control @error('video') is-invalid @enderror" name="video" value="{{ old('video',$page->video) }}">
+                                @error('video')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                     </div>
                     <br>
                     @include('admin.components.images', ['images' => $images])

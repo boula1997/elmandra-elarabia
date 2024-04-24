@@ -65,6 +65,16 @@
                             <div class="form-group">
                                 <label for="exampleInputFile1">{{ __('general.images') }}</label>
                                 <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="mb-7 p-3 rounded h-100">
+                                            <div class="card-title fw-bold mb-5">
+                                                <h5 class="font-weight-bolder text-dark">@lang('general.video'):</h5>
+                                                <a class="m-0 text-dark" href="{{ $page->video }}" target="__blank">{{  $page->video  }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
                                     @foreach ($images as $image)
                                         @if (isset($image->id))
                                             <div class="col-md-3">

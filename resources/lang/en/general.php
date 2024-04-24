@@ -613,4 +613,5 @@ return [
     'used_car'=>"Used car",
     'developed_by'=>'Developed by',
     'yousab_tech'=>'Yousab Tech.',
+    'video'=>'Video',
 ];
