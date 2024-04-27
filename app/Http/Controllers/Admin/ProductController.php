@@ -120,7 +120,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         try {
-            $data = $request->except('image','images','profile_avatar_remove');
+            $data = $request->except('image','images','profile_avatar_remove','delimages');
             if ($request->has('used_car')) {
                 $data['used_car'] = 1;
             
