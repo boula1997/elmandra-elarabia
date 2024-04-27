@@ -128,7 +128,7 @@ class ProductController extends Controller
                 $data['used_car'] = 0;
             }
             $product->update($data);
-            $product->updateFile();
+            $product->updateFiles();
             $product->uploadFiles();
             return redirect()->route('products.index', compact('product'))
                 ->with('success', trans('general.update_successfully'));
