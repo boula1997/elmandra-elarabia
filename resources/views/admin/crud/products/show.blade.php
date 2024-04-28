@@ -186,9 +186,121 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.model_year'):</h5>
+                                <p class="m-0">{{ $product->model_year }}</p>
 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.model'):</h5>
+                                <p class="m-0">{{ $product->model }}</p>
 
-                        
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.driving_type'):</h5>
+                                <p class="m-0">{{ $product->driving_type }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.engine'):</h5>
+                                <p class="m-0">{{ $product->engine }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.wheelbase'):</h5>
+                                <p class="m-0">{{ $product->wheelbase }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.cab'):</h5>
+                                <p class="m-0">{{ $product->cab }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.steering'):</h5>
+                                <p class="m-0">{{ $product->steering }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.front_axle'):</h5>
+                                <p class="m-0">{{ $product->front_axle }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.rear_axles'):</h5>
+                                <p class="m-0">{{ $product->rear_axles }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.frame'):</h5>
+                                <p class="m-0">{{ $product->frame }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.gcw'):</h5>
+                                <p class="m-0">{{ $product->gcw }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.fuel_tanker'):</h5>
+                                <p class="m-0">{{ $product->fuel_tanker }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.tires'):</h5>
+                                <p class="m-0">{{ $product->tires }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.battery'):</h5>
+                                <p class="m-0">{{ $product->battery }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.oversize'):</h5>
+                                <p class="m-0">{{ $product->oversize }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.color'):</h5>
+                                <p class="m-0">{{ $product->color }}</p>
+
+                            </div>
+                        </div>
+
 
                         <div class="form-group">
                             <img src="{{ $product->image }}" class="w-50">
