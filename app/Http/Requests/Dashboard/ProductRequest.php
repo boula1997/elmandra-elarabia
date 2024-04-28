@@ -41,6 +41,22 @@ class ProductRequest extends FormRequest
             'gearBox' =>  'required' ,
             'mileAge' =>  'required' ,
             'manYear' =>  'required' ,
+            'model_year'=>'required',
+            'model'=>'required',
+            'driving_type'=>'required',
+            'engine'=>'required',
+            'wheelbase'=>'required',
+            'cab'=>'required',
+            'steering'=>'required',
+            'front_axle'=>'required',
+            'rear_axles'=>'required',
+            'frame'=>'required',
+            'gcw'=>'required',
+            'fuel_tanker'=>'required',
+            'tires'=>'required',
+            'battery'=>'required',
+            'oversize'=>'required',
+            'color'=>'required',
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string']];

@@ -262,6 +262,228 @@
                         </div>
 
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.model_year') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="model_year" placeholder="@lang('general.model_year')"
+                                        class="form-control  pl-1 min-h-40px @error('model_year') is-invalid @enderror"
+                                        value="{{ old('model_year') }}">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.model') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="model" placeholder="@lang('general.model')"
+                                        class="form-control  pl-1 min-h-40px @error('model') is-invalid @enderror"
+                                        value="{{ old('model') }}">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.driving_type') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="driving_type" placeholder="@lang('general.driving_type')"
+                                        class="form-control  pl-1 min-h-40px @error('driving_type') is-invalid @enderror"
+                                        value="{{ old('driving_type') }}">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.engine') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="engine" placeholder="@lang('general.engine')"
+                                        class="form-control  pl-1 min-h-40px @error('engine') is-invalid @enderror"
+                                        value="{{ old('engine') }}">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.wheelbase') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="wheelbase" placeholder="@lang('general.wheelbase')"
+                                        class="form-control  pl-1 min-h-40px @error('wheelbase') is-invalid @enderror"
+                                        value="{{ old('wheelbase') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.cab') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="cab" placeholder="@lang('general.cab')"
+                                        class="form-control  pl-1 min-h-40px @error('cab') is-invalid @enderror"
+                                        value="{{ old('cab') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.steering') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="steering" placeholder="@lang('general.steering')"
+                                        class="form-control  pl-1 min-h-40px @error('steering') is-invalid @enderror"
+                                        value="{{ old('steering') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.front_axle') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="front_axle" placeholder="@lang('general.front_axle')"
+                                        class="form-control  pl-1 min-h-40px @error('front_axle') is-invalid @enderror"
+                                        value="{{ old('front_axle') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.rear_axles') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="rear_axles" placeholder="@lang('general.rear_axles')"
+                                        class="form-control  pl-1 min-h-40px @error('rear_axles') is-invalid @enderror"
+                                        value="{{ old('rear_axles') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.frame') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="frame" placeholder="@lang('general.frame')"
+                                        class="form-control  pl-1 min-h-40px @error('frame') is-invalid @enderror"
+                                        value="{{ old('frame') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.gcw') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="gcw" placeholder="@lang('general.gcw')"
+                                        class="form-control  pl-1 min-h-40px @error('gcw') is-invalid @enderror"
+                                        value="{{ old('gcw') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.fuel_tanker') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="fuel_tanker" placeholder="@lang('general.fuel_tanker')"
+                                        class="form-control  pl-1 min-h-40px @error('fuel_tanker') is-invalid @enderror"
+                                        value="{{ old('fuel_tanker') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.tires') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="tires" placeholder="@lang('general.tires')"
+                                        class="form-control  pl-1 min-h-40px @error('tires') is-invalid @enderror"
+                                        value="{{ old('tires') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.battery') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="battery" placeholder="@lang('general.battery')"
+                                        class="form-control  pl-1 min-h-40px @error('battery') is-invalid @enderror"
+                                        value="{{ old('battery') }}">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.oversize') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="oversize" placeholder="@lang('general.oversize')"
+                                        class="form-control  pl-1 min-h-40px @error('oversize') is-invalid @enderror"
+                                        value="{{ old('oversize') }}">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.color') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="color" placeholder="@lang('general.color')"
+                                        class="form-control  pl-1 min-h-40px @error('color') is-invalid @enderror"
+                                        value="{{ old('color') }}">
+                                </div>
+                            </div>
+                        </div>
 
 
 
