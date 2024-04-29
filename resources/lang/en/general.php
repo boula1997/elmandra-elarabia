@@ -604,7 +604,7 @@ return [
     "dutch_trucks"=>'Dutch Trucks',
     "engineCapacity"=>'Engine Capacity', 
     "suspensionType"=>'Suspension Type', 
-    "axelsNumber"=>'Axels Number', 
+    "axelsNumber"=>'Front Axle', 
     "gearBox"=>'Gear Box',
     "mileAge"=>'Mile Age',
     "manYear"=>'Man Year',
@@ -630,4 +630,5 @@ return [
     'battery'=>'Battery',
     'oversize'=>'Oversize',
     'color'=>'Color',
+    'transmission'=>'Transmission',
 ];

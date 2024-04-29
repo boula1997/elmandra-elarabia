@@ -163,16 +163,6 @@
                         </div>
                         
                         <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="" class="form-label">{{ __('general.dutch_trucks') }}</label>
-                                <select class="form-select form-select-lg" name="dutch_trucks" id="dutch_trucks">                                
-                                        <option {{ $product->dutch_trucks == '1' ? 'selected' : '' }} value="1" {{ old('dutch_trucks') }}>{{ __('general.yes') }}</option>
-                                        <option  {{ $product->dutch_trucks == '0' ? 'selected' : '' }} value="0" {{ old('dutch_trucks') }}>{{ __('general.no') }}</option>                                                             
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.engineCapacity') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
@@ -239,19 +229,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.manYear') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="date" name="manYear" placeholder="@lang('general.manYear')"
-                                        class="form-control  pl-1 min-h-40px @error('manYear') is-invalid @enderror"
-                                        value="{{ old('manYear', $product->manYear) }}">
-                                </div>
-                            </div>
-                        </div>
+                  
 
                         <div class="col-md-6">
                             <div class="col-md-12">
@@ -293,22 +271,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.driving_type') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="driving_type" placeholder="@lang('general.driving_type')"
-                                        class="form-control  pl-1 min-h-40px @error('driving_type') is-invalid @enderror"
-                                        value="{{ old('driving_type', $product->driving_type) }}">
-                                </div>
-                            </div>
-                        </div>
-
 
                         <div class="col-md-6">
                             <div class="form-group">
@@ -362,19 +324,6 @@
                                     <input type="text" name="steering" placeholder="@lang('general.steering')"
                                         class="form-control  pl-1 min-h-40px @error('steering') is-invalid @enderror"
                                         value="{{ old('steering', $product->steering) }}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>@lang('general.front_axle') <span class="text-danger"> * </span></label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
-                                    </div>
-                                    <input type="text" name="front_axle" placeholder="@lang('general.front_axle')"
-                                        class="form-control  pl-1 min-h-40px @error('front_axle') is-invalid @enderror"
-                                        value="{{ old('front_axle', $product->front_axle) }}">
                                 </div>
                             </div>
                         </div>
@@ -469,6 +418,20 @@
                                     <input type="text" name="oversize" placeholder="@lang('general.oversize')"
                                         class="form-control  pl-1 min-h-40px @error('oversize') is-invalid @enderror"
                                         value="{{ old('oversize', $product->oversize) }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@lang('general.transmission') <span class="text-danger"> * </span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                                    </div>
+                                    <input type="text" name="transmission" placeholder="@lang('general.transmission')"
+                                        class="form-control  pl-1 min-h-40px @error('transmission') is-invalid @enderror"
+                                        value="{{ old('transmission', $product->transmission) }}">
                                 </div>
                             </div>
                         </div>

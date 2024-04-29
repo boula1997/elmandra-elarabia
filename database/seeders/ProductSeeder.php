@@ -116,7 +116,7 @@ class ProductSeeder extends Seeder
                 'kind'=>$kind[$i],
                 'engineCapacity'=>$engineCapacity[$i],
                 'suspensionType'=>$suspensionType[$i],
-                'manYear'=>$manYear[$i],
+                // 'manYear'=>$manYear[$i],
                 'mileAge'=>$mileAge[$i],
                 'configuration'=>$configuration[$i],
                 'gearBox'=>$gearBox[$i],

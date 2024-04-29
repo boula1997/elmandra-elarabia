@@ -119,17 +119,6 @@
 
                             </div>
                         </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.dutch_trucks'):</h5>
-                                <p class="m-0"> {{ $product->dutch_trucks == '1' ?   __('general.yes') : __('general.no') }}   </p>
-
-                            </div>
-                        </div>
-
-                        
-
                        
                         <div class="col-md-6">
                             <div class="form-group">
@@ -168,13 +157,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.manYear'):</h5>
-                                <p class="m-0">{{ $product->manYear }}</p>
-
-                            </div>
-                        </div>
+                     
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -201,13 +184,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.driving_type'):</h5>
-                                <p class="m-0">{{ $product->driving_type }}</p>
-
-                            </div>
-                        </div>
+                       
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.engine'):</h5>
@@ -233,13 +210,6 @@
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.steering'):</h5>
                                 <p class="m-0">{{ $product->steering }}</p>
-
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.front_axle'):</h5>
-                                <p class="m-0">{{ $product->front_axle }}</p>
 
                             </div>
                         </div>
@@ -290,6 +260,13 @@
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.oversize'):</h5>
                                 <p class="m-0">{{ $product->oversize }}</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h5 class="font-weight-bolder text-dark">@lang('general.transmission'):</h5>
+                                <p class="m-0">{{ $product->transmission }}</p>
 
                             </div>
                         </div>

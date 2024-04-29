@@ -645,4 +645,6 @@ return [
     'battery'=>'بطارية',
     'oversize'=>'كبيرة الحجم',
     'color'=>'لون',
+    'transmission'=>'الانتقال',
+
 ];

@@ -28,7 +28,6 @@ class ProductResource extends JsonResource
             "engineCapacity" => $this->engineCapacity,
             "suspensionType" => $this->suspensionType,
             "mileAge" => $this->mileAge,
-            "manYear" => $this->manYear,
             "configuration" => $this->configuration,
             "gearBox" => $this->gearBox,
             "axelsNumber" => $this->axelsNumber,
@@ -36,12 +35,10 @@ class ProductResource extends JsonResource
             "used_car"=>$this->used_car,
             "model_year"=>$this->model_year,
             "model"=>$this->model,
-            "driving_type"=>$this->driving_type,
             "engine"=>$this->engine,
             "wheelbase"=>$this->wheelbase,
             "cab"=>$this->cab,
             "steering"=>$this->steering,
-            "front_axle"=>$this->front_axle,
             "rear_axles"=>$this->rear_axles,
             "frame"=>$this->frame,
             "gcw"=>$this->gcw,
@@ -50,6 +47,7 @@ class ProductResource extends JsonResource
             "battery"=>$this->battery,
             "oversize"=>$this->oversize,
             "color"=>$this->color,
+            "transmission"=>$this->transmission,
             "images" => $this->images,
         
         ];

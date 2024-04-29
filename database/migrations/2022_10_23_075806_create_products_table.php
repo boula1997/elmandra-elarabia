@@ -24,23 +24,23 @@ class CreateProductsTable extends Migration
             $table->string('engineCapacity')->nullable();
             $table->double('mileAge')->nullable();
             $table->string('number')->nullable();
-            $table->date('manYear')->nullable();
+            // $table->date('manYear')->nullable();
             // new
             $table->string('promotions')->nullable();
             $table->string('emission_code')->nullable();
             $table->string('fuel_type')->nullable();
             $table->boolean('damaged')->nullable();
-            $table->boolean('dutch_trucks')->nullable();
+            // $table->boolean('dutch_trucks')->nullable();
             $table->boolean('used_car')->default(0);
             // new
             $table->string('model_year')->nullable();
             $table->string('model')->nullable();
-            $table->string('driving_type')->nullable();
+            // $table->string('driving_type')->nullable();
             $table->string('engine')->nullable();
             $table->string('wheelbase')->nullable();
             $table->string('cab')->nullable();
             $table->string('steering')->nullable();
-            $table->string('front_axle')->nullable();
+            $table->string('transmission')->nullable();
             $table->string('rear_axles')->nullable();
             $table->string('frame')->nullable();
             $table->string('gcw')->nullable();

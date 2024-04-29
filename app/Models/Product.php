@@ -72,8 +72,6 @@ class Product extends Model implements TranslatableContract
             return $q->where('mileAge', request()->mileAge);
         })->when(request()->number, function ($q) {
             return $q->where('number', request()->number);
-        })->when(request()->manYear, function ($q) {
-            return $q->where('manYear', request()->manYear);
         })->when(request()->promotions, function ($q) {
             return $q->where('promotions', request()->promotions);
         })->when(request()->emission_code, function ($q) {
@@ -82,10 +80,39 @@ class Product extends Model implements TranslatableContract
             return $q->where('fuel_type', request()->fuel_type);
         })->when(request()->damaged, function ($q) {
             return $q->where('damaged', request()->damaged);
-        })->when(request()->dutch_trucks, function ($q) {
-            return $q->where('dutch_trucks', request()->dutch_trucks);
+        })->when(request()->model_year, function ($q) {
+            return $q->where('model_year', request()->model_year);
+        })->when(request()->model, function ($q) {
+            return $q->where('model', request()->model);
+        })->when(request()->engine, function ($q) {
+            return $q->where('engine', request()->engine);
+        })->when(request()->wheelbase, function ($q) {
+            return $q->where('wheelbase', request()->wheelbase);
+        })->when(request()->cab, function ($q) {
+            return $q->where('cab', request()->cab);
+        })->when(request()->steering, function ($q) {
+            return $q->where('steering', request()->steering);
+        })->when(request()->transmission, function ($q) {
+            return $q->where('transmission', request()->transmission);
+        })->when(request()->rear_axles, function ($q) {
+            return $q->where('rear_axles', request()->rear_axles);
+        })->when(request()->frame, function ($q) {
+            return $q->where('frame', request()->frame);
+        })->when(request()->gcw, function ($q) {
+            return $q->where('gcw', request()->gcw);
+        })->when(request()->fuel_tanker, function ($q) {
+            return $q->where('fuel_tanker', request()->fuel_tanker);
+        })->when(request()->tires, function ($q) {
+            return $q->where('tires', request()->tires);
+        })->when(request()->battery, function ($q) {
+            return $q->where('battery', request()->battery);
+        })->when(request()->oversize, function ($q) {
+            return $q->where('oversize', request()->oversize);
+        })->when(request()->color, function ($q) {
+            return $q->where('color', request()->color);
         });
    }
+    
 
     
 }
