@@ -41,6 +41,7 @@ use App\Http\Controllers\Admin\MarketerController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\BenefitController;
 use App\Http\Controllers\API\ProjectController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Models\Advertisement;
 use App\Models\StoreProduct;
 use Illuminate\Support\Facades\Auth;
@@ -85,6 +86,8 @@ Route::get('/admin/register', [App\Http\Controllers\Auth\RegisterController::cla
 'showAdminRegisterForm'])->name('admin.register-view');
 Route::post('/admin/register', [App\Http\Controllers\Auth\RegisterController::class,
 'createAdmin'])->name('admin.register');
+Route::post('logout/admin', [AuthenticatedSessionController::class, 'destroy'])
+->name('admin.logout');
 Route::group(['middleware' => ['auth:admin']], function () {
 
 Route::get('/', function () {

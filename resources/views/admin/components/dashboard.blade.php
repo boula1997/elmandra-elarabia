@@ -489,7 +489,7 @@
 
                 <li class="nav-item pb-3">
 
-                    <form action="{{ route('logout') }}" method="POST">
+                    <form action="{{ route('admin.logout') }}" method="POST">
                         @csrf
                         <i class=" px-1 nav-icon  fa fa-sign-out text-white" aria-hidden="true"></i>
                         <button class="btn text-secondary" type="submit">@lang('general.logout')</button>
