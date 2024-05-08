@@ -106,11 +106,11 @@ class ProductSeeder extends Seeder
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => "description for ".[$i],
+                    'description' => "description for ",
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'description' => "description for ".[$i],
+                    'description' => "description for ",
 
                 ],
                 'category_id'=>rand(1,36),
