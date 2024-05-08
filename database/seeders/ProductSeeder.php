@@ -106,7 +106,7 @@ class ProductSeeder extends Seeder
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => "description for ",
+                    'description' => "هذا وصف لهذا المنتج ",
                 ],
                 'en' => [
                     'title' => $title_en[$i],
