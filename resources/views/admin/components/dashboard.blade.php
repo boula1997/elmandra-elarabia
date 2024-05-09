@@ -394,26 +394,24 @@
                     </li>
                 @endcan
 
-                {{-- @can('review-list')
+                @can('team-list')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="fas fa-store-alt"></i>
-                            <p > 
-                            <p style="font-size: 75%"> @lang('general.review') </p>
-                                <i class=" px-1 fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">{{ itemsCount('reviews') }}</span>
+                            <i class="fas fa-users"></i>                            <p>
+                                @lang('general.teams') <i class=" px-1 fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">{{ itemsCount('teams') }}</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('reviews.index') }}" class="nav-link">
+                                <a href="{{ route('teams.index') }}" class="nav-link">
                                     <i class=" px-1 far fa-circle nav-icon"></i>
                                     <p>@lang('general.show')</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                @endcan --}}
+                @endcan
                 
                 @can('contact-list')
                     <li class="nav-item">

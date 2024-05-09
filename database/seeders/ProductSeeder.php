@@ -106,11 +106,11 @@ class ProductSeeder extends Seeder
             $product = Product::create([
                 'ar' => [
                     'title' => $title_ar[$i],
-                    'description' => "هذا وصف لهذا المنتج ",
+                    'description' => "تمثل مجموعة FAW أكثر من 60 عامًا من الخبرة في تصنيع الشاحنات، حيث تتضمن مجموعة J6P من شاحنات الطرق السريعة والشاحنات المهنية مستويات عالية من الابتكار والموثوقية والراحة وسهولة القيادة التي جعلت من FAW اسمًا راسخًا في صناعة الشاحنات الثقيلة من أجل التشغيل الإنتاجي والفعال من حيث التكلفة. . توفر J6P راحة وتصميمًا على مستوى عالمي جنبًا إلى جنب مع محركات متقدمة ذات قدرة حصانية عالية وفعالة في استهلاك الوقود، وتنقل هندسة الشاحنات الثقيلة إلى مستوى جديد، مما يوفر إنتاجية مثالية بأقل تكلفة تشغيل ممكنة. تتوفر J6P بتشكيلات 4x2، و6x2 (محور الرفع الأوسط أو المحور)، و6x4، و8x4 مع محركات رأسية متقدمة ذات 4 صمامات تصل قوتها إلى 500 حصان، وهي منافس جديد جدي على الساحة العالمية في قطاع الشاحنات الفاخرة.",
                 ],
                 'en' => [
                     'title' => $title_en[$i],
-                    'description' => "description for ",
+                    'description' => "Representing FAW's 60 plus years of truck manufacturing experience, our J6P range of on-highway and vocational trucks incorporates the high levels of innovation, reliability, comfort and driveability that have made FAW an established name in the heavy truck industry for productive and cost effective operation. Offering world class comfort and styling combined with advanced fuel-efficient high horsepower engines, the J6P takes heavy truck engineering to a new level, providing optimum productivity at the lowest possible operating cost. Available in 4x2, 6x2 (mid-lift or tag axle), 6x4 and 8x4 configurations with advanced 4-valve head engines up to 500 horsepower, the J6P is a serious new contender on the global stage in the premium truck segment.",
 
                 ],
                 'category_id'=>rand(1,36),
