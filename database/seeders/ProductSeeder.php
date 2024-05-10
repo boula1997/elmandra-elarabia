@@ -126,6 +126,22 @@ class ProductSeeder extends Seeder
                 'axelsNumber'=>$axelsNumber[$i],
                 'number'=>$number[$i],
 
+                'model_year' => '202'.$i,
+                'model' => 'Ford F-'.rand(100,1540),
+                'engine' => 'Inline-4',
+                'wheelbase' => '110 inches',
+                'cab' => 'Crew',
+                'steering' => 'Manual',
+                'transmission' => 'Manual',
+                'rear_axles' => 'Single',
+                'frame' => 'Aluminum',
+                'gcw' => '8,000 lbs',
+                'fuel_tanker' => '25 gallons',
+                'tires' => 'High-performance',
+                'battery' => '24V',
+                'oversize' => 'Extended',
+                'color' => rand(0,1)?'Red':'Black',
+
             ]);
 
             $product->file()->create(["url"=>$single_image[$i]]);
