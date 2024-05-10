@@ -240,14 +240,14 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>@lang('general.model_year') <span class="text-danger"> * </span></label>
+                                <label>@lang('general.year') <span class="text-danger"> * </span></label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="model_year" placeholder="@lang('general.model_year')"
-                                        class="form-control  pl-1 min-h-40px @error('model_year') is-invalid @enderror"
-                                        value="{{ old('model_year') }}">
+                                    <input type="text" name="year" placeholder="@lang('general.year')"
+                                        class="form-control  pl-1 min-h-40px @error('year') is-invalid @enderror"
+                                        value="{{ old('year') }}">
                                 </div>
                             </div>
                         </div>

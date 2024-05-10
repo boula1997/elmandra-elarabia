@@ -629,7 +629,7 @@ return [
     'developed_by'=>'تم التطوير بواسطة ',
     'yousab_tech'=>'يوساب تك.',
     'video'=>'فيديو',
-    'model_year'=>'سنة الصنع',
+    'year'=>'سنة الصنع',
     'model'=>'نموذج',
     'driving_type'=>'نوع القيادة',
     'engine'=>'محرك',

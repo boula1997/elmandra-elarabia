@@ -80,8 +80,8 @@ class Product extends Model implements TranslatableContract
             return $q->where('fuel_type', request()->fuel_type);
         })->when(request()->damaged, function ($q) {
             return $q->where('damaged', request()->damaged);
-        })->when(request()->model_year, function ($q) {
-            return $q->where('model_year', request()->model_year);
+        })->when(request()->year, function ($q) {
+            return $q->where('year', request()->year);
         })->when(request()->model, function ($q) {
             return $q->where('model', request()->model);
         })->when(request()->engine, function ($q) {

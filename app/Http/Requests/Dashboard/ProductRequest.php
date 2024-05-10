@@ -39,7 +39,7 @@ class ProductRequest extends FormRequest
             'axelsNumber' =>  'required' ,
             'gearBox' =>  'required' ,
             'mileAge' =>  'required' ,
-            'model_year'=>'required',
+            'year'=>'required',
             'model'=>'required',
             'engine'=>'required',
             'wheelbase'=>'required',

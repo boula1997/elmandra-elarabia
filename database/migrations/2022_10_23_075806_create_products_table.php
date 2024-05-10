@@ -33,7 +33,7 @@ class CreateProductsTable extends Migration
             // $table->boolean('dutch_trucks')->nullable();
             $table->boolean('used_car')->default(0);
             // new
-            $table->string('model_year')->nullable();
+            $table->string('year')->nullable();
             $table->string('model')->nullable();
             // $table->string('driving_type')->nullable();
             $table->string('engine')->nullable();

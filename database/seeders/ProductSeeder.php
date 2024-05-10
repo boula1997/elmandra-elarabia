@@ -126,7 +126,7 @@ class ProductSeeder extends Seeder
                 'axelsNumber'=>$axelsNumber[$i],
                 'number'=>$number[$i],
 
-                'model_year' => '202'.$i,
+                'year' => '202'.$i,
                 'model' => 'Ford F-'.rand(100,1540),
                 'engine' => 'Inline-4',
                 'wheelbase' => '110 inches',

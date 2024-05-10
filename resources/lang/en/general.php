@@ -614,7 +614,7 @@ return [
     'developed_by'=>'Developed by',
     'yousab_tech'=>'Yousab Tech.',
     'video'=>'Video',
-    'model_year'=>'Model Year',
+    'year'=>'Model Year',
     'model'=>'Model',
     'driving_type'=>'Driving Type',
     'engine'=>'Engine',

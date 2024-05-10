@@ -171,8 +171,8 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <h5 class="font-weight-bolder text-dark">@lang('general.model_year'):</h5>
-                                <p class="m-0">{{ $product->model_year }}</p>
+                                <h5 class="font-weight-bolder text-dark">@lang('general.year'):</h5>
+                                <p class="m-0">{{ $product->year }}</p>
 
                             </div>
                         </div>
