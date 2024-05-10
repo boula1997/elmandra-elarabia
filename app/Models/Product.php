@@ -48,8 +48,6 @@ class Product extends Model implements TranslatableContract
            });
         })->when(request()->minPrice, function ($q) {
             return $q->where('price', '>=',request()->minPrice)->where('price', '<=',request()->maxPrice);
-        })->when(request()->year, function ($q) {
-            return $q->whereYear('start_date', request()->year);
         })->when(request()->city_id, function ($q) {
             return $q->where('city_id', request()->city_id);
         })->when(request()->section_id, function ($q) {
