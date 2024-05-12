@@ -36,7 +36,7 @@ class ProductRequest extends FormRequest
             'damaged' =>  'required' ,
             'engineCapacity' =>  'required' ,
             'suspensionType' =>  'required' ,
-            'axelsNumber' =>  'required' ,
+            'axelsNumber' =>  'required|numeric' ,
             'gearBox' =>  'required' ,
             'mileAge' =>  'required' ,
             'year'=>'required',
