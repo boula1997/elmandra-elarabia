@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\CategoryRequest;
 use Illuminate\Support\Facades\File;
 use App\Models\Category;
+use App\Models\Company;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
 use Exception;
@@ -46,7 +47,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.crud.categories.create');
+        $companies=Company::get();
+        return view('admin.crud.categories.create',compact('companies'));
     }
 
     /**
@@ -89,7 +91,8 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         // dd($category);
-        return view('admin.crud.categories.edit', compact('category'));
+        $companies=Company::get();
+        return view('admin.crud.categories.edit', compact('category','companies'));
     }
     /**
      * Update the specified resource in storage.
