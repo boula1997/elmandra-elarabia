@@ -43,7 +43,15 @@
                 <div class="card card-custom">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="mb-7 p-3 rounded h-100">
+                                    <div class="card-title fw-bold">
+                                        <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
+                                        <p class="m-0">{{ $category->company->title }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 p-5">
                                 <div class="form-group">
                                     <img src="{{ $category->image }}" class="w-50">
                                 </div>

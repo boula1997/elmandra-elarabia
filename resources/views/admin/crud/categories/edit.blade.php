@@ -46,7 +46,16 @@
             <div class="card card-custom">
                 <div class="card-body mb-5">
                     <div class="row">
-
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.companies') }}</label>
+                                <select class="form-select form-select-lg" name="company_id" id="company">
+                                    @foreach ($companies as $company)
+                                        <option value="{{ $company->id }}" {{ old('company_id',$category->company_id)==$company->id? 'selected' : '' }}>{{ $company->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             @include('admin.components.image', [
                                 'label' => __('general.image'),
