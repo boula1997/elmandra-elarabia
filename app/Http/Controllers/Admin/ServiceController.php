@@ -121,7 +121,6 @@ class ServiceController extends Controller
     {
         try {
             $service->delete();
-            // $service->file->delete();
             $service->deleteFile();
             return redirect()->route('services.index')
                 ->with('success', trans('general.deleted_successfully'));

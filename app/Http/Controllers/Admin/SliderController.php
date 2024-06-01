@@ -121,7 +121,6 @@ class SliderController extends Controller
     {
         try {
             $slider->delete();
-            $slider->file->delete();
             $slider->deleteFile();
             return redirect()->route('sliders.index')
                 ->with('success', trans('general.deleted_successfully'));

@@ -119,7 +119,6 @@ class CompanyController extends Controller
     {
         try {
             $company->delete();
-            $company->file->delete();
             $company->deleteFile();
             return redirect()->route('companies.index')
                 ->with('success', trans('general.deleted_successfully'));

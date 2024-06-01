@@ -122,7 +122,6 @@ class FeatureController extends Controller
     {
         try {
             $feature->delete();
-            $feature->file->delete();
             $feature->deleteFile();
             return redirect()->route('features.index')
                 ->with('success', trans('general.deleted_successfully'));

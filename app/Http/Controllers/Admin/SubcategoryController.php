@@ -125,7 +125,6 @@ class SubcategoryController extends Controller
     {
         try {
             $subcategory->delete();
-            $subcategory->file->delete();
             $subcategory->deleteFile();
             return redirect()->route('subcategories.index')
                 ->with('success', trans('general.deleted_successfully'));

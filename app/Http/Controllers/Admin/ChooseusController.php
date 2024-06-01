@@ -123,7 +123,6 @@ class ChooseusController extends Controller
     {
         try {
             $chooseus->delete();
-            $chooseus->file->delete();
             $chooseus->deleteFile();
             return redirect()->route('chooseuss.index')
                 ->with('success', trans('general.deleted_successfully'));

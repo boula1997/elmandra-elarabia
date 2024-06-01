@@ -121,7 +121,6 @@ class TeamController extends Controller
     {
         try {
             $team->delete();
-            $team->file->delete();
             $team->deleteFile();
 
             return redirect()->route('teams.index')

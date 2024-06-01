@@ -121,7 +121,6 @@ class PartnerController extends Controller
     {
         try {
             $partner->delete();
-            $partner->file->delete();
             $partner->deleteFile();
 
             return redirect()->route('partners.index')

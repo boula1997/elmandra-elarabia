@@ -148,7 +148,6 @@ class ProductController extends Controller
     {
         try {
             $product->delete();
-            $product->file->delete();
             $product->deleteFile();
             return redirect()->route('products.index')
                 ->with('success', trans('general.deleted_successfully'));
