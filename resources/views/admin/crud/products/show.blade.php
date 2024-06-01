@@ -24,10 +24,10 @@
                                 id="{{ $locale }}" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $product->translate($locale)->title }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -36,10 +36,10 @@
                                 <br>
                                 <br>
                                     <div class="col-md-12">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                                <p class="m-0">{!! $product->translate($locale)->description !!}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{!! $product->translate($locale)->description !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -54,28 +54,28 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.category'):</h5>
-                                    <p class="m-0">{{ $product->category->title }}</p>
+                                    <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->category->title }}</p>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
-                                    <p class="m-0">{{ $product->company->title }}</p>
+                                    <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->company->title }}</p>
                                 </div>
                             </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.price'):</h5>
-                                <p class="m-0">{{ $product->price }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->price }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.kind'):</h5>
-                                <p class="m-0">{{ $product->kind }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->kind }}</p>
 
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.promotions'):</h5>
-                                <p class="m-0">{{ __('general.'.$product->promotions) }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ __('general.'.$product->promotions) }}</p>
 
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.configuration'):</h5>
-                                <p class="m-0">{{ $product->configuration }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->configuration }}</p>
 
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.emission_code'):</h5>
-                                <p class="m-0">{{ $product->emission_code }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->emission_code }}</p>
 
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.fuel_type'):</h5>
-                                <p class="m-0">{{ $product->fuel_type }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->fuel_type }}</p>
 
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.damaged'):</h5>
-                                <p class="m-0"> {{ $product->damaged == '1' ?   __('general.yes') : __('general.no') }}   </p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;"> {{ $product->damaged == '1' ?   __('general.yes') : __('general.no') }}   </p>
 
                             </div>
                         </div>
@@ -123,28 +123,28 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.engineCapacity'):</h5>
-                                <p class="m-0">{{ $product->engineCapacity }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->engineCapacity }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.suspensionType'):</h5>
-                                <p class="m-0">{{ $product->suspensionType }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->suspensionType }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.axelsNumber'):</h5>
-                                <p class="m-0">{{ $product->axelsNumber }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->axelsNumber }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.gearBox'):</h5>
-                                <p class="m-0">{{ $product->gearBox }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->gearBox }}</p>
 
                             </div>
                         </div>
@@ -152,7 +152,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.mileAge'):</h5>
-                                <p class="m-0">{{ $product->mileAge }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->mileAge }}</p>
 
                             </div>
                         </div>
@@ -172,14 +172,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.year'):</h5>
-                                <p class="m-0">{{ $product->year }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->year }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.model'):</h5>
-                                <p class="m-0">{{ $product->model }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->model }}</p>
 
                             </div>
                         </div>
@@ -188,63 +188,63 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.engine'):</h5>
-                                <p class="m-0">{{ $product->engine }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->engine }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.wheelbase'):</h5>
-                                <p class="m-0">{{ $product->wheelbase }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->wheelbase }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.cab'):</h5>
-                                <p class="m-0">{{ $product->cab }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->cab }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.steering'):</h5>
-                                <p class="m-0">{{ $product->steering }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->steering }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.rear_axles'):</h5>
-                                <p class="m-0">{{ $product->rear_axles }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->rear_axles }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.frame'):</h5>
-                                <p class="m-0">{{ $product->frame }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->frame }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.gcw'):</h5>
-                                <p class="m-0">{{ $product->gcw }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->gcw }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.fuel_tanker'):</h5>
-                                <p class="m-0">{{ $product->fuel_tanker }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->fuel_tanker }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.tires'):</h5>
-                                <p class="m-0">{{ $product->tires }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->tires }}</p>
 
                             </div>
                         </div>
@@ -252,28 +252,28 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.battery'):</h5>
-                                <p class="m-0">{{ $product->battery }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->battery }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.oversize'):</h5>
-                                <p class="m-0">{{ $product->oversize }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->oversize }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.transmission'):</h5>
-                                <p class="m-0">{{ $product->transmission }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->transmission }}</p>
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h5 class="font-weight-bolder text-dark">@lang('general.color'):</h5>
-                                <p class="m-0">{{ $product->color }}</p>
+                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->color }}</p>
 
                             </div>
                         </div>

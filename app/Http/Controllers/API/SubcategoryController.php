@@ -22,7 +22,7 @@ class SubcategoryController extends Controller
             $data['subcategories'] = SubcategoryResource::collection($this->subcategory->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class SubcategoryController extends Controller
             $data['subcategory'] = new SubcategoryResource($this->subcategory->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

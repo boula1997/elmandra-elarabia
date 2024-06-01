@@ -76,7 +76,7 @@
                                                         <label class="form-label"
                                                             for="name">{{ __('general.name') }}</label>
                                                         <input type="text" name="name"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.name') }}" value="{{ old('name',auth('web')->user()->name) }}" />
                                                         <div id="name" class="err"></div>
                                                     </div>
@@ -88,7 +88,7 @@
                                                         for="email">{{ __('general.email') }}</label>
                                                     <div class="form-outline form-white">
                                                         <input type="text" name="email"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.email') }}" value="{{ old('email',auth('web')->user()->email) }}"  />
                                                         <div id="email" class="err"></div>
                                                     </div>
@@ -100,7 +100,7 @@
                                                         <label class="form-label"
                                                             for="phone">{{ __('general.phone') }}</label>
                                                         <input type="text" name="phone"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.phone') }}" value="{{ old('phone',auth('web')->user()->phone) }}"  />
                                                         <div id="phone" class="err"></div>
                                                     </div>
@@ -112,7 +112,7 @@
                                                         for="address">{{ __('general.address') }}</label>
                                                     <div class="form-outline form-white">
                                                         <input type="text" name="address"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.address') }}" value="{{ old('address',auth('web')->user()->address) }}"  />
                                                         <div id="address" class="err"></div>
                                                     </div>

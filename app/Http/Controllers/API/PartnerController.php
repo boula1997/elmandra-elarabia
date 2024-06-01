@@ -22,7 +22,7 @@ class PartnerController extends Controller
             $data['partners'] = PartnerResource::collection($this->partner->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class PartnerController extends Controller
             $data['partner'] = new PartnerResource($this->partner->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

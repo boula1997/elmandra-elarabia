@@ -107,7 +107,7 @@
     type: 'checkbox',
     value: 1,
     checked: $('body').hasClass('layout-navbar-fixed'),
-    class: 'mr-1'
+    class: 'mr-1 targetCheckbox'
   }).on('click', function () {
     if ($(this).is(':checked')) {
       $('body').addClass('layout-navbar-fixed')
@@ -225,7 +225,7 @@
     type: 'checkbox',
     value: 1,
     checked: $('body').hasClass('layout-fixed'),
-    class: 'mr-1'
+    class: 'mr-1 targetCheckbox'
   }).on('click', function () {
     if ($(this).is(':checked')) {
       $('body').addClass('layout-fixed')
@@ -464,7 +464,7 @@
     type: 'checkbox',
     value: 1,
     checked: $('body').hasClass('layout-footer-fixed'),
-    class: 'mr-1'
+    class: 'mr-1 targetCheckbox'
   }).on('click', function () {
     if ($(this).is(':checked')) {
       $('body').addClass('layout-footer-fixed')

@@ -32,7 +32,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $partner->translate($locale)->title) }}">
                                     </div>
                                 </div>

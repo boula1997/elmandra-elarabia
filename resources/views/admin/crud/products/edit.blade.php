@@ -34,7 +34,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $product->translate($locale)->title) }}">
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@
                                     </div>
                                     <input type="text" name="price"
                                         placeholder="@lang('general.price')"
-                                        class="form-control  pl-1 min-h-40px @error('price') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('price') is-invalid @enderror"
                                         value="{{old('price',$product->price)}}">
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="engineCapacity" placeholder="@lang('general.engineCapacity')"
-                                        class="form-control  pl-1 min-h-40px @error('engineCapacity') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('engineCapacity') is-invalid @enderror"
                                         value="{{ old('engineCapacity', $product->engineCapacity) }}">
                                 </div>
                             </div>
@@ -184,7 +184,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="suspensionType" placeholder="@lang('general.suspensionType')"
-                                        class="form-control  pl-1 min-h-40px @error('suspensionType') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('suspensionType') is-invalid @enderror"
                                         value="{{ old('suspensionType', $product->suspensionType) }}">
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="axelsNumber" placeholder="@lang('general.axelsNumber')"
-                                        class="form-control  pl-1 min-h-40px @error('axelsNumber') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('axelsNumber') is-invalid @enderror"
                                         value="{{ old('axelsNumber', $product->axelsNumber) }}">
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="gearBox" placeholder="@lang('general.gearBox')"
-                                        class="form-control  pl-1 min-h-40px @error('gearBox') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('gearBox') is-invalid @enderror"
                                         value="{{ old('gearBox', $product->gearBox) }}">
                                 </div>
                             </div>
@@ -224,7 +224,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="mileAge" placeholder="@lang('general.mileAge')"
-                                        class="form-control  pl-1 min-h-40px @error('mileAge') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('mileAge') is-invalid @enderror"
                                         value="{{ old('mileAge', $product->mileAge) }}">
                                 </div>
                             </div>
@@ -251,7 +251,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="year" placeholder="@lang('general.year')"
-                                        class="form-control  pl-1 min-h-40px @error('year') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('year') is-invalid @enderror"
                                         value="{{ old('year', $product->year) }}">
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="model" placeholder="@lang('general.model')"
-                                        class="form-control  pl-1 min-h-40px @error('model') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('model') is-invalid @enderror"
                                         value="{{ old('model', $product->model) }}">
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="engine" placeholder="@lang('general.engine')"
-                                        class="form-control  pl-1 min-h-40px @error('engine') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('engine') is-invalid @enderror"
                                         value="{{ old('engine', $product->engine) }}">
                                 </div>
                             </div>
@@ -295,7 +295,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="wheelbase" placeholder="@lang('general.wheelbase')"
-                                        class="form-control  pl-1 min-h-40px @error('wheelbase') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('wheelbase') is-invalid @enderror"
                                         value="{{ old('wheelbase', $product->wheelbase) }}">
                                 </div>
                             </div>
@@ -309,7 +309,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="cab" placeholder="@lang('general.cab')"
-                                        class="form-control  pl-1 min-h-40px @error('cab') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('cab') is-invalid @enderror"
                                         value="{{ old('cab', $product->cab) }}">
                                 </div>
                             </div>
@@ -322,7 +322,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="steering" placeholder="@lang('general.steering')"
-                                        class="form-control  pl-1 min-h-40px @error('steering') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('steering') is-invalid @enderror"
                                         value="{{ old('steering', $product->steering) }}">
                                 </div>
                             </div>
@@ -335,7 +335,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="rear_axles" placeholder="@lang('general.rear_axles')"
-                                        class="form-control  pl-1 min-h-40px @error('rear_axles') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('rear_axles') is-invalid @enderror"
                                         value="{{ old('rear_axles', $product->rear_axles) }}">
                                 </div>
                             </div>
@@ -348,7 +348,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="frame" placeholder="@lang('general.frame')"
-                                        class="form-control  pl-1 min-h-40px @error('frame') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('frame') is-invalid @enderror"
                                         value="{{ old('frame', $product->frame) }}">
                                 </div>
                             </div>
@@ -361,7 +361,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="gcw" placeholder="@lang('general.gcw')"
-                                        class="form-control  pl-1 min-h-40px @error('gcw') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('gcw') is-invalid @enderror"
                                         value="{{ old('gcw', $product->gcw) }}">
                                 </div>
                             </div>
@@ -374,7 +374,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="fuel_tanker" placeholder="@lang('general.fuel_tanker')"
-                                        class="form-control  pl-1 min-h-40px @error('fuel_tanker') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('fuel_tanker') is-invalid @enderror"
                                         value="{{ old('fuel_tanker', $product->fuel_tanker) }}">
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="tires" placeholder="@lang('general.tires')"
-                                        class="form-control  pl-1 min-h-40px @error('tires') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('tires') is-invalid @enderror"
                                         value="{{ old('tires', $product->tires) }}">
                                 </div>
                             </div>
@@ -401,7 +401,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="battery" placeholder="@lang('general.battery')"
-                                        class="form-control  pl-1 min-h-40px @error('battery') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('battery') is-invalid @enderror"
                                         value="{{ old('battery', $product->battery) }}">
                                 </div>
                             </div>
@@ -416,7 +416,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="oversize" placeholder="@lang('general.oversize')"
-                                        class="form-control  pl-1 min-h-40px @error('oversize') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('oversize') is-invalid @enderror"
                                         value="{{ old('oversize', $product->oversize) }}">
                                 </div>
                             </div>
@@ -430,7 +430,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="transmission" placeholder="@lang('general.transmission')"
-                                        class="form-control  pl-1 min-h-40px @error('transmission') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('transmission') is-invalid @enderror"
                                         value="{{ old('transmission', $product->transmission) }}">
                                 </div>
                             </div>
@@ -445,7 +445,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="color" placeholder="@lang('general.color')"
-                                        class="form-control  pl-1 min-h-40px @error('color') is-invalid @enderror"
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('color') is-invalid @enderror"
                                         value="{{ old('color', $product->color) }}">
                                 </div>
                             </div>

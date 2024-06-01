@@ -11,23 +11,23 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="mb-7 bg-light p-3 rounded h-100">
+                            <div class="mb-5 bg-light p-3 rounded h-100">
                                 <div class="card-title fw-bold">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.contact'):</h5>
-                                    <p class="m-0">{{ $contact->contact }}</p>
+                                    <p style="margin: 0; color: inherit; font-weight: normal;">{{ $contact->contact }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="mb-7 bg-light p-3 rounded h-100">
+                            <div class="mb-5 bg-light p-3 rounded h-100">
                                 <div class="card-title fw-bold">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.type'):</h5>
-                                    <p class="m-0">{{ $contact->type }}</p>
+                                    <p style="margin: 0; color: inherit; font-weight: normal;">{{ $contact->type }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="mb-7 bg-light p-3 rounded h-100">
+                            <div class="mb-5 bg-light p-3 rounded h-100">
                                 <div class="card-title fw-bold">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.icon'):</h5>
                                     <i class="{{ $contact->icon }}"></i>

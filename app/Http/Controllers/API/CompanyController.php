@@ -22,7 +22,7 @@ class CompanyController extends Controller
             $data['companys'] = CompanyResource::collection($this->company->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class CompanyController extends Controller
             $data['company'] = new CompanyResource($this->company->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

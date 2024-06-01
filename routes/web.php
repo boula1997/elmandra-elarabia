@@ -28,11 +28,39 @@ use App\Http\Controllers\ProfileController;
 
 
 
-Route::get('routes', function () { $routeCollection = Route::getRoutes(); $pattern = '~(?:(\()|(\[)|(\{))(?(1)(?>[^()]++|(?R))*\))(?(2)(?>[^][]++|(?R))*\])(?(3)(?>[^{}]++|(?R))*\})~'; foreach ($routeCollection as $value) { if($value->methods()[0]=='GET'){ echo "
+Route::get('routes', function () {
+    $pattern = '~(?:(\()|(\[)|(\{))(?(1)(?>[^()]++|(?R))*\))(?(2)(?>[^][]++|(?R))*\])(?(3)(?>[^{}]++|(?R))*\})~'; 
+    $routeCollection = Route::getRoutes();
+    echo "<table style='width:100%'>";
+    echo "<tr>";
+    echo "<td width='10%'><h4>HTTP Method</h4></td>";
+    echo "<td width='10%'><h4>Route</h4></td>";
+    echo "<td width='10%'><h4>Name</h4></td>";
+    echo "<td width='70%'><h4>Corresponding Action</h4></td>";
+    echo "</tr>";
+    foreach ($routeCollection as $value) {
+        if($value->methods()[0]=='GET'){
+            echo "<tr>";
+            echo "<td>" . $value->methods()[0] . "</td>";
+            echo "<td>" ."<a class='d-block' href='" .URL::to('/').'/'.str_replace('{id}','1',preg_replace($pattern, '1',$value->uri())) ."' target='__blank'>" .URL::to('/').'/'.str_replace('{id}','1',preg_replace($pattern, '1',$value->uri())) ."</a>" . "</td>";
+            echo "<td>" . $value->getName() . "</td>";
+            echo "<td>" . $value->getActionName() . "</td>";
+            echo "</tr>";
+        }
+    }
+    foreach ($routeCollection as $value) {
+        if($value->methods()[0]!=='GET'){
+            echo "<tr>";
+            echo "<td>" . $value->methods()[0] . "</td>";
+            echo "<td>" ."<p class='d-block'>" .URL::to('/').'/'.str_replace('{id}','1',preg_replace($pattern, '1',$value->uri())) ."</p>" . "</td>";
+            echo "<td>" . $value->getName() . "</td>";
+            echo "<td>" . $value->getActionName() . "</td>";
+            echo "</tr>";
+        }
+    }
+    echo "</table>";
+});
 
-    " .URL::to('/').'/'.str_replace('{id}','1',preg_replace($pattern, '1',$value->uri())) ."
-    
-    "; } } });
 
 Route::group(
 [

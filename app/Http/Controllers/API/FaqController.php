@@ -22,7 +22,7 @@ class FaqController extends Controller
             $data['faqs'] = FaqResource::collection($this->faq->get());
             return successResponse($data,trans('general.sent_successfully'));
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class FaqController extends Controller
             $data['faq'] = new FaqResource($this->faq->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

@@ -34,7 +34,7 @@
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
                                             <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
-                                                class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                                class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                                 value="{{ old($locale . '.title') }}">
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                                             </div>
                                             <input type="text" name="{{ $locale . '[address]' }}"
                                                 placeholder="@lang('general.address')"
-                                                class="form-control  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
+                                                class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.address') is-invalid @enderror"
                                                 value="{{ old($locale . '.address') }}">
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.owner') }}</label>
-                                    <input type="text" name="owner" value="{{ old('owner') }}" class="form-control"
+                                    <input type="text" name="owner" value="{{ old('owner') }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputName" placeholder="@lang('general.owner')">
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.phone') }}</label>
-                                    <input type="text" name="phone" value="{{ old('phone') }}" class="form-control"
+                                    <input type="text" name="phone" value="{{ old('phone') }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputName" placeholder="@lang('general.phone')">
                                 </div>
                             </div>

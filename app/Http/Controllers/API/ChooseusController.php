@@ -22,7 +22,7 @@ class ChooseusController extends Controller
             $data['chooseuss'] = ChooseusResource::collection($this->chooseus->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class ChooseusController extends Controller
             $data['chooseus'] = new ChooseusResource($this->chooseus->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

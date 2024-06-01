@@ -22,7 +22,7 @@ class ContactController extends Controller
             $data['contacts'] = ContactResource::collection($this->contact->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class ContactController extends Controller
             $data['contact'] = new ContactResource($this->contact->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

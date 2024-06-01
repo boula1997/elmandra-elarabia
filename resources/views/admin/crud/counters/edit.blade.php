@@ -36,7 +36,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $counter->translate($locale)->title) }}">
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">{{ __('general.count') }}</label>
                                         <input type="text" name="count" value="{{ old('count', $counter->count) }}"
-                                            class="form-control" id="exampleInputName" placeholder="@lang('general.count')">
+                                            class="form-control @error('') invalid @enderror" id="exampleInputName" placeholder="@lang('general.count')">
                                     </div>
                                 </div>
 

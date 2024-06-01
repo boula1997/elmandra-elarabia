@@ -22,7 +22,7 @@ class BenefitController extends Controller
             $data['benefits'] = BenefitResource::collection($this->benefit->get());
             return successResponse($data,trans('general.sent_successfully'));
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class BenefitController extends Controller
             $data['benefit'] = new BenefitResource($this->benefit->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

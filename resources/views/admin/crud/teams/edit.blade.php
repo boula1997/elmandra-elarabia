@@ -33,7 +33,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $team->translate($locale)->title) }}">
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[subtitle]' }}"
                                             placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
                                             value="{{ old($locale . '.subtitle', $team->translate($locale)->subtitle) }}">
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                 </div>
                                 {{-- <div class="form-group">
                                         <label>@lang('teams.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
+                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control @error('') invalid @enderror kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
                                     </div> --}}
                             </div>
                         @endforeach
@@ -80,7 +80,7 @@
                                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="facebook" placeholder="@lang('general.facebook')"
-                                    class="form-control  pl-1 min-h-40px @error('facebook') is-invalid @enderror"
+                                    class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('facebook') is-invalid @enderror"
                                     value="{{ old('facebook', $team->facebook) }}">
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="twitter" placeholder="@lang('general.twitter')"
-                                    class="form-control  pl-1 min-h-40px @error('twitter') is-invalid @enderror"
+                                    class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('twitter') is-invalid @enderror"
                                     value="{{ old('twitter', $team->twitter) }}">
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="instagram" placeholder="@lang('general.instagram')"
-                                    class="form-control  pl-1 min-h-40px @error('instagram') is-invalid @enderror"
+                                    class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('instagram') is-invalid @enderror"
                                     value="{{ old('instagram', $team->instagram) }}">
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                 </div>
                                 <input type="text" name="linkedin" placeholder="@lang('general.linkedin')"
-                                    class="form-control  pl-1 min-h-40px @error('linkedin') is-invalid @enderror"
+                                    class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error('linkedin') is-invalid @enderror"
                                     value="{{ old('linkedin', $team->linkedin) }}">
                             </div>
                         </div>

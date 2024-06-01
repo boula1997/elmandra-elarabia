@@ -24,10 +24,10 @@
                                 id="{{ $locale }}" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $review->translate($locale)->title }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $review->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -39,10 +39,10 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <div class="mb-7 bg-light p-3 rounded h-100">
+                    <div class="mb-5 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
                             <h5 class="font-weight-bolder text-dark">@lang('general.count'):</h5>
-                            <p class="m-0">{{ $review->count }}</p>
+                            <p style="margin: 0; color: inherit; font-weight: normal;">{{ $review->count }}</p>
                         </div>
                     </div>
                 </div>

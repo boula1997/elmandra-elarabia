@@ -358,7 +358,7 @@ return [
     'code'=>'Code',
     'sold_by'=>'Sold By:',
     'asleltawfeer'=>'Asl El Tawfeer',
-    'save'=>'Saving',
+    'save'=>'Save',
     'action'=>'Action',
     'save_for_later'=>'Save for later',
     'remove'=>'Remove',

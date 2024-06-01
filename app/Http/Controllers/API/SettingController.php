@@ -22,7 +22,7 @@ class SettingController extends Controller
             $data['settings'] = new SettingResource($this->setting->first());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

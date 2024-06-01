@@ -20,7 +20,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
-                                            <input type="text" name="subject" value="{{ old('subject') }}" class="form-control"
+                                            <input type="text" name="subject" value="{{ old('subject') }}" class="form-control @error('') invalid @enderror"
                                                id="exampleInputName" placeholder="@lang('general.subject')">
                                         </div>
                                 </div>
@@ -35,7 +35,7 @@
                                     <label for="exampleInputEmail1">{{ __('general.newsletter') }}</label>
                                     <div class="mb-3">
                                         <label for="" class="form-label"></label>
-                                        <textarea class="form-control" name="newsletter" id="exampleInputName" rows="3" placeholder="@lang('general.newsletter')"></textarea>
+                                        <textarea class="form-control @error('') invalid @enderror" name="newsletter" id="exampleInputName" rows="3" placeholder="@lang('general.newsletter')"></textarea>
                                     </div>
 
                                 </div>

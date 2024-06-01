@@ -22,7 +22,7 @@ class PageController extends Controller
             $data['pages'] = PageResource::collection($this->page->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class PageController extends Controller
             $data['page'] = new PageResource($this->page->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

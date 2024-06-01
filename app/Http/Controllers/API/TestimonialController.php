@@ -22,7 +22,7 @@ class TestimonialController extends Controller
             $data['testimonials'] = TestimonialResource::collection($this->testimonial->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class TestimonialController extends Controller
             $data['testimonial'] = new TestimonialResource($this->testimonial->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

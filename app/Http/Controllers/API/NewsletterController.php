@@ -17,7 +17,7 @@ class NewsletterController extends Controller
             $data = Newsletter::create($request->all());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

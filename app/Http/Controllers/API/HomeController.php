@@ -94,7 +94,7 @@ class HomeController extends Controller
             $data['newsletter-section'] = new PageResource(page('newsletter'));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

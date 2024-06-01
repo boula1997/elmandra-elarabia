@@ -22,7 +22,7 @@
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
                                         <input type="text" name="name"
-                                            value="{{ old('name', $order->name) }}" class="form-control"
+                                            value="{{ old('name', $order->name) }}" class="form-control @error('') invalid @enderror"
                                             id="exampleInputName" placeholder="{{ __('general.name') }}">
                                         </div>
                                     </div>
@@ -37,7 +37,7 @@
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
                                         <input type="email" name="email"
-                                            value="{{ old('email', $order->email) }}" class="form-control"
+                                            value="{{ old('email', $order->email) }}" class="form-control @error('') invalid @enderror"
                                             id="exampleInputName" placeholder="{{ __('general.email') }}">
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
                                         <input type="text" name="address"
-                                            value="{{ old('address', $order->address) }}" class="form-control"
+                                            value="{{ old('address', $order->address) }}" class="form-control @error('') invalid @enderror"
                                             id="exampleInputName" placeholder="{{ __('general.address') }}">
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
                                         <input type="text" name="phone"
-                                            value="{{ old('phone', $order->phone) }}" class="form-control"
+                                            value="{{ old('phone', $order->phone) }}" class="form-control @error('') invalid @enderror"
                                             id="exampleInputName" placeholder="{{ __('general.phone') }}">
                                         </div>
                                     </div>

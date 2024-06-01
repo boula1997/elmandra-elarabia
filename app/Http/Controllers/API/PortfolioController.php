@@ -22,7 +22,7 @@ class PortfolioController extends Controller
             $data['portfolios'] = PortfolioResource::collection($this->portfolio->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class PortfolioController extends Controller
             $data['portfolio'] = new PortfolioResource($this->portfolio->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

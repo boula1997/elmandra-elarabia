@@ -35,7 +35,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $page->translate($locale)->title) }}">
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[subtitle]' }}"
                                             placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
                                             value="{{ old($locale . '.subtitle', $page->translate($locale)->subtitle) }}">
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">{{ __('general.identifier') }}</label>
                                     <input type="text" name="identifier"
-                                        value="{{ old('identifier', $page->identifier) }}" class="form-control"
+                                        value="{{ old('identifier', $page->identifier) }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputName" placeholder="@lang('general.identifier')">
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="video">{{ __('general.video') }}</label>
-                                <input id="video" type="text" class="form-control @error('video') is-invalid @enderror" name="video" value="{{ old('video',$page->video) }}">
+                                <input id="video" type="text" class="form-control @error('') invalid @enderror @error('video') is-invalid @enderror" name="video" value="{{ old('video',$page->video) }}">
                                 @error('video')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

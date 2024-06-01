@@ -12,19 +12,19 @@
                     <div class="tab-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.name'):</h5>
-                                        <p class="m-0">{{ $order->name }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $order->name }}</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.email'):</h5>
-                                        <p class="m-0">{{ $order->email }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $order->email }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -34,18 +34,18 @@
                         <br>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.address'):</h5>
-                                        <p class="m-0">{{ $order->address }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $order->address }}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.total-delivery'):</h5>
-                                        <p class="m-0">{{ $order->total }} {{ __('general.pound') }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $order->total }} {{ __('general.pound') }}</p>
                                     </div>
                                 </div>
                             </div>

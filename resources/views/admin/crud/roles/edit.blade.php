@@ -33,7 +33,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                             </div>
-                                             {!! Form::text('name', old('name', $role->name), ['placeholder' => 'Name', 'class' => 'form-control']) !!}
+                                             {!! Form::text('name', old('name', $role->name), ['placeholder' => 'Name', 'class' => 'form-control @error('') invalid @enderror']) !!}
                                         </div>
                                     </div>
                                 </div>

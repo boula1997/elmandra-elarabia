@@ -34,7 +34,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}" placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title') }}">
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[subtitle]' }}"
                                             placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
                                             value="{{ old($locale . '.subtitle') }}">
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="datetime-local" id="start_date" class="form-control" value="{{ old('start_date') }}"
+                                    <input type="datetime-local" id="start_date" class="form-control @error('') invalid @enderror" value="{{ old('start_date') }}"
                                         name="start_date">
                                     
                                 </div>
@@ -90,7 +90,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="datetime-local" id="end_date" class="form-control" value="{{ old('end_date') }}"
+                                    <input type="datetime-local" id="end_date" class="form-control @error('') invalid @enderror" value="{{ old('end_date') }}"
                                         name="end_date">
                                     
                                 </div>
@@ -103,7 +103,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
-                                    <input type="text" name="code" value="{{ old('code') }}" class="form-control"
+                                    <input type="text" name="code" value="{{ old('code') }}" class="form-control @error('') invalid @enderror"
                                     id="exampleInputName" placeholder="@lang('general.code')">
                             
                                 </div>

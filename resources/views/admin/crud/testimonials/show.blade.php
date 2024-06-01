@@ -24,19 +24,19 @@
                                 id="{{ $locale }}" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $testimonial->translate($locale)->title }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $testimonial->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.subtitle'):</h5>
-                                                <p class="m-0">{{ $testimonial->translate($locale)->subtitle }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $testimonial->translate($locale)->subtitle }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -46,10 +46,10 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                                <p class="m-0">{!! $testimonial->translate($locale)->description !!}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{!! $testimonial->translate($locale)->description !!}</p>
                                             </div>
                                         </div>
                                     </div>

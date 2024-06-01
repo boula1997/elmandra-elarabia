@@ -28,7 +28,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="text" name="name" value="{{ old('name', $user->name) }}"
-                                        class="form-control" id="exampleInputName" placeholder="@lang('general.name')">
+                                        class="form-control @error('') invalid @enderror" id="exampleInputName" placeholder="@lang('general.name')">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -38,7 +38,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="email" name="email" value="{{ old('email', $user->email) }}"
-                                        class="form-control" id="exampleInputEmail" placeholder="@lang('general.email')">
+                                        class="form-control @error('') invalid @enderror" id="exampleInputEmail" placeholder="@lang('general.email')">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -48,7 +48,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="phone" name="phone" value="{{ old('phone', $user->phone) }}"
-                                        class="form-control" id="exampleInputphone" placeholder="@lang('general.phone')">
+                                        class="form-control @error('') invalid @enderror" id="exampleInputphone" placeholder="@lang('general.phone')">
                                     </div>
                                 </div>
 
@@ -58,7 +58,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="password" name="password" value="" class="form-control"
+                                        <input type="password" name="password" value="" class="form-control @error('') invalid @enderror"
                                         id="exampleInputPassword" placeholder="Enter @lang('general.password')">
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                      <input type="password" name="confirm-password" value="{{ old('confirm-password') }}"
-                                        class="form-control" id="exampleInputConfirmpassword"
+                                        class="form-control @error('') invalid @enderror" id="exampleInputConfirmpassword"
                                         placeholder="Enter @lang('general.confirm_password')">
                                     </div>
                                 </div>

@@ -22,7 +22,7 @@ class AdvertisementController extends Controller
             $data['advertisements'] = AdvertisementResource::collection($this->advertisement->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class AdvertisementController extends Controller
             $data['advertisement'] = new AdvertisementResource($this->advertisement->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

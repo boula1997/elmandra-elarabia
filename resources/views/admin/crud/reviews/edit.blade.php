@@ -36,7 +36,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title', $review->translate($locale)->title) }}">
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[subtitle]' }}"
                                             placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
                                             value="{{ old($locale . '.subtitle', $review->translate($locale)->subtitle) }}">
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                 </div>
                                 {{-- <div class="form-group">
                                         <label>@lang('reviews.description') - @lang('general.'.$locale)<span class="text-danger"> * </span></label>
-                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
+                                        <textarea name="{{ $locale . '[description]' }}" @error($locale . '.description') is-invalid @enderror class="form-control @error('') invalid @enderror kt-ckeditor-5">{{ old($locale . '.description') }}</textarea>
                                     </div> --}}
                             </div>
                         @endforeach
@@ -82,7 +82,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">{{ __('general.count') }}</label>
                                         <input type="text" name="count" value="{{ old('count', $review->count) }}"
-                                            class="form-control" id="exampleInputName" placeholder="@lang('general.count')">
+                                            class="form-control @error('') invalid @enderror" id="exampleInputName" placeholder="@lang('general.count')">
                                     </div>
                                 </div>
 

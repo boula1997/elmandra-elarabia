@@ -42,7 +42,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="contact" value="{{ old('contact') }}" class="form-control"
+                                        <input type="text" name="contact" value="{{ old('contact') }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputName" placeholder="@lang('general.contact')">
                                     </div>
                                 </div>

@@ -12,18 +12,18 @@
                     <div class="tab-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.name'):</h5>
-                                        <p class="m-0">{{ $orderproduct->order->name }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->order->name }}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.email'):</h5>
-                                        <p class="m-0">{{ $orderproduct->order->email }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->order->email }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -32,18 +32,18 @@
                         <br>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.address'):</h5>
-                                        <p class="m-0">{{ $orderproduct->order->address }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->order->address }}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="mb-7 bg-light p-3 rounded h-100">
+                                <div class="mb-5 bg-light p-3 rounded h-100">
                                     <div class="card-title fw-bold">
                                         <h5 class="font-weight-bolder text-dark">@lang('general.total-delivery'):</h5>
-                                        <p class="m-0">{{ $orderproduct->order->total }} {{ __('general.pound') }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->order->total }} {{ __('general.pound') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -60,21 +60,21 @@
                                     <div class="form-group">
                                         <label class="col-form-label d-block">@lang('general.product')</label>
                                         <br>
-                                        <p class="m-0">{{ $orderproduct->product->title }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->product->title }}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="col-form-label d-block">@lang('general.count')</label>
                                         <br>
-                                        <p class="m-0">{{ $orderproduct->count }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->count }}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="col-form-label d-block">@lang('general.total')</label>
                                         <br>
-                                        <p class="m-0">{{ $orderproduct->total }}</p>
+                                        <p style="margin: 0; color: inherit; font-weight: normal;">{{ $orderproduct->total }}</p>
                                     </div>
                                 </div>
                             </div>

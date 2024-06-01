@@ -22,7 +22,7 @@ class ReviewController extends Controller
             $data['reviews'] = ReviewResource::collection($this->review->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class ReviewController extends Controller
             $data['review'] = new ReviewResource($this->review->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

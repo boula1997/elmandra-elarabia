@@ -22,7 +22,7 @@ class AdvantageController extends Controller
             $data['advantages'] = AdvantageResource::collection($this->advantage->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class AdvantageController extends Controller
             $data['advantage'] = new AdvantageResource($this->advantage->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

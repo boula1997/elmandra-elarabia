@@ -22,7 +22,7 @@ class FeatureController extends Controller
             $data['features'] = FeatureResource::collection($this->feature->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class FeatureController extends Controller
             $data['feature'] = new FeatureResource($this->feature->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

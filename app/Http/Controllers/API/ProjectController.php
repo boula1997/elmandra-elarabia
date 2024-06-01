@@ -22,7 +22,7 @@ class ProjectController extends Controller
             $data['projects'] = ProjectResource::collection($this->project->get());
             return successResponse($data,trans('general.sent_successfully'));
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class ProjectController extends Controller
             $data['project'] = new ProjectResource($this->project->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

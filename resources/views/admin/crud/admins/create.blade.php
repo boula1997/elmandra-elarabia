@@ -29,7 +29,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                         <input type="text" name="name" value="{{ old('name') }}" class="form-control"
+                                         <input type="text" name="name" value="{{ old('name') }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputName" placeholder="@lang('general.name')">
                                 
                                     </div>
@@ -41,7 +41,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="email" name="email" value="{{ old('email') }}" class="form-control"
+                                        <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputEmail" placeholder="@lang('general.email')">
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <input type="text" name="phone" value="{{ old('phone') }}" class="form-control"
+                                        <input type="text" name="phone" value="{{ old('phone') }}" class="form-control @error('') invalid @enderror"
                                         id="exampleInputphone" placeholder="@lang('general.phone')">
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                          <input type="password" name="password" value="{{ old('password') }}"
-                                        class="form-control" id="exampleInputPassword" placeholder="@lang('general.password')">
+                                        class="form-control @error('') invalid @enderror" id="exampleInputPassword" placeholder="@lang('general.password')">
                                     </div>
                                 </div>
 
@@ -74,7 +74,7 @@
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
                                         <input type="password" name="confirm-password" value="{{ old('confirm-password') }}"
-                                        class="form-control" id="exampleInputConfirmpassword"
+                                        class="form-control @error('') invalid @enderror" id="exampleInputConfirmpassword"
                                         placeholder="@lang('general.confirm_password')">
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                         </div>
-                                        <select name="roles" id="" class="form-control">
+                                        <select name="roles" id="" class="form-control @error('') invalid @enderror">
                                                 {{ $role=str_contains(url()->previous(),'/Admin')?'admin':(str_contains(url()->previous(),'/Seller')?'seller':'marketer' )}}
                                                 <option value="{{ $role }}">{{ $role }}</option>
                                         </select>

@@ -24,19 +24,19 @@
                                 id="{{ $locale }}" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p class="m-0">{{ $advertisement->translate($locale)->title }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $advertisement->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.subtitle'):</h5>
-                                                <p class="m-0">{{ $advertisement->translate($locale)->subtitle }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $advertisement->translate($locale)->subtitle }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -46,10 +46,10 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="mb-7 bg-light p-3 rounded h-100">
+                                        <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.description'):</h5>
-                                                <p class="m-0">{!!  $advertisement->description!==null?$advertisement->translate($locale)->description : __('general.nothing') !!}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{!!  $advertisement->description!==null?$advertisement->translate($locale)->description : __('general.nothing') !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -62,26 +62,26 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <div class="mb-7 bg-light p-3 rounded h-100">
+                    <div class="mb-5 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
                             <h5 class="font-weight-bolder text-dark">@lang('general.start_date'):</h5>
-                            <p class="m-0">{{  $advertisement->start_date!==null?$advertisement->start_date :__('general.nothing')}}</p>
+                            <p style="margin: 0; color: inherit; font-weight: normal;">{{  $advertisement->start_date!==null?$advertisement->start_date :__('general.nothing')}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="mb-7 bg-light p-3 rounded h-100">
+                    <div class="mb-5 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
                             <h5 class="font-weight-bolder text-dark">@lang('general.end_date'):</h5>
-                            <p class="m-0">{{ $advertisement->end_date!==null?$advertisement->end_date :__('general.nothing') }}</p>
+                            <p style="margin: 0; color: inherit; font-weight: normal;">{{ $advertisement->end_date!==null?$advertisement->end_date :__('general.nothing') }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="mb-7 bg-light p-3 rounded h-100">
+                    <div class="mb-5 bg-light p-3 rounded h-100">
                         <div class="card-title fw-bold">
                             <h5 class="font-weight-bolder text-dark">@lang('general.code'):</h5>
-                            <p class="m-0">{{  $advertisement->code!==null?$advertisement->code :__('general.nothing') }}</p>
+                            <p style="margin: 0; color: inherit; font-weight: normal;">{{  $advertisement->code!==null?$advertisement->code :__('general.nothing') }}</p>
                         </div>
                     </div>
                 </div>

@@ -51,7 +51,7 @@ class OrderController extends Controller
             }
             return successResponse($order);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

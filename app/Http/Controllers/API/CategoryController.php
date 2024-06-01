@@ -22,7 +22,7 @@ class CategoryController extends Controller
             $data['categories'] = CategoryResource::collection($this->category->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class CategoryController extends Controller
             $data['category'] = new CategoryResource($this->category->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

@@ -33,7 +33,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[title]' }}"
                                             placeholder="@lang('general.title')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.title') is-invalid @enderror"
                                             value="{{ old($locale . '.title') }}">
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                         </div>
                                         <input type="text" name="{{ $locale . '[subtitle]' }}"
                                             placeholder="@lang('general.subtitle')"
-                                            class="form-control  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
+                                            class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.subtitle') is-invalid @enderror"
                                             value="{{ old($locale . '.subtitle') }}">
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                         <span class="input-group-text"><i class="fas fa-pen"></i></span>
                                     </div>
                                     <input type="text" name="identifier" value="{{ old('identifier') }}"
-                                        class="form-control  pl-1 min-h-40px" id="exampleInputName" placeholder="@lang('general.identifier')">
+                                        class="form-control @error('') invalid @enderror  pl-1 min-h-40px" id="exampleInputName" placeholder="@lang('general.identifier')">
                                 </div>
                             </div>
 
@@ -85,7 +85,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="video">{{ __('general.video') }}</label>
-                                <input id="video" type="text" class="form-control @error('video') is-invalid @enderror" name="video" value="{{ old('video') }}">
+                                <input id="video" type="text" class="form-control @error('') invalid @enderror @error('video') is-invalid @enderror" name="video" value="{{ old('video') }}">
                                 @error('video')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

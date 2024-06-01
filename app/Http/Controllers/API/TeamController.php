@@ -22,7 +22,7 @@ class TeamController extends Controller
             $data['teams'] = TeamResource::collection($this->team->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -33,7 +33,7 @@ class TeamController extends Controller
             $data['team'] = new TeamResource($this->team->findorfail($id));
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }

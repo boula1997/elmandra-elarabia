@@ -86,7 +86,7 @@
                                                         <label class="form-label"
                                                             for="name">{{ __('general.name') }}</label>
                                                         <label type="text" name="name"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.name') }}" > {{ $order->name }} </label>
                                                         <div id="name" class="err"></div>
                                                     </div>
@@ -98,7 +98,7 @@
                                                         for="email">{{ __('general.email') }}</label>
                                                     <div class="form-outline form-white">
                                                         <label type="text" name="email"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.email') }}" >{{ $order->email }}</label>
                                                         <div id="email" class="err"></div>
                                                     </div>
@@ -110,7 +110,7 @@
                                                         <label class="form-label"
                                                             for="phone">{{ __('general.phone') }}</label>
                                                         <label type="text" name="phone"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.phone') }}" >{{ $order->phone }}</label>
                                                         <div id="phone" class="err"></div>
                                                     </div>
@@ -122,7 +122,7 @@
                                                         for="address">{{ __('general.address') }}</label>
                                                     <div class="form-outline form-white">
                                                         <label type="text" name="address"
-                                                            class="form-control form-control-lg"
+                                                            class="form-control @error('') invalid @enderror form-control @error('') invalid @enderror-lg"
                                                             placeholder="{{ __('general.address') }}">{{ $order->address }}</label>
                                                         <div id="address" class="err"></div>
                                                     </div>

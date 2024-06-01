@@ -18,7 +18,7 @@
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
                 <input type="text" name="{{ $locale . '[' . $name . ']' }}" placeholder="@lang('general.{{ $name }}')"
-                    class="form-control  pl-1 min-h-40px @error($locale . '.' . $name . '') is-invalid @enderror"
+                    class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.' . $name . '') is-invalid @enderror"
                     value="{{ old($locale . '.' . $name . '') }}">
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
-                <select name="{{ $name }}" id="{{ $name }}" class="form-control">
+                <select name="{{ $name }}" id="{{ $name }}" class="form-control @error('') invalid @enderror">
                     @foreach ($array as $item)
                         <option @selected($item->id == old($name)) value="{{ $item->id }}">{{ isset($lang)?__(''.$lang.$item->title) : $item->title }}</option>
                     @endforeach
@@ -44,7 +44,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
-                <datalist name="{{ $name }}" id="{{ $name }}" class="form-control">
+                <datalist name="{{ $name }}" id="{{ $name }}" class="form-control @error('') invalid @enderror">
                     @foreach ($array as $item)
                         <option @selected($item->id == old($name)) value="{{ $item->id }}">{{ isset($lang)?__(''.$lang.$item->title) : $item->title }}</option>
                     @endforeach
@@ -60,7 +60,7 @@
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
                 <input type="{{ $type }}" name="{{ $name }}" value="{{ old('{{ $name }}') }}"
-                class="form-control" id="exampleInputphone" placeholder="@lang('general.{{ $name }}')">
+                class="form-control @error('') invalid @enderror" id="exampleInputphone" placeholder="@lang('general.{{ $name }}')">
             </div>
         </div>
     @endif
@@ -85,7 +85,7 @@
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
                 <input type="text" name="{{ $locale . '[' . $name . ']' }}" placeholder="@lang('general.{{ $name }}')"
-                    class="form-control  pl-1 min-h-40px @error($locale . '.' . $name . '') is-invalid @enderror"
+                    class="form-control @error('') invalid @enderror  pl-1 min-h-40px @error($locale . '.' . $name . '') is-invalid @enderror"
                     value="{{ old($locale . '.' . $name . '',$module->$name) }}">
             </div>
         </div>
@@ -96,7 +96,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
-                <select name="{{ $name }}" id="{{ $name }}" class="form-control">
+                <select name="{{ $name }}" id="{{ $name }}" class="form-control @error('') invalid @enderror">
                     @foreach ($array as $item)
                         <option @selected($item->id == old($name,$module->$name)) value="{{ $item->id }}">{{ isset($lang)?__(''.$lang.$item->title) : $item->title }}</option>
                     @endforeach
@@ -111,7 +111,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
-                <datalist name="{{ $name }}" id="{{ $name }}" class="form-control">
+                <datalist name="{{ $name }}" id="{{ $name }}" class="form-control @error('') invalid @enderror">
                     @foreach ($array as $item)
                         <option @selected($item->id == old($name,$module->$name)) value="{{ $item->id }}">{{ isset($lang)?__(''.$lang.$item->title) : $item->title }}</option>
                     @endforeach
@@ -127,7 +127,7 @@
                     <span class="input-group-text"><i class="fas fa-pen"></i></span>
                 </div>
                 <input type="{{ $type }}" name="{{ $name }}" value="{{ old('{{ $name }}',$module->$name) }}"
-                class="form-control" id="exampleInputphone" placeholder="@lang('general.{{ $name }}')">
+                class="form-control @error('') invalid @enderror" id="exampleInputphone" placeholder="@lang('general.{{ $name }}')">
             </div>
         </div>
     @endif

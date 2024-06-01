@@ -22,7 +22,7 @@ class ProductController extends Controller
             $data['products'] = ProductResource::collection($this->product->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -35,7 +35,7 @@ class ProductController extends Controller
             $data['products'] = ProductResource::collection($products);
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
@@ -48,7 +48,7 @@ class ProductController extends Controller
             $data['related_products'] = ProductResource::collection(Product::where('id','!=',$id)->where('category_id',$product->category_id)->get());
             return successResponse($data);
         } catch (Exception $e) {
-            dd($e->getMessage());
+
             return failedResponse($e->getMessage());
         }
     }
