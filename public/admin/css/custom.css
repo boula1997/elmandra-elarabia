@@ -3,6 +3,12 @@
     width: 20px;
 }
 
+.os-content{
+    height:1500px !important;
+}
+.container-fluid,.os-content{
+    height:1500px !important;
+}
 
 .logo-side{
     height:60px !important;
