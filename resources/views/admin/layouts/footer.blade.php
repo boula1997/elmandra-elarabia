@@ -68,6 +68,73 @@
 <script src="{{ asset('js/iconpicker-1.5.0.js') }}"></script>
 <script src="{{ asset('admin/file-upload/image-input.js') }}"></script>
 <!-- Page specific script -->
+<script>
+    $(document).ready(function() {
+      $('select').each(function() {
+        var $select = $(this);
+        var $searchInput = $('<input type="text" class="select-search" placeholder="Search...">');
+        var $optionsContainer = $('<div class="select-options"></div>').appendTo($select.parent());
+    
+        // Create options in the options container
+        $select.find('option').each(function() {
+          var $option = $('<div class="option-item"></div>')
+            .text($(this).text())
+            .data('value', $(this).val());
+          $optionsContainer.append($option);
+        });
+    
+        // Hide the original select
+        $select.hide();
+    
+        // When the search input is focused, show the options container
+        $searchInput.on('click', function() {
+          $optionsContainer.show();
+          $optionsContainer.find('.option-item').show(); // Show all options initially
+    
+          // Ensure selected item is at the top of the options list
+          var selectedValue = $select.val();
+          if (selectedValue) {
+            $optionsContainer.find('.option-item').each(function() {
+              if ($(this).data('value') === selectedValue) {
+                $(this).prependTo($optionsContainer); // Move selected item to the top
+              }
+            });
+          }
+        });
+    
+        // Filter options based on search input
+        $searchInput.on('input', function() {
+          var searchTerm = $(this).val().toLowerCase();
+          $optionsContainer.find('.option-item').each(function() {
+            var optionText = $(this).text().toLowerCase();
+            if (optionText.includes(searchTerm)) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          });
+        });
+    
+        // Handle option selection
+        $optionsContainer.on('click', '.option-item', function() {
+          var selectedValue = $(this).data('value');
+          $select.val(selectedValue).change(); // Update the original select
+          $searchInput.val($(this).text()); // Update the search input
+          $optionsContainer.hide(); // Hide the options container
+        });
+    
+        // Hide the options container when clicking outside
+        $(document).on('click', function(e) {
+          if (!$(e.target).closest('.select-search, .select-options').length) {
+            $optionsContainer.hide();
+          }
+        });
+    
+        // Append the search input to the select's parent element
+        $select.before($searchInput);
+      });
+    });
+    </script>
 @stack('scripts')
 <script>
     $(document).ready(function() {
