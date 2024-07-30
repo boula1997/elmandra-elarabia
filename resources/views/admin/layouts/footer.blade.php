@@ -84,7 +84,7 @@
         });
     
         // Hide the original select
-        $select.hide();
+        $select.hide();   $optionsContainer.hide();
     
         // When the search input is focused, show the options container
         $searchInput.on('click', function() {
