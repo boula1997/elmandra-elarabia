@@ -52,12 +52,12 @@
                                                     </div>
                                                 </div>
                                             @endforeach
-                                            <div class="text-center">
-                                                <button type="submit"
-                                                    class="btn btn-outline-primary px-5 mb-5 w-25
-                                                ">@lang('general.save')</button>
-                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit"
+                                            class="btn btn-outline-primary px-5 mb-5 w-25
+                                        ">@lang('general.save')</button>
                                     </div>
                                 </div>
                             </div>
