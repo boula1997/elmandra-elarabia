@@ -142,7 +142,7 @@ Route::get('/reply-newsletter', [App\Http\Controllers\Admin\NewsletterController
 'reply'])->name('newsletters.reply');
 Route::post('/reply-email/reply', [App\Http\Controllers\Admin\NewsletterController::class,
 'emailReply'])->name('newsletters.emailReply');
-Route::get('/admin/dashboard', function () {
+Route::get('/dashboard', function () {
 return view('dashboard');
 });
 
