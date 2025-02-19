@@ -618,7 +618,7 @@ return [
     "damaged"=>'تالف',
     "dutch_trucks"=>'الشاحنات الهولندية',
     "engineCapacity"=>'سعة المحرك', 
-    "suspensionType"=>'نوع التعليق', 
+    "suspensionType"=>'نوع القيادة', 
     "axelsNumber"=>'رقم الأكسل', 
     "gearBox"=>'ناقل الحركة',
     "mileAge"=>'عدد الأميال',
