@@ -28,6 +28,7 @@ class PagesSeeder extends Seeder
                         "Mission",
                         "Choosing Excellence: Why Us?",
                         null,
+                        "Trailers and Cranes",
 
                     ];
 
@@ -41,6 +42,7 @@ class PagesSeeder extends Seeder
                            "Driving Success, One Project at a Time",
                            "Looking For The Best Trucks car",
                            "Easy 3 Working Step",
+                            null,
                             null,
                             null,
                             null,
@@ -61,6 +63,14 @@ class PagesSeeder extends Seeder
                             "<p>Our mission is to deliver excellence in transportation by providing reliable, efficient, and sustainable logistics solutions. We are dedicated to meeting and exceeding our customers' needs, fostering innovation, and cultivating a collaborative culture that values integrity, safety, and environmental responsibility. Through our commitment to quality service, we aim to drive success, create lasting partnerships, and propel industries forward with every journey.</p>",
                             "<p>Our commitment to excellence sets us apart. At Almandara AlArabia, we embody reliability, innovation, and customer-centric service. With a dedicated team focused on delivering beyond expectations, we offer more than just transportation solutions—we offer a partnership built on trust and exceptional service.</p>",
                             null,
+                            "<p>At Tadamon Wafi Company (TWT), we provide customized manufacturing services for trailers and cranes with high quality and specifications that meet our clients' needs. Our services include:
+                                - Tanker Manufacturing: Tailored sizes and specifications for various uses.
+                                - Lowbeds: Designed for safe and efficient transportation.
+                                - Transport Platforms: Practical solutions for moving various loads.
+                                - Winches: Specially crafted for reliable performance on job sites.
+                                - Container Cranes: Featuring advanced hydraulic systems to cater to diverse customer needs.
+                                - Mixers: Designed for efficient concrete transport and mixing with robust performance and high loading capacity suitable for construction sites.
+                                </p>",
                         ];
 
 
@@ -79,6 +89,7 @@ class PagesSeeder extends Seeder
                         "رسالتنا",
                         "اختيار التميز: لماذا نحن؟",
                         null,
+                        "المقطورات والرافعات",
                     ];
 
     
@@ -92,6 +103,7 @@ class PagesSeeder extends Seeder
                             "قيادة النجاح، مشروع واحد في كل مرة",
                             "أبحث عن أفضل سيارة الشاحنات",
                             " اسهل 3 خطوات عمل",
+                            null,
                             null,
                             null,
                             null,
@@ -112,49 +124,58 @@ class PagesSeeder extends Seeder
                                 "<p>مهمتنا هي تقديم التميز في مجال النقل من خلال توفير حلول لوجستية موثوقة وفعالة ومستدامة. نحن ملتزمون بتلبية احتياجات عملائنا وتجاوزها، وتعزيز الابتكار، وتنمية ثقافة تعاونية تقدر النزاهة والسلامة والمسؤولية البيئية. ومن خلال التزامنا بجودة الخدمة، نهدف إلى تحقيق النجاح وإنشاء شراكات دائمة ودفع الصناعات إلى الأمام في كل رحلة.</p>",
                                 "<p>التزامنا بالتميز يميزنا. في المندرة العربية، نجسد الموثوقية والابتكار والخدمة التي تركز على العملاء. مع فريق متخصص يركز على تقديم ما يفوق التوقعات، فإننا نقدم أكثر من مجرد حلول نقل - فنحن نقدم شراكة مبنية على الثقة والخدمة الاستثنائية.</p>",
                                 null,
-                            ];    
+                                "<p>نحن في شركة التضامن الوافي (TWT) نقدم خدمات تصنيع مخصصة للمقطورات والرافعات بجودة عالية وبمواصفات تلبي احتياجات عملائنا. تشمل خدماتنا:
+                                •	تصنيع الصهاريج: بأحجام ومواصفات تتناسب مع مختلف الاستخدامات.
+                                •	اللوبردات: لتلبية احتياجات للنقل بشكل آمن وفعال.
+                                •	سطحات النقل: مصممة لتوفير حلول عملية لنقل مختلف الأحمال.
+                                •	الونشات: مصنوعة خصيصًا لتقديم الأداء الموثوق في مواقع العمل
+                                •	رافعات حاويات: توفير افضل الأنظمة الهيدروليكية لتلبي احتياجات العملاء المتنوعة.
+                                •	الخلاطات: مصممة لنقل وخلط الخرسانة بكفاءة عالية، مع أداء قوي وقدرة تحميل كبيرة تلائم مواقع البناء.
+                                نحرص على تلبية جميع متطلبات العملاء بدقة واحترافية لضمان رضاهم وتلبية احتياجاتهم المتنوعة.
+                                </p>",
+];
 
-            $identifiers=[ "about","service","testimonials","team","company_benefit","faq","project","newsletter","process","vision","mission","chooseus","contact",
-                         ];  
+$identifiers=[
+"about","service","testimonials","team","company_benefit","faq","project","newsletter","process","vision","mission","chooseus","contact","TrailersCranes"
+];
 
-                        //  images/VaSC7BojUjitywEAhEwzNaxkeCntv2cgR58mhsTu.jpg
-             $images=[ 
-                        ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg","images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
-                        ["images/p47SZc3Tzf8pMZJnFs8Y7iA3mQyrl56RiA5qNDSO.jpg"],
-                        ["images/wYjibhR2yMlf26YI4cK1ur3kgABYgmRLxfFxtzuF.jpg"],
-                        ["images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
-                        null,
-                        ["images/I62Ioyia6DWF2AoN67RXITItqhRPfzMCPd8QBguc.jpg"],
-                        null,
-                        null,
-                        ["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
-                        ["images/Yy6qHtxrUnsTGYG6IonLYSAq7RSrWovi2QhDH7N0.png"],
-                        ["images/pJrWKqvuDTkd6iIsIs4s4iGmBLYb2Ekww17EGCoi.png"],
-                        null,
-                        ["images/I8xyUthqpNWQRgdpTCOzXhiduJrDcHh97tFsBoVm.png"],
-                    ];
-       
+// images/VaSC7BojUjitywEAhEwzNaxkeCntv2cgR58mhsTu.jpg
+$images=[
+["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg","images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
+["images/p47SZc3Tzf8pMZJnFs8Y7iA3mQyrl56RiA5qNDSO.jpg"],
+["images/wYjibhR2yMlf26YI4cK1ur3kgABYgmRLxfFxtzuF.jpg"],
+["images/guKTBu7bxOzijaxz4bsfQ66Q4rrRsReuGznAdTW7.webp"],
+null,
+["images/I62Ioyia6DWF2AoN67RXITItqhRPfzMCPd8QBguc.jpg"],
+null,
+null,
+["images/cdryGvudn9xMIamy0KnEAIXdHbVn8vEoezFmGDMW.jpg"],
+["images/Yy6qHtxrUnsTGYG6IonLYSAq7RSrWovi2QhDH7N0.png"],
+["images/pJrWKqvuDTkd6iIsIs4s4iGmBLYb2Ekww17EGCoi.png"],
+null,
+["images/I8xyUthqpNWQRgdpTCOzXhiduJrDcHh97tFsBoVm.png"],
+null,
+];
 
-        for ($i = 0; $i < count($title_ar); $i++) {
-            $page = Page::create([
-                'ar' => [
-                    'title' => $title_ar[$i],
-                    'description' => $description_ar[$i],
-                    'subtitle' => $subtitle_ar[$i],
-                   
-                ],
-                'en' => [
-                    'title' => $title_en[$i],
-                    'description' => $description_en[$i],
-                    'subtitle' => $subtitle_en[$i],
-                   
-                ],
-                'identifier'=>$identifiers[$i]
-            ]);
 
-            if(isset($images[$i]))
-            foreach($images[$i] as $image)
-            $page->file()->create(["url"=>$image]);
-     }
+for ($i = 0; $i < count($title_ar); $i++) { $page=Page::create([ 'ar'=> [
+    'title' => $title_ar[$i],
+    'description' => $description_ar[$i],
+    'subtitle' => $subtitle_ar[$i],
+
+    ],
+    'en' => [
+    'title' => $title_en[$i],
+    'description' => $description_en[$i],
+    'subtitle' => $subtitle_en[$i],
+
+    ],
+    'identifier'=>$identifiers[$i]
+    ]);
+
+    if(isset($images[$i]))
+    foreach($images[$i] as $image)
+    $page->file()->create(["url"=>$image]);
     }
-}
+    }
+    }

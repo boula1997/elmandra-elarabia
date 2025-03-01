@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PageResource;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Exception;
@@ -19,6 +20,9 @@ class ProductController extends Controller
     public function index()
     {
         try {
+            $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
+            $data['spareParts_section'] = new PageResource(page('spareParts'));
+            
             $data['products'] = ProductResource::collection($this->product->get());
             return successResponse($data);
         } catch (Exception $e) {
