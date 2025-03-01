@@ -34,7 +34,8 @@ class ProductController extends Controller
     {
         try {
           
-      
+            $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
+            $data['spareParts_section'] = new PageResource(page('spareParts'));
             $products=$this->product->search()->get();
             $data['products'] = ProductResource::collection($products);
             return successResponse($data);
