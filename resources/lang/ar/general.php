@@ -646,5 +646,6 @@ return [
     'oversize'=>'كبيرة الحجم',
     'color'=>'لون',
     'transmission'=>'الانتقال',
+    'spareParts'=>'قطع غيار',
 
 ];

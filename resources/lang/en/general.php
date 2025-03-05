@@ -631,4 +631,5 @@ return [
     'oversize'=>'Oversize',
     'color'=>'Color',
     'transmission'=>'Transmission',
+    'spareParts'=>'Spare Parts',
 ];

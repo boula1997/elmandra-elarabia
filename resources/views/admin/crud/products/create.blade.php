@@ -98,6 +98,7 @@
                                         <option value="trailer" {{ old('kind') }}>{{ __('general.trailer') }}</option>
                                         <option value="tipper" {{ old('kind') }}>{{ __('general.tipper') }}</option>
                                         <option value="mixer" {{ old('kind') }}>{{ __('general.mixer') }}</option>
+                                        <option value="spareParts" {{ old('kind') }}>{{ __('general.spareParts') }}</option>
                                 </select>
                             </div>
                         </div>
