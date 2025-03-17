@@ -55,7 +55,7 @@ class Product extends Model implements TranslatableContract
         })->when(request()->category_id, function ($q) {
             return $q->whereIn('category_id', request()->category_id);
         })->when(request()->kind, function ($q) {
-            return $q->whereIn('kind', request()->kind);
+            return $q->where('kind', 'like', '%' . request()->kind . '%');
         })->when(request()->suspensionType, function ($q) {
             return $q->whereIn('suspensionType', request()->suspensionType);
         })->when(request()->axelsNumber, function ($q) {

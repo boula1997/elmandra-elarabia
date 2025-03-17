@@ -1,0 +1,25 @@
+[03-Feb-2024 19:14:02 America/Chicago] PHP Warning:  require(/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php): Failed to open stream: No such file or directory in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[03-Feb-2024 19:14:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/yousabte/public_html/elmandra-alarabia/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[03-Feb-2024 19:14:09 America/Chicago] PHP Warning:  require(/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php): Failed to open stream: No such file or directory in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[03-Feb-2024 19:14:09 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/yousabte/public_html/elmandra-alarabia/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[13-Mar-2024 09:45:07 America/Chicago] PHP Warning:  require(/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php): Failed to open stream: No such file or directory in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[13-Mar-2024 09:45:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/yousabte/public_html/elmandra-alarabia/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[04-Sep-2024 14:11:41 America/Chicago] PHP Warning:  require(/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php): Failed to open stream: No such file or directory in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[04-Sep-2024 14:11:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/yousabte/public_html/elmandra-alarabia/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[04-Sep-2024 14:11:46 America/Chicago] PHP Warning:  require(/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php): Failed to open stream: No such file or directory in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[04-Sep-2024 14:11:46 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/yousabte/public_html/elmandra-alarabia/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
