@@ -42,8 +42,8 @@
                                     <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
                                     <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
                                         name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $product->translate($locale)->description ?? '') !!} 
-                                        @if(is_null($product->translate($locale)->description )||empty(old($locale . '.description', $product->translate($locale)->description)))
+                                        {!! old($locale . '.description', $product->translate($locale)->description ?? '') !!}
+                                        @if(is_null($product->translate($locale)->description )|| empty(old($locale . '.description', $product->translate($locale)->description)))
                                             <div class="row">
                                                 <div class="mt-post-text col-12">
                                                     <table class="product-details-table table table-striped table-bordered"
