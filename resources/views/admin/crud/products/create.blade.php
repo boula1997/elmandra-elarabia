@@ -40,7 +40,13 @@
                                     <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger"></span></label>
                                     <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
                                         name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description') !!} 
+                                        <div class="row">
+                                            <div class="mt-post-text col-12">
+                                                <table class="product-details-table table table-striped table-bordered"
+                                                dir="{{ $locale == 'ar' ? 'rtl' : 'ltr' }}"
+                                                style="text-align: {{ $locale == 'ar' ? 'right' : 'left' }}">
+                                                <thead><tr><th>الخاصيه</th><th>القيمة</th></tr></thead><tbody><tr><td>النوع</td><td>tractor_unit</td></tr><tr><td>سعة المحرك</td><td>FAW CA6DM2-42E52، بسعة 11.04 لتر</td></tr><tr><td>تعليق هوائي</td><td>NA</td></tr><tr><td>عدد الأميال</td><td>0</td></tr><tr><td>الترتيب</td><td>4*2</td></tr><tr><td>نوع القير</td><td>NA</td></tr><tr><td>عدد المحاور</td><td>0</td></tr><tr><td>الرقم</td><td>0</td></tr><tr><td>year</td><td>0</td></tr><tr><td>النموذج</td><td>0</td></tr><tr><td>engine</td><td>420  حصان</td></tr><tr><td>wheelbase</td><td>NA</td></tr><tr><td>cab</td><td>كابينة ذات سقف عالٍ سريرين / كابينة ذات سقف مسطح</td></tr><tr><td>steering</td><td>NA</td></tr><tr><td>rear_axles</td><td>2100  عند 1300 دورة في الدقيقة</td></tr><tr><td>frame</td><td>نظام فرامل هوائي  WABCO (ABS)</td></tr><tr><td>gcw</td><td>0</td></tr><tr><td>fuel_tanker</td><td>725 لتر</td></tr><tr><td>tires</td><td>أمامي: 385/65R22.5، خلفي: 315/80R22.5</td></tr><tr><td>battery</td><td>NA</td></tr><tr><td>oversize</td><td>NA</td></tr><tr><td>color</td><td>NA</td></tr><tr><td>transmission</td><td>Euro 5</td></tr></tbody></table></div> 
+                                        </div>
                                     </textarea>
                                 </div>
                             </div>
