@@ -22,6 +22,7 @@ class ProductController extends Controller
         try {
             $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
             $data['spareParts_section'] = new PageResource(page('spareParts'));
+            $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));
             
             $data['products'] = ProductResource::collection($this->product->get());
             return successResponse($data);
@@ -33,10 +34,14 @@ class ProductController extends Controller
     public function store()
     {
         try {
-          
             $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
             $data['spareParts_section'] = new PageResource(page('spareParts'));
+            $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));
+            if(isset(request()->kind) || request()->kind="")
+            $products=$this->product->where('kind',request()->kind)->get();
+            else
             $products=$this->product->search()->get();
+            
             $data['products'] = ProductResource::collection($products);
             return successResponse($data);
         } catch (Exception $e) {
