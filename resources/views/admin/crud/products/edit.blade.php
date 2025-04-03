@@ -42,9 +42,74 @@
                                     <label>@lang('general.description')(@lang('general.' . $locale))<span class="text-danger">*</span></label>
                                     <textarea rows="100" class="summernote @error($locale . '.description') is-invalid @enderror"
                                         name="{{ $locale . '[description]' }}">
-                                        {!! old($locale . '.description', $product->translate($locale)->description) !!} 
+                                        {!! old($locale . '.description', $product->translate($locale)->description ?? '') !!} 
+                                        @if(is_null($product->translate($locale)->description ))
+                                            <div class="row">
+                                                <div class="mt-post-text col-12">
+                                                    <table class="product-details-table table table-striped table-bordered"
+                                                            dir="{{ $locale == 'ar' ? 'rtl' : 'ltr' }}"
+                                                            style="text-align: {{ $locale == 'ar' ? 'right' : 'left' }}">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>{{ $locale == 'ar' ?'الخاصية':'Feature' }}</th>
+                                                                <th>{{ $locale == 'ar' ?'التفاصيل':'Details' }}</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'نوع القيادة' : 'Drive Type' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'المحرك' : 'Engine' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'قوة الحصان' : 'Horsepower' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'عزم الدوران (نيوتن متر)' : 'Torque (Nm)' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'ناقل الحركة' : 'Transmission' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'نظام الكبح' : 'Braking System' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'حجم الإطارات' : 'Tire Size' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'الكابينة' : 'Cabin' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'معيار العادم' : 'Exhaust Standard' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'سعة خزان الوقود' : 'Fuel Tank Capacity' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{{ $locale == 'ar' ? 'الاستخدام الأساسي' : 'Primary Usage' }}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>                                               
+                                                </div>
+                                            </row>
+                                        @endif
                                     </textarea>
+                                    
                                 </div>
+                                
                             </div>
                         @endforeach
                     </div>
