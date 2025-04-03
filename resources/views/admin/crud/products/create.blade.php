@@ -100,6 +100,7 @@
                                                     </tbody>
                                                 </table>                                               
                                             </div>
+                                        </row>
                                     </textarea>
                                 </div>
                             </div>
