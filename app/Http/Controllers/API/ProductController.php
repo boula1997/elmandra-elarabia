@@ -31,10 +31,10 @@ class ProductController extends Controller
             return failedResponse($e->getMessage());
         }
     }
-    public function store($type)
+    public function store()
     {
         try {
-      dd($type);
+            dd(request()->all());
             $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
             $data['spareParts_section'] = new PageResource(page('spareParts'));
             $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));
