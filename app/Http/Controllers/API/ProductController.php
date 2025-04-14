@@ -34,6 +34,7 @@ class ProductController extends Controller
     public function store()
     {
         try {
+      
             $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
             $data['spareParts_section'] = new PageResource(page('spareParts'));
             $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));

@@ -106,7 +106,7 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
 Route::post('/newsletter', [NewsletterController::class, 'store']);
 Route::post('/message', [MessageController::class, 'store']);
 Route::post('/order', [OrderController::class, 'store']);
-Route::post('/products', [ProductController::class, 'store']);
+Route::get('/products/filter', [ProductController::class, 'store']);
 
 
 Route::group([
@@ -121,4 +121,3 @@ Route::group([
     Route::get('/user-profile', [AuthController::class, 'userProfile']);    
     Route::post('/user/store', [UserController::class, 'store']);
 });
-
