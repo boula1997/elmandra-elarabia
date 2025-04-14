@@ -101,7 +101,7 @@ Route::group(['middleware' => ['apiLocalization','cors']], function () {
     Route::get('/subcategories', [SubcategoryController::class, 'index']);
     Route::get('/subcategory/{id}', [SubcategoryController::class, 'show']);
 
-    Route::get('/products/filter', [ProductController::class, 'store']);
+    Route::get('/products/filter/{type}', [ProductController::class, 'store']);
 });
 
 Route::post('/newsletter', [NewsletterController::class, 'store']);
