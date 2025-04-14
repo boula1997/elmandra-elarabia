@@ -34,12 +34,12 @@ class ProductController extends Controller
     public function store($type)
     {
         try {
-          
+            dd(request()->all());
             $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
             $data['spareParts_section'] = new PageResource(page('spareParts'));
             $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));
-            if(isset($type) || $type="")
-            $products=$this->product->where('kind',$type)->get();
+            if(isset(request()->kind) || request()->kind="")
+            $products=$this->product->where('kind',request()->kind)->get();
             else
             $products=$this->product->search()->get();
             
