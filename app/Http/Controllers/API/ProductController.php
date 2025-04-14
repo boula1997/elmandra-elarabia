@@ -35,9 +35,9 @@ class ProductController extends Controller
     {
         try {
       
-            $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
-            $data['spareParts_section'] = new PageResource(page('spareParts'));
-            $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));
+            // $data['trailersCranes_section'] = new PageResource(page('trailersCranes'));
+            // $data['spareParts_section'] = new PageResource(page('spareParts'));
+            // $data['tractorUnits_section'] = new PageResource(page('tractorUnits'));
             if(isset(request()->kind) || request()->kind="")
             $products=$this->product->where('kind',request()->kind)->get();
             else
