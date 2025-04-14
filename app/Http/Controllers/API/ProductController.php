@@ -31,7 +31,7 @@ class ProductController extends Controller
             return failedResponse($e->getMessage());
         }
     }
-    public function store()
+    public function store($type)
     {
         try {
             dd(request()->all());
