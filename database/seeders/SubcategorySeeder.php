@@ -58,9 +58,7 @@ class SubcategorySeeder extends Seeder
                 ],
                 'category_id'=>$category_id,
             ]);
-            // $subcategory->file()->create(["url"=>$images[$i]]);
-          
-           
+            // $subcategory->file()->create(["url"=>$images[$i]]);  
            
         }
     }
