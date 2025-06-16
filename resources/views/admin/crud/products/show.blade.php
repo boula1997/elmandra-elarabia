@@ -60,6 +60,13 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <h5 class="font-weight-bolder text-dark">@lang('general.subcategory'):</h5>
+                                    <p style="margin: 0; color: inherit; font-weight: normal;">{{ isset($product->subcategory)?$product->subcategory->title:'NA' }}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
                                     <h5 class="font-weight-bolder text-dark">@lang('general.company'):</h5>
                                     <p style="margin: 0; color: inherit; font-weight: normal;">{{ $product->company->title }}</p>
                                 </div>

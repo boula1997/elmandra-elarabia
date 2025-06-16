@@ -135,6 +135,17 @@
                         </div>
 
                         <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ __('general.subcategories') }}</label>
+                                <select class="form-select form-select-lg" name="subcategory_id" id="subcategories">
+                                    @foreach ($subcategories as $subcategory)
+                                        <option value="{{ $subcategory->id }}" {{ old('subcategory_id')==$subcategory->id? 'selected' : '' }}>{{ $subcategory->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>@lang('general.price') <span class="text-danger"> * </span></label>
                                 <div class="input-group">

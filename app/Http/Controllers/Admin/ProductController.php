@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\File as ModelsFile;
+use App\Models\Subcategory;
 use Exception;
 
 class ProductController extends Controller
@@ -21,8 +22,9 @@ class ProductController extends Controller
      */
     private $product;
     private $category;
+    private $subcategory;
     private $company;
-    function __construct(Product $product,Category $category,Company $company)
+    function __construct(Product $product,Category $category,Company $company,Subcategory $subcategory)
     {
         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index', 'show']]);
         $this->middleware('permission:product-create', ['only' => ['create', 'store']]);
@@ -30,6 +32,7 @@ class ProductController extends Controller
         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
         $this->product = $product;
         $this->category = $category;
+        $this->subcategory = $subcategory;
         $this->company = $company;
     }
 
@@ -54,8 +57,9 @@ class ProductController extends Controller
     {
         // dd('eee');
         $categories=$this->category->latest()->get();
+        $subcategories=$this->subcategory->latest()->get();
         $companies=$this->company->latest()->get();
-        return view('admin.crud.products.create',compact('categories','companies'));
+        return view('admin.crud.products.create',compact('categories','companies','subcategories'));
     }
 
     /**
@@ -108,7 +112,9 @@ class ProductController extends Controller
         $companies=$this->company->get();
         $images = $product->images;
         $categories=$this->category->get();
-        return view('admin.crud.products.edit', compact('product','categories','images','companies'));
+        $subcategories=$this->subcategory->latest()->get();
+
+        return view('admin.crud.products.edit', compact('product','categories','images','companies','subcategories'));
     }
     /**
      * Update the specified resource in storage.
