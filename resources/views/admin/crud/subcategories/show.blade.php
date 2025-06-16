@@ -35,7 +35,7 @@
                                         <div class="mb-5 bg-light p-3 rounded h-100">
                                             <div class="card-title fw-bold">
                                                 <h5 class="font-weight-bolder text-dark">@lang('general.title'):</h5>
-                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $subcategory->category->->translate($locale)->title }}</p>
+                                                <p style="margin: 0; color: inherit; font-weight: normal;">{{ $subcategory->category->translate($locale)->title }}</p>
                                             </div>
                                         </div>
                                     </div>

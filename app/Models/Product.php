@@ -23,6 +23,11 @@ class Product extends Model implements TranslatableContract
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+
+    public function subcategory()
+    {
+        return $this->belongsTo(Subcategory::class, 'subcategory_id');
+    }
     public function company()
     {
         return $this->belongsTo(Company::class, 'company_id');
