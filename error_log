@@ -23,3 +23,8 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[04-Jun-2025 07:11:37 America/Chicago] PHP Warning:  require(/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php): Failed to open stream: No such file or directory in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35
+[04-Jun-2025 07:11:37 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/yousabte/public_html/elmandra-alarabiavendor/autoload.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/yousabte/public_html/elmandra-alarabia/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/yousabte/public_html/elmandra-alarabia/index.php on line 35

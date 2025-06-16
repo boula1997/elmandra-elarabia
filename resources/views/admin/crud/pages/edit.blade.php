@@ -2,6 +2,14 @@
 @section('form_action', route('pages.update', $page->id))
 @section('form_type', 'POST')
 @section('fields_content')
+
+<style>
+    .note-editable {
+        line-height: 1 !important; /* Adjusts the line height */
+        min-height: 600px !important; /* Sets a minimum height for the editor */
+    }
+</style>
+
     <div class="content-wrapper">
         @method('PUT')
 
