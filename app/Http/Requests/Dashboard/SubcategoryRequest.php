@@ -22,9 +22,9 @@ class SubcategoryRequest extends FormRequest
         //  $this->merge(['user_id' => auth('api')->user()->id]);
 
 
-        $image = request()->isMethod('put') ? 'nullable' : 'required';
+        // $image = request()->isMethod('put') ? 'nullable' : 'required';
         $rules = [
-            'image' =>  $image ,
+            // 'image' =>  $image ,
             'category_id' => 'required' ,
         ];
         foreach (config('translatable.locales') as $locale) {
